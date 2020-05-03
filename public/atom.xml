@@ -5,56 +5,31 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://leader755.com/"/>
-  <updated>2020-05-02T01:59:04.079Z</updated>
-  <id>https://leader755.com/</id>
+  <link href="https://leader755.github.io/"/>
+  <updated>2020-05-03T04:30:04.538Z</updated>
+  <id>https://leader755.github.io/</id>
   
   <author>
-    <name>Autumn Cicada</name>
+    <name>Autumn cicada</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>1-搭建本地的 hexo 的博客</title>
-    <link href="https://leader755.com/2020/05/02/1-%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E7%9A%84%20hexo%20%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://leader755.com/2020/05/02/1-%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E7%9A%84%20hexo%20%E7%9A%84%E5%8D%9A%E5%AE%A2/</id>
-    <published>2020-05-02T01:59:04.079Z</published>
-    <updated>2020-05-02T01:59:04.079Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-gt-搭建本地的-hexo-的博客"><a href="#1-gt-搭建本地的-hexo-的博客" class="headerlink" title="1>搭建本地的 hexo 的博客"></a>1&gt;搭建本地的 hexo 的博客</h1><p><a name="30zlk"></a></p><h2 id="1-gt-官方文档-https-github-com-hexojs-hexo"><a href="#1-gt-官方文档-https-github-com-hexojs-hexo" class="headerlink" title="1>官方文档  https://github.com/hexojs/hexo"></a>1&gt;官方文档  <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">https://github.com/hexojs/hexo</a></h2><p><a name="F5daQ"></a></p><h2 id="2-gt-搭建博客"><a href="#2-gt-搭建博客" class="headerlink" title="2>搭建博客"></a>2&gt;搭建博客</h2><p><a name="m1De6"></a></p><h3 id="1-全局安装-hexo，创建博客"><a href="#1-全局安装-hexo，创建博客" class="headerlink" title="1.全局安装 hexo，创建博客"></a>1.全局安装 hexo，创建博客</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></tbody></table></figure><p><a name="0h45k"></a></p><h3 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></tbody></table></figure><p><a name="sfiHV"></a></p><h3 id="3-启动本地-hexo-server"><a href="#3-启动本地-hexo-server" class="headerlink" title="3.启动本地 hexo-server"></a>3.启动本地 hexo-server</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></tbody></table></figure><p><a name="GAJwJ"></a></p><h2 id="4-新建一个-hexo-博客，富文本-makedown-文档"><a href="#4-新建一个-hexo-博客，富文本-makedown-文档" class="headerlink" title="4.新建一个 hexo 博客，富文本 makedown 文档"></a>4.新建一个 hexo 博客，富文本 makedown 文档</h2><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">new</span> <span class="string">"Hello Hexo"</span></span><br></pre></td></tr></tbody></table></figure><p><a name="AhhSk"></a></p><h2 id="5-打包发布到-hexo"><a href="#5-打包发布到-hexo" class="headerlink" title="5.打包发布到 hexo"></a>5.打包发布到 hexo</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//打包发布 hexo</span><br><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//重启服务(可以看到新增的文档)</span><br><span class="line">hexo server</span><br></pre></td></tr></tbody></table></figure><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <title>hexo使用的问题指南</title>
+    <link href="https://leader755.github.io/2020/05/03/yuque/iwxsk5/"/>
+    <id>https://leader755.github.io/2020/05/03/yuque/iwxsk5/</id>
+    <published>2020-05-03T03:13:51.000Z</published>
+    <updated>2020-05-03T04:30:04.538Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;1-gt-搭建本地的-hexo-的博客&quot;&gt;&lt;a href=&quot;#1-gt-搭建本地的-hexo-的博客&quot; class=&quot;headerlink&quot; title=&quot;1&gt;搭建本地的 hexo 的博客&quot;&gt;&lt;/a&gt;1&amp;gt;搭建本地的 hexo 的博客&lt;/h1&gt;&lt;p&gt;&lt;a na
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>github和 coding 同时推送博客文章测试</title>
-    <link href="https://leader755.com/2020/05/01/github%E5%92%8C-coding-%E5%90%8C%E6%97%B6%E6%8E%A8%E9%80%81%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/"/>
-    <id>https://leader755.com/2020/05/01/github%E5%92%8C-coding-%E5%90%8C%E6%97%B6%E6%8E%A8%E9%80%81%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/</id>
-    <published>2020-05-01T11:28:42.000Z</published>
-    <updated>2020-05-01T11:28:42.085Z</updated>
-    
-    <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
+        
+        
+          &lt;h3 id=&quot;1-hexo-g-d-会报错&quot;&gt;&lt;a href=&quot;#1-hexo-g-d-会报错&quot; class=&quot;headerlink&quot; title=&quot;1.hexo g -d 会报错&quot;&gt;&lt;/a&gt;1.hexo g -d 会报错&lt;/h3&gt;&lt;p&gt;&lt;img
         
       
     
@@ -65,22 +40,19 @@
   </entry>
   
   <entry>
-    <title>测试 005</title>
-    <link href="https://leader755.com/2020/05/01/%E6%B5%8B%E8%AF%95-005/"/>
-    <id>https://leader755.com/2020/05/01/%E6%B5%8B%E8%AF%95-005/</id>
-    <published>2020-05-01T09:06:09.000Z</published>
-    <updated>2020-05-01T09:06:09.913Z</updated>
-    
-    <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <title>yuque文档一键同步到 hexo</title>
+    <link href="https://leader755.github.io/2020/05/02/yuque/lyup3r/"/>
+    <id>https://leader755.github.io/2020/05/02/yuque/lyup3r/</id>
+    <published>2020-05-02T09:09:18.000Z</published>
+    <updated>2020-05-03T04:30:04.545Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
+        
+        
+          &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
         
       
     
@@ -91,22 +63,20 @@
   </entry>
   
   <entry>
-    <title>测试 003</title>
-    <link href="https://leader755.com/2020/05/01/%E6%B5%8B%E8%AF%95-003/"/>
-    <id>https://leader755.com/2020/05/01/%E6%B5%8B%E8%AF%95-003/</id>
-    <published>2020-05-01T09:05:58.000Z</published>
-    <updated>2020-05-01T09:05:58.350Z</updated>
-    
-    <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <title>欢迎使用 MWeb</title>
+    <link href="https://leader755.github.io/2020/05/02/yuque/huan-ying-shi-yong-mweb/"/>
+    <id>https://leader755.github.io/2020/05/02/yuque/huan-ying-shi-yong-mweb/</id>
+    <published>2020-05-02T06:08:52.000Z</published>
+    <updated>2020-05-03T06:50:05.139Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
+        
+        
+          &lt;p&gt;MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：&lt;/p&gt;
+&lt;h2 id=&quot;软件本身：&quot;&gt;&lt;a href=&quot;#软件本身：&quot; class=&quot;headerlink&quot;
         
       
     
@@ -117,22 +87,19 @@
   </entry>
   
   <entry>
-    <title>测试 002</title>
-    <link href="https://leader755.com/2020/05/01/%E6%B5%8B%E8%AF%95-002/"/>
-    <id>https://leader755.com/2020/05/01/%E6%B5%8B%E8%AF%95-002/</id>
-    <published>2020-05-01T09:04:47.000Z</published>
-    <updated>2020-05-01T09:04:47.127Z</updated>
-    
-    <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <title>8&amp;gt;语雀文档同步到 hexo</title>
+    <link href="https://leader755.github.io/2020/05/02/yuque/egko8o/"/>
+    <id>https://leader755.github.io/2020/05/02/yuque/egko8o/</id>
+    <published>2020-05-01T23:37:20.000Z</published>
+    <updated>2020-05-03T06:50:05.168Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
+        
+        
+          &lt;h2 id=&quot;1-去官网注册账号&quot;&gt;&lt;a href=&quot;#1-去官网注册账号&quot; class=&quot;headerlink&quot; title=&quot;1.去官网注册账号&quot;&gt;&lt;/a&gt;&lt;a
         
       
     
@@ -143,22 +110,19 @@
   </entry>
   
   <entry>
-    <title>测试 001</title>
-    <link href="https://leader755.com/2020/05/01/%E6%B5%8B%E8%AF%95-001/"/>
-    <id>https://leader755.com/2020/05/01/%E6%B5%8B%E8%AF%95-001/</id>
-    <published>2020-05-01T09:04:34.000Z</published>
-    <updated>2020-05-01T09:04:34.863Z</updated>
-    
-    <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <title>Hexo博客提交百度和Google收录 - 简书</title>
+    <link href="https://leader755.github.io/2020/05/02/yuque/6600f4fa-1e97-4ef7-b40f-cb9ec89924e1/"/>
+    <id>https://leader755.github.io/2020/05/02/yuque/6600f4fa-1e97-4ef7-b40f-cb9ec89924e1/</id>
+    <published>2020-05-01T17:09:35.000Z</published>
+    <updated>2020-05-03T04:30:04.678Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/u/45ca76e8dbbd&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img
         
       
     
@@ -169,28 +133,187 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://leader755.com/2019/11/30/hello-world/"/>
-    <id>https://leader755.com/2019/11/30/hello-world/</id>
-    <published>2019-11-29T16:00:00.000Z</published>
-    <updated>2020-05-01T07:08:25.308Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <title>给文件添加一个.gitignore</title>
+    <link href="https://leader755.github.io/2020/05/01/yuque/du3fal/"/>
+    <id>https://leader755.github.io/2020/05/01/yuque/du3fal/</id>
+    <published>2020-05-01T11:48:14.000Z</published>
+    <updated>2020-05-03T04:30:04.724Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        
+        
+          &lt;h2 id=&quot;1-WHY&quot;&gt;&lt;a href=&quot;#1-WHY&quot; class=&quot;headerlink&quot; title=&quot;1.WHY?&quot;&gt;&lt;/a&gt;1.WHY?&lt;/h2&gt;&lt;p&gt;.gitignore 文件只要在这个文件中申明那些文件你不希望添加到 git
+        
       
     
     </summary>
     
     
-      <category term="前端" scheme="https://leader755.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6&amp;gt;hexo插件篇（必看）</title>
+    <link href="https://leader755.github.io/2020/05/01/yuque/wcgfp5/"/>
+    <id>https://leader755.github.io/2020/05/01/yuque/wcgfp5/</id>
+    <published>2020-05-01T10:00:28.000Z</published>
+    <updated>2020-05-03T04:30:04.885Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-gt-安装插件说明&quot;&gt;&lt;a href=&quot;#1-gt-安装插件说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
     
     
-      <category term="Hexo" scheme="https://leader755.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7&amp;gt;hexo主题配置</title>
+    <link href="https://leader755.github.io/2020/05/01/yuque/pdrp5a/"/>
+    <id>https://leader755.github.io/2020/05/01/yuque/pdrp5a/</id>
+    <published>2020-05-01T09:47:18.000Z</published>
+    <updated>2020-05-03T04:30:04.908Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-hexo-主题官网&quot;&gt;&lt;a href=&quot;#1-hexo-主题官网&quot; class=&quot;headerlink&quot; title=&quot;1.hexo 主题官网&quot;&gt;&lt;/a&gt;1.hexo 主题官网&lt;/h2&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>5&amp;gt;hexo文档部署到 Github和 coding</title>
+    <link href="https://leader755.github.io/2020/05/01/yuque/diqcug/"/>
+    <id>https://leader755.github.io/2020/05/01/yuque/diqcug/</id>
+    <published>2020-05-01T06:05:53.000Z</published>
+    <updated>2020-05-03T04:30:04.934Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>4&amp;gt;mac 上使用 vi</title>
+    <link href="https://leader755.github.io/2020/05/01/yuque/ee03pk/"/>
+    <id>https://leader755.github.io/2020/05/01/yuque/ee03pk/</id>
+    <published>2020-05-01T03:20:53.000Z</published>
+    <updated>2020-05-03T04:30:04.942Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。&lt;/p&gt;
+&lt;p&gt;如果是 vi，则：&lt;br&gt;&lt;strong&gt;Esc&lt;/strong&gt; 退出编辑模式，输入以下命令：&lt;br&gt;&lt;strong&gt;:wq&lt;/strong&gt; 保存后退出
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>3&amp;gt;mac上生成SSH key与GitHub通信</title>
+    <link href="https://leader755.github.io/2020/05/01/yuque/fn26h0/"/>
+    <id>https://leader755.github.io/2020/05/01/yuque/fn26h0/</id>
+    <published>2020-05-01T03:01:26.000Z</published>
+    <updated>2020-05-03T04:30:04.972Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-检查-SSH-key-是否存在&quot;&gt;&lt;a href=&quot;#1-检查-SSH-key-是否存在&quot; class=&quot;headerlink&quot; title=&quot;1.检查 SSH key 是否存在&quot;&gt;&lt;/a&gt;1.检查 SSH key
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2&amp;gt;一键搭建 github 博客</title>
+    <link href="https://leader755.github.io/2020/05/01/yuque/98bfbbe4-3078-488c-a1ad-907e638fce65/"/>
+    <id>https://leader755.github.io/2020/05/01/yuque/98bfbbe4-3078-488c-a1ad-907e638fce65/</id>
+    <published>2020-05-01T02:27:19.000Z</published>
+    <updated>2020-05-03T04:30:04.980Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;创建-GitHub-Pages&quot;&gt;&lt;a href=&quot;#创建-GitHub-Pages&quot; class=&quot;headerlink&quot; title=&quot;创建 GitHub Pages&quot;&gt;&lt;/a&gt;创建 GitHub Pages&lt;/h3&gt;&lt;p&gt;我们托管静态博客，使用的就是
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1&amp;gt;搭建本地的 hexo 的博客</title>
+    <link href="https://leader755.github.io/2020/04/30/yuque/dqugvo/"/>
+    <id>https://leader755.github.io/2020/04/30/yuque/dqugvo/</id>
+    <published>2020-04-30T15:44:24.000Z</published>
+    <updated>2020-05-03T04:30:04.990Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-gt-官方文档-https-github-com-hexojs-hexo&quot;&gt;&lt;a href=&quot;#1-gt-官方文档-https-github-com-hexojs-hexo&quot; class=&quot;headerlink&quot; title=&quot;1&amp;gt;官方文档  
+        
+      
+    
+    </summary>
+    
+    
     
   </entry>
   

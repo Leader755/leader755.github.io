@@ -1,0 +1,93 @@
+---
+title: 5&gt;hexo文档部署到 Github和 coding
+urlname: diqcug
+date: 2020-05-01 14:05:53 +0800
+tags: []
+categories: []
+---
+
+## 1：打开项目根目录下的 \_config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：
+
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&size=44477&status=done&style=none&width=526)
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#align=left&display=inline&height=120&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&size=33032&status=done&style=none&width=486)
+如果不部署到 coding，就只写 github 就行。
+
+```javascript
+deploy: type: git;
+repo: github: //github.com/Leader755/leader755.github.io.git
+https: coding: //e.coding.net/Leader755/leader755.coding.git
+https: branch: master;
+```
+
+## 2：要安装一个部署插件 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)。
+
+```javascript
+npm install hexo-deployer-git --save
+```
+
+## 3：发布到 github
+
+最后执行以下命令就可以部署上传啦，以下 g 是 generate 缩写，d 是 deploy 缩写：
+
+```javascript
+hexo g -d
+```
+
+稍等一会，在浏览器访问网址： [https://你的用户名.github.io](https://xn--6qqv7i14ofosyrb.github.io/) 就会看到你的博客啦！！
+
+## 4.写作并发布
+
+### 1.直接写作（情况）
+
+博客搭好了，就开始写文章了，这里简单介绍一下，详细的文档可以看 [hexo](https://hexo.io/zh-cn/) 官网。
+新建文章，输入以下命令即可
+
+```javascript
+hexo new '文章标题'
+```
+
+执行完成后可以在 /source/\_posts 下看到一个“文章标题.md”的文章文件啦。.md 就是 Markdown 格式的文件，具体用法可以在网上找一下，语法还是比较简单的。
+在 Markdown 文章里面输入你的文章内容
+
+### 2.存查稿(情况)
+
+#### 1.首先查看 sources 文件下是否有\_drafts 文件夹
+
+**  \_drafts(草稿文章缓存区)，\_posts(正式文章缓存区)**
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/241787/1588313764893-f9511ad0-1933-4c23-becd-bc162c0e8f3e.png#align=left&display=inline&height=149&margin=%5Bobject%20Object%5D&name=image.png&originHeight=298&originWidth=782&size=24987&status=done&style=none&width=391)
+
+如果没有该文件夹或者报错，则运行：
+
+```javascript
+hexo new draft "My First Blog Post"
+```
+
+#### 2.将草稿文章推送到正式区
+
+```javascript
+hexo publish "My First Blog Post"
+```
+
+### 2.打包
+
+```javascript
+hexo g
+```
+
+### 3.运行本地 hexo
+
+```javascript
+hexo s
+```
+
+### 4.部署到 github 和 coding
+
+因为 github 和 coding 使用了同一个公钥，所以推送时会触发多个仓库。
+
+```javascript
+//部署前先清理一下缓存命令
+hexo clean
+
+//部署
+hexo g -d
+```

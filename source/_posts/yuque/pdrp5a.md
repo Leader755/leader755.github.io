@@ -1,0 +1,72 @@
+---
+title: 7&gt;hexo主题配置
+urlname: pdrp5a
+date: 2020-05-01 17:47:18 +0800
+tags: []
+categories: []
+---
+
+## 1.hexo 主题官网
+
+[http://theme-next.iissnan.com/getting-started.html](http://theme-next.iissnan.com/getting-started.html)
+
+## 2.应用以及下载主题
+
+说明：在 Hexo 中有两份主要的配置文件，其名称都是 `_config.yml`。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。
+为了描述方便，在以下说明中，将前者称为 **站点配置文件**， 后者称为 **主题配置文件**。（必看）
+
+### 1.安装主题
+
+Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至**站点目录(\*\***即根目录下的文件\_config.yml 文件\***\*)**的  `themes`  目录下， 然后修改下配置文件即可。next 为主题名
+
+```javascript
+//在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：
+$ cd your-hexo-site
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next
+```
+
+###
+
+### 2.启用主题
+
+与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 **站点配置文件**， 找到 `theme` 字段，并将其值更改为 `next(主题名)`。
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/241787/1588326982972-1828234c-3a21-48e1-ac1e-5b57480ac6f0.png#align=left&display=inline&height=111&margin=%5Bobject%20Object%5D&name=image.png&originHeight=222&originWidth=1012&size=24250&status=done&style=none&width=506)
+
+```javascript
+theme: next;
+```
+
+#### 2.1 本文使用的是（hexo-theme-halo）主题
+
+1>直接下载 git  clone
+
+```javascript
+git clone https://github.com/hongweifuture/hexo-theme-halo.git themes/halo
+```
+
+2>直接将`themes/halo/config/source`内所有内容拷贝到`Hexo`根目录下的`source`文件夹内替换
+
+#### 2.2 配置切换主题
+
+修改 Hexo 根目录下的 `_config.yml` 的 `theme` 的值：`theme: halo`
+`根目录_config.yml` 文件的其它修改建议:
+
+- 请修改 `_config.yml` 的 `url` 的值为你的网站主 `URL`（如：`[http://xxx.github.io](http://xxx.github.io)`）。
+- 建议修改两个 `per_page` 的分页条数值为 `6` 的倍数，如：`12`、`18` 等，这样文章列表在各个屏幕下都能较好的显示。
+- 如果你是中文用户，则建议修改 `language` 的值为 `zh-CN`。
+
+### 3.验证主题
+
+```javascript
+//最好先清除缓存
+hexo clean
+
+//打包
+hexo g
+
+//启动
+hexo s
+
+//发布到 github
+hexo s -d
+```
