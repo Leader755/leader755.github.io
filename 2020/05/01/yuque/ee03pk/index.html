@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="data, Hexo">
-    <meta name="description" content="data | Hexo">
+    <meta name="keywords" content="4&amp;gt;mac 上使用 vi, Hexo">
+    <meta name="description" content="上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。
+如果是 vi，则：Esc 退出编辑模式，输入以下命令：:wq 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）:w 保存但不退">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>data | Hexo</title>
+    <title>4&amp;gt;mac 上使用 vi | Hexo</title>
     <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/favicon.ico">
 
@@ -274,283 +275,502 @@
     </nav>
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                subtitle
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')"> -->
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/medias/featureimages/13.jpg')">    
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">4&amp;gt;mac 上使用 vi</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
+
+
+<main class="post-container content">
+
+    
+    <!-- <link rel="stylesheet" href="/libs/tocbot/tocbot.css"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 110px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-05-01
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-05-03
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    141
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
+<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://leader755.github.io" rel="external nofollow noreferrer">John Doe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://leader755.github.io/2020/05/01/yuque/ee03pk/">https://leader755.github.io/2020/05/01/yuque/ee03pk/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                       版权声明: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://leader755.github.io" target="_blank">John Doe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <!-- <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css"> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="qq,weibo,douban,google,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <!-- <script src="/libs/share/js/social-share.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/05/01/yuque/diqcug/">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="5&gt;hexo文档部署到 Github和 coding"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="5&gt;hexo文档部署到 Github和 coding">
+                        
+                        <span class="card-title">5&gt;hexo文档部署到 Github和 coding</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：如果不部署到 coding，就只写 github 就行。
+1234deploy: type: git;repo
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/05/01/yuque/fn26h0/">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="3&gt;mac上生成SSH key与GitHub通信"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="3&gt;mac上生成SSH key与GitHub通信">
+                        
+                        <span class="card-title">3&gt;mac上生成SSH key与GitHub通信</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1.检查 SSH key 是否存在在终端输入：
+1ls -al ~/.ssh
+
+如果没有，终端显示如下：
+
+No such file or directory
+
+如果已经存在，则会显示 id_rsa 和 id_rsa.pub
+2.生成新的 
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<!-- <script src="/libs/tocbot/tocbot.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/tocbot/tocbot.min.js"></script>
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    // $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
-    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/medias/banner/' + new Date().getDay() + '.jpg)');
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
 </script>
 
-    </div>
-</div>
-
-<div class="content">
-    <div class="container ">
-        <div class="card post-statis">
-            
-<div class="statis">
-    <span class="count"><a href="/">13</a></span>
-    <span class="name">文章</span>
-</div>
-
-
-
-
-
-
-        </div>
-    </div>
-
-    <div class="container ">
-        <div class="card">
-            <style type="text/css">
-    #posts-chart,
-    #categories-chart,
-    #tags-chart {
-        width: 100%;
-        height: 300px;
-        margin: 0.5rem auto;
-        padding: 0.5rem;
-    }
-</style>
-
-<div id="postCharts" class="post-charts">
-    <div class="chart" data-aos="zoom-in-up">
-        <div id="posts-chart" class="card-content"></div>
-    </div>
-</div>
-
-<!-- <script type="text/javascript" src="/libs/echarts/echarts.min.js"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/echarts/echarts.min.js"></script>
-<script>
-    let postsChart = echarts.init(document.getElementById('posts-chart'));
-
     
 
-    let postsOption = {
-        title: {
-            text: '文章发布统计图',
-            top: -5,
-            x: 'center'
-        },
-        tooltip: {
-            trigger: 'axis'
-        },
-        xAxis: {
-            type: 'category',
-            data: ["2019-05","2019-06","2019-07","2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05"]
-        },
-        yAxis: {
-            type: 'value',
-        },
-        series: [
-            {
-                name: '文章篇数',
-                type: 'line',
-                color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,1,12],
-                markPoint: {
-                    symbolSize: 45,
-                    color: ['#fa755a','#3ecf8e','#82d3f4'],
-                    data: [{
-                        type: 'max',
-                        itemStyle: {color: ['#3ecf8e']},
-                        name: '最大值'
-                    }, {
-                        type: 'min',
-                        itemStyle: {color: ['#fa755a']},
-                        name: '最小值'
-                    }]
-                },
-                markLine: {
-                    itemStyle: {color: ['#ab47bc']},
-                    data: [
-                        {type: 'average', name: '平均值'}
-                    ]
-                }
-            }
-        ]
-    };
-
-    // render the charts
-    postsChart.setOption(postsOption);
-</script> 
-        </div>
-    </div>
-
-    <div class="container ">
-        <div class="card">
-            <style type="text/css">
-    #posts-chart,
-    #categories-chart,
-    #tags-chart {
-        width: 100%;
-        height: 300px;
-        margin: 0.5rem auto;
-        padding: 0.5rem;
-    }
-</style>
-
-<div id="postCharts" class="post-charts">
-    <div class="chart" data-aos="zoom-in-up">
-        <div id="tags-chart" class="card-content"></div>
-    </div>
-</div>
-
-<!-- <script type="text/javascript" src="/libs/echarts/echarts.min.js"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/echarts/echarts.min.js"></script>
-<script>
-    let tagsChart = echarts.init(document.getElementById('tags-chart'));
-
-    
-
-    let tagsOption = {
-        title: {
-            text: 'TOP10 标签统计图',
-            top: -5,
-            x: 'center'
-        },
-        tooltip: {},
-        xAxis: [
-            {
-                type: 'category',
-                data: []
-            }
-        ],
-        yAxis: [
-            {
-                type: 'value'
-            }
-        ],
-        series: [
-            {
-                type: 'bar',
-                color: ['#82d3f4'],
-                barWidth : 18,
-                data: [],
-                markPoint: {
-                    symbolSize: 45,
-                    data: [{
-                        type: 'max',
-                        itemStyle: {color: ['#3ecf8e']},
-                        name: '最大值'
-                    }, {
-                        type: 'min',
-                        itemStyle: {color: ['#fa755a']},
-                        name: '最小值'
-                    }],
-                },
-                markLine: {
-                    itemStyle: {color: ['#ab47bc']},
-                    data: [
-                        {type: 'average', name: '平均值'}
-                    ]
-                }
-            }
-        ]
-    };
-
-    // render the charts
-    tagsChart.setOption(tagsOption);
-</script> 
-        </div>
-    </div>
-
-    <div class="container ">
-        <div class="card">
-            <style type="text/css">
-    #posts-chart,
-    #categories-chart,
-    #tags-chart {
-        width: 100%;
-        height: 300px;
-        margin: 0.5rem auto;
-        padding: 0.5rem;
-    }
-</style>
-
-<div id="postCharts" class="post-charts">
-    <div class="chart" data-aos="zoom-in-up">
-        <div id="categories-chart" class="card-content"></div>
-    </div>
-</div>
-
-<!-- <script type="text/javascript" src="/libs/echarts/echarts.min.js"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/libs/echarts/echarts.min.js"></script>
-<script>
-    let categoriesChart = echarts.init(document.getElementById('categories-chart'));
-
-    
-
-    let categoriesOption = {
-        title: {
-            text: '文章分类统计图',
-            top: -4,
-            x: 'center'
-        },
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-        series: [
-            {
-                name: '分类',
-                type: 'pie',
-                radius: '50%',
-                color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [],
-                itemStyle: {
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                    }
-                }
-            }
-        ]
-    };
+</main>
 
 
-
-    // render the charts
-    categoriesChart.setOption(categoriesOption);
-</script> 
-        </div>
-    </div>
-
-    
-</div>
 
     <footer class="page-footer bg-color">
     <div class="container row center-align" style="margin-bottom: 15px !important;">
