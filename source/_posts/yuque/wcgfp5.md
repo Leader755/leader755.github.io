@@ -50,7 +50,7 @@ field: post;
 
 ###
 
-### 文章字数统计插件（建议安装）
+### 文章字数统计插件（建议安装）（使用了 halo 主题则必须安装）
 
 如果你想要在文章中显示文章字数、阅读时长信息，可以安装 [hexo-wordcount](https://github.com/willin/hexo-wordcount)插件。安装命令如下：
 
@@ -59,9 +59,10 @@ npm i --save hexo-wordcount
 ```
 
 然后只需在本主题下的 `_config.yml` 文件中，将各个文章字数相关的配置激活即可：
+(此处注意源文档的 postInfo 是错的，应该为 post_wordcount)
 
 ```javascript
-postInfo:
+post_wordcount:
   date: true # 发布日期
   update: true # 更新日期
   wordCount: true # 文章字数统计
@@ -130,7 +131,7 @@ neat_js:
 
 ###
 
-### 外链跳转插件 hexo-external-link（可选安装）
+### 外链跳转插件 hexo-external-link（可选安装）（使用了 halo 主题则必须安装）
 
 > [hexo-external-link](https://github.com/hvnobug/hexo-external-link)是一个跳转外链相关插件。自动为所有 html 文件中外链的 a 标签生成对应的属性。 比如 设置`target=’_blank’`, `rel=’external nofollow noopener noreferrer’`告诉搜索引擎这是外部链接,不要将该链接计入权重。 同时自动生成外链跳转页面,默认在根目录下 go.html;
 
@@ -165,7 +166,7 @@ hexo_external_link:
 
 ###
 
-### 添加 RSS 订阅支持（可选安装）
+### 添加 RSS 订阅支持（可选安装）（使用了 halo 主题则必须安装）
 
 本主题中还使用到了 [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) 的 Hexo 插件来做 `RSS`，安装命令如下：
 
@@ -184,7 +185,7 @@ content_limit_delim: " ";
 order_by: -date;
 ```
 
-### 添加 sitemap 站点地图（可选安装）
+### 添加 sitemap 站点地图（可选安装）（使用了 halo 主题则必须安装）
 
 本主题中还使用到了 [hexo-generator-sitemap](https://github.com/hexojs/hexo-generator-sitemap) 的 Hexo 插件来做 `Sitemap`，安装命令如下：
 
@@ -212,8 +213,6 @@ permalink_pinyin:
   separator: '-' # default: '-'
 ```
 
-/
-
 > **注**：除了此插件外，[hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) 插件也可以生成非中文的链接。
 
 ###
@@ -239,7 +238,7 @@ githubEmojis:
   customEmojis:
 ```
 
-### deploy 发布插件（可选安装）
+### deploy 发布插件（可选安装）（部署到 github 需要安装）
 
 如果你想通过`deploy`的方式进行推送`public文件夹`到托管网站，你需要安装
 
