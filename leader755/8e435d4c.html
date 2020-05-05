@@ -4,9 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="7&amp;gt;hexo主题配置, Hexo">
-    <meta name="description" content="1.hexo 主题官网http://theme-next.iissnan.com/getting-started.html
-2.应用以及下载主题说明：在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于">
+    <meta name="keywords" content="1&amp;gt;搭建本地的 hexo 的博客, Hexo">
+    <meta name="description" content="1&amp;gt;官方文档   https://github.com/hexojs/hexo2&amp;gt;搭建博客1.全局安装 hexo，创建博客npm install hexo-cli -g
+2.初始化hexo init blog
+3.启动本地 he">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>7&amp;gt;hexo主题配置 | Hexo</title>
+    <title>1&amp;gt;搭建本地的 hexo 的博客 | Hexo</title>
     <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/favicon.ico">
 
@@ -280,13 +281,13 @@
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')"> -->
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/1.jpg')">    
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')"> -->
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/2.jpg')">    
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">7&amp;gt;hexo主题配置</h1>
+                    <h1 class="description center-align post-title">1&amp;gt;搭建本地的 hexo 的博客</h1>
                 </div>
             </div>
         </div>
@@ -416,21 +417,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-01
+                    2020-04-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-05
+                    2020-05-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    501
+                    117
                 </div>
                 
 
@@ -448,35 +449,22 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-hexo-主题官网"><a href="#1-hexo-主题官网" class="headerlink" title="1.hexo 主题官网"></a>1.hexo 主题官网</h2><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a></p>
-<h2 id="2-应用以及下载主题"><a href="#2-应用以及下载主题" class="headerlink" title="2.应用以及下载主题"></a>2.应用以及下载主题</h2><p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br>为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>， 后者称为 <strong>主题配置文件</strong>。（必看）</p>
-<h3 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1.安装主题"></a>1.安装主题</h3><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至<strong>站点目录(**</strong>即根目录下的文件_config.yml 文件*<strong>*)</strong>的  <code>themes</code>  目录下， 然后修改下配置文件即可。next 为主题名</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：</span>
-$ cd your<span class="token operator">-</span>hexo<span class="token operator">-</span>site
-$ git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>iissnan<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next</code></pre>
-<p>###</p>
-<h3 id="2-启用主题"><a href="#2-启用主题" class="headerlink" title="2.启用主题"></a>2.启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next(主题名)</code>。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588326982972-1828234c-3a21-48e1-ac1e-5b57480ac6f0.png#align=left&display=inline&height=111&margin=%5Bobject%20Object%5D&name=image.png&originHeight=222&originWidth=1012&size=24250&status=done&style=none&width=506" alt="image.png"></p>
-<pre class=" language-javascript"><code class="language-javascript">theme<span class="token punctuation">:</span> next<span class="token punctuation">;</span></code></pre>
-<h4 id="2-1-本文使用的是（hexo-theme-halo）主题"><a href="#2-1-本文使用的是（hexo-theme-halo）主题" class="headerlink" title="2.1 本文使用的是（hexo-theme-halo）主题"></a>2.1 本文使用的是（hexo-theme-halo）主题</h4><p>1&gt;直接下载 git  clone</p>
-<pre class=" language-javascript"><code class="language-javascript">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>hongweifuture<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>halo<span class="token punctuation">.</span>git themes<span class="token operator">/</span>halo</code></pre>
-<p>2&gt;直接将<code>themes/halo/config/source</code>内所有内容拷贝到<code>Hexo</code>根目录下的<code>source</code>文件夹内替换</p>
-<h4 id="2-2-配置切换主题"><a href="#2-2-配置切换主题" class="headerlink" title="2.2 配置切换主题"></a>2.2 配置切换主题</h4><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: halo</code><br><code>根目录_config.yml</code> 文件的其它修改建议:</p>
-<ul>
-<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>[http://xxx.github.io](http://xxx.github.io)</code>）。</li>
-<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
-<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
-</ul>
-<h3 id="3-验证主题"><a href="#3-验证主题" class="headerlink" title="3.验证主题"></a>3.验证主题</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//最好先清除缓存</span>
-hexo clean
+                <h2 id="1-gt-官方文档-https-github-com-hexojs-hexo"><a href="#1-gt-官方文档-https-github-com-hexojs-hexo" class="headerlink" title="1&gt;官方文档   https://github.com/hexojs/hexo"></a>1&gt;官方文档   <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">https://github.com/hexojs/hexo</a></h2><h2 id="2-gt-搭建博客"><a href="#2-gt-搭建博客" class="headerlink" title="2&gt;搭建博客"></a>2&gt;搭建博客</h2><h3 id="1-全局安装-hexo，创建博客"><a href="#1-全局安装-hexo，创建博客" class="headerlink" title="1.全局安装 hexo，创建博客"></a>1.全局安装 hexo，创建博客</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g</code></pre>
+<h3 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h3><pre class=" language-javascript"><code class="language-javascript">hexo init blog</code></pre>
+<h3 id="3-启动本地-hexo-server"><a href="#3-启动本地-hexo-server" class="headerlink" title="3.启动本地 hexo-server"></a>3.启动本地 hexo-server</h3><pre class=" language-javascript"><code class="language-javascript">hexo server</code></pre>
+<h2 id="4-新建一个-hexo-博客，富文本-makedown-文档"><a href="#4-新建一个-hexo-博客，富文本-makedown-文档" class="headerlink" title="4.新建一个 hexo 博客，富文本 makedown 文档"></a>4.新建一个 hexo 博客，富文本 makedown 文档</h2><pre class=" language-javascript"><code class="language-javascript">$ hexo <span class="token keyword">new</span> <span class="token string">"Hello Hexo"</span></code></pre>
+<h2 id="5-打包发布到-hexo"><a href="#5-打包发布到-hexo" class="headerlink" title="5.打包发布到 hexo"></a>5.打包发布到 hexo</h2><pre><code>//打包发布 hexo
+hexo generate
 
-<span class="token comment" spellcheck="true">//打包</span>
-hexo g
 
-<span class="token comment" spellcheck="true">//启动</span>
-hexo s
-
-<span class="token comment" spellcheck="true">//发布到 github</span>
-hexo s <span class="token operator">-</span>d</code></pre>
+//重启服务(可以看到新增的文档)
+hexo server
+</code></pre><h2 id="6-packge-json-的命令行（备份文件）"><a href="#6-packge-json-的命令行（备份文件）" class="headerlink" title="6.packge.json 的命令行（备份文件）"></a>6.packge.json 的命令行（备份文件）</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
+    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
+    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
 
             </div>
             <hr/>
@@ -502,7 +490,7 @@ hexo s <span class="token operator">-</span>d</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leader755.github.io/2020/05/01/yuque/pdrp5a/">https://leader755.github.io/2020/05/01/yuque/pdrp5a/</a>
+                    <a href="https://leader755.github.io/leader755/8e435d4c.html">https://leader755.github.io/leader755/8e435d4c.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -584,21 +572,20 @@ hexo s <span class="token operator">-</span>d</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/01/yuque/wcgfp5/">
+                <a href="/leader755/42ea967c.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="6&gt;hexo插件篇（必看）"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="6&gt;hexo插件篇（必看）">
+                        <!-- <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="2&gt;一键搭建 github 博客"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="2&gt;一键搭建 github 博客">
                         
-                        <span class="card-title">6&gt;hexo插件篇（必看）</span>
+                        <span class="card-title">2&gt;一键搭建 github 博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1&gt;安装插件说明如果应用官网的主题你会发现，有可能出现打不开的情况，这是由于有些主题使用的插件，本地并没有安装导致的报错。所以本篇文章为补充说明篇。（无问题的可以跳过）
-2&gt;常用的插件代码高亮（建议安装）由于 Hexo 自带的代
+                            创建 GitHub Pages我们托管静态博客，使用的就是 GitHub Pages 的功能，首先我们需要创建一个个人主页，点击右上角的加号，选择 new repositories，进入创建页面。有的是说 username.github.i
                         
                     </div>
                     <div class="publish-info">
@@ -620,30 +607,30 @@ hexo s <span class="token operator">-</span>d</code></pre>
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/01/yuque/diqcug/">
+                <a href="/leader755/8e435d4c.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="5&gt;hexo文档部署到 Github和 coding"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="5&gt;hexo文档部署到 Github和 coding">
+                        <!-- <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="1&gt;搭建本地的 hexo 的博客"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="1&gt;搭建本地的 hexo 的博客">
                         
-                        <span class="card-title">5&gt;hexo文档部署到 Github和 coding</span>
+                        <span class="card-title">1&gt;搭建本地的 hexo 的博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：如果不部署到 coding，就只写 github 就行。
-deploy: type: git;
-repo: g
+                            1&gt;官方文档   https://github.com/hexojs/hexo2&gt;搭建博客1.全局安装 hexo，创建博客npm install hexo-cli -g
+2.初始化hexo init blog
+3.启动本地 he
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-30
                             </span>
                         <span class="publish-author">
                             
@@ -653,6 +640,7 @@ repo: g
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -796,7 +784,7 @@ repo: g
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-                class="white-color">9.8k</span>&nbsp;字
+                class="white-color">10.1k</span>&nbsp;字
             
             
             
