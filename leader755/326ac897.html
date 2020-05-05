@@ -3,9 +3,9 @@
 
 
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="3&amp;gt;mac上生成SSH key与GitHub通信, Hexo">
-    <meta name="description" content="1.检查 SSH key 是否存在在终端输入：
+  <meta charset="utf-8">
+  <meta name="keywords" content="3&amp;gt;mac上生成SSH key与GitHub通信, Hexo">
+  <meta name="description" content="1.检查 SSH key 是否存在在终端输入：
 ls -al ~/.ssh
 如果没有，终端显示如下：
 
@@ -13,40 +13,53 @@ No such file or directory
 
 如果已经存在，则会显示 id_rsa 和 id_rsa.pub
 2.生成新的 SS">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>3&amp;gt;mac上生成SSH key与GitHub通信 | Hexo</title>
-    <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
-    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>3&amp;gt;mac上生成SSH key与GitHub通信 | Hexo</title>
+  <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/favicon.ico">
 
-    <!-- <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
     <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css"> -->
-    
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/css/my.css">
 
-    <script src="/libs/jquery/jquery.min.js"></script>
-    <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/jquery/jquery.min.js"></script>
-    
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/awesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/materialize/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/aos/aos.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/animate/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/lightGallery/css/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/css/matery.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/css/my.css">
+
+  <script src="/libs/jquery/jquery.min.js"></script>
+  <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
+  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/libs/jquery/jquery.min.js"></script>
+  <!-- 百度自动推送 -->
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-
 
 <body>
   <header class="navbar-fixed">
