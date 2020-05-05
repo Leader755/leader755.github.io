@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leader755.github.io/"/>
-  <updated>2020-05-05T15:01:23.057Z</updated>
+  <updated>2020-05-05T16:10:58.750Z</updated>
   <id>https://leader755.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo博客的生成永久标题链接</title>
+    <link href="https://leader755.github.io/leader755/4976fe22.html"/>
+    <id>https://leader755.github.io/leader755/4976fe22.html</id>
+    <published>2020-05-05T15:48:30.000Z</published>
+    <updated>2020-05-05T16:10:58.750Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-hexo-博客默认链接规则：&quot;&gt;&lt;a href=&quot;#1-hexo-博客默认链接规则：&quot; class=&quot;headerlink&quot; title=&quot;1.hexo 博客默认链接规则：&quot;&gt;&lt;/a&gt;1.hexo 博客默认链接规则：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;hexo
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>serverless 和 hexo快速搭建静态博客</title>
-    <link href="https://leader755.github.io/2020/05/04/yuque/be983r/"/>
-    <id>https://leader755.github.io/2020/05/04/yuque/be983r/</id>
+    <link href="https://leader755.github.io/leader755/e209121b.html"/>
+    <id>https://leader755.github.io/leader755/e209121b.html</id>
     <published>2020-05-04T14:52:44.000Z</published>
-    <updated>2020-05-05T15:01:23.057Z</updated>
+    <updated>2020-05-05T16:10:58.745Z</updated>
     
     <summary type="html">
     
@@ -41,10 +64,10 @@
   
   <entry>
     <title>hexo使用的问题指南</title>
-    <link href="https://leader755.github.io/2020/05/03/yuque/iwxsk5/"/>
-    <id>https://leader755.github.io/2020/05/03/yuque/iwxsk5/</id>
+    <link href="https://leader755.github.io/leader755/db56f43f.html"/>
+    <id>https://leader755.github.io/leader755/db56f43f.html</id>
     <published>2020-05-03T03:13:51.000Z</published>
-    <updated>2020-05-05T15:01:23.064Z</updated>
+    <updated>2020-05-05T16:10:58.749Z</updated>
     
     <summary type="html">
     
@@ -64,10 +87,10 @@
   
   <entry>
     <title>欢迎使用 MWeb</title>
-    <link href="https://leader755.github.io/2020/05/02/yuque/huan-ying-shi-yong-mweb/"/>
-    <id>https://leader755.github.io/2020/05/02/yuque/huan-ying-shi-yong-mweb/</id>
+    <link href="https://leader755.github.io/leader755/766a05db.html"/>
+    <id>https://leader755.github.io/leader755/766a05db.html</id>
     <published>2020-05-02T06:08:52.000Z</published>
-    <updated>2020-05-05T15:01:23.094Z</updated>
+    <updated>2020-05-05T16:10:58.748Z</updated>
     
     <summary type="html">
     
@@ -88,10 +111,10 @@
   
   <entry>
     <title>8&amp;gt;语雀文档同步到 hexo</title>
-    <link href="https://leader755.github.io/2020/05/02/yuque/egko8o/"/>
-    <id>https://leader755.github.io/2020/05/02/yuque/egko8o/</id>
+    <link href="https://leader755.github.io/leader755/c07f1349.html"/>
+    <id>https://leader755.github.io/leader755/c07f1349.html</id>
     <published>2020-05-01T23:37:20.000Z</published>
-    <updated>2020-05-05T15:01:23.122Z</updated>
+    <updated>2020-05-05T16:10:58.747Z</updated>
     
     <summary type="html">
     
@@ -111,10 +134,10 @@
   
   <entry>
     <title>Hexo博客提交百度和Google收录</title>
-    <link href="https://leader755.github.io/2020/05/02/yuque/6600f4fa-1e97-4ef7-b40f-cb9ec89924e1/"/>
-    <id>https://leader755.github.io/2020/05/02/yuque/6600f4fa-1e97-4ef7-b40f-cb9ec89924e1/</id>
+    <link href="https://leader755.github.io/leader755/5c84a3bd.html"/>
+    <id>https://leader755.github.io/leader755/5c84a3bd.html</id>
     <published>2020-05-01T17:09:35.000Z</published>
-    <updated>2020-05-05T15:01:23.173Z</updated>
+    <updated>2020-05-05T16:10:58.744Z</updated>
     
     <summary type="html">
     
@@ -134,10 +157,10 @@
   
   <entry>
     <title>给文件添加一个.gitignore</title>
-    <link href="https://leader755.github.io/2020/05/01/yuque/du3fal/"/>
-    <id>https://leader755.github.io/2020/05/01/yuque/du3fal/</id>
+    <link href="https://leader755.github.io/leader755/6f1cbacf.html"/>
+    <id>https://leader755.github.io/leader755/6f1cbacf.html</id>
     <published>2020-05-01T11:48:14.000Z</published>
-    <updated>2020-05-05T15:01:23.224Z</updated>
+    <updated>2020-05-05T16:10:58.746Z</updated>
     
     <summary type="html">
     
@@ -157,10 +180,10 @@
   
   <entry>
     <title>6&amp;gt;hexo插件篇（必看）</title>
-    <link href="https://leader755.github.io/2020/05/01/yuque/wcgfp5/"/>
-    <id>https://leader755.github.io/2020/05/01/yuque/wcgfp5/</id>
+    <link href="https://leader755.github.io/leader755/dde88f77.html"/>
+    <id>https://leader755.github.io/leader755/dde88f77.html</id>
     <published>2020-05-01T10:00:28.000Z</published>
-    <updated>2020-05-05T15:01:23.386Z</updated>
+    <updated>2020-05-05T16:10:58.750Z</updated>
     
     <summary type="html">
     
@@ -180,10 +203,10 @@
   
   <entry>
     <title>7&amp;gt;hexo主题配置</title>
-    <link href="https://leader755.github.io/2020/05/01/yuque/pdrp5a/"/>
-    <id>https://leader755.github.io/2020/05/01/yuque/pdrp5a/</id>
+    <link href="https://leader755.github.io/leader755/2f85a4d1.html"/>
+    <id>https://leader755.github.io/leader755/2f85a4d1.html</id>
     <published>2020-05-01T09:47:18.000Z</published>
-    <updated>2020-05-05T15:01:23.408Z</updated>
+    <updated>2020-05-05T16:10:58.749Z</updated>
     
     <summary type="html">
     
@@ -203,10 +226,10 @@
   
   <entry>
     <title>5&amp;gt;hexo文档部署到 Github和 coding</title>
-    <link href="https://leader755.github.io/2020/05/01/yuque/diqcug/"/>
-    <id>https://leader755.github.io/2020/05/01/yuque/diqcug/</id>
+    <link href="https://leader755.github.io/leader755/99853e10.html"/>
+    <id>https://leader755.github.io/leader755/99853e10.html</id>
     <published>2020-05-01T06:05:53.000Z</published>
-    <updated>2020-05-05T15:01:23.438Z</updated>
+    <updated>2020-05-05T16:10:58.743Z</updated>
     
     <summary type="html">
     
@@ -226,10 +249,10 @@
   
   <entry>
     <title>4&amp;gt;mac 上使用 vi</title>
-    <link href="https://leader755.github.io/2020/05/01/yuque/ee03pk/"/>
-    <id>https://leader755.github.io/2020/05/01/yuque/ee03pk/</id>
+    <link href="https://leader755.github.io/leader755/87beae81.html"/>
+    <id>https://leader755.github.io/leader755/87beae81.html</id>
     <published>2020-05-01T03:20:53.000Z</published>
-    <updated>2020-05-05T15:01:23.443Z</updated>
+    <updated>2020-05-05T16:10:58.747Z</updated>
     
     <summary type="html">
     
@@ -250,10 +273,10 @@
   
   <entry>
     <title>3&amp;gt;mac上生成SSH key与GitHub通信</title>
-    <link href="https://leader755.github.io/2020/05/01/yuque/fn26h0/"/>
-    <id>https://leader755.github.io/2020/05/01/yuque/fn26h0/</id>
+    <link href="https://leader755.github.io/leader755/326ac897.html"/>
+    <id>https://leader755.github.io/leader755/326ac897.html</id>
     <published>2020-05-01T03:01:26.000Z</published>
-    <updated>2020-05-05T15:01:23.472Z</updated>
+    <updated>2020-05-05T16:10:58.748Z</updated>
     
     <summary type="html">
     
@@ -273,10 +296,10 @@
   
   <entry>
     <title>2&amp;gt;一键搭建 github 博客</title>
-    <link href="https://leader755.github.io/2020/05/01/yuque/98bfbbe4-3078-488c-a1ad-907e638fce65/"/>
-    <id>https://leader755.github.io/2020/05/01/yuque/98bfbbe4-3078-488c-a1ad-907e638fce65/</id>
+    <link href="https://leader755.github.io/leader755/42ea967c.html"/>
+    <id>https://leader755.github.io/leader755/42ea967c.html</id>
     <published>2020-05-01T02:27:19.000Z</published>
-    <updated>2020-05-05T15:01:23.481Z</updated>
+    <updated>2020-05-05T16:10:58.746Z</updated>
     
     <summary type="html">
     
@@ -296,10 +319,10 @@
   
   <entry>
     <title>1&amp;gt;搭建本地的 hexo 的博客</title>
-    <link href="https://leader755.github.io/2020/04/30/yuque/dqugvo/"/>
-    <id>https://leader755.github.io/2020/04/30/yuque/dqugvo/</id>
+    <link href="https://leader755.github.io/leader755/8e435d4c.html"/>
+    <id>https://leader755.github.io/leader755/8e435d4c.html</id>
     <published>2020-04-30T15:44:24.000Z</published>
-    <updated>2020-05-05T15:01:23.490Z</updated>
+    <updated>2020-05-05T16:10:58.745Z</updated>
     
     <summary type="html">
     

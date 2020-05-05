@@ -1,9 +1,10 @@
 ---
 title: 1&gt;搭建本地的 hexo 的博客
 urlname: dqugvo
-date: 2020-04-30 23:44:24 +0800
+date: '2020-04-30 23:44:24 +0800'
 tags: []
 categories: []
+abbrlink: 8e435d4c
 ---
 
 ## 1>官方文档   [https://github.com/hexojs/hexo](https://github.com/hexojs/hexo)

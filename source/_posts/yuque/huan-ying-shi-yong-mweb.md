@@ -1,9 +1,10 @@
 ---
 title: 欢迎使用 MWeb
 urlname: huan-ying-shi-yong-mweb
-date: 2020-05-02 14:08:52 +0800
+date: '2020-05-02 14:08:52 +0800'
 tags: []
 categories: []
+abbrlink: 766a05db
 ---
 
 MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：

@@ -1,9 +1,10 @@
 ---
 title: 4&gt;mac 上使用 vi
 urlname: ee03pk
-date: 2020-05-01 11:20:53 +0800
+date: '2020-05-01 11:20:53 +0800'
 tags: []
 categories: []
+abbrlink: 87beae81
 ---
 
 上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。

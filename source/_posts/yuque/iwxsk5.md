@@ -1,9 +1,10 @@
 ---
 title: hexo使用的问题指南
 urlname: iwxsk5
-date: 2020-05-03 11:13:51 +0800
+date: '2020-05-03 11:13:51 +0800'
 tags: []
 categories: []
+abbrlink: db56f43f
 ---
 
 ### 1.hexo g -d 会报错

@@ -1,9 +1,10 @@
 ---
 title: 7&gt;hexo主题配置
 urlname: pdrp5a
-date: 2020-05-01 17:47:18 +0800
+date: '2020-05-01 17:47:18 +0800'
 tags: []
 categories: []
+abbrlink: 2f85a4d1
 ---
 
 ## 1.hexo 主题官网

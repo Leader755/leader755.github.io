@@ -1,9 +1,10 @@
 ---
 title: 6&gt;hexo插件篇（必看）
 urlname: wcgfp5
-date: 2020-05-01 18:00:28 +0800
+date: '2020-05-01 18:00:28 +0800'
 tags: []
 categories: []
+abbrlink: dde88f77
 ---
 
 ## 1>安装插件说明
@@ -25,6 +26,11 @@ npm i -S hexo-prism-plugin
 ```javascript
 highlight:
   enable: false
+  line_number: true
+  auto_detect: false
+  tab_replace: false
+  wrap: true
+  hljs: false
 
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess

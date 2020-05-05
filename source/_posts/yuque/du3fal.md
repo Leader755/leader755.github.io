@@ -1,9 +1,10 @@
 ---
 title: 给文件添加一个.gitignore
 urlname: du3fal
-date: 2020-05-01 19:48:14 +0800
+date: '2020-05-01 19:48:14 +0800'
 tags: []
 categories: []
+abbrlink: 6f1cbacf
 ---
 
 ## 1.WHY?
