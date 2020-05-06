@@ -4,12 +4,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="hexo使用的问题指南, Hexo">
-  <meta name="description" content="1.hexo g -d 会报错win 本地仓库：将 https 改为 ssh
-deploy：
-   type：git
-   repo：git@github.com:Leader755/leader755.github.io.git
-   b">
+  <meta name="keywords" content="hexo博客站内搜索功能, Hexo">
+  <meta name="description" content="1.根目录安装插件 hexo-generator-searchdbnpm install hexo-generator-searchdb --save
+2.配置根目录文件_config.ymlsearch: path: search.xml">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +14,7 @@ deploy：
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>hexo使用的问题指南 | Hexo</title>
+  <title>hexo博客站内搜索功能 | Hexo</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/favicon.ico">
 
@@ -296,13 +293,13 @@ deploy：
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')"> -->
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/9.jpg')">    
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')"> -->
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/4.jpg')">    
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo使用的问题指南</h1>
+                    <h1 class="description center-align post-title">hexo博客站内搜索功能</h1>
                 </div>
             </div>
         </div>
@@ -432,7 +429,7 @@ deploy：
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-03
+                    2020-05-06
                 </div>
                 
 
@@ -446,7 +443,7 @@ deploy：
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    32
+                    53
                 </div>
                 
 
@@ -464,12 +461,14 @@ deploy：
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-hexo-g-d-会报错"><a href="#1-hexo-g-d-会报错" class="headerlink" title="1.hexo g -d 会报错"></a>1.hexo g -d 会报错</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588475689582-0959dce9-cdf9-4e4f-937b-175fcab6f7ce.png#align=left&display=inline&height=127&margin=%5Bobject%20Object%5D&name=image.png&originHeight=254&originWidth=1160&size=179534&status=done&style=none&width=580" alt="image.png"><br>win 本地仓库：将 https 改为 ssh</p>
-<pre class=" language-javascript"><code class="language-javascript">deploy：
-   type：git
-   repo：git@github<span class="token punctuation">.</span>com<span class="token punctuation">:</span>Leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git
-   branch：master</code></pre>
-<p>mac:</p>
+                <h2 id="1-根目录安装插件-hexo-generator-searchdb"><a href="#1-根目录安装插件-hexo-generator-searchdb" class="headerlink" title="1.根目录安装插件 hexo-generator-searchdb"></a>1.根目录安装插件 hexo-generator-searchdb</h2><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>generator<span class="token operator">-</span>searchdb <span class="token operator">--</span>save</code></pre>
+<h2 id="2-配置根目录文件-config-yml"><a href="#2-配置根目录文件-config-yml" class="headerlink" title="2.配置根目录文件_config.yml"></a>2.配置根目录文件_config.yml</h2><pre class=" language-javascript"><code class="language-javascript">search<span class="token punctuation">:</span> path<span class="token punctuation">:</span> search<span class="token punctuation">.</span>xml<span class="token punctuation">;</span>
+field<span class="token punctuation">:</span> post<span class="token punctuation">;</span>
+format<span class="token punctuation">:</span> html<span class="token punctuation">;</span>
+limit<span class="token punctuation">:</span> <span class="token number">10000</span><span class="token punctuation">;</span></code></pre>
+<p>##</p>
+<h2 id="3-配置主题文件-config-yml"><a href="#3-配置主题文件-config-yml" class="headerlink" title="3.配置主题文件_config.yml"></a>3.配置主题文件_config.yml</h2><pre class=" language-javascript"><code class="language-javascript">local_search<span class="token punctuation">:</span> enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
+<h2 id="4-完成效果图示"><a href="#4-完成效果图示" class="headerlink" title="4.完成效果图示"></a>4.完成效果图示</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588695774509-2476d128-a52b-4d6b-8e64-7269b5c7389b.png#align=left&display=inline&height=568&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1136&originWidth=2180&size=310201&status=done&style=none&width=1090" alt="image.png"></p>
 
             </div>
             <hr/>
@@ -495,7 +494,7 @@ deploy：
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leader755.github.io/leader755/db56f43f.html">https://leader755.github.io/leader755/db56f43f.html</a>
+                    <a href="https://leader755.github.io/leader755/4e860a66.html">https://leader755.github.io/leader755/4e860a66.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -842,31 +841,26 @@ deploy：
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/e209121b.html">
+                <a href="/leader755/c41d01b3.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="serverless 和 hexo快速搭建静态博客"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/13.jpg" class="responsive-img" alt="serverless 和 hexo快速搭建静态博客">
+                        <!-- <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="hexo博客的评论功能"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="hexo博客的评论功能">
                         
-                        <span class="card-title">serverless 和 hexo快速搭建静态博客</span>
+                        <span class="card-title">hexo博客的评论功能</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.首先搭建一个用 hexo 快速搭建一个博客//全局安装脚手架 hexo-cli
-npm install hexo-cli -g
-
-//初始化一个 blog
-hexo init blog
-
-//访问本地博客(默认地址为：localhost
+                            1.这里推荐的评论功能插件为valine官网：https://valine.js.org/注册登录网站：https://leancloud.cn/      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。
+2.去leanclou
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-06
                         </span>
                         <span class="publish-author">
                             
@@ -886,28 +880,26 @@ hexo init blog
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/766a05db.html">
+                <a href="/leader755/4976fe22.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="欢迎使用 MWeb"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/14.jpg" class="responsive-img" alt="欢迎使用 MWeb">
+                        <!-- <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="hexo博客的生成永久标题链接"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/22.jpg" class="responsive-img" alt="hexo博客的生成永久标题链接">
                         
-                        <span class="card-title">欢迎使用 MWeb</span>
+                        <span class="card-title">hexo博客的生成永久标题链接</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：
-软件本身：
-使用原生的 macOS 技术打造，追求与系统的完美结合。
-原则上，首先是追求界面简洁和
+                            1.hexo 博客默认链接规则：hexo 生成的标题默认规则（年、月、日、标题）：:year/:month/:day/:title。复制后的链接是一长串，非常不利于阅读，也不简洁。
+2.解决方案：1.使用hexo-permalink-pin
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-05
                             </span>
                         <span class="publish-author">
                             

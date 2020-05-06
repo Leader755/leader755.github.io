@@ -4,12 +4,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="hexo使用的问题指南, Hexo">
-  <meta name="description" content="1.hexo g -d 会报错win 本地仓库：将 https 改为 ssh
-deploy：
-   type：git
-   repo：git@github.com:Leader755/leader755.github.io.git
-   b">
+  <meta name="keywords" content="hexo博客的评论功能, Hexo">
+  <meta name="description" content="1.这里推荐的评论功能插件为valine官网：https://valine.js.org/注册登录网站：https://leancloud.cn/      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。
+2.去leanclou">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +14,7 @@ deploy：
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>hexo使用的问题指南 | Hexo</title>
+  <title>hexo博客的评论功能 | Hexo</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/favicon.ico">
 
@@ -296,13 +293,13 @@ deploy：
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')"> -->
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/9.jpg')">    
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')"> -->
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/20.jpg')">    
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo使用的问题指南</h1>
+                    <h1 class="description center-align post-title">hexo博客的评论功能</h1>
                 </div>
             </div>
         </div>
@@ -432,7 +429,7 @@ deploy：
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-03
+                    2020-05-06
                 </div>
                 
 
@@ -446,7 +443,7 @@ deploy：
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    32
+                    289
                 </div>
                 
 
@@ -464,12 +461,27 @@ deploy：
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-hexo-g-d-会报错"><a href="#1-hexo-g-d-会报错" class="headerlink" title="1.hexo g -d 会报错"></a>1.hexo g -d 会报错</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588475689582-0959dce9-cdf9-4e4f-937b-175fcab6f7ce.png#align=left&display=inline&height=127&margin=%5Bobject%20Object%5D&name=image.png&originHeight=254&originWidth=1160&size=179534&status=done&style=none&width=580" alt="image.png"><br>win 本地仓库：将 https 改为 ssh</p>
-<pre class=" language-javascript"><code class="language-javascript">deploy：
-   type：git
-   repo：git@github<span class="token punctuation">.</span>com<span class="token punctuation">:</span>Leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git
-   branch：master</code></pre>
-<p>mac:</p>
+                <h2 id="1-这里推荐的评论功能插件为valine"><a href="#1-这里推荐的评论功能插件为valine" class="headerlink" title="1.这里推荐的评论功能插件为valine"></a>1.这里推荐的评论功能插件为<a href="https://valine.js.org/" target="_blank" rel="noopener">valine</a></h2><p>官网：<a href="https://valine.js.org/" target="_blank" rel="noopener">https://valine.js.org/</a><br>注册登录网站：<a href="https://leancloud.cn/" target="_blank" rel="noopener">https://leancloud.cn/</a><br>      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。</p>
+<h2 id="2-去leancloud注册"><a href="#2-去leancloud注册" class="headerlink" title="2.去leancloud注册"></a>2.去<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud</a>注册</h2><p>注册完成后去创建应用，选择开发版就可以了。（需要实名登记才能创建应用）<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588779620815-f8a3fc6e-f667-4959-9cb2-53b5777427c7.png#align=left&display=inline&height=445&margin=%5Bobject%20Object%5D&name=image.png&originHeight=890&originWidth=1232&size=83220&status=done&style=none&width=616" alt="image.png"></p>
+<h2 id="3-获取-appkey-和-appid"><a href="#3-获取-appkey-和-appid" class="headerlink" title="3.获取 appkey 和 appid"></a>3.获取 appkey 和 appid</h2><p>创建完成应用后，<strong>进入应用-&gt;设置-&gt;应用 key，找到相应的 appkey 和 appid。</strong><br><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588779969891-d05a06f8-bcf5-4b7e-84cb-bcedabc8f762.png#align=left&display=inline&height=248&margin=%5Bobject%20Object%5D&name=image.png&originHeight=796&originWidth=2394&size=185376&status=done&style=none&width=746" alt="image.png"></strong></p>
+<h2 id="4-配置主题文件-config-yml"><a href="#4-配置主题文件-config-yml" class="headerlink" title="4.配置主题文件_config.yml"></a>4.配置主题文件_config.yml</h2><p><strong>搜索 valine，一般可看到如下，将 enbled:true, 并填写 appid 和 appkey(从 leancloud 中获取的 appid 和 appkey)。</strong></p>
+<pre class=" language-javascript"><code class="language-javascript"># The configuration <span class="token keyword">of</span> the Valine comment module is not activated by <span class="token keyword">default</span><span class="token punctuation">.</span>
+# To use it<span class="token punctuation">,</span> activate the configuration item and <span class="token keyword">set</span> appId and appKey<span class="token punctuation">.</span>
+# Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey<span class="token punctuation">.</span>
+valine<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  appId<span class="token punctuation">:</span>
+  appKey<span class="token punctuation">:</span>
+  notify<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  verify<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  visitor<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  avatar<span class="token punctuation">:</span> <span class="token string">'mp'</span> # Gravatar style <span class="token punctuation">:</span> mp<span class="token operator">/</span>identicon<span class="token operator">/</span>monsterid<span class="token operator">/</span>wavatar<span class="token operator">/</span>retro<span class="token operator">/</span>hide
+  pageSize<span class="token punctuation">:</span> <span class="token number">10</span>
+  placeholder<span class="token punctuation">:</span> <span class="token string">'just go go'</span> # Comment Box placeholder
+  background<span class="token punctuation">:</span> <span class="token operator">/</span>medias<span class="token operator">/</span>comment_bg<span class="token punctuation">.</span>png</code></pre>
+<h2 id="5-配置域名"><a href="#5-配置域名" class="headerlink" title="5.配置域名"></a>5.配置域名</h2><p>在 Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名 把你的域名加进去.</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588780306061-73286643-1359-4efe-b2a1-5545f880dd4a.png#align=left&display=inline&height=500&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1000&originWidth=1804&size=166396&status=done&style=none&width=902" alt="image.png"></p>
+<h2 id="6-重启你的博客"><a href="#6-重启你的博客" class="headerlink" title="6.重启你的博客"></a>6.重启你的博客</h2><p>大功告成！！</p>
 
             </div>
             <hr/>
@@ -495,7 +507,7 @@ deploy：
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leader755.github.io/leader755/db56f43f.html">https://leader755.github.io/leader755/db56f43f.html</a>
+                    <a href="https://leader755.github.io/leader755/c41d01b3.html">https://leader755.github.io/leader755/c41d01b3.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -838,36 +850,32 @@ deploy：
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/leader755/e209121b.html">
+                <a href="/leader755/c41d01b3.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="serverless 和 hexo快速搭建静态博客"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/13.jpg" class="responsive-img" alt="serverless 和 hexo快速搭建静态博客">
+                        <!-- <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="hexo博客的评论功能"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="hexo博客的评论功能">
                         
-                        <span class="card-title">serverless 和 hexo快速搭建静态博客</span>
+                        <span class="card-title">hexo博客的评论功能</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.首先搭建一个用 hexo 快速搭建一个博客//全局安装脚手架 hexo-cli
-npm install hexo-cli -g
-
-//初始化一个 blog
-hexo init blog
-
-//访问本地博客(默认地址为：localhost
+                            1.这里推荐的评论功能插件为valine官网：https://valine.js.org/注册登录网站：https://leancloud.cn/      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。
+2.去leanclou
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -876,6 +884,7 @@ hexo init blog
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -886,28 +895,26 @@ hexo init blog
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/766a05db.html">
+                <a href="/leader755/4e860a66.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="欢迎使用 MWeb"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/14.jpg" class="responsive-img" alt="欢迎使用 MWeb">
+                        <!-- <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="hexo博客站内搜索功能"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="hexo博客站内搜索功能">
                         
-                        <span class="card-title">欢迎使用 MWeb</span>
+                        <span class="card-title">hexo博客站内搜索功能</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：
-软件本身：
-使用原生的 macOS 技术打造，追求与系统的完美结合。
-原则上，首先是追求界面简洁和
+                            1.根目录安装插件 hexo-generator-searchdbnpm install hexo-generator-searchdb --save
+2.配置根目录文件_config.ymlsearch: path: search.xml
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-06
                             </span>
                         <span class="publish-author">
                             
