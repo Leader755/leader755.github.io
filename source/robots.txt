@@ -1,7 +1,6 @@
 # welcome to : leader755.com
 # hexo robots.txt
 User-agent: *
-Disallow: /CNAME
 Disallow: /README
 
 Allow: /

@@ -96,6 +96,34 @@ use_date_for_updated: false
 per_page: 6
 pagination_dir: page
 
+# 压缩代码
+html_minifier:
+  enable: true
+  ignore_error: false
+  exclude:
+
+css_minifier:
+  enable: true
+  exclude:
+    - '*.min.css'
+
+js_minifier:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'
+
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+  
+
 # 站内搜索
 search:
     path: search.xml
