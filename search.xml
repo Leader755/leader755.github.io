@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2&amp;gt;一键搭建 github 博客</title>
-    <url>/leader755/42ea967c.html</url>
-    <content><![CDATA[<h3 id="创建-GitHub-Pages"><a href="#创建-GitHub-Pages" class="headerlink" title="创建 GitHub Pages"></a>创建 GitHub Pages</h3><p>我们托管静态博客，使用的就是 GitHub Pages 的功能，首先我们需要创建一个个人主页，点击右上角的加号，选择 new repositories，进入创建页面。有的是说 username.github.io   但是我用着就是不行，说需要等待 10 分钟，username.github.com 下面的做法，不用等待，而且访问的地址是 username.github.io</p>
-<p><img src="https://img-blog.csdn.net/20160515225516517?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1230&margin=%5Bobject%20Object%5D&originHeight=1230&originWidth=2546&status=done&style=none&width=2546" alt=""></p>
-<p>这样我们以后可以通过 username.github.io 来访问你的主页，点击 Create repository 创建成功，然后点击侧边栏的 setting，进入设置页面：</p>
-<p><img src="https://img-blog.csdn.net/20160515225531939?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1232&margin=%5Bobject%20Object%5D&originHeight=1232&originWidth=2538&status=done&style=none&width=2538" alt=""></p>
-<p>点击设置成主页，跳转后无需填写信息直接点击<code>Continue to Layouts</code>为主页选择一个主题：</p>
-<p><img src="https://img-blog.csdn.net/20160515225550330?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1230&margin=%5Bobject%20Object%5D&originHeight=1230&originWidth=2506&status=done&style=none&width=2506" alt=""></p>
-<p>点击<code>publish pages</code>就创建个人主页成功了，这也是我们托管自己博客的仓库，你可以通过<code>username.github.io</code>来先浏览刚生成的个人主页。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hexo博客提交百度和Google收录</title>
     <url>/leader755/5c84a3bd.html</url>
     <content><![CDATA[<p>一个网站的 SEO 对一个网站非常重要，<a href="https://link.jianshu.com/?t=https://baike.baidu.com/item/SEO/102990?fr=aladdin" target="_blank" rel="noopener">SEO</a>指的是搜索引擎优化。通过搜索引擎优化，可以提高网站的网站关键词排名以及博客文章的曝光度。一般来说，我们针对百度和 Google 这两个搜索引擎进行优化，提高对网站资源的索引量，使我们的文章更容易被发现。虽然我的博客的主要读者是我自己，但也不妨碍我做些优化，对吧！接下来向大家展示如何使博客被百度和 Google 收录。</p>
@@ -98,6 +86,75 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
 ]]></content>
   </entry>
   <entry>
+    <title>2&amp;gt;一键搭建 github 博客</title>
+    <url>/leader755/42ea967c.html</url>
+    <content><![CDATA[<h3 id="创建-GitHub-Pages"><a href="#创建-GitHub-Pages" class="headerlink" title="创建 GitHub Pages"></a>创建 GitHub Pages</h3><p>我们托管静态博客，使用的就是 GitHub Pages 的功能，首先我们需要创建一个个人主页，点击右上角的加号，选择 new repositories，进入创建页面。有的是说 username.github.io   但是我用着就是不行，说需要等待 10 分钟，username.github.com 下面的做法，不用等待，而且访问的地址是 username.github.io</p>
+<p><img src="https://img-blog.csdn.net/20160515225516517?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1230&margin=%5Bobject%20Object%5D&originHeight=1230&originWidth=2546&status=done&style=none&width=2546" alt=""></p>
+<p>这样我们以后可以通过 username.github.io 来访问你的主页，点击 Create repository 创建成功，然后点击侧边栏的 setting，进入设置页面：</p>
+<p><img src="https://img-blog.csdn.net/20160515225531939?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1232&margin=%5Bobject%20Object%5D&originHeight=1232&originWidth=2538&status=done&style=none&width=2538" alt=""></p>
+<p>点击设置成主页，跳转后无需填写信息直接点击<code>Continue to Layouts</code>为主页选择一个主题：</p>
+<p><img src="https://img-blog.csdn.net/20160515225550330?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1230&margin=%5Bobject%20Object%5D&originHeight=1230&originWidth=2506&status=done&style=none&width=2506" alt=""></p>
+<p>点击<code>publish pages</code>就创建个人主页成功了，这也是我们托管自己博客的仓库，你可以通过<code>username.github.io</code>来先浏览刚生成的个人主页。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>5&amp;gt;hexo文档部署到 Github和 coding</title>
+    <url>/leader755/99853e10.html</url>
+    <content><![CDATA[<h2 id="1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："><a href="#1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：" class="headerlink" title="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："></a>1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&size=44477&status=done&style=none&width=526" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#align=left&display=inline&height=120&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&size=33032&status=done&style=none&width=486" alt="image.png"><br>如果不部署到 coding，就只写 github 就行。</p>
+<pre class=" language-javascript"><code class="language-javascript">deploy<span class="token punctuation">:</span> type<span class="token punctuation">:</span> git<span class="token punctuation">;</span>
+repo<span class="token punctuation">:</span> github<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//github.com/Leader755/leader755.github.io.git</span>
+https<span class="token punctuation">:</span> coding<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//e.coding.net/Leader755/leader755.coding.git</span>
+https<span class="token punctuation">:</span> branch<span class="token punctuation">:</span> master<span class="token punctuation">;</span></code></pre>
+<h2 id="2：要安装一个部署插件-hexo-deployer-git。"><a href="#2：要安装一个部署插件-hexo-deployer-git。" class="headerlink" title="2：要安装一个部署插件 hexo-deployer-git。"></a>2：要安装一个部署插件 <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>。</h2><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save</code></pre>
+<h2 id="3：发布到-github"><a href="#3：发布到-github" class="headerlink" title="3：发布到 github"></a>3：发布到 github</h2><p>最后执行以下命令就可以部署上传啦，以下 g 是 generate 缩写，d 是 deploy 缩写：</p>
+<pre class=" language-javascript"><code class="language-javascript">hexo g <span class="token operator">-</span>d</code></pre>
+<p>稍等一会，在浏览器访问网址： <a href="https://xn--6qqv7i14ofosyrb.github.io/" target="_blank" rel="noopener">https://你的用户名.github.io</a> 就会看到你的博客啦！！</p>
+<h2 id="4-写作并发布"><a href="#4-写作并发布" class="headerlink" title="4.写作并发布"></a>4.写作并发布</h2><h3 id="1-直接写作（情况）"><a href="#1-直接写作（情况）" class="headerlink" title="1.直接写作（情况）"></a>1.直接写作（情况）</h3><p>博客搭好了，就开始写文章了，这里简单介绍一下，详细的文档可以看 <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo</a> 官网。<br>新建文章，输入以下命令即可</p>
+<pre class=" language-javascript"><code class="language-javascript">hexo <span class="token keyword">new</span> <span class="token string">'文章标题'</span></code></pre>
+<p>执行完成后可以在 /source/_posts 下看到一个“文章标题.md”的文章文件啦。.md 就是 Markdown 格式的文件，具体用法可以在网上找一下，语法还是比较简单的。<br>在 Markdown 文章里面输入你的文章内容</p>
+<h3 id="2-存查稿-情况"><a href="#2-存查稿-情况" class="headerlink" title="2.存查稿(情况)"></a>2.存查稿(情况)</h3><h4 id="1-首先查看-sources-文件下是否有-drafts-文件夹"><a href="#1-首先查看-sources-文件下是否有-drafts-文件夹" class="headerlink" title="1.首先查看 sources 文件下是否有_drafts 文件夹"></a>1.首先查看 sources 文件下是否有_drafts 文件夹</h4><p>**  _drafts(草稿文章缓存区)，_posts(正式文章缓存区)**<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313764893-f9511ad0-1933-4c23-becd-bc162c0e8f3e.png#align=left&display=inline&height=149&margin=%5Bobject%20Object%5D&name=image.png&originHeight=298&originWidth=782&size=24987&status=done&style=none&width=391" alt="image.png"></p>
+<p>如果没有该文件夹或者报错，则运行：</p>
+<pre class=" language-javascript"><code class="language-javascript">hexo <span class="token keyword">new</span> <span class="token class-name">draft</span> <span class="token string">"My First Blog Post"</span></code></pre>
+<h4 id="2-将草稿文章推送到正式区"><a href="#2-将草稿文章推送到正式区" class="headerlink" title="2.将草稿文章推送到正式区"></a>2.将草稿文章推送到正式区</h4><pre class=" language-javascript"><code class="language-javascript">hexo publish <span class="token string">"My First Blog Post"</span></code></pre>
+<h3 id="2-打包"><a href="#2-打包" class="headerlink" title="2.打包"></a>2.打包</h3><pre class=" language-javascript"><code class="language-javascript">hexo g</code></pre>
+<h3 id="3-运行本地-hexo"><a href="#3-运行本地-hexo" class="headerlink" title="3.运行本地 hexo"></a>3.运行本地 hexo</h3><pre class=" language-javascript"><code class="language-javascript">hexo s</code></pre>
+<h3 id="4-部署到-github-和-coding"><a href="#4-部署到-github-和-coding" class="headerlink" title="4.部署到 github 和 coding"></a>4.部署到 github 和 coding</h3><p>因为 github 和 coding 使用了同一个公钥，所以推送时会触发多个仓库。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//部署前先清理一下缓存命令</span>
+hexo clean
+
+<span class="token comment" spellcheck="true">//部署</span>
+hexo g <span class="token operator">-</span>d</code></pre>
+]]></content>
+  </entry>
+  <entry>
+    <title>1&amp;gt;搭建本地的 hexo 的博客</title>
+    <url>/leader755/8e435d4c.html</url>
+    <content><![CDATA[<h2 id="1-gt-官方文档-https-github-com-hexojs-hexo"><a href="#1-gt-官方文档-https-github-com-hexojs-hexo" class="headerlink" title="1&gt;官方文档   https://github.com/hexojs/hexo"></a>1&gt;官方文档   <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">https://github.com/hexojs/hexo</a></h2><h2 id="2-gt-搭建博客"><a href="#2-gt-搭建博客" class="headerlink" title="2&gt;搭建博客"></a>2&gt;搭建博客</h2><h3 id="1-全局安装-hexo，创建博客"><a href="#1-全局安装-hexo，创建博客" class="headerlink" title="1.全局安装 hexo，创建博客"></a>1.全局安装 hexo，创建博客</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g</code></pre>
+<h3 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h3><pre class=" language-javascript"><code class="language-javascript">hexo init blog</code></pre>
+<h3 id="3-启动本地-hexo-server"><a href="#3-启动本地-hexo-server" class="headerlink" title="3.启动本地 hexo-server"></a>3.启动本地 hexo-server</h3><pre class=" language-javascript"><code class="language-javascript">hexo server</code></pre>
+<h2 id="4-新建一个-hexo-博客，富文本-makedown-文档"><a href="#4-新建一个-hexo-博客，富文本-makedown-文档" class="headerlink" title="4.新建一个 hexo 博客，富文本 makedown 文档"></a>4.新建一个 hexo 博客，富文本 makedown 文档</h2><pre class=" language-javascript"><code class="language-javascript">$ hexo <span class="token keyword">new</span> <span class="token string">"Hello Hexo"</span></code></pre>
+<h2 id="5-打包发布到-hexo"><a href="#5-打包发布到-hexo" class="headerlink" title="5.打包发布到 hexo"></a>5.打包发布到 hexo</h2><pre><code>//打包发布 hexo
+hexo generate
+
+
+//重启服务(可以看到新增的文档)
+hexo server
+</code></pre><h2 id="6-packge-json-的命令行（备份文件）"><a href="#6-packge-json-的命令行（备份文件）" class="headerlink" title="6.packge.json 的命令行（备份文件）"></a>6.packge.json 的命令行（备份文件）</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
+    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
+    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+]]></content>
+  </entry>
+  <entry>
+    <title>4&amp;gt;mac 上使用 vi</title>
+    <url>/leader755/87beae81.html</url>
+    <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
+<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>serverless 和 hexo快速搭建静态博客</title>
     <url>/leader755/e209121b.html</url>
     <content><![CDATA[<h2 id="1-首先搭建一个用-hexo-快速搭建一个博客"><a href="#1-首先搭建一个用-hexo-快速搭建一个博客" class="headerlink" title="1.首先搭建一个用 hexo 快速搭建一个博客"></a>1.首先搭建一个用 hexo 快速搭建一个博客</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局安装脚手架 hexo-cli</span>
@@ -128,35 +185,6 @@ heox g
 <span class="token comment" spellcheck="true">//将本地的博客部署到 serverless</span>
 serverless<span class="token operator">/</span>sls <span class="token operator">--</span>debug</code></pre>
 <h2 id="6-稍等片刻可以在-命令行工具看到以下"><a href="#6-稍等片刻可以在-命令行工具看到以下" class="headerlink" title="6.稍等片刻可以在 命令行工具看到以下"></a>6.稍等片刻可以在 命令行工具看到以下</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607113775-6a30d4dc-3c70-4506-9f5b-7af5a07b4e05.png#align=left&display=inline&height=567&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1134&originWidth=1298&size=453581&status=done&style=none&width=649" alt="image.png"><br>此时需要的操作就是用手机微信去扫描（此处会检测是否有腾讯云账号，没有会提示注册，有会直接成功）并返回以下内容：此处就是部署成功，并返回地址，可以直接访问。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607252405-a0fad8a2-f2d5-49ef-8101-09a10eec3916.png#align=left&display=inline&height=264&margin=%5Bobject%20Object%5D&name=image.png&originHeight=528&originWidth=1274&size=364624&status=done&style=none&width=637" alt="image.png"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>5&amp;gt;hexo文档部署到 Github和 coding</title>
-    <url>/leader755/99853e10.html</url>
-    <content><![CDATA[<h2 id="1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："><a href="#1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：" class="headerlink" title="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："></a>1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&size=44477&status=done&style=none&width=526" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#align=left&display=inline&height=120&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&size=33032&status=done&style=none&width=486" alt="image.png"><br>如果不部署到 coding，就只写 github 就行。</p>
-<pre class=" language-javascript"><code class="language-javascript">deploy<span class="token punctuation">:</span> type<span class="token punctuation">:</span> git<span class="token punctuation">;</span>
-repo<span class="token punctuation">:</span> github<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//github.com/Leader755/leader755.github.io.git</span>
-https<span class="token punctuation">:</span> coding<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//e.coding.net/Leader755/leader755.coding.git</span>
-https<span class="token punctuation">:</span> branch<span class="token punctuation">:</span> master<span class="token punctuation">;</span></code></pre>
-<h2 id="2：要安装一个部署插件-hexo-deployer-git。"><a href="#2：要安装一个部署插件-hexo-deployer-git。" class="headerlink" title="2：要安装一个部署插件 hexo-deployer-git。"></a>2：要安装一个部署插件 <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>。</h2><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save</code></pre>
-<h2 id="3：发布到-github"><a href="#3：发布到-github" class="headerlink" title="3：发布到 github"></a>3：发布到 github</h2><p>最后执行以下命令就可以部署上传啦，以下 g 是 generate 缩写，d 是 deploy 缩写：</p>
-<pre class=" language-javascript"><code class="language-javascript">hexo g <span class="token operator">-</span>d</code></pre>
-<p>稍等一会，在浏览器访问网址： <a href="https://xn--6qqv7i14ofosyrb.github.io/" target="_blank" rel="noopener">https://你的用户名.github.io</a> 就会看到你的博客啦！！</p>
-<h2 id="4-写作并发布"><a href="#4-写作并发布" class="headerlink" title="4.写作并发布"></a>4.写作并发布</h2><h3 id="1-直接写作（情况）"><a href="#1-直接写作（情况）" class="headerlink" title="1.直接写作（情况）"></a>1.直接写作（情况）</h3><p>博客搭好了，就开始写文章了，这里简单介绍一下，详细的文档可以看 <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo</a> 官网。<br>新建文章，输入以下命令即可</p>
-<pre class=" language-javascript"><code class="language-javascript">hexo <span class="token keyword">new</span> <span class="token string">'文章标题'</span></code></pre>
-<p>执行完成后可以在 /source/_posts 下看到一个“文章标题.md”的文章文件啦。.md 就是 Markdown 格式的文件，具体用法可以在网上找一下，语法还是比较简单的。<br>在 Markdown 文章里面输入你的文章内容</p>
-<h3 id="2-存查稿-情况"><a href="#2-存查稿-情况" class="headerlink" title="2.存查稿(情况)"></a>2.存查稿(情况)</h3><h4 id="1-首先查看-sources-文件下是否有-drafts-文件夹"><a href="#1-首先查看-sources-文件下是否有-drafts-文件夹" class="headerlink" title="1.首先查看 sources 文件下是否有_drafts 文件夹"></a>1.首先查看 sources 文件下是否有_drafts 文件夹</h4><p>**  _drafts(草稿文章缓存区)，_posts(正式文章缓存区)**<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313764893-f9511ad0-1933-4c23-becd-bc162c0e8f3e.png#align=left&display=inline&height=149&margin=%5Bobject%20Object%5D&name=image.png&originHeight=298&originWidth=782&size=24987&status=done&style=none&width=391" alt="image.png"></p>
-<p>如果没有该文件夹或者报错，则运行：</p>
-<pre class=" language-javascript"><code class="language-javascript">hexo <span class="token keyword">new</span> <span class="token class-name">draft</span> <span class="token string">"My First Blog Post"</span></code></pre>
-<h4 id="2-将草稿文章推送到正式区"><a href="#2-将草稿文章推送到正式区" class="headerlink" title="2.将草稿文章推送到正式区"></a>2.将草稿文章推送到正式区</h4><pre class=" language-javascript"><code class="language-javascript">hexo publish <span class="token string">"My First Blog Post"</span></code></pre>
-<h3 id="2-打包"><a href="#2-打包" class="headerlink" title="2.打包"></a>2.打包</h3><pre class=" language-javascript"><code class="language-javascript">hexo g</code></pre>
-<h3 id="3-运行本地-hexo"><a href="#3-运行本地-hexo" class="headerlink" title="3.运行本地 hexo"></a>3.运行本地 hexo</h3><pre class=" language-javascript"><code class="language-javascript">hexo s</code></pre>
-<h3 id="4-部署到-github-和-coding"><a href="#4-部署到-github-和-coding" class="headerlink" title="4.部署到 github 和 coding"></a>4.部署到 github 和 coding</h3><p>因为 github 和 coding 使用了同一个公钥，所以推送时会触发多个仓库。</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//部署前先清理一下缓存命令</span>
-hexo clean
-
-<span class="token comment" spellcheck="true">//部署</span>
-hexo g <span class="token operator">-</span>d</code></pre>
 ]]></content>
   </entry>
   <entry>
@@ -334,47 +362,6 @@ yuque<span class="token operator">-</span>hexo clean</code></pre>
 ]]></content>
   </entry>
   <entry>
-    <title>欢迎使用 MWeb</title>
-    <url>/leader755/766a05db.html</url>
-    <content><![CDATA[<p>MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：</p>
-<h2 id="软件本身："><a href="#软件本身：" class="headerlink" title="软件本身："></a>软件本身：</h2><ul>
-<li>使用原生的 macOS 技术打造，追求与系统的完美结合。</li>
-<li>原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。</li>
-</ul>
-<h2 id="Markdown-语法："><a href="#Markdown-语法：" class="headerlink" title="Markdown 语法："></a>Markdown 语法：</h2><ul>
-<li>使用 GitHub Flavored Markdown 语法，简称 GFM 语法。</li>
-<li>支持表格、TOC、LaTeX、代码块、任务列表、脚注等。</li>
-<li>画图库支持 mermaid, viz, ECharts, PlantUML, Sequence, Flow。</li>
-</ul>
-<h2 id="Markdown-辅助："><a href="#Markdown-辅助：" class="headerlink" title="Markdown 辅助："></a>Markdown 辅助：</h2><ul>
-<li>支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。</li>
-<li>在兼容 Markdown 语法的情况下支持设置图片宽度。</li>
-<li>好用的表格插入和 LaTeX 书写辅助。</li>
-</ul>
-<h2 id="Markdown-输出："><a href="#Markdown-输出：" class="headerlink" title="Markdown 输出："></a>Markdown 输出：</h2><ul>
-<li>支持导出为图片、HTML、Epub、PDF、RTF、Docx。</li>
-<li>支持发布到 WordPress、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr、语雀、Ghost、少数派 Matrix。</li>
-<li>图片上传服务（图床）支持 Imgur、七牛云、又拍云、腾讯云 COS、阿里云 OSS、SM.MS 和自定义的图床服务。</li>
-</ul>
-<h2 id="Markdown-笔记："><a href="#Markdown-笔记：" class="headerlink" title="Markdown 笔记："></a>Markdown 笔记：</h2><ul>
-<li>强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。</li>
-<li>快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。</li>
-<li>快速搜索：目前已支持全局快捷键调出搜索。</li>
-</ul>
-<h2 id="外部-Markdown-文档："><a href="#外部-Markdown-文档：" class="headerlink" title="外部 Markdown 文档："></a>外部 Markdown 文档：</h2><ul>
-<li>外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 Markdown 文档，还能很好的支持 GitBook、Jekyll、Hexo 等等编辑和图片插入。</li>
-</ul>
-<h2 id="MWeb-文档："><a href="#MWeb-文档：" class="headerlink" title="MWeb 文档："></a>MWeb 文档：</h2><p>如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：<a href="https://zh.mweb.im/help.html" target="_blank" rel="noopener">https://zh.mweb.im/help.html</a>。我们建议在使用文档库之前，一定要阅读一下 <a href="https://zh.mweb.im/mweb-library.html" target="_blank" rel="noopener">MWeb 文档库详细介绍</a> 这篇文章，以便更好的使用文档库。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>4&amp;gt;mac 上使用 vi</title>
-    <url>/leader755/87beae81.html</url>
-    <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
-<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
-]]></content>
-  </entry>
-  <entry>
     <title>3&amp;gt;mac上生成SSH key与GitHub通信</title>
     <url>/leader755/326ac897.html</url>
     <content><![CDATA[<h2 id="1-检查-SSH-key-是否存在"><a href="#1-检查-SSH-key-是否存在" class="headerlink" title="1.检查 SSH key 是否存在"></a>1.检查 SSH key 是否存在</h2><p>在终端输入：</p>
@@ -443,6 +430,40 @@ git config <span class="token operator">--</span>global user<span class="token p
 ]]></content>
   </entry>
   <entry>
+    <title>欢迎使用 MWeb</title>
+    <url>/leader755/766a05db.html</url>
+    <content><![CDATA[<p>MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：</p>
+<h2 id="软件本身："><a href="#软件本身：" class="headerlink" title="软件本身："></a>软件本身：</h2><ul>
+<li>使用原生的 macOS 技术打造，追求与系统的完美结合。</li>
+<li>原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。</li>
+</ul>
+<h2 id="Markdown-语法："><a href="#Markdown-语法：" class="headerlink" title="Markdown 语法："></a>Markdown 语法：</h2><ul>
+<li>使用 GitHub Flavored Markdown 语法，简称 GFM 语法。</li>
+<li>支持表格、TOC、LaTeX、代码块、任务列表、脚注等。</li>
+<li>画图库支持 mermaid, viz, ECharts, PlantUML, Sequence, Flow。</li>
+</ul>
+<h2 id="Markdown-辅助："><a href="#Markdown-辅助：" class="headerlink" title="Markdown 辅助："></a>Markdown 辅助：</h2><ul>
+<li>支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。</li>
+<li>在兼容 Markdown 语法的情况下支持设置图片宽度。</li>
+<li>好用的表格插入和 LaTeX 书写辅助。</li>
+</ul>
+<h2 id="Markdown-输出："><a href="#Markdown-输出：" class="headerlink" title="Markdown 输出："></a>Markdown 输出：</h2><ul>
+<li>支持导出为图片、HTML、Epub、PDF、RTF、Docx。</li>
+<li>支持发布到 WordPress、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr、语雀、Ghost、少数派 Matrix。</li>
+<li>图片上传服务（图床）支持 Imgur、七牛云、又拍云、腾讯云 COS、阿里云 OSS、SM.MS 和自定义的图床服务。</li>
+</ul>
+<h2 id="Markdown-笔记："><a href="#Markdown-笔记：" class="headerlink" title="Markdown 笔记："></a>Markdown 笔记：</h2><ul>
+<li>强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。</li>
+<li>快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。</li>
+<li>快速搜索：目前已支持全局快捷键调出搜索。</li>
+</ul>
+<h2 id="外部-Markdown-文档："><a href="#外部-Markdown-文档：" class="headerlink" title="外部 Markdown 文档："></a>外部 Markdown 文档：</h2><ul>
+<li>外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 Markdown 文档，还能很好的支持 GitBook、Jekyll、Hexo 等等编辑和图片插入。</li>
+</ul>
+<h2 id="MWeb-文档："><a href="#MWeb-文档：" class="headerlink" title="MWeb 文档："></a>MWeb 文档：</h2><p>如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：<a href="https://zh.mweb.im/help.html" target="_blank" rel="noopener">https://zh.mweb.im/help.html</a>。我们建议在使用文档库之前，一定要阅读一下 <a href="https://zh.mweb.im/mweb-library.html" target="_blank" rel="noopener">MWeb 文档库详细介绍</a> 这篇文章，以便更好的使用文档库。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>7&amp;gt;hexo主题配置</title>
     <url>/leader755/2f85a4d1.html</url>
     <content><![CDATA[<h2 id="1-hexo-主题官网"><a href="#1-hexo-主题官网" class="headerlink" title="1.hexo 主题官网"></a>1.hexo 主题官网</h2><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a></p>
@@ -474,27 +495,6 @@ hexo s
 
 <span class="token comment" spellcheck="true">//发布到 github</span>
 hexo s <span class="token operator">-</span>d</code></pre>
-]]></content>
-  </entry>
-  <entry>
-    <title>1&amp;gt;搭建本地的 hexo 的博客</title>
-    <url>/leader755/8e435d4c.html</url>
-    <content><![CDATA[<h2 id="1-gt-官方文档-https-github-com-hexojs-hexo"><a href="#1-gt-官方文档-https-github-com-hexojs-hexo" class="headerlink" title="1&gt;官方文档   https://github.com/hexojs/hexo"></a>1&gt;官方文档   <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">https://github.com/hexojs/hexo</a></h2><h2 id="2-gt-搭建博客"><a href="#2-gt-搭建博客" class="headerlink" title="2&gt;搭建博客"></a>2&gt;搭建博客</h2><h3 id="1-全局安装-hexo，创建博客"><a href="#1-全局安装-hexo，创建博客" class="headerlink" title="1.全局安装 hexo，创建博客"></a>1.全局安装 hexo，创建博客</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g</code></pre>
-<h3 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h3><pre class=" language-javascript"><code class="language-javascript">hexo init blog</code></pre>
-<h3 id="3-启动本地-hexo-server"><a href="#3-启动本地-hexo-server" class="headerlink" title="3.启动本地 hexo-server"></a>3.启动本地 hexo-server</h3><pre class=" language-javascript"><code class="language-javascript">hexo server</code></pre>
-<h2 id="4-新建一个-hexo-博客，富文本-makedown-文档"><a href="#4-新建一个-hexo-博客，富文本-makedown-文档" class="headerlink" title="4.新建一个 hexo 博客，富文本 makedown 文档"></a>4.新建一个 hexo 博客，富文本 makedown 文档</h2><pre class=" language-javascript"><code class="language-javascript">$ hexo <span class="token keyword">new</span> <span class="token string">"Hello Hexo"</span></code></pre>
-<h2 id="5-打包发布到-hexo"><a href="#5-打包发布到-hexo" class="headerlink" title="5.打包发布到 hexo"></a>5.打包发布到 hexo</h2><pre><code>//打包发布 hexo
-hexo generate
-
-
-//重启服务(可以看到新增的文档)
-hexo server
-</code></pre><h2 id="6-packge-json-的命令行（备份文件）"><a href="#6-packge-json-的命令行（备份文件）" class="headerlink" title="6.packge.json 的命令行（备份文件）"></a>6.packge.json 的命令行（备份文件）</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
-    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
-    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
-    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
 ]]></content>
   </entry>
   <entry>
