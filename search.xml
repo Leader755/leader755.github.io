@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2&amp;gt;一键搭建 github 博客</title>
+    <url>/leader755/42ea967c.html</url>
+    <content><![CDATA[<h3 id="创建-GitHub-Pages"><a href="#创建-GitHub-Pages" class="headerlink" title="创建 GitHub Pages"></a>创建 GitHub Pages</h3><p>我们托管静态博客，使用的就是 GitHub Pages 的功能，首先我们需要创建一个个人主页，点击右上角的加号，选择 new repositories，进入创建页面。有的是说 username.github.io   但是我用着就是不行，说需要等待 10 分钟，username.github.com 下面的做法，不用等待，而且访问的地址是 username.github.io</p>
+<p><img src="https://img-blog.csdn.net/20160515225516517?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1230&margin=%5Bobject%20Object%5D&originHeight=1230&originWidth=2546&status=done&style=none&width=2546" alt=""></p>
+<p>这样我们以后可以通过 username.github.io 来访问你的主页，点击 Create repository 创建成功，然后点击侧边栏的 setting，进入设置页面：</p>
+<p><img src="https://img-blog.csdn.net/20160515225531939?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1232&margin=%5Bobject%20Object%5D&originHeight=1232&originWidth=2538&status=done&style=none&width=2538" alt=""></p>
+<p>点击设置成主页，跳转后无需填写信息直接点击<code>Continue to Layouts</code>为主页选择一个主题：</p>
+<p><img src="https://img-blog.csdn.net/20160515225550330?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1230&margin=%5Bobject%20Object%5D&originHeight=1230&originWidth=2506&status=done&style=none&width=2506" alt=""></p>
+<p>点击<code>publish pages</code>就创建个人主页成功了，这也是我们托管自己博客的仓库，你可以通过<code>username.github.io</code>来先浏览刚生成的个人主页。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>serverless 和 hexo快速搭建静态博客</title>
     <url>/leader755/e209121b.html</url>
     <content><![CDATA[<h2 id="1-首先搭建一个用-hexo-快速搭建一个博客"><a href="#1-首先搭建一个用-hexo-快速搭建一个博客" class="headerlink" title="1.首先搭建一个用 hexo 快速搭建一个博客"></a>1.首先搭建一个用 hexo 快速搭建一个博客</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局安装脚手架 hexo-cli</span>
@@ -31,6 +43,37 @@ heox g
 <span class="token comment" spellcheck="true">//将本地的博客部署到 serverless</span>
 serverless<span class="token operator">/</span>sls <span class="token operator">--</span>debug</code></pre>
 <h2 id="6-稍等片刻可以在-命令行工具看到以下"><a href="#6-稍等片刻可以在-命令行工具看到以下" class="headerlink" title="6.稍等片刻可以在 命令行工具看到以下"></a>6.稍等片刻可以在 命令行工具看到以下</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607113775-6a30d4dc-3c70-4506-9f5b-7af5a07b4e05.png#align=left&display=inline&height=567&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1134&originWidth=1298&size=453581&status=done&style=none&width=649" alt="image.png"><br>此时需要的操作就是用手机微信去扫描（此处会检测是否有腾讯云账号，没有会提示注册，有会直接成功）并返回以下内容：此处就是部署成功，并返回地址，可以直接访问。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607252405-a0fad8a2-f2d5-49ef-8101-09a10eec3916.png#align=left&display=inline&height=264&margin=%5Bobject%20Object%5D&name=image.png&originHeight=528&originWidth=1274&size=364624&status=done&style=none&width=637" alt="image.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>mac 使用 homebrew</title>
+    <url>/leader755/c6cbe756.html</url>
+    <content><![CDATA[<p>使用 brew update 指令</p>
+<h1 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h1><p>Error: The following directories are not writable by your user:<br>/usr/local/sbin<br>/usr/local/share/man/man5<br>/usr/local/share/man/man7</p>
+<p>解决办法：</p>
+<pre class=" language-javascript"><code class="language-javascript">sudo chown <span class="token operator">-</span>R <span class="token function">$</span><span class="token punctuation">(</span>whoami<span class="token punctuation">)</span> <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token operator">*</span></code></pre>
+<p>重新调用即可：</p>
+<pre><code>brew update</code></pre>]]></content>
+  </entry>
+  <entry>
+    <title>1&amp;gt;搭建本地的 hexo 的博客</title>
+    <url>/leader755/8e435d4c.html</url>
+    <content><![CDATA[<h2 id="1-gt-官方文档-https-github-com-hexojs-hexo"><a href="#1-gt-官方文档-https-github-com-hexojs-hexo" class="headerlink" title="1&gt;官方文档   https://github.com/hexojs/hexo"></a>1&gt;官方文档   <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">https://github.com/hexojs/hexo</a></h2><h2 id="2-gt-搭建博客"><a href="#2-gt-搭建博客" class="headerlink" title="2&gt;搭建博客"></a>2&gt;搭建博客</h2><h3 id="1-全局安装-hexo，创建博客"><a href="#1-全局安装-hexo，创建博客" class="headerlink" title="1.全局安装 hexo，创建博客"></a>1.全局安装 hexo，创建博客</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g</code></pre>
+<h3 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h3><pre class=" language-javascript"><code class="language-javascript">hexo init blog</code></pre>
+<h3 id="3-启动本地-hexo-server"><a href="#3-启动本地-hexo-server" class="headerlink" title="3.启动本地 hexo-server"></a>3.启动本地 hexo-server</h3><pre class=" language-javascript"><code class="language-javascript">hexo server</code></pre>
+<h2 id="4-新建一个-hexo-博客，富文本-makedown-文档"><a href="#4-新建一个-hexo-博客，富文本-makedown-文档" class="headerlink" title="4.新建一个 hexo 博客，富文本 makedown 文档"></a>4.新建一个 hexo 博客，富文本 makedown 文档</h2><pre class=" language-javascript"><code class="language-javascript">$ hexo <span class="token keyword">new</span> <span class="token string">"Hello Hexo"</span></code></pre>
+<h2 id="5-打包发布到-hexo"><a href="#5-打包发布到-hexo" class="headerlink" title="5.打包发布到 hexo"></a>5.打包发布到 hexo</h2><pre><code>//打包发布 hexo
+hexo generate
+
+
+//重启服务(可以看到新增的文档)
+hexo server
+</code></pre><h2 id="6-packge-json-的命令行（备份文件）"><a href="#6-packge-json-的命令行（备份文件）" class="headerlink" title="6.packge.json 的命令行（备份文件）"></a>6.packge.json 的命令行（备份文件）</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
+    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
+    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
 ]]></content>
   </entry>
   <entry>
@@ -119,15 +162,72 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
 ]]></content>
   </entry>
   <entry>
-    <title>2&amp;gt;一键搭建 github 博客</title>
-    <url>/leader755/42ea967c.html</url>
-    <content><![CDATA[<h3 id="创建-GitHub-Pages"><a href="#创建-GitHub-Pages" class="headerlink" title="创建 GitHub Pages"></a>创建 GitHub Pages</h3><p>我们托管静态博客，使用的就是 GitHub Pages 的功能，首先我们需要创建一个个人主页，点击右上角的加号，选择 new repositories，进入创建页面。有的是说 username.github.io   但是我用着就是不行，说需要等待 10 分钟，username.github.com 下面的做法，不用等待，而且访问的地址是 username.github.io</p>
-<p><img src="https://img-blog.csdn.net/20160515225516517?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1230&margin=%5Bobject%20Object%5D&originHeight=1230&originWidth=2546&status=done&style=none&width=2546" alt=""></p>
-<p>这样我们以后可以通过 username.github.io 来访问你的主页，点击 Create repository 创建成功，然后点击侧边栏的 setting，进入设置页面：</p>
-<p><img src="https://img-blog.csdn.net/20160515225531939?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1232&margin=%5Bobject%20Object%5D&originHeight=1232&originWidth=2538&status=done&style=none&width=2538" alt=""></p>
-<p>点击设置成主页，跳转后无需填写信息直接点击<code>Continue to Layouts</code>为主页选择一个主题：</p>
-<p><img src="https://img-blog.csdn.net/20160515225550330?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center#align=left&display=inline&height=1230&margin=%5Bobject%20Object%5D&originHeight=1230&originWidth=2506&status=done&style=none&width=2506" alt=""></p>
-<p>点击<code>publish pages</code>就创建个人主页成功了，这也是我们托管自己博客的仓库，你可以通过<code>username.github.io</code>来先浏览刚生成的个人主页。</p>
+    <title>给文件添加一个.gitignore</title>
+    <url>/leader755/6f1cbacf.html</url>
+    <content><![CDATA[<h2 id="1-WHY"><a href="#1-WHY" class="headerlink" title="1.WHY?"></a>1.WHY?</h2><p>.gitignore 文件只要在这个文件中申明那些文件你不希望添加到 git 中去，这样当你使用<code>git add .</code>这些文件就会被自动忽略掉</p>
+<h2 id="2-忽略文件的原则"><a href="#2-忽略文件的原则" class="headerlink" title="2.忽略文件的原则"></a>2.忽略文件的原则</h2><ul>
+<li>忽略操作系统自动生成的文件，比如缩略图等；</li>
+<li>忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如 Java 编译产生的.class 文件；</li>
+<li>忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。</li>
+</ul>
+<h2 id="3-使用方法"><a href="#3-使用方法" class="headerlink" title="3.使用方法"></a>3.使用方法</h2><p>首先，在你的工作区新建一个名称为<code>.gitignore</code>的文件。<br>然后，把要忽略的文件名填进去，Git 就会自动忽略这些文件。<br>不需要从头写.gitignore 文件，GitHub 已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：<a href="https://link.jianshu.com?t=https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></p>
+<h2 id="4-例子"><a href="#4-例子" class="headerlink" title="4.例子"></a>4.例子</h2><p>比如你的项目是 java 项目，<code>.java</code>文件编译后会生成<code>.class</code>文件，这些文件多数情况下是不想被传到仓库中的文件。这时候你可以直接适用 github 的.gitignore 文件模板。<a href="https://link.jianshu.com?t=https://github.com/github/gitignore/blob/master/Java.gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore/blob/master/Java.gitignore</a> 将这些忽略文件信息复制到你的.gitignore 文件中去：</p>
+<pre><code>*.class
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+# Package Files #
+*.jar
+*.war
+*.ear
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*</code></pre><p>可以看到 github 为我们提供了最流行的.gitignore 文件配置。<br>保存.ignore 文件后我们查看下 git status，检查下是否还有我们不需要的文件会被添加到 git 中去：</p>
+<pre><code>$ git status
+On branch master
+Initial commit
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+        new file:   .gitignore
+        new file:   HelloWorld.java
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+        Config.ini</code></pre><p>比如我的项目目录下有一个 Config.ini 文件，这个是个本地配置文件我不希望上传到 git 中去，我们可以在 gitignore 文件中添加这样的配置：</p>
+<pre class=" language-javascript"><code class="language-javascript">Config<span class="token punctuation">.</span>ini<span class="token punctuation">;</span></code></pre>
+<p>或者你想忽略所有的.ini 文件你可以这样写：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">*</span><span class="token punctuation">.</span>ini</code></pre>
+<p>如果有些文件已经被你忽略了，当你使用<code>git add</code>时是无法添加的，比如我忽略了<code>*.class</code>，现在我想把<code>HelloWorld.class</code>添加到 git 中去：</p>
+<pre class=" language-javascript"><code class="language-javascript">$ git add HelloWorld<span class="token punctuation">.</span><span class="token keyword">class</span>
+<span class="token class-name">The</span> following paths are ignored by one <span class="token keyword">of</span> your <span class="token punctuation">.</span>gitignore files<span class="token punctuation">:</span>
+HelloWorld<span class="token punctuation">.</span><span class="token keyword">class</span>
+<span class="token class-name">Use</span> <span class="token operator">-</span>f <span class="token keyword">if</span> you really want to add them<span class="token punctuation">.</span></code></pre>
+<p>git 会提示我们这个文件已经被我们忽略了，需要加上<code>-f</code>参数才能强制添加到 git 中去：</p>
+<pre class=" language-javascript"><code class="language-javascript">$ git status
+On branch master
+Initial commit
+Changes to be committed<span class="token punctuation">:</span>
+  <span class="token punctuation">(</span>use <span class="token string">"git rm --cached &lt;file>..."</span> to unstage<span class="token punctuation">)</span>
+        <span class="token keyword">new</span> <span class="token class-name">file</span><span class="token punctuation">:</span>   <span class="token punctuation">.</span>gitignore
+        <span class="token keyword">new</span> <span class="token class-name">file</span><span class="token punctuation">:</span>   HelloWorld<span class="token punctuation">.</span><span class="token keyword">class</span>
+        <span class="token class-name">new</span> file<span class="token punctuation">:</span>   HelloWorld<span class="token punctuation">.</span>java</code></pre>
+<p>这样就能强制添加到缓存中去了。<br>如果我们意外的将想要忽略的文件添加到缓存中去了，我们可以使用<code>rm</code>命令将其从中移除：</p>
+<pre class=" language-javascript"><code class="language-javascript">$ git rm HelloWorld<span class="token punctuation">.</span><span class="token keyword">class</span> <span class="token operator">--</span>cached
+rm <span class="token string">'HelloWorld.class'</span></code></pre>
+<p>如果你已经把不想上传的文件上传到了 git 仓库，那么你必须先从远程仓库删了它，我们可以从远程仓库直接删除然后 pull 代码到本地仓库这些文件就会本删除，或者从本地删除这些文件并且在.gitignore 文件中添加这些你想忽略的文件，然后再 push 到远程仓库。</p>
+<h2 id="5-查看-gitignore-规则"><a href="#5-查看-gitignore-规则" class="headerlink" title="5.查看 gitignore 规则"></a>5.查看 gitignore 规则</h2><p>如果你发下<code>.gitignore</code>写得有问题，需要找出来到底哪个规则写错了，可以用<code>git check-ignore</code>命令检查：</p>
+<pre class=" language-javascript"><code class="language-javascript">$ git check<span class="token operator">-</span>ignore <span class="token operator">-</span>v HelloWorld<span class="token punctuation">.</span><span class="token keyword">class</span>
+<span class="token class-name"><span class="token punctuation">.</span>gitignore</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">*</span><span class="token punctuation">.</span><span class="token keyword">class</span>    <span class="token class-name">HelloWorld<span class="token punctuation">.</span>class</span></code></pre>
+<p>可以看到<code>HelloWorld.class</code>匹配到了我们的第一条<code>*.class</code>的忽略规则所以文件被忽略了。</p>
+<h2 id="6-忽略规则文件语法"><a href="#6-忽略规则文件语法" class="headerlink" title="6.忽略规则文件语法"></a>6.忽略规则文件语法</h2><h3 id="a-忽略指定文件-目录"><a href="#a-忽略指定文件-目录" class="headerlink" title="a.忽略指定文件/目录"></a>a.忽略指定文件/目录</h3><pre class=" language-javascript"><code class="language-javascript"># 忽略指定文件
+HelloWrold<span class="token punctuation">.</span><span class="token keyword">class</span>
+# 忽略指定文件夹
+bin<span class="token operator">/</span>
+bin<span class="token regex">/gen/</span></code></pre>
+<h3 id="b-通配符忽略规则"><a href="#b-通配符忽略规则" class="headerlink" title="b.通配符忽略规则"></a>b.通配符忽略规则</h3><p>通配符规则如下：</p>
+<pre class=" language-javascript"><code class="language-javascript"># 忽略<span class="token punctuation">.</span><span class="token keyword">class</span>的所有文件
+<span class="token operator">*</span><span class="token punctuation">.</span><span class="token keyword">class</span>
+# 忽略名称中末尾为ignore的文件夹
+<span class="token operator">*</span>ignore<span class="token operator">/</span>
+# 忽略名称中间包含ignore的文件夹
+<span class="token operator">*</span>ignore<span class="token operator">*</span><span class="token operator">/</span></code></pre>
 ]]></content>
   </entry>
   <entry>
@@ -157,27 +257,6 @@ hexo clean
 
 <span class="token comment" spellcheck="true">//部署</span>
 hexo g <span class="token operator">-</span>d</code></pre>
-]]></content>
-  </entry>
-  <entry>
-    <title>1&amp;gt;搭建本地的 hexo 的博客</title>
-    <url>/leader755/8e435d4c.html</url>
-    <content><![CDATA[<h2 id="1-gt-官方文档-https-github-com-hexojs-hexo"><a href="#1-gt-官方文档-https-github-com-hexojs-hexo" class="headerlink" title="1&gt;官方文档   https://github.com/hexojs/hexo"></a>1&gt;官方文档   <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">https://github.com/hexojs/hexo</a></h2><h2 id="2-gt-搭建博客"><a href="#2-gt-搭建博客" class="headerlink" title="2&gt;搭建博客"></a>2&gt;搭建博客</h2><h3 id="1-全局安装-hexo，创建博客"><a href="#1-全局安装-hexo，创建博客" class="headerlink" title="1.全局安装 hexo，创建博客"></a>1.全局安装 hexo，创建博客</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g</code></pre>
-<h3 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h3><pre class=" language-javascript"><code class="language-javascript">hexo init blog</code></pre>
-<h3 id="3-启动本地-hexo-server"><a href="#3-启动本地-hexo-server" class="headerlink" title="3.启动本地 hexo-server"></a>3.启动本地 hexo-server</h3><pre class=" language-javascript"><code class="language-javascript">hexo server</code></pre>
-<h2 id="4-新建一个-hexo-博客，富文本-makedown-文档"><a href="#4-新建一个-hexo-博客，富文本-makedown-文档" class="headerlink" title="4.新建一个 hexo 博客，富文本 makedown 文档"></a>4.新建一个 hexo 博客，富文本 makedown 文档</h2><pre class=" language-javascript"><code class="language-javascript">$ hexo <span class="token keyword">new</span> <span class="token string">"Hello Hexo"</span></code></pre>
-<h2 id="5-打包发布到-hexo"><a href="#5-打包发布到-hexo" class="headerlink" title="5.打包发布到 hexo"></a>5.打包发布到 hexo</h2><pre><code>//打包发布 hexo
-hexo generate
-
-
-//重启服务(可以看到新增的文档)
-hexo server
-</code></pre><h2 id="6-packge-json-的命令行（备份文件）"><a href="#6-packge-json-的命令行（备份文件）" class="headerlink" title="6.packge.json 的命令行（备份文件）"></a>6.packge.json 的命令行（备份文件）</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
-    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
-    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
-    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
 ]]></content>
   </entry>
   <entry>
@@ -293,72 +372,37 @@ yuque<span class="token operator">-</span>hexo clean</code></pre>
 ]]></content>
   </entry>
   <entry>
-    <title>给文件添加一个.gitignore</title>
-    <url>/leader755/6f1cbacf.html</url>
-    <content><![CDATA[<h2 id="1-WHY"><a href="#1-WHY" class="headerlink" title="1.WHY?"></a>1.WHY?</h2><p>.gitignore 文件只要在这个文件中申明那些文件你不希望添加到 git 中去，这样当你使用<code>git add .</code>这些文件就会被自动忽略掉</p>
-<h2 id="2-忽略文件的原则"><a href="#2-忽略文件的原则" class="headerlink" title="2.忽略文件的原则"></a>2.忽略文件的原则</h2><ul>
-<li>忽略操作系统自动生成的文件，比如缩略图等；</li>
-<li>忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如 Java 编译产生的.class 文件；</li>
-<li>忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。</li>
+    <title>欢迎使用 MWeb</title>
+    <url>/leader755/766a05db.html</url>
+    <content><![CDATA[<p>MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：</p>
+<h2 id="软件本身："><a href="#软件本身：" class="headerlink" title="软件本身："></a>软件本身：</h2><ul>
+<li>使用原生的 macOS 技术打造，追求与系统的完美结合。</li>
+<li>原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。</li>
 </ul>
-<h2 id="3-使用方法"><a href="#3-使用方法" class="headerlink" title="3.使用方法"></a>3.使用方法</h2><p>首先，在你的工作区新建一个名称为<code>.gitignore</code>的文件。<br>然后，把要忽略的文件名填进去，Git 就会自动忽略这些文件。<br>不需要从头写.gitignore 文件，GitHub 已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：<a href="https://link.jianshu.com?t=https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></p>
-<h2 id="4-例子"><a href="#4-例子" class="headerlink" title="4.例子"></a>4.例子</h2><p>比如你的项目是 java 项目，<code>.java</code>文件编译后会生成<code>.class</code>文件，这些文件多数情况下是不想被传到仓库中的文件。这时候你可以直接适用 github 的.gitignore 文件模板。<a href="https://link.jianshu.com?t=https://github.com/github/gitignore/blob/master/Java.gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore/blob/master/Java.gitignore</a> 将这些忽略文件信息复制到你的.gitignore 文件中去：</p>
-<pre><code>*.class
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-# Package Files #
-*.jar
-*.war
-*.ear
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*</code></pre><p>可以看到 github 为我们提供了最流行的.gitignore 文件配置。<br>保存.ignore 文件后我们查看下 git status，检查下是否还有我们不需要的文件会被添加到 git 中去：</p>
-<pre><code>$ git status
-On branch master
-Initial commit
-Changes to be committed:
-  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
-        new file:   .gitignore
-        new file:   HelloWorld.java
-Untracked files:
-  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-        Config.ini</code></pre><p>比如我的项目目录下有一个 Config.ini 文件，这个是个本地配置文件我不希望上传到 git 中去，我们可以在 gitignore 文件中添加这样的配置：</p>
-<pre class=" language-javascript"><code class="language-javascript">Config<span class="token punctuation">.</span>ini<span class="token punctuation">;</span></code></pre>
-<p>或者你想忽略所有的.ini 文件你可以这样写：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">*</span><span class="token punctuation">.</span>ini</code></pre>
-<p>如果有些文件已经被你忽略了，当你使用<code>git add</code>时是无法添加的，比如我忽略了<code>*.class</code>，现在我想把<code>HelloWorld.class</code>添加到 git 中去：</p>
-<pre class=" language-javascript"><code class="language-javascript">$ git add HelloWorld<span class="token punctuation">.</span><span class="token keyword">class</span>
-<span class="token class-name">The</span> following paths are ignored by one <span class="token keyword">of</span> your <span class="token punctuation">.</span>gitignore files<span class="token punctuation">:</span>
-HelloWorld<span class="token punctuation">.</span><span class="token keyword">class</span>
-<span class="token class-name">Use</span> <span class="token operator">-</span>f <span class="token keyword">if</span> you really want to add them<span class="token punctuation">.</span></code></pre>
-<p>git 会提示我们这个文件已经被我们忽略了，需要加上<code>-f</code>参数才能强制添加到 git 中去：</p>
-<pre class=" language-javascript"><code class="language-javascript">$ git status
-On branch master
-Initial commit
-Changes to be committed<span class="token punctuation">:</span>
-  <span class="token punctuation">(</span>use <span class="token string">"git rm --cached &lt;file>..."</span> to unstage<span class="token punctuation">)</span>
-        <span class="token keyword">new</span> <span class="token class-name">file</span><span class="token punctuation">:</span>   <span class="token punctuation">.</span>gitignore
-        <span class="token keyword">new</span> <span class="token class-name">file</span><span class="token punctuation">:</span>   HelloWorld<span class="token punctuation">.</span><span class="token keyword">class</span>
-        <span class="token class-name">new</span> file<span class="token punctuation">:</span>   HelloWorld<span class="token punctuation">.</span>java</code></pre>
-<p>这样就能强制添加到缓存中去了。<br>如果我们意外的将想要忽略的文件添加到缓存中去了，我们可以使用<code>rm</code>命令将其从中移除：</p>
-<pre class=" language-javascript"><code class="language-javascript">$ git rm HelloWorld<span class="token punctuation">.</span><span class="token keyword">class</span> <span class="token operator">--</span>cached
-rm <span class="token string">'HelloWorld.class'</span></code></pre>
-<p>如果你已经把不想上传的文件上传到了 git 仓库，那么你必须先从远程仓库删了它，我们可以从远程仓库直接删除然后 pull 代码到本地仓库这些文件就会本删除，或者从本地删除这些文件并且在.gitignore 文件中添加这些你想忽略的文件，然后再 push 到远程仓库。</p>
-<h2 id="5-查看-gitignore-规则"><a href="#5-查看-gitignore-规则" class="headerlink" title="5.查看 gitignore 规则"></a>5.查看 gitignore 规则</h2><p>如果你发下<code>.gitignore</code>写得有问题，需要找出来到底哪个规则写错了，可以用<code>git check-ignore</code>命令检查：</p>
-<pre class=" language-javascript"><code class="language-javascript">$ git check<span class="token operator">-</span>ignore <span class="token operator">-</span>v HelloWorld<span class="token punctuation">.</span><span class="token keyword">class</span>
-<span class="token class-name"><span class="token punctuation">.</span>gitignore</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">*</span><span class="token punctuation">.</span><span class="token keyword">class</span>    <span class="token class-name">HelloWorld<span class="token punctuation">.</span>class</span></code></pre>
-<p>可以看到<code>HelloWorld.class</code>匹配到了我们的第一条<code>*.class</code>的忽略规则所以文件被忽略了。</p>
-<h2 id="6-忽略规则文件语法"><a href="#6-忽略规则文件语法" class="headerlink" title="6.忽略规则文件语法"></a>6.忽略规则文件语法</h2><h3 id="a-忽略指定文件-目录"><a href="#a-忽略指定文件-目录" class="headerlink" title="a.忽略指定文件/目录"></a>a.忽略指定文件/目录</h3><pre class=" language-javascript"><code class="language-javascript"># 忽略指定文件
-HelloWrold<span class="token punctuation">.</span><span class="token keyword">class</span>
-# 忽略指定文件夹
-bin<span class="token operator">/</span>
-bin<span class="token regex">/gen/</span></code></pre>
-<h3 id="b-通配符忽略规则"><a href="#b-通配符忽略规则" class="headerlink" title="b.通配符忽略规则"></a>b.通配符忽略规则</h3><p>通配符规则如下：</p>
-<pre class=" language-javascript"><code class="language-javascript"># 忽略<span class="token punctuation">.</span><span class="token keyword">class</span>的所有文件
-<span class="token operator">*</span><span class="token punctuation">.</span><span class="token keyword">class</span>
-# 忽略名称中末尾为ignore的文件夹
-<span class="token operator">*</span>ignore<span class="token operator">/</span>
-# 忽略名称中间包含ignore的文件夹
-<span class="token operator">*</span>ignore<span class="token operator">*</span><span class="token operator">/</span></code></pre>
+<h2 id="Markdown-语法："><a href="#Markdown-语法：" class="headerlink" title="Markdown 语法："></a>Markdown 语法：</h2><ul>
+<li>使用 GitHub Flavored Markdown 语法，简称 GFM 语法。</li>
+<li>支持表格、TOC、LaTeX、代码块、任务列表、脚注等。</li>
+<li>画图库支持 mermaid, viz, ECharts, PlantUML, Sequence, Flow。</li>
+</ul>
+<h2 id="Markdown-辅助："><a href="#Markdown-辅助：" class="headerlink" title="Markdown 辅助："></a>Markdown 辅助：</h2><ul>
+<li>支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。</li>
+<li>在兼容 Markdown 语法的情况下支持设置图片宽度。</li>
+<li>好用的表格插入和 LaTeX 书写辅助。</li>
+</ul>
+<h2 id="Markdown-输出："><a href="#Markdown-输出：" class="headerlink" title="Markdown 输出："></a>Markdown 输出：</h2><ul>
+<li>支持导出为图片、HTML、Epub、PDF、RTF、Docx。</li>
+<li>支持发布到 WordPress、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr、语雀、Ghost、少数派 Matrix。</li>
+<li>图片上传服务（图床）支持 Imgur、七牛云、又拍云、腾讯云 COS、阿里云 OSS、SM.MS 和自定义的图床服务。</li>
+</ul>
+<h2 id="Markdown-笔记："><a href="#Markdown-笔记：" class="headerlink" title="Markdown 笔记："></a>Markdown 笔记：</h2><ul>
+<li>强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。</li>
+<li>快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。</li>
+<li>快速搜索：目前已支持全局快捷键调出搜索。</li>
+</ul>
+<h2 id="外部-Markdown-文档："><a href="#外部-Markdown-文档：" class="headerlink" title="外部 Markdown 文档："></a>外部 Markdown 文档：</h2><ul>
+<li>外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 Markdown 文档，还能很好的支持 GitBook、Jekyll、Hexo 等等编辑和图片插入。</li>
+</ul>
+<h2 id="MWeb-文档："><a href="#MWeb-文档：" class="headerlink" title="MWeb 文档："></a>MWeb 文档：</h2><p>如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：<a href="https://zh.mweb.im/help.html" target="_blank" rel="noopener">https://zh.mweb.im/help.html</a>。我们建议在使用文档库之前，一定要阅读一下 <a href="https://zh.mweb.im/mweb-library.html" target="_blank" rel="noopener">MWeb 文档库详细介绍</a> 这篇文章，以便更好的使用文档库。</p>
 ]]></content>
   </entry>
   <entry>
@@ -430,6 +474,44 @@ git config <span class="token operator">--</span>global user<span class="token p
 ]]></content>
   </entry>
   <entry>
+    <title>hexo博客站内搜索功能</title>
+    <url>/leader755/4e860a66.html</url>
+    <content><![CDATA[<h2 id="1-根目录安装插件-hexo-generator-searchdb"><a href="#1-根目录安装插件-hexo-generator-searchdb" class="headerlink" title="1.根目录安装插件 hexo-generator-searchdb"></a>1.根目录安装插件 hexo-generator-searchdb</h2><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>generator<span class="token operator">-</span>searchdb <span class="token operator">--</span>save</code></pre>
+<h2 id="2-配置根目录文件-config-yml"><a href="#2-配置根目录文件-config-yml" class="headerlink" title="2.配置根目录文件_config.yml"></a>2.配置根目录文件_config.yml</h2><pre class=" language-javascript"><code class="language-javascript">search<span class="token punctuation">:</span> path<span class="token punctuation">:</span> search<span class="token punctuation">.</span>xml<span class="token punctuation">;</span>
+field<span class="token punctuation">:</span> post<span class="token punctuation">;</span>
+format<span class="token punctuation">:</span> html<span class="token punctuation">;</span>
+limit<span class="token punctuation">:</span> <span class="token number">10000</span><span class="token punctuation">;</span></code></pre>
+<p>##</p>
+<h2 id="3-配置主题文件-config-yml"><a href="#3-配置主题文件-config-yml" class="headerlink" title="3.配置主题文件_config.yml"></a>3.配置主题文件_config.yml</h2><pre class=" language-javascript"><code class="language-javascript">local_search<span class="token punctuation">:</span> enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
+<h2 id="4-完成效果图示"><a href="#4-完成效果图示" class="headerlink" title="4.完成效果图示"></a>4.完成效果图示</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588695774509-2476d128-a52b-4d6b-8e64-7269b5c7389b.png#align=left&display=inline&height=568&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1136&originWidth=2180&size=310201&status=done&style=none&width=1090" alt="image.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo博客的生成永久标题链接</title>
+    <url>/leader755/4976fe22.html</url>
+    <content><![CDATA[<h2 id="1-hexo-博客默认链接规则："><a href="#1-hexo-博客默认链接规则：" class="headerlink" title="1.hexo 博客默认链接规则："></a>1.hexo 博客默认链接规则：</h2><p><strong>hexo 生成的标题默认规则（年、月、日、标题）：:year/:month/:day/:title。复制后的链接是一长串，非常不利于阅读，也不简洁。</strong></p>
+<h2 id="2-解决方案："><a href="#2-解决方案：" class="headerlink" title="2.解决方案："></a>2.解决方案：</h2><h3 id="1-使用hexo-permalink-pinyin"><a href="#1-使用hexo-permalink-pinyin" class="headerlink" title="1.使用hexo-permalink-pinyin"></a>1.使用<a href="">hexo-permalink-pinyin</a></h3><p>将中文转英文，这样方案也存在一定的缺陷，比如修改了文章标题，重新 hexo 三连后，URL 就变了，以前的文章地址变成了 404。而且这样生成的 URL 层级也很深，不利于 SEO。</p>
+<h4 id="1-gt-安装-hexo-permalink-pinyin"><a href="#1-gt-安装-hexo-permalink-pinyin" class="headerlink" title="1&gt;安装 hexo-permalink-pinyin"></a>1&gt;安装 hexo-permalink-pinyin</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
+<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink_pinyin<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  separator<span class="token punctuation">:</span> <span class="token string">'-'</span> # <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
+permalink_pinyin<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>             # Enable <span class="token keyword">this</span> plugin
+  separator<span class="token punctuation">:</span> <span class="token string">'-'</span>           # Separator <span class="token keyword">of</span> the slug<span class="token punctuation">,</span> <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
+  exclude<span class="token punctuation">:</span> <span class="token operator">/</span>ignore_post<span class="token operator">/</span>   # Regex <span class="token keyword">for</span> which post should skip</code></pre>
+<p>###</p>
+<h3 id="2-使用hexo-abbrlink"><a href="#2-使用hexo-abbrlink" class="headerlink" title="2.使用hexo-abbrlink"></a>2.使用<a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a></h3><p>生成唯一不变的 URl 链接，链接可以调整自己想要的。弊端</p>
+<h4 id="1-gt-安装-hexo-abbrlink"><a href="#1-gt-安装-hexo-abbrlink" class="headerlink" title="1&gt;安装 hexo-abbrlink"></a>1&gt;安装 hexo-abbrlink</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
+<p>####</p>
+<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink<span class="token punctuation">:</span> post<span class="token operator">/</span><span class="token punctuation">:</span>abbrlink<span class="token punctuation">.</span>html  # 文章的永久链接格式<span class="token punctuation">,</span>post可以自定义
+abbrlink<span class="token punctuation">:</span>
+  alg<span class="token punctuation">:</span> crc32  # 算法： <span class="token function">crc16</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and crc32
+  rep<span class="token punctuation">:</span> hex    # 进制： <span class="token function">dec</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and hex</code></pre>
+<p>生成后的博客链接如下：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588694804547-5dbe637d-46af-4bfc-9b3d-4d5228b573a6.png#align=left&display=inline&height=37&margin=%5Bobject%20Object%5D&name=image.png&originHeight=74&originWidth=908&size=11417&status=done&style=none&width=454" alt="image.png"></p>
+<p>如果觉得对你有帮助，点个赞呗。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>7&amp;gt;hexo主题配置</title>
     <url>/leader755/2f85a4d1.html</url>
     <content><![CDATA[<h2 id="1-hexo-主题官网"><a href="#1-hexo-主题官网" class="headerlink" title="1.hexo 主题官网"></a>1.hexo 主题官网</h2><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a></p>
@@ -461,78 +543,6 @@ hexo s
 
 <span class="token comment" spellcheck="true">//发布到 github</span>
 hexo s <span class="token operator">-</span>d</code></pre>
-]]></content>
-  </entry>
-  <entry>
-    <title>hexo博客站内搜索功能</title>
-    <url>/leader755/4e860a66.html</url>
-    <content><![CDATA[<h2 id="1-根目录安装插件-hexo-generator-searchdb"><a href="#1-根目录安装插件-hexo-generator-searchdb" class="headerlink" title="1.根目录安装插件 hexo-generator-searchdb"></a>1.根目录安装插件 hexo-generator-searchdb</h2><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>generator<span class="token operator">-</span>searchdb <span class="token operator">--</span>save</code></pre>
-<h2 id="2-配置根目录文件-config-yml"><a href="#2-配置根目录文件-config-yml" class="headerlink" title="2.配置根目录文件_config.yml"></a>2.配置根目录文件_config.yml</h2><pre class=" language-javascript"><code class="language-javascript">search<span class="token punctuation">:</span> path<span class="token punctuation">:</span> search<span class="token punctuation">.</span>xml<span class="token punctuation">;</span>
-field<span class="token punctuation">:</span> post<span class="token punctuation">;</span>
-format<span class="token punctuation">:</span> html<span class="token punctuation">;</span>
-limit<span class="token punctuation">:</span> <span class="token number">10000</span><span class="token punctuation">;</span></code></pre>
-<p>##</p>
-<h2 id="3-配置主题文件-config-yml"><a href="#3-配置主题文件-config-yml" class="headerlink" title="3.配置主题文件_config.yml"></a>3.配置主题文件_config.yml</h2><pre class=" language-javascript"><code class="language-javascript">local_search<span class="token punctuation">:</span> enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
-<h2 id="4-完成效果图示"><a href="#4-完成效果图示" class="headerlink" title="4.完成效果图示"></a>4.完成效果图示</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588695774509-2476d128-a52b-4d6b-8e64-7269b5c7389b.png#align=left&display=inline&height=568&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1136&originWidth=2180&size=310201&status=done&style=none&width=1090" alt="image.png"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>欢迎使用 MWeb</title>
-    <url>/leader755/766a05db.html</url>
-    <content><![CDATA[<p>MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：</p>
-<h2 id="软件本身："><a href="#软件本身：" class="headerlink" title="软件本身："></a>软件本身：</h2><ul>
-<li>使用原生的 macOS 技术打造，追求与系统的完美结合。</li>
-<li>原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。</li>
-</ul>
-<h2 id="Markdown-语法："><a href="#Markdown-语法：" class="headerlink" title="Markdown 语法："></a>Markdown 语法：</h2><ul>
-<li>使用 GitHub Flavored Markdown 语法，简称 GFM 语法。</li>
-<li>支持表格、TOC、LaTeX、代码块、任务列表、脚注等。</li>
-<li>画图库支持 mermaid, viz, ECharts, PlantUML, Sequence, Flow。</li>
-</ul>
-<h2 id="Markdown-辅助："><a href="#Markdown-辅助：" class="headerlink" title="Markdown 辅助："></a>Markdown 辅助：</h2><ul>
-<li>支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。</li>
-<li>在兼容 Markdown 语法的情况下支持设置图片宽度。</li>
-<li>好用的表格插入和 LaTeX 书写辅助。</li>
-</ul>
-<h2 id="Markdown-输出："><a href="#Markdown-输出：" class="headerlink" title="Markdown 输出："></a>Markdown 输出：</h2><ul>
-<li>支持导出为图片、HTML、Epub、PDF、RTF、Docx。</li>
-<li>支持发布到 WordPress、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr、语雀、Ghost、少数派 Matrix。</li>
-<li>图片上传服务（图床）支持 Imgur、七牛云、又拍云、腾讯云 COS、阿里云 OSS、SM.MS 和自定义的图床服务。</li>
-</ul>
-<h2 id="Markdown-笔记："><a href="#Markdown-笔记：" class="headerlink" title="Markdown 笔记："></a>Markdown 笔记：</h2><ul>
-<li>强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。</li>
-<li>快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。</li>
-<li>快速搜索：目前已支持全局快捷键调出搜索。</li>
-</ul>
-<h2 id="外部-Markdown-文档："><a href="#外部-Markdown-文档：" class="headerlink" title="外部 Markdown 文档："></a>外部 Markdown 文档：</h2><ul>
-<li>外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 Markdown 文档，还能很好的支持 GitBook、Jekyll、Hexo 等等编辑和图片插入。</li>
-</ul>
-<h2 id="MWeb-文档："><a href="#MWeb-文档：" class="headerlink" title="MWeb 文档："></a>MWeb 文档：</h2><p>如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：<a href="https://zh.mweb.im/help.html" target="_blank" rel="noopener">https://zh.mweb.im/help.html</a>。我们建议在使用文档库之前，一定要阅读一下 <a href="https://zh.mweb.im/mweb-library.html" target="_blank" rel="noopener">MWeb 文档库详细介绍</a> 这篇文章，以便更好的使用文档库。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>hexo博客的生成永久标题链接</title>
-    <url>/leader755/4976fe22.html</url>
-    <content><![CDATA[<h2 id="1-hexo-博客默认链接规则："><a href="#1-hexo-博客默认链接规则：" class="headerlink" title="1.hexo 博客默认链接规则："></a>1.hexo 博客默认链接规则：</h2><p><strong>hexo 生成的标题默认规则（年、月、日、标题）：:year/:month/:day/:title。复制后的链接是一长串，非常不利于阅读，也不简洁。</strong></p>
-<h2 id="2-解决方案："><a href="#2-解决方案：" class="headerlink" title="2.解决方案："></a>2.解决方案：</h2><h3 id="1-使用hexo-permalink-pinyin"><a href="#1-使用hexo-permalink-pinyin" class="headerlink" title="1.使用hexo-permalink-pinyin"></a>1.使用<a href="">hexo-permalink-pinyin</a></h3><p>将中文转英文，这样方案也存在一定的缺陷，比如修改了文章标题，重新 hexo 三连后，URL 就变了，以前的文章地址变成了 404。而且这样生成的 URL 层级也很深，不利于 SEO。</p>
-<h4 id="1-gt-安装-hexo-permalink-pinyin"><a href="#1-gt-安装-hexo-permalink-pinyin" class="headerlink" title="1&gt;安装 hexo-permalink-pinyin"></a>1&gt;安装 hexo-permalink-pinyin</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
-<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink_pinyin<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  separator<span class="token punctuation">:</span> <span class="token string">'-'</span> # <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
-permalink_pinyin<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>             # Enable <span class="token keyword">this</span> plugin
-  separator<span class="token punctuation">:</span> <span class="token string">'-'</span>           # Separator <span class="token keyword">of</span> the slug<span class="token punctuation">,</span> <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
-  exclude<span class="token punctuation">:</span> <span class="token operator">/</span>ignore_post<span class="token operator">/</span>   # Regex <span class="token keyword">for</span> which post should skip</code></pre>
-<p>###</p>
-<h3 id="2-使用hexo-abbrlink"><a href="#2-使用hexo-abbrlink" class="headerlink" title="2.使用hexo-abbrlink"></a>2.使用<a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a></h3><p>生成唯一不变的 URl 链接，链接可以调整自己想要的。弊端</p>
-<h4 id="1-gt-安装-hexo-abbrlink"><a href="#1-gt-安装-hexo-abbrlink" class="headerlink" title="1&gt;安装 hexo-abbrlink"></a>1&gt;安装 hexo-abbrlink</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
-<p>####</p>
-<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink<span class="token punctuation">:</span> post<span class="token operator">/</span><span class="token punctuation">:</span>abbrlink<span class="token punctuation">.</span>html  # 文章的永久链接格式<span class="token punctuation">,</span>post可以自定义
-abbrlink<span class="token punctuation">:</span>
-  alg<span class="token punctuation">:</span> crc32  # 算法： <span class="token function">crc16</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and crc32
-  rep<span class="token punctuation">:</span> hex    # 进制： <span class="token function">dec</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and hex</code></pre>
-<p>生成后的博客链接如下：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588694804547-5dbe637d-46af-4bfc-9b3d-4d5228b573a6.png#align=left&display=inline&height=37&margin=%5Bobject%20Object%5D&name=image.png&originHeight=74&originWidth=908&size=11417&status=done&style=none&width=454" alt="image.png"></p>
-<p>如果觉得对你有帮助，点个赞呗。</p>
 ]]></content>
   </entry>
   <entry>
