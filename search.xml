@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>serverless 和 hexo快速搭建静态博客</title>
-    <url>/leader755/e209121b.html</url>
-    <content><![CDATA[<h2 id="1-首先搭建一个用-hexo-快速搭建一个博客"><a href="#1-首先搭建一个用-hexo-快速搭建一个博客" class="headerlink" title="1.首先搭建一个用 hexo 快速搭建一个博客"></a>1.首先搭建一个用 hexo 快速搭建一个博客</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局安装脚手架 hexo-cli</span>
-npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g
-
-<span class="token comment" spellcheck="true">//初始化一个 blog</span>
-hexo init blog
-
-<span class="token comment" spellcheck="true">//访问本地博客(默认地址为：localhost:4000)</span>
-cd blog
-hexo s</code></pre>
-<h2 id="2-serverless-文档（推荐）"><a href="#2-serverless-文档（推荐）" class="headerlink" title="2.serverless 文档（推荐）"></a>2.serverless 文档（推荐）</h2><p>github 官方中文文档：<a href="https://github.com/serverless/serverless/blob/master/README_CN.md" target="_blank" rel="noopener">https://github.com/serverless/serverless/blob/master/README_CN.md</a><br>serverless 中文博客： <a href="https://serverlesscloud.cn/" target="_blank" rel="noopener">https://serverlesscloud.cn/</a></p>
-<h2 id="3-使用-npm-安装"><a href="#3-使用-npm-安装" class="headerlink" title="3.使用 npm 安装"></a>3.使用 npm 安装</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局安装 serverless</span>
-npm install <span class="token operator">-</span>g serverless</code></pre>
-<h2 id="4-在-blog-的根目录创建一个-serverless-yml-文件"><a href="#4-在-blog-的根目录创建一个-serverless-yml-文件" class="headerlink" title="4.在 blog 的根目录创建一个 serverless.yml 文件"></a>4.在 blog 的根目录创建一个 serverless.yml 文件</h2><p>复制以下文件内容：唯一注意的地方就是 src 的路径：根据实际更改（即为博客的 index.html 网页）</p>
-<pre class=" language-javascript"><code class="language-javascript">myWebsite<span class="token punctuation">:</span>
-  component<span class="token punctuation">:</span> <span class="token string">'@serverless/tencent-website'</span>
-  inputs<span class="token punctuation">:</span>
-    code<span class="token punctuation">:</span>
-      src<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span><span class="token keyword">public</span>
-      index<span class="token punctuation">:</span> index<span class="token punctuation">.</span>html
-      error<span class="token punctuation">:</span> index<span class="token punctuation">.</span>html
-    region<span class="token punctuation">:</span> ap<span class="token operator">-</span>guangzhou
-    bucketName<span class="token punctuation">:</span> my<span class="token operator">-</span>bucket</code></pre>
-<h2 id="5-将静态博客发布到-tencent-serverless"><a href="#5-将静态博客发布到-tencent-serverless" class="headerlink" title="5.将静态博客发布到 tencent-serverless"></a>5.将静态博客发布到 tencent-serverless</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//首先将 hexo 中博客打包</span>
-heox g
-
-<span class="token comment" spellcheck="true">//将本地的博客部署到 serverless</span>
-serverless<span class="token operator">/</span>sls <span class="token operator">--</span>debug</code></pre>
-<h2 id="6-稍等片刻可以在-命令行工具看到以下"><a href="#6-稍等片刻可以在-命令行工具看到以下" class="headerlink" title="6.稍等片刻可以在 命令行工具看到以下"></a>6.稍等片刻可以在 命令行工具看到以下</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607113775-6a30d4dc-3c70-4506-9f5b-7af5a07b4e05.png#align=left&display=inline&height=567&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1134&originWidth=1298&size=453581&status=done&style=none&width=649" alt="image.png"><br>此时需要的操作就是用手机微信去扫描（此处会检测是否有腾讯云账号，没有会提示注册，有会直接成功）并返回以下内容：此处就是部署成功，并返回地址，可以直接访问。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607252405-a0fad8a2-f2d5-49ef-8101-09a10eec3916.png#align=left&display=inline&height=264&margin=%5Bobject%20Object%5D&name=image.png&originHeight=528&originWidth=1274&size=364624&status=done&style=none&width=637" alt="image.png"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>2&amp;gt;一键搭建 github 博客</title>
     <url>/leader755/42ea967c.html</url>
     <content><![CDATA[<h3 id="创建-GitHub-Pages"><a href="#创建-GitHub-Pages" class="headerlink" title="创建 GitHub Pages"></a>创建 GitHub Pages</h3><p>我们托管静态博客，使用的就是 GitHub Pages 的功能，首先我们需要创建一个个人主页，点击右上角的加号，选择 new repositories，进入创建页面。有的是说 username.github.io   但是我用着就是不行，说需要等待 10 分钟，username.github.com 下面的做法，不用等待，而且访问的地址是 username.github.io</p>
@@ -131,6 +98,45 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
 ]]></content>
   </entry>
   <entry>
+    <title>PicGo+GitHub 搭建个人图床工具</title>
+    <url>/leader755/21250214.html</url>
+    <content><![CDATA[<blockquote>
+<p>方便程度：★★★★☆<br>配置难度：★★☆☆☆<br>适用环境：win + mac + linux<br>需要工具：GitHub 账号 + PicGo 客户端<br>稳定性：背靠 GitHub 和微软，比自建服务器都稳<br>隐私性：这算是唯一缺点，你的图片别人可以访问。</p>
+</blockquote>
+<h3 id="1-PicGo-介绍"><a href="#1-PicGo-介绍" class="headerlink" title="1. PicGo 介绍"></a>1. PicGo 介绍</h3><p>这是一款图片上传的工具，目前支持微博图床，七牛图床，腾讯云，又拍云，GitHub 等图床，未来将支持更多图床。</p>
+<p>所以解决问题的思路就是，将本地的文件，或者剪切板上面的截图发送图床，然后生成在线图片的链接</p>
+<h3 id="2-下载并安装-PicGo"><a href="#2-下载并安装-PicGo" class="headerlink" title="2.下载并安装 PicGo"></a>2.下载并安装 PicGo</h3><h4 id="1-进入下载页面"><a href="#1-进入下载页面" class="headerlink" title="1.进入下载页面"></a>1.进入下载页面</h4><p><a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo/releases</a></p>
+<h4 id="2-下载安装包"><a href="#2-下载安装包" class="headerlink" title="2.下载安装包"></a>2.下载安装包</h4><p>选择最新版本就行了，我下载时最新版是 2.1.2<br><a href="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528164711.jpg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528164711.jpg#align=left&display=inline&height=591&margin=%5Bobject%20Object%5D&originHeight=591&originWidth=1066&status=done&style=none&width=1066" alt="">
+</a></p>
+<h4 id="3-安装-PicGo"><a href="#3-安装-PicGo" class="headerlink" title="3.安装 PicGo"></a>3.安装 PicGo</h4><p>双击下载的安装包，一路默认就行，如果 360 报错，就允许执行，安装完成后，打开软件如下图所示：<br><a href="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528165026.png" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528165026.png#align=left&display=inline&height=412&margin=%5Bobject%20Object%5D&originHeight=412&originWidth=787&status=done&style=none&width=787" alt="">
+</a></p>
+<h3 id="3-创建-GitHub-图床"><a href="#3-创建-GitHub-图床" class="headerlink" title="3.创建 GitHub 图床"></a>3.创建 GitHub 图床</h3><h4 id="1-需要注册-登陆-GitHub-账号"><a href="#1-需要注册-登陆-GitHub-账号" class="headerlink" title="1.需要注册/登陆 GitHub 账号"></a>1.需要注册/登陆 GitHub 账号</h4><p>这个自行注册，不会的百度谷歌下</p>
+<h4 id="2-创建-Repository"><a href="#2-创建-Repository" class="headerlink" title="2.创建 Repository"></a>2.创建 Repository</h4><p>随便命名，我的比较简单，直接是 img</p>
+<h4 id="3-创建-token-并复制保存"><a href="#3-创建-token-并复制保存" class="headerlink" title="3.创建 token 并复制保存"></a>3.创建 token 并复制保存</h4><p>生成一个 Token 用于操作 GitHub repository<br><strong>Settings -&gt; Developer settings -&gt; Personal access tokens</strong></p>
+<p>1.点击右上角头像，settings，进入设置<br><a href="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528170352.png" target="_blank" rel="noopener">
+</a><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1577937560770-a488dbd7-809f-4a83-9e61-fa65bc1d4b54.png#align=left&display=inline&height=540&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1080&originWidth=2184&size=234699&status=done&style=none&width=1092" alt="image.png"></p>
+<p>2.在页面最下找到 Developer settings，点击进入<br><a href="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528170636.png" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528170636.png#align=left&display=inline&height=820&margin=%5Bobject%20Object%5D&originHeight=820&originWidth=1310&status=done&style=none&width=1310" alt="">
+</a></p>
+<p>3.点击 Generate new token<br><a href="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528170920.png" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528170920.png#align=left&display=inline&height=668&margin=%5Bobject%20Object%5D&originHeight=668&originWidth=1260&status=done&style=none&width=1260" alt="">
+</a></p>
+<p>4.Note 随便填，勾选复选框 repo ，接着到页面底部 Generate token 就完成了<br><a href="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528171107.png" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528171107.png#align=left&display=inline&height=783&margin=%5Bobject%20Object%5D&originHeight=783&originWidth=1266&status=done&style=none&width=1266" alt="">
+</a></p>
+<p>5.然后会生成一串字符 token，这个 token 只出现一次，所以要复制保存一下<br><a href="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528171329.png" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528171329.png#align=left&display=inline&height=438&margin=%5Bobject%20Object%5D&originHeight=438&originWidth=1069&status=done&style=none&width=1069" alt="">
+</a></p>
+<h3 id="4-配置-PicGo-客户端"><a href="#4-配置-PicGo-客户端" class="headerlink" title="4.配置 PicGo 客户端"></a>4.配置 PicGo 客户端</h3><p>如下图配置：<a href="https://raw.githubusercontent.com/LicV587/img/master/picgo/20190528165451.jpg" target="_blank" rel="noopener">
+</a><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1577937641444-583cf8c1-ddd3-400b-aa6b-addaf3ecb388.png#align=left&display=inline&height=449&margin=%5Bobject%20Object%5D&name=image.png&originHeight=898&originWidth=1606&size=1014465&status=done&style=none&width=803" alt="image.png"></p>
+<p>说明：</p>
+<ul>
+<li>仓库名 即你的仓库名</li>
+<li>分支名 默认 master</li>
+<li>Token 就是刚刚复制的那一串字符</li>
+<li>存储路径 这个可以填也可以不填，填了的话图片就上传到 git 中 picgo 这个文件夹</li>
+<li>域名:<a href="https://raw.githubusercontent.com/Leader755/github_PicGo/master" target="_blank" rel="noopener">https://raw.githubusercontent.com/Leader755/github_PicGo/master</a> 这个要改一下，改成你自己的，格式：<a href="https://raw.githubusercontent.com/[用户名]/[仓库名]/master" target="_blank" rel="noopener">https://raw.githubusercontent.com/[用户名]/[仓库名]/master</a></li>
+</ul>
+<p>然后点击确定，在点击设为默认图床，就 OK 了。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>mac 使用 homebrew</title>
     <url>/leader755/c6cbe756.html</url>
     <content><![CDATA[<p>使用 brew update 指令</p>
@@ -141,53 +147,36 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
 <pre><code>brew update</code></pre>]]></content>
   </entry>
   <entry>
-    <title>5&amp;gt;hexo文档部署到 Github和 coding</title>
-    <url>/leader755/99853e10.html</url>
-    <content><![CDATA[<h2 id="1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："><a href="#1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：" class="headerlink" title="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："></a>1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&size=44477&status=done&style=none&width=526" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#align=left&display=inline&height=120&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&size=33032&status=done&style=none&width=486" alt="image.png"><br>如果不部署到 coding，就只写 github 就行。</p>
-<pre class=" language-javascript"><code class="language-javascript">deploy<span class="token punctuation">:</span> type<span class="token punctuation">:</span> git<span class="token punctuation">;</span>
-repo<span class="token punctuation">:</span> github<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//github.com/Leader755/leader755.github.io.git</span>
-https<span class="token punctuation">:</span> coding<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//e.coding.net/Leader755/leader755.coding.git</span>
-https<span class="token punctuation">:</span> branch<span class="token punctuation">:</span> master<span class="token punctuation">;</span></code></pre>
-<h2 id="2：要安装一个部署插件-hexo-deployer-git。"><a href="#2：要安装一个部署插件-hexo-deployer-git。" class="headerlink" title="2：要安装一个部署插件 hexo-deployer-git。"></a>2：要安装一个部署插件 <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>。</h2><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save</code></pre>
-<h2 id="3：发布到-github"><a href="#3：发布到-github" class="headerlink" title="3：发布到 github"></a>3：发布到 github</h2><p>最后执行以下命令就可以部署上传啦，以下 g 是 generate 缩写，d 是 deploy 缩写：</p>
-<pre class=" language-javascript"><code class="language-javascript">hexo g <span class="token operator">-</span>d</code></pre>
-<p>稍等一会，在浏览器访问网址： <a href="https://xn--6qqv7i14ofosyrb.github.io/" target="_blank" rel="noopener">https://你的用户名.github.io</a> 就会看到你的博客啦！！</p>
-<h2 id="4-写作并发布"><a href="#4-写作并发布" class="headerlink" title="4.写作并发布"></a>4.写作并发布</h2><h3 id="1-直接写作（情况）"><a href="#1-直接写作（情况）" class="headerlink" title="1.直接写作（情况）"></a>1.直接写作（情况）</h3><p>博客搭好了，就开始写文章了，这里简单介绍一下，详细的文档可以看 <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo</a> 官网。<br>新建文章，输入以下命令即可</p>
-<pre class=" language-javascript"><code class="language-javascript">hexo <span class="token keyword">new</span> <span class="token string">'文章标题'</span></code></pre>
-<p>执行完成后可以在 /source/_posts 下看到一个“文章标题.md”的文章文件啦。.md 就是 Markdown 格式的文件，具体用法可以在网上找一下，语法还是比较简单的。<br>在 Markdown 文章里面输入你的文章内容</p>
-<h3 id="2-存查稿-情况"><a href="#2-存查稿-情况" class="headerlink" title="2.存查稿(情况)"></a>2.存查稿(情况)</h3><h4 id="1-首先查看-sources-文件下是否有-drafts-文件夹"><a href="#1-首先查看-sources-文件下是否有-drafts-文件夹" class="headerlink" title="1.首先查看 sources 文件下是否有_drafts 文件夹"></a>1.首先查看 sources 文件下是否有_drafts 文件夹</h4><p>**  _drafts(草稿文章缓存区)，_posts(正式文章缓存区)**<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313764893-f9511ad0-1933-4c23-becd-bc162c0e8f3e.png#align=left&display=inline&height=149&margin=%5Bobject%20Object%5D&name=image.png&originHeight=298&originWidth=782&size=24987&status=done&style=none&width=391" alt="image.png"></p>
-<p>如果没有该文件夹或者报错，则运行：</p>
-<pre class=" language-javascript"><code class="language-javascript">hexo <span class="token keyword">new</span> <span class="token class-name">draft</span> <span class="token string">"My First Blog Post"</span></code></pre>
-<h4 id="2-将草稿文章推送到正式区"><a href="#2-将草稿文章推送到正式区" class="headerlink" title="2.将草稿文章推送到正式区"></a>2.将草稿文章推送到正式区</h4><pre class=" language-javascript"><code class="language-javascript">hexo publish <span class="token string">"My First Blog Post"</span></code></pre>
-<h3 id="2-打包"><a href="#2-打包" class="headerlink" title="2.打包"></a>2.打包</h3><pre class=" language-javascript"><code class="language-javascript">hexo g</code></pre>
-<h3 id="3-运行本地-hexo"><a href="#3-运行本地-hexo" class="headerlink" title="3.运行本地 hexo"></a>3.运行本地 hexo</h3><pre class=" language-javascript"><code class="language-javascript">hexo s</code></pre>
-<h3 id="4-部署到-github-和-coding"><a href="#4-部署到-github-和-coding" class="headerlink" title="4.部署到 github 和 coding"></a>4.部署到 github 和 coding</h3><p>因为 github 和 coding 使用了同一个公钥，所以推送时会触发多个仓库。</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//部署前先清理一下缓存命令</span>
-hexo clean
+    <title>serverless 和 hexo快速搭建静态博客</title>
+    <url>/leader755/e209121b.html</url>
+    <content><![CDATA[<h2 id="1-首先搭建一个用-hexo-快速搭建一个博客"><a href="#1-首先搭建一个用-hexo-快速搭建一个博客" class="headerlink" title="1.首先搭建一个用 hexo 快速搭建一个博客"></a>1.首先搭建一个用 hexo 快速搭建一个博客</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局安装脚手架 hexo-cli</span>
+npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g
 
-<span class="token comment" spellcheck="true">//部署</span>
-hexo g <span class="token operator">-</span>d</code></pre>
-]]></content>
-  </entry>
-  <entry>
-    <title>1&amp;gt;搭建本地的 hexo 的博客</title>
-    <url>/leader755/8e435d4c.html</url>
-    <content><![CDATA[<h2 id="1-gt-官方文档-https-github-com-hexojs-hexo"><a href="#1-gt-官方文档-https-github-com-hexojs-hexo" class="headerlink" title="1&gt;官方文档   https://github.com/hexojs/hexo"></a>1&gt;官方文档   <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">https://github.com/hexojs/hexo</a></h2><h2 id="2-gt-搭建博客"><a href="#2-gt-搭建博客" class="headerlink" title="2&gt;搭建博客"></a>2&gt;搭建博客</h2><h3 id="1-全局安装-hexo，创建博客"><a href="#1-全局安装-hexo，创建博客" class="headerlink" title="1.全局安装 hexo，创建博客"></a>1.全局安装 hexo，创建博客</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g</code></pre>
-<h3 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h3><pre class=" language-javascript"><code class="language-javascript">hexo init blog</code></pre>
-<h3 id="3-启动本地-hexo-server"><a href="#3-启动本地-hexo-server" class="headerlink" title="3.启动本地 hexo-server"></a>3.启动本地 hexo-server</h3><pre class=" language-javascript"><code class="language-javascript">hexo server</code></pre>
-<h2 id="4-新建一个-hexo-博客，富文本-makedown-文档"><a href="#4-新建一个-hexo-博客，富文本-makedown-文档" class="headerlink" title="4.新建一个 hexo 博客，富文本 makedown 文档"></a>4.新建一个 hexo 博客，富文本 makedown 文档</h2><pre class=" language-javascript"><code class="language-javascript">$ hexo <span class="token keyword">new</span> <span class="token string">"Hello Hexo"</span></code></pre>
-<h2 id="5-打包发布到-hexo"><a href="#5-打包发布到-hexo" class="headerlink" title="5.打包发布到 hexo"></a>5.打包发布到 hexo</h2><pre><code>//打包发布 hexo
-hexo generate
+<span class="token comment" spellcheck="true">//初始化一个 blog</span>
+hexo init blog
 
+<span class="token comment" spellcheck="true">//访问本地博客(默认地址为：localhost:4000)</span>
+cd blog
+hexo s</code></pre>
+<h2 id="2-serverless-文档（推荐）"><a href="#2-serverless-文档（推荐）" class="headerlink" title="2.serverless 文档（推荐）"></a>2.serverless 文档（推荐）</h2><p>github 官方中文文档：<a href="https://github.com/serverless/serverless/blob/master/README_CN.md" target="_blank" rel="noopener">https://github.com/serverless/serverless/blob/master/README_CN.md</a><br>serverless 中文博客： <a href="https://serverlesscloud.cn/" target="_blank" rel="noopener">https://serverlesscloud.cn/</a></p>
+<h2 id="3-使用-npm-安装"><a href="#3-使用-npm-安装" class="headerlink" title="3.使用 npm 安装"></a>3.使用 npm 安装</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局安装 serverless</span>
+npm install <span class="token operator">-</span>g serverless</code></pre>
+<h2 id="4-在-blog-的根目录创建一个-serverless-yml-文件"><a href="#4-在-blog-的根目录创建一个-serverless-yml-文件" class="headerlink" title="4.在 blog 的根目录创建一个 serverless.yml 文件"></a>4.在 blog 的根目录创建一个 serverless.yml 文件</h2><p>复制以下文件内容：唯一注意的地方就是 src 的路径：根据实际更改（即为博客的 index.html 网页）</p>
+<pre class=" language-javascript"><code class="language-javascript">myWebsite<span class="token punctuation">:</span>
+  component<span class="token punctuation">:</span> <span class="token string">'@serverless/tencent-website'</span>
+  inputs<span class="token punctuation">:</span>
+    code<span class="token punctuation">:</span>
+      src<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span><span class="token keyword">public</span>
+      index<span class="token punctuation">:</span> index<span class="token punctuation">.</span>html
+      error<span class="token punctuation">:</span> index<span class="token punctuation">.</span>html
+    region<span class="token punctuation">:</span> ap<span class="token operator">-</span>guangzhou
+    bucketName<span class="token punctuation">:</span> my<span class="token operator">-</span>bucket</code></pre>
+<h2 id="5-将静态博客发布到-tencent-serverless"><a href="#5-将静态博客发布到-tencent-serverless" class="headerlink" title="5.将静态博客发布到 tencent-serverless"></a>5.将静态博客发布到 tencent-serverless</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//首先将 hexo 中博客打包</span>
+heox g
 
-//重启服务(可以看到新增的文档)
-hexo server
-</code></pre><h2 id="6-packge-json-的命令行（备份文件）"><a href="#6-packge-json-的命令行（备份文件）" class="headerlink" title="6.packge.json 的命令行（备份文件）"></a>6.packge.json 的命令行（备份文件）</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
-    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
-    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
-    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<span class="token comment" spellcheck="true">//将本地的博客部署到 serverless</span>
+serverless<span class="token operator">/</span>sls <span class="token operator">--</span>debug</code></pre>
+<h2 id="6-稍等片刻可以在-命令行工具看到以下"><a href="#6-稍等片刻可以在-命令行工具看到以下" class="headerlink" title="6.稍等片刻可以在 命令行工具看到以下"></a>6.稍等片刻可以在 命令行工具看到以下</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607113775-6a30d4dc-3c70-4506-9f5b-7af5a07b4e05.png#align=left&display=inline&height=567&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1134&originWidth=1298&size=453581&status=done&style=none&width=649" alt="image.png"><br>此时需要的操作就是用手机微信去扫描（此处会检测是否有腾讯云账号，没有会提示注册，有会直接成功）并返回以下内容：此处就是部署成功，并返回地址，可以直接访问。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607252405-a0fad8a2-f2d5-49ef-8101-09a10eec3916.png#align=left&display=inline&height=264&margin=%5Bobject%20Object%5D&name=image.png&originHeight=528&originWidth=1274&size=364624&status=done&style=none&width=637" alt="image.png"></p>
 ]]></content>
   </entry>
   <entry>
@@ -260,6 +249,27 @@ bin<span class="token regex">/gen/</span></code></pre>
 ]]></content>
   </entry>
   <entry>
+    <title>1&amp;gt;搭建本地的 hexo 的博客</title>
+    <url>/leader755/8e435d4c.html</url>
+    <content><![CDATA[<h2 id="1-gt-官方文档-https-github-com-hexojs-hexo"><a href="#1-gt-官方文档-https-github-com-hexojs-hexo" class="headerlink" title="1&gt;官方文档   https://github.com/hexojs/hexo"></a>1&gt;官方文档   <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">https://github.com/hexojs/hexo</a></h2><h2 id="2-gt-搭建博客"><a href="#2-gt-搭建博客" class="headerlink" title="2&gt;搭建博客"></a>2&gt;搭建博客</h2><h3 id="1-全局安装-hexo，创建博客"><a href="#1-全局安装-hexo，创建博客" class="headerlink" title="1.全局安装 hexo，创建博客"></a>1.全局安装 hexo，创建博客</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g</code></pre>
+<h3 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h3><pre class=" language-javascript"><code class="language-javascript">hexo init blog</code></pre>
+<h3 id="3-启动本地-hexo-server"><a href="#3-启动本地-hexo-server" class="headerlink" title="3.启动本地 hexo-server"></a>3.启动本地 hexo-server</h3><pre class=" language-javascript"><code class="language-javascript">hexo server</code></pre>
+<h2 id="4-新建一个-hexo-博客，富文本-makedown-文档"><a href="#4-新建一个-hexo-博客，富文本-makedown-文档" class="headerlink" title="4.新建一个 hexo 博客，富文本 makedown 文档"></a>4.新建一个 hexo 博客，富文本 makedown 文档</h2><pre class=" language-javascript"><code class="language-javascript">$ hexo <span class="token keyword">new</span> <span class="token string">"Hello Hexo"</span></code></pre>
+<h2 id="5-打包发布到-hexo"><a href="#5-打包发布到-hexo" class="headerlink" title="5.打包发布到 hexo"></a>5.打包发布到 hexo</h2><pre><code>//打包发布 hexo
+hexo generate
+
+
+//重启服务(可以看到新增的文档)
+hexo server
+</code></pre><h2 id="6-packge-json-的命令行（备份文件）"><a href="#6-packge-json-的命令行（备份文件）" class="headerlink" title="6.packge.json 的命令行（备份文件）"></a>6.packge.json 的命令行（备份文件）</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
+    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
+    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+]]></content>
+  </entry>
+  <entry>
     <title>4&amp;gt;mac 上使用 vi</title>
     <url>/leader755/87beae81.html</url>
     <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
@@ -267,61 +277,33 @@ bin<span class="token regex">/gen/</span></code></pre>
 ]]></content>
   </entry>
   <entry>
-    <title>3&amp;gt;mac上生成SSH key与GitHub通信</title>
-    <url>/leader755/326ac897.html</url>
-    <content><![CDATA[<h2 id="1-检查-SSH-key-是否存在"><a href="#1-检查-SSH-key-是否存在" class="headerlink" title="1.检查 SSH key 是否存在"></a>1.检查 SSH key 是否存在</h2><p>在终端输入：</p>
-<pre class=" language-javascript"><code class="language-javascript">ls <span class="token operator">-</span>al <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh</code></pre>
-<p>如果没有，终端显示如下：</p>
-<blockquote>
-<p>No such file or directory</p>
-</blockquote>
-<p>如果已经存在，则会显示 id_rsa 和 id_rsa.pub</p>
-<h2 id="2-生成新的-SSH-key"><a href="#2-生成新的-SSH-key" class="headerlink" title="2.生成新的 SSH key"></a>2.生成新的 SSH key</h2><h4 id="1-设置-username-和-email（github-每次-commit-都会记录他们）"><a href="#1-设置-username-和-email（github-每次-commit-都会记录他们）" class="headerlink" title="1.设置 username 和 email（github 每次 commit 都会记录他们）"></a>1.设置 username 和 email（github 每次 commit 都会记录他们）</h4><pre class=" language-javascript"><code class="language-javascript">git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"Leader755"</span>
-git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"1181012791@qq.com"</span></code></pre>
-<h4 id="2-通过终端命令创建-ssh-key"><a href="#2-通过终端命令创建-ssh-key" class="headerlink" title="2.通过终端命令创建 ssh key"></a>2.通过终端命令创建 ssh key</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//其中 your_email@example.com 为你在 GitHub 注册时的邮箱</span>
-'ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"1181012791@qq.com"</span></code></pre>
-<p><a href="https://www.cnblogs.com/jarod99/p/7251361.html" target="_blank" rel="noopener">Bad escape character ‘ygen’ 错误原因!</a></p>
-<blockquote>
-<p>ssh-keygen -t rsa -C “邮箱”<br>ssh-keygen 命令中间没有空格，如果在 ssh 后面加上空格，会得到 Bad escape character ‘ygen’.的错误。</p>
-</blockquote>
-<p>成功后终端显示如下：</p>
-<blockquote>
-<p>Generating public/private rsa key pair.<br>Enter file in which to save the key (/Users/xxx/.ssh/id_rsa):</p>
-</blockquote>
-<p>提示你保存 .ssh/id_rsa 的路径，这里直接 enter</p>
-<blockquote>
-<p>Created directory ‘/Users/xxx/.ssh’.<br>Enter passphrase (empty for no passphrase):</p>
-</blockquote>
-<p>提示输入 passphrase，每次与 GitHub 通信都会要求输入 passphrase，以避免某些「失误」，建议输入<br><strong>这里有个问题需要注意，那就是当你在这里输入密码，以后在连接 gitHub 去 push 代码的时候都需要输入密码，非常蛋疼，所以在这里最好直接回车过即可，不用输入密码。**</strong>()**</p>
-<h4 id="3-即连续-enter-3-次，就会生成-key。"><a href="#3-即连续-enter-3-次，就会生成-key。" class="headerlink" title="3.即连续 enter 3 次，就会生成 key。"></a>3.即连续 enter 3 次，就会生成 key。</h4><p>成功后终端显示：</p>
-<blockquote>
-<p>Your identification has been saved in /Users/xxx/.ssh/id_rsa.<br>Your public key has been saved in /Users/xxx/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48 <a href="mailto:your_email@example.com">your_email@example.com</a><br>The key’s randomart image is:（后面图形省略）</p>
-</blockquote>
-<h2 id="3-添加-key-到-SSH"><a href="#3-添加-key-到-SSH" class="headerlink" title="3.添加 key 到 SSH"></a>3.添加 key 到 SSH</h2><p>输入命令：</p>
-<pre class=" language-javascript"><code class="language-javascript">ssh<span class="token operator">-</span>add <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa</code></pre>
-<p>此时会要求输入 passphrase，输入步骤二中填的 passphrase<br>成功后，终端显示：</p>
-<blockquote>
-<p>Identity added: /Users/xxx/.ssh/id_rsa (/Users/xxx/.ssh/id_rsa)</p>
-</blockquote>
-<p>最后，在 /Users/xxx/.ssh/ 生成两个文件，id_rsa 和 id_rsa.pub<br>此时，SSH key 已经生成成功</p>
-<h2 id="4-添加-SSH-key-到-GitHub-和-coding"><a href="#4-添加-SSH-key-到-GitHub-和-coding" class="headerlink" title="4.添加 SSH key 到 GitHub 和 coding"></a>4.添加 SSH key 到 GitHub 和 coding</h2><h4 id="1-复制-id-rsa-pub-中的所有内容"><a href="#1-复制-id-rsa-pub-中的所有内容" class="headerlink" title="1.复制 id_rsa.pub 中的所有内容,"></a>1.复制 id_rsa.pub 中的所有内容,</h4><p>打开 id_rsa.pub，终端命令：</p>
-<blockquote>
-</blockquote>
-<pre class=" language-javascript"><code class="language-javascript">vim <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa<span class="token punctuation">.</span>pub</code></pre>
-<p>手动复制以 ssh-rsa 到以 <a href="mailto:your_email@example.com">your_email@example.com</a> 结尾的所有内容</p>
-<p>或者直接输入命令复制 id_rsa.pub 中的所有内容，终端命令：</p>
-<pre class=" language-javascript"><code class="language-javascript">pbcopy <span class="token operator">&lt;</span> <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>_adirs<span class="token punctuation">.</span>pub<span class="token punctuation">;</span></code></pre>
-<h2 id="5-登录-GitHub-和-coding"><a href="#5-登录-GitHub-和-coding" class="headerlink" title="5.登录 GitHub 和 coding"></a>5.登录 GitHub 和 coding</h2><h4 id="github：打开个人-Settings–-gt-SSH-keys–-gt-Add-SSH-key"><a href="#github：打开个人-Settings–-gt-SSH-keys–-gt-Add-SSH-key" class="headerlink" title="github：打开个人 Settings–&gt;SSH keys–&gt;Add SSH key"></a>github：打开个人 Settings–&gt;SSH keys–&gt;Add SSH key</h4><h4 id="coding：打开个人设置–-gt-SSH-公钥-–-gt-新增公钥"><a href="#coding：打开个人设置–-gt-SSH-公钥-–-gt-新增公钥" class="headerlink" title="coding：打开个人设置–&gt;SSH 公钥 –&gt;新增公钥"></a>coding：打开个人设置–&gt;SSH 公钥 –&gt;新增公钥</h4><p>Title 随便写<br>Key 粘贴之前复制的内容<br>这样 SSH key 就添加的 GitHub 或者 coding.<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333300890-a4b759da-4e1d-4837-8cc3-c2c3b1fa1f01.png#align=left&display=inline&height=565&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1130&originWidth=1902&size=254444&status=done&style=none&width=951" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333326072-e78c1bf9-ed79-4811-bbc9-a203e423b57a.png#align=left&display=inline&height=560&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1120&originWidth=1946&size=357795&status=done&style=none&width=973" alt="image.png"></p>
-<h2 id="6-检测-SSH-key"><a href="#6-检测-SSH-key" class="headerlink" title="6.检测 SSH key"></a>6.检测 SSH key</h2><p>输入命令：</p>
-<pre class=" language-javascript"><code class="language-javascript">ssh git@github<span class="token punctuation">.</span>com</code></pre>
-<p>此时会验证 SSH key 是否可以访问 GitHub<br>成功显示如下：</p>
-<blockquote>
-<p>Hi your_name! You’ve successfully authenticated, but GitHub does not provide shell access.<br>Connection to github.com closed.</p>
-</blockquote>
-<blockquote>
-<p>以上为提示内容，不过这里还是有一个需要注意的地方，如果没有上面的成功提示输出的话也不要害怕，我们可以先自己在本地建立一个 gitHub 仓库，然后进行 push 操作，如果 push 成功那么设置是成功的，如果 push 不上去的话再去检查。</p>
-</blockquote>
-<h2 id="7-使用-git-去创建一个-ssh-key-就完成了"><a href="#7-使用-git-去创建一个-ssh-key-就完成了" class="headerlink" title="7.使用 git 去创建一个 ssh key 就完成了"></a>7.使用 git 去创建一个 ssh key 就完成了</h2>]]></content>
+    <title>5&amp;gt;hexo文档部署到 Github和 coding</title>
+    <url>/leader755/99853e10.html</url>
+    <content><![CDATA[<h2 id="1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："><a href="#1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：" class="headerlink" title="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："></a>1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&size=44477&status=done&style=none&width=526" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#align=left&display=inline&height=120&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&size=33032&status=done&style=none&width=486" alt="image.png"><br>如果不部署到 coding，就只写 github 就行。</p>
+<pre class=" language-javascript"><code class="language-javascript">deploy<span class="token punctuation">:</span> type<span class="token punctuation">:</span> git<span class="token punctuation">;</span>
+repo<span class="token punctuation">:</span> github<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//github.com/Leader755/leader755.github.io.git</span>
+https<span class="token punctuation">:</span> coding<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//e.coding.net/Leader755/leader755.coding.git</span>
+https<span class="token punctuation">:</span> branch<span class="token punctuation">:</span> master<span class="token punctuation">;</span></code></pre>
+<h2 id="2：要安装一个部署插件-hexo-deployer-git。"><a href="#2：要安装一个部署插件-hexo-deployer-git。" class="headerlink" title="2：要安装一个部署插件 hexo-deployer-git。"></a>2：要安装一个部署插件 <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>。</h2><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save</code></pre>
+<h2 id="3：发布到-github"><a href="#3：发布到-github" class="headerlink" title="3：发布到 github"></a>3：发布到 github</h2><p>最后执行以下命令就可以部署上传啦，以下 g 是 generate 缩写，d 是 deploy 缩写：</p>
+<pre class=" language-javascript"><code class="language-javascript">hexo g <span class="token operator">-</span>d</code></pre>
+<p>稍等一会，在浏览器访问网址： <a href="https://xn--6qqv7i14ofosyrb.github.io/" target="_blank" rel="noopener">https://你的用户名.github.io</a> 就会看到你的博客啦！！</p>
+<h2 id="4-写作并发布"><a href="#4-写作并发布" class="headerlink" title="4.写作并发布"></a>4.写作并发布</h2><h3 id="1-直接写作（情况）"><a href="#1-直接写作（情况）" class="headerlink" title="1.直接写作（情况）"></a>1.直接写作（情况）</h3><p>博客搭好了，就开始写文章了，这里简单介绍一下，详细的文档可以看 <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo</a> 官网。<br>新建文章，输入以下命令即可</p>
+<pre class=" language-javascript"><code class="language-javascript">hexo <span class="token keyword">new</span> <span class="token string">'文章标题'</span></code></pre>
+<p>执行完成后可以在 /source/_posts 下看到一个“文章标题.md”的文章文件啦。.md 就是 Markdown 格式的文件，具体用法可以在网上找一下，语法还是比较简单的。<br>在 Markdown 文章里面输入你的文章内容</p>
+<h3 id="2-存查稿-情况"><a href="#2-存查稿-情况" class="headerlink" title="2.存查稿(情况)"></a>2.存查稿(情况)</h3><h4 id="1-首先查看-sources-文件下是否有-drafts-文件夹"><a href="#1-首先查看-sources-文件下是否有-drafts-文件夹" class="headerlink" title="1.首先查看 sources 文件下是否有_drafts 文件夹"></a>1.首先查看 sources 文件下是否有_drafts 文件夹</h4><p>**  _drafts(草稿文章缓存区)，_posts(正式文章缓存区)**<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313764893-f9511ad0-1933-4c23-becd-bc162c0e8f3e.png#align=left&display=inline&height=149&margin=%5Bobject%20Object%5D&name=image.png&originHeight=298&originWidth=782&size=24987&status=done&style=none&width=391" alt="image.png"></p>
+<p>如果没有该文件夹或者报错，则运行：</p>
+<pre class=" language-javascript"><code class="language-javascript">hexo <span class="token keyword">new</span> <span class="token class-name">draft</span> <span class="token string">"My First Blog Post"</span></code></pre>
+<h4 id="2-将草稿文章推送到正式区"><a href="#2-将草稿文章推送到正式区" class="headerlink" title="2.将草稿文章推送到正式区"></a>2.将草稿文章推送到正式区</h4><pre class=" language-javascript"><code class="language-javascript">hexo publish <span class="token string">"My First Blog Post"</span></code></pre>
+<h3 id="2-打包"><a href="#2-打包" class="headerlink" title="2.打包"></a>2.打包</h3><pre class=" language-javascript"><code class="language-javascript">hexo g</code></pre>
+<h3 id="3-运行本地-hexo"><a href="#3-运行本地-hexo" class="headerlink" title="3.运行本地 hexo"></a>3.运行本地 hexo</h3><pre class=" language-javascript"><code class="language-javascript">hexo s</code></pre>
+<h3 id="4-部署到-github-和-coding"><a href="#4-部署到-github-和-coding" class="headerlink" title="4.部署到 github 和 coding"></a>4.部署到 github 和 coding</h3><p>因为 github 和 coding 使用了同一个公钥，所以推送时会触发多个仓库。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//部署前先清理一下缓存命令</span>
+hexo clean
+
+<span class="token comment" spellcheck="true">//部署</span>
+hexo g <span class="token operator">-</span>d</code></pre>
+]]></content>
   </entry>
   <entry>
     <title>8&amp;gt;语雀文档同步到 hexo</title>
@@ -429,6 +411,63 @@ yuque<span class="token operator">-</span>hexo clean</code></pre>
 ]]></content>
   </entry>
   <entry>
+    <title>3&amp;gt;mac上生成SSH key与GitHub通信</title>
+    <url>/leader755/326ac897.html</url>
+    <content><![CDATA[<h2 id="1-检查-SSH-key-是否存在"><a href="#1-检查-SSH-key-是否存在" class="headerlink" title="1.检查 SSH key 是否存在"></a>1.检查 SSH key 是否存在</h2><p>在终端输入：</p>
+<pre class=" language-javascript"><code class="language-javascript">ls <span class="token operator">-</span>al <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh</code></pre>
+<p>如果没有，终端显示如下：</p>
+<blockquote>
+<p>No such file or directory</p>
+</blockquote>
+<p>如果已经存在，则会显示 id_rsa 和 id_rsa.pub</p>
+<h2 id="2-生成新的-SSH-key"><a href="#2-生成新的-SSH-key" class="headerlink" title="2.生成新的 SSH key"></a>2.生成新的 SSH key</h2><h4 id="1-设置-username-和-email（github-每次-commit-都会记录他们）"><a href="#1-设置-username-和-email（github-每次-commit-都会记录他们）" class="headerlink" title="1.设置 username 和 email（github 每次 commit 都会记录他们）"></a>1.设置 username 和 email（github 每次 commit 都会记录他们）</h4><pre class=" language-javascript"><code class="language-javascript">git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"Leader755"</span>
+git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"1181012791@qq.com"</span></code></pre>
+<h4 id="2-通过终端命令创建-ssh-key"><a href="#2-通过终端命令创建-ssh-key" class="headerlink" title="2.通过终端命令创建 ssh key"></a>2.通过终端命令创建 ssh key</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//其中 your_email@example.com 为你在 GitHub 注册时的邮箱</span>
+'ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"1181012791@qq.com"</span></code></pre>
+<p><a href="https://www.cnblogs.com/jarod99/p/7251361.html" target="_blank" rel="noopener">Bad escape character ‘ygen’ 错误原因!</a></p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “邮箱”<br>ssh-keygen 命令中间没有空格，如果在 ssh 后面加上空格，会得到 Bad escape character ‘ygen’.的错误。</p>
+</blockquote>
+<p>成功后终端显示如下：</p>
+<blockquote>
+<p>Generating public/private rsa key pair.<br>Enter file in which to save the key (/Users/xxx/.ssh/id_rsa):</p>
+</blockquote>
+<p>提示你保存 .ssh/id_rsa 的路径，这里直接 enter</p>
+<blockquote>
+<p>Created directory ‘/Users/xxx/.ssh’.<br>Enter passphrase (empty for no passphrase):</p>
+</blockquote>
+<p>提示输入 passphrase，每次与 GitHub 通信都会要求输入 passphrase，以避免某些「失误」，建议输入<br><strong>这里有个问题需要注意，那就是当你在这里输入密码，以后在连接 gitHub 去 push 代码的时候都需要输入密码，非常蛋疼，所以在这里最好直接回车过即可，不用输入密码。**</strong>()**</p>
+<h4 id="3-即连续-enter-3-次，就会生成-key。"><a href="#3-即连续-enter-3-次，就会生成-key。" class="headerlink" title="3.即连续 enter 3 次，就会生成 key。"></a>3.即连续 enter 3 次，就会生成 key。</h4><p>成功后终端显示：</p>
+<blockquote>
+<p>Your identification has been saved in /Users/xxx/.ssh/id_rsa.<br>Your public key has been saved in /Users/xxx/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48 <a href="mailto:your_email@example.com">your_email@example.com</a><br>The key’s randomart image is:（后面图形省略）</p>
+</blockquote>
+<h2 id="3-添加-key-到-SSH"><a href="#3-添加-key-到-SSH" class="headerlink" title="3.添加 key 到 SSH"></a>3.添加 key 到 SSH</h2><p>输入命令：</p>
+<pre class=" language-javascript"><code class="language-javascript">ssh<span class="token operator">-</span>add <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa</code></pre>
+<p>此时会要求输入 passphrase，输入步骤二中填的 passphrase<br>成功后，终端显示：</p>
+<blockquote>
+<p>Identity added: /Users/xxx/.ssh/id_rsa (/Users/xxx/.ssh/id_rsa)</p>
+</blockquote>
+<p>最后，在 /Users/xxx/.ssh/ 生成两个文件，id_rsa 和 id_rsa.pub<br>此时，SSH key 已经生成成功</p>
+<h2 id="4-添加-SSH-key-到-GitHub-和-coding"><a href="#4-添加-SSH-key-到-GitHub-和-coding" class="headerlink" title="4.添加 SSH key 到 GitHub 和 coding"></a>4.添加 SSH key 到 GitHub 和 coding</h2><h4 id="1-复制-id-rsa-pub-中的所有内容"><a href="#1-复制-id-rsa-pub-中的所有内容" class="headerlink" title="1.复制 id_rsa.pub 中的所有内容,"></a>1.复制 id_rsa.pub 中的所有内容,</h4><p>打开 id_rsa.pub，终端命令：</p>
+<blockquote>
+</blockquote>
+<pre class=" language-javascript"><code class="language-javascript">vim <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa<span class="token punctuation">.</span>pub</code></pre>
+<p>手动复制以 ssh-rsa 到以 <a href="mailto:your_email@example.com">your_email@example.com</a> 结尾的所有内容</p>
+<p>或者直接输入命令复制 id_rsa.pub 中的所有内容，终端命令：</p>
+<pre class=" language-javascript"><code class="language-javascript">pbcopy <span class="token operator">&lt;</span> <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>_adirs<span class="token punctuation">.</span>pub<span class="token punctuation">;</span></code></pre>
+<h2 id="5-登录-GitHub-和-coding"><a href="#5-登录-GitHub-和-coding" class="headerlink" title="5.登录 GitHub 和 coding"></a>5.登录 GitHub 和 coding</h2><h4 id="github：打开个人-Settings–-gt-SSH-keys–-gt-Add-SSH-key"><a href="#github：打开个人-Settings–-gt-SSH-keys–-gt-Add-SSH-key" class="headerlink" title="github：打开个人 Settings–&gt;SSH keys–&gt;Add SSH key"></a>github：打开个人 Settings–&gt;SSH keys–&gt;Add SSH key</h4><h4 id="coding：打开个人设置–-gt-SSH-公钥-–-gt-新增公钥"><a href="#coding：打开个人设置–-gt-SSH-公钥-–-gt-新增公钥" class="headerlink" title="coding：打开个人设置–&gt;SSH 公钥 –&gt;新增公钥"></a>coding：打开个人设置–&gt;SSH 公钥 –&gt;新增公钥</h4><p>Title 随便写<br>Key 粘贴之前复制的内容<br>这样 SSH key 就添加的 GitHub 或者 coding.<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333300890-a4b759da-4e1d-4837-8cc3-c2c3b1fa1f01.png#align=left&display=inline&height=565&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1130&originWidth=1902&size=254444&status=done&style=none&width=951" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333326072-e78c1bf9-ed79-4811-bbc9-a203e423b57a.png#align=left&display=inline&height=560&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1120&originWidth=1946&size=357795&status=done&style=none&width=973" alt="image.png"></p>
+<h2 id="6-检测-SSH-key"><a href="#6-检测-SSH-key" class="headerlink" title="6.检测 SSH key"></a>6.检测 SSH key</h2><p>输入命令：</p>
+<pre class=" language-javascript"><code class="language-javascript">ssh git@github<span class="token punctuation">.</span>com</code></pre>
+<p>此时会验证 SSH key 是否可以访问 GitHub<br>成功显示如下：</p>
+<blockquote>
+<p>Hi your_name! You’ve successfully authenticated, but GitHub does not provide shell access.<br>Connection to github.com closed.</p>
+</blockquote>
+<blockquote>
+<p>以上为提示内容，不过这里还是有一个需要注意的地方，如果没有上面的成功提示输出的话也不要害怕，我们可以先自己在本地建立一个 gitHub 仓库，然后进行 push 操作，如果 push 成功那么设置是成功的，如果 push 不上去的话再去检查。</p>
+</blockquote>
+<h2 id="7-使用-git-去创建一个-ssh-key-就完成了"><a href="#7-使用-git-去创建一个-ssh-key-就完成了" class="headerlink" title="7.使用 git 去创建一个 ssh key 就完成了"></a>7.使用 git 去创建一个 ssh key 就完成了</h2>]]></content>
+  </entry>
+  <entry>
     <title>欢迎使用 MWeb</title>
     <url>/leader755/766a05db.html</url>
     <content><![CDATA[<p>MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：</p>
@@ -471,6 +510,31 @@ yuque<span class="token operator">-</span>hexo clean</code></pre>
    repo：git@github<span class="token punctuation">.</span>com<span class="token punctuation">:</span>Leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git
    branch：master</code></pre>
 <p>mac:</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo博客的生成永久标题链接</title>
+    <url>/leader755/4976fe22.html</url>
+    <content><![CDATA[<h2 id="1-hexo-博客默认链接规则："><a href="#1-hexo-博客默认链接规则：" class="headerlink" title="1.hexo 博客默认链接规则："></a>1.hexo 博客默认链接规则：</h2><p><strong>hexo 生成的标题默认规则（年、月、日、标题）：:year/:month/:day/:title。复制后的链接是一长串，非常不利于阅读，也不简洁。</strong></p>
+<h2 id="2-解决方案："><a href="#2-解决方案：" class="headerlink" title="2.解决方案："></a>2.解决方案：</h2><h3 id="1-使用hexo-permalink-pinyin"><a href="#1-使用hexo-permalink-pinyin" class="headerlink" title="1.使用hexo-permalink-pinyin"></a>1.使用<a href="">hexo-permalink-pinyin</a></h3><p>将中文转英文，这样方案也存在一定的缺陷，比如修改了文章标题，重新 hexo 三连后，URL 就变了，以前的文章地址变成了 404。而且这样生成的 URL 层级也很深，不利于 SEO。</p>
+<h4 id="1-gt-安装-hexo-permalink-pinyin"><a href="#1-gt-安装-hexo-permalink-pinyin" class="headerlink" title="1&gt;安装 hexo-permalink-pinyin"></a>1&gt;安装 hexo-permalink-pinyin</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
+<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink_pinyin<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  separator<span class="token punctuation">:</span> <span class="token string">'-'</span> # <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
+permalink_pinyin<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>             # Enable <span class="token keyword">this</span> plugin
+  separator<span class="token punctuation">:</span> <span class="token string">'-'</span>           # Separator <span class="token keyword">of</span> the slug<span class="token punctuation">,</span> <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
+  exclude<span class="token punctuation">:</span> <span class="token operator">/</span>ignore_post<span class="token operator">/</span>   # Regex <span class="token keyword">for</span> which post should skip</code></pre>
+<p>###</p>
+<h3 id="2-使用hexo-abbrlink"><a href="#2-使用hexo-abbrlink" class="headerlink" title="2.使用hexo-abbrlink"></a>2.使用<a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a></h3><p>生成唯一不变的 URl 链接，链接可以调整自己想要的。弊端</p>
+<h4 id="1-gt-安装-hexo-abbrlink"><a href="#1-gt-安装-hexo-abbrlink" class="headerlink" title="1&gt;安装 hexo-abbrlink"></a>1&gt;安装 hexo-abbrlink</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
+<p>####</p>
+<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink<span class="token punctuation">:</span> post<span class="token operator">/</span><span class="token punctuation">:</span>abbrlink<span class="token punctuation">.</span>html  # 文章的永久链接格式<span class="token punctuation">,</span>post可以自定义
+abbrlink<span class="token punctuation">:</span>
+  alg<span class="token punctuation">:</span> crc32  # 算法： <span class="token function">crc16</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and crc32
+  rep<span class="token punctuation">:</span> hex    # 进制： <span class="token function">dec</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and hex</code></pre>
+<p>生成后的博客链接如下：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588694804547-5dbe637d-46af-4bfc-9b3d-4d5228b573a6.png#align=left&display=inline&height=37&margin=%5Bobject%20Object%5D&name=image.png&originHeight=74&originWidth=908&size=11417&status=done&style=none&width=454" alt="image.png"></p>
+<p>如果觉得对你有帮助，点个赞呗。</p>
 ]]></content>
   </entry>
   <entry>
@@ -518,57 +582,6 @@ limit<span class="token punctuation">:</span> <span class="token number">10000</
 <p>##</p>
 <h2 id="3-配置主题文件-config-yml"><a href="#3-配置主题文件-config-yml" class="headerlink" title="3.配置主题文件_config.yml"></a>3.配置主题文件_config.yml</h2><pre class=" language-javascript"><code class="language-javascript">local_search<span class="token punctuation">:</span> enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
 <h2 id="4-完成效果图示"><a href="#4-完成效果图示" class="headerlink" title="4.完成效果图示"></a>4.完成效果图示</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588695774509-2476d128-a52b-4d6b-8e64-7269b5c7389b.png#align=left&display=inline&height=568&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1136&originWidth=2180&size=310201&status=done&style=none&width=1090" alt="image.png"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>hexo博客的生成永久标题链接</title>
-    <url>/leader755/4976fe22.html</url>
-    <content><![CDATA[<h2 id="1-hexo-博客默认链接规则："><a href="#1-hexo-博客默认链接规则：" class="headerlink" title="1.hexo 博客默认链接规则："></a>1.hexo 博客默认链接规则：</h2><p><strong>hexo 生成的标题默认规则（年、月、日、标题）：:year/:month/:day/:title。复制后的链接是一长串，非常不利于阅读，也不简洁。</strong></p>
-<h2 id="2-解决方案："><a href="#2-解决方案：" class="headerlink" title="2.解决方案："></a>2.解决方案：</h2><h3 id="1-使用hexo-permalink-pinyin"><a href="#1-使用hexo-permalink-pinyin" class="headerlink" title="1.使用hexo-permalink-pinyin"></a>1.使用<a href="">hexo-permalink-pinyin</a></h3><p>将中文转英文，这样方案也存在一定的缺陷，比如修改了文章标题，重新 hexo 三连后，URL 就变了，以前的文章地址变成了 404。而且这样生成的 URL 层级也很深，不利于 SEO。</p>
-<h4 id="1-gt-安装-hexo-permalink-pinyin"><a href="#1-gt-安装-hexo-permalink-pinyin" class="headerlink" title="1&gt;安装 hexo-permalink-pinyin"></a>1&gt;安装 hexo-permalink-pinyin</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
-<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink_pinyin<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  separator<span class="token punctuation">:</span> <span class="token string">'-'</span> # <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
-permalink_pinyin<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>             # Enable <span class="token keyword">this</span> plugin
-  separator<span class="token punctuation">:</span> <span class="token string">'-'</span>           # Separator <span class="token keyword">of</span> the slug<span class="token punctuation">,</span> <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
-  exclude<span class="token punctuation">:</span> <span class="token operator">/</span>ignore_post<span class="token operator">/</span>   # Regex <span class="token keyword">for</span> which post should skip</code></pre>
-<p>###</p>
-<h3 id="2-使用hexo-abbrlink"><a href="#2-使用hexo-abbrlink" class="headerlink" title="2.使用hexo-abbrlink"></a>2.使用<a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a></h3><p>生成唯一不变的 URl 链接，链接可以调整自己想要的。弊端</p>
-<h4 id="1-gt-安装-hexo-abbrlink"><a href="#1-gt-安装-hexo-abbrlink" class="headerlink" title="1&gt;安装 hexo-abbrlink"></a>1&gt;安装 hexo-abbrlink</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
-<p>####</p>
-<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink<span class="token punctuation">:</span> post<span class="token operator">/</span><span class="token punctuation">:</span>abbrlink<span class="token punctuation">.</span>html  # 文章的永久链接格式<span class="token punctuation">,</span>post可以自定义
-abbrlink<span class="token punctuation">:</span>
-  alg<span class="token punctuation">:</span> crc32  # 算法： <span class="token function">crc16</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and crc32
-  rep<span class="token punctuation">:</span> hex    # 进制： <span class="token function">dec</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and hex</code></pre>
-<p>生成后的博客链接如下：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588694804547-5dbe637d-46af-4bfc-9b3d-4d5228b573a6.png#align=left&display=inline&height=37&margin=%5Bobject%20Object%5D&name=image.png&originHeight=74&originWidth=908&size=11417&status=done&style=none&width=454" alt="image.png"></p>
-<p>如果觉得对你有帮助，点个赞呗。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>hexo博客的评论功能</title>
-    <url>/leader755/c41d01b3.html</url>
-    <content><![CDATA[<h2 id="1-这里推荐的评论功能插件为valine"><a href="#1-这里推荐的评论功能插件为valine" class="headerlink" title="1.这里推荐的评论功能插件为valine"></a>1.这里推荐的评论功能插件为<a href="https://valine.js.org/" target="_blank" rel="noopener">valine</a></h2><p>官网：<a href="https://valine.js.org/" target="_blank" rel="noopener">https://valine.js.org/</a><br>注册登录网站：<a href="https://leancloud.cn/" target="_blank" rel="noopener">https://leancloud.cn/</a><br>      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。</p>
-<h2 id="2-去leancloud注册"><a href="#2-去leancloud注册" class="headerlink" title="2.去leancloud注册"></a>2.去<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud</a>注册</h2><p>注册完成后去创建应用，选择开发版就可以了。（需要实名登记才能创建应用）<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588779620815-f8a3fc6e-f667-4959-9cb2-53b5777427c7.png#align=left&display=inline&height=445&margin=%5Bobject%20Object%5D&name=image.png&originHeight=890&originWidth=1232&size=83220&status=done&style=none&width=616" alt="image.png"></p>
-<h2 id="3-获取-appkey-和-appid"><a href="#3-获取-appkey-和-appid" class="headerlink" title="3.获取 appkey 和 appid"></a>3.获取 appkey 和 appid</h2><p>创建完成应用后，<strong>进入应用-&gt;设置-&gt;应用 key，找到相应的 appkey 和 appid。</strong><br><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588779969891-d05a06f8-bcf5-4b7e-84cb-bcedabc8f762.png#align=left&display=inline&height=248&margin=%5Bobject%20Object%5D&name=image.png&originHeight=796&originWidth=2394&size=185376&status=done&style=none&width=746" alt="image.png"></strong></p>
-<h2 id="4-配置主题文件-config-yml"><a href="#4-配置主题文件-config-yml" class="headerlink" title="4.配置主题文件_config.yml"></a>4.配置主题文件_config.yml</h2><p><strong>搜索 valine，一般可看到如下，将 enbled:true, 并填写 appid 和 appkey(从 leancloud 中获取的 appid 和 appkey)。</strong></p>
-<pre class=" language-javascript"><code class="language-javascript"># The configuration <span class="token keyword">of</span> the Valine comment module is not activated by <span class="token keyword">default</span><span class="token punctuation">.</span>
-# To use it<span class="token punctuation">,</span> activate the configuration item and <span class="token keyword">set</span> appId and appKey<span class="token punctuation">.</span>
-# Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey<span class="token punctuation">.</span>
-valine<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  appId<span class="token punctuation">:</span>
-  appKey<span class="token punctuation">:</span>
-  notify<span class="token punctuation">:</span> <span class="token boolean">false</span>
-  verify<span class="token punctuation">:</span> <span class="token boolean">false</span>
-  visitor<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  avatar<span class="token punctuation">:</span> <span class="token string">'mp'</span> # Gravatar style <span class="token punctuation">:</span> mp<span class="token operator">/</span>identicon<span class="token operator">/</span>monsterid<span class="token operator">/</span>wavatar<span class="token operator">/</span>retro<span class="token operator">/</span>hide
-  pageSize<span class="token punctuation">:</span> <span class="token number">10</span>
-  placeholder<span class="token punctuation">:</span> <span class="token string">'just go go'</span> # Comment Box placeholder
-  background<span class="token punctuation">:</span> <span class="token operator">/</span>medias<span class="token operator">/</span>comment_bg<span class="token punctuation">.</span>png</code></pre>
-<h2 id="5-配置域名"><a href="#5-配置域名" class="headerlink" title="5.配置域名"></a>5.配置域名</h2><p>在 Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名 把你的域名加进去.</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588780306061-73286643-1359-4efe-b2a1-5545f880dd4a.png#align=left&display=inline&height=500&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1000&originWidth=1804&size=166396&status=done&style=none&width=902" alt="image.png"></p>
-<h2 id="6-重启你的博客"><a href="#6-重启你的博客" class="headerlink" title="6.重启你的博客"></a>6.重启你的博客</h2><p>大功告成！！</p>
 ]]></content>
   </entry>
   <entry>
@@ -937,6 +950,32 @@ permalink_defaults:
 <p>放在 Github 的资源在国内加载速度比较慢，因此需要使用 CDN 加速来优化网站打开速度，jsDelivr + Github 便是免费且好用的 CDN，非常适合博客网站使用。</p>
 <p>用法：<br><a href="https://cdn.jsdelivr.net/gh/" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/</a>你的用户名/你的仓库名@发布的版本号/文件路径</p>
 <p>如：<br><a href="http://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/medias/featureimages/" target="_blank" rel="noopener">http://cdn.jsdelivr.net/gh/hongweifuture/hongweifuture.github.io/medias/featureimages/</a>12.jpg<br>注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，如果需要版本，请创建<code>releases</code>然后按照格式添加<br>当然最直接的办法就是使用 <code>username/username.github.io/</code></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo博客的评论功能</title>
+    <url>/leader755/c41d01b3.html</url>
+    <content><![CDATA[<h2 id="1-这里推荐的评论功能插件为valine"><a href="#1-这里推荐的评论功能插件为valine" class="headerlink" title="1.这里推荐的评论功能插件为valine"></a>1.这里推荐的评论功能插件为<a href="https://valine.js.org/" target="_blank" rel="noopener">valine</a></h2><p>官网：<a href="https://valine.js.org/" target="_blank" rel="noopener">https://valine.js.org/</a><br>注册登录网站：<a href="https://leancloud.cn/" target="_blank" rel="noopener">https://leancloud.cn/</a><br>      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。</p>
+<h2 id="2-去leancloud注册"><a href="#2-去leancloud注册" class="headerlink" title="2.去leancloud注册"></a>2.去<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud</a>注册</h2><p>注册完成后去创建应用，选择开发版就可以了。（需要实名登记才能创建应用）<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588779620815-f8a3fc6e-f667-4959-9cb2-53b5777427c7.png#align=left&display=inline&height=445&margin=%5Bobject%20Object%5D&name=image.png&originHeight=890&originWidth=1232&size=83220&status=done&style=none&width=616" alt="image.png"></p>
+<h2 id="3-获取-appkey-和-appid"><a href="#3-获取-appkey-和-appid" class="headerlink" title="3.获取 appkey 和 appid"></a>3.获取 appkey 和 appid</h2><p>创建完成应用后，<strong>进入应用-&gt;设置-&gt;应用 key，找到相应的 appkey 和 appid。</strong><br><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588779969891-d05a06f8-bcf5-4b7e-84cb-bcedabc8f762.png#align=left&display=inline&height=248&margin=%5Bobject%20Object%5D&name=image.png&originHeight=796&originWidth=2394&size=185376&status=done&style=none&width=746" alt="image.png"></strong></p>
+<h2 id="4-配置主题文件-config-yml"><a href="#4-配置主题文件-config-yml" class="headerlink" title="4.配置主题文件_config.yml"></a>4.配置主题文件_config.yml</h2><p><strong>搜索 valine，一般可看到如下，将 enbled:true, 并填写 appid 和 appkey(从 leancloud 中获取的 appid 和 appkey)。</strong></p>
+<pre class=" language-javascript"><code class="language-javascript"># The configuration <span class="token keyword">of</span> the Valine comment module is not activated by <span class="token keyword">default</span><span class="token punctuation">.</span>
+# To use it<span class="token punctuation">,</span> activate the configuration item and <span class="token keyword">set</span> appId and appKey<span class="token punctuation">.</span>
+# Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey<span class="token punctuation">.</span>
+valine<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  appId<span class="token punctuation">:</span>
+  appKey<span class="token punctuation">:</span>
+  notify<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  verify<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  visitor<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  avatar<span class="token punctuation">:</span> <span class="token string">'mp'</span> # Gravatar style <span class="token punctuation">:</span> mp<span class="token operator">/</span>identicon<span class="token operator">/</span>monsterid<span class="token operator">/</span>wavatar<span class="token operator">/</span>retro<span class="token operator">/</span>hide
+  pageSize<span class="token punctuation">:</span> <span class="token number">10</span>
+  placeholder<span class="token punctuation">:</span> <span class="token string">'just go go'</span> # Comment Box placeholder
+  background<span class="token punctuation">:</span> <span class="token operator">/</span>medias<span class="token operator">/</span>comment_bg<span class="token punctuation">.</span>png</code></pre>
+<h2 id="5-配置域名"><a href="#5-配置域名" class="headerlink" title="5.配置域名"></a>5.配置域名</h2><p>在 Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名 把你的域名加进去.</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588780306061-73286643-1359-4efe-b2a1-5545f880dd4a.png#align=left&display=inline&height=500&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1000&originWidth=1804&size=166396&status=done&style=none&width=902" alt="image.png"></p>
+<h2 id="6-重启你的博客"><a href="#6-重启你的博客" class="headerlink" title="6.重启你的博客"></a>6.重启你的博客</h2><p>大功告成！！</p>
 ]]></content>
   </entry>
 </search>
