@@ -87,8 +87,8 @@ dream:
   enable: true
   showTitle: false 
   title: 不追随
-  # text:dream 放弃不难，但坚持一定很酷。——《解忧杂货铺》 
-  text: 如果多一次选择 你想变成谁？ <br>不 这不是选择，而是对自己的怀疑。 <br>我能经得住多大诋毁，就能担得起多少赞美。 <br>如果忍耐算是坚强，我选择抵抗。 <br>如果妥协算是努力，我选择争取。 <br>如果未来才会精彩，我也绝不放弃现在。 <br>你也许认为我疯狂，就像我认为你太过平常。<br>我的真实，会为我证明自己。                          
+  text: dream 放弃不难，但坚持一定很酷。——《解忧杂货铺》 
+  # text: 如果多一次选择 你想变成谁？ <br>不 这不是选择，而是对自己的怀疑。 <br>我能经得住多大诋毁，就能担得起多少赞美。 <br>如果忍耐算是坚强，我选择抵抗。 <br>如果妥协算是努力，我选择争取。 <br>如果未来才会精彩，我也绝不放弃现在。 <br>你也许认为我疯狂，就像我认为你太过平常。<br>我的真实，会为我证明自己。                          
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -251,7 +251,7 @@ auto_excerpt:
 # Whether to activate the 'love' effect of clicking on the page.
 # 是否激活点击页面的'爱心'效果，默认激活.
 clicklove:
-  enable: true
+  enable: false
 
 # 是否激活点击页面的'烟花爆炸'效果，默认不激活.
 clickfire:
@@ -259,7 +259,7 @@ clickfire:
 
 # 是否添加鼠标彩虹星星掉落跟随效果，默认不激活.
 cursor:
-  enable: false
+  enable: true
 
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍。个人介绍 introduction 可以留空
@@ -381,8 +381,8 @@ valine:
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
-  enable: false
-  url: https://github.com/hongweifuture/hexo-theme-halo
+  enable: true
+  url: https://github.com/Leader755
   title: Fork Me
 
 # The password verification feature of read post. To use this feature,
@@ -516,8 +516,8 @@ daovoice:
 
 # Tidio online contact
 tidio:
-  enable: false
-  public_key:
+  enable: true
+  public_key: xa4hrncuzritgmxn9k8grhylgw3suori
 
 #背景canvas-nest
 canvas_nest:
@@ -538,7 +538,7 @@ ribbon:
 
 # 背景动态彩带.
 ribbon_dynamic:
-  enable: false
+  enable: true
 
 # sharejs文章分享模块.
 # 支持顺序，可选项目为twitter, facebook, google, qq, qzone, wechat, weibo, douban, linkedin.
@@ -549,7 +549,7 @@ sharejs:
 # addthis文章分享模块.
 addthis:
   enable: false
-  pubid:  # 前往https://www.addthis.com/获取
+  pubid: ra-5f1067eb7d86a43e # 前往https://www.addthis.com/获取
 
 # 打字效果副标题.已经添加今日诗词API，如果  enable: false 即可开启
 # 如果有符号 ‘ ，请在 ’ 前面加上 \
@@ -589,9 +589,9 @@ post_wordcount:
 
 #ICP备案信息尾部显示
 icp:
-  enable: false
-  url: # 备案链接
-  text: # 备案信息
+  enable: true
+  url: http://www.beian.miit.gov.cn/ # 备案链接
+  text: 鄂ICP备20012827号-1 # 备案信息
 
 # CDN访问加速 
 # 第一次使用本功能，一定要先配置url，再`hexo cl&&hexo g&&hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
@@ -601,5 +601,7 @@ icp:
 # 注：配置了此项，就代表着本地调试的时候，网站依然会去GitHub请求资源（原来的资源），本地调试的时候记得将 此项配置 注释或者删除
 # 更多关于访问速度优化，请查看：https://blog.sky03.cn/posts/42790.html
 jsDelivr:
-  url: https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@38d952f
-  # url: ''
+  # url: https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@38d952f
+  url: ''
+
+
