@@ -1,9 +1,7 @@
 ---
-title: 欢迎使用 MWeb
-urlname: huan-ying-shi-yong-mweb
-date: '2020-05-02 14:08:52 +0800'
-tags: []
-categories: []
+tags:
+  - serverless
+categories: hexo
 abbrlink: 766a05db
 ---
 

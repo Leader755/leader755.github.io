@@ -1,9 +1,8 @@
 ---
-title: hexo博客的评论功能
-urlname: tvswqo
-date: '2020-05-06 23:33:00 +0800'
-tags: []
-categories: []
+tags:
+  - valine
+  - leancloud
+categories: hexo
 abbrlink: c41d01b3
 ---
 

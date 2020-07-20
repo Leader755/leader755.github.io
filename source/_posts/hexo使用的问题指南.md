@@ -1,9 +1,7 @@
 ---
-title: hexo使用的问题指南
-urlname: iwxsk5
-date: '2020-05-03 11:13:51 +0800'
-tags: []
-categories: []
+tags:
+  - 问题指南
+categories: hexo
 abbrlink: db56f43f
 ---
 

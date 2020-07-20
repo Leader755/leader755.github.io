@@ -1,10 +1,9 @@
 ---
-title: 5&gt;hexo文档部署到 Github和 coding
-urlname: diqcug
-date: '2020-05-01 14:05:53 +0800'
-tags: []
-categories: []
-abbrlink: '99853e10'
+tags:
+  - coding
+  - github
+categories: hexo
+abbrlink: d02de668
 ---
 
 ## 1：打开项目根目录下的 \_config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：

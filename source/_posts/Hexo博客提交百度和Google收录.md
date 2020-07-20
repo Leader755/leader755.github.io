@@ -1,9 +1,8 @@
 ---
-title: Hexo博客提交百度和Google收录
-urlname: 6600f4fa-1e97-4ef7-b40f-cb9ec89924e1
-date: '2020-05-02 01:09:35 +0800'
-tags: []
-categories: []
+tags:
+  - 百度收录
+  - 谷歌收录
+categories: hexo
 abbrlink: 5c84a3bd
 ---
 
@@ -53,13 +52,13 @@ baidusitemap:
 
 选择添加站点：
 
-![](https://upload-images.jianshu.io/upload_images/5635196-9bca3b38a6c1685d.png#alt=)
+![](https://upload-images.jianshu.io/upload_images/5635196-9bca3b38a6c1685d.png#align=left&display=inline&height=331&margin=%5Bobject%20Object%5D&originHeight=331&originWidth=982&status=done&style=none&width=982)
 
 #### 验证站点
 
 进行站点验证：
 
-![](https://upload-images.jianshu.io/upload_images/5635196-51233e024040d8d7.png#alt=)
+![](https://upload-images.jianshu.io/upload_images/5635196-51233e024040d8d7.png#align=left&display=inline&height=533&margin=%5Bobject%20Object%5D&originHeight=533&originWidth=982&status=done&style=none&width=982)
 
 这里我们选择`文件验证`，下载验证文件到本地，放置在`themes/next/source`目录下。执行生成和部署命令：
 
@@ -138,7 +137,7 @@ deploy:
 
 我们之前已经说过如何生成 sitemap 文件，这时就需要我们生成的 sitemap 文件了。
 
-![](https://upload-images.jianshu.io/upload_images/5635196-cfb7e4bd12e2deb8.png#alt=)
+![](https://upload-images.jianshu.io/upload_images/5635196-cfb7e4bd12e2deb8.png#align=left&display=inline&height=443&margin=%5Bobject%20Object%5D&originHeight=443&originWidth=981&status=done&style=none&width=981)
 
 输入以下内容到输入框里：
 
@@ -156,13 +155,13 @@ http://fengdi.org/baidusitemap.xml
 
 登录[Google 网站站长](https://link.jianshu.com/?t=https://www.google.com/webmasters/#?modal_active=none)，进入`Search Console`，点击`添加属性`进行站点添加：
 
-![](https://upload-images.jianshu.io/upload_images/5635196-9a7ce99e3aaaf1a9.png#alt=)
+![](https://upload-images.jianshu.io/upload_images/5635196-9a7ce99e3aaaf1a9.png#align=left&display=inline&height=477&margin=%5Bobject%20Object%5D&originHeight=477&originWidth=1364&status=done&style=none&width=1364)
 
 #### 验证站点
 
 同百度平台一样，下载 Google 验证文件，放到 source 下`themes/next/source`目录中：
 
-![](https://upload-images.jianshu.io/upload_images/5635196-2a7e8f527d0b1b42.png#alt=)
+![](https://upload-images.jianshu.io/upload_images/5635196-2a7e8f527d0b1b42.png#align=left&display=inline&height=618&margin=%5Bobject%20Object%5D&originHeight=618&originWidth=1210&status=done&style=none&width=1210)
 
 重新生成和部署：
 
@@ -172,7 +171,7 @@ http://fengdi.org/baidusitemap.xml
 
 在`抓取`里面，点击`站点地图`，进行添加：
 
-![](https://upload-images.jianshu.io/upload_images/5635196-7071aa22f10e2c28.png#alt=)
+![](https://upload-images.jianshu.io/upload_images/5635196-7071aa22f10e2c28.png#align=left&display=inline&height=507&margin=%5Bobject%20Object%5D&originHeight=507&originWidth=1353&status=done&style=none&width=1353)
 
 好了，到这里文章就结束了。如果你之前没有把网站部署到 Coding 上，你的网站百度是爬取不到的，关于如何部署请参阅：[Hexo 博客之速度优化](https://link.jianshu.com/?t=http://fengdi.org/2017/08/07/Hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96.html)
 
@@ -181,6 +180,3 @@ http://fengdi.org/baidusitemap.xml
 文文章转载自：[https://www.jianshu.com/p/f8ec422ebd52](https://www.jianshu.com/p/f8ec422ebd52)
 
 \*\*
-
-[
-](https://www.jianshu.com/p/57e22584b277)

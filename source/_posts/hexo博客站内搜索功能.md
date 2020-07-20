@@ -1,9 +1,7 @@
 ---
-title: hexo博客站内搜索功能
-urlname: ox1gpk
-date: '2020-05-06 00:17:23 +0800'
-tags: []
-categories: []
+tags:
+  - 搜索
+categories: hexo
 abbrlink: 4e860a66
 ---
 

@@ -1,9 +1,7 @@
 ---
-title: hexo博客的生成永久标题链接
-urlname: tl2gcc
-date: '2020-05-05 23:48:30 +0800'
-tags: []
-categories: []
+tags:
+  - 永久标签
+categories: hexo
 abbrlink: 4976fe22
 ---
 

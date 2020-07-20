@@ -1,9 +1,8 @@
 ---
-title: mac 使用 homebrew
-urlname: bace4x
-date: '2020-05-07 22:26:03 +0800'
-tags: []
-categories: []
+tags:
+  - homebrew
+  - mac
+categories: 工具
 abbrlink: c6cbe756
 ---
 

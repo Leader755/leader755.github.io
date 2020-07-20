@@ -1,11 +1,11 @@
 ---
-title: serverless 和 hexo快速搭建静态博客
-urlname: be983r
-date: '2020-05-04 22:52:44 +0800'
-tags: []
-categories: []
+tags:
+  - serverless
+categories: hexo
 abbrlink: e209121b
 ---
+
+##
 
 ## 1.首先搭建一个用 hexo 快速搭建一个博客
 
