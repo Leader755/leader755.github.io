@@ -172,7 +172,7 @@ layout: "friends"
 	"avatar": "https://avatar.csdnimg.cn/6/8/C/3_z_johnny.jpg",
 	"name": "CSDN博客",
 	"introduction": "Johnny's CSDN Blog 欢迎大佬们前去参观！",
-	"url": "https://blog.csdn.net/z_johnny",
+	"url": "https://blog.csdn.net/weixin_41316842",
 	"title": "前去参观"
 }]
 ```
