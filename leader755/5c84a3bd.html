@@ -478,12 +478,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95/">
+                                <span class="chip bg-color">百度收录</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%94%B6%E5%BD%95/">
+                                <span class="chip bg-color">谷歌收录</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/hexo/" class="post-category">
+                                hexo
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -492,14 +509,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-02
+                    2020-07-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-17
+                    2020-07-20
                 </div>
                 
 
@@ -544,9 +561,9 @@ baidusitemap:
 <h3 id="百度站长平台"><a href="#百度站长平台" class="headerlink" title="百度站长平台"></a>百度站长平台</h3><p>通过百度站长平台进行链接提交，增加网站的索引量。我的这篇文章：<a href="https://link.jianshu.com/?t=http://fengdi.org/2017/08/07/Hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96.html" target="_blank" rel="noopener">Hexo 博客之速度优化</a> 已经提到过 Github 对百度爬虫进行了屏蔽，因此百度爬取不到 Github 上的页面，如果你按照这篇文章同时部署到 Coding 上，那百度就可以抓取到，因为此时百度抓取的是位于 Coding 上的博客网页。</p>
 <p>注册并登录百度站长平台：<a href="https://link.jianshu.com/?t=http://zhanzhang.baidu.com/" target="_blank" rel="noopener">百度站长平台</a></p>
 <h4 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h4><p>选择添加站点：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-9bca3b38a6c1685d.png#alt=" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-9bca3b38a6c1685d.png#align=left&display=inline&height=331&margin=%5Bobject%20Object%5D&originHeight=331&originWidth=982&status=done&style=none&width=982" alt=""></p>
 <h4 id="验证站点"><a href="#验证站点" class="headerlink" title="验证站点"></a>验证站点</h4><p>进行站点验证：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-51233e024040d8d7.png#alt=" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-51233e024040d8d7.png#align=left&display=inline&height=533&margin=%5Bobject%20Object%5D&originHeight=533&originWidth=982&status=done&style=none&width=982" alt=""></p>
 <p>这里我们选择<code>文件验证</code>，下载验证文件到本地，放置在<code>themes/next/source</code>目录下。执行生成和部署命令：</p>
 <p>点击完成验证即可。</p>
 <h4 id="链接提交"><a href="#链接提交" class="headerlink" title="链接提交"></a>链接提交</h4><p>百度站长平台的链接提交方式分为自动提交和手动提交两种，此处只讲自动提交，手动提交按照要求操作即可。</p>
@@ -586,24 +603,22 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
     s.parentNode.insertBefore(bp, s);
 })();
 &lt;/script&gt;</code></pre><h5 id="sitemap-提交"><a href="#sitemap-提交" class="headerlink" title="sitemap 提交"></a>sitemap 提交</h5><p>我们之前已经说过如何生成 sitemap 文件，这时就需要我们生成的 sitemap 文件了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-cfb7e4bd12e2deb8.png#alt=" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-cfb7e4bd12e2deb8.png#align=left&display=inline&height=443&margin=%5Bobject%20Object%5D&originHeight=443&originWidth=981&status=done&style=none&width=981" alt=""></p>
 <p>输入以下内容到输入框里：</p>
 <pre><code>http://fengdi.org/baidusitemap.xml</code></pre><p>输入验证码后，提交即可。一般情况下，百度会在一个小时内处理该文件，并提取其中的 url。</p>
 <h3 id="Google-网站站长"><a href="#Google-网站站长" class="headerlink" title="Google 网站站长"></a>Google 网站站长</h3><p>在提交 Google 之前，要解决一个大家都知道的问题，关于如何登录 Google。这里就不再说了，相信你们有办法。</p>
 <h4 id="添加站点-1"><a href="#添加站点-1" class="headerlink" title="添加站点"></a>添加站点</h4><p>登录<a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/#?modal_active=none" target="_blank" rel="noopener">Google 网站站长</a>，进入<code>Search Console</code>，点击<code>添加属性</code>进行站点添加：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-9a7ce99e3aaaf1a9.png#alt=" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-9a7ce99e3aaaf1a9.png#align=left&display=inline&height=477&margin=%5Bobject%20Object%5D&originHeight=477&originWidth=1364&status=done&style=none&width=1364" alt=""></p>
 <h4 id="验证站点-1"><a href="#验证站点-1" class="headerlink" title="验证站点"></a>验证站点</h4><p>同百度平台一样，下载 Google 验证文件，放到 source 下<code>themes/next/source</code>目录中：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-2a7e8f527d0b1b42.png#alt=" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-2a7e8f527d0b1b42.png#align=left&display=inline&height=618&margin=%5Bobject%20Object%5D&originHeight=618&originWidth=1210&status=done&style=none&width=1210" alt=""></p>
 <p>重新生成和部署：</p>
 <p>部署完成之后，进行验证即可。</p>
 <h4 id="添加站点地图"><a href="#添加站点地图" class="headerlink" title="添加站点地图"></a>添加站点地图</h4><p>在<code>抓取</code>里面，点击<code>站点地图</code>，进行添加：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-7071aa22f10e2c28.png#alt=" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-7071aa22f10e2c28.png#align=left&display=inline&height=507&margin=%5Bobject%20Object%5D&originHeight=507&originWidth=1353&status=done&style=none&width=1353" alt=""></p>
 <p>好了，到这里文章就结束了。如果你之前没有把网站部署到 Coding 上，你的网站百度是爬取不到的，关于如何部署请参阅：<a href="https://link.jianshu.com/?t=http://fengdi.org/2017/08/07/Hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96.html" target="_blank" rel="noopener">Hexo 博客之速度优化</a></p>
 <p><a href="https://link.jianshu.com/?t=http://svend.cc/posts/22980/" target="_blank" rel="noopener">Hexo 系列：（四）Hexo 博客提交百度和 Google 收录</a></p>
 <p>文文章转载自：<a href="https://www.jianshu.com/p/f8ec422ebd52" target="_blank" rel="noopener">https://www.jianshu.com/p/f8ec422ebd52</a></p>
 <p>**</p>
-<p><a href="https://www.jianshu.com/p/57e22584b277" target="_blank" rel="noopener">
-</a></p>
 
             </div>
             <hr/>
@@ -619,7 +634,7 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leader755.github.io" rel="external nofollow noreferrer">Autumn cicada</a>
+                    <a href="https://leader755.com" rel="external nofollow noreferrer">Autumn cicada</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -629,7 +644,7 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leader755.github.io/leader755/5c84a3bd.html">https://leader755.github.io/leader755/5c84a3bd.html</a>
+                    <a href="https://leader755.com/leader755/5c84a3bd.html">https://leader755.com/leader755/5c84a3bd.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -642,7 +657,7 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://leader755.github.io" target="_blank">Autumn cicada</a>
+                    <a href="https://leader755.com" target="_blank">Autumn cicada</a>
                     !
                 </span>
             </div>
@@ -666,7 +681,15 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95/">
+                                    <span class="chip bg-color">百度收录</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%94%B6%E5%BD%95/">
+                                    <span class="chip bg-color">谷歌收录</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -976,49 +999,6 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/c07f1349.html">
-                    <div class="card-image">
-                        
-                        
-                        <!-- <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="8&gt;语雀文档同步到 hexo"> -->
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="8&gt;语雀文档同步到 hexo">
-                        
-                        <span class="card-title">8&gt;语雀文档同步到 hexo</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            1.去官网注册账号点我去官网
-2.创建知识库
-3.点击当前知识库的设置获取当前知识库的登录名和路径
-4.在将语雀文档同步到 hexo//先安装 yuque-hexo
-npm install yuque-hexo --save
-1) 修改 p
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-02
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Autumn cicada
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/leader755/6f1cbacf.html">
                     <div class="card-image">
                         
@@ -1039,16 +1019,83 @@ npm install yuque-hexo --save
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-20
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Autumn cicada
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/gitignore/">
+                        <span class="chip bg-color">gitignore</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/leader755/bad88671.html">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="8.语雀文档同步到 hexo"> -->
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="8.语雀文档同步到 hexo">
+                        
+                        <span class="card-title">8.语雀文档同步到 hexo</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1.去官网注册账号点我去官网
+2.创建知识库
+3.点击当前知识库的设置获取当前知识库的登录名和路径
+4.在将语雀文档同步到 hexo//先安装 yuque-hexo
+npm install yuque-hexo --save
+1) 修改 p
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/yuque/">
+                        <span class="chip bg-color">yuque</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1193,7 +1240,7 @@ npm install yuque-hexo --save
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-                class="white-color">11k</span>&nbsp;字
+                class="white-color">11.1k</span>&nbsp;字
             
             
             
@@ -1214,7 +1261,7 @@ npm install yuque-hexo --save
             <br>
             Copyright&nbsp;&copy;
             <span id="year">2019</span>&nbsp&nbsp|
-            &nbsp;<a href="https://leader755.github.io/sitemap.xml" target="_blank">Sitemap</a>&nbsp;&nbsp;|&nbsp;
+            &nbsp;<a href="https://leader755.com/sitemap.xml" target="_blank">Sitemap</a>&nbsp;&nbsp;|&nbsp;
             
             <span id="sitetime">载入运行时间...</span>
             <script>
