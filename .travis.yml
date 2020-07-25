@@ -43,10 +43,6 @@ branches:
   only:
     - master
 
-env:
-  global:
-  - GH_REF: github.com/Leader755/leader755.github.io.git
-
 # End: Build LifeCycle
 
 # configure notifications (email, IRC, campfire etc)
