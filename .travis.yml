@@ -3,7 +3,7 @@ anguage: node_js
 node_js: 
   - lts/*  # 稳定版 (stable) ,最新长期支持版（ - lts/* ）
 
-# 设置缓存文件（cache 参数可以对特定目录进行缓存，加快后续构建的速度）
+# 指定缓存模块，可加快编译速度
 cache:
   directories:
     - node_modules
@@ -12,39 +12,40 @@ env:
  global:
    - URL_REPO: github.com/Leader755/leader755.github.io.git
 
-# 设置钩子：我们需要设置一下 Travis CI 监控哪一个分支的变动，我这里自然是 master 分支啦（若博客备份文件和 GitHub Pages 共用一个仓库的话需设置为博客备份文件所在分支）。
+# 指定博客源码分支， Travis CI 监控哪一个分支的变动，这里是 master 分支（若博客备份文件和 GitHub Pages 共用一个仓库的话需设置为博客备份文件所在分支）。
 branches:
   only:
     - master
 
 
-#在构建之前安装hexo环境，
-# 设置一下时区跟 hexo 配置文件中的时区匹配，以便 hexo 能正确根据时间生成文件名/文件目录，同时也方便我们后面在 commit 信息中记录更新时间。
+# 在构建之前
 before_install:
-  - export TZ='Asia/Shanghai'
+  - export TZ='Asia/Shanghai' # 更改时区
+  - npm install -g hexo-cli # 安装hexo环境
 
-#部署环境的安装
-#安装git插件和搜索功能插件
+#部署环境的安装(安装一个部署插件)
 install:
-  - npm install -g hexo-cli
   - npm install
+  - npm install hexo-deployer-git --save
 
-# 设置git提交名，邮箱；替换真实token到_config.yml文件
 before_script:
-  - git config user.name "Leader755"
-  - git config user.email "1181012791@qq.com"
-  # 替换同目录下的_config.yml文件中github_token字符串为travis后台刚才配置的变量，注>意此处sed命令用了双引号。单引号无效！
-  - sed -i "s/github_token/${GH_TOKEN}/g" _config.yml || exit 1
+ # 
 
 # 执行清缓存，生成网页操作
 script:
   - hexo clean
   - hexo generate
   - echo ${ENV_TEST}
-  - hexo deploy
   
 after_script:
-   - echo "自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+  - git config user.name "Leader755"
+  - git config user.email "1181012791@qq.com"
+  # 替换同目录下的_config.yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
+  - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
+  - hexo deploy
+  - echo "自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')" # 构建后输出时间标识
+
+# End: Build LifeCycle
 
 # configure notifications (email, IRC, campfire etc)
 # please update this section to your needs!
