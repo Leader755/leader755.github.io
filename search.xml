@@ -107,20 +107,6 @@ git config <span class="token operator">--</span>global user<span class="token p
       </tags>
   </entry>
   <entry>
-    <title>4.mac 上使用 vi</title>
-    <url>/leader755/896b4ef0.html</url>
-    <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
-<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>mac</tag>
-        <tag>vi</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5.hexo文档部署到 Github和 coding</title>
     <url>/leader755/38b922c9.html</url>
     <content><![CDATA[<h2 id="1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："><a href="#1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：" class="headerlink" title="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："></a>1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&size=44477&status=done&style=none&width=526" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#align=left&display=inline&height=120&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&size=33032&status=done&style=none&width=486" alt="image.png"><br>如果不部署到 coding，就只写 github 就行。</p>
@@ -154,6 +140,60 @@ hexo g <span class="token operator">-</span>d</code></pre>
       <tags>
         <tag>github</tag>
         <tag>coding</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4.mac 上使用 vi</title>
+    <url>/leader755/896b4ef0.html</url>
+    <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
+<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>vi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>7.hexo主题配置</title>
+    <url>/leader755/b0c81b21.html</url>
+    <content><![CDATA[<h2 id="1-hexo-主题官网"><a href="#1-hexo-主题官网" class="headerlink" title="1.hexo 主题官网"></a>1.hexo 主题官网</h2><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a></p>
+<h2 id="2-应用以及下载主题"><a href="#2-应用以及下载主题" class="headerlink" title="2.应用以及下载主题"></a>2.应用以及下载主题</h2><p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br>为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>， 后者称为 <strong>主题配置文件</strong>。（必看）</p>
+<h3 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1.安装主题"></a>1.安装主题</h3><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至<strong>站点目录(**</strong>即根目录下的文件_config.yml 文件*<strong>*)</strong>的  <code>themes</code>  目录下， 然后修改下配置文件即可。next 为主题名</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：</span>
+$ cd your<span class="token operator">-</span>hexo<span class="token operator">-</span>site
+$ git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>iissnan<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next</code></pre>
+<p>###</p>
+<h3 id="2-启用主题"><a href="#2-启用主题" class="headerlink" title="2.启用主题"></a>2.启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next(主题名)</code>。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588326982972-1828234c-3a21-48e1-ac1e-5b57480ac6f0.png#align=left&display=inline&height=111&margin=%5Bobject%20Object%5D&name=image.png&originHeight=222&originWidth=1012&size=24250&status=done&style=none&width=506" alt="image.png"></p>
+<pre class=" language-javascript"><code class="language-javascript">theme<span class="token punctuation">:</span> next<span class="token punctuation">;</span></code></pre>
+<h4 id="2-1-本文使用的是（hexo-theme-halo）主题"><a href="#2-1-本文使用的是（hexo-theme-halo）主题" class="headerlink" title="2.1 本文使用的是（hexo-theme-halo）主题"></a>2.1 本文使用的是（hexo-theme-halo）主题</h4><p>1&gt;直接下载 git  clone</p>
+<pre class=" language-javascript"><code class="language-javascript">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>hongweifuture<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>halo<span class="token punctuation">.</span>git themes<span class="token operator">/</span>halo</code></pre>
+<p>2&gt;直接将<code>themes/halo/config/source</code>内所有内容拷贝到<code>Hexo</code>根目录下的<code>source</code>文件夹内替换</p>
+<h4 id="2-2-配置切换主题"><a href="#2-2-配置切换主题" class="headerlink" title="2.2 配置切换主题"></a>2.2 配置切换主题</h4><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: halo</code><br><code>根目录_config.yml</code> 文件的其它修改建议:</p>
+<ul>
+<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>[http://xxx.github.io](http://xxx.github.io)</code>）。</li>
+<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
+<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
+</ul>
+<h3 id="3-验证主题"><a href="#3-验证主题" class="headerlink" title="3.验证主题"></a>3.验证主题</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//最好先清除缓存</span>
+hexo clean
+
+<span class="token comment" spellcheck="true">//打包</span>
+hexo g
+
+<span class="token comment" spellcheck="true">//启动</span>
+hexo s
+
+<span class="token comment" spellcheck="true">//发布到 github</span>
+hexo s <span class="token operator">-</span>d</code></pre>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>主题</tag>
       </tags>
   </entry>
   <entry>
@@ -487,7 +527,7 @@ music<span class="token punctuation">:</span>
 <li>我的技能</li>
 <li>我的相册</li>
 <li><code>Gitalk</code>、<code>Gitment</code>、<code>Valine</code> 和 <code>disqus</code> 评论配置</li>
-<li><a href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子统计</a>和谷歌分析（<code>Google Analytics</code>）</li>
+<li><a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子统计</a>和谷歌分析（<code>Google Analytics</code>）</li>
 <li>默认特色图的集合。当文章没有设置特色图时，本主题会根据文章标题的 <code>hashcode</code> 值取余，来选择展示对应的特色图</li>
 </ul>
 <p><strong>我认为个人博客应该都有自己的风格和特色</strong>。如果本主题中的诸多功能和主题色彩你不满意，可以在主题中自定义修改，很多更自由的功能和细节点的修改难以在主题的 <code>_config.yml</code> 中完成，需要修改源代码才来完成。以下列出了可能对你有用的地方：</p>
@@ -525,46 +565,6 @@ permalink_defaults:
 ]]></content>
       <tags>
         <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>7.hexo主题配置</title>
-    <url>/leader755/b0c81b21.html</url>
-    <content><![CDATA[<h2 id="1-hexo-主题官网"><a href="#1-hexo-主题官网" class="headerlink" title="1.hexo 主题官网"></a>1.hexo 主题官网</h2><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a></p>
-<h2 id="2-应用以及下载主题"><a href="#2-应用以及下载主题" class="headerlink" title="2.应用以及下载主题"></a>2.应用以及下载主题</h2><p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br>为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>， 后者称为 <strong>主题配置文件</strong>。（必看）</p>
-<h3 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1.安装主题"></a>1.安装主题</h3><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至<strong>站点目录(**</strong>即根目录下的文件_config.yml 文件*<strong>*)</strong>的  <code>themes</code>  目录下， 然后修改下配置文件即可。next 为主题名</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：</span>
-$ cd your<span class="token operator">-</span>hexo<span class="token operator">-</span>site
-$ git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>iissnan<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next</code></pre>
-<p>###</p>
-<h3 id="2-启用主题"><a href="#2-启用主题" class="headerlink" title="2.启用主题"></a>2.启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next(主题名)</code>。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588326982972-1828234c-3a21-48e1-ac1e-5b57480ac6f0.png#align=left&display=inline&height=111&margin=%5Bobject%20Object%5D&name=image.png&originHeight=222&originWidth=1012&size=24250&status=done&style=none&width=506" alt="image.png"></p>
-<pre class=" language-javascript"><code class="language-javascript">theme<span class="token punctuation">:</span> next<span class="token punctuation">;</span></code></pre>
-<h4 id="2-1-本文使用的是（hexo-theme-halo）主题"><a href="#2-1-本文使用的是（hexo-theme-halo）主题" class="headerlink" title="2.1 本文使用的是（hexo-theme-halo）主题"></a>2.1 本文使用的是（hexo-theme-halo）主题</h4><p>1&gt;直接下载 git  clone</p>
-<pre class=" language-javascript"><code class="language-javascript">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>hongweifuture<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>halo<span class="token punctuation">.</span>git themes<span class="token operator">/</span>halo</code></pre>
-<p>2&gt;直接将<code>themes/halo/config/source</code>内所有内容拷贝到<code>Hexo</code>根目录下的<code>source</code>文件夹内替换</p>
-<h4 id="2-2-配置切换主题"><a href="#2-2-配置切换主题" class="headerlink" title="2.2 配置切换主题"></a>2.2 配置切换主题</h4><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: halo</code><br><code>根目录_config.yml</code> 文件的其它修改建议:</p>
-<ul>
-<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>[http://xxx.github.io](http://xxx.github.io)</code>）。</li>
-<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
-<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
-</ul>
-<h3 id="3-验证主题"><a href="#3-验证主题" class="headerlink" title="3.验证主题"></a>3.验证主题</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//最好先清除缓存</span>
-hexo clean
-
-<span class="token comment" spellcheck="true">//打包</span>
-hexo g
-
-<span class="token comment" spellcheck="true">//启动</span>
-hexo s
-
-<span class="token comment" spellcheck="true">//发布到 github</span>
-hexo s <span class="token operator">-</span>d</code></pre>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>主题</tag>
       </tags>
   </entry>
   <entry>
@@ -1167,9 +1167,102 @@ bin<span class="token regex">/gen/</span></code></pre>
 <p>修改上述路径的文件 head.ejs ，因为每个页面都会包含 head 这个文件，在里面加上一行代码就能解决。</p>
 <h2 id="2-加入此行代码到页面"><a href="#2-加入此行代码到页面" class="headerlink" title="2.加入此行代码到页面"></a>2.加入此行代码到页面<head><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head></h2><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"referrer"</span> content<span class="token operator">=</span><span class="token string">"no-referrer"</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
 <h2 id="3-暂时解决载了外链限制的问题"><a href="#3-暂时解决载了外链限制的问题" class="headerlink" title="3.暂时解决载了外链限制的问题"></a>3.暂时解决载了外链限制的问题</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595671131433-aced588a-b41e-406a-acf6-6133df722701.png#align=left&display=inline&height=195&margin=%5Bobject%20Object%5D&name=image.png&originHeight=390&originWidth=1288&size=105257&status=done&style=none&width=644" alt="image.png"></p>
+<h2 id="4-随之而来的问题出现了"><a href="#4-随之而来的问题出现了" class="headerlink" title="4.随之而来的问题出现了"></a>4.随之而来的问题出现了</h2><p>如果你同时使用了<a href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子</a>(<a href="https://busuanzi.ibruce.info/)统计，你会发现问题，查看控制台会出现不蒜子出现跨域的请求。这是为什么呢。由于使用了" target="_blank" rel="noopener">https://busuanzi.ibruce.info/)统计，你会发现问题，查看控制台会出现不蒜子出现跨域的请求。这是为什么呢。由于使用了</a> no-referrer。</p>
+<p>关于 no-refferrer 的相关问题可以查看此篇文章，在这里就不一一解释，直接给出解决方案。</p>
+<h2 id="5-目前的解决方案"><a href="#5-目前的解决方案" class="headerlink" title="5.目前的解决方案"></a>5.目前的解决方案</h2><h3 id="1-gt-方案-："><a href="#1-gt-方案-：" class="headerlink" title="1&gt;方案-："></a>1&gt;方案-：</h3><p>按照网友的说法是，meta 是可以放在 <code>&lt;body&gt;</code> 里的吧。<br>所以把 <code>&lt;meta name=&quot;referrer&quot; content=&quot;never&quot;&gt;</code> 放到 <strong>archive-book.ejs</strong> 的最前面。<br>然后在网页结构里就会是这个样子：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">...</span><span class="token operator">...</span>
+<span class="token operator">&lt;</span>head<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
+<span class="token operator">&lt;</span>body <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"main-center no-sidebar okayNav-loaded"</span> <span class="token operator">...</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>header <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"header"</span> <span class="token operator">...</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>aside <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"sidebar"</span> <span class="token operator">...</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>main <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"main"</span> role<span class="token operator">=</span><span class="token string">"main"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"referrer"</span> content<span class="token operator">=</span><span class="token string">"never"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>article <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"article article-links article-type-list"</span> <span class="token operator">...</span><span class="token operator">></span>
+<span class="token operator">...</span><span class="token operator">...</span></code></pre>
+<p>在它之上的所有链接都会带来源信息，之后的就是 no-referrer 了。所以理论上也就规避了图片的防盗链了。<br>划重点，但是并没有如愿解决不蒜子的跨域问题。</p>
+<h3 id="2-gt-方案二：终极解决方案"><a href="#2-gt-方案二：终极解决方案" class="headerlink" title="2&gt;方案二：终极解决方案"></a>2&gt;方案二：终极解决方案</h3><p>由于可以给  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank" rel="noopener"><code>&lt;a&gt;</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank" rel="noopener"><code>&lt;area&gt;</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank" rel="noopener"><code>&lt;img&gt;</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank" rel="noopener"><code>&lt;iframe&gt;</code></a>, 或者<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link" target="_blank" rel="noopener"><code>&lt;link&gt;</code></a>元素设置<code>referrerpolicy</code>属性。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"http://example.com"</span> referrerpolicy<span class="token operator">=</span><span class="token string">"no-referrer"</span><span class="token operator">></span></code></pre>
+<p>所以，可以为所有文章内的图片动态添加 referrerpolicy 属性，通过查看控制台找到图片 img 的类名<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595702030353-1e6505c0-c918-4e4a-864b-12077c39bc66.png#align=left&display=inline&height=275&margin=%5Bobject%20Object%5D&name=image.png&originHeight=550&originWidth=2056&size=252165&status=done&style=none&width=1028" alt="image.png"></p>
+<p>在文件夹中全局搜索类名，找到如下代码：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595702163492-a013ed03-25f0-4474-a3d1-39aa2753081c.png#align=left&display=inline&height=387&margin=%5Bobject%20Object%5D&name=image.png&originHeight=774&originWidth=1204&size=160420&status=done&style=none&width=602" alt="image.png"></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//为文章内的图片添加no-referrer来隐藏referer（解决第三方图片外链不显示问题）</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"referrerPolicy"</span><span class="token punctuation">,</span> <span class="token string">"no-referrer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>注意每个主题中的文章下的图片类名应该都不一致，所以类名需要根据实际情况，在控制台中查找文章中的图片类名，再去找相应的代码，为其动态添加 referrerPolicy 属性。</p>
 ]]></content>
       <categories>
         <category>hexo</category>
       </categories>
+      <tags>
+        <tag>图片链接失效</tag>
+        <tag>第三方链接</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何绕开referrer防盗链</title>
+    <url>/leader755/32ce62eb.html</url>
+    <content><![CDATA[<h2 id="什么是-referrer"><a href="#什么是-referrer" class="headerlink" title="什么是 referrer"></a>什么是 referrer</h2><p>当一用户点击当前页面中的一个链接，然后跳转到目标页面时，目标页面会收到一个信息，即用户是从哪个源链接跳转过来的。如下图所示：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595703140078-870fec1d-0742-4dea-828a-1f32819af187.png#align=left&display=inline&height=543&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1086&originWidth=1184&size=153142&status=done&style=none&width=592" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/webp/241787/1595702418075-1743cd6e-ed7c-4b5b-9f96-7f89fff17373.webp#align=left&display=inline&height=543&margin=%5Bobject%20Object%5D&originHeight=543&originWidth=896&size=0&status=done&style=none&width=896" alt=""><br>也就是说，当你发起一个 http 请求，请求头中的<code>referrer</code>字段就说明了你是从哪个页面发起该请求的。</p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>有时候我们需要控制这个<code>referrer</code>字段的值，即是否让其显示在请求头中，或者是否显示完整路径等。尤其是在以下两个使用场景：</p>
+<h3 id="隐私"><a href="#隐私" class="headerlink" title="隐私"></a>隐私</h3><p>在社交网站的个人中心页面，也许会存在一些外链，这时候社交网站肯定不希望用户在点击这些链接跳转到其他第三方网站时会将自己个人中心的 URL 信息显示在<code>referrer</code>字段中传过去，尤其是个人中心页面的 URL 往往会带着用户数据和一些敏感信息。这时候可以选择不显示来源页面 URL 信息或者只显示一个网站根地址 hostname。</p>
+<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p>有些使用了 https 的网站，可能在 URL 中使用一个参数（sid）来作为用户身份凭证，而又需要引入其他 https 网站的资源，这种情况，网站肯定不希望泄露用户的身份凭证信息。当 https 网站需要引入不安全的 http 网站的资源或者有链接要跳转到 http 网站时，这时候将 https 源网站的 URL 信息传过去也是不太安全的。<br>当然还有其他情况下需要<code>referrer</code>的值，比如最近公司所做的项目中，有一个请求由于请求头过大导致响应是 400，我们的<code>Referrer Policy</code>是默认的情况，显示的<code>referrer</code>是完整的 URL 信息，该 URL 带了很多敏感数据比如加密后的 token，sessionID 等，长度特别长，请求头中的 cookie 和请求的 URL 也带着很大块的信息，最终我们决定让<code>referrer</code>只携带网站根地址的信息而不是其完整路径，由此减小了 header 的大小。</p>
+<h2 id="Referrer-Policy"><a href="#Referrer-Policy" class="headerlink" title="Referrer-Policy"></a>Referrer-Policy</h2><p><code>Referrer-Policy</code>的作用就是为了控制请求头中<code>referrer</code>的内容，目前<code>Referrer-Policy</code>只包含以下几种值：</p>
+<table>
+<thead>
+<tr>
+<th align="left">策略名称</th>
+<th align="left">属性值（新）</th>
+<th align="left">属性值（旧）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">No Referrer</td>
+<td align="left">no-referrer</td>
+<td align="left">never</td>
+</tr>
+<tr>
+<td align="left">No Referrer When Downgrade</td>
+<td align="left">no-referrer-when-downgrade</td>
+<td align="left">default</td>
+</tr>
+<tr>
+<td align="left">Origin Only</td>
+<td align="left">origin</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Origin When Cross-origin</td>
+<td align="left">origin-when-crossorigin</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Unsafe URL</td>
+<td align="left">unsafe-url</td>
+<td align="left">always</td>
+</tr>
+</tbody></table>
+<p>简单介绍下这五种类型的具体含义：</p>
+<ul>
+<li><strong>No Referrer</strong>：任何情况下都不发送 Referrer 信息；</li>
+<li><strong>No Referrer When Downgrade</strong>：仅当发生协议降级（如 HTTPS 页面引入 HTTP 资源，从 HTTPS 页面跳到 HTTP 等）时不发送 Referrer 信息。这个规则是现在大部分浏览器默认所采用的；</li>
+<li><strong>Origin Only</strong>：发送只包含 host 部分的 Referrer。启用这个规则，无论是否发生协议降级，无论是本站链接还是站外链接，都会发送 Referrer 信息，但是只包含协议 + host 部分（不包含具体的路径及参数等信息）；</li>
+<li><strong>Origin When Cross-origin</strong>：仅在发生跨域访问时发送只包含 host 的 Referrer，同域下还是完整的。它与 <code>Origin Only</code> 的区别是多判断了是否 <code>Cross-origin</code>。需要注意的是协议、域名和端口都一致，才会被浏览器认为是同域；</li>
+<li><strong>Unsafe URL</strong>：无论是否发生协议降级，无论是本站链接还是站外链接，统统都发送 Referrer 信息。正如其名，这是最宽松而最不安全的策略；</li>
+</ul>
+<h2 id="Referrer-Policy-更改方法"><a href="#Referrer-Policy-更改方法" class="headerlink" title="Referrer-Policy 更改方法"></a>Referrer-Policy 更改方法</h2><p>可以有以下 4 种方法：</p>
+<p><strong>1.</strong> <code>Referrer-Policy</code> HTTP <code>header</code>设置：</p>
+<pre class=" language-javascript"><code class="language-javascript">Referrer<span class="token operator">-</span>Policy<span class="token punctuation">:</span> origin</code></pre>
+<p><strong>2.</strong> 通过<code>&lt;meta&gt;</code>元素改变<code>Referrer Policy</code>，直接修改名为<code>referrer</code>的内容</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"referrer"</span> content<span class="token operator">=</span><span class="token string">"origin"</span><span class="token operator">></span>复制代码</code></pre>
+<p><strong>3.</strong> 给 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank" rel="noopener"><code>&lt;a&gt;</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank" rel="noopener"><code>&lt;area&gt;</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank" rel="noopener"><code>&lt;img&gt;</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank" rel="noopener"><code>&lt;iframe&gt;</code></a>, 或者<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link" target="_blank" rel="noopener"><code>&lt;link&gt;</code></a>元素设置<code>referrerpolicy</code>属性</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"http://example.com"</span> referrerpolicy<span class="token operator">=</span><span class="token string">"origin"</span><span class="token operator">></span>复制代码</code></pre>
+<p><strong>4.</strong> 如需设置不显示<code>referrer</code>信息时，也可以给 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank" rel="noopener"><code>&lt;a&gt;</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank" rel="noopener"><code>&lt;area&gt;</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link" target="_blank" rel="noopener"><code>&lt;link&gt;</code></a>元素设置<code>rel</code>的链接关系。</p>
+<pre><code>&lt;a href=&quot;http://example.com&quot; rel=&quot;noreferrer&quot;&gt;复制代码</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>使用何种<code>Referrer Policy</code>取决于网站的需求，但是一般来说，<code>unsafe-url</code>是不太建议用的，同样，如果是只想显示网站的根地址，那么建议用<code>strict-origin</code>和 s<code>trict-origin-when-cross-origin</code>。如果 URL 中没有什么敏感信息，那就默认使用<code>no-referrer-when-downgrade</code>。</p>
+<p>特别声明，文章转载自：<a href="https://juejin.im/post/5cd81b59518825686a06fd05" target="_blank" rel="noopener">https://juejin.im/post/5cd81b59518825686a06fd05</a> 。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>referrer</tag>
+        <tag>防盗链</tag>
+      </tags>
   </entry>
 </search>
