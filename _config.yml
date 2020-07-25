@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://leader755.com
+url: https://leader755.com/
 root: /
 # permalink: :year/:month/:day/:title/
 # permalink_defaults:
@@ -70,7 +70,7 @@ prism_plugin:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 6
+  per_page: 9
   order_by: -date
 
 # Category & Tag
