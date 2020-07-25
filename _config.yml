@@ -142,14 +142,14 @@ theme: halo
 
 # 外链跳转插件
 hexo_external_link:
-  enable: false
+  enable: true
   enable_base64_encode: true
   url_param_name: 'u'
   html_file_name: 'go.html'
   target_blank: true
   link_rel: 'external nofollow noopener noreferrer'
   domain: 'your_domain' # 如果开启了防盗链
-  safety_chain: false
+  safety_chain: true
 
 # Rss 订阅
 feed:
@@ -180,8 +180,8 @@ baidu_url_submit:
 deploy:
 - type: git
   repo:
-    # github: git@github.com:Leader755/leader755.github.io.git
-    github: https://github.com/Leader755/leader755.github.io.git #使用 travics ci 自动部署
+    github: git@github.com:Leader755/leader755.github.io.git
+    # github: https://github.com/Leader755/leader755.github.io.git #使用 travics ci 自动部署
     coding: https://e.coding.net/Leader755/leader755.coding.git
     branch: master
 - type: baidu_url_submitter       # 这是新加的主动推送
