@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Autumn cicada Blogs
 subtitle: ''
 description: ''
 keywords:
@@ -70,7 +70,7 @@ prism_plugin:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 9
+  per_page: 12
   order_by: -date
 
 # Category & Tag

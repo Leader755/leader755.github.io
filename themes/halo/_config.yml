@@ -62,8 +62,9 @@ menu:
 # Website start time.
 # 站点运行开始时间
 time:
-  enable: true
-  year: 2019 # 年份
+  enable: false
+  year: 2019 # 开始年份
+  currentyear: 2020 # 当前年份
   month: 02 # 月份
   date: 24 # 日期
   hour: 22 # 小时
@@ -84,7 +85,7 @@ cover:
 # index page dream text,
 # 配置首页显示"梦想"的语句.
 dream:
-  enable: true
+  enable: false
   showTitle: true 
   title: 不追随
   text: dream 放弃不难，但坚持一定很酷。——《解忧杂货铺》 
@@ -125,7 +126,7 @@ video:
 # Whether to display the title of the recommended posts
 # 是否显示推荐文章的标题
 recommend:
-  enable: true
+  enable: false
   showTitle: true
   useConfig: false # 是否使用配置文件, 在 _data/recommends.json 下配置推荐文章, false则会走主题配置的 top 属性
   # useConfig 使用方式: 将主题 hexo-theme-halo/source/_data/recommends.json 移动到 my-blog/source/_data/下修改配置即可
