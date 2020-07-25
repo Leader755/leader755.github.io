@@ -24,18 +24,21 @@ before_script:
 # 执行清缓存，生成网页操作
 script:
   - hexo clean && hexo g
-  - echo ${ENV_TEST}
   
 after_script:
   - git config user.name "Leader755"
   - git config user.email "1181012791@qq.com"
-  - cd .deploy_git
-  - git checkout master
-  - cd ../
-  - sed -i'' "s~${GH_REF}~${GH_TOKEN}:x-oauth-basic@${GH_REF}~" _config.yml
-  - hexo d > log.txt 2>&1
-  - cat log.txt | sed "自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-  - echo "自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')" # 构建后输出时间标识
+   # 替换同目录下的_config.yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
+  - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
+  - hexo deploy
+
+  # - cd .deploy_git
+  # - git checkout master
+  # - cd ../
+  # - sed -i'' "s~${GH_REF}~${GH_TOKEN}:x-oauth-basic@${GH_REF}~" _config.yml
+  # - hexo d > log.txt 2>&1
+  # - cat log.txt | sed "自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+  # - echo "自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')" # 构建后输出时间标识
   
 
 # 指定博客源码分支， Travis CI 监控哪一个分支的变动，这里是 master 分支（若博客备份文件和 GitHub Pages 共用一个仓库的话需设置为博客备份文件所在分支）。
