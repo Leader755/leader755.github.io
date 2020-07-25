@@ -1,6 +1,8 @@
 ---
+categories: hexo
 abbrlink: 8ca51668
 ---
+
 ## 1.首先找到 hexo 博客的主题文件夹目录
 
 ```javascript
