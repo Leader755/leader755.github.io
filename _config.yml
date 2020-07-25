@@ -180,7 +180,8 @@ baidu_url_submit:
 deploy:
 - type: git
   repo:
-    github: git@github.com:Leader755/leader755.github.io.git
+    # github: git@github.com:Leader755/leader755.github.io.git
+    github: https://github.com/Leader755/leader755.github.io.git #使用 travics ci 自动部署
     coding: https://e.coding.net/Leader755/leader755.coding.git
     branch: master
 - type: baidu_url_submitter       # 这是新加的主动推送
