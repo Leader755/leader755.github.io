@@ -32,6 +32,10 @@ after_script:
   - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
   - hexo deploy
 
+ 
+ 
+ 
+ 
   # - cd .deploy_git
   # - git checkout master
   # - cd ../
