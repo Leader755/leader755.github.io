@@ -1,30 +1,57 @@
-language: node_js
-node_js:
-  - lts/*
+# 指定构建环境是Node.js，当前版本是稳定版 (stable),版本这里我们选择最新的长期支持版本（ LTS） 应该就够用了
+anguage: node_js
+node_js: 
+  - lts/*  # 稳定版 (stable) ,最新长期支持版（ - lts/* ）
 
+# 设置缓存文件（cache 参数可以对特定目录进行缓存，加快后续构建的速度）
 cache:
   directories:
     - node_modules
 
-before_install:
-  - export TZ='Asia/Shanghai'
+env:
+ global:
+   - URL_REPO: github.com/Leader755/leader755.github.io.git
 
-install:
-  - npm install hexo-cli -g
-  - npm install
-
-script:
-  - hexo g
-
-after_script:
-  - cd ./public
-  - git init
-  - git config user.name "Leader755"
-  - git config user.email "1181012791@qq.com"
-  - git add .
-  - git commit -m "Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-
+# 设置钩子：我们需要设置一下 Travis CI 监控哪一个分支的变动，我这里自然是 master 分支啦（若博客备份文件和 GitHub Pages 共用一个仓库的话需设置为博客备份文件所在分支）。
 branches:
   only:
     - master
+
+
+#在构建之前安装hexo环境，
+# 设置一下时区跟 hexo 配置文件中的时区匹配，以便 hexo 能正确根据时间生成文件名/文件目录，同时也方便我们后面在 commit 信息中记录更新时间。
+before_install:
+  - export TZ='Asia/Shanghai'
+
+#部署环境的安装
+#安装git插件和搜索功能插件
+install:
+  - npm install -g hexo-cli
+  - npm install
+
+# 设置git提交名，邮箱；替换真实token到_config.yml文件
+before_script:
+  - git config user.name "Leader755"
+  - git config user.email "1181012791@qq.com"
+  # 替换同目录下的_config.yml文件中github_token字符串为travis后台刚才配置的变量，注>意此处sed命令用了双引号。单引号无效！
+  - sed -i "s/github_token/${GH_TOKEN}/g" _config.yml || exit 1
+
+# 执行清缓存，生成网页操作
+script:
+  - hexo clean
+  - hexo generate
+  - echo ${ENV_TEST}
+  - hexo deploy
+  
+after_script:
+   - echo "自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+
+# configure notifications (email, IRC, campfire etc)
+# please update this section to your needs!
+# https://docs.travis-ci.com/user/notifications/
+notifications:
+  email:
+    - 1181012791@qq.com
+  on_success: change
+  on_failure: always
+
