@@ -4,9 +4,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="hexo博客的评论功能, 个人博客，leader755，leader755博客，hexo博客">
-  <meta name="description" content="1.这里推荐的评论功能插件为valine官网：https://valine.js.org/注册登录网站：https://leancloud.cn/      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。
-2.去leanclou">
+  <meta name="keywords" content="Tomcat下部署vue项目[history模式], 个人博客，leader755，leader755博客，hexo博客">
+  <meta name="description" content="1.项目发布后通常有两种访问方式，第一种： IP+端口直接访问的方式，如 http://192.168.1.107:8080/第二种：IP+端口+项目名，如 http://192.168.1.107:8080/saas/
+2.第一种方式：i">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>hexo博客的评论功能 | Autumn cicada Blogs</title>
+  <title>Tomcat下部署vue项目[history模式] | Autumn cicada Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@ae9c6a8/favicon.ico">
 
@@ -433,7 +433,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo博客的评论功能</h1>
+                    <h1 class="description center-align post-title">Tomcat下部署vue项目[history模式]</h1>
                 </div>
             </div>
         </div>
@@ -553,12 +553,12 @@
           
           <div class="article-tag">
             
-            <a href="/tags/valine/">
-              <span class="chip bg-color">valine</span>
+            <a href="/tags/history/">
+              <span class="chip bg-color">history</span>
             </a>
             
-            <a href="/tags/leancloud/">
-              <span class="chip bg-color">leancloud</span>
+            <a href="/tags/tomcat/">
+              <span class="chip bg-color">tomcat</span>
             </a>
             
           </div>
@@ -569,8 +569,8 @@
           <div class="post-cate">
             <i class="fas fa-bookmark fa-fw icon-category"></i>
             
-            <a href="/categories/hexo/" class="post-category">
-              hexo
+            <a href="/categories/vue/" class="post-category">
+              vue
             </a>
             
           </div>
@@ -596,14 +596,14 @@
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          289
+          1.2k
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          1 分
+          4 分
         </div>
         
 
@@ -615,27 +615,90 @@
     <div class="card-content article-card-content">
       <div id="articleContent">
 
-        <h2 id="1-这里推荐的评论功能插件为valine"><a href="#1-这里推荐的评论功能插件为valine" class="headerlink" title="1.这里推荐的评论功能插件为valine"></a>1.这里推荐的评论功能插件为<a href="https://valine.js.org/" target="_blank" rel="noopener">valine</a></h2><p>官网：<a href="https://valine.js.org/" target="_blank" rel="noopener">https://valine.js.org/</a><br>注册登录网站：<a href="https://leancloud.cn/" target="_blank" rel="noopener">https://leancloud.cn/</a><br>      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。</p>
-<h2 id="2-去leancloud注册"><a href="#2-去leancloud注册" class="headerlink" title="2.去leancloud注册"></a>2.去<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud</a>注册</h2><p>注册完成后去创建应用，选择开发版就可以了。（需要实名登记才能创建应用）<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588779620815-f8a3fc6e-f667-4959-9cb2-53b5777427c7.png#align=left&display=inline&height=445&margin=%5Bobject%20Object%5D&name=image.png&originHeight=890&originWidth=1232&size=83220&status=done&style=none&width=616" alt="image.png"></p>
-<h2 id="3-获取-appkey-和-appid"><a href="#3-获取-appkey-和-appid" class="headerlink" title="3.获取 appkey 和 appid"></a>3.获取 appkey 和 appid</h2><p>创建完成应用后，<strong>进入应用-&gt;设置-&gt;应用 key，找到相应的 appkey 和 appid。</strong><br><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588779969891-d05a06f8-bcf5-4b7e-84cb-bcedabc8f762.png#align=left&display=inline&height=248&margin=%5Bobject%20Object%5D&name=image.png&originHeight=796&originWidth=2394&size=185376&status=done&style=none&width=746" alt="image.png"></strong></p>
-<h2 id="4-配置主题文件-config-yml"><a href="#4-配置主题文件-config-yml" class="headerlink" title="4.配置主题文件_config.yml"></a>4.配置主题文件_config.yml</h2><p><strong>搜索 valine，一般可看到如下，将 enbled:true, 并填写 appid 和 appkey(从 leancloud 中获取的 appid 和 appkey)。</strong></p>
-<pre class=" language-javascript"><code class="language-javascript"># The configuration <span class="token keyword">of</span> the Valine comment module is not activated by <span class="token keyword">default</span><span class="token punctuation">.</span>
-# To use it<span class="token punctuation">,</span> activate the configuration item and <span class="token keyword">set</span> appId and appKey<span class="token punctuation">.</span>
-# Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey<span class="token punctuation">.</span>
-valine<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  appId<span class="token punctuation">:</span>
-  appKey<span class="token punctuation">:</span>
-  notify<span class="token punctuation">:</span> <span class="token boolean">false</span>
-  verify<span class="token punctuation">:</span> <span class="token boolean">false</span>
-  visitor<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  avatar<span class="token punctuation">:</span> <span class="token string">'mp'</span> # Gravatar style <span class="token punctuation">:</span> mp<span class="token operator">/</span>identicon<span class="token operator">/</span>monsterid<span class="token operator">/</span>wavatar<span class="token operator">/</span>retro<span class="token operator">/</span>hide
-  pageSize<span class="token punctuation">:</span> <span class="token number">10</span>
-  placeholder<span class="token punctuation">:</span> <span class="token string">'just go go'</span> # Comment Box placeholder
-  background<span class="token punctuation">:</span> <span class="token operator">/</span>medias<span class="token operator">/</span>comment_bg<span class="token punctuation">.</span>png</code></pre>
-<h2 id="5-配置域名"><a href="#5-配置域名" class="headerlink" title="5.配置域名"></a>5.配置域名</h2><p>在 Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名 把你的域名加进去.</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588780306061-73286643-1359-4efe-b2a1-5545f880dd4a.png#align=left&display=inline&height=500&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1000&originWidth=1804&size=166396&status=done&style=none&width=902" alt="image.png"></p>
-<h2 id="6-重启你的博客"><a href="#6-重启你的博客" class="headerlink" title="6.重启你的博客"></a>6.重启你的博客</h2><p>大功告成！！</p>
+        <h2 id="1-项目发布后通常有两种访问方式，"><a href="#1-项目发布后通常有两种访问方式，" class="headerlink" title="1.项目发布后通常有两种访问方式，"></a>1.项目发布后通常有两种访问方式，</h2><p>第一种： IP+端口直接访问的方式，如 <a href="http://192.168.4.160:6090/" target="_blank" rel="noopener">http://192.168.1.107:8080/</a><br>第二种：IP+端口+项目名，如 <a href="https://links.jianshu.com/go?to=http%3A%2F%2F192.168.4.160%3A6090%2Fhuangshi%2F" target="_blank" rel="noopener">http://192.168.1.107:8080/saas/</a></p>
+<h2 id="2-第一种方式：ip-端口（前端后端修改）"><a href="#2-第一种方式：ip-端口（前端后端修改）" class="headerlink" title="2.第一种方式：ip+端口（前端后端修改）"></a>2.第一种方式：ip+端口（前端后端修改）</h2><p>范例：vue-cli 项目使用路由，tomcat 作为服务器，项目文件夹名 saas</p>
+<p>步骤：</p>
+<h3 id="1-修改配置文件-router-js"><a href="#1-修改配置文件-router-js" class="headerlink" title="1.修改配置文件 router.js"></a>1.修改配置文件 router.js</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  mode<span class="token punctuation">:</span> <span class="token string">"history"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 将mode值改为history</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      path<span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span>
+      name<span class="token punctuation">:</span> <span class="token string">"HelloWorld"</span><span class="token punctuation">,</span>
+      component<span class="token punctuation">:</span> HelloWorld<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="2-1-将-tomcat-下的-ROOT-文件中的内容替换-选择其一"><a href="#2-1-将-tomcat-下的-ROOT-文件中的内容替换-选择其一" class="headerlink" title="2.1 将 tomcat 下的 ROOT 文件中的内容替换(选择其一)"></a>2.1 将 tomcat 下的 ROOT 文件中的内容替换(选择其一)</h3><p>（此种方式需要删除 ROOT 文件夹下的全部内容，将打包的文件放进去，无需修改配置文件）<br><strong>找到 tomcat 目录，将 tomcat-&gt;ROOT 文件夹中文件全部删除，将打包好的 dist 文件夹中的文件全部放到 ROOT 文件夹中。</strong><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1579239963286-48f67f71-308e-49dc-9953-8cc2cc1be528.png#align=left&display=inline&height=166&margin=%5Bobject%20Object%5D&name=image.png&originHeight=331&originWidth=1486&size=32467&status=done&style=none&width=743" alt="image.png"></p>
+<h3 id="2-2-修改-tomcat-gt-conf-server-xml-配置-选择其一"><a href="#2-2-修改-tomcat-gt-conf-server-xml-配置-选择其一" class="headerlink" title="2.2 修改 tomcat-&gt;conf/server.xml 配置(选择其一)"></a>2.2 修改 tomcat-&gt;conf/server.xml 配置(选择其一)</h3><p>(此种方式无需删除 ROOT 文件夹中的内容，只需修改 serve.xml 中的配置)<br><strong>找到 tomcat 目录，修改 tomcat-&gt;conf/server.xml，增加 Context 节点。设置 docBase=”/saas” 。其中的 saas 就是 webapps 目录下的项目名称（文件夹名）</strong><br>**<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1579153518666-35db848d-44c8-411f-a40d-02dc81ae9ae8.png#align=left&display=inline&height=696&margin=%5Bobject%20Object%5D&name=%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200116134505.png&originHeight=696&originWidth=1277&size=80321&status=done&style=none&width=1277" alt="微信图片_20200116134505.png"></p>
+<h2 id="3-第二种方式：ip-端口-项目名（前端修改）"><a href="#3-第二种方式：ip-端口-项目名（前端修改）" class="headerlink" title="3.第二种方式：ip+端口+项目名（前端修改）"></a>3.第二种方式：ip+端口+项目名（前端修改）</h2><p>范例：vue-cli 项目使用路由，tomcat 作为服务器，项目文件夹名 saas</p>
+<p>步骤：</p>
+<h3 id="1-首先创建-WEB-INF-文件，文件夹中创建-web-xml-文件："><a href="#1-首先创建-WEB-INF-文件，文件夹中创建-web-xml-文件：" class="headerlink" title="1.首先创建 WEB-INF 文件，文件夹中创建 web.xml 文件："></a>1.首先创建 WEB-INF 文件，文件夹中创建 web.xml 文件：</h3><p>因为是 history 模式, 要防止在路由下刷新变成 404 错误，这需要让 tomcat 都定位到首页，也就是 index.html 页，以往我们使用 Java 写 web 项目部署在 tomcat 时，通常都会有一个 WEB-INF 文件夹，并包含一个 web.xml 文件，而 vue 项目 build 之后只是纯静态资源项目，所以我们需要在 build 之后的 dist 文件夹里新增一个 WEB-INF 文件夹，并新建 web.xml 文件。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1579014872343-c8253ec9-d3d5-4b53-bda6-3983472244ae.png#align=left&display=inline&height=421&margin=%5Bobject%20Object%5D&name=image.png&originHeight=842&originWidth=482&size=57023&status=done&style=none&width=241" alt="image.png"></p>
+<p><strong>在项目目录下新建**</strong><code>WEB-INF</code>*<strong>*文件夹， 接着在**</strong><code>WEB-INF</code>*<strong>*文件夹下新建 **</strong><code>web.xml</code>*<strong>*文件，内容如下：</strong></p>
+<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version='1.0' encoding='UTF-8'?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>web-app</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+         <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://xmlns.jcp.org/xml/ns/javaee<span class="token punctuation">"</span></span>
+         <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://xmlns.jcp.org/xml/ns/javaee/web-app_2_5.xsd<span class="token punctuation">"</span></span>
+         <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scplatform<span class="token punctuation">"</span></span> <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.5<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>display-name</span><span class="token punctuation">></span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>display-name</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>error-page</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>error-code</span><span class="token punctuation">></span></span>404<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>error-code</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>location</span><span class="token punctuation">></span></span>/index.html<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>location</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>error-page</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>web-app</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="2-修改配置文件-router-js"><a href="#2-修改配置文件-router-js" class="headerlink" title="2.修改配置文件 router.js"></a>2.修改配置文件 router.js</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  mode<span class="token punctuation">:</span> <span class="token string">"history"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 开启history模式需要后端配置404时返回/index.html</span>
+  base<span class="token punctuation">:</span> <span class="token string">"/saas/"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//当项目不在根目录时，必须添加子目录路径，否则空白页面</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      path<span class="token punctuation">:</span> <span class="token string">"/home"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// '/saas/home'</span>
+      name<span class="token punctuation">:</span> <span class="token string">"home"</span><span class="token punctuation">,</span>
+      component<span class="token punctuation">:</span> home<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="3-修改-config-文件夹下的-index-js-中配置"><a href="#3-修改-config-文件夹下的-index-js-中配置" class="headerlink" title="3.修改 config 文件夹下的 index.js 中配置"></a>3.修改 config 文件夹下的 index.js 中配置</h3><pre class=" language-javascript"><code class="language-javascript">build<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Template for index.html</span>
+    index<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"../dist/index.html"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+    <span class="token comment" spellcheck="true">// Paths</span>
+    assetsRoot<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"../dist"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">//构建输出目录,也就是构建后的东西都扔这里</span>
+    assetsSubDirectory<span class="token punctuation">:</span> <span class="token string">"static"</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">//源子目录 除了index.html，其余的js img css都分在这里</span>
+
+    <span class="token comment" spellcheck="true">/**添加开始**/</span>
+    <span class="token comment" spellcheck="true">//tomcat webapps/sass/</span>
+    assetsPublicPath<span class="token punctuation">:</span> <span class="token string">"/saas/"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//需要加上这一行项目目录,一个 / 表示根目录</span>
+        <span class="token comment" spellcheck="true">/**添加结束**/</span>
+  <span class="token punctuation">}</span></code></pre>
+<h3 id="4-webpack-设置不打包文件WEB-INF"><a href="#4-webpack-设置不打包文件WEB-INF" class="headerlink" title="4.webpack 设置不打包文件WEB-INF"></a>4.webpack 设置不打包文件<code>WEB-INF</code></h3><p>到此处已经可以成功配置一个 tomcat 服务下的 vue 的 history 模式的项目，但是不能每次打包去手动<strong>添加和更改新建<code>WEB-INF</code>文件夹</strong>吧，遇到过设置不打包文件 WEB-INF 文件时的配置未生效，导致 WEB-INF 下的 web.xml 文件被打包成 js 文件，导致当前路由刷新报 404 错误。<br>(这个错误找了 好久，以为配置好了，就 Ok 了，由于代码同步问题，没注意可能就发生问题，所以上传服务器前一定要记得检查下<strong><code>WEB-INF</code>文件夹是否存在 web.xml 文件</strong>)</p>
+<p><strong>修改 webpack.prod.conf.js 配置</strong></p>
+<pre class=" language-javascript"><code class="language-javascript">plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+  <span class="token comment" spellcheck="true">// copy custom static assets</span>
+  <span class="token keyword">new</span> <span class="token class-name">CopyWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token keyword">from</span><span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"../static"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      to<span class="token punctuation">:</span> config<span class="token punctuation">.</span>build<span class="token punctuation">.</span>assetsSubDirectory<span class="token punctuation">,</span>
+      ignore<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">".*"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">/**添加开始**/</span>
+    <span class="token punctuation">{</span>
+      <span class="token keyword">from</span><span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"../WEB-INF"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 不打包直接输出的文件</span>
+      to<span class="token punctuation">:</span> <span class="token string">"dist"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 打包后静态文件放置位置</span>
+      ignore<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">".*"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 忽略规则。（这种写法表示将该文件夹下的所有文件都复制）</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">/**添加结束**/</span>
+  <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<p>关于此处的的设置不打包问题可以自行搜索，关键词：<strong>webpack 设置不打包文件</strong><br>**<br>**</p>
+<h3 id="5-到此处前端已经成功配置了-tomcat-下-vue-的-history-模式"><a href="#5-到此处前端已经成功配置了-tomcat-下-vue-的-history-模式" class="headerlink" title="5.到此处前端已经成功配置了 tomcat 下 vue 的 history 模式"></a>5.到此处前端已经成功配置了 tomcat 下 vue 的 history 模式</h3><p>项目最终目录如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1579015282523-603258d7-6c26-49bd-8f0c-cb6453d65a11.png#align=left&display=inline&height=464&margin=%5Bobject%20Object%5D&name=image.png&originHeight=928&originWidth=504&size=64927&status=done&style=none&width=252" alt="image.png"></p>
+<h3 id="6-注意-vue-cli-3-x-vue-cli-打包配置还需要设置以下内容："><a href="#6-注意-vue-cli-3-x-vue-cli-打包配置还需要设置以下内容：" class="headerlink" title="6.注意 vue-cli 3.x vue-cli 打包配置还需要设置以下内容："></a>6.注意 vue-cli 3.x vue-cli 打包配置还需要设置以下内容：</h3><pre class=" language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  publicPath<span class="token punctuation">:</span> <span class="token string">"/saas"</span><span class="token punctuation">,</span>
+  configureWebpack<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    performance<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      hints<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<h2 id="4-结语"><a href="#4-结语" class="headerlink" title="4.结语"></a>4.结语</h2><p>终于完成了，也是踩了不少坑和加上一些搜索，感觉目前给的文档都不太详细，所以自己写了一篇关于 tomcat 下的 vue 的 history 模式，希望能帮到大家，欢迎大家一起交流。</p>
 
       </div>
       <hr />
@@ -661,7 +724,7 @@ valine<span class="token punctuation">:</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leader755.com/leader755/c41d01b3.html">https://leader755.com/leader755/c41d01b3.html</a>
+                    <a href="https://leader755.com/leader755/fc9c260f.html">https://leader755.com/leader755/fc9c260f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -699,12 +762,12 @@ valine<span class="token punctuation">:</span>
           
           <div class="article-tag">
             
-            <a href="/tags/valine/">
-              <span class="chip bg-color">valine</span>
+            <a href="/tags/history/">
+              <span class="chip bg-color">history</span>
             </a>
             
-            <a href="/tags/leancloud/">
-              <span class="chip bg-color">leancloud</span>
+            <a href="/tags/tomcat/">
+              <span class="chip bg-color">tomcat</span>
             </a>
             
           </div>
@@ -1013,48 +1076,54 @@ valine<span class="token punctuation">:</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/leader755/4e860a66.html">
+                <a href="/leader755/fc9c260f.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="hexo博客站内搜索功能"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@ae9c6a8/medias/featureimages/4.jpg" class="responsive-img" alt="hexo博客站内搜索功能">
+                        <!-- <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Tomcat下部署vue项目[history模式]"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@ae9c6a8/medias/featureimages/20.jpg" class="responsive-img" alt="Tomcat下部署vue项目[history模式]">
                         
-                        <span class="card-title">hexo博客站内搜索功能</span>
+                        <span class="card-title">Tomcat下部署vue项目[history模式]</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.根目录安装插件 hexo-generator-searchdbnpm install hexo-generator-searchdb --save
-2.配置根目录文件_config.ymlsearch: path: search.xml
+                            1.项目发布后通常有两种访问方式，第一种： IP+端口直接访问的方式，如 http://192.168.1.107:8080/第二种：IP+端口+项目名，如 http://192.168.1.107:8080/saas/
+2.第一种方式：i
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/vue/" class="post-category">
+                                    vue
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%90%9C%E7%B4%A2/">
-                        <span class="chip bg-color">搜索</span>
+                    <a href="/tags/history/">
+                        <span class="chip bg-color">history</span>
+                    </a>
+                    
+                    <a href="/tags/tomcat/">
+                        <span class="chip bg-color">tomcat</span>
                     </a>
                     
                 </div>
@@ -1068,21 +1137,25 @@ valine<span class="token punctuation">:</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/c6cbe756.html">
+                <a href="/leader755/611009a3.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="mac 使用 homebrew"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@ae9c6a8/medias/featureimages/17.jpg" class="responsive-img" alt="mac 使用 homebrew">
+                        <!-- <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="小程序中setData修改属性值"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@ae9c6a8/medias/featureimages/22.jpg" class="responsive-img" alt="小程序中setData修改属性值">
                         
-                        <span class="card-title">mac 使用 homebrew</span>
+                        <span class="card-title">小程序中setData修改属性值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用 brew update 指令
-报错Error: The following directories are not writable by your user:/usr/local/sbin/usr/local/share/man/m
+                            1.修改对象属性##
+1&gt;第一种 changePerson:function(e){
+    var str = 'person.name';
+    this.setData({
+      [str]: 'fxjzzyo'
+   
                         
                     </div>
                     <div class="publish-info">
@@ -1093,8 +1166,8 @@ valine<span class="token punctuation">:</span>
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
+                                    小程序
                                 </a>
                             
                             
@@ -1104,12 +1177,8 @@ valine<span class="token punctuation">:</span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mac/">
-                        <span class="chip bg-color">mac</span>
-                    </a>
-                    
-                    <a href="/tags/homebrew/">
-                        <span class="chip bg-color">homebrew</span>
+                    <a href="/tags/setData/">
+                        <span class="chip bg-color">setData</span>
                     </a>
                     
                 </div>

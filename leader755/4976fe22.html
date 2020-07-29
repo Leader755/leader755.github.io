@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="hexo博客的生成永久标题链接, Autumn cicada Blogs">
+  <meta name="keywords" content="hexo博客的生成永久标题链接, 个人博客，leader755，leader755博客，hexo博客">
   <meta name="description" content="1.hexo 博客默认链接规则：hexo 生成的标题默认规则（年、月、日、标题）：:year/:month/:day/:title。复制后的链接是一长串，非常不利于阅读，也不简洁。
 2.解决方案：1.使用hexo-permalink-pin">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,6 +52,7 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
+
   <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
@@ -59,19 +60,19 @@
 
 <body>
   <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-        <!-- <div id="navContainer" class="nav-wrapper head-container"> -->
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <!-- <img src="/medias/logo.png" class="logo-img" alt="LOGO"> -->
-                    <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@ae9c6a8/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">Autumn cicada Blogs</span>
-                </a>
-            </div>
-            
+  <nav id="headNav" class="bg-color nav-transparent">
+    <div id="navContainer" class="nav-wrapper container">
+      <!-- <div id="navContainer" class="nav-wrapper head-container"> -->
+      <div class="brand-logo">
+        <a href="/" class="waves-effect waves-light">
+          
+          <!-- <img src="/medias/logo.png" class="logo-img" alt="LOGO"> -->
+          <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@ae9c6a8/medias/logo.png" class="logo-img" alt="LOGO">
+          
+          <span class="logo-span big-show">Autumn cicada Blogs</span>
+        </a>
+      </div>
+      
 
 <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
 <ul class="right nav-menu">
@@ -90,11 +91,34 @@
   <li class="hide-on-med-and-down nav-item">
     
     <a href="/articles" class="waves-effect waves-light">
+
       
       <i class="fa fa-bars" style="zoom: 0.6;"></i>
       
       <span>文章</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -129,6 +153,17 @@
       </li>
       
     </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://resume.leader755.com/" target="_blank" rel="noopener" class="waves-effect waves-light">
+      
+      <i class="fa fa-user" style="zoom: 0.6;"></i>
+      
+      <span>简历</span>
+    </a>
     
   </li>
   
@@ -182,7 +217,7 @@
         <div class="logo-name">Autumn cicada Blogs</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            Autumn cicada 个人博客
             
         </div>
     </div>
@@ -204,12 +239,36 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/articles" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fa fa-bars"></i>
+				<i class="fa-fw fa fa-bars"></i>
 			
 			文章
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/tags " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/categories " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+               
+            </ul>
           
         </li>
         
@@ -245,6 +304,17 @@
                 </li>
                
             </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://resume.leader755.com/" target="_blank" rel="noopener" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa fa-user"></i>
+			
+			简历
+		</a>
           
         </li>
         
@@ -292,10 +362,10 @@
     </ul>
 </div>
 
-        </div>
+    </div>
 
-        
-            <style>
+    
+    <style>
     .nav-transparent .github-corner {
         display: none !important;
     }
@@ -350,10 +420,9 @@
               fill="currentColor" class="octo-body"></path>
     </svg>
 </a>
-        
-    </nav>
+    
+  </nav>
 </header>
-
   
 
 
@@ -509,14 +578,14 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2020-07-26
+          2020-07-29
         </div>
         
 
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2020-07-26
+          2020-07-29
         </div>
         
 
@@ -964,7 +1033,7 @@ hexo init blog
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-26
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-29
                         </span>
                         <span class="publish-author">
                             
@@ -1015,7 +1084,7 @@ hexo init blog
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-29
                             </span>
                         <span class="publish-author">
                             
@@ -1181,7 +1250,7 @@ hexo init blog
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">13.1k</span>&nbsp;字
+        class="white-color">15.5k</span>&nbsp;字
       
       
       

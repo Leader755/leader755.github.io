@@ -80,8 +80,9 @@ $(function () {
 
       //为文章内的图片添加no-referrer来隐藏referer（解决第三方图片外链不显示问题）
       $(this).attr('referrerpolicy', 'no-referrer');
-      $('.img-item').attr('referrerpolicy', 'no-referrer');
-
+      // $('.img-item').attr('referrerpolicy', 'no-referrer');
+      //为文章内的图片添加no-referrer来隐藏referer（解决第三方图片外链不显示问题）
+      $('.lg-thumb-item').find('img').attr('referrerpolicy', 'no-referrer');
 
       // 图片添加字幕
       let alt = $(this).attr('alt');
@@ -175,4 +176,6 @@ $(function () {
       $('.m-nav-item.m-nav-show').removeClass('m-nav-show');
     }
   });
+
+
 });
