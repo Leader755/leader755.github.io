@@ -43,6 +43,20 @@ hexo server
       </tags>
   </entry>
   <entry>
+    <title>4.mac 上使用 vi</title>
+    <url>/leader755/896b4ef0.html</url>
+    <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
+<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>vi</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>3.mac上生成SSH key与GitHub通信</title>
     <url>/leader755/b0c9815c.html</url>
     <content><![CDATA[<h2 id="1-检查-SSH-key-是否存在"><a href="#1-检查-SSH-key-是否存在" class="headerlink" title="1.检查 SSH key 是否存在"></a>1.检查 SSH key 是否存在</h2><p>在终端输入：</p>
@@ -107,20 +121,6 @@ git config <span class="token operator">--</span>global user<span class="token p
       </tags>
   </entry>
   <entry>
-    <title>4.mac 上使用 vi</title>
-    <url>/leader755/896b4ef0.html</url>
-    <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
-<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>mac</tag>
-        <tag>vi</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5.hexo文档部署到 Github和 coding</title>
     <url>/leader755/38b922c9.html</url>
     <content><![CDATA[<h2 id="1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："><a href="#1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：" class="headerlink" title="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："></a>1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&size=44477&status=done&style=none&width=526" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#align=left&display=inline&height=120&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&size=33032&status=done&style=none&width=486" alt="image.png"><br>如果不部署到 coding，就只写 github 就行。</p>
@@ -154,6 +154,157 @@ hexo g <span class="token operator">-</span>d</code></pre>
       <tags>
         <tag>github</tag>
         <tag>coding</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>7.hexo主题配置</title>
+    <url>/leader755/b0c81b21.html</url>
+    <content><![CDATA[<h2 id="1-hexo-主题官网"><a href="#1-hexo-主题官网" class="headerlink" title="1.hexo 主题官网"></a>1.hexo 主题官网</h2><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a></p>
+<h2 id="2-应用以及下载主题"><a href="#2-应用以及下载主题" class="headerlink" title="2.应用以及下载主题"></a>2.应用以及下载主题</h2><p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br>为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>， 后者称为 <strong>主题配置文件</strong>。（必看）</p>
+<h3 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1.安装主题"></a>1.安装主题</h3><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至<strong>站点目录(**</strong>即根目录下的文件_config.yml 文件*<strong>*)</strong>的  <code>themes</code>  目录下， 然后修改下配置文件即可。next 为主题名</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：</span>
+$ cd your<span class="token operator">-</span>hexo<span class="token operator">-</span>site
+$ git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>iissnan<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next</code></pre>
+<p>###</p>
+<h3 id="2-启用主题"><a href="#2-启用主题" class="headerlink" title="2.启用主题"></a>2.启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next(主题名)</code>。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588326982972-1828234c-3a21-48e1-ac1e-5b57480ac6f0.png#align=left&display=inline&height=111&margin=%5Bobject%20Object%5D&name=image.png&originHeight=222&originWidth=1012&size=24250&status=done&style=none&width=506" alt="image.png"></p>
+<pre class=" language-javascript"><code class="language-javascript">theme<span class="token punctuation">:</span> next<span class="token punctuation">;</span></code></pre>
+<h4 id="2-1-本文使用的是（hexo-theme-halo）主题"><a href="#2-1-本文使用的是（hexo-theme-halo）主题" class="headerlink" title="2.1 本文使用的是（hexo-theme-halo）主题"></a>2.1 本文使用的是（hexo-theme-halo）主题</h4><p>1&gt;直接下载 git  clone</p>
+<pre class=" language-javascript"><code class="language-javascript">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>hongweifuture<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>halo<span class="token punctuation">.</span>git themes<span class="token operator">/</span>halo</code></pre>
+<p>2&gt;直接将<code>themes/halo/config/source</code>内所有内容拷贝到<code>Hexo</code>根目录下的<code>source</code>文件夹内替换</p>
+<h4 id="2-2-配置切换主题"><a href="#2-2-配置切换主题" class="headerlink" title="2.2 配置切换主题"></a>2.2 配置切换主题</h4><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: halo</code><br><code>根目录_config.yml</code> 文件的其它修改建议:</p>
+<ul>
+<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>[http://xxx.github.io](http://xxx.github.io)</code>）。</li>
+<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
+<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
+</ul>
+<h3 id="3-验证主题"><a href="#3-验证主题" class="headerlink" title="3.验证主题"></a>3.验证主题</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//最好先清除缓存</span>
+hexo clean
+
+<span class="token comment" spellcheck="true">//打包</span>
+hexo g
+
+<span class="token comment" spellcheck="true">//启动</span>
+hexo s
+
+<span class="token comment" spellcheck="true">//发布到 github</span>
+hexo s <span class="token operator">-</span>d</code></pre>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>主题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>8.语雀文档同步到 hexo</title>
+    <url>/leader755/bad88671.html</url>
+    <content><![CDATA[<h2 id="1-去官网注册账号"><a href="#1-去官网注册账号" class="headerlink" title="1.去官网注册账号"></a><a href="https://www.yuque.com/login?platform=wechat&inviteToken=d250cce7a9bfb322880f20b1d1c4cdc4e59fa5e9f65dd25b1c2d2e774a076c56" target="_blank" rel="noopener">1</a>.去官网注册账号</h2><p><a href="https://www.yuque.com/login?platform=wechat&inviteToken=d250cce7a9bfb322880f20b1d1c4cdc4e59fa5e9f65dd25b1c2d2e774a076c56" target="_blank" rel="noopener">点我去官网</a></p>
+<h2 id="2-创建知识库"><a href="#2-创建知识库" class="headerlink" title="2.创建知识库"></a>2.创建知识库</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588478034103-86a7c5cc-71cb-4fd5-ba96-5eee9a2e8a2f.png#align=left&display=inline&height=321&margin=%5Bobject%20Object%5D&name=image.png&originHeight=642&originWidth=726&size=55017&status=done&style=none&width=363" alt="image.png"></p>
+<h2 id="3-点击当前知识库的设置"><a href="#3-点击当前知识库的设置" class="headerlink" title="3.点击当前知识库的设置"></a>3.点击当前知识库的设置</h2><p>获取当前知识库的登录名和路径<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588477857012-0a0094c3-e542-429d-bb28-20cd6d29c941.png#align=left&display=inline&height=531&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1062&originWidth=1828&size=124676&status=done&style=none&width=914" alt="image.png"></p>
+<h2 id="4-在将语雀文档同步到-hexo"><a href="#4-在将语雀文档同步到-hexo" class="headerlink" title="4.在将语雀文档同步到 hexo"></a>4.在将语雀文档同步到 hexo</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//先安装 yuque-hexo</span>
+npm install yuque<span class="token operator">-</span>hexo <span class="token operator">--</span>save</code></pre>
+<h3 id="1-修改-package-json，增加配置"><a href="#1-修改-package-json，增加配置" class="headerlink" title="1) 修改 package.json，增加配置:"></a>1) 修改 package.json，增加配置:</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"yuqueConfig"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"postPath"</span><span class="token punctuation">:</span> <span class="token string">"source/_posts/yuque"</span><span class="token punctuation">,</span>
+    <span class="token string">"cachePath"</span><span class="token punctuation">:</span> <span class="token string">"yuque.json"</span><span class="token punctuation">,</span>
+    <span class="token string">"mdNameFormat"</span><span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span>
+    <span class="token string">"adapter"</span><span class="token punctuation">:</span> <span class="token string">"hexo"</span><span class="token punctuation">,</span>
+    <span class="token string">"concurrency"</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token string">"baseUrl"</span><span class="token punctuation">:</span> <span class="token string">"https://www.yuque.com/api/v2"</span><span class="token punctuation">,</span>
+    <span class="token string">"login"</span><span class="token punctuation">:</span> <span class="token string">"leader755"</span><span class="token punctuation">,</span>
+    <span class="token string">"repo"</span><span class="token punctuation">:</span> <span class="token string">"blog"</span><span class="token punctuation">,</span>
+    <span class="token string">"token"</span><span class="token punctuation">:</span> <span class="token string">"在语雀上申请的 token"</span><span class="token punctuation">,</span>
+    <span class="token string">"onlyPublished"</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">"onlyPublic"</span><span class="token punctuation">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>含义</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>postPath</td>
+<td>文档同步后生成的路径</td>
+<td>source/_posts/yuque</td>
+</tr>
+<tr>
+<td>cachePath</td>
+<td>文档下载缓存文件</td>
+<td>yuque.json</td>
+</tr>
+<tr>
+<td>mdNameFormat</td>
+<td>文件名命名方式 (title / slug)</td>
+<td>title</td>
+</tr>
+<tr>
+<td>adapter</td>
+<td>文档生成格式 (hexo/markdown)</td>
+<td>hexo</td>
+</tr>
+<tr>
+<td>concurrency</td>
+<td>下载文章并发数</td>
+<td>5</td>
+</tr>
+<tr>
+<td>baseUrl</td>
+<td>语雀 API 地址</td>
+<td>-</td>
+</tr>
+<tr>
+<td>login</td>
+<td>语雀 login (group), 也称为个人路径</td>
+<td>-</td>
+</tr>
+<tr>
+<td>repo</td>
+<td>语雀仓库短名称，也称为语雀知识库路径</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onlyPublished</td>
+<td>只展示已经发布的文章</td>
+<td>false</td>
+</tr>
+<tr>
+<td>onlyPublic</td>
+<td>只展示公开文章</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>slug 是语雀的永久链接名，一般是几个随机字母。</p>
+</blockquote>
+<h3 id="2-在-package-json-添加-scripts"><a href="#2-在-package-json-添加-scripts" class="headerlink" title="2)在 package.json 添加 scripts"></a>2)在 package.json 添加 scripts</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//添加以下命令行</span>
+<span class="token punctuation">{</span>
+  <span class="token string">"sync"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
+  <span class="token string">"clean:yuque"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo clean"</span>
+<span class="token punctuation">}</span></code></pre>
+<p>目前为止 scripts 命令行为</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
+    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
+    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span><span class="token punctuation">,</span>
+    <span class="token string">"sync"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean:yuque"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo clean"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h3 id="3）关于在语雀上申请-token"><a href="#3）关于在语雀上申请-token" class="headerlink" title="3）关于在语雀上申请 token"></a>3）关于在语雀上申请 token</h3><p>点击账户个人–&gt;设置 –&gt;Token–&gt;新建 token</p>
+<h2 id="5-同步语雀文档到本地-hexo"><a href="#5-同步语雀文档到本地-hexo" class="headerlink" title="5.同步语雀文档到本地 hexo"></a>5.同步语雀文档到本地 hexo</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//同步文档</span>
+yuque<span class="token operator">-</span>hexo sync
+
+<span class="token comment" spellcheck="true">//清除本地缓存</span>
+yuque<span class="token operator">-</span>hexo clean</code></pre>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>yuque</tag>
       </tags>
   </entry>
   <entry>
@@ -528,46 +679,6 @@ permalink_defaults:
       </tags>
   </entry>
   <entry>
-    <title>7.hexo主题配置</title>
-    <url>/leader755/b0c81b21.html</url>
-    <content><![CDATA[<h2 id="1-hexo-主题官网"><a href="#1-hexo-主题官网" class="headerlink" title="1.hexo 主题官网"></a>1.hexo 主题官网</h2><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a></p>
-<h2 id="2-应用以及下载主题"><a href="#2-应用以及下载主题" class="headerlink" title="2.应用以及下载主题"></a>2.应用以及下载主题</h2><p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br>为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>， 后者称为 <strong>主题配置文件</strong>。（必看）</p>
-<h3 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1.安装主题"></a>1.安装主题</h3><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至<strong>站点目录(**</strong>即根目录下的文件_config.yml 文件*<strong>*)</strong>的  <code>themes</code>  目录下， 然后修改下配置文件即可。next 为主题名</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：</span>
-$ cd your<span class="token operator">-</span>hexo<span class="token operator">-</span>site
-$ git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>iissnan<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next</code></pre>
-<p>###</p>
-<h3 id="2-启用主题"><a href="#2-启用主题" class="headerlink" title="2.启用主题"></a>2.启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next(主题名)</code>。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588326982972-1828234c-3a21-48e1-ac1e-5b57480ac6f0.png#align=left&display=inline&height=111&margin=%5Bobject%20Object%5D&name=image.png&originHeight=222&originWidth=1012&size=24250&status=done&style=none&width=506" alt="image.png"></p>
-<pre class=" language-javascript"><code class="language-javascript">theme<span class="token punctuation">:</span> next<span class="token punctuation">;</span></code></pre>
-<h4 id="2-1-本文使用的是（hexo-theme-halo）主题"><a href="#2-1-本文使用的是（hexo-theme-halo）主题" class="headerlink" title="2.1 本文使用的是（hexo-theme-halo）主题"></a>2.1 本文使用的是（hexo-theme-halo）主题</h4><p>1&gt;直接下载 git  clone</p>
-<pre class=" language-javascript"><code class="language-javascript">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>hongweifuture<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>halo<span class="token punctuation">.</span>git themes<span class="token operator">/</span>halo</code></pre>
-<p>2&gt;直接将<code>themes/halo/config/source</code>内所有内容拷贝到<code>Hexo</code>根目录下的<code>source</code>文件夹内替换</p>
-<h4 id="2-2-配置切换主题"><a href="#2-2-配置切换主题" class="headerlink" title="2.2 配置切换主题"></a>2.2 配置切换主题</h4><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: halo</code><br><code>根目录_config.yml</code> 文件的其它修改建议:</p>
-<ul>
-<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>[http://xxx.github.io](http://xxx.github.io)</code>）。</li>
-<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
-<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
-</ul>
-<h3 id="3-验证主题"><a href="#3-验证主题" class="headerlink" title="3.验证主题"></a>3.验证主题</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//最好先清除缓存</span>
-hexo clean
-
-<span class="token comment" spellcheck="true">//打包</span>
-hexo g
-
-<span class="token comment" spellcheck="true">//启动</span>
-hexo s
-
-<span class="token comment" spellcheck="true">//发布到 github</span>
-hexo s <span class="token operator">-</span>d</code></pre>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>主题</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo博客提交百度和Google收录</title>
     <url>/leader755/5c84a3bd.html</url>
     <content><![CDATA[<p>一个网站的 SEO 对一个网站非常重要，<a href="https://link.jianshu.com/?t=https://baike.baidu.com/item/SEO/102990?fr=aladdin" target="_blank" rel="noopener">SEO</a>指的是搜索引擎优化。通过搜索引擎优化，可以提高网站的网站关键词排名以及博客文章的曝光度。一般来说，我们针对百度和 Google 这两个搜索引擎进行优化，提高对网站资源的索引量，使我们的文章更容易被发现。虽然我的博客的主要读者是我自己，但也不妨碍我做些优化，对吧！接下来向大家展示如何使博客被百度和 Google 收录。</p>
@@ -655,117 +766,6 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
       <tags>
         <tag>百度收录</tag>
         <tag>谷歌收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>8.语雀文档同步到 hexo</title>
-    <url>/leader755/bad88671.html</url>
-    <content><![CDATA[<h2 id="1-去官网注册账号"><a href="#1-去官网注册账号" class="headerlink" title="1.去官网注册账号"></a><a href="https://www.yuque.com/login?platform=wechat&inviteToken=d250cce7a9bfb322880f20b1d1c4cdc4e59fa5e9f65dd25b1c2d2e774a076c56" target="_blank" rel="noopener">1</a>.去官网注册账号</h2><p><a href="https://www.yuque.com/login?platform=wechat&inviteToken=d250cce7a9bfb322880f20b1d1c4cdc4e59fa5e9f65dd25b1c2d2e774a076c56" target="_blank" rel="noopener">点我去官网</a></p>
-<h2 id="2-创建知识库"><a href="#2-创建知识库" class="headerlink" title="2.创建知识库"></a>2.创建知识库</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588478034103-86a7c5cc-71cb-4fd5-ba96-5eee9a2e8a2f.png#align=left&display=inline&height=321&margin=%5Bobject%20Object%5D&name=image.png&originHeight=642&originWidth=726&size=55017&status=done&style=none&width=363" alt="image.png"></p>
-<h2 id="3-点击当前知识库的设置"><a href="#3-点击当前知识库的设置" class="headerlink" title="3.点击当前知识库的设置"></a>3.点击当前知识库的设置</h2><p>获取当前知识库的登录名和路径<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588477857012-0a0094c3-e542-429d-bb28-20cd6d29c941.png#align=left&display=inline&height=531&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1062&originWidth=1828&size=124676&status=done&style=none&width=914" alt="image.png"></p>
-<h2 id="4-在将语雀文档同步到-hexo"><a href="#4-在将语雀文档同步到-hexo" class="headerlink" title="4.在将语雀文档同步到 hexo"></a>4.在将语雀文档同步到 hexo</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//先安装 yuque-hexo</span>
-npm install yuque<span class="token operator">-</span>hexo <span class="token operator">--</span>save</code></pre>
-<h3 id="1-修改-package-json，增加配置"><a href="#1-修改-package-json，增加配置" class="headerlink" title="1) 修改 package.json，增加配置:"></a>1) 修改 package.json，增加配置:</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"yuqueConfig"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"postPath"</span><span class="token punctuation">:</span> <span class="token string">"source/_posts/yuque"</span><span class="token punctuation">,</span>
-    <span class="token string">"cachePath"</span><span class="token punctuation">:</span> <span class="token string">"yuque.json"</span><span class="token punctuation">,</span>
-    <span class="token string">"mdNameFormat"</span><span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span>
-    <span class="token string">"adapter"</span><span class="token punctuation">:</span> <span class="token string">"hexo"</span><span class="token punctuation">,</span>
-    <span class="token string">"concurrency"</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-    <span class="token string">"baseUrl"</span><span class="token punctuation">:</span> <span class="token string">"https://www.yuque.com/api/v2"</span><span class="token punctuation">,</span>
-    <span class="token string">"login"</span><span class="token punctuation">:</span> <span class="token string">"leader755"</span><span class="token punctuation">,</span>
-    <span class="token string">"repo"</span><span class="token punctuation">:</span> <span class="token string">"blog"</span><span class="token punctuation">,</span>
-    <span class="token string">"token"</span><span class="token punctuation">:</span> <span class="token string">"在语雀上申请的 token"</span><span class="token punctuation">,</span>
-    <span class="token string">"onlyPublished"</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-    <span class="token string">"onlyPublic"</span><span class="token punctuation">:</span> <span class="token boolean">false</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>含义</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>postPath</td>
-<td>文档同步后生成的路径</td>
-<td>source/_posts/yuque</td>
-</tr>
-<tr>
-<td>cachePath</td>
-<td>文档下载缓存文件</td>
-<td>yuque.json</td>
-</tr>
-<tr>
-<td>mdNameFormat</td>
-<td>文件名命名方式 (title / slug)</td>
-<td>title</td>
-</tr>
-<tr>
-<td>adapter</td>
-<td>文档生成格式 (hexo/markdown)</td>
-<td>hexo</td>
-</tr>
-<tr>
-<td>concurrency</td>
-<td>下载文章并发数</td>
-<td>5</td>
-</tr>
-<tr>
-<td>baseUrl</td>
-<td>语雀 API 地址</td>
-<td>-</td>
-</tr>
-<tr>
-<td>login</td>
-<td>语雀 login (group), 也称为个人路径</td>
-<td>-</td>
-</tr>
-<tr>
-<td>repo</td>
-<td>语雀仓库短名称，也称为语雀知识库路径</td>
-<td>-</td>
-</tr>
-<tr>
-<td>onlyPublished</td>
-<td>只展示已经发布的文章</td>
-<td>false</td>
-</tr>
-<tr>
-<td>onlyPublic</td>
-<td>只展示公开文章</td>
-<td>false</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>slug 是语雀的永久链接名，一般是几个随机字母。</p>
-</blockquote>
-<h3 id="2-在-package-json-添加-scripts"><a href="#2-在-package-json-添加-scripts" class="headerlink" title="2)在 package.json 添加 scripts"></a>2)在 package.json 添加 scripts</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//添加以下命令行</span>
-<span class="token punctuation">{</span>
-  <span class="token string">"sync"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
-  <span class="token string">"clean:yuque"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo clean"</span>
-<span class="token punctuation">}</span></code></pre>
-<p>目前为止 scripts 命令行为</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
-    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
-    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
-    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span><span class="token punctuation">,</span>
-    <span class="token string">"sync"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
-    <span class="token string">"clean:yuque"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo clean"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<h3 id="3）关于在语雀上申请-token"><a href="#3）关于在语雀上申请-token" class="headerlink" title="3）关于在语雀上申请 token"></a>3）关于在语雀上申请 token</h3><p>点击账户个人–&gt;设置 –&gt;Token–&gt;新建 token</p>
-<h2 id="5-同步语雀文档到本地-hexo"><a href="#5-同步语雀文档到本地-hexo" class="headerlink" title="5.同步语雀文档到本地 hexo"></a>5.同步语雀文档到本地 hexo</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//同步文档</span>
-yuque<span class="token operator">-</span>hexo sync
-
-<span class="token comment" spellcheck="true">//清除本地缓存</span>
-yuque<span class="token operator">-</span>hexo clean</code></pre>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>yuque</tag>
       </tags>
   </entry>
   <entry>
@@ -1035,23 +1035,6 @@ limit<span class="token punctuation">:</span> <span class="token number">10000</
       </tags>
   </entry>
   <entry>
-    <title>mac 使用 homebrew</title>
-    <url>/leader755/c6cbe756.html</url>
-    <content><![CDATA[<p>使用 brew update 指令</p>
-<h1 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h1><p>Error: The following directories are not writable by your user:<br>/usr/local/sbin<br>/usr/local/share/man/man5<br>/usr/local/share/man/man7</p>
-<p>解决办法：</p>
-<pre class=" language-javascript"><code class="language-javascript">sudo chown <span class="token operator">-</span>R <span class="token function">$</span><span class="token punctuation">(</span>whoami<span class="token punctuation">)</span> <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token operator">*</span></code></pre>
-<p>重新调用即可：</p>
-<pre><code>brew update</code></pre>]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>mac</tag>
-        <tag>homebrew</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>serverless 和 hexo快速搭建静态博客</title>
     <url>/leader755/e209121b.html</url>
     <content><![CDATA[<p>##</p>
@@ -1089,6 +1072,23 @@ serverless<span class="token operator">/</span>sls <span class="token operator">
       </categories>
       <tags>
         <tag>serverless</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac 使用 homebrew</title>
+    <url>/leader755/c6cbe756.html</url>
+    <content><![CDATA[<p>使用 brew update 指令</p>
+<h1 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h1><p>Error: The following directories are not writable by your user:<br>/usr/local/sbin<br>/usr/local/share/man/man5<br>/usr/local/share/man/man7</p>
+<p>解决办法：</p>
+<pre class=" language-javascript"><code class="language-javascript">sudo chown <span class="token operator">-</span>R <span class="token function">$</span><span class="token punctuation">(</span>whoami<span class="token punctuation">)</span> <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token operator">*</span></code></pre>
+<p>重新调用即可：</p>
+<pre><code>brew update</code></pre>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>homebrew</tag>
       </tags>
   </entry>
   <entry>
