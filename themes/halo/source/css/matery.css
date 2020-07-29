@@ -6,6 +6,19 @@
   }
 }
 
+/* 处理标题 */
+@media only screen and (max-width: 666px) {
+  .logo-span.big-show {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 667px) {
+  .logo-span.big-show {
+    display: inline-block;
+  }
+}
+
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
   .container {
