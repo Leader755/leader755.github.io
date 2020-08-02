@@ -36,7 +36,7 @@ jobs:
         git clone "https://${{ secrets.GH_REF }}" deploy_git
         mv ./deploy_git/.git ./public/
         cd ./public
-        git config user.name "leader755"
+        git config user.name "Leader755"
         git config user.email "1181012791@qq.com"
         git add .
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
