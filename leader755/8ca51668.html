@@ -56,8 +56,8 @@
 
   <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
 
-<meta name="generator" content="Hexo 4.1.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body>
   <header class="navbar-fixed">
@@ -619,8 +619,8 @@
 
         <h2 id="1-首先找到-hexo-博客的主题文件夹目录"><a href="#1-首先找到-hexo-博客的主题文件夹目录" class="headerlink" title="1.首先找到 hexo 博客的主题文件夹目录"></a>1.首先找到 hexo 博客的主题文件夹目录</h2><pre class=" language-javascript"><code class="language-javascript">D<span class="token punctuation">:</span> \Blog_leader755\Blog_leader755\themes\Blog_leader755\themes\halo\Blog_leader755\themes\halo\layout\Blog_leader755\themes\halo\layout\_partial\Blog_leader755\themes\halo\layout\_partial\head<span class="token punctuation">.</span>ejs<span class="token punctuation">;</span></code></pre>
 <p>修改上述路径的文件 head.ejs ，因为每个页面都会包含 head 这个文件，在里面加上一行代码就能解决。</p>
-<h2 id="2-加入此行代码到页面"><a href="#2-加入此行代码到页面" class="headerlink" title="2.加入此行代码到页面"></a>2.加入此行代码到页面<head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 4.1.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
-</head></h2><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"referrer"</span> content<span class="token operator">=</span><span class="token string">"no-referrer"</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
+<h2 id="2-加入此行代码到页面"><a href="#2-加入此行代码到页面" class="headerlink" title="2.加入此行代码到页面"></a>2.加入此行代码到页面<head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head></h2><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"referrer"</span> content<span class="token operator">=</span><span class="token string">"no-referrer"</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
 <h2 id="3-暂时解决载了外链限制的问题"><a href="#3-暂时解决载了外链限制的问题" class="headerlink" title="3.暂时解决载了外链限制的问题"></a>3.暂时解决载了外链限制的问题</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595671131433-aced588a-b41e-406a-acf6-6133df722701.png#align=left&display=inline&height=195&margin=%5Bobject%20Object%5D&name=image.png&originHeight=390&originWidth=1288&size=105257&status=done&style=none&width=644" alt="image.png"></p>
 <h2 id="4-随之而来的问题出现了"><a href="#4-随之而来的问题出现了" class="headerlink" title="4.随之而来的问题出现了"></a>4.随之而来的问题出现了</h2><p>如果你同时使用了<a href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子</a>(<a href="https://busuanzi.ibruce.info/)统计，你会发现问题，查看控制台会出现不蒜子出现跨域的请求。这是为什么呢。由于使用了" target="_blank" rel="noopener">https://busuanzi.ibruce.info/)统计，你会发现问题，查看控制台会出现不蒜子出现跨域的请求。这是为什么呢。由于使用了</a> no-referrer。</p>
 <p>关于 no-refferrer 的相关问题可以查看此篇文章，在这里就不一一解释，直接给出解决方案。</p>
@@ -1533,7 +1533,7 @@ $(function () {
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1596342620360')
+  navigator.serviceWorker.register('/sw.js?t=1596343958170')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
