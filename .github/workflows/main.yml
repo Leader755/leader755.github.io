@@ -1,6 +1,9 @@
 name: Hexo Blog CI
  
-on: [push, repository_dispatch]
+on: 
+ push:
+    branches:
+      - master
  
 jobs:
   build:
