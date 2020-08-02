@@ -1,4 +1,4 @@
-name: Blog CI/CD
+name: CI Hexo Blog Deploy LTS
  
 on: [push, repository_dispatch]
  
@@ -26,6 +26,7 @@ jobs:
       run: |
         npm install hexo-cli -g
         npm install yuque-hexo -g
+        npm install hexo-deployer-git --save
         npm install
         yuque-hexo sync
     - name: Generate files
@@ -33,11 +34,12 @@ jobs:
        
     - name: Deploy blog
       run: |
-        git clone "https://${{ secrets.GH_REF }}" deploy_git
-        mv ./deploy_git/.git ./public/
-        cd ./public
+       # git clone "https://${{ secrets.GH_REF }}" deploy_git
+       # mv ./deploy_git/.git ./public/
+       # cd ./public
         git config user.name "Leader755"
         git config user.email "1181012791@qq.com"
-        git add .
-        git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-        git push --force --quiet "https://${{ secrets.GH_TOKEN }}@${{ secrets.GH_REF }}" master:master
+        hexo deploy
+       # git add .
+       # git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+       # git push --force --quiet "https://${{ secrets.GH_TOKEN }}@${{ secrets.GH_REF }}" master:master
