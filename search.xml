@@ -107,6 +107,20 @@ git config <span class="token operator">--</span>global user<span class="token p
       </tags>
   </entry>
   <entry>
+    <title>4.mac 上使用 vi</title>
+    <url>/leader755/896b4ef0.html</url>
+    <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
+<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>vi</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5.hexo文档部署到 Github和 coding</title>
     <url>/leader755/38b922c9.html</url>
     <content><![CDATA[<h2 id="1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："><a href="#1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：" class="headerlink" title="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："></a>1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&size=44477&status=done&style=none&width=526" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#align=left&display=inline&height=120&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&size=33032&status=done&style=none&width=486" alt="image.png"><br>如果不部署到 coding，就只写 github 就行。</p>
@@ -140,284 +154,6 @@ hexo g <span class="token operator">-</span>d</code></pre>
       <tags>
         <tag>github</tag>
         <tag>coding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>7.hexo主题配置</title>
-    <url>/leader755/b0c81b21.html</url>
-    <content><![CDATA[<h2 id="1-hexo-主题官网"><a href="#1-hexo-主题官网" class="headerlink" title="1.hexo 主题官网"></a>1.hexo 主题官网</h2><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a></p>
-<h2 id="2-应用以及下载主题"><a href="#2-应用以及下载主题" class="headerlink" title="2.应用以及下载主题"></a>2.应用以及下载主题</h2><p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br>为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>， 后者称为 <strong>主题配置文件</strong>。（必看）</p>
-<h3 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1.安装主题"></a>1.安装主题</h3><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至<strong>站点目录(**</strong>即根目录下的文件_config.yml 文件*<strong>*)</strong>的  <code>themes</code>  目录下， 然后修改下配置文件即可。next 为主题名</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：</span>
-$ cd your<span class="token operator">-</span>hexo<span class="token operator">-</span>site
-$ git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>iissnan<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next</code></pre>
-<p>###</p>
-<h3 id="2-启用主题"><a href="#2-启用主题" class="headerlink" title="2.启用主题"></a>2.启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next(主题名)</code>。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588326982972-1828234c-3a21-48e1-ac1e-5b57480ac6f0.png#align=left&display=inline&height=111&margin=%5Bobject%20Object%5D&name=image.png&originHeight=222&originWidth=1012&size=24250&status=done&style=none&width=506" alt="image.png"></p>
-<pre class=" language-javascript"><code class="language-javascript">theme<span class="token punctuation">:</span> next<span class="token punctuation">;</span></code></pre>
-<h4 id="2-1-本文使用的是（hexo-theme-halo）主题"><a href="#2-1-本文使用的是（hexo-theme-halo）主题" class="headerlink" title="2.1 本文使用的是（hexo-theme-halo）主题"></a>2.1 本文使用的是（hexo-theme-halo）主题</h4><p>1&gt;直接下载 git  clone</p>
-<pre class=" language-javascript"><code class="language-javascript">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>hongweifuture<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>halo<span class="token punctuation">.</span>git themes<span class="token operator">/</span>halo</code></pre>
-<p>2&gt;直接将<code>themes/halo/config/source</code>内所有内容拷贝到<code>Hexo</code>根目录下的<code>source</code>文件夹内替换</p>
-<h4 id="2-2-配置切换主题"><a href="#2-2-配置切换主题" class="headerlink" title="2.2 配置切换主题"></a>2.2 配置切换主题</h4><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: halo</code><br><code>根目录_config.yml</code> 文件的其它修改建议:</p>
-<ul>
-<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>[http://xxx.github.io](http://xxx.github.io)</code>）。</li>
-<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
-<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
-</ul>
-<h3 id="3-验证主题"><a href="#3-验证主题" class="headerlink" title="3.验证主题"></a>3.验证主题</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//最好先清除缓存</span>
-hexo clean
-
-<span class="token comment" spellcheck="true">//打包</span>
-hexo g
-
-<span class="token comment" spellcheck="true">//启动</span>
-hexo s
-
-<span class="token comment" spellcheck="true">//发布到 github</span>
-hexo s <span class="token operator">-</span>d</code></pre>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>主题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4.mac 上使用 vi</title>
-    <url>/leader755/896b4ef0.html</url>
-    <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
-<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>mac</tag>
-        <tag>vi</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>8.语雀文档同步到 hexo</title>
-    <url>/leader755/bad88671.html</url>
-    <content><![CDATA[<h2 id="1-去官网注册账号"><a href="#1-去官网注册账号" class="headerlink" title="1.去官网注册账号"></a><a href="https://www.yuque.com/login?platform=wechat&inviteToken=d250cce7a9bfb322880f20b1d1c4cdc4e59fa5e9f65dd25b1c2d2e774a076c56" target="_blank" rel="noopener">1</a>.去官网注册账号</h2><p><a href="https://www.yuque.com/login?platform=wechat&inviteToken=d250cce7a9bfb322880f20b1d1c4cdc4e59fa5e9f65dd25b1c2d2e774a076c56" target="_blank" rel="noopener">点我去官网</a></p>
-<h2 id="2-创建知识库"><a href="#2-创建知识库" class="headerlink" title="2.创建知识库"></a>2.创建知识库</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588478034103-86a7c5cc-71cb-4fd5-ba96-5eee9a2e8a2f.png#align=left&display=inline&height=321&margin=%5Bobject%20Object%5D&name=image.png&originHeight=642&originWidth=726&size=55017&status=done&style=none&width=363" alt="image.png"></p>
-<h2 id="3-点击当前知识库的设置"><a href="#3-点击当前知识库的设置" class="headerlink" title="3.点击当前知识库的设置"></a>3.点击当前知识库的设置</h2><p>获取当前知识库的登录名和路径<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588477857012-0a0094c3-e542-429d-bb28-20cd6d29c941.png#align=left&display=inline&height=531&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1062&originWidth=1828&size=124676&status=done&style=none&width=914" alt="image.png"></p>
-<h2 id="4-在将语雀文档同步到-hexo"><a href="#4-在将语雀文档同步到-hexo" class="headerlink" title="4.在将语雀文档同步到 hexo"></a>4.在将语雀文档同步到 hexo</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//先安装 yuque-hexo</span>
-npm install yuque<span class="token operator">-</span>hexo <span class="token operator">--</span>save</code></pre>
-<h3 id="1-修改-package-json，增加配置"><a href="#1-修改-package-json，增加配置" class="headerlink" title="1) 修改 package.json，增加配置:"></a>1) 修改 package.json，增加配置:</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"yuqueConfig"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"postPath"</span><span class="token punctuation">:</span> <span class="token string">"source/_posts/yuque"</span><span class="token punctuation">,</span>
-    <span class="token string">"cachePath"</span><span class="token punctuation">:</span> <span class="token string">"yuque.json"</span><span class="token punctuation">,</span>
-    <span class="token string">"mdNameFormat"</span><span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span>
-    <span class="token string">"adapter"</span><span class="token punctuation">:</span> <span class="token string">"hexo"</span><span class="token punctuation">,</span>
-    <span class="token string">"concurrency"</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-    <span class="token string">"baseUrl"</span><span class="token punctuation">:</span> <span class="token string">"https://www.yuque.com/api/v2"</span><span class="token punctuation">,</span>
-    <span class="token string">"login"</span><span class="token punctuation">:</span> <span class="token string">"leader755"</span><span class="token punctuation">,</span>
-    <span class="token string">"repo"</span><span class="token punctuation">:</span> <span class="token string">"blog"</span><span class="token punctuation">,</span>
-    <span class="token string">"token"</span><span class="token punctuation">:</span> <span class="token string">"在语雀上申请的 token"</span><span class="token punctuation">,</span>
-    <span class="token string">"onlyPublished"</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-    <span class="token string">"onlyPublic"</span><span class="token punctuation">:</span> <span class="token boolean">false</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>含义</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>postPath</td>
-<td>文档同步后生成的路径</td>
-<td>source/_posts/yuque</td>
-</tr>
-<tr>
-<td>cachePath</td>
-<td>文档下载缓存文件</td>
-<td>yuque.json</td>
-</tr>
-<tr>
-<td>mdNameFormat</td>
-<td>文件名命名方式 (title / slug)</td>
-<td>title</td>
-</tr>
-<tr>
-<td>adapter</td>
-<td>文档生成格式 (hexo/markdown)</td>
-<td>hexo</td>
-</tr>
-<tr>
-<td>concurrency</td>
-<td>下载文章并发数</td>
-<td>5</td>
-</tr>
-<tr>
-<td>baseUrl</td>
-<td>语雀 API 地址</td>
-<td>-</td>
-</tr>
-<tr>
-<td>login</td>
-<td>语雀 login (group), 也称为个人路径</td>
-<td>-</td>
-</tr>
-<tr>
-<td>repo</td>
-<td>语雀仓库短名称，也称为语雀知识库路径</td>
-<td>-</td>
-</tr>
-<tr>
-<td>onlyPublished</td>
-<td>只展示已经发布的文章</td>
-<td>false</td>
-</tr>
-<tr>
-<td>onlyPublic</td>
-<td>只展示公开文章</td>
-<td>false</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>slug 是语雀的永久链接名，一般是几个随机字母。</p>
-</blockquote>
-<h3 id="2-在-package-json-添加-scripts"><a href="#2-在-package-json-添加-scripts" class="headerlink" title="2)在 package.json 添加 scripts"></a>2)在 package.json 添加 scripts</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//添加以下命令行</span>
-<span class="token punctuation">{</span>
-  <span class="token string">"sync"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
-  <span class="token string">"clean:yuque"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo clean"</span>
-<span class="token punctuation">}</span></code></pre>
-<p>目前为止 scripts 命令行为</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
-    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
-    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
-    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span><span class="token punctuation">,</span>
-    <span class="token string">"sync"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
-    <span class="token string">"clean:yuque"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo clean"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<h3 id="3）关于在语雀上申请-token"><a href="#3）关于在语雀上申请-token" class="headerlink" title="3）关于在语雀上申请 token"></a>3）关于在语雀上申请 token</h3><p>点击账户个人–&gt;设置 –&gt;Token–&gt;新建 token</p>
-<h2 id="5-同步语雀文档到本地-hexo"><a href="#5-同步语雀文档到本地-hexo" class="headerlink" title="5.同步语雀文档到本地 hexo"></a>5.同步语雀文档到本地 hexo</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//同步文档</span>
-yuque<span class="token operator">-</span>hexo sync
-
-<span class="token comment" spellcheck="true">//清除本地缓存</span>
-yuque<span class="token operator">-</span>hexo clean</code></pre>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>yuque</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客提交百度和Google收录</title>
-    <url>/leader755/5c84a3bd.html</url>
-    <content><![CDATA[<p>一个网站的 SEO 对一个网站非常重要，<a href="https://link.jianshu.com/?t=https://baike.baidu.com/item/SEO/102990?fr=aladdin" target="_blank" rel="noopener">SEO</a>指的是搜索引擎优化。通过搜索引擎优化，可以提高网站的网站关键词排名以及博客文章的曝光度。一般来说，我们针对百度和 Google 这两个搜索引擎进行优化，提高对网站资源的索引量，使我们的文章更容易被发现。虽然我的博客的主要读者是我自己，但也不妨碍我做些优化，对吧！接下来向大家展示如何使博客被百度和 Google 收录。</p>
-<h3 id="站点地图"><a href="#站点地图" class="headerlink" title="站点地图"></a>站点地图</h3><p>站点地图即<a href="https://link.jianshu.com/?t=https://baike.baidu.com/item/sitemap/6241567?fr=aladdin" target="_blank" rel="noopener">sitemap</a>， 是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
-<h4 id="生成站点地图"><a href="#生成站点地图" class="headerlink" title="生成站点地图"></a>生成站点地图</h4><p>安装百度和 Google 的站点地图生成插件：</p>
-<pre><code>npm install hexo-generator-baidu-sitemap --save
-npm install hexo-generator-sitemap --save</code></pre><h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>修改站点配置文件<code>_config.yml</code>，添加以下内容：</p>
-<pre><code># 自动生成sitemap
-sitemap:
-  path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml</code></pre><h4 id="生成和部署"><a href="#生成和部署" class="headerlink" title="生成和部署"></a>生成和部署</h4><p>执行生成和部署命令：</p>
-<p>此时，进入<code>public</code>目录，你会发现里面有<code>sitemap.xml</code>和<code>baidusitemap.xml</code>两个文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这两个文件来抓取网站页面。</p>
-<blockquote>
-<ul>
-<li>sitemap.xml 用来提交给 Google</li>
-<li>baidusitemap.xml 用来提交给百度</li>
-</ul>
-</blockquote>
-<h3 id="百度站长平台"><a href="#百度站长平台" class="headerlink" title="百度站长平台"></a>百度站长平台</h3><p>通过百度站长平台进行链接提交，增加网站的索引量。我的这篇文章：<a href="https://link.jianshu.com/?t=http://fengdi.org/2017/08/07/Hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96.html" target="_blank" rel="noopener">Hexo 博客之速度优化</a> 已经提到过 Github 对百度爬虫进行了屏蔽，因此百度爬取不到 Github 上的页面，如果你按照这篇文章同时部署到 Coding 上，那百度就可以抓取到，因为此时百度抓取的是位于 Coding 上的博客网页。</p>
-<p>注册并登录百度站长平台：<a href="https://link.jianshu.com/?t=http://zhanzhang.baidu.com/" target="_blank" rel="noopener">百度站长平台</a></p>
-<h4 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h4><p>选择添加站点：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-9bca3b38a6c1685d.png#align=left&display=inline&height=331&margin=%5Bobject%20Object%5D&originHeight=331&originWidth=982&status=done&style=none&width=982" alt=""></p>
-<h4 id="验证站点"><a href="#验证站点" class="headerlink" title="验证站点"></a>验证站点</h4><p>进行站点验证：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-51233e024040d8d7.png#align=left&display=inline&height=533&margin=%5Bobject%20Object%5D&originHeight=533&originWidth=982&status=done&style=none&width=982" alt=""></p>
-<p>这里我们选择<code>文件验证</code>，下载验证文件到本地，放置在<code>themes/next/source</code>目录下。执行生成和部署命令：</p>
-<p>点击完成验证即可。</p>
-<h4 id="链接提交"><a href="#链接提交" class="headerlink" title="链接提交"></a>链接提交</h4><p>百度站长平台的链接提交方式分为自动提交和手动提交两种，此处只讲自动提交，手动提交按照要求操作即可。</p>
-<h5 id="主动推送"><a href="#主动推送" class="headerlink" title="主动推送"></a>主动推送</h5><p>主动推送最为快速的提交方式，是被百度收录最快的推送方式。主动推送可以通过安装插件实现：</p>
-<pre><code>npm install hexo-baidu-url-submit --save</code></pre><p>修改站点配置文件<code>_config.yml</code>，添加以下内容：</p>
-<pre><code>baidu_url_submit:
-  count: 5 ## 提交最新的五个链接
-  host: www.hui-wang.info ## 百度站长平台中注册的域名
-  token: your_token ## 准入秘钥
-  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里</code></pre><p>其次，记得查看<code>_config.yml</code>文件中 url 的值， 必须包含是百度站长平台注册的域名， 比如:</p>
-<pre><code># URL
-url: http://fengdi.org
-root: /
-permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 deployer:</p>
-<pre><code>deploy:
-- type: git ## 这是我原来的deployer
-  repo:
-  branch:
-- type: baidu_url_submitter ## 添加这里内容即可</code></pre><p>其主动推送的实现原理如下：</p>
-<ul>
-<li>新链接的产生， <code>hexo generate</code> 会产生一个文本文件，里面包含最新的链接</li>
-<li>新链接的提交， <code>hexo deploy</code> 会从上述文件中读取链接，提交至百度搜索引擎</li>
-</ul>
-<h5 id="自动推送"><a href="#自动推送" class="headerlink" title="自动推送"></a>自动推送</h5><p>安装自动推送 JS 代码的网页，在页面被访问时，页面 URL 将立即被推送给百度。</p>
-<p>修改主题目录下的<code>layout/post.swig</code>文件，末尾添加自动推送代码，代码如下：</p>
-<pre><code>&lt;script&gt;
-(function(){
-    var bp = document.createElement(&#39;script&#39;);
-    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
-    if (curProtocol === &#39;https&#39;) {
-        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;
-    }
-    else {
-        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
-    }
-    var s = document.getElementsByTagName(&quot;script&quot;)[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-&lt;/script&gt;</code></pre><h5 id="sitemap-提交"><a href="#sitemap-提交" class="headerlink" title="sitemap 提交"></a>sitemap 提交</h5><p>我们之前已经说过如何生成 sitemap 文件，这时就需要我们生成的 sitemap 文件了。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-cfb7e4bd12e2deb8.png#align=left&display=inline&height=443&margin=%5Bobject%20Object%5D&originHeight=443&originWidth=981&status=done&style=none&width=981" alt=""></p>
-<p>输入以下内容到输入框里：</p>
-<pre><code>http://fengdi.org/baidusitemap.xml</code></pre><p>输入验证码后，提交即可。一般情况下，百度会在一个小时内处理该文件，并提取其中的 url。</p>
-<h3 id="Google-网站站长"><a href="#Google-网站站长" class="headerlink" title="Google 网站站长"></a>Google 网站站长</h3><p>在提交 Google 之前，要解决一个大家都知道的问题，关于如何登录 Google。这里就不再说了，相信你们有办法。</p>
-<h4 id="添加站点-1"><a href="#添加站点-1" class="headerlink" title="添加站点"></a>添加站点</h4><p>登录<a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/#?modal_active=none" target="_blank" rel="noopener">Google 网站站长</a>，进入<code>Search Console</code>，点击<code>添加属性</code>进行站点添加：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-9a7ce99e3aaaf1a9.png#align=left&display=inline&height=477&margin=%5Bobject%20Object%5D&originHeight=477&originWidth=1364&status=done&style=none&width=1364" alt=""></p>
-<h4 id="验证站点-1"><a href="#验证站点-1" class="headerlink" title="验证站点"></a>验证站点</h4><p>同百度平台一样，下载 Google 验证文件，放到 source 下<code>themes/next/source</code>目录中：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-2a7e8f527d0b1b42.png#align=left&display=inline&height=618&margin=%5Bobject%20Object%5D&originHeight=618&originWidth=1210&status=done&style=none&width=1210" alt=""></p>
-<p>重新生成和部署：</p>
-<p>部署完成之后，进行验证即可。</p>
-<h4 id="添加站点地图"><a href="#添加站点地图" class="headerlink" title="添加站点地图"></a>添加站点地图</h4><p>在<code>抓取</code>里面，点击<code>站点地图</code>，进行添加：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5635196-7071aa22f10e2c28.png#align=left&display=inline&height=507&margin=%5Bobject%20Object%5D&originHeight=507&originWidth=1353&status=done&style=none&width=1353" alt=""></p>
-<p>好了，到这里文章就结束了。如果你之前没有把网站部署到 Coding 上，你的网站百度是爬取不到的，关于如何部署请参阅：<a href="https://link.jianshu.com/?t=http://fengdi.org/2017/08/07/Hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96.html" target="_blank" rel="noopener">Hexo 博客之速度优化</a></p>
-<p><a href="https://link.jianshu.com/?t=http://svend.cc/posts/22980/" target="_blank" rel="noopener">Hexo 系列：（四）Hexo 博客提交百度和 Google 收录</a></p>
-<p>文文章转载自：<a href="https://www.jianshu.com/p/f8ec422ebd52" target="_blank" rel="noopener">https://www.jianshu.com/p/f8ec422ebd52</a></p>
-<p>**</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>百度收录</tag>
-        <tag>谷歌收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PicGo+ 又拍云创建个人图床工具</title>
-    <url>/leader755/765d527f.html</url>
-    <content><![CDATA[<h2 id="1-首先注册又拍云账号"><a href="#1-首先注册又拍云账号" class="headerlink" title="1.首先注册又拍云账号"></a>1.首先注册又拍云账号</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595039006495-6efd0c2e-cd03-40da-a7ab-1fd92ba5e92a.png#align=left&display=inline&height=686&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1372&originWidth=2560&size=163057&status=done&style=none&width=1280" alt="image.png"></p>
-<h2 id="2-创建服务"><a href="#2-创建服务" class="headerlink" title="2.创建服务"></a>2.创建服务</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595039347598-96d59ff1-aa83-45c2-bf56-2165d3dc572a.png#align=left&display=inline&height=689&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1378&originWidth=2560&size=226216&status=done&style=none&width=1280" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595039428519-cb3f789e-02c0-43c4-8ff3-30ca00b15b8a.png#align=left&display=inline&height=378&margin=%5Bobject%20Object%5D&name=image.png&originHeight=756&originWidth=2400&size=87492&status=done&style=none&width=1200" alt="image.png"></p>
-<h2 id="3-审核完成后（域名需要备案，10-分钟以内审核完毕）"><a href="#3-审核完成后（域名需要备案，10-分钟以内审核完毕）" class="headerlink" title="3.审核完成后（域名需要备案，10 分钟以内审核完毕）"></a>3.审核完成后（域名需要备案，10 分钟以内审核完毕）</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595048966006-4c8f16b1-01ba-40f7-9e08-4fff73dd4a8c.png#align=left&display=inline&height=688&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1376&originWidth=2552&size=156189&status=done&style=none&width=1276" alt="image.png"></p>
-<h2 id="4-点击账户管理，添加操作员"><a href="#4-点击账户管理，添加操作员" class="headerlink" title="4.点击账户管理，添加操作员"></a>4.点击账户管理，添加操作员</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595048861058-8644fd49-a611-4466-8248-61fb8a8dc573.png#align=left&display=inline&height=681&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1362&originWidth=2558&size=215488&status=done&style=none&width=1279" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595049324214-9ee14c50-a4a5-4594-a587-5c53ec5394c3.png#align=left&display=inline&height=573&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1146&originWidth=1192&size=153530&status=done&style=none&width=596" alt="image.png"></p>
-<h2 id="5-PicGo-的设置"><a href="#5-PicGo-的设置" class="headerlink" title="5.PicGo 的设置"></a>5.PicGo 的设置</h2><ul>
-<li><strong>存储空间和存储员都是自己配置好的，操作密码也是复制好的。</strong></li>
-<li><strong>注意的是加速域名最好加上<code>http/https</code>，不然会无法在 PicGo 预览</strong></li>
-<li><strong>指定存储路径可填可不填</strong></li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595049428328-c5fc08be-d0ed-4560-9965-2cd128d347e1.png#align=left&display=inline&height=562&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1124&originWidth=1824&size=421187&status=done&style=none&width=912" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>图床</category>
-      </categories>
-      <tags>
-        <tag>PicGo</tag>
-        <tag>又拍云</tag>
       </tags>
   </entry>
   <entry>
@@ -789,6 +525,270 @@ permalink_defaults:
 ]]></content>
       <tags>
         <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>7.hexo主题配置</title>
+    <url>/leader755/b0c81b21.html</url>
+    <content><![CDATA[<h2 id="1-hexo-主题官网"><a href="#1-hexo-主题官网" class="headerlink" title="1.hexo 主题官网"></a>1.hexo 主题官网</h2><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a></p>
+<h2 id="2-应用以及下载主题"><a href="#2-应用以及下载主题" class="headerlink" title="2.应用以及下载主题"></a>2.应用以及下载主题</h2><p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br>为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>， 后者称为 <strong>主题配置文件</strong>。（必看）</p>
+<h3 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1.安装主题"></a>1.安装主题</h3><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至<strong>站点目录(**</strong>即根目录下的文件_config.yml 文件*<strong>*)</strong>的  <code>themes</code>  目录下， 然后修改下配置文件即可。next 为主题名</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：</span>
+$ cd your<span class="token operator">-</span>hexo<span class="token operator">-</span>site
+$ git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>iissnan<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next</code></pre>
+<p>###</p>
+<h3 id="2-启用主题"><a href="#2-启用主题" class="headerlink" title="2.启用主题"></a>2.启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next(主题名)</code>。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588326982972-1828234c-3a21-48e1-ac1e-5b57480ac6f0.png#align=left&display=inline&height=111&margin=%5Bobject%20Object%5D&name=image.png&originHeight=222&originWidth=1012&size=24250&status=done&style=none&width=506" alt="image.png"></p>
+<pre class=" language-javascript"><code class="language-javascript">theme<span class="token punctuation">:</span> next<span class="token punctuation">;</span></code></pre>
+<h4 id="2-1-本文使用的是（hexo-theme-halo）主题"><a href="#2-1-本文使用的是（hexo-theme-halo）主题" class="headerlink" title="2.1 本文使用的是（hexo-theme-halo）主题"></a>2.1 本文使用的是（hexo-theme-halo）主题</h4><p>1&gt;直接下载 git  clone</p>
+<pre class=" language-javascript"><code class="language-javascript">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>hongweifuture<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>halo<span class="token punctuation">.</span>git themes<span class="token operator">/</span>halo</code></pre>
+<p>2&gt;直接将<code>themes/halo/config/source</code>内所有内容拷贝到<code>Hexo</code>根目录下的<code>source</code>文件夹内替换</p>
+<h4 id="2-2-配置切换主题"><a href="#2-2-配置切换主题" class="headerlink" title="2.2 配置切换主题"></a>2.2 配置切换主题</h4><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: halo</code><br><code>根目录_config.yml</code> 文件的其它修改建议:</p>
+<ul>
+<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>[http://xxx.github.io](http://xxx.github.io)</code>）。</li>
+<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
+<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
+</ul>
+<h3 id="3-验证主题"><a href="#3-验证主题" class="headerlink" title="3.验证主题"></a>3.验证主题</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//最好先清除缓存</span>
+hexo clean
+
+<span class="token comment" spellcheck="true">//打包</span>
+hexo g
+
+<span class="token comment" spellcheck="true">//启动</span>
+hexo s
+
+<span class="token comment" spellcheck="true">//发布到 github</span>
+hexo s <span class="token operator">-</span>d</code></pre>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>主题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>8.语雀文档同步到 hexo</title>
+    <url>/leader755/bad88671.html</url>
+    <content><![CDATA[<h2 id="1-去官网注册账号"><a href="#1-去官网注册账号" class="headerlink" title="1.去官网注册账号"></a><a href="https://www.yuque.com/login?platform=wechat&inviteToken=d250cce7a9bfb322880f20b1d1c4cdc4e59fa5e9f65dd25b1c2d2e774a076c56" target="_blank" rel="noopener">1</a>.去官网注册账号</h2><p><a href="https://www.yuque.com/login?platform=wechat&inviteToken=d250cce7a9bfb322880f20b1d1c4cdc4e59fa5e9f65dd25b1c2d2e774a076c56" target="_blank" rel="noopener">点我去官网</a></p>
+<h2 id="2-创建知识库"><a href="#2-创建知识库" class="headerlink" title="2.创建知识库"></a>2.创建知识库</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588478034103-86a7c5cc-71cb-4fd5-ba96-5eee9a2e8a2f.png#align=left&display=inline&height=321&margin=%5Bobject%20Object%5D&name=image.png&originHeight=642&originWidth=726&size=55017&status=done&style=none&width=363" alt="image.png"></p>
+<h2 id="3-点击当前知识库的设置"><a href="#3-点击当前知识库的设置" class="headerlink" title="3.点击当前知识库的设置"></a>3.点击当前知识库的设置</h2><p>获取当前知识库的登录名和路径<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588477857012-0a0094c3-e542-429d-bb28-20cd6d29c941.png#align=left&display=inline&height=531&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1062&originWidth=1828&size=124676&status=done&style=none&width=914" alt="image.png"></p>
+<h2 id="4-在将语雀文档同步到-hexo"><a href="#4-在将语雀文档同步到-hexo" class="headerlink" title="4.在将语雀文档同步到 hexo"></a>4.在将语雀文档同步到 hexo</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//先安装 yuque-hexo</span>
+npm install yuque<span class="token operator">-</span>hexo <span class="token operator">--</span>save</code></pre>
+<h3 id="1-修改-package-json，增加配置"><a href="#1-修改-package-json，增加配置" class="headerlink" title="1) 修改 package.json，增加配置:"></a>1) 修改 package.json，增加配置:</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"yuqueConfig"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"postPath"</span><span class="token punctuation">:</span> <span class="token string">"source/_posts/yuque"</span><span class="token punctuation">,</span>
+    <span class="token string">"cachePath"</span><span class="token punctuation">:</span> <span class="token string">"yuque.json"</span><span class="token punctuation">,</span>
+    <span class="token string">"mdNameFormat"</span><span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span>
+    <span class="token string">"adapter"</span><span class="token punctuation">:</span> <span class="token string">"hexo"</span><span class="token punctuation">,</span>
+    <span class="token string">"concurrency"</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token string">"baseUrl"</span><span class="token punctuation">:</span> <span class="token string">"https://www.yuque.com/api/v2"</span><span class="token punctuation">,</span>
+    <span class="token string">"login"</span><span class="token punctuation">:</span> <span class="token string">"leader755"</span><span class="token punctuation">,</span>
+    <span class="token string">"repo"</span><span class="token punctuation">:</span> <span class="token string">"blog"</span><span class="token punctuation">,</span>
+    <span class="token string">"token"</span><span class="token punctuation">:</span> <span class="token string">"在语雀上申请的 token"</span><span class="token punctuation">,</span>
+    <span class="token string">"onlyPublished"</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">"onlyPublic"</span><span class="token punctuation">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>含义</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>postPath</td>
+<td>文档同步后生成的路径</td>
+<td>source/_posts/yuque</td>
+</tr>
+<tr>
+<td>cachePath</td>
+<td>文档下载缓存文件</td>
+<td>yuque.json</td>
+</tr>
+<tr>
+<td>mdNameFormat</td>
+<td>文件名命名方式 (title / slug)</td>
+<td>title</td>
+</tr>
+<tr>
+<td>adapter</td>
+<td>文档生成格式 (hexo/markdown)</td>
+<td>hexo</td>
+</tr>
+<tr>
+<td>concurrency</td>
+<td>下载文章并发数</td>
+<td>5</td>
+</tr>
+<tr>
+<td>baseUrl</td>
+<td>语雀 API 地址</td>
+<td>-</td>
+</tr>
+<tr>
+<td>login</td>
+<td>语雀 login (group), 也称为个人路径</td>
+<td>-</td>
+</tr>
+<tr>
+<td>repo</td>
+<td>语雀仓库短名称，也称为语雀知识库路径</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onlyPublished</td>
+<td>只展示已经发布的文章</td>
+<td>false</td>
+</tr>
+<tr>
+<td>onlyPublic</td>
+<td>只展示公开文章</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>slug 是语雀的永久链接名，一般是几个随机字母。</p>
+</blockquote>
+<h3 id="2-在-package-json-添加-scripts"><a href="#2-在-package-json-添加-scripts" class="headerlink" title="2)在 package.json 添加 scripts"></a>2)在 package.json 添加 scripts</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//添加以下命令行</span>
+<span class="token punctuation">{</span>
+  <span class="token string">"sync"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
+  <span class="token string">"clean:yuque"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo clean"</span>
+<span class="token punctuation">}</span></code></pre>
+<p>目前为止 scripts 命令行为</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
+    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
+    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span><span class="token punctuation">,</span>
+    <span class="token string">"sync"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean:yuque"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo clean"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h3 id="3）关于在语雀上申请-token"><a href="#3）关于在语雀上申请-token" class="headerlink" title="3）关于在语雀上申请 token"></a>3）关于在语雀上申请 token</h3><p>点击账户个人–&gt;设置 –&gt;Token–&gt;新建 token</p>
+<h2 id="5-同步语雀文档到本地-hexo"><a href="#5-同步语雀文档到本地-hexo" class="headerlink" title="5.同步语雀文档到本地 hexo"></a>5.同步语雀文档到本地 hexo</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//同步文档</span>
+yuque<span class="token operator">-</span>hexo sync
+
+<span class="token comment" spellcheck="true">//清除本地缓存</span>
+yuque<span class="token operator">-</span>hexo clean</code></pre>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>yuque</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客提交百度和Google收录</title>
+    <url>/leader755/5c84a3bd.html</url>
+    <content><![CDATA[<p>一个网站的 SEO 对一个网站非常重要，<a href="https://link.jianshu.com/?t=https://baike.baidu.com/item/SEO/102990?fr=aladdin" target="_blank" rel="noopener">SEO</a>指的是搜索引擎优化。通过搜索引擎优化，可以提高网站的网站关键词排名以及博客文章的曝光度。一般来说，我们针对百度和 Google 这两个搜索引擎进行优化，提高对网站资源的索引量，使我们的文章更容易被发现。虽然我的博客的主要读者是我自己，但也不妨碍我做些优化，对吧！接下来向大家展示如何使博客被百度和 Google 收录。</p>
+<h3 id="站点地图"><a href="#站点地图" class="headerlink" title="站点地图"></a>站点地图</h3><p>站点地图即<a href="https://link.jianshu.com/?t=https://baike.baidu.com/item/sitemap/6241567?fr=aladdin" target="_blank" rel="noopener">sitemap</a>， 是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
+<h4 id="生成站点地图"><a href="#生成站点地图" class="headerlink" title="生成站点地图"></a>生成站点地图</h4><p>安装百度和 Google 的站点地图生成插件：</p>
+<pre><code>npm install hexo-generator-baidu-sitemap --save
+npm install hexo-generator-sitemap --save</code></pre><h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>修改站点配置文件<code>_config.yml</code>，添加以下内容：</p>
+<pre><code># 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml</code></pre><h4 id="生成和部署"><a href="#生成和部署" class="headerlink" title="生成和部署"></a>生成和部署</h4><p>执行生成和部署命令：</p>
+<p>此时，进入<code>public</code>目录，你会发现里面有<code>sitemap.xml</code>和<code>baidusitemap.xml</code>两个文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这两个文件来抓取网站页面。</p>
+<blockquote>
+<ul>
+<li>sitemap.xml 用来提交给 Google</li>
+<li>baidusitemap.xml 用来提交给百度</li>
+</ul>
+</blockquote>
+<h3 id="百度站长平台"><a href="#百度站长平台" class="headerlink" title="百度站长平台"></a>百度站长平台</h3><p>通过百度站长平台进行链接提交，增加网站的索引量。我的这篇文章：<a href="https://link.jianshu.com/?t=http://fengdi.org/2017/08/07/Hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96.html" target="_blank" rel="noopener">Hexo 博客之速度优化</a> 已经提到过 Github 对百度爬虫进行了屏蔽，因此百度爬取不到 Github 上的页面，如果你按照这篇文章同时部署到 Coding 上，那百度就可以抓取到，因为此时百度抓取的是位于 Coding 上的博客网页。</p>
+<p>注册并登录百度站长平台：<a href="https://link.jianshu.com/?t=http://zhanzhang.baidu.com/" target="_blank" rel="noopener">百度站长平台</a></p>
+<h4 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h4><p>选择添加站点：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-9bca3b38a6c1685d.png#align=left&display=inline&height=331&margin=%5Bobject%20Object%5D&originHeight=331&originWidth=982&status=done&style=none&width=982" alt=""></p>
+<h4 id="验证站点"><a href="#验证站点" class="headerlink" title="验证站点"></a>验证站点</h4><p>进行站点验证：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-51233e024040d8d7.png#align=left&display=inline&height=533&margin=%5Bobject%20Object%5D&originHeight=533&originWidth=982&status=done&style=none&width=982" alt=""></p>
+<p>这里我们选择<code>文件验证</code>，下载验证文件到本地，放置在<code>themes/next/source</code>目录下。执行生成和部署命令：</p>
+<p>点击完成验证即可。</p>
+<h4 id="链接提交"><a href="#链接提交" class="headerlink" title="链接提交"></a>链接提交</h4><p>百度站长平台的链接提交方式分为自动提交和手动提交两种，此处只讲自动提交，手动提交按照要求操作即可。</p>
+<h5 id="主动推送"><a href="#主动推送" class="headerlink" title="主动推送"></a>主动推送</h5><p>主动推送最为快速的提交方式，是被百度收录最快的推送方式。主动推送可以通过安装插件实现：</p>
+<pre><code>npm install hexo-baidu-url-submit --save</code></pre><p>修改站点配置文件<code>_config.yml</code>，添加以下内容：</p>
+<pre><code>baidu_url_submit:
+  count: 5 ## 提交最新的五个链接
+  host: www.hui-wang.info ## 百度站长平台中注册的域名
+  token: your_token ## 准入秘钥
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里</code></pre><p>其次，记得查看<code>_config.yml</code>文件中 url 的值， 必须包含是百度站长平台注册的域名， 比如:</p>
+<pre><code># URL
+url: http://fengdi.org
+root: /
+permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 deployer:</p>
+<pre><code>deploy:
+- type: git ## 这是我原来的deployer
+  repo:
+  branch:
+- type: baidu_url_submitter ## 添加这里内容即可</code></pre><p>其主动推送的实现原理如下：</p>
+<ul>
+<li>新链接的产生， <code>hexo generate</code> 会产生一个文本文件，里面包含最新的链接</li>
+<li>新链接的提交， <code>hexo deploy</code> 会从上述文件中读取链接，提交至百度搜索引擎</li>
+</ul>
+<h5 id="自动推送"><a href="#自动推送" class="headerlink" title="自动推送"></a>自动推送</h5><p>安装自动推送 JS 代码的网页，在页面被访问时，页面 URL 将立即被推送给百度。</p>
+<p>修改主题目录下的<code>layout/post.swig</code>文件，末尾添加自动推送代码，代码如下：</p>
+<pre><code>&lt;script&gt;
+(function(){
+    var bp = document.createElement(&#39;script&#39;);
+    var curProtocol = window.location.protocol.split(&#39;:&#39;)[0];
+    if (curProtocol === &#39;https&#39;) {
+        bp.src = &#39;https://zz.bdstatic.com/linksubmit/push.js&#39;;
+    }
+    else {
+        bp.src = &#39;http://push.zhanzhang.baidu.com/push.js&#39;;
+    }
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+&lt;/script&gt;</code></pre><h5 id="sitemap-提交"><a href="#sitemap-提交" class="headerlink" title="sitemap 提交"></a>sitemap 提交</h5><p>我们之前已经说过如何生成 sitemap 文件，这时就需要我们生成的 sitemap 文件了。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-cfb7e4bd12e2deb8.png#align=left&display=inline&height=443&margin=%5Bobject%20Object%5D&originHeight=443&originWidth=981&status=done&style=none&width=981" alt=""></p>
+<p>输入以下内容到输入框里：</p>
+<pre><code>http://fengdi.org/baidusitemap.xml</code></pre><p>输入验证码后，提交即可。一般情况下，百度会在一个小时内处理该文件，并提取其中的 url。</p>
+<h3 id="Google-网站站长"><a href="#Google-网站站长" class="headerlink" title="Google 网站站长"></a>Google 网站站长</h3><p>在提交 Google 之前，要解决一个大家都知道的问题，关于如何登录 Google。这里就不再说了，相信你们有办法。</p>
+<h4 id="添加站点-1"><a href="#添加站点-1" class="headerlink" title="添加站点"></a>添加站点</h4><p>登录<a href="https://link.jianshu.com/?t=https://www.google.com/webmasters/#?modal_active=none" target="_blank" rel="noopener">Google 网站站长</a>，进入<code>Search Console</code>，点击<code>添加属性</code>进行站点添加：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-9a7ce99e3aaaf1a9.png#align=left&display=inline&height=477&margin=%5Bobject%20Object%5D&originHeight=477&originWidth=1364&status=done&style=none&width=1364" alt=""></p>
+<h4 id="验证站点-1"><a href="#验证站点-1" class="headerlink" title="验证站点"></a>验证站点</h4><p>同百度平台一样，下载 Google 验证文件，放到 source 下<code>themes/next/source</code>目录中：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-2a7e8f527d0b1b42.png#align=left&display=inline&height=618&margin=%5Bobject%20Object%5D&originHeight=618&originWidth=1210&status=done&style=none&width=1210" alt=""></p>
+<p>重新生成和部署：</p>
+<p>部署完成之后，进行验证即可。</p>
+<h4 id="添加站点地图"><a href="#添加站点地图" class="headerlink" title="添加站点地图"></a>添加站点地图</h4><p>在<code>抓取</code>里面，点击<code>站点地图</code>，进行添加：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/5635196-7071aa22f10e2c28.png#align=left&display=inline&height=507&margin=%5Bobject%20Object%5D&originHeight=507&originWidth=1353&status=done&style=none&width=1353" alt=""></p>
+<p>好了，到这里文章就结束了。如果你之前没有把网站部署到 Coding 上，你的网站百度是爬取不到的，关于如何部署请参阅：<a href="https://link.jianshu.com/?t=http://fengdi.org/2017/08/07/Hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96.html" target="_blank" rel="noopener">Hexo 博客之速度优化</a></p>
+<p><a href="https://link.jianshu.com/?t=http://svend.cc/posts/22980/" target="_blank" rel="noopener">Hexo 系列：（四）Hexo 博客提交百度和 Google 收录</a></p>
+<p>文文章转载自：<a href="https://www.jianshu.com/p/f8ec422ebd52" target="_blank" rel="noopener">https://www.jianshu.com/p/f8ec422ebd52</a></p>
+<p>**</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>百度收录</tag>
+        <tag>谷歌收录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PicGo+ 又拍云创建个人图床工具</title>
+    <url>/leader755/765d527f.html</url>
+    <content><![CDATA[<h2 id="1-首先注册又拍云账号"><a href="#1-首先注册又拍云账号" class="headerlink" title="1.首先注册又拍云账号"></a>1.首先注册又拍云账号</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595039006495-6efd0c2e-cd03-40da-a7ab-1fd92ba5e92a.png#align=left&display=inline&height=686&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1372&originWidth=2560&size=163057&status=done&style=none&width=1280" alt="image.png"></p>
+<h2 id="2-创建服务"><a href="#2-创建服务" class="headerlink" title="2.创建服务"></a>2.创建服务</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595039347598-96d59ff1-aa83-45c2-bf56-2165d3dc572a.png#align=left&display=inline&height=689&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1378&originWidth=2560&size=226216&status=done&style=none&width=1280" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595039428519-cb3f789e-02c0-43c4-8ff3-30ca00b15b8a.png#align=left&display=inline&height=378&margin=%5Bobject%20Object%5D&name=image.png&originHeight=756&originWidth=2400&size=87492&status=done&style=none&width=1200" alt="image.png"></p>
+<h2 id="3-审核完成后（域名需要备案，10-分钟以内审核完毕）"><a href="#3-审核完成后（域名需要备案，10-分钟以内审核完毕）" class="headerlink" title="3.审核完成后（域名需要备案，10 分钟以内审核完毕）"></a>3.审核完成后（域名需要备案，10 分钟以内审核完毕）</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595048966006-4c8f16b1-01ba-40f7-9e08-4fff73dd4a8c.png#align=left&display=inline&height=688&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1376&originWidth=2552&size=156189&status=done&style=none&width=1276" alt="image.png"></p>
+<h2 id="4-点击账户管理，添加操作员"><a href="#4-点击账户管理，添加操作员" class="headerlink" title="4.点击账户管理，添加操作员"></a>4.点击账户管理，添加操作员</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595048861058-8644fd49-a611-4466-8248-61fb8a8dc573.png#align=left&display=inline&height=681&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1362&originWidth=2558&size=215488&status=done&style=none&width=1279" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595049324214-9ee14c50-a4a5-4594-a587-5c53ec5394c3.png#align=left&display=inline&height=573&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1146&originWidth=1192&size=153530&status=done&style=none&width=596" alt="image.png"></p>
+<h2 id="5-PicGo-的设置"><a href="#5-PicGo-的设置" class="headerlink" title="5.PicGo 的设置"></a>5.PicGo 的设置</h2><ul>
+<li><strong>存储空间和存储员都是自己配置好的，操作密码也是复制好的。</strong></li>
+<li><strong>注意的是加速域名最好加上<code>http/https</code>，不然会无法在 PicGo 预览</strong></li>
+<li><strong>指定存储路径可填可不填</strong></li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595049428328-c5fc08be-d0ed-4560-9965-2cd128d347e1.png#align=left&display=inline&height=562&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1124&originWidth=1824&size=421187&status=done&style=none&width=912" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>图床</category>
+      </categories>
+      <tags>
+        <tag>PicGo</tag>
+        <tag>又拍云</tag>
       </tags>
   </entry>
   <entry>
@@ -1340,6 +1340,237 @@ notifications<span class="token punctuation">:</span>
       </categories>
       <tags>
         <tag>MWeb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给hexo博客添加PWA支持</title>
+    <url>/leader755/ddd228a6.html</url>
+    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><hr>
+<p><strong>PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 年， W3C 公布过 Service Worker 的相关草案，但是其在生产环境被 Chrome 支持是在 2015 年。因此，如果我们把 PWA 的关键技术之一 Service Worker 的出现作为 PWA 的诞生时间，那就应该是 2015 年。</strong><br><strong>自 2015 年以来，PWA 相关的技术不断升级优化，在用户体验和用户留存两方面都提供了非常好的解决方案。PWA 可以将 Web 和 App 各自的优势融合在一起：渐进式、可响应、可离线、实现类似 App 的交互、即时更新、安全、可以被搜索引擎检索、可推送、可安装、可链接。</strong></p>
+<p><strong>由于 hexo 为静态博客，因此不需要具备推送功能（其实是我没搞懂）。因此 PWA 的特性包括其渐进式、可离线，可以作为提高网站体验和提高网站家在速度的一个方法。因此下面将从其主要内容和 hexo 如何安装两个方面以“吃白饭的休伯利安号”为例来简单演示一遍安装过程。</strong></p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><hr>
+<h3 id="渐进式"><a href="#渐进式" class="headerlink" title="渐进式"></a>渐进式</h3><p>什么是渐进式，即将传统的 web 应用，应用现代的技术和方法使之在能够有桌面应用一般的体验，即为渐进式 web 应用。渐进式 web 应用可以同时运行在传统的浏览器上，像普通的网站一样进行浏览和操作；其同时也可以运行在现代功能完善的浏览器中，可以使其具备更多的效果和功能。比较常见的有<strong>可安装</strong>，即在支持的浏览器和操作系统上可以生成访问图标，通过图标可以可桌面应用一样访问应用；<strong>消息推送</strong>，即访问应用时服务器端可以通过应用的后台进程主动向客户端推送消息，类似于桌面应用的消息队列。</p>
+<h3 id="可离线"><a href="#可离线" class="headerlink" title="可离线"></a>可离线</h3><p>支持应用离线访问，即正常访问应用时，后台进程会自动缓存内容，下次访问时应用优先从缓存区读取数据，然后是进行 web 请求。因此可离线实质上充当了 web 代理服务器的职责，先是将正常请求代理到缓存区，再是将缓存区不足的文件进行正常的网络请求，通过此方法实现了离线的目标。根据可离线的规律，应用在一次访问缓存之后二次访问即可断网。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><hr>
+<h3 id="1-gt-安装-pwa"><a href="#1-gt-安装-pwa" class="headerlink" title="1&gt;安装 pwa"></a>1&gt;安装 pwa</h3><p>离线使用依赖<code>Service Work</code>，其本质是一段运行在并行于主进程的后台进程上，他不参与 web 交互功能，主要职责是和服务器交互，和指示缓存的内容。其详细的生命周期和原理文档详见：<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers" target="_blank" rel="noopener">Using Service Workers</a>。可以通过文档中的生命周期对这段后台脚本进行深度开发。<br>hexo 为静态博客，因此只需要实现离线使用即可，不需要进行消息推送，因此可以使用固定服务注册脚本，在 hexo 中服务注册脚本有着专门的插件进行生成：</p>
+<table>
+<thead>
+<tr>
+<th align="center">hexo-offline</th>
+<th align="center">hexo-pwa</th>
+<th align="center">hexo-service-worker</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">hexo 的离线插件不包括安装</td>
+<td align="center">百度出的 PWA 综合插件，支持同时生成 manifest.json，有很多的配置项</td>
+<td align="center">和 hexo-offline 类似</td>
+</tr>
+</tbody></table>
+<p>三个插件的原理相同，通过注册 SW 服务，配合<code>manifest.json</code>，文件达到<strong>可安装</strong>和<strong>可离线</strong>的功能，本站使用的是 hexo-pwa 插件，下面是插件使用的细节：</p>
+<blockquote>
+<p><code>hexo@4.2.0</code>  目前赞不兼容  <code>hexo-pwa</code>,使用  <code>hexo@4.2.0</code>  版本的用户推荐降级到  <code>hexo@4.1.1</code></p>
+</blockquote>
+<h4 id="1-gt-检查-hexo-版本"><a href="#1-gt-检查-hexo-版本" class="headerlink" title="1&gt;检查 hexo 版本"></a>1&gt;检查 hexo 版本</h4><pre class=" language-javascript"><code class="language-javascript">hexo <span class="token operator">-</span>v
+
+<span class="token comment" spellcheck="true">//注意如果hexo版本大于4.11，使用以下命令重装 hexo</span>
+npm install hexo@<span class="token number">4.1</span><span class="token punctuation">.</span><span class="token number">1</span> <span class="token operator">--</span>save</code></pre>
+<h4 id="2-gt-安装-hexo-pwa"><a href="#2-gt-安装-hexo-pwa" class="headerlink" title="2&gt;安装 hexo-pwa"></a>2&gt;安装 hexo-pwa</h4><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>pwa <span class="token operator">--</span>save</code></pre>
+<p>##</p>
+<p>###</p>
+<h3 id="2-gt-新建-manifest-json-文件"><a href="#2-gt-新建-manifest-json-文件" class="headerlink" title="2&gt;新建 manifest.json 文件"></a>2&gt;新建 manifest.json 文件</h3><p>首先要实现 PWA 的可安装性，需要有一个清单文件<code>manifest.json</code>。<code>manifest.json</code>是一个简单的<code>json</code>文件，它描述了我们的图标在主屏幕上如何显示，以及图标点击进去的启动页是什么，自动生成<code>manifest.json</code>的工具：<a href="https://app-manifest.firebaseapp.com/" target="_blank" rel="noopener">manifest.json 生成工具</a>（需要梯子），本站的 JSON 格式如下所示：</p>
+<p>在站点根目录中创建<a href="https://app-manifest.firebaseapp.com/" target="_blank" rel="noopener">manifest.json</a>文件，并将以下内容放入其中，<br>在站点根目录中创建 images 文件夹 放入生成的 icons 图标</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
+  <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Autumn cicada Blogs"</span><span class="token punctuation">,</span>
+  <span class="token string">"short_name"</span><span class="token punctuation">:</span> <span class="token string">"Autumn cicada Blogs"</span><span class="token punctuation">,</span>
+  <span class="token string">"theme_color"</span><span class="token punctuation">:</span> <span class="token string">"#3a311c"</span><span class="token punctuation">,</span>
+  <span class="token string">"background_color"</span><span class="token punctuation">:</span> <span class="token string">"#3a311c"</span><span class="token punctuation">,</span>
+  <span class="token string">"display"</span><span class="token punctuation">:</span> <span class="token string">"standalone"</span><span class="token punctuation">,</span>
+  <span class="token string">"Scope"</span><span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span>
+  <span class="token string">"start_url"</span><span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span>
+  <span class="token string">"icons"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-72x72.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"72x72"</span><span class="token punctuation">,</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-96x96.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"96x96"</span><span class="token punctuation">,</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-128x128.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"128x128"</span><span class="token punctuation">,</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-144x144.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"144x144"</span><span class="token punctuation">,</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-152x152.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"152x152"</span><span class="token punctuation">,</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-192x192.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"192x192"</span><span class="token punctuation">,</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-384x384.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"384x384"</span><span class="token punctuation">,</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-512x512.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"512x512"</span><span class="token punctuation">,</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/apple-touch-icon.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"180x180"</span><span class="token punctuation">,</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">"splash_pages"</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span></code></pre>
+<p>其中：</p>
+<blockquote>
+<ul>
+<li>start_url 可以设置启动网址</li>
+<li>icons 可以设置各个分辨率下页面的图标，适配不同的尺寸的路径</li>
+<li>background_color 会设置背景颜色， Chrome 在网络应用启动后会立即使用此颜色，这一颜色将保留在屏幕上，直至网络应用首次呈现为止。</li>
+<li>theme_color 会设置主题颜色</li>
+<li>display 设置启动样式</li>
+</ul>
+</blockquote>
+<h3 id="3-gt-新建-sw-js-文件"><a href="#3-gt-新建-sw-js-文件" class="headerlink" title="3&gt;新建 sw.js 文件"></a>3&gt;新建 sw.js 文件</h3><p>在站点根目录下新建一个名为 sw.js 的文件，在文件里填入一下内容</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">importScripts</span><span class="token punctuation">(</span><span class="token string">"https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>workbox<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  workbox<span class="token punctuation">.</span><span class="token function">setConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    modulePathPrefix<span class="token punctuation">:</span> <span class="token string">"https://g.alicdn.com/kg/workbox/3.3.0/"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  workbox<span class="token punctuation">.</span>precaching<span class="token punctuation">.</span><span class="token function">precache</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"/"</span><span class="token punctuation">,</span> <span class="token string">"/index.html"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  workbox<span class="token punctuation">.</span>routing<span class="token punctuation">.</span><span class="token function">registerRoute</span><span class="token punctuation">(</span>
+    <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">"^https?://m-blog.cn/?$"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    workbox<span class="token punctuation">.</span>strategies<span class="token punctuation">.</span><span class="token function">networkFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  workbox<span class="token punctuation">.</span>routing<span class="token punctuation">.</span><span class="token function">registerRoute</span><span class="token punctuation">(</span>
+    <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">".*.html"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    workbox<span class="token punctuation">.</span>strategies<span class="token punctuation">.</span><span class="token function">networkFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  workbox<span class="token punctuation">.</span>routing<span class="token punctuation">.</span><span class="token function">registerRoute</span><span class="token punctuation">(</span>
+    <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">".*.(?:js|css|jpg|png|gif)"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    workbox<span class="token punctuation">.</span>strategies<span class="token punctuation">.</span><span class="token function">staleWhileRevalidate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<blockquote>
+<p>将其中域名改为你自己主页的域名：<code>https?://m-blog.cn/</code>改为你的域名，格式要和我的一样。</p>
+</blockquote>
+<h3 id="4-gt-配置站点根目录下的-config-yml-配置文件"><a href="#4-gt-配置站点根目录下的-config-yml-配置文件" class="headerlink" title="4&gt;配置站点根目录下的 _config.yml 配置文件"></a>4&gt;配置站点根目录下的 _config.yml 配置文件</h3><p>注意路径要根据实际情况变化。</p>
+<pre class=" language-javascript"><code class="language-javascript"># PWA配置  npm i <span class="token operator">--</span>save hexo<span class="token operator">-</span>pwa
+pwa<span class="token punctuation">:</span>
+  manifest<span class="token punctuation">:</span>
+    path<span class="token punctuation">:</span> <span class="token operator">/</span>manifest<span class="token punctuation">.</span>json  #当前 manifest<span class="token punctuation">.</span>json文件在根目录
+    body<span class="token punctuation">:</span>
+      name<span class="token punctuation">:</span> Autumn cicada Blogs
+      short_name<span class="token punctuation">:</span> Autumn cicada Blogs
+      theme_color<span class="token punctuation">:</span> white
+      background_color<span class="token punctuation">:</span> white
+      display<span class="token punctuation">:</span> standalone
+      orientation<span class="token punctuation">:</span> portrait
+      scope<span class="token punctuation">:</span> <span class="token operator">/</span>
+      start_url<span class="token punctuation">:</span> <span class="token operator">/</span>
+      icons<span class="token punctuation">:</span>
+        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>72x72<span class="token punctuation">.</span>png  #当前 images文件夹在根目录
+          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
+          sizes<span class="token punctuation">:</span> 72x72
+        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>72x72<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
+          sizes<span class="token punctuation">:</span> 72x72<span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
+        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>96x96<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
+          sizes<span class="token punctuation">:</span> 96x96<span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
+        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>128x128<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
+          sizes<span class="token punctuation">:</span> 128x128<span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
+        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>144x144<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
+          sizes<span class="token punctuation">:</span> 144x144<span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
+        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>152x152<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
+          sizes<span class="token punctuation">:</span> 152x152<span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
+        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>192x192<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
+          sizes<span class="token punctuation">:</span> 192x192<span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
+        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>384x384<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
+          sizes<span class="token punctuation">:</span> 384x384<span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
+        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>512x512<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
+          sizes<span class="token punctuation">:</span> 512x512<span class="token punctuation">,</span>
+          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
+  serviceWorker<span class="token punctuation">:</span>
+    path<span class="token punctuation">:</span> <span class="token operator">/</span>sw<span class="token punctuation">.</span>js  #当前 sw<span class="token punctuation">.</span>js 文件在根目录
+    preload<span class="token punctuation">:</span>
+      urls<span class="token punctuation">:</span>
+        <span class="token operator">-</span> <span class="token operator">/</span>
+      posts<span class="token punctuation">:</span> <span class="token number">12</span>
+    opts<span class="token punctuation">:</span>
+      networkTimeoutSeconds<span class="token punctuation">:</span> <span class="token number">30</span>
+    routes<span class="token punctuation">:</span>
+      <span class="token operator">-</span> pattern<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>js<span class="token operator">/</span>regexp <span class="token regex">/hm.baidu.com/</span>
+        strategy<span class="token punctuation">:</span> networkOnly
+      <span class="token operator">-</span> pattern<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>js<span class="token operator">/</span>regexp <span class="token regex">/www.google-analytics.com/</span>
+        strategy<span class="token punctuation">:</span> networkOnly
+      <span class="token operator">-</span> pattern<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>js<span class="token regex">/regexp /</span><span class="token punctuation">.</span><span class="token operator">*</span>\<span class="token punctuation">.</span><span class="token punctuation">(</span>js<span class="token operator">|</span>css<span class="token operator">|</span>jpg<span class="token operator">|</span>jpeg<span class="token operator">|</span>png<span class="token operator">|</span>gif<span class="token punctuation">)</span>$<span class="token operator">/</span>
+        strategy<span class="token punctuation">:</span> cacheFirst
+      <span class="token operator">-</span> pattern<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>js<span class="token operator">/</span>regexp <span class="token regex">/\//</span>
+        strategy<span class="token punctuation">:</span> networkFirst
+  priority<span class="token punctuation">:</span> <span class="token number">5</span></code></pre>
+<h3 id="5-gt-检查-PWA-服务"><a href="#5-gt-检查-PWA-服务" class="headerlink" title="5&gt;检查 PWA 服务"></a>5&gt;检查 PWA 服务</h3><pre class=" language-javascript"><code class="language-javascript">hexo cl <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s
+
+<span class="token comment" spellcheck="true">//成功后可以执行 ，发布。</span>
+hexo d</code></pre>
+<blockquote>
+<p>按<code>F12</code>或者<code>Ctrl + Shift + I</code>或者直接鼠标右键弹出的菜单中，有个检查，鼠标点击，就可以进入开发者调试模式，然后选择<code>Application</code>—&gt;<code>Service Workers</code>，查看是否成功？</p>
+</blockquote>
+<p>以下 分别是本地版和在线版成功的标识<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1596352726824-1f14ab5b-af44-4e71-a5d4-04e87fb4eeaa.png#align=left&display=inline&height=510&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1020&originWidth=1522&size=198650&status=done&style=none&width=761" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1596352652911-78e9aa18-1666-47a8-9afe-5db07dc0a273.png#align=left&display=inline&height=408&margin=%5Bobject%20Object%5D&name=image.png&originHeight=816&originWidth=1466&size=163517&status=done&style=none&width=733" alt="image.png"></p>
+<p>##</p>
+<h3 id="6-gt-附加增强功能-可选"><a href="#6-gt-附加增强功能-可选" class="headerlink" title="6&gt;附加增强功能(可选)"></a>6&gt;附加增强功能(可选)</h3><h4 id="添加-IOS-Safari-PWA-图标支持"><a href="#添加-IOS-Safari-PWA-图标支持" class="headerlink" title="添加 IOS Safari PWA 图标支持"></a>添加 IOS Safari PWA 图标支持</h4><p>在<code>manifest.json</code>文件中添加下面的代码，代码是关于<code>apple-touch-icon</code>图标的</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
+    <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/apple-touch-icon.png"</span><span class="token punctuation">,</span>
+    <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"180x180"</span><span class="token punctuation">,</span>
+    <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
+<span class="token punctuation">}</span></code></pre>
+<blockquote>
+<p>图标大小设置为<code>180 x 180</code></p>
+</blockquote>
+<p>####</p>
+<h4 id="修改-head-ejs-文件"><a href="#修改-head-ejs-文件" class="headerlink" title="修改 head.ejs 文件"></a>修改 head.ejs 文件</h4><p>在<code>themes/halo/layout/_partial/head.ejs</code>，在 head.ejs 文件中的<code>&lt;head&gt;&lt;/head&gt;</code>标签之间添加下面的代码：</p>
+<pre><code>&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;&lt;%- theme.appletouchicon %&gt;&quot;&gt;
+&lt;meta name=&quot;theme-color&quot; content=&quot;white&quot;/&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=no&quot;&gt;</code></pre><ul>
+<li>theme-color：中的 content 对应的是你 <code>manifest.json</code> 中的 <code>theme_color</code> 的值</li>
+<li>viewport: 用于针对移动屏幕优化 PWA 应用 详细链接<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fsitoi.cn%2Fgo.html%3Fu%3DaHR0cHM6Ly93ZWIuZGV2L3ZpZXdwb3J0Lz91dG1fc291cmNlPWxpZ2h0aG91c2UmdXRtX21lZGl1bT11bmtub3du" target="_blank" rel="noopener">viewport</a></li>
+<li>apple-touch-icon：配置 <code>apple-touch-icon</code> 图标链接</li>
+</ul>
+<p><strong>在**</strong>主题配置文件<code>_config.yml</code>*<strong>*下添加下面的代码</strong></p>
+<pre class=" language-javascript"><code class="language-javascript">appletouchicon<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>apple<span class="token operator">-</span>touch<span class="token operator">-</span>icon<span class="token punctuation">.</span>png #你图片的路径</code></pre>
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><pre class=" language-javascript"><code class="language-javascript">hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">-</span>d</code></pre>
+<p>参考文档：<br>1&gt; <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fsitoi.cn%2Fposts%2F49115.html" target="_blank" rel="noopener">https://sitoi.cn/posts/49115.html</a><br>2&gt; <a href="https://juejin.im/post/6844903670639771662" target="_blank" rel="noopener">https://juejin.im/post/6844903670639771662</a><br>3&gt; <a href="https://www.jianshu.com/p/74ee8695140c" target="_blank" rel="noopener">https://www.jianshu.com/p/74ee8695140c</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>PWA</tag>
       </tags>
   </entry>
   <entry>

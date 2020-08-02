@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leader755.com/"/>
-  <updated>2020-08-02T05:14:57.576Z</updated>
+  <updated>2020-08-02T07:38:19.794Z</updated>
   <id>https://leader755.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>给hexo博客添加PWA支持</title>
+    <link href="https://leader755.com/leader755/ddd228a6.html"/>
+    <id>https://leader755.com/leader755/ddd228a6.html</id>
+    <published>2020-08-02T07:38:11.709Z</published>
+    <updated>2020-08-02T07:38:19.794Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 年， W3C 公布过
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://leader755.com/categories/hexo/"/>
+    
+    
+      <category term="PWA" scheme="https://leader755.com/tags/PWA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Tomcat下部署vue项目[history模式]</title>
     <link href="https://leader755.com/leader755/fc9c260f.html"/>
     <id>https://leader755.com/leader755/fc9c260f.html</id>
-    <published>2020-08-02T05:14:51.342Z</published>
-    <updated>2020-08-02T05:14:57.576Z</updated>
+    <published>2020-08-02T07:38:11.643Z</published>
+    <updated>2020-08-02T07:38:19.786Z</updated>
     
     <summary type="html">
     
@@ -49,8 +77,8 @@
     <title>小程序中setData修改属性值</title>
     <link href="https://leader755.com/leader755/611009a3.html"/>
     <id>https://leader755.com/leader755/611009a3.html</id>
-    <published>2020-08-02T05:14:51.298Z</published>
-    <updated>2020-08-02T05:14:57.579Z</updated>
+    <published>2020-08-02T07:38:11.596Z</published>
+    <updated>2020-08-02T07:38:19.793Z</updated>
     
     <summary type="html">
     
@@ -77,8 +105,8 @@
     <title>PicGo+GitHub 搭建个人图床工具</title>
     <link href="https://leader755.com/leader755/21250214.html"/>
     <id>https://leader755.com/leader755/21250214.html</id>
-    <published>2020-08-02T05:14:51.290Z</published>
-    <updated>2020-08-02T05:14:57.575Z</updated>
+    <published>2020-08-02T07:38:11.587Z</published>
+    <updated>2020-08-02T07:38:19.786Z</updated>
     
     <summary type="html">
     
@@ -107,8 +135,8 @@
     <title>1.搭建本地的 hexo 的博客</title>
     <link href="https://leader755.com/leader755/687c226.html"/>
     <id>https://leader755.com/leader755/687c226.html</id>
-    <published>2020-08-02T05:14:51.271Z</published>
-    <updated>2020-08-02T05:14:57.570Z</updated>
+    <published>2020-08-02T07:38:11.566Z</published>
+    <updated>2020-08-02T07:38:19.782Z</updated>
     
     <summary type="html">
     
@@ -134,8 +162,8 @@
     <title>2.一键搭建 github 博客</title>
     <link href="https://leader755.com/leader755/5c7986bc.html"/>
     <id>https://leader755.com/leader755/5c7986bc.html</id>
-    <published>2020-08-02T05:14:51.262Z</published>
-    <updated>2020-08-02T05:14:57.571Z</updated>
+    <published>2020-08-02T07:38:11.557Z</published>
+    <updated>2020-08-02T07:38:19.782Z</updated>
     
     <summary type="html">
     
@@ -161,8 +189,8 @@
     <title>3.mac上生成SSH key与GitHub通信</title>
     <link href="https://leader755.com/leader755/b0c9815c.html"/>
     <id>https://leader755.com/leader755/b0c9815c.html</id>
-    <published>2020-08-02T05:14:51.254Z</published>
-    <updated>2020-08-02T05:14:57.571Z</updated>
+    <published>2020-08-02T07:38:11.547Z</published>
+    <updated>2020-08-02T07:38:19.783Z</updated>
     
     <summary type="html">
     
@@ -190,8 +218,8 @@
     <title>4.mac 上使用 vi</title>
     <link href="https://leader755.com/leader755/896b4ef0.html"/>
     <id>https://leader755.com/leader755/896b4ef0.html</id>
-    <published>2020-08-02T05:14:51.211Z</published>
-    <updated>2020-08-02T05:14:57.573Z</updated>
+    <published>2020-08-02T07:38:11.509Z</published>
+    <updated>2020-08-02T07:38:19.783Z</updated>
     
     <summary type="html">
     
@@ -220,8 +248,8 @@
     <title>5.hexo文档部署到 Github和 coding</title>
     <link href="https://leader755.com/leader755/38b922c9.html"/>
     <id>https://leader755.com/leader755/38b922c9.html</id>
-    <published>2020-08-02T05:14:51.204Z</published>
-    <updated>2020-08-02T05:14:57.572Z</updated>
+    <published>2020-08-02T07:38:11.502Z</published>
+    <updated>2020-08-02T07:38:19.784Z</updated>
     
     <summary type="html">
     
@@ -249,8 +277,8 @@
     <title>7.hexo主题配置</title>
     <link href="https://leader755.com/leader755/b0c81b21.html"/>
     <id>https://leader755.com/leader755/b0c81b21.html</id>
-    <published>2020-08-02T05:14:51.178Z</published>
-    <updated>2020-08-02T05:14:57.572Z</updated>
+    <published>2020-08-02T07:38:11.472Z</published>
+    <updated>2020-08-02T07:38:19.784Z</updated>
     
     <summary type="html">
     
@@ -276,8 +304,8 @@
     <title>6.hexo插件篇（必看）</title>
     <link href="https://leader755.com/leader755/dfc8c080.html"/>
     <id>https://leader755.com/leader755/dfc8c080.html</id>
-    <published>2020-08-02T05:14:51.159Z</published>
-    <updated>2020-08-02T05:14:57.575Z</updated>
+    <published>2020-08-02T07:38:11.418Z</published>
+    <updated>2020-08-02T07:38:19.784Z</updated>
     
     <summary type="html">
     
@@ -301,8 +329,8 @@
     <title>给文件添加一个.gitignore</title>
     <link href="https://leader755.com/leader755/6f1cbacf.html"/>
     <id>https://leader755.com/leader755/6f1cbacf.html</id>
-    <published>2020-08-02T05:14:51.009Z</published>
-    <updated>2020-08-02T05:14:57.580Z</updated>
+    <published>2020-08-02T07:38:11.264Z</published>
+    <updated>2020-08-02T07:38:19.794Z</updated>
     
     <summary type="html">
     
@@ -328,8 +356,8 @@
     <title>Hexo博客提交百度和Google收录</title>
     <link href="https://leader755.com/leader755/5c84a3bd.html"/>
     <id>https://leader755.com/leader755/5c84a3bd.html</id>
-    <published>2020-08-02T05:14:50.971Z</published>
-    <updated>2020-08-02T05:14:57.574Z</updated>
+    <published>2020-08-02T07:38:11.224Z</published>
+    <updated>2020-08-02T07:38:19.785Z</updated>
     
     <summary type="html">
     
@@ -357,8 +385,8 @@
     <title>8.语雀文档同步到 hexo</title>
     <link href="https://leader755.com/leader755/bad88671.html"/>
     <id>https://leader755.com/leader755/bad88671.html</id>
-    <published>2020-08-02T05:14:50.933Z</published>
-    <updated>2020-08-02T05:14:57.573Z</updated>
+    <published>2020-08-02T07:38:11.185Z</published>
+    <updated>2020-08-02T07:38:19.785Z</updated>
     
     <summary type="html">
     
@@ -384,8 +412,8 @@
     <title>欢迎使用 MWeb</title>
     <link href="https://leader755.com/leader755/766a05db.html"/>
     <id>https://leader755.com/leader755/766a05db.html</id>
-    <published>2020-08-02T05:14:50.914Z</published>
-    <updated>2020-08-02T05:14:57.579Z</updated>
+    <published>2020-08-02T07:38:11.165Z</published>
+    <updated>2020-08-02T07:38:19.793Z</updated>
     
     <summary type="html">
     
@@ -412,8 +440,8 @@
     <title>hexo使用的问题指南</title>
     <link href="https://leader755.com/leader755/db56f43f.html"/>
     <id>https://leader755.com/leader755/db56f43f.html</id>
-    <published>2020-08-02T05:14:50.892Z</published>
-    <updated>2020-08-02T05:14:57.576Z</updated>
+    <published>2020-08-02T07:38:11.144Z</published>
+    <updated>2020-08-02T07:38:19.787Z</updated>
     
     <summary type="html">
     
@@ -439,8 +467,8 @@
     <title>serverless 和 hexo快速搭建静态博客</title>
     <link href="https://leader755.com/leader755/e209121b.html"/>
     <id>https://leader755.com/leader755/e209121b.html</id>
-    <published>2020-08-02T05:14:50.887Z</published>
-    <updated>2020-08-02T05:14:57.578Z</updated>
+    <published>2020-08-02T07:38:11.139Z</published>
+    <updated>2020-08-02T07:38:19.789Z</updated>
     
     <summary type="html">
     
@@ -467,8 +495,8 @@
     <title>hexo博客的生成永久标题链接</title>
     <link href="https://leader755.com/leader755/4976fe22.html"/>
     <id>https://leader755.com/leader755/4976fe22.html</id>
-    <published>2020-08-02T05:14:50.871Z</published>
-    <updated>2020-08-02T05:14:57.576Z</updated>
+    <published>2020-08-02T07:38:11.123Z</published>
+    <updated>2020-08-02T07:38:19.787Z</updated>
     
     <summary type="html">
     
@@ -494,8 +522,8 @@
     <title>hexo博客站内搜索功能</title>
     <link href="https://leader755.com/leader755/4e860a66.html"/>
     <id>https://leader755.com/leader755/4e860a66.html</id>
-    <published>2020-08-02T05:14:50.853Z</published>
-    <updated>2020-08-02T05:14:57.577Z</updated>
+    <published>2020-08-02T07:38:11.106Z</published>
+    <updated>2020-08-02T07:38:19.788Z</updated>
     
     <summary type="html">
     
@@ -521,8 +549,8 @@
     <title>hexo博客的评论功能</title>
     <link href="https://leader755.com/leader755/c41d01b3.html"/>
     <id>https://leader755.com/leader755/c41d01b3.html</id>
-    <published>2020-08-02T05:14:50.843Z</published>
-    <updated>2020-08-02T05:14:57.577Z</updated>
+    <published>2020-08-02T07:38:11.093Z</published>
+    <updated>2020-08-02T07:38:19.787Z</updated>
     
     <summary type="html">
     
@@ -543,36 +571,6 @@
       <category term="valine" scheme="https://leader755.com/tags/valine/"/>
     
       <category term="leancloud" scheme="https://leader755.com/tags/leancloud/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac 使用 homebrew</title>
-    <link href="https://leader755.com/leader755/c6cbe756.html"/>
-    <id>https://leader755.com/leader755/c6cbe756.html</id>
-    <published>2020-08-02T05:14:50.831Z</published>
-    <updated>2020-08-02T05:14:57.577Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;使用 brew update 指令&lt;/p&gt;
-&lt;h1 id=&quot;报错&quot;&gt;&lt;a href=&quot;#报错&quot; class=&quot;headerlink&quot; title=&quot;报错&quot;&gt;&lt;/a&gt;报错&lt;/h1&gt;&lt;p&gt;Error: The following directories are not
-        
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="https://leader755.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="mac" scheme="https://leader755.com/tags/mac/"/>
-    
-      <category term="homebrew" scheme="https://leader755.com/tags/homebrew/"/>
     
   </entry>
   
