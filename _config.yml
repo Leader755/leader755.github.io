@@ -128,7 +128,7 @@ image_minifier:
 # PWA配置  npm i --save hexo-pwa
 pwa:
   manifest:
-    path: /manifest.json
+    path: /manifest.json 
     body:
       name: Autumn cicada Blogs
       short_name: Autumn cicada Blogs
