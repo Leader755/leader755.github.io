@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 
-<head>
+<head><link rel=manifest href=/manifest.json>
   <meta charset="utf-8">
   <meta name="keywords" content="分类, 个人博客，leader755，leader755博客，hexo博客">
   <meta name="description" content="分类 | Autumn cicada Blogs">
@@ -17,6 +17,8 @@
   <title>分类 | Autumn cicada Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@eaabdff/favicon.ico">
+  <link rel="apple-touch-icon" href="/source/images/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="white" />
 
   <!-- <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -54,7 +56,7 @@
 
   <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body>
@@ -477,29 +479,20 @@
                 
                 
                 
-                <a href="/categories/hexo/" title="hexo: 14">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">hexo
-                        <span class="tag-length">14</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">博客
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/categories/%E5%B7%A5%E5%85%B7/" title="工具: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">工具
+                            style="background-color: #F9EBEA;">工具
                         <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/hexo/" title="hexo: 14">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">hexo
+                        <span class="tag-length">14</span>
                     </span>
                 </a>
                 
@@ -507,7 +500,16 @@
                 <a href="/categories/ssh/" title="ssh: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">ssh
+                            style="background-color: #D5F5E3;">ssh
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #E8F8F5;">博客
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -591,7 +593,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"hexo","max":15},{"name":"博客","max":15},{"name":"工具","max":15},{"name":"ssh","max":15},{"name":"图床","max":15},{"name":"vue","max":15},{"name":"小程序","max":15},{"name":"前端","max":15}],
+            indicator: [{"name":"工具","max":15},{"name":"hexo","max":15},{"name":"ssh","max":15},{"name":"博客","max":15},{"name":"图床","max":15},{"name":"vue","max":15},{"name":"小程序","max":15},{"name":"前端","max":15}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -602,7 +604,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [14,1,2,1,2,1,1,1],
+                    value : [2,14,1,1,2,1,1,1],
                     name : '文章分类数量'
                 }
             ]
@@ -893,6 +895,11 @@ $(function () {
   <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
   </script>
 
-</body>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1596337206110')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
 
 </html>

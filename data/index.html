@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 
-<head>
+<head><link rel=manifest href=/manifest.json>
   <meta charset="utf-8">
   <meta name="keywords" content="data, 个人博客，leader755，leader755博客，hexo博客">
   <meta name="description" content="data | Autumn cicada Blogs">
@@ -17,6 +17,8 @@
   <title>data | Autumn cicada Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@eaabdff/favicon.ico">
+  <link rel="apple-touch-icon" href="/source/images/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="white" />
 
   <!-- <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -54,7 +56,7 @@
 
   <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body>
@@ -527,7 +529,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2019-07","2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07"]
+            data: ["2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08"]
         },
         yAxis: {
             type: 'value',
@@ -603,7 +605,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["github","mac","PicGo","博客","vi","coding","主题","yuque","插件","百度收录"]
+                data: ["github","mac","PicGo","vi","博客","coding","主题","yuque","百度收录","谷歌收录"]
             }
         ],
         yAxis: [
@@ -687,7 +689,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"hexo","value":14},{"name":"博客","value":1},{"name":"工具","value":2},{"name":"ssh","value":1},{"name":"图床","value":2},{"name":"vue","value":1},{"name":"小程序","value":1},{"name":"前端","value":1}],
+                data: [{"name":"工具","value":2},{"name":"hexo","value":14},{"name":"ssh","value":1},{"name":"博客","value":1},{"name":"图床","value":2},{"name":"vue","value":1},{"name":"小程序","value":1},{"name":"前端","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -744,7 +746,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"hexo","max":15},{"name":"博客","max":15},{"name":"工具","max":15},{"name":"ssh","max":15},{"name":"图床","max":15},{"name":"vue","max":15},{"name":"小程序","max":15},{"name":"前端","max":15}],
+            indicator: [{"name":"工具","max":15},{"name":"hexo","max":15},{"name":"ssh","max":15},{"name":"博客","max":15},{"name":"图床","max":15},{"name":"vue","max":15},{"name":"小程序","max":15},{"name":"前端","max":15}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -755,7 +757,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [14,1,2,1,2,1,1,1],
+                    value : [2,14,1,1,2,1,1,1],
                     name : '文章分类数量'
                 }
             ]
@@ -1045,6 +1047,11 @@ $(function () {
   <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
   </script>
 
-</body>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1596337206110')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
 
 </html>

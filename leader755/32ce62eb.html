@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 
-<head>
+<head><link rel=manifest href=/manifest.json>
   <meta charset="utf-8">
   <meta name="keywords" content="如何绕开referrer防盗链, 个人博客，leader755，leader755博客，hexo博客">
   <meta name="description" content="什么是 referrer当一用户点击当前页面中的一个链接，然后跳转到目标页面时，目标页面会收到一个信息，即用户是从哪个源链接跳转过来的。如下图所示：也就是说，当你发起一个 http 请求，请求头中的referrer字段就说明了你是从哪个页面">
@@ -17,6 +17,8 @@
   <title>如何绕开referrer防盗链 | Autumn cicada Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@eaabdff/favicon.ico">
+  <link rel="apple-touch-icon" href="/source/images/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="white" />
 
   <!-- <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -54,7 +56,7 @@
 
   <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body>
@@ -581,14 +583,14 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2020-07-29
+          2020-08-02
         </div>
         
 
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2020-07-29
+          2020-08-02
         </div>
         
 
@@ -612,6 +614,7 @@
     </div>
     <hr class="clearfix">
     <div class="card-content article-card-content">
+      <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
         <h2 id="什么是-referrer"><a href="#什么是-referrer" class="headerlink" title="什么是 referrer"></a>什么是 referrer</h2><p>当一用户点击当前页面中的一个链接，然后跳转到目标页面时，目标页面会收到一个信息，即用户是从哪个源链接跳转过来的。如下图所示：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595703140078-870fec1d-0742-4dea-828a-1f32819af187.png#align=left&display=inline&height=543&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1086&originWidth=1184&size=153142&status=done&style=none&width=592" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/webp/241787/1595702418075-1743cd6e-ed7c-4b5b-9f96-7f89fff17373.webp#align=left&display=inline&height=543&margin=%5Bobject%20Object%5D&originHeight=543&originWidth=896&size=0&status=done&style=none&width=896" alt=""><br>也就是说，当你发起一个 http 请求，请求头中的<code>referrer</code>字段就说明了你是从哪个页面发起该请求的。</p>
@@ -1070,7 +1073,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-29
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
                         </span>
                         <span class="publish-author">
                             
@@ -1124,7 +1127,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
                             </span>
                         <span class="publish-author">
                             
@@ -1562,6 +1565,11 @@ $(function () {
   <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
   </script>
 
-</body>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1596337206110')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
 
 </html>

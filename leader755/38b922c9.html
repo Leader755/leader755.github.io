@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 
-<head>
+<head><link rel=manifest href=/manifest.json>
   <meta charset="utf-8">
   <meta name="keywords" content="5.hexo文档部署到 Github和 coding, 个人博客，leader755，leader755博客，hexo博客">
   <meta name="description" content="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：如果不部署到 coding，就只写 github 就行。
@@ -19,6 +19,8 @@ repo: g">
   <title>5.hexo文档部署到 Github和 coding | Autumn cicada Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@eaabdff/favicon.ico">
+  <link rel="apple-touch-icon" href="/source/images/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="white" />
 
   <!-- <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -56,7 +58,7 @@ repo: g">
 
   <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body>
@@ -583,14 +585,14 @@ repo: g">
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2020-07-29
+          2020-08-02
         </div>
         
 
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2020-07-29
+          2020-08-02
         </div>
         
 
@@ -614,6 +616,7 @@ repo: g">
     </div>
     <hr class="clearfix">
     <div class="card-content article-card-content">
+      <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
         <h2 id="1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："><a href="#1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：" class="headerlink" title="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："></a>1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&size=44477&status=done&style=none&width=526" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#align=left&display=inline&height=120&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&size=33032&status=done&style=none&width=486" alt="image.png"><br>如果不部署到 coding，就只写 github 就行。</p>
@@ -1040,7 +1043,7 @@ hexo g <span class="token operator">-</span>d</code></pre>
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-29
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
                         </span>
                         <span class="publish-author">
                             
@@ -1095,7 +1098,7 @@ hexo g <span class="token operator">-</span>d</code></pre>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
                             </span>
                         <span class="publish-author">
                             
@@ -1528,6 +1531,11 @@ $(function () {
   <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
   </script>
 
-</body>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1596337206110')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
 
 </html>

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 
-<head>
+<head><link rel=manifest href=/manifest.json>
   <meta charset="utf-8">
   <meta name="keywords" content="关于, 个人博客，leader755，leader755博客，hexo博客">
   <meta name="description" content="关于 | Autumn cicada Blogs">
@@ -17,6 +17,8 @@
   <title>关于 | Autumn cicada Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@eaabdff/favicon.ico">
+  <link rel="apple-touch-icon" href="/source/images/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="white" />
 
   <!-- <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -54,7 +56,7 @@
 
   <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Autumn cicada Blogs" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body>
@@ -934,6 +936,11 @@ $(function () {
   <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
   </script>
 
-</body>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1596337206110')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
 
 </html>
