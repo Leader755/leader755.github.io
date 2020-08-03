@@ -6,13 +6,8 @@ on:
       - master
 
 jobs:
-  butterfly-build:
-
+  build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x]
 
     steps:
       - uses: actions/checkout@v1
@@ -30,14 +25,17 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
                # ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
                # ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
-          ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+               #ssh-keyscan gitee.com >> ~/.ssh/known_hosts
           git config --global user.name 'Leader755'
           git config --global user.email '1181012791@qq.com'
           npm i
           npm i hexo@4.1.1 -g
+          npm install yuque-hexo -g
+          npm install
       - name: gen
         run: |
           hexo clean
+          yuque-hexo sync
           hexo generate
           hexo deploy
           
