@@ -1,0 +1,43 @@
+name: Hexo CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  butterfly-build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: env prepare
+        env:
+          HEXO_DEPLOY_PRI: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+               # ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
+               # ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
+          ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+          git config --global user.name 'Leader755'
+          git config --global user.email '1181012791@qq.com'
+          npm i
+          npm i hexo@4.1.1 -g
+      - name: gen
+        run: |
+          hexo clean
+          hexo generate
+          hexo deploy
+          
