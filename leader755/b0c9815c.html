@@ -6,13 +6,16 @@
   <meta charset="utf-8">
   <meta name="keywords" content="3.mac上生成SSH key与GitHub通信, 个人博客，leader755，leader755博客，hexo博客">
   <meta name="description" content="1.检查 SSH key 是否存在在终端输入：
-ls -al ~/.ssh
+ls -a ~/.ssh
 如果没有，终端显示如下：
 
 No such file or directory
 
 如果已经存在，则会显示 id_rsa 和 id_rsa.pub
-2.生成新的 SS">
+
+查看 .ssh
+
+">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -590,21 +593,21 @@ No such file or directory
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2020-08-02
+          2020-07-20
         </div>
         
 
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2020-08-02
+          2020-07-20
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          752
+          882
         </div>
         
 
@@ -625,12 +628,20 @@ No such file or directory
       <div id="articleContent">
 
         <h2 id="1-检查-SSH-key-是否存在"><a href="#1-检查-SSH-key-是否存在" class="headerlink" title="1.检查 SSH key 是否存在"></a>1.检查 SSH key 是否存在</h2><p>在终端输入：</p>
-<pre class=" language-javascript"><code class="language-javascript">ls <span class="token operator">-</span>al <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh</code></pre>
+<pre class=" language-javascript"><code class="language-javascript">ls <span class="token operator">-</span>a <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh</code></pre>
 <p>如果没有，终端显示如下：</p>
 <blockquote>
 <p>No such file or directory</p>
 </blockquote>
 <p>如果已经存在，则会显示 id_rsa 和 id_rsa.pub</p>
+<ul>
+<li>查看 .ssh</li>
+</ul>
+<pre class=" language-javascript"><code class="language-javascript">ls <span class="token operator">-</span>a <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh
+
+cd <span class="token punctuation">.</span>ssh
+cat id_rsa<span class="token punctuation">.</span>pub <span class="token comment" spellcheck="true">//查看公钥</span>
+cat id_rsa     <span class="token comment" spellcheck="true">//查看私钥</span></code></pre>
 <h2 id="2-生成新的-SSH-key"><a href="#2-生成新的-SSH-key" class="headerlink" title="2.生成新的 SSH key"></a>2.生成新的 SSH key</h2><h4 id="1-设置-username-和-email（github-每次-commit-都会记录他们）"><a href="#1-设置-username-和-email（github-每次-commit-都会记录他们）" class="headerlink" title="1.设置 username 和 email（github 每次 commit 都会记录他们）"></a>1.设置 username 和 email（github 每次 commit 都会记录他们）</h4><pre class=" language-javascript"><code class="language-javascript">git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"Leader755"</span>
 git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"1181012791@qq.com"</span></code></pre>
 <h4 id="2-通过终端命令创建-ssh-key"><a href="#2-通过终端命令创建-ssh-key" class="headerlink" title="2.通过终端命令创建 ssh key"></a>2.通过终端命令创建 ssh key</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//其中 your_email@example.com 为你在 GitHub 注册时的邮箱</span>
@@ -660,9 +671,7 @@ git config <span class="token operator">--</span>global user<span class="token p
 </blockquote>
 <p>最后，在 /Users/xxx/.ssh/ 生成两个文件，id_rsa 和 id_rsa.pub<br>此时，SSH key 已经生成成功</p>
 <h2 id="4-添加-SSH-key-到-GitHub-和-coding"><a href="#4-添加-SSH-key-到-GitHub-和-coding" class="headerlink" title="4.添加 SSH key 到 GitHub 和 coding"></a>4.添加 SSH key 到 GitHub 和 coding</h2><h4 id="1-复制-id-rsa-pub-中的所有内容"><a href="#1-复制-id-rsa-pub-中的所有内容" class="headerlink" title="1.复制 id_rsa.pub 中的所有内容,"></a>1.复制 id_rsa.pub 中的所有内容,</h4><p>打开 id_rsa.pub，终端命令：</p>
-<blockquote>
-</blockquote>
-<pre class=" language-javascript"><code class="language-javascript">vim <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa<span class="token punctuation">.</span>pub</code></pre>
+<pre class=" language-javascript"><code class="language-javascript">vim<span class="token regex">/cat   ~/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa<span class="token punctuation">.</span>pub</code></pre>
 <p>手动复制以 ssh-rsa 到以 <a href="mailto:your_email@example.com">your_email@example.com</a> 结尾的所有内容</p>
 <p>或者直接输入命令复制 id_rsa.pub 中的所有内容，终端命令：</p>
 <pre class=" language-javascript"><code class="language-javascript">pbcopy <span class="token operator">&lt;</span> <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>_adirs<span class="token punctuation">.</span>pub<span class="token punctuation">;</span></code></pre>
@@ -676,7 +685,14 @@ git config <span class="token operator">--</span>global user<span class="token p
 <blockquote>
 <p>以上为提示内容，不过这里还是有一个需要注意的地方，如果没有上面的成功提示输出的话也不要害怕，我们可以先自己在本地建立一个 gitHub 仓库，然后进行 push 操作，如果 push 成功那么设置是成功的，如果 push 不上去的话再去检查。</p>
 </blockquote>
-<h2 id="7-使用-git-去创建一个-ssh-key-就完成了"><a href="#7-使用-git-去创建一个-ssh-key-就完成了" class="headerlink" title="7.使用 git 去创建一个 ssh key 就完成了"></a>7.使用 git 去创建一个 ssh key 就完成了</h2>
+<h2 id="7-使用-git-去创建一个-ssh-key-就完成了"><a href="#7-使用-git-去创建一个-ssh-key-就完成了" class="headerlink" title="7.使用 git 去创建一个 ssh key 就完成了"></a>7.使用 git 去创建一个 ssh key 就完成了</h2><h2 id="8-已经存在-ssh，创建新密钥"><a href="#8-已经存在-ssh，创建新密钥" class="headerlink" title="8.已经存在 ssh，创建新密钥"></a>8.已经存在 ssh，创建新密钥</h2><h3 id="1-gt-进入-ssh-目录"><a href="#1-gt-进入-ssh-目录" class="headerlink" title="1&gt;进入 ssh 目录"></a>1&gt;进入 ssh 目录</h3><pre class=" language-javascript"><code class="language-javascript">cd <span class="token operator">~</span><span class="token regex">/.ssh/</span></code></pre>
+<h3 id="2-gt-用-ssh-keygen-命令生成一组新的-id-rsa-new-和-id-rsa-new-pub"><a href="#2-gt-用-ssh-keygen-命令生成一组新的-id-rsa-new-和-id-rsa-new-pub" class="headerlink" title="2&gt;用 ssh-keygen 命令生成一组新的 id_rsa_new 和 id_rsa_new.pub"></a>2&gt;用 ssh-keygen 命令生成一组新的 id_rsa_new 和 id_rsa_new.pub</h3><pre class=" language-javascript"><code class="language-javascript">ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"new email"</span></code></pre>
+<blockquote>
+<p>需要注意，出现提示输入文件名的时候要输入与默认配置不一样的文件名，比如： id_rsa_new</p>
+</blockquote>
+<h3 id="3-gt-执行-ssh-agent-让-ssh-识别新的私钥"><a href="#3-gt-执行-ssh-agent-让-ssh-识别新的私钥" class="headerlink" title="3&gt;执行 ssh-agent 让 ssh 识别新的私钥"></a>3&gt;执行 ssh-agent 让 ssh 识别新的私钥</h3><pre class=" language-javascript"><code class="language-javascript">ssh<span class="token operator">-</span>add <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa_new</code></pre>
+<h3 id="4-gt-添加-SSH-到钥匙串"><a href="#4-gt-添加-SSH-到钥匙串" class="headerlink" title="4&gt;添加 SSH 到钥匙串"></a>4&gt;添加 SSH 到钥匙串</h3><pre class=" language-javascript"><code class="language-javascript">ssh<span class="token operator">-</span>add <span class="token operator">-</span>K KeyPathOrKeyName</code></pre>
+
       </div>
       <hr />
 
@@ -1057,32 +1073,33 @@ git config <span class="token operator">--</span>global user<span class="token p
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/5c7986bc.html">
+                <a href="/leader755/c41d01b3.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="2.一键搭建 github 博客"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/20.jpg" class="responsive-img" alt="2.一键搭建 github 博客">
+                        <!-- <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="hexo博客的评论功能"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/20.jpg" class="responsive-img" alt="hexo博客的评论功能">
                         
-                        <span class="card-title">2.一键搭建 github 博客</span>
+                        <span class="card-title">hexo博客的评论功能</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            创建 GitHub Pages我们托管静态博客，使用的就是 GitHub Pages 的功能，首先我们需要创建一个个人主页，点击右上角的加号，选择 new repositories，进入创建页面。有的是说 username.github.i
+                            1.这里推荐的评论功能插件为valine官网：https://valine.js.org/注册登录网站：https://leancloud.cn/      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。
+2.去leanclou
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-20
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    博客
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
                                 </a>
                             
                             
@@ -1092,8 +1109,12 @@ git config <span class="token operator">--</span>global user<span class="token p
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
+                    <a href="/tags/valine/">
+                        <span class="chip bg-color">valine</span>
+                    </a>
+                    
+                    <a href="/tags/leancloud/">
+                        <span class="chip bg-color">leancloud</span>
                     </a>
                     
                 </div>
@@ -1107,33 +1128,32 @@ git config <span class="token operator">--</span>global user<span class="token p
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/896b4ef0.html">
+                <a href="/leader755/57697582.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="4.mac 上使用 vi"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/11.jpg" class="responsive-img" alt="4.mac 上使用 vi">
+                        <!-- <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="travis-ci + github + hexo 持续集成"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/1.jpg" class="responsive-img" alt="travis-ci + github + hexo 持续集成">
                         
-                        <span class="card-title">4.mac 上使用 vi</span>
+                        <span class="card-title">travis-ci + github + hexo 持续集成</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。
-如果是 vi，则：Esc 退出编辑模式，输入以下命令：:wq 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）:w 保存但不退
+                            Hexo 博客源代码 GitHub 托管1.注册 travis-ciTravis CI 的网站有两个，travis-ci.org  专门针对开源项目，GitHub 上所有的公开仓库都能够免费使用；travis-ci.com  针对私有及商业
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
                                 </a>
                             
                             
@@ -1143,12 +1163,12 @@ git config <span class="token operator">--</span>global user<span class="token p
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mac/">
-                        <span class="chip bg-color">mac</span>
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
-                    <a href="/tags/vi/">
-                        <span class="chip bg-color">vi</span>
+                    <a href="/tags/travis-ci/">
+                        <span class="chip bg-color">travis-ci</span>
                     </a>
                     
                 </div>
@@ -1296,7 +1316,7 @@ git config <span class="token operator">--</span>global user<span class="token p
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">17.7k</span>&nbsp;字
+        class="white-color">17.8k</span>&nbsp;字
       
       
       
@@ -1564,7 +1584,7 @@ $(function () {
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1596353907067')
+  navigator.serviceWorker.register('/sw.js?t=1596554282173')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
