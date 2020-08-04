@@ -3,7 +3,9 @@ tags:
   - homebrew
   - mac
 categories: 工具
-abbrlink: c6cbe756
+abbrlink: 65348
+date: 2019-11-20 22:05:21
+updated: 2019-11-20 22:05:21
 ---
 
 使用 brew update 指令

@@ -2,7 +2,9 @@
 tags:
   - MWeb
 categories: hexo
-abbrlink: 766a05db
+abbrlink: 18674
+date: 2020-06-17 12:48:11
+updated: 2020-06-17 12:48:11
 ---
 
 MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：

@@ -3,7 +3,9 @@ tags:
   - 百度收录
   - 谷歌收录
 categories: hexo
-abbrlink: 5c84a3bd
+abbrlink: 13299
+date: 2020-07-18 21:05:43
+updated: 2020-07-18 21:05:43
 ---
 
 一个网站的 SEO 对一个网站非常重要，[SEO](https://link.jianshu.com/?t=https://baike.baidu.com/item/SEO/102990?fr=aladdin)指的是搜索引擎优化。通过搜索引擎优化，可以提高网站的网站关键词排名以及博客文章的曝光度。一般来说，我们针对百度和 Google 这两个搜索引擎进行优化，提高对网站资源的索引量，使我们的文章更容易被发现。虽然我的博客的主要读者是我自己，但也不妨碍我做些优化，对吧！接下来向大家展示如何使博客被百度和 Google 收录。

@@ -2,7 +2,9 @@
 tags:
   - 问题指南
 categories: hexo
-abbrlink: db56f43f
+abbrlink: 52181
+date: 2020-06-17 13:05:41
+updated: 2020-06-17 13:05:41
 ---
 
 ### 1.hexo g -d 会报错

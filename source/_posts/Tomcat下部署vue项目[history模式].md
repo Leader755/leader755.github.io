@@ -3,7 +3,9 @@ tags:
   - history
   - tomcat
 categories: vue
-abbrlink: fc9c260f
+abbrlink: 14064
+date: 2019-10-20 13:15:23
+updated: 2019-10-20 13:15:23
 ---
 
 ## 1.项目发布后通常有两种访问方式，

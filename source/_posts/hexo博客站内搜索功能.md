@@ -2,7 +2,9 @@
 tags:
   - 搜索
 categories: hexo
-abbrlink: 4e860a66
+abbrlink: 31782
+date: 2020-07-18 23:06:23
+updated: 2020-07-18 23:06:23
 ---
 
 ## 1.根目录安装插件 hexo-generator-searchdb

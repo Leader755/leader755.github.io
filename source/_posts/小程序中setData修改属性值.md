@@ -2,7 +2,9 @@
 tags:
   - setData
 categories: 小程序
-abbrlink: 611009a3
+abbrlink: 16589
+date: 2019-06-15 20:25:23
+updated: 2019-06-15 20:25:23
 ---
 
 ## 1.修改对象属性

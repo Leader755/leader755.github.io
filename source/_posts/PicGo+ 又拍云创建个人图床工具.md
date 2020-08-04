@@ -3,7 +3,9 @@ tags:
   - PicGo
   - 又拍云
 categories: 图床
-abbrlink: 765d527f
+abbrlink: 50207
+date: 2020-06-03 19:35:43
+updated: 2020-07-01 20:45:20
 ---
 
 ## 1.首先注册又拍云账号
