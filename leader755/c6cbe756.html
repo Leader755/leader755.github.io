@@ -1004,21 +1004,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/896b4ef0.html">
+                <a href="/leader755/b0c9815c.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="4.mac 上使用 vi"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/11.jpg" class="responsive-img" alt="4.mac 上使用 vi">
+                        <!-- <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="3.mac上生成SSH key与GitHub通信"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/16.jpg" class="responsive-img" alt="3.mac上生成SSH key与GitHub通信">
                         
-                        <span class="card-title">4.mac 上使用 vi</span>
+                        <span class="card-title">3.mac上生成SSH key与GitHub通信</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。
-如果是 vi，则：Esc 退出编辑模式，输入以下命令：:wq 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）:w 保存但不退
+                            1.检查 SSH key 是否存在在终端输入：
+ls -a ~/.ssh
+如果没有，终端显示如下：
+
+No such file or directory
+
+如果已经存在，则会显示 id_rsa 和 id_rsa.pub
+
+查看 .ssh
+
+
                         
                     </div>
                     <div class="publish-info">
@@ -1029,8 +1038,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/ssh/" class="post-category">
+                                    ssh
                                 </a>
                             
                             
@@ -1040,12 +1049,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mac/">
-                        <span class="chip bg-color">mac</span>
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
-                    <a href="/tags/vi/">
-                        <span class="chip bg-color">vi</span>
+                    <a href="/tags/mac/">
+                        <span class="chip bg-color">mac</span>
                     </a>
                     
                 </div>
@@ -1516,7 +1525,7 @@ $(function () {
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1596554282173')
+  navigator.serviceWorker.register('/sw.js?t=1596555586399')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
