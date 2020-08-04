@@ -4,18 +4,9 @@
 
 <head><link rel=manifest href=/manifest.json>
   <meta charset="utf-8">
-  <meta name="keywords" content="3.mac上生成SSH key与GitHub通信, 个人博客，leader755，leader755博客，hexo博客">
-  <meta name="description" content="1.检查 SSH key 是否存在在终端输入：
-ls -a ~/.ssh
-如果没有，终端显示如下：
-
-No such file or directory
-
-如果已经存在，则会显示 id_rsa 和 id_rsa.pub
-
-查看 .ssh
-
-">
+  <meta name="keywords" content="hexo博客站内搜索功能, 个人博客，leader755，leader755博客，hexo博客">
+  <meta name="description" content="1.根目录安装插件 hexo-generator-searchdbnpm install hexo-generator-searchdb --save
+2.配置根目录文件_config.ymlsearch: path: search.xml">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,9 +15,9 @@ No such file or directory
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>3.mac上生成SSH key与GitHub通信 | Autumn cicada Blogs</title>
+  <title>hexo博客站内搜索功能 | Autumn cicada Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
-  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/favicon.ico">
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
   <meta name="theme-color" content="white" />
 
@@ -38,17 +29,17 @@ No such file or directory
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css"> -->
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/awesome/css/all.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/materialize/materialize.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/aos/aos.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/animate/animate.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/lightGallery/css/lightgallery.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/css/matery.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/css/my.css">
+  <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+  <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/matery.css">
+  <link rel="stylesheet" type="text/css" href="/css/my.css">
 
   <script src="/libs/jquery/jquery.min.js"></script>
   <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/jquery/jquery.min.js"></script>
+  <script src="/libs/jquery/jquery.min.js"></script>
   <!-- 百度自动推送 -->
   <script>
     (function () {
@@ -78,7 +69,7 @@ No such file or directory
         <a href="/" class="waves-effect waves-light">
           
           <!-- <img src="/medias/logo.png" class="logo-img" alt="LOGO"> -->
-          <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/logo.png" class="logo-img" alt="LOGO">
+          <img src="/medias/logo.png" class="logo-img" alt="LOGO">
           
           <span class="logo-span big-show">Autumn cicada Blogs</span>
         </a>
@@ -223,7 +214,7 @@ No such file or directory
     <div class="mobile-head bg-color">
         
         <!-- <img src="/medias/logo.png" class="logo-img circle responsive-img"> -->
-        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Autumn cicada Blogs</div>
         <div class="logo-desc">
@@ -438,13 +429,13 @@ No such file or directory
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')"> -->
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/16.jpg')">    
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')"> -->
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">    
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">3.mac上生成SSH key与GitHub通信</h1>
+                    <h1 class="description center-align post-title">hexo博客站内搜索功能</h1>
                 </div>
             </div>
         </div>
@@ -458,7 +449,7 @@ No such file or directory
 
     
     <!-- <link rel="stylesheet" href="/libs/tocbot/tocbot.css"> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/tocbot/tocbot.css">
+<link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -564,12 +555,8 @@ No such file or directory
           
           <div class="article-tag">
             
-            <a href="/tags/github/">
-              <span class="chip bg-color">github</span>
-            </a>
-            
-            <a href="/tags/mac/">
-              <span class="chip bg-color">mac</span>
+            <a href="/tags/%E6%90%9C%E7%B4%A2/">
+              <span class="chip bg-color">搜索</span>
             </a>
             
           </div>
@@ -580,8 +567,8 @@ No such file or directory
           <div class="post-cate">
             <i class="fas fa-bookmark fa-fw icon-category"></i>
             
-            <a href="/categories/ssh/" class="post-category">
-              ssh
+            <a href="/categories/hexo/" class="post-category">
+              hexo
             </a>
             
           </div>
@@ -593,28 +580,28 @@ No such file or directory
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2019-11-23
+          2020-07-18
         </div>
         
 
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2019-11-23
+          2020-07-18
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          882
+          53
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          3 分
+          1 分
         </div>
         
 
@@ -627,71 +614,14 @@ No such file or directory
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <h2 id="1-检查-SSH-key-是否存在"><a href="#1-检查-SSH-key-是否存在" class="headerlink" title="1.检查 SSH key 是否存在"></a>1.检查 SSH key 是否存在</h2><p>在终端输入：</p>
-<pre class=" language-javascript"><code class="language-javascript">ls <span class="token operator">-</span>a <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh</code></pre>
-<p>如果没有，终端显示如下：</p>
-<blockquote>
-<p>No such file or directory</p>
-</blockquote>
-<p>如果已经存在，则会显示 id_rsa 和 id_rsa.pub</p>
-<ul>
-<li>查看 .ssh</li>
-</ul>
-<pre class=" language-javascript"><code class="language-javascript">ls <span class="token operator">-</span>a <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh
-
-cd <span class="token punctuation">.</span>ssh
-cat id_rsa<span class="token punctuation">.</span>pub <span class="token comment" spellcheck="true">//查看公钥</span>
-cat id_rsa     <span class="token comment" spellcheck="true">//查看私钥</span></code></pre>
-<h2 id="2-生成新的-SSH-key"><a href="#2-生成新的-SSH-key" class="headerlink" title="2.生成新的 SSH key"></a>2.生成新的 SSH key</h2><h4 id="1-设置-username-和-email（github-每次-commit-都会记录他们）"><a href="#1-设置-username-和-email（github-每次-commit-都会记录他们）" class="headerlink" title="1.设置 username 和 email（github 每次 commit 都会记录他们）"></a>1.设置 username 和 email（github 每次 commit 都会记录他们）</h4><pre class=" language-javascript"><code class="language-javascript">git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"Leader755"</span>
-git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"1181012791@qq.com"</span></code></pre>
-<h4 id="2-通过终端命令创建-ssh-key"><a href="#2-通过终端命令创建-ssh-key" class="headerlink" title="2.通过终端命令创建 ssh key"></a>2.通过终端命令创建 ssh key</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//其中 your_email@example.com 为你在 GitHub 注册时的邮箱</span>
-'ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"1181012791@qq.com"</span></code></pre>
-<p><a href="https://www.cnblogs.com/jarod99/p/7251361.html" target="_blank" rel="noopener">Bad escape character ‘ygen’ 错误原因!</a></p>
-<blockquote>
-<p>ssh-keygen -t rsa -C “邮箱”<br>ssh-keygen 命令中间没有空格，如果在 ssh 后面加上空格，会得到 Bad escape character ‘ygen’.的错误。</p>
-</blockquote>
-<p>成功后终端显示如下：</p>
-<blockquote>
-<p>Generating public/private rsa key pair.<br>Enter file in which to save the key (/Users/xxx/.ssh/id_rsa):</p>
-</blockquote>
-<p>提示你保存 .ssh/id_rsa 的路径，这里直接 enter</p>
-<blockquote>
-<p>Created directory ‘/Users/xxx/.ssh’.<br>Enter passphrase (empty for no passphrase):</p>
-</blockquote>
-<p>提示输入 passphrase，每次与 GitHub 通信都会要求输入 passphrase，以避免某些「失误」，建议输入<br><strong>这里有个问题需要注意，那就是当你在这里输入密码，以后在连接 gitHub 去 push 代码的时候都需要输入密码，非常蛋疼，所以在这里最好直接回车过即可，不用输入密码。**</strong>()**</p>
-<h4 id="3-即连续-enter-3-次，就会生成-key。"><a href="#3-即连续-enter-3-次，就会生成-key。" class="headerlink" title="3.即连续 enter 3 次，就会生成 key。"></a>3.即连续 enter 3 次，就会生成 key。</h4><p>成功后终端显示：</p>
-<blockquote>
-<p>Your identification has been saved in /Users/xxx/.ssh/id_rsa.<br>Your public key has been saved in /Users/xxx/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48 <a href="mailto:your_email@example.com">your_email@example.com</a><br>The key’s randomart image is:（后面图形省略）</p>
-</blockquote>
-<h2 id="3-添加-key-到-SSH"><a href="#3-添加-key-到-SSH" class="headerlink" title="3.添加 key 到 SSH"></a>3.添加 key 到 SSH</h2><p>输入命令：</p>
-<pre class=" language-javascript"><code class="language-javascript">ssh<span class="token operator">-</span>add <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa</code></pre>
-<p>此时会要求输入 passphrase，输入步骤二中填的 passphrase<br>成功后，终端显示：</p>
-<blockquote>
-<p>Identity added: /Users/xxx/.ssh/id_rsa (/Users/xxx/.ssh/id_rsa)</p>
-</blockquote>
-<p>最后，在 /Users/xxx/.ssh/ 生成两个文件，id_rsa 和 id_rsa.pub<br>此时，SSH key 已经生成成功</p>
-<h2 id="4-添加-SSH-key-到-GitHub-和-coding"><a href="#4-添加-SSH-key-到-GitHub-和-coding" class="headerlink" title="4.添加 SSH key 到 GitHub 和 coding"></a>4.添加 SSH key 到 GitHub 和 coding</h2><h4 id="1-复制-id-rsa-pub-中的所有内容"><a href="#1-复制-id-rsa-pub-中的所有内容" class="headerlink" title="1.复制 id_rsa.pub 中的所有内容,"></a>1.复制 id_rsa.pub 中的所有内容,</h4><p>打开 id_rsa.pub，终端命令：</p>
-<pre class=" language-javascript"><code class="language-javascript">vim<span class="token regex">/cat   ~/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa<span class="token punctuation">.</span>pub</code></pre>
-<p>手动复制以 ssh-rsa 到以 <a href="mailto:your_email@example.com">your_email@example.com</a> 结尾的所有内容</p>
-<p>或者直接输入命令复制 id_rsa.pub 中的所有内容，终端命令：</p>
-<pre class=" language-javascript"><code class="language-javascript">pbcopy <span class="token operator">&lt;</span> <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>_adirs<span class="token punctuation">.</span>pub<span class="token punctuation">;</span></code></pre>
-<h2 id="5-登录-GitHub-和-coding"><a href="#5-登录-GitHub-和-coding" class="headerlink" title="5.登录 GitHub 和 coding"></a>5.登录 GitHub 和 coding</h2><h4 id="github：打开个人-Settings–-gt-SSH-keys–-gt-Add-SSH-key"><a href="#github：打开个人-Settings–-gt-SSH-keys–-gt-Add-SSH-key" class="headerlink" title="github：打开个人 Settings–&gt;SSH keys–&gt;Add SSH key"></a>github：打开个人 Settings–&gt;SSH keys–&gt;Add SSH key</h4><h4 id="coding：打开个人设置–-gt-SSH-公钥-–-gt-新增公钥"><a href="#coding：打开个人设置–-gt-SSH-公钥-–-gt-新增公钥" class="headerlink" title="coding：打开个人设置–&gt;SSH 公钥 –&gt;新增公钥"></a>coding：打开个人设置–&gt;SSH 公钥 –&gt;新增公钥</h4><p>Title 随便写<br>Key 粘贴之前复制的内容<br>这样 SSH key 就添加的 GitHub 或者 coding.<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333300890-a4b759da-4e1d-4837-8cc3-c2c3b1fa1f01.png#align=left&display=inline&height=565&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1130&originWidth=1902&size=254444&status=done&style=none&width=951" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333326072-e78c1bf9-ed79-4811-bbc9-a203e423b57a.png#align=left&display=inline&height=560&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1120&originWidth=1946&size=357795&status=done&style=none&width=973" alt="image.png"></p>
-<h2 id="6-检测-SSH-key"><a href="#6-检测-SSH-key" class="headerlink" title="6.检测 SSH key"></a>6.检测 SSH key</h2><p>输入命令：</p>
-<pre class=" language-javascript"><code class="language-javascript">ssh git@github<span class="token punctuation">.</span>com</code></pre>
-<p>此时会验证 SSH key 是否可以访问 GitHub<br>成功显示如下：</p>
-<blockquote>
-<p>Hi your_name! You’ve successfully authenticated, but GitHub does not provide shell access.<br>Connection to github.com closed.</p>
-</blockquote>
-<blockquote>
-<p>以上为提示内容，不过这里还是有一个需要注意的地方，如果没有上面的成功提示输出的话也不要害怕，我们可以先自己在本地建立一个 gitHub 仓库，然后进行 push 操作，如果 push 成功那么设置是成功的，如果 push 不上去的话再去检查。</p>
-</blockquote>
-<h2 id="7-使用-git-去创建一个-ssh-key-就完成了"><a href="#7-使用-git-去创建一个-ssh-key-就完成了" class="headerlink" title="7.使用 git 去创建一个 ssh key 就完成了"></a>7.使用 git 去创建一个 ssh key 就完成了</h2><h2 id="8-已经存在-ssh，创建新密钥"><a href="#8-已经存在-ssh，创建新密钥" class="headerlink" title="8.已经存在 ssh，创建新密钥"></a>8.已经存在 ssh，创建新密钥</h2><h3 id="1-gt-进入-ssh-目录"><a href="#1-gt-进入-ssh-目录" class="headerlink" title="1&gt;进入 ssh 目录"></a>1&gt;进入 ssh 目录</h3><pre class=" language-javascript"><code class="language-javascript">cd <span class="token operator">~</span><span class="token regex">/.ssh/</span></code></pre>
-<h3 id="2-gt-用-ssh-keygen-命令生成一组新的-id-rsa-new-和-id-rsa-new-pub"><a href="#2-gt-用-ssh-keygen-命令生成一组新的-id-rsa-new-和-id-rsa-new-pub" class="headerlink" title="2&gt;用 ssh-keygen 命令生成一组新的 id_rsa_new 和 id_rsa_new.pub"></a>2&gt;用 ssh-keygen 命令生成一组新的 id_rsa_new 和 id_rsa_new.pub</h3><pre class=" language-javascript"><code class="language-javascript">ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"new email"</span></code></pre>
-<blockquote>
-<p>需要注意，出现提示输入文件名的时候要输入与默认配置不一样的文件名，比如： id_rsa_new</p>
-</blockquote>
-<h3 id="3-gt-执行-ssh-agent-让-ssh-识别新的私钥"><a href="#3-gt-执行-ssh-agent-让-ssh-识别新的私钥" class="headerlink" title="3&gt;执行 ssh-agent 让 ssh 识别新的私钥"></a>3&gt;执行 ssh-agent 让 ssh 识别新的私钥</h3><pre class=" language-javascript"><code class="language-javascript">ssh<span class="token operator">-</span>add <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa_new</code></pre>
-<h3 id="4-gt-添加-SSH-到钥匙串"><a href="#4-gt-添加-SSH-到钥匙串" class="headerlink" title="4&gt;添加 SSH 到钥匙串"></a>4&gt;添加 SSH 到钥匙串</h3><pre class=" language-javascript"><code class="language-javascript">ssh<span class="token operator">-</span>add <span class="token operator">-</span>K KeyPathOrKeyName</code></pre>
+        <h2 id="1-根目录安装插件-hexo-generator-searchdb"><a href="#1-根目录安装插件-hexo-generator-searchdb" class="headerlink" title="1.根目录安装插件 hexo-generator-searchdb"></a>1.根目录安装插件 hexo-generator-searchdb</h2><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>generator<span class="token operator">-</span>searchdb <span class="token operator">--</span>save</code></pre>
+<h2 id="2-配置根目录文件-config-yml"><a href="#2-配置根目录文件-config-yml" class="headerlink" title="2.配置根目录文件_config.yml"></a>2.配置根目录文件_config.yml</h2><pre class=" language-javascript"><code class="language-javascript">search<span class="token punctuation">:</span> path<span class="token punctuation">:</span> search<span class="token punctuation">.</span>xml<span class="token punctuation">;</span>
+field<span class="token punctuation">:</span> post<span class="token punctuation">;</span>
+format<span class="token punctuation">:</span> html<span class="token punctuation">;</span>
+limit<span class="token punctuation">:</span> <span class="token number">10000</span><span class="token punctuation">;</span></code></pre>
+<p>##</p>
+<h2 id="3-配置主题文件-config-yml"><a href="#3-配置主题文件-config-yml" class="headerlink" title="3.配置主题文件_config.yml"></a>3.配置主题文件_config.yml</h2><pre class=" language-javascript"><code class="language-javascript">local_search<span class="token punctuation">:</span> enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
+<h2 id="4-完成效果图示"><a href="#4-完成效果图示" class="headerlink" title="4.完成效果图示"></a>4.完成效果图示</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588695774509-2476d128-a52b-4d6b-8e64-7269b5c7389b.png#align=left&display=inline&height=568&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1136&originWidth=2180&size=310201&status=done&style=none&width=1090" alt="image.png"></p>
 
       </div>
       <hr />
@@ -717,7 +647,7 @@ git config <span class="token operator">--</span>global user<span class="token p
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leader755.com/leader755/b0c9815c.html">https://leader755.com/leader755/b0c9815c.html</a>
+                    <a href="https://leader755.com/leader755/31782.html">https://leader755.com/leader755/31782.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -755,12 +685,8 @@ git config <span class="token operator">--</span>global user<span class="token p
           
           <div class="article-tag">
             
-            <a href="/tags/github/">
-              <span class="chip bg-color">github</span>
-            </a>
-            
-            <a href="/tags/mac/">
-              <span class="chip bg-color">mac</span>
+            <a href="/tags/%E6%90%9C%E7%B4%A2/">
+              <span class="chip bg-color">搜索</span>
             </a>
             
           </div>
@@ -769,14 +695,14 @@ git config <span class="token operator">--</span>global user<span class="token p
         <div class="post_share"
           style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
           <!-- <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css"> -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/share/css/share.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 
 <div id="article-share">
     
     
     <div class="social-share" data-sites="wechat,qq,weibo,douban,google" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <!-- <script src="/libs/share/js/social-share.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/share/js/social-share.min.js"></script>
+    <script src="/libs/share/js/social-share.min.js"></script>
     
 
     
@@ -1045,8 +971,8 @@ git config <span class="token operator">--</span>global user<span class="token p
 
 <!-- <script src="/libs/valine/av-min.js"></script>
 <script src="/libs/valine/Valine.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/valine/av-min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/valine/Valine.min.js"></script>
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
 <script>
     new Valine({
         el: '#vcomments',
@@ -1073,33 +999,37 @@ git config <span class="token operator">--</span>global user<span class="token p
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/896b4ef0.html">
+                <a href="/leader755/7381.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="4.mac 上使用 vi"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/11.jpg" class="responsive-img" alt="4.mac 上使用 vi">
+                        <!-- <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="8.语雀文档同步到 hexo"> -->
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="8.语雀文档同步到 hexo">
                         
-                        <span class="card-title">4.mac 上使用 vi</span>
+                        <span class="card-title">8.语雀文档同步到 hexo</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。
-如果是 vi，则：Esc 退出编辑模式，输入以下命令：:wq 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）:w 保存但不退
+                            1.去官网注册账号点我去官网
+2.创建知识库
+3.点击当前知识库的设置获取当前知识库的登录名和路径
+4.在将语雀文档同步到 hexo//先安装 yuque-hexo
+npm install yuque-hexo --save
+1) 修改 p
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-23
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-19
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
                                 </a>
                             
                             
@@ -1109,12 +1039,8 @@ git config <span class="token operator">--</span>global user<span class="token p
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mac/">
-                        <span class="chip bg-color">mac</span>
-                    </a>
-                    
-                    <a href="/tags/vi/">
-                        <span class="chip bg-color">vi</span>
+                    <a href="/tags/yuque/">
+                        <span class="chip bg-color">yuque</span>
                     </a>
                     
                 </div>
@@ -1128,33 +1054,32 @@ git config <span class="token operator">--</span>global user<span class="token p
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/c6cbe756.html">
+                <a href="/leader755/13299.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="mac 使用 homebrew"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/17.jpg" class="responsive-img" alt="mac 使用 homebrew">
+                        <!-- <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hexo博客提交百度和Google收录"> -->
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hexo博客提交百度和Google收录">
                         
-                        <span class="card-title">mac 使用 homebrew</span>
+                        <span class="card-title">Hexo博客提交百度和Google收录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用 brew update 指令
-报错Error: The following directories are not writable by your user:/usr/local/sbin/usr/local/share/man/m
+                            一个网站的 SEO 对一个网站非常重要，SEO指的是搜索引擎优化。通过搜索引擎优化，可以提高网站的网站关键词排名以及博客文章的曝光度。一般来说，我们针对百度和 Google 这两个搜索引擎进行优化，提高对网站资源的索引量，使我们的文章更容易
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
                                 </a>
                             
                             
@@ -1164,12 +1089,12 @@ git config <span class="token operator">--</span>global user<span class="token p
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mac/">
-                        <span class="chip bg-color">mac</span>
+                    <a href="/tags/%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95/">
+                        <span class="chip bg-color">百度收录</span>
                     </a>
                     
-                    <a href="/tags/homebrew/">
-                        <span class="chip bg-color">homebrew</span>
+                    <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%94%B6%E5%BD%95/">
+                        <span class="chip bg-color">谷歌收录</span>
                     </a>
                     
                 </div>
@@ -1186,7 +1111,7 @@ git config <span class="token operator">--</span>global user<span class="token p
 
 <!-- 代码块功能依赖 -->
 <!-- <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -1194,13 +1119,13 @@ git config <span class="token operator">--</span>global user<span class="token p
 <!-- 代码块复制 -->
 
 <!-- <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
 <!-- <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
 <!-- 代码块折行 -->
@@ -1224,7 +1149,7 @@ git config <span class="token operator">--</span>global user<span class="token p
 
 
 <!-- <script src="/libs/tocbot/tocbot.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/tocbot/tocbot.min.js"></script>
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1343,7 +1268,7 @@ git config <span class="token operator">--</span>global user<span class="token p
 
       
       <!-- <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
-      <span id="icp"><img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/icp.png" style="vertical-align: text-bottom;" />
+      <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
         <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备20012827号-1</a>
       </span>
       
@@ -1408,11 +1333,11 @@ git config <span class="token operator">--</span>global user<span class="token p
 </div>
 
 <!-- <script src="/js/search.js"></script> -->
-<script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/js/search.js"></script>
+<script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
     // searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
-    searchFunc("https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
 });
 </script>
   <!-- 回到顶部按钮 -->
@@ -1430,12 +1355,12 @@ $(function () {
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script> -->
 
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/materialize/materialize.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/masonry/masonry.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/aos/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/scrollprogress/scrollProgress.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/lightGallery/js/lightgallery-all.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/js/matery.js"></script>
+  <script src="/libs/materialize/materialize.min.js"></script>
+  <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+  <script src="/libs/aos/aos.js"></script>
+  <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+  <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+  <script src="/js/matery.js"></script>
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -1464,12 +1389,12 @@ $(function () {
   
 
   
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/others/cursor.js"></script>
+  <script src="/libs/others/cursor.js"></script>
   
 
   
   <!-- <script async src="/libs/others/busuanzi.pure.mini.js"></script> -->
-  <script async src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/others/busuanzi.pure.mini.js"></script>
+  <script async src="/libs/others/busuanzi.pure.mini.js"></script>
   
 
   
@@ -1515,13 +1440,13 @@ $(function () {
 
   
   <!-- <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script> -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/background/ribbon-dynamic.js" async="async">
+  <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async">
   </script>
   
 
   
   <!-- <script src="/libs/instantpage/instantpage.js" type="module"></script> -->
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/instantpage/instantpage.js" type="module"></script>
+  <script src="/libs/instantpage/instantpage.js" type="module"></script>
   
 
   <script type="text/javascript">
@@ -1585,7 +1510,7 @@ $(function () {
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1596555586399')
+  navigator.serviceWorker.register('/sw.js?t=1596556926217')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

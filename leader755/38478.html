@@ -4,9 +4,9 @@
 
 <head><link rel=manifest href=/manifest.json>
   <meta charset="utf-8">
-  <meta name="keywords" content="给hexo博客添加PWA支持, 个人博客，leader755，leader755博客，hexo博客">
-  <meta name="description" content="简介
-PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 年， W3C 公布过 Service Worker 的相关草案，但是其在生产环境被 Chrome 支持是在 2015 年。因此，如果我们把 P">
+  <meta name="keywords" content="hexo博客的评论功能, 个人博客，leader755，leader755博客，hexo博客">
+  <meta name="description" content="1.这里推荐的评论功能插件为valine官网：https://valine.js.org/注册登录网站：https://leancloud.cn/      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。
+2.去leanclou">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,9 +15,9 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>给hexo博客添加PWA支持 | Autumn cicada Blogs</title>
+  <title>hexo博客的评论功能 | Autumn cicada Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
-  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/favicon.ico">
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
   <meta name="theme-color" content="white" />
 
@@ -29,17 +29,17 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css"> -->
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/awesome/css/all.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/materialize/materialize.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/aos/aos.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/animate/animate.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/lightGallery/css/lightgallery.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/css/matery.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/css/my.css">
+  <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+  <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/matery.css">
+  <link rel="stylesheet" type="text/css" href="/css/my.css">
 
   <script src="/libs/jquery/jquery.min.js"></script>
   <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/jquery/jquery.min.js"></script>
+  <script src="/libs/jquery/jquery.min.js"></script>
   <!-- 百度自动推送 -->
   <script>
     (function () {
@@ -69,7 +69,7 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
         <a href="/" class="waves-effect waves-light">
           
           <!-- <img src="/medias/logo.png" class="logo-img" alt="LOGO"> -->
-          <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/logo.png" class="logo-img" alt="LOGO">
+          <img src="/medias/logo.png" class="logo-img" alt="LOGO">
           
           <span class="logo-span big-show">Autumn cicada Blogs</span>
         </a>
@@ -214,7 +214,7 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
     <div class="mobile-head bg-color">
         
         <!-- <img src="/medias/logo.png" class="logo-img circle responsive-img"> -->
-        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Autumn cicada Blogs</div>
         <div class="logo-desc">
@@ -429,13 +429,13 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')"> -->
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/2.jpg')">    
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')"> -->
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">    
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">给hexo博客添加PWA支持</h1>
+                    <h1 class="description center-align post-title">hexo博客的评论功能</h1>
                 </div>
             </div>
         </div>
@@ -449,7 +449,7 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
 
     
     <!-- <link rel="stylesheet" href="/libs/tocbot/tocbot.css"> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/tocbot/tocbot.css">
+<link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -555,8 +555,12 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
           
           <div class="article-tag">
             
-            <a href="/tags/PWA/">
-              <span class="chip bg-color">PWA</span>
+            <a href="/tags/valine/">
+              <span class="chip bg-color">valine</span>
+            </a>
+            
+            <a href="/tags/leancloud/">
+              <span class="chip bg-color">leancloud</span>
             </a>
             
           </div>
@@ -580,28 +584,28 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2020-08-01
+          2020-07-21
         </div>
         
 
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2020-08-01
+          2020-07-21
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          2.1k
+          289
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          8 分
+          1 分
         </div>
         
 
@@ -614,226 +618,27 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><hr>
-<p><strong>PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 年， W3C 公布过 Service Worker 的相关草案，但是其在生产环境被 Chrome 支持是在 2015 年。因此，如果我们把 PWA 的关键技术之一 Service Worker 的出现作为 PWA 的诞生时间，那就应该是 2015 年。</strong><br><strong>自 2015 年以来，PWA 相关的技术不断升级优化，在用户体验和用户留存两方面都提供了非常好的解决方案。PWA 可以将 Web 和 App 各自的优势融合在一起：渐进式、可响应、可离线、实现类似 App 的交互、即时更新、安全、可以被搜索引擎检索、可推送、可安装、可链接。</strong></p>
-<p><strong>由于 hexo 为静态博客，因此不需要具备推送功能（其实是我没搞懂）。因此 PWA 的特性包括其渐进式、可离线，可以作为提高网站体验和提高网站家在速度的一个方法。因此下面将从其主要内容和 hexo 如何安装两个方面以“吃白饭的休伯利安号”为例来简单演示一遍安装过程。</strong></p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><hr>
-<h3 id="渐进式"><a href="#渐进式" class="headerlink" title="渐进式"></a>渐进式</h3><p>什么是渐进式，即将传统的 web 应用，应用现代的技术和方法使之在能够有桌面应用一般的体验，即为渐进式 web 应用。渐进式 web 应用可以同时运行在传统的浏览器上，像普通的网站一样进行浏览和操作；其同时也可以运行在现代功能完善的浏览器中，可以使其具备更多的效果和功能。比较常见的有<strong>可安装</strong>，即在支持的浏览器和操作系统上可以生成访问图标，通过图标可以可桌面应用一样访问应用；<strong>消息推送</strong>，即访问应用时服务器端可以通过应用的后台进程主动向客户端推送消息，类似于桌面应用的消息队列。</p>
-<h3 id="可离线"><a href="#可离线" class="headerlink" title="可离线"></a>可离线</h3><p>支持应用离线访问，即正常访问应用时，后台进程会自动缓存内容，下次访问时应用优先从缓存区读取数据，然后是进行 web 请求。因此可离线实质上充当了 web 代理服务器的职责，先是将正常请求代理到缓存区，再是将缓存区不足的文件进行正常的网络请求，通过此方法实现了离线的目标。根据可离线的规律，应用在一次访问缓存之后二次访问即可断网。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><hr>
-<h3 id="1-gt-安装-pwa"><a href="#1-gt-安装-pwa" class="headerlink" title="1&gt;安装 pwa"></a>1&gt;安装 pwa</h3><p>离线使用依赖<code>Service Work</code>，其本质是一段运行在并行于主进程的后台进程上，他不参与 web 交互功能，主要职责是和服务器交互，和指示缓存的内容。其详细的生命周期和原理文档详见：<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers" target="_blank" rel="noopener">Using Service Workers</a>。可以通过文档中的生命周期对这段后台脚本进行深度开发。<br>hexo 为静态博客，因此只需要实现离线使用即可，不需要进行消息推送，因此可以使用固定服务注册脚本，在 hexo 中服务注册脚本有着专门的插件进行生成：</p>
-<table>
-<thead>
-<tr>
-<th align="center">hexo-offline</th>
-<th align="center">hexo-pwa</th>
-<th align="center">hexo-service-worker</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">hexo 的离线插件不包括安装</td>
-<td align="center">百度出的 PWA 综合插件，支持同时生成 manifest.json，有很多的配置项</td>
-<td align="center">和 hexo-offline 类似</td>
-</tr>
-</tbody></table>
-<p>三个插件的原理相同，通过注册 SW 服务，配合<code>manifest.json</code>，文件达到<strong>可安装</strong>和<strong>可离线</strong>的功能，本站使用的是 hexo-pwa 插件，下面是插件使用的细节：</p>
-<blockquote>
-<p><code>hexo@4.2.0</code>  目前赞不兼容  <code>hexo-pwa</code>,使用  <code>hexo@4.2.0</code>  版本的用户推荐降级到  <code>hexo@4.1.1</code></p>
-</blockquote>
-<h4 id="1-gt-检查-hexo-版本"><a href="#1-gt-检查-hexo-版本" class="headerlink" title="1&gt;检查 hexo 版本"></a>1&gt;检查 hexo 版本</h4><pre class=" language-javascript"><code class="language-javascript">hexo <span class="token operator">-</span>v
-
-<span class="token comment" spellcheck="true">//注意如果hexo版本大于4.11，使用以下命令重装 hexo</span>
-npm install hexo@<span class="token number">4.1</span><span class="token punctuation">.</span><span class="token number">1</span> <span class="token operator">--</span>save</code></pre>
-<h4 id="2-gt-安装-hexo-pwa"><a href="#2-gt-安装-hexo-pwa" class="headerlink" title="2&gt;安装 hexo-pwa"></a>2&gt;安装 hexo-pwa</h4><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>pwa <span class="token operator">--</span>save</code></pre>
-<p>##</p>
-<p>###</p>
-<h3 id="2-gt-新建-manifest-json-文件"><a href="#2-gt-新建-manifest-json-文件" class="headerlink" title="2&gt;新建 manifest.json 文件"></a>2&gt;新建 manifest.json 文件</h3><p>首先要实现 PWA 的可安装性，需要有一个清单文件<code>manifest.json</code>。<code>manifest.json</code>是一个简单的<code>json</code>文件，它描述了我们的图标在主屏幕上如何显示，以及图标点击进去的启动页是什么，自动生成<code>manifest.json</code>的工具：<a href="https://app-manifest.firebaseapp.com/" target="_blank" rel="noopener">manifest.json 生成工具</a>（需要梯子），本站的 JSON 格式如下所示：</p>
-<p>在站点根目录中创建<a href="https://app-manifest.firebaseapp.com/" target="_blank" rel="noopener">manifest.json</a>文件，并将以下内容放入其中，<br>在站点根目录中创建 images 文件夹 放入生成的 icons 图标</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
-  <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Autumn cicada Blogs"</span><span class="token punctuation">,</span>
-  <span class="token string">"short_name"</span><span class="token punctuation">:</span> <span class="token string">"Autumn cicada Blogs"</span><span class="token punctuation">,</span>
-  <span class="token string">"theme_color"</span><span class="token punctuation">:</span> <span class="token string">"#3a311c"</span><span class="token punctuation">,</span>
-  <span class="token string">"background_color"</span><span class="token punctuation">:</span> <span class="token string">"#3a311c"</span><span class="token punctuation">,</span>
-  <span class="token string">"display"</span><span class="token punctuation">:</span> <span class="token string">"standalone"</span><span class="token punctuation">,</span>
-  <span class="token string">"Scope"</span><span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span>
-  <span class="token string">"start_url"</span><span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span>
-  <span class="token string">"icons"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
-      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-72x72.png"</span><span class="token punctuation">,</span>
-      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"72x72"</span><span class="token punctuation">,</span>
-      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>
-      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-96x96.png"</span><span class="token punctuation">,</span>
-      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"96x96"</span><span class="token punctuation">,</span>
-      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>
-      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-128x128.png"</span><span class="token punctuation">,</span>
-      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"128x128"</span><span class="token punctuation">,</span>
-      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>
-      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-144x144.png"</span><span class="token punctuation">,</span>
-      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"144x144"</span><span class="token punctuation">,</span>
-      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>
-      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-152x152.png"</span><span class="token punctuation">,</span>
-      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"152x152"</span><span class="token punctuation">,</span>
-      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>
-      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-192x192.png"</span><span class="token punctuation">,</span>
-      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"192x192"</span><span class="token punctuation">,</span>
-      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>
-      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-384x384.png"</span><span class="token punctuation">,</span>
-      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"384x384"</span><span class="token punctuation">,</span>
-      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>
-      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/icon-512x512.png"</span><span class="token punctuation">,</span>
-      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"512x512"</span><span class="token punctuation">,</span>
-      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>
-      <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/icons/apple-touch-icon.png"</span><span class="token punctuation">,</span>
-      <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"180x180"</span><span class="token punctuation">,</span>
-      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token string">"splash_pages"</span><span class="token punctuation">:</span> <span class="token keyword">null</span>
-<span class="token punctuation">}</span></code></pre>
-<p>其中：</p>
-<blockquote>
-<ul>
-<li>start_url 可以设置启动网址</li>
-<li>icons 可以设置各个分辨率下页面的图标，适配不同的尺寸的路径</li>
-<li>background_color 会设置背景颜色， Chrome 在网络应用启动后会立即使用此颜色，这一颜色将保留在屏幕上，直至网络应用首次呈现为止。</li>
-<li>theme_color 会设置主题颜色</li>
-<li>display 设置启动样式</li>
-</ul>
-</blockquote>
-<h3 id="3-gt-新建-sw-js-文件"><a href="#3-gt-新建-sw-js-文件" class="headerlink" title="3&gt;新建 sw.js 文件"></a>3&gt;新建 sw.js 文件</h3><p>在站点根目录下新建一个名为 sw.js 的文件，在文件里填入一下内容</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">importScripts</span><span class="token punctuation">(</span><span class="token string">"https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">if</span> <span class="token punctuation">(</span>workbox<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  workbox<span class="token punctuation">.</span><span class="token function">setConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    modulePathPrefix<span class="token punctuation">:</span> <span class="token string">"https://g.alicdn.com/kg/workbox/3.3.0/"</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  workbox<span class="token punctuation">.</span>precaching<span class="token punctuation">.</span><span class="token function">precache</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"/"</span><span class="token punctuation">,</span> <span class="token string">"/index.html"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  workbox<span class="token punctuation">.</span>routing<span class="token punctuation">.</span><span class="token function">registerRoute</span><span class="token punctuation">(</span>
-    <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">"^https?://m-blog.cn/?$"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    workbox<span class="token punctuation">.</span>strategies<span class="token punctuation">.</span><span class="token function">networkFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  workbox<span class="token punctuation">.</span>routing<span class="token punctuation">.</span><span class="token function">registerRoute</span><span class="token punctuation">(</span>
-    <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">".*.html"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    workbox<span class="token punctuation">.</span>strategies<span class="token punctuation">.</span><span class="token function">networkFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  workbox<span class="token punctuation">.</span>routing<span class="token punctuation">.</span><span class="token function">registerRoute</span><span class="token punctuation">(</span>
-    <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">".*.(?:js|css|jpg|png|gif)"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    workbox<span class="token punctuation">.</span>strategies<span class="token punctuation">.</span><span class="token function">staleWhileRevalidate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<blockquote>
-<p>将其中域名改为你自己主页的域名：<code>https?://m-blog.cn/</code>改为你的域名，格式要和我的一样。</p>
-</blockquote>
-<h3 id="4-gt-配置站点根目录下的-config-yml-配置文件"><a href="#4-gt-配置站点根目录下的-config-yml-配置文件" class="headerlink" title="4&gt;配置站点根目录下的 _config.yml 配置文件"></a>4&gt;配置站点根目录下的 _config.yml 配置文件</h3><p>注意路径要根据实际情况变化。</p>
-<pre class=" language-javascript"><code class="language-javascript"># PWA配置  npm i <span class="token operator">--</span>save hexo<span class="token operator">-</span>pwa
-pwa<span class="token punctuation">:</span>
-  manifest<span class="token punctuation">:</span>
-    path<span class="token punctuation">:</span> <span class="token operator">/</span>manifest<span class="token punctuation">.</span>json  #当前 manifest<span class="token punctuation">.</span>json文件在根目录
-    body<span class="token punctuation">:</span>
-      name<span class="token punctuation">:</span> Autumn cicada Blogs
-      short_name<span class="token punctuation">:</span> Autumn cicada Blogs
-      theme_color<span class="token punctuation">:</span> white
-      background_color<span class="token punctuation">:</span> white
-      display<span class="token punctuation">:</span> standalone
-      orientation<span class="token punctuation">:</span> portrait
-      scope<span class="token punctuation">:</span> <span class="token operator">/</span>
-      start_url<span class="token punctuation">:</span> <span class="token operator">/</span>
-      icons<span class="token punctuation">:</span>
-        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>72x72<span class="token punctuation">.</span>png  #当前 images文件夹在根目录
-          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
-          sizes<span class="token punctuation">:</span> 72x72
-        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>72x72<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
-          sizes<span class="token punctuation">:</span> 72x72<span class="token punctuation">,</span>
-          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
-        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>96x96<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
-          sizes<span class="token punctuation">:</span> 96x96<span class="token punctuation">,</span>
-          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
-        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>128x128<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
-          sizes<span class="token punctuation">:</span> 128x128<span class="token punctuation">,</span>
-          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
-        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>144x144<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
-          sizes<span class="token punctuation">:</span> 144x144<span class="token punctuation">,</span>
-          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
-        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>152x152<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
-          sizes<span class="token punctuation">:</span> 152x152<span class="token punctuation">,</span>
-          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
-        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>192x192<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
-          sizes<span class="token punctuation">:</span> 192x192<span class="token punctuation">,</span>
-          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
-        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>384x384<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
-          sizes<span class="token punctuation">:</span> 384x384<span class="token punctuation">,</span>
-          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
-        <span class="token operator">-</span> src<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>icons<span class="token operator">/</span>icon<span class="token operator">-</span>512x512<span class="token punctuation">.</span>png<span class="token punctuation">,</span>
-          sizes<span class="token punctuation">:</span> 512x512<span class="token punctuation">,</span>
-          type<span class="token punctuation">:</span> image<span class="token operator">/</span>png
-  serviceWorker<span class="token punctuation">:</span>
-    path<span class="token punctuation">:</span> <span class="token operator">/</span>sw<span class="token punctuation">.</span>js  #当前 sw<span class="token punctuation">.</span>js 文件在根目录
-    preload<span class="token punctuation">:</span>
-      urls<span class="token punctuation">:</span>
-        <span class="token operator">-</span> <span class="token operator">/</span>
-      posts<span class="token punctuation">:</span> <span class="token number">12</span>
-    opts<span class="token punctuation">:</span>
-      networkTimeoutSeconds<span class="token punctuation">:</span> <span class="token number">30</span>
-    routes<span class="token punctuation">:</span>
-      <span class="token operator">-</span> pattern<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>js<span class="token operator">/</span>regexp <span class="token regex">/hm.baidu.com/</span>
-        strategy<span class="token punctuation">:</span> networkOnly
-      <span class="token operator">-</span> pattern<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>js<span class="token operator">/</span>regexp <span class="token regex">/www.google-analytics.com/</span>
-        strategy<span class="token punctuation">:</span> networkOnly
-      <span class="token operator">-</span> pattern<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>js<span class="token regex">/regexp /</span><span class="token punctuation">.</span><span class="token operator">*</span>\<span class="token punctuation">.</span><span class="token punctuation">(</span>js<span class="token operator">|</span>css<span class="token operator">|</span>jpg<span class="token operator">|</span>jpeg<span class="token operator">|</span>png<span class="token operator">|</span>gif<span class="token punctuation">)</span>$<span class="token operator">/</span>
-        strategy<span class="token punctuation">:</span> cacheFirst
-      <span class="token operator">-</span> pattern<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>js<span class="token operator">/</span>regexp <span class="token regex">/\//</span>
-        strategy<span class="token punctuation">:</span> networkFirst
-  priority<span class="token punctuation">:</span> <span class="token number">5</span></code></pre>
-<h3 id="5-gt-检查-PWA-服务"><a href="#5-gt-检查-PWA-服务" class="headerlink" title="5&gt;检查 PWA 服务"></a>5&gt;检查 PWA 服务</h3><pre class=" language-javascript"><code class="language-javascript">hexo cl <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s
-
-<span class="token comment" spellcheck="true">//成功后可以执行 ，发布。</span>
-hexo d</code></pre>
-<blockquote>
-<p>按<code>F12</code>或者<code>Ctrl + Shift + I</code>或者直接鼠标右键弹出的菜单中，有个检查，鼠标点击，就可以进入开发者调试模式，然后选择<code>Application</code>—&gt;<code>Service Workers</code>，查看是否成功？</p>
-</blockquote>
-<p>以下 分别是本地版和在线版成功的标识<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1596352726824-1f14ab5b-af44-4e71-a5d4-04e87fb4eeaa.png#align=left&display=inline&height=510&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1020&originWidth=1522&size=198650&status=done&style=none&width=761" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1596352652911-78e9aa18-1666-47a8-9afe-5db07dc0a273.png#align=left&display=inline&height=408&margin=%5Bobject%20Object%5D&name=image.png&originHeight=816&originWidth=1466&size=163517&status=done&style=none&width=733" alt="image.png"></p>
-<p>##</p>
-<h3 id="6-gt-附加增强功能-可选"><a href="#6-gt-附加增强功能-可选" class="headerlink" title="6&gt;附加增强功能(可选)"></a>6&gt;附加增强功能(可选)</h3><h4 id="添加-IOS-Safari-PWA-图标支持"><a href="#添加-IOS-Safari-PWA-图标支持" class="headerlink" title="添加 IOS Safari PWA 图标支持"></a>添加 IOS Safari PWA 图标支持</h4><p>在<code>manifest.json</code>文件中添加下面的代码，代码是关于<code>apple-touch-icon</code>图标的</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
-    <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/apple-touch-icon.png"</span><span class="token punctuation">,</span>
-    <span class="token string">"sizes"</span><span class="token punctuation">:</span> <span class="token string">"180x180"</span><span class="token punctuation">,</span>
-    <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image/png"</span>
-<span class="token punctuation">}</span></code></pre>
-<blockquote>
-<p>图标大小设置为<code>180 x 180</code></p>
-</blockquote>
-<p>####</p>
-<h4 id="修改-head-ejs-文件"><a href="#修改-head-ejs-文件" class="headerlink" title="修改 head.ejs 文件"></a>修改 head.ejs 文件</h4><p>在<code>themes/halo/layout/_partial/head.ejs</code>，在 head.ejs 文件中的<code>&lt;head&gt;&lt;/head&gt;</code>标签之间添加下面的代码：</p>
-<pre><code>&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;&lt;%- theme.appletouchicon %&gt;&quot;&gt;
-&lt;meta name=&quot;theme-color&quot; content=&quot;white&quot;/&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=no&quot;&gt;</code></pre><ul>
-<li>theme-color：中的 content 对应的是你 <code>manifest.json</code> 中的 <code>theme_color</code> 的值</li>
-<li>viewport: 用于针对移动屏幕优化 PWA 应用 详细链接<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fsitoi.cn%2Fgo.html%3Fu%3DaHR0cHM6Ly93ZWIuZGV2L3ZpZXdwb3J0Lz91dG1fc291cmNlPWxpZ2h0aG91c2UmdXRtX21lZGl1bT11bmtub3du" target="_blank" rel="noopener">viewport</a></li>
-<li>apple-touch-icon：配置 <code>apple-touch-icon</code> 图标链接</li>
-</ul>
-<p><strong>在**</strong>主题配置文件<code>_config.yml</code>*<strong>*下添加下面的代码</strong></p>
-<pre class=" language-javascript"><code class="language-javascript">appletouchicon<span class="token punctuation">:</span> <span class="token operator">/</span>images<span class="token operator">/</span>apple<span class="token operator">-</span>touch<span class="token operator">-</span>icon<span class="token punctuation">.</span>png #你图片的路径</code></pre>
-<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><pre class=" language-javascript"><code class="language-javascript">hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">-</span>d</code></pre>
-<p>参考文档：<br>1&gt; <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fsitoi.cn%2Fposts%2F49115.html" target="_blank" rel="noopener">https://sitoi.cn/posts/49115.html</a><br>2&gt; <a href="https://juejin.im/post/6844903670639771662" target="_blank" rel="noopener">https://juejin.im/post/6844903670639771662</a><br>3&gt; <a href="https://www.jianshu.com/p/74ee8695140c" target="_blank" rel="noopener">https://www.jianshu.com/p/74ee8695140c</a></p>
+        <h2 id="1-这里推荐的评论功能插件为valine"><a href="#1-这里推荐的评论功能插件为valine" class="headerlink" title="1.这里推荐的评论功能插件为valine"></a>1.这里推荐的评论功能插件为<a href="https://valine.js.org/" target="_blank" rel="noopener">valine</a></h2><p>官网：<a href="https://valine.js.org/" target="_blank" rel="noopener">https://valine.js.org/</a><br>注册登录网站：<a href="https://leancloud.cn/" target="_blank" rel="noopener">https://leancloud.cn/</a><br>      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。</p>
+<h2 id="2-去leancloud注册"><a href="#2-去leancloud注册" class="headerlink" title="2.去leancloud注册"></a>2.去<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud</a>注册</h2><p>注册完成后去创建应用，选择开发版就可以了。（需要实名登记才能创建应用）<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588779620815-f8a3fc6e-f667-4959-9cb2-53b5777427c7.png#align=left&display=inline&height=445&margin=%5Bobject%20Object%5D&name=image.png&originHeight=890&originWidth=1232&size=83220&status=done&style=none&width=616" alt="image.png"></p>
+<h2 id="3-获取-appkey-和-appid"><a href="#3-获取-appkey-和-appid" class="headerlink" title="3.获取 appkey 和 appid"></a>3.获取 appkey 和 appid</h2><p>创建完成应用后，<strong>进入应用-&gt;设置-&gt;应用 key，找到相应的 appkey 和 appid。</strong><br><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588779969891-d05a06f8-bcf5-4b7e-84cb-bcedabc8f762.png#align=left&display=inline&height=248&margin=%5Bobject%20Object%5D&name=image.png&originHeight=796&originWidth=2394&size=185376&status=done&style=none&width=746" alt="image.png"></strong></p>
+<h2 id="4-配置主题文件-config-yml"><a href="#4-配置主题文件-config-yml" class="headerlink" title="4.配置主题文件_config.yml"></a>4.配置主题文件_config.yml</h2><p><strong>搜索 valine，一般可看到如下，将 enbled:true, 并填写 appid 和 appkey(从 leancloud 中获取的 appid 和 appkey)。</strong></p>
+<pre class=" language-javascript"><code class="language-javascript"># The configuration <span class="token keyword">of</span> the Valine comment module is not activated by <span class="token keyword">default</span><span class="token punctuation">.</span>
+# To use it<span class="token punctuation">,</span> activate the configuration item and <span class="token keyword">set</span> appId and appKey<span class="token punctuation">.</span>
+# Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey<span class="token punctuation">.</span>
+valine<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  appId<span class="token punctuation">:</span>
+  appKey<span class="token punctuation">:</span>
+  notify<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  verify<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  visitor<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  avatar<span class="token punctuation">:</span> <span class="token string">'mp'</span> # Gravatar style <span class="token punctuation">:</span> mp<span class="token operator">/</span>identicon<span class="token operator">/</span>monsterid<span class="token operator">/</span>wavatar<span class="token operator">/</span>retro<span class="token operator">/</span>hide
+  pageSize<span class="token punctuation">:</span> <span class="token number">10</span>
+  placeholder<span class="token punctuation">:</span> <span class="token string">'just go go'</span> # Comment Box placeholder
+  background<span class="token punctuation">:</span> <span class="token operator">/</span>medias<span class="token operator">/</span>comment_bg<span class="token punctuation">.</span>png</code></pre>
+<h2 id="5-配置域名"><a href="#5-配置域名" class="headerlink" title="5.配置域名"></a>5.配置域名</h2><p>在 Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名 把你的域名加进去.</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588780306061-73286643-1359-4efe-b2a1-5545f880dd4a.png#align=left&display=inline&height=500&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1000&originWidth=1804&size=166396&status=done&style=none&width=902" alt="image.png"></p>
+<h2 id="6-重启你的博客"><a href="#6-重启你的博客" class="headerlink" title="6.重启你的博客"></a>6.重启你的博客</h2><p>大功告成！！</p>
 
       </div>
       <hr />
@@ -859,7 +664,7 @@ hexo d</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leader755.com/leader755/ddd228a6.html">https://leader755.com/leader755/ddd228a6.html</a>
+                    <a href="https://leader755.com/leader755/38478.html">https://leader755.com/leader755/38478.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -897,8 +702,12 @@ hexo d</code></pre>
           
           <div class="article-tag">
             
-            <a href="/tags/PWA/">
-              <span class="chip bg-color">PWA</span>
+            <a href="/tags/valine/">
+              <span class="chip bg-color">valine</span>
+            </a>
+            
+            <a href="/tags/leancloud/">
+              <span class="chip bg-color">leancloud</span>
             </a>
             
           </div>
@@ -907,14 +716,14 @@ hexo d</code></pre>
         <div class="post_share"
           style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
           <!-- <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css"> -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/share/css/share.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 
 <div id="article-share">
     
     
     <div class="social-share" data-sites="wechat,qq,weibo,douban,google" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <!-- <script src="/libs/share/js/social-share.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/share/js/social-share.min.js"></script>
+    <script src="/libs/share/js/social-share.min.js"></script>
     
 
     
@@ -1183,8 +992,8 @@ hexo d</code></pre>
 
 <!-- <script src="/libs/valine/av-min.js"></script>
 <script src="/libs/valine/Valine.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/valine/av-min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/valine/Valine.min.js"></script>
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
 <script>
     new Valine({
         el: '#vcomments',
@@ -1207,17 +1016,16 @@ hexo d</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/ddd228a6.html">
+                <a href="/leader755/19561.html">
                     <div class="card-image">
                         
                         
                         <!-- <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="给hexo博客添加PWA支持"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/2.jpg" class="responsive-img" alt="给hexo博客添加PWA支持">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="给hexo博客添加PWA支持">
                         
                         <span class="card-title">给hexo博客添加PWA支持</span>
                     </div>
@@ -1230,9 +1038,9 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1245,7 +1053,6 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1264,21 +1071,20 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/c41d01b3.html">
+                <a href="/leader755/34284.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="hexo博客的评论功能"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/featureimages/20.jpg" class="responsive-img" alt="hexo博客的评论功能">
+                        <!-- <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="travis-ci + github + hexo 持续集成"> -->
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="travis-ci + github + hexo 持续集成">
                         
-                        <span class="card-title">hexo博客的评论功能</span>
+                        <span class="card-title">travis-ci + github + hexo 持续集成</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.这里推荐的评论功能插件为valine官网：https://valine.js.org/注册登录网站：https://leancloud.cn/      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。
-2.去leanclou
+                            Hexo 博客源代码 GitHub 托管1.注册 travis-ciTravis CI 的网站有两个，travis-ci.org  专门针对开源项目，GitHub 上所有的公开仓库都能够免费使用；travis-ci.com  针对私有及商业
                         
                     </div>
                     <div class="publish-info">
@@ -1300,12 +1106,12 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/valine/">
-                        <span class="chip bg-color">valine</span>
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
-                    <a href="/tags/leancloud/">
-                        <span class="chip bg-color">leancloud</span>
+                    <a href="/tags/travis-ci/">
+                        <span class="chip bg-color">travis-ci</span>
                     </a>
                     
                 </div>
@@ -1322,7 +1128,7 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
 
 <!-- 代码块功能依赖 -->
 <!-- <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -1330,13 +1136,13 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
 <!-- 代码块复制 -->
 
 <!-- <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
 <!-- <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
 <!-- 代码块折行 -->
@@ -1360,7 +1166,7 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
 
 
 <!-- <script src="/libs/tocbot/tocbot.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/tocbot/tocbot.min.js"></script>
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1479,7 +1285,7 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
 
       
       <!-- <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
-      <span id="icp"><img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/medias/icp.png" style="vertical-align: text-bottom;" />
+      <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
         <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备20012827号-1</a>
       </span>
       
@@ -1544,11 +1350,11 @@ PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 �
 </div>
 
 <!-- <script src="/js/search.js"></script> -->
-<script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/js/search.js"></script>
+<script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
     // searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
-    searchFunc("https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
 });
 </script>
   <!-- 回到顶部按钮 -->
@@ -1566,12 +1372,12 @@ $(function () {
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script> -->
 
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/materialize/materialize.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/masonry/masonry.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/aos/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/scrollprogress/scrollProgress.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/lightGallery/js/lightgallery-all.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/js/matery.js"></script>
+  <script src="/libs/materialize/materialize.min.js"></script>
+  <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+  <script src="/libs/aos/aos.js"></script>
+  <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+  <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+  <script src="/js/matery.js"></script>
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -1600,12 +1406,12 @@ $(function () {
   
 
   
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/others/cursor.js"></script>
+  <script src="/libs/others/cursor.js"></script>
   
 
   
   <!-- <script async src="/libs/others/busuanzi.pure.mini.js"></script> -->
-  <script async src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/others/busuanzi.pure.mini.js"></script>
+  <script async src="/libs/others/busuanzi.pure.mini.js"></script>
   
 
   
@@ -1651,13 +1457,13 @@ $(function () {
 
   
   <!-- <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script> -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/background/ribbon-dynamic.js" async="async">
+  <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async">
   </script>
   
 
   
   <!-- <script src="/libs/instantpage/instantpage.js" type="module"></script> -->
-  <script src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@0510b17/libs/instantpage/instantpage.js" type="module"></script>
+  <script src="/libs/instantpage/instantpage.js" type="module"></script>
   
 
   <script type="text/javascript">
@@ -1721,7 +1527,7 @@ $(function () {
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1596555586399')
+  navigator.serviceWorker.register('/sw.js?t=1596556926217')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
