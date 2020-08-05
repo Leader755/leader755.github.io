@@ -605,7 +605,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["github","mac","PicGo","博客","vi","插件","coding","主题","yuque","百度收录"]
+                data: ["github","mac","PicGo","vi","博客","coding","主题","yuque","百度收录","谷歌收录"]
             }
         ],
         yAxis: [
@@ -689,7 +689,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"博客","value":1},{"name":"hexo","value":16},{"name":"工具","value":2},{"name":"ssh","value":1},{"name":"图床","value":2},{"name":"vue","value":1},{"name":"小程序","value":1},{"name":"前端","value":1}],
+                data: [{"name":"博客","value":1},{"name":"工具","value":2},{"name":"hexo","value":16},{"name":"ssh","value":1},{"name":"图床","value":2},{"name":"vue","value":1},{"name":"小程序","value":1},{"name":"前端","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -746,7 +746,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"博客","max":17},{"name":"hexo","max":17},{"name":"工具","max":17},{"name":"ssh","max":17},{"name":"图床","max":17},{"name":"vue","max":17},{"name":"小程序","max":17},{"name":"前端","max":17}],
+            indicator: [{"name":"博客","max":17},{"name":"工具","max":17},{"name":"hexo","max":17},{"name":"ssh","max":17},{"name":"图床","max":17},{"name":"vue","max":17},{"name":"小程序","max":17},{"name":"前端","max":17}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -757,7 +757,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,16,2,1,2,1,1,1],
+                    value : [1,2,16,1,2,1,1,1],
                     name : '文章分类数量'
                 }
             ]
@@ -1048,7 +1048,7 @@ $(function () {
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1596593474053')
+  navigator.serviceWorker.register('/sw.js?t=1596594724631')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
