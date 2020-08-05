@@ -34,7 +34,6 @@ jobs:
           npm install
       - name: gen
         run: |
-          hexo clean
           yuque-hexo sync
           hexo generate
           hexo deploy
