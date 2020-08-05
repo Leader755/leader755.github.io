@@ -31,13 +31,13 @@ jobs:
           npm i
           npm i hexo@4.1.1 -g
           npm install yuque-hexo -g
+          rm -rf .deploy_git
           npm install hexo-deployer-git –save
           npm install
       - name: gen
         run: |
           hexo clean
           yuque-hexo sync
-          rm -rf .deploy_git
           hexo generate
           hexo deploy
           
