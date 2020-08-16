@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leader755.com/"/>
-  <updated>2020-08-01T02:15:24.000Z</updated>
+  <updated>2020-08-16T16:43:19.660Z</updated>
   <id>https://leader755.com/</id>
   
   <author>
@@ -15,6 +15,129 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端面试记录（1）</title>
+    <link href="https://leader755.com/leader755/20693.html"/>
+    <id>https://leader755.com/leader755/20693.html</id>
+    <published>2020-08-16T16:43:19.660Z</published>
+    <updated>2020-08-16T16:43:19.660Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;HTML-amp-CSS：&quot;&gt;&lt;a href=&quot;#HTML-amp-CSS：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试（2）</title>
+    <link href="https://leader755.com/leader755/9184.html"/>
+    <id>https://leader755.com/leader755/9184.html</id>
+    <published>2020-08-16T16:43:19.495Z</published>
+    <updated>2020-08-16T16:43:19.495Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;JavaScript：&quot;&gt;&lt;a href=&quot;#JavaScript：&quot; class=&quot;headerlink&quot; title=&quot;JavaScript：&quot;&gt;&lt;/a&gt;JavaScript：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;原型、继承、原型链、this
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>常用的网站整理</title>
+    <link href="https://leader755.com/leader755/3079.html"/>
+    <id>https://leader755.com/leader755/3079.html</id>
+    <published>2020-08-16T16:43:19.322Z</published>
+    <updated>2020-08-16T16:43:19.322Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;通俗易通的 javascript,&lt;br&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/23804247&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;this
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试（3）</title>
+    <link href="https://leader755.com/leader755/57313.html"/>
+    <id>https://leader755.com/leader755/57313.html</id>
+    <published>2020-08-16T16:43:19.318Z</published>
+    <updated>2020-08-16T16:43:19.318Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;vue 中 computed 的传参：&lt;br&gt;利用闭包：&lt;/p&gt;
+&lt;pre class=&quot; language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;computed&lt;span class=&quot;token
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mac 解决GitHub速度慢问题</title>
+    <link href="https://leader755.com/leader755/30871.html"/>
+    <id>https://leader755.com/leader755/30871.html</id>
+    <published>2020-08-05T03:38:21.000Z</published>
+    <updated>2020-08-05T03:38:21.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;解决方案是修改-hosts，按照以下三步来操作&quot;&gt;&lt;a href=&quot;#解决方案是修改-hosts，按照以下三步来操作&quot; class=&quot;headerlink&quot; title=&quot;解决方案是修改 hosts，按照以下三步来操作&quot;&gt;&lt;/a&gt;解决方案是修改
+        
+      
+    
+    </summary>
+    
+    
+      <category term="访问速度" scheme="https://leader755.com/categories/%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/"/>
+    
+    
+      <category term="mac" scheme="https://leader755.com/tags/mac/"/>
+    
+      <category term="github" scheme="https://leader755.com/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>给hexo博客添加PWA支持</title>
@@ -434,153 +557,6 @@
       <category term="referrer" scheme="https://leader755.com/tags/referrer/"/>
     
       <category term="防盗链" scheme="https://leader755.com/tags/%E9%98%B2%E7%9B%97%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PicGo+ 又拍云创建个人图床工具</title>
-    <link href="https://leader755.com/leader755/50207.html"/>
-    <id>https://leader755.com/leader755/50207.html</id>
-    <published>2020-06-03T11:35:43.000Z</published>
-    <updated>2020-07-01T12:45:20.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-首先注册又拍云账号&quot;&gt;&lt;a href=&quot;#1-首先注册又拍云账号&quot; class=&quot;headerlink&quot; title=&quot;1.首先注册又拍云账号&quot;&gt;&lt;/a&gt;1.首先注册又拍云账号&lt;/h2&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-    
-      <category term="图床" scheme="https://leader755.com/categories/%E5%9B%BE%E5%BA%8A/"/>
-    
-    
-      <category term="PicGo" scheme="https://leader755.com/tags/PicGo/"/>
-    
-      <category term="又拍云" scheme="https://leader755.com/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决 hexo 博客的图片链接失效问题</title>
-    <link href="https://leader755.com/leader755/3275.html"/>
-    <id>https://leader755.com/leader755/3275.html</id>
-    <published>2020-06-02T10:58:21.000Z</published>
-    <updated>2020-06-02T10:58:21.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-首先找到-hexo-博客的主题文件夹目录&quot;&gt;&lt;a href=&quot;#1-首先找到-hexo-博客的主题文件夹目录&quot; class=&quot;headerlink&quot; title=&quot;1.首先找到 hexo 博客的主题文件夹目录&quot;&gt;&lt;/a&gt;1.首先找到 hexo
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://leader755.com/categories/hexo/"/>
-    
-    
-      <category term="图片链接失效" scheme="https://leader755.com/tags/%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5%E5%A4%B1%E6%95%88/"/>
-    
-      <category term="第三方链接" scheme="https://leader755.com/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E9%93%BE%E6%8E%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>4.mac 上使用 vi</title>
-    <link href="https://leader755.com/leader755/38612.html"/>
-    <id>https://leader755.com/leader755/38612.html</id>
-    <published>2019-11-23T12:06:14.000Z</published>
-    <updated>2019-11-23T12:06:14.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。&lt;/p&gt;
-&lt;p&gt;如果是 vi，则：&lt;br&gt;&lt;strong&gt;Esc&lt;/strong&gt; 退出编辑模式，输入以下命令：&lt;br&gt;&lt;strong&gt;:wq&lt;/strong&gt; 保存后退出
-        
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="https://leader755.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="mac" scheme="https://leader755.com/tags/mac/"/>
-    
-      <category term="vi" scheme="https://leader755.com/tags/vi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3.mac上生成SSH key与GitHub通信</title>
-    <link href="https://leader755.com/leader755/10760.html"/>
-    <id>https://leader755.com/leader755/10760.html</id>
-    <published>2019-11-22T22:23:50.000Z</published>
-    <updated>2019-11-22T22:23:50.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-检查-SSH-key-是否存在&quot;&gt;&lt;a href=&quot;#1-检查-SSH-key-是否存在&quot; class=&quot;headerlink&quot; title=&quot;1.检查 SSH key 是否存在&quot;&gt;&lt;/a&gt;1.检查 SSH key
-        
-      
-    
-    </summary>
-    
-    
-      <category term="ssh" scheme="https://leader755.com/categories/ssh/"/>
-    
-    
-      <category term="github" scheme="https://leader755.com/tags/github/"/>
-    
-      <category term="mac" scheme="https://leader755.com/tags/mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac 使用 homebrew</title>
-    <link href="https://leader755.com/leader755/65348.html"/>
-    <id>https://leader755.com/leader755/65348.html</id>
-    <published>2019-11-20T14:05:21.000Z</published>
-    <updated>2019-11-20T14:05:21.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;使用 brew update 指令&lt;/p&gt;
-&lt;h1 id=&quot;报错&quot;&gt;&lt;a href=&quot;#报错&quot; class=&quot;headerlink&quot; title=&quot;报错&quot;&gt;&lt;/a&gt;报错&lt;/h1&gt;&lt;p&gt;Error: The following directories are not
-        
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="https://leader755.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="mac" scheme="https://leader755.com/tags/mac/"/>
-    
-      <category term="homebrew" scheme="https://leader755.com/tags/homebrew/"/>
     
   </entry>
   

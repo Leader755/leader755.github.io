@@ -4,15 +4,12 @@
 
 <head><link rel=manifest href=/manifest.json>
   <meta charset="utf-8">
-  <meta name="keywords" content="serverless 和 hexo快速搭建静态博客, 个人博客，leader755，leader755博客，hexo博客">
-  <meta name="description" content="##
-1.首先搭建一个用 hexo 快速搭建一个博客//全局安装脚手架 hexo-cli
-npm install hexo-cli -g
-
-//初始化一个 blog
-hexo init blog
-
-//访问本地博客(默认地址为：localh">
+  <meta name="keywords" content="前端面试（3）, 个人博客，leader755，leader755博客，hexo博客">
+  <meta name="description" content="vue 中 computed 的传参：利用闭包：
+computed: {
+  text() {
+      return function (index) {
+          return this.Ratedata[index].cu">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +18,7 @@ hexo init blog
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>serverless 和 hexo快速搭建静态博客 | Autumn cicada Blogs</title>
+  <title>前端面试（3） | Autumn cicada Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/favicon.ico">
   <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
@@ -435,13 +432,13 @@ hexo init blog
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')"> -->
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/13.jpg')">    
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')"> -->
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/1.jpg')">    
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">serverless 和 hexo快速搭建静态博客</h1>
+                    <h1 class="description center-align post-title">前端面试（3）</h1>
                 </div>
             </div>
         </div>
@@ -560,24 +557,11 @@ hexo init blog
         <div class="col s7">
           
           <div class="article-tag">
-            
-            <a href="/tags/serverless/">
-              <span class="chip bg-color">serverless</span>
-            </a>
-            
+            <span class="chip bg-color">无标签</span>
           </div>
           
         </div>
         <div class="col s5 right-align">
-          
-          <div class="post-cate">
-            <i class="fas fa-bookmark fa-fw icon-category"></i>
-            
-            <a href="/categories/hexo/" class="post-category">
-              hexo
-            </a>
-            
-          </div>
           
         </div>
       </div>
@@ -586,28 +570,28 @@ hexo init blog
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2020-06-18
+          2020-08-17
         </div>
         
 
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2020-06-18
+          2020-08-17
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          294
+          1.3k
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          1 分
+          4 分
         </div>
         
 
@@ -620,35 +604,45 @@ hexo init blog
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <p>##</p>
-<h2 id="1-首先搭建一个用-hexo-快速搭建一个博客"><a href="#1-首先搭建一个用-hexo-快速搭建一个博客" class="headerlink" title="1.首先搭建一个用 hexo 快速搭建一个博客"></a>1.首先搭建一个用 hexo 快速搭建一个博客</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局安装脚手架 hexo-cli</span>
-npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g
-
-<span class="token comment" spellcheck="true">//初始化一个 blog</span>
-hexo init blog
-
-<span class="token comment" spellcheck="true">//访问本地博客(默认地址为：localhost:4000)</span>
-cd blog
-hexo s</code></pre>
-<h2 id="2-serverless-文档（推荐）"><a href="#2-serverless-文档（推荐）" class="headerlink" title="2.serverless 文档（推荐）"></a>2.serverless 文档（推荐）</h2><p>github 官方中文文档：<a href="https://github.com/serverless/serverless/blob/master/README_CN.md" target="_blank" rel="noopener">https://github.com/serverless/serverless/blob/master/README_CN.md</a><br>serverless 中文博客： <a href="https://serverlesscloud.cn/" target="_blank" rel="noopener">https://serverlesscloud.cn/</a></p>
-<h2 id="3-使用-npm-安装"><a href="#3-使用-npm-安装" class="headerlink" title="3.使用 npm 安装"></a>3.使用 npm 安装</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局安装 serverless</span>
-npm install <span class="token operator">-</span>g serverless</code></pre>
-<h2 id="4-在-blog-的根目录创建一个-serverless-yml-文件"><a href="#4-在-blog-的根目录创建一个-serverless-yml-文件" class="headerlink" title="4.在 blog 的根目录创建一个 serverless.yml 文件"></a>4.在 blog 的根目录创建一个 serverless.yml 文件</h2><p>复制以下文件内容：唯一注意的地方就是 src 的路径：根据实际更改（即为博客的 index.html 网页）</p>
-<pre class=" language-javascript"><code class="language-javascript">myWebsite<span class="token punctuation">:</span>
-  component<span class="token punctuation">:</span> <span class="token string">'@serverless/tencent-website'</span>
-  inputs<span class="token punctuation">:</span>
-    code<span class="token punctuation">:</span>
-      src<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span><span class="token keyword">public</span>
-      index<span class="token punctuation">:</span> index<span class="token punctuation">.</span>html
-      error<span class="token punctuation">:</span> index<span class="token punctuation">.</span>html
-    region<span class="token punctuation">:</span> ap<span class="token operator">-</span>guangzhou
-    bucketName<span class="token punctuation">:</span> my<span class="token operator">-</span>bucket</code></pre>
-<h2 id="5-将静态博客发布到-tencent-serverless"><a href="#5-将静态博客发布到-tencent-serverless" class="headerlink" title="5.将静态博客发布到 tencent-serverless"></a>5.将静态博客发布到 tencent-serverless</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//首先将 hexo 中博客打包</span>
-heox g
-
-<span class="token comment" spellcheck="true">//将本地的博客部署到 serverless</span>
-serverless<span class="token operator">/</span>sls <span class="token operator">--</span>debug</code></pre>
-<h2 id="6-稍等片刻可以在-命令行工具看到以下"><a href="#6-稍等片刻可以在-命令行工具看到以下" class="headerlink" title="6.稍等片刻可以在 命令行工具看到以下"></a>6.稍等片刻可以在 命令行工具看到以下</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607113775-6a30d4dc-3c70-4506-9f5b-7af5a07b4e05.png#align=left&display=inline&height=567&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1134&originWidth=1298&size=453581&status=done&style=none&width=649" alt="image.png"><br>此时需要的操作就是用手机微信去扫描（此处会检测是否有腾讯云账号，没有会提示注册，有会直接成功）并返回以下内容：此处就是部署成功，并返回地址，可以直接访问。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607252405-a0fad8a2-f2d5-49ef-8101-09a10eec3916.png#align=left&display=inline&height=264&margin=%5Bobject%20Object%5D&name=image.png&originHeight=528&originWidth=1274&size=364624&status=done&style=none&width=637" alt="image.png"></p>
+        <p>vue 中 computed 的传参：<br>利用闭包：</p>
+<pre class=" language-javascript"><code class="language-javascript">computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>Ratedata<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>currentRate<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'%'</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>小程序中如何合并 seaData,减少 setData 次数：<br>**  合并<code>setdata</code>的请求，减少通讯的次数：**<br>避免过于频繁调用<code>setData</code>,应考虑将多次<code>setData</code>合并成一次<code>setData</code>调用</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 不要频繁调用setData</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> b<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 绝大多数时候可优化为</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>**<br><strong>5. 列表的局部更新</strong><br>在一个列表中，有<code>n</code>条数据，采用上拉加载更多的方式，假如这个时候想对其中某一个数据进行点赞操作，还能及时看到点赞的效果。</p>
+<blockquote>
+<ul>
+<li>可以采用<code>setData</code>全局刷新，点赞完成之后，重新获取数据，再次进行全局重新渲染，这样做的有点是：方便，快捷！缺点是：用户体验极其不好，当用户刷量 100 多条数据后，重新渲染会出现空白期。</li>
+<li>也可以采用局部刷新，将点赞的<code>id</code>传过去，知道点的是哪一条数据，重新获取数据，查找相对应<code>id</code>的那条数据的下标（<code>index</code>是不会改变的），用<code>setData</code>进行局部刷新，如此，便可以显著提升渲染速度。</li>
+</ul>
+</blockquote>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token operator">=</span>newList<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>vue 的单项数据流：</p>
+<ul>
+<li>Vue 是单向数据流，不是双向绑定</li>
+<li>Vue 的双向绑定不过是语法糖</li>
+<li>Object.definePropert 是用来做响应式更新的</li>
+</ul>
+<p>Vue 是怎么实现数据响应式更新的，面试官期望听到的回答是通过<code>Object.defineProperty()</code>的<code>get</code>和<code>set</code>方法来实现响应式更新。</p>
+<p>Vue 的虚拟 Dom<br>浏览器解析一个 html 大致分为五步：创建 DOM tree –&gt; 创建 Style Rules -&gt; 构建 Render tree -&gt; 布局 Layout –&gt; 绘制 Painting。每次对真实 dom 进行操作的时候，浏览器都会从构建 dom 树开始从头到尾执行一遍流程。真实的 dom 操作代价昂贵，操作频繁还会引起页面卡顿影响用户体验，<strong>虚拟 dom 就是为了解决这个浏览器性能问题才被创造出来</strong><br>虚拟 dom 在执行 dom 的更新操作后，虚拟 dom 不会直接操作真实 dom，而是将更新的 diff 内容保存到本地 js 对象中，然后一次性 attach 到 dom 树上，通知浏览器进行 dom 绘制避免大量无谓的计算。</p>
+<p>简单总结：虚拟 DOM 是将真实的 DOM 节点用 JavaScript 模拟出来，将 DOM 变化的对比，放到 Js 层来做。</p>
+<h1 id="JavaScript：回流（重排）与重绘"><a href="#JavaScript：回流（重排）与重绘" class="headerlink" title="JavaScript：回流（重排）与重绘"></a><a href="https://segmentfault.com/a/1190000018452924" target="_blank" rel="noopener">JavaScript：回流（重排）与重绘</a></h1><h2 id="回流（元素的布局位置，规模尺寸，隐藏等改变）"><a href="#回流（元素的布局位置，规模尺寸，隐藏等改变）" class="headerlink" title="回流（元素的布局位置，规模尺寸，隐藏等改变）"></a>回流（元素的布局位置，规模尺寸，隐藏等改变）</h2><p>回流当 render tree 中的一部分或全部因为元素的规模尺寸、布局、隐藏等改变时，浏览器重新渲染部分 DOM 或全部 DOM 的过程。回流也被称为重排，其实从字面上来看，重排更容易让人形象易懂（即重新排版整个页面）。</p>
+<h2 id="重绘（不改变元素的位置，只改变元素的样式）"><a href="#重绘（不改变元素的位置，只改变元素的样式）" class="headerlink" title="重绘（不改变元素的位置，只改变元素的样式）"></a>重绘（不改变元素的位置，只改变元素的样式）</h2><p><strong>当页面元素样式改变不影响元素在文档流中的位置时</strong>（如 background-color，border-color，visibility），浏览器只会将新样式赋予元素并进行重新绘制操作。</p>
+<p><strong>回流必将引起重绘，而重绘不一定会引起回流。</strong></p>
+<h2 id="如何减少回流、重绘？"><a href="#如何减少回流、重绘？" class="headerlink" title="如何减少回流、重绘？"></a>如何减少回流、重绘？</h2><h2 id="一、-CSS-中避免回流、重绘"><a href="#一、-CSS-中避免回流、重绘" class="headerlink" title="一、 CSS 中避免回流、重绘"></a>一、 CSS 中避免回流、重绘</h2><p>1.尽可能在 DOM 树的最末端改变 class 2.避免设置多层内联样式 3.动画效果应用到 position 属性为 absolute 或 fixed 的元素上 4.避免使用 table 布局 5.使用 css3 硬件加速，可以让 transform、opacity、filters 等动画效果不会引起回流重绘</p>
+<h2 id="二、-JS-操作避免回流、重绘"><a href="#二、-JS-操作避免回流、重绘" class="headerlink" title="二、 JS 操作避免回流、重绘"></a>二、 JS 操作避免回流、重绘</h2><p><strong>1.避免使用 JS 一个样式修改完接着改下一个样式，最好一次性更改 CSS 样式，或者将样式列表定义为 class 的名称</strong> 2.避免频繁操作 DOM，使用文档片段创建一个子树，然后再拷贝到文档中 3.先隐藏元素，进行修改后再显示该元素，因为 display:none 上的 DOM 操作不会引发回流和重绘 4.避免循环读取 offsetLeft 等属性，在循环之前把它们存起来 5.对于复杂动画效果,使用绝对定位让其脱离文档流，否则会引起父元素及后续元素大量的回流</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>回流在浏览器中属于一种用户主导的操作，所以知道如何去改进回流时间以及知道各种文档属性（DOM 节点深度，css 的渲染效率，各种各样的样式改变）对回流时间的影响对于前端开发来讲是很有帮助的。有时即便是回流一个单一的元素，也可能要求它的父元素以及任何跟随它的元素也产生回流。例如需要改变某个元素的背景，这就不涉及该元素的属性，所以只发生重绘。</p>
 
       </div>
       <hr />
@@ -674,7 +668,7 @@ serverless<span class="token operator">/</span>sls <span class="token operator">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leader755.com/leader755/2093.html">https://leader755.com/leader755/2093.html</a>
+                    <a href="https://leader755.com/leader755/57313.html">https://leader755.com/leader755/57313.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -711,11 +705,7 @@ serverless<span class="token operator">/</span>sls <span class="token operator">
         <div class="post-meta__tag-list" style="display: inline-block;">
           
           <div class="article-tag">
-            
-            <a href="/tags/serverless/">
-              <span class="chip bg-color">serverless</span>
-            </a>
-            
+            <span class="chip bg-color">无标签</span>
           </div>
           
         </div>
@@ -1026,51 +1016,35 @@ serverless<span class="token operator">/</span>sls <span class="token operator">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/58848.html">
+                <a href="/leader755/3079.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="5.hexo文档部署到 Github和 coding"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/20.jpg" class="responsive-img" alt="5.hexo文档部署到 Github和 coding">
+                        <!-- <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="常用的网站整理"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/10.jpg" class="responsive-img" alt="常用的网站整理">
                         
-                        <span class="card-title">5.hexo文档部署到 Github和 coding</span>
+                        <span class="card-title">常用的网站整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：如果不部署到 coding，就只写 github 就行。
-deploy: type: git;
-repo: g
+                            通俗易通的 javascript,this 的值到底是什么？一次说清楚JavaScript 秘密花园
+通俗易懂的 css 的动画：2019 年了，你还不会 CSS 动画？27 个精致的 CSS3 动画效果源代码下载
+
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-14
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Autumn cicada
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
-                    </a>
-                    
-                    <a href="/tags/coding/">
-                        <span class="chip bg-color">coding</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1082,36 +1056,32 @@ repo: g
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/52181.html">
+                <a href="/leader755/30871.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="hexo使用的问题指南"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/9.jpg" class="responsive-img" alt="hexo使用的问题指南">
+                        <!-- <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Mac 解决GitHub速度慢问题"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/15.jpg" class="responsive-img" alt="Mac 解决GitHub速度慢问题">
                         
-                        <span class="card-title">hexo使用的问题指南</span>
+                        <span class="card-title">Mac 解决GitHub速度慢问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.hexo g -d 会报错win 本地仓库：将 https 改为 ssh
-deploy：
-   type：git
-   repo：git@github.com:Leader755/leader755.github.io.git
-   b
+                            解决方案是修改 hosts，按照以下三步来操作1.打开 hosts 文件：终端执行, MacOS 的登录用户不是 root，没有最高权限。修改一些系统保护的资源时，需要临时切换到 root 用户。root 具有最高权限，可以做任何事情。此时
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/" class="post-category">
+                                    访问速度
                                 </a>
                             
                             
@@ -1121,8 +1091,12 @@ deploy：
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98%E6%8C%87%E5%8D%97/">
-                        <span class="chip bg-color">问题指南</span>
+                    <a href="/tags/mac/">
+                        <span class="chip bg-color">mac</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                 </div>

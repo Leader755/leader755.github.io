@@ -4,15 +4,8 @@
 
 <head><link rel=manifest href=/manifest.json>
   <meta charset="utf-8">
-  <meta name="keywords" content="serverless 和 hexo快速搭建静态博客, 个人博客，leader755，leader755博客，hexo博客">
-  <meta name="description" content="##
-1.首先搭建一个用 hexo 快速搭建一个博客//全局安装脚手架 hexo-cli
-npm install hexo-cli -g
-
-//初始化一个 blog
-hexo init blog
-
-//访问本地博客(默认地址为：localh">
+  <meta name="keywords" content="Mac 解决GitHub速度慢问题, 个人博客，leader755，leader755博客，hexo博客">
+  <meta name="description" content="解决方案是修改 hosts，按照以下三步来操作1.打开 hosts 文件：终端执行, MacOS 的登录用户不是 root，没有最高权限。修改一些系统保护的资源时，需要临时切换到 root 用户。root 具有最高权限，可以做任何事情。此时">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +14,7 @@ hexo init blog
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>serverless 和 hexo快速搭建静态博客 | Autumn cicada Blogs</title>
+  <title>Mac 解决GitHub速度慢问题 | Autumn cicada Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/favicon.ico">
   <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
@@ -435,13 +428,13 @@ hexo init blog
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')"> -->
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/13.jpg')">    
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')"> -->
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/15.jpg')">    
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">serverless 和 hexo快速搭建静态博客</h1>
+                    <h1 class="description center-align post-title">Mac 解决GitHub速度慢问题</h1>
                 </div>
             </div>
         </div>
@@ -561,8 +554,12 @@ hexo init blog
           
           <div class="article-tag">
             
-            <a href="/tags/serverless/">
-              <span class="chip bg-color">serverless</span>
+            <a href="/tags/mac/">
+              <span class="chip bg-color">mac</span>
+            </a>
+            
+            <a href="/tags/github/">
+              <span class="chip bg-color">github</span>
             </a>
             
           </div>
@@ -573,8 +570,8 @@ hexo init blog
           <div class="post-cate">
             <i class="fas fa-bookmark fa-fw icon-category"></i>
             
-            <a href="/categories/hexo/" class="post-category">
-              hexo
+            <a href="/categories/%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/" class="post-category">
+              访问速度
             </a>
             
           </div>
@@ -586,21 +583,21 @@ hexo init blog
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2020-06-18
+          2020-08-05
         </div>
         
 
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2020-06-18
+          2020-08-05
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          294
+          253
         </div>
         
 
@@ -620,36 +617,22 @@ hexo init blog
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <p>##</p>
-<h2 id="1-首先搭建一个用-hexo-快速搭建一个博客"><a href="#1-首先搭建一个用-hexo-快速搭建一个博客" class="headerlink" title="1.首先搭建一个用 hexo 快速搭建一个博客"></a>1.首先搭建一个用 hexo 快速搭建一个博客</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局安装脚手架 hexo-cli</span>
-npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g
-
-<span class="token comment" spellcheck="true">//初始化一个 blog</span>
-hexo init blog
-
-<span class="token comment" spellcheck="true">//访问本地博客(默认地址为：localhost:4000)</span>
-cd blog
-hexo s</code></pre>
-<h2 id="2-serverless-文档（推荐）"><a href="#2-serverless-文档（推荐）" class="headerlink" title="2.serverless 文档（推荐）"></a>2.serverless 文档（推荐）</h2><p>github 官方中文文档：<a href="https://github.com/serverless/serverless/blob/master/README_CN.md" target="_blank" rel="noopener">https://github.com/serverless/serverless/blob/master/README_CN.md</a><br>serverless 中文博客： <a href="https://serverlesscloud.cn/" target="_blank" rel="noopener">https://serverlesscloud.cn/</a></p>
-<h2 id="3-使用-npm-安装"><a href="#3-使用-npm-安装" class="headerlink" title="3.使用 npm 安装"></a>3.使用 npm 安装</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局安装 serverless</span>
-npm install <span class="token operator">-</span>g serverless</code></pre>
-<h2 id="4-在-blog-的根目录创建一个-serverless-yml-文件"><a href="#4-在-blog-的根目录创建一个-serverless-yml-文件" class="headerlink" title="4.在 blog 的根目录创建一个 serverless.yml 文件"></a>4.在 blog 的根目录创建一个 serverless.yml 文件</h2><p>复制以下文件内容：唯一注意的地方就是 src 的路径：根据实际更改（即为博客的 index.html 网页）</p>
-<pre class=" language-javascript"><code class="language-javascript">myWebsite<span class="token punctuation">:</span>
-  component<span class="token punctuation">:</span> <span class="token string">'@serverless/tencent-website'</span>
-  inputs<span class="token punctuation">:</span>
-    code<span class="token punctuation">:</span>
-      src<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token operator">/</span><span class="token keyword">public</span>
-      index<span class="token punctuation">:</span> index<span class="token punctuation">.</span>html
-      error<span class="token punctuation">:</span> index<span class="token punctuation">.</span>html
-    region<span class="token punctuation">:</span> ap<span class="token operator">-</span>guangzhou
-    bucketName<span class="token punctuation">:</span> my<span class="token operator">-</span>bucket</code></pre>
-<h2 id="5-将静态博客发布到-tencent-serverless"><a href="#5-将静态博客发布到-tencent-serverless" class="headerlink" title="5.将静态博客发布到 tencent-serverless"></a>5.将静态博客发布到 tencent-serverless</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//首先将 hexo 中博客打包</span>
-heox g
-
-<span class="token comment" spellcheck="true">//将本地的博客部署到 serverless</span>
-serverless<span class="token operator">/</span>sls <span class="token operator">--</span>debug</code></pre>
-<h2 id="6-稍等片刻可以在-命令行工具看到以下"><a href="#6-稍等片刻可以在-命令行工具看到以下" class="headerlink" title="6.稍等片刻可以在 命令行工具看到以下"></a>6.稍等片刻可以在 命令行工具看到以下</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607113775-6a30d4dc-3c70-4506-9f5b-7af5a07b4e05.png#align=left&display=inline&height=567&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1134&originWidth=1298&size=453581&status=done&style=none&width=649" alt="image.png"><br>此时需要的操作就是用手机微信去扫描（此处会检测是否有腾讯云账号，没有会提示注册，有会直接成功）并返回以下内容：此处就是部署成功，并返回地址，可以直接访问。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588607252405-a0fad8a2-f2d5-49ef-8101-09a10eec3916.png#align=left&display=inline&height=264&margin=%5Bobject%20Object%5D&name=image.png&originHeight=528&originWidth=1274&size=364624&status=done&style=none&width=637" alt="image.png"></p>
-
+        <h2 id="解决方案是修改-hosts，按照以下三步来操作"><a href="#解决方案是修改-hosts，按照以下三步来操作" class="headerlink" title="解决方案是修改 hosts，按照以下三步来操作"></a>解决方案是修改 hosts，按照以下三步来操作</h2><h3 id="1-打开-hosts-文件："><a href="#1-打开-hosts-文件：" class="headerlink" title="1.打开 hosts 文件："></a>1.打开 hosts 文件：</h3><p>终端执行, MacOS 的登录用户不是 root，没有最高权限。修改一些系统保护的资源时，需要临时切换到 root 用户。root 具有最高权限，可以做任何事情。此时需要使用 sudo 命令。</p>
+<pre class=" language-javascript"><code class="language-javascript">sudo vim <span class="token operator">/</span>etc<span class="token operator">/</span>hosts</code></pre>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1596597386450-28553ab4-298d-455b-bbc7-c1f86aa7a0b8.png#align=left&display=inline&height=362&margin=%5Bobject%20Object%5D&name=image.png&originHeight=724&originWidth=1120&size=236848&status=done&style=none&width=560" alt="image.png"></p>
+<h3 id="2-获取-github-的-ip"><a href="#2-获取-github-的-ip" class="headerlink" title="2.获取 github 的 ip"></a>2.获取 github 的 ip</h3><pre><code> 浏览器访问[https://www.ipaddress.com/](https://www.ipaddress.com/),分别输入以下 ip:(ip 以自己查到为准)</code></pre><blockquote>
+<p>github.com<br>github.global.ssl.fastly.net<br>codeload.github.com</p>
+</blockquote>
+<p>获取到的对应的 ip，将以下追加到 host 文件后面。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token number">140.82</span><span class="token punctuation">.</span><span class="token number">113.4</span>    github<span class="token punctuation">.</span>com
+<span class="token number">199.232</span><span class="token punctuation">.</span><span class="token number">69.194</span>  github<span class="token punctuation">.</span>global<span class="token punctuation">.</span>ssl<span class="token punctuation">.</span>fastly<span class="token punctuation">.</span>net
+<span class="token number">140.82</span><span class="token punctuation">.</span><span class="token number">114.9</span>    codeload<span class="token punctuation">.</span>github<span class="token punctuation">.</span>com</code></pre>
+<blockquote>
+<p>mac 上使用 vim 命令进行修改保存：<br>在输入 sudo vim /etc/hosts，进入页面后，按 o 建，进行输入，修改完成后按 ESC 建，:wq 保存退出。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1596598235246-bf1c3ead-123e-4339-8f4e-7e6bec14c5d7.png#align=left&display=inline&height=360&margin=%5Bobject%20Object%5D&name=image.png&originHeight=720&originWidth=1200&size=246307&status=done&style=none&width=600" alt="image.png"></p>
+<h3 id="3-Mac-系统刷新-DNS-缓存，Windows-系统命令自行查找"><a href="#3-Mac-系统刷新-DNS-缓存，Windows-系统命令自行查找" class="headerlink" title="3.Mac 系统刷新 DNS 缓存，Windows 系统命令自行查找."></a>3.Mac 系统刷新 DNS 缓存，Windows 系统命令自行查找.</h3><pre class=" language-javascript"><code class="language-javascript">sudo killall <span class="token operator">-</span>HUP mDNSResponder</code></pre>
+<h3 id="4-可以试试-github-的访问速度了"><a href="#4-可以试试-github-的访问速度了" class="headerlink" title="4.可以试试 github 的访问速度了"></a>4.可以试试 github 的访问速度了</h3>
       </div>
       <hr />
 
@@ -674,7 +657,7 @@ serverless<span class="token operator">/</span>sls <span class="token operator">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leader755.com/leader755/2093.html">https://leader755.com/leader755/2093.html</a>
+                    <a href="https://leader755.com/leader755/30871.html">https://leader755.com/leader755/30871.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -712,8 +695,12 @@ serverless<span class="token operator">/</span>sls <span class="token operator">
           
           <div class="article-tag">
             
-            <a href="/tags/serverless/">
-              <span class="chip bg-color">serverless</span>
+            <a href="/tags/mac/">
+              <span class="chip bg-color">mac</span>
+            </a>
+            
+            <a href="/tags/github/">
+              <span class="chip bg-color">github</span>
             </a>
             
           </div>
@@ -1026,51 +1013,37 @@ serverless<span class="token operator">/</span>sls <span class="token operator">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/58848.html">
+                <a href="/leader755/57313.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="5.hexo文档部署到 Github和 coding"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/20.jpg" class="responsive-img" alt="5.hexo文档部署到 Github和 coding">
+                        <!-- <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="前端面试（3）"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/1.jpg" class="responsive-img" alt="前端面试（3）">
                         
-                        <span class="card-title">5.hexo文档部署到 Github和 coding</span>
+                        <span class="card-title">前端面试（3）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：如果不部署到 coding，就只写 github 就行。
-deploy: type: git;
-repo: g
+                            vue 中 computed 的传参：利用闭包：
+computed: {
+  text() {
+      return function (index) {
+          return this.Ratedata[index].cu
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-14
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Autumn cicada
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
-                    </a>
-                    
-                    <a href="/tags/coding/">
-                        <span class="chip bg-color">coding</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1082,29 +1055,26 @@ repo: g
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/52181.html">
+                <a href="/leader755/19561.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="hexo使用的问题指南"> -->
-                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/9.jpg" class="responsive-img" alt="hexo使用的问题指南">
+                        <!-- <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="给hexo博客添加PWA支持"> -->
+                        <img src="https://cdn.jsdelivr.net/gh/leader755/leader755.github.io@682c87c/medias/featureimages/2.jpg" class="responsive-img" alt="给hexo博客添加PWA支持">
                         
-                        <span class="card-title">hexo使用的问题指南</span>
+                        <span class="card-title">给hexo博客添加PWA支持</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.hexo g -d 会报错win 本地仓库：将 https 改为 ssh
-deploy：
-   type：git
-   repo：git@github.com:Leader755/leader755.github.io.git
-   b
+                            简介
+PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 年， W3C 公布过 Service Worker 的相关草案，但是其在生产环境被 Chrome 支持是在 2015 年。因此，如果我们把 P
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
                             </span>
                         <span class="publish-author">
                             
@@ -1121,8 +1091,8 @@ deploy：
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98%E6%8C%87%E5%8D%97/">
-                        <span class="chip bg-color">问题指南</span>
+                    <a href="/tags/PWA/">
+                        <span class="chip bg-color">PWA</span>
                     </a>
                     
                 </div>
