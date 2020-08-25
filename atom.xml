@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leader755.com/"/>
-  <updated>2020-08-17T04:03:21.714Z</updated>
+  <updated>2020-08-25T14:42:25.037Z</updated>
   <id>https://leader755.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>常用的网站整理(持续整理中)</title>
-    <link href="https://leader755.com/leader755/7280.html"/>
-    <id>https://leader755.com/leader755/7280.html</id>
-    <published>2020-08-17T04:03:08.177Z</published>
-    <updated>2020-08-17T04:03:21.714Z</updated>
+    <title>前端面试（7） 算法</title>
+    <link href="https://leader755.com/leader755/16464.html"/>
+    <id>https://leader755.com/leader755/16464.html</id>
+    <published>2020-08-25T01:25:49.000Z</published>
+    <updated>2020-08-25T14:42:25.037Z</updated>
     
     <summary type="html">
     
@@ -29,22 +29,33 @@
       
         
         
-          &lt;p&gt;通俗易通的 javascript,&lt;br&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/23804247&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;this
+          &lt;p&gt;大纲：&lt;br&gt;数组，数组对象去重&lt;br&gt;数组，数组对象排序&lt;br&gt;10 大排序的方法&lt;br&gt;随机数（生成随机数及其随机数的应用）&lt;/p&gt;
+&lt;h3 id=&quot;集合中的（交集，并集，差集，补集，对称差集&quot;&gt;&lt;a href=&quot;#集合中的（交集，并集，差集，补集，对称差集&quot;
         
       
     
     </summary>
     
     
+      <category term="面试" scheme="https://leader755.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="http" scheme="https://leader755.com/tags/http/"/>
+    
+      <category term="https" scheme="https://leader755.com/tags/https/"/>
+    
+      <category term="tcp" scheme="https://leader755.com/tags/tcp/"/>
+    
+      <category term="浏览器渲染" scheme="https://leader755.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/"/>
     
   </entry>
   
   <entry>
-    <title>前端面试（3）</title>
-    <link href="https://leader755.com/leader755/57313.html"/>
-    <id>https://leader755.com/leader755/57313.html</id>
-    <published>2020-08-17T04:03:08.173Z</published>
-    <updated>2020-08-17T04:03:21.712Z</updated>
+    <title>前端面试（6）公众号，小程序</title>
+    <link href="https://leader755.com/leader755/46994.html"/>
+    <id>https://leader755.com/leader755/46994.html</id>
+    <published>2020-08-24T14:34:49.000Z</published>
+    <updated>2020-08-25T14:42:25.037Z</updated>
     
     <summary type="html">
     
@@ -52,21 +63,128 @@
       
         
         
-          &lt;p&gt;vue 中 computed 的传参：&lt;br&gt;利用闭包：&lt;/p&gt;
-&lt;pre class=&quot; language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;computed&lt;span class=&quot;token
+          &lt;p&gt;大纲：&lt;br&gt;微信，小程序授权（ openId，unid，用户信息，手机号）&lt;br&gt;微信支付（H5，公众号，小程序，app）&lt;br&gt;微信上传图片（H5，公众号，小程序）&lt;br&gt;支付宝支付（H5，app）&lt;/p&gt;
+&lt;h2 id=&quot;小程序&quot;&gt;&lt;a href=&quot;#小程序&quot;
         
       
     
     </summary>
     
     
+      <category term="面试" scheme="https://leader755.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="小程序" scheme="https://leader755.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="公众号" scheme="https://leader755.com/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
   </entry>
   
   <entry>
-    <title>前端面试（2）</title>
-    <link href="https://leader755.com/leader755/9184.html"/>
-    <id>https://leader755.com/leader755/9184.html</id>
+    <title>前端面试（5）http，https</title>
+    <link href="https://leader755.com/leader755/5102.html"/>
+    <id>https://leader755.com/leader755/5102.html</id>
+    <published>2020-08-23T14:34:49.000Z</published>
+    <updated>2020-08-25T14:42:25.038Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;http-状态码&quot;&gt;&lt;a href=&quot;#http-状态码&quot; class=&quot;headerlink&quot; title=&quot;http 状态码&quot;&gt;&lt;/a&gt;http 状态码&lt;/h2&gt;&lt;p&gt;http
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://leader755.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="http" scheme="https://leader755.com/tags/http/"/>
+    
+      <category term="https" scheme="https://leader755.com/tags/https/"/>
+    
+      <category term="tcp" scheme="https://leader755.com/tags/tcp/"/>
+    
+      <category term="浏览器渲染" scheme="https://leader755.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试（4）less，sass，stylus</title>
+    <link href="https://leader755.com/leader755/60928.html"/>
+    <id>https://leader755.com/leader755/60928.html</id>
+    <published>2020-08-22T11:31:41.000Z</published>
+    <updated>2020-08-20T04:43:21.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;###&lt;/p&gt;
+&lt;p&gt;##&lt;/p&gt;
+&lt;h2 id=&quot;预编译：less，sass，stylus&quot;&gt;&lt;a href=&quot;#预编译：less，sass，stylus&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://leader755.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="less" scheme="https://leader755.com/tags/less/"/>
+    
+      <category term="sass" scheme="https://leader755.com/tags/sass/"/>
+    
+      <category term="scss" scheme="https://leader755.com/tags/scss/"/>
+    
+      <category term="stylus" scheme="https://leader755.com/tags/stylus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试（3）vue</title>
+    <link href="https://leader755.com/leader755/26383.html"/>
+    <id>https://leader755.com/leader755/26383.html</id>
+    <published>2020-08-20T12:33:45.000Z</published>
+    <updated>2020-08-25T14:42:25.035Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Vue&quot;&gt;&lt;a href=&quot;#Vue&quot; class=&quot;headerlink&quot; title=&quot;Vue:&quot;&gt;&lt;/a&gt;Vue:&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;vue 数据双向绑定原理；&lt;/li&gt;
+&lt;li&gt;vue computed 原理、watch 和 methods
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://leader755.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="vue" scheme="https://leader755.com/tags/vue/"/>
+    
+      <category term="vuex" scheme="https://leader755.com/tags/vuex/"/>
+    
+      <category term="vue-router" scheme="https://leader755.com/tags/vue-router/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试（2）javascript</title>
+    <link href="https://leader755.com/leader755/11225.html"/>
+    <id>https://leader755.com/leader755/11225.html</id>
     <published>2020-08-05T11:38:21.000Z</published>
     <updated>2020-08-17T04:45:20.000Z</updated>
     
@@ -151,11 +269,11 @@
   </entry>
   
   <entry>
-    <title>前端面试（1）</title>
-    <link href="https://leader755.com/leader755/26592.html"/>
-    <id>https://leader755.com/leader755/26592.html</id>
+    <title>前端面试（1）H5+css</title>
+    <link href="https://leader755.com/leader755/2877.html"/>
+    <id>https://leader755.com/leader755/2877.html</id>
     <published>2020-07-30T11:00:24.000Z</published>
-    <updated>2020-08-08T05:44:25.000Z</updated>
+    <updated>2020-08-25T14:42:25.035Z</updated>
     
     <summary type="html">
     
@@ -176,6 +294,33 @@
       <category term="html" scheme="https://leader755.com/tags/html/"/>
     
       <category term="css" scheme="https://leader755.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>资源站整理(进行ing)</title>
+    <link href="https://leader755.com/leader755/34208.html"/>
+    <id>https://leader755.com/leader755/34208.html</id>
+    <published>2020-07-30T11:00:24.000Z</published>
+    <updated>2020-08-25T14:42:25.041Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;通俗易通的 javascript,&lt;br&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/23804247&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;this
+        
+      
+    
+    </summary>
+    
+    
+      <category term="资源搜集" scheme="https://leader755.com/categories/%E8%B5%84%E6%BA%90%E6%90%9C%E9%9B%86/"/>
+    
+    
+      <category term="网站" scheme="https://leader755.com/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
@@ -457,118 +602,6 @@
       <category term="github" scheme="https://leader755.com/tags/github/"/>
     
       <category term="coding" scheme="https://leader755.com/tags/coding/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>serverless 和 hexo快速搭建静态博客</title>
-    <link href="https://leader755.com/leader755/2093.html"/>
-    <id>https://leader755.com/leader755/2093.html</id>
-    <published>2020-06-18T11:05:41.000Z</published>
-    <updated>2020-06-18T11:05:41.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;##&lt;/p&gt;
-&lt;h2 id=&quot;1-首先搭建一个用-hexo-快速搭建一个博客&quot;&gt;&lt;a href=&quot;#1-首先搭建一个用-hexo-快速搭建一个博客&quot; class=&quot;headerlink&quot; title=&quot;1.首先搭建一个用 hexo
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://leader755.com/categories/hexo/"/>
-    
-    
-      <category term="serverless" scheme="https://leader755.com/tags/serverless/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo使用的问题指南</title>
-    <link href="https://leader755.com/leader755/52181.html"/>
-    <id>https://leader755.com/leader755/52181.html</id>
-    <published>2020-06-17T05:05:41.000Z</published>
-    <updated>2020-06-17T05:05:41.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-hexo-g-d-会报错&quot;&gt;&lt;a href=&quot;#1-hexo-g-d-会报错&quot; class=&quot;headerlink&quot; title=&quot;1.hexo g -d 会报错&quot;&gt;&lt;/a&gt;1.hexo g -d 会报错&lt;/h3&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://leader755.com/categories/hexo/"/>
-    
-    
-      <category term="问题指南" scheme="https://leader755.com/tags/%E9%97%AE%E9%A2%98%E6%8C%87%E5%8D%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>欢迎使用 MWeb</title>
-    <link href="https://leader755.com/leader755/18674.html"/>
-    <id>https://leader755.com/leader755/18674.html</id>
-    <published>2020-06-17T04:48:11.000Z</published>
-    <updated>2020-06-17T04:48:11.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：&lt;/p&gt;
-&lt;h2 id=&quot;软件本身：&quot;&gt;&lt;a href=&quot;#软件本身：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://leader755.com/categories/hexo/"/>
-    
-    
-      <category term="MWeb" scheme="https://leader755.com/tags/MWeb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何绕开referrer防盗链</title>
-    <link href="https://leader755.com/leader755/49766.html"/>
-    <id>https://leader755.com/leader755/49766.html</id>
-    <published>2020-06-05T11:38:21.000Z</published>
-    <updated>2020-06-06T04:45:20.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;什么是-referrer&quot;&gt;&lt;a href=&quot;#什么是-referrer&quot; class=&quot;headerlink&quot; title=&quot;什么是 referrer&quot;&gt;&lt;/a&gt;什么是
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://leader755.com/categories/hexo/"/>
-    
-    
-      <category term="referrer" scheme="https://leader755.com/tags/referrer/"/>
-    
-      <category term="防盗链" scheme="https://leader755.com/tags/%E9%98%B2%E7%9B%97%E9%93%BE/"/>
     
   </entry>
   
