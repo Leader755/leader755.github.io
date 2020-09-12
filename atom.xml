@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leader755.com/"/>
-  <updated>2020-08-25T14:42:25.037Z</updated>
+  <updated>2020-09-12T06:37:17.541Z</updated>
   <id>https://leader755.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>前端面试（7） 算法</title>
-    <link href="https://leader755.com/leader755/16464.html"/>
-    <id>https://leader755.com/leader755/16464.html</id>
-    <published>2020-08-25T01:25:49.000Z</published>
-    <updated>2020-08-25T14:42:25.037Z</updated>
+    <title>win安装Nodejs报2503、2502错误解决方案</title>
+    <link href="https://leader755.com/leader755/36022.html"/>
+    <id>https://leader755.com/leader755/36022.html</id>
+    <published>2020-09-08T15:39:33.000Z</published>
+    <updated>2020-09-12T06:37:17.541Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,36 @@
       
         
         
-          &lt;p&gt;大纲：&lt;br&gt;数组，数组对象去重&lt;br&gt;数组，数组对象排序&lt;br&gt;10 大排序的方法&lt;br&gt;随机数（生成随机数及其随机数的应用）&lt;/p&gt;
-&lt;h3 id=&quot;集合中的（交集，并集，差集，补集，对称差集&quot;&gt;&lt;a href=&quot;#集合中的（交集，并集，差集，补集，对称差集&quot;
+          &lt;p&gt;**&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;出现 error 2502 和 error2503 是因为 win8
+        
+      
+    
+    </summary>
+    
+    
+      <category term="node" scheme="https://leader755.com/categories/node/"/>
+    
+    
+      <category term="nodejs" scheme="https://leader755.com/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试（8）拷贝</title>
+    <link href="https://leader755.com/leader755/46928.html"/>
+    <id>https://leader755.com/leader755/46928.html</id>
+    <published>2020-08-27T01:35:49.000Z</published>
+    <updated>2020-09-12T06:37:17.545Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;img
         
       
     
@@ -40,13 +68,9 @@
       <category term="面试" scheme="https://leader755.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="http" scheme="https://leader755.com/tags/http/"/>
+      <category term="深拷贝" scheme="https://leader755.com/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
     
-      <category term="https" scheme="https://leader755.com/tags/https/"/>
-    
-      <category term="tcp" scheme="https://leader755.com/tags/tcp/"/>
-    
-      <category term="浏览器渲染" scheme="https://leader755.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/"/>
+      <category term="浅拷贝" scheme="https://leader755.com/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
     
   </entry>
   
@@ -55,7 +79,7 @@
     <link href="https://leader755.com/leader755/46994.html"/>
     <id>https://leader755.com/leader755/46994.html</id>
     <published>2020-08-24T14:34:49.000Z</published>
-    <updated>2020-08-25T14:42:25.037Z</updated>
+    <updated>2020-09-12T06:37:17.545Z</updated>
     
     <summary type="html">
     
@@ -85,7 +109,7 @@
     <link href="https://leader755.com/leader755/5102.html"/>
     <id>https://leader755.com/leader755/5102.html</id>
     <published>2020-08-23T14:34:49.000Z</published>
-    <updated>2020-08-25T14:42:25.038Z</updated>
+    <updated>2020-09-12T06:37:17.544Z</updated>
     
     <summary type="html">
     
@@ -153,7 +177,7 @@
     <link href="https://leader755.com/leader755/26383.html"/>
     <id>https://leader755.com/leader755/26383.html</id>
     <published>2020-08-20T12:33:45.000Z</published>
-    <updated>2020-08-25T14:42:25.035Z</updated>
+    <updated>2020-09-12T06:37:17.544Z</updated>
     
     <summary type="html">
     
@@ -186,7 +210,7 @@
     <link href="https://leader755.com/leader755/11225.html"/>
     <id>https://leader755.com/leader755/11225.html</id>
     <published>2020-08-05T11:38:21.000Z</published>
-    <updated>2020-08-17T04:45:20.000Z</updated>
+    <updated>2020-09-12T06:37:17.542Z</updated>
     
     <summary type="html">
     
@@ -194,7 +218,7 @@
       
         
         
-          &lt;h3 id=&quot;JavaScript：&quot;&gt;&lt;a href=&quot;#JavaScript：&quot; class=&quot;headerlink&quot; title=&quot;JavaScript：&quot;&gt;&lt;/a&gt;JavaScript：&lt;/h3&gt;&lt;ul&gt;
+          &lt;h2 id=&quot;JavaScript：&quot;&gt;&lt;a href=&quot;#JavaScript：&quot; class=&quot;headerlink&quot; title=&quot;JavaScript：&quot;&gt;&lt;/a&gt;JavaScript：&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;原型、继承、原型链、this
         
       
@@ -234,37 +258,9 @@
       <category term="访问速度" scheme="https://leader755.com/categories/%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/"/>
     
     
-      <category term="github" scheme="https://leader755.com/tags/github/"/>
-    
       <category term="mac" scheme="https://leader755.com/tags/mac/"/>
     
-  </entry>
-  
-  <entry>
-    <title>给hexo博客添加PWA支持</title>
-    <link href="https://leader755.com/leader755/19561.html"/>
-    <id>https://leader755.com/leader755/19561.html</id>
-    <published>2020-08-01T02:15:24.000Z</published>
-    <updated>2020-08-01T02:15:24.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;PWA(Progressive Web App)的中文名叫做渐进式网页应用，早在 2014 年， W3C 公布过
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://leader755.com/categories/hexo/"/>
-    
-    
-      <category term="PWA" scheme="https://leader755.com/tags/PWA/"/>
+      <category term="github" scheme="https://leader755.com/tags/github/"/>
     
   </entry>
   
@@ -273,7 +269,7 @@
     <link href="https://leader755.com/leader755/2877.html"/>
     <id>https://leader755.com/leader755/2877.html</id>
     <published>2020-07-30T11:00:24.000Z</published>
-    <updated>2020-08-25T14:42:25.035Z</updated>
+    <updated>2020-09-12T06:37:17.542Z</updated>
     
     <summary type="html">
     
@@ -294,33 +290,6 @@
       <category term="html" scheme="https://leader755.com/tags/html/"/>
     
       <category term="css" scheme="https://leader755.com/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>资源站整理(进行ing)</title>
-    <link href="https://leader755.com/leader755/34208.html"/>
-    <id>https://leader755.com/leader755/34208.html</id>
-    <published>2020-07-30T11:00:24.000Z</published>
-    <updated>2020-08-25T14:42:25.041Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;通俗易通的 javascript,&lt;br&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/23804247&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;this
-        
-      
-    
-    </summary>
-    
-    
-      <category term="资源搜集" scheme="https://leader755.com/categories/%E8%B5%84%E6%BA%90%E6%90%9C%E9%9B%86/"/>
-    
-    
-      <category term="网站" scheme="https://leader755.com/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
@@ -493,36 +462,6 @@
   </entry>
   
   <entry>
-    <title>PicGo+GitHub 搭建个人图床工具</title>
-    <link href="https://leader755.com/leader755/9848.html"/>
-    <id>https://leader755.com/leader755/9848.html</id>
-    <published>2020-07-15T12:45:23.000Z</published>
-    <updated>2020-07-15T12:45:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;方便程度：★★★★☆&lt;br&gt;配置难度：★★☆☆☆&lt;br&gt;适用环境：win + mac + linux&lt;br&gt;需要工具：GitHub 账号 + PicGo 客户端&lt;br&gt;稳定性：背靠 GitHub
-        
-      
-    
-    </summary>
-    
-    
-      <category term="图床" scheme="https://leader755.com/categories/%E5%9B%BE%E5%BA%8A/"/>
-    
-    
-      <category term="github" scheme="https://leader755.com/tags/github/"/>
-    
-      <category term="PicGo" scheme="https://leader755.com/tags/PicGo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>7.hexo主题配置</title>
     <link href="https://leader755.com/leader755/52316.html"/>
     <id>https://leader755.com/leader755/52316.html</id>
@@ -602,6 +541,61 @@
       <category term="github" scheme="https://leader755.com/tags/github/"/>
     
       <category term="coding" scheme="https://leader755.com/tags/coding/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>serverless 和 hexo快速搭建静态博客</title>
+    <link href="https://leader755.com/leader755/2093.html"/>
+    <id>https://leader755.com/leader755/2093.html</id>
+    <published>2020-06-18T11:05:41.000Z</published>
+    <updated>2020-06-18T11:05:41.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##&lt;/p&gt;
+&lt;h2 id=&quot;1-首先搭建一个用-hexo-快速搭建一个博客&quot;&gt;&lt;a href=&quot;#1-首先搭建一个用-hexo-快速搭建一个博客&quot; class=&quot;headerlink&quot; title=&quot;1.首先搭建一个用 hexo
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://leader755.com/categories/hexo/"/>
+    
+    
+      <category term="serverless" scheme="https://leader755.com/tags/serverless/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo使用的问题指南</title>
+    <link href="https://leader755.com/leader755/52181.html"/>
+    <id>https://leader755.com/leader755/52181.html</id>
+    <published>2020-06-17T05:05:41.000Z</published>
+    <updated>2020-06-17T05:05:41.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-hexo-g-d-会报错&quot;&gt;&lt;a href=&quot;#1-hexo-g-d-会报错&quot; class=&quot;headerlink&quot; title=&quot;1.hexo g -d 会报错&quot;&gt;&lt;/a&gt;1.hexo g -d 会报错&lt;/h3&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://leader755.com/categories/hexo/"/>
+    
+    
+      <category term="问题指南" scheme="https://leader755.com/tags/%E9%97%AE%E9%A2%98%E6%8C%87%E5%8D%97/"/>
     
   </entry>
   
