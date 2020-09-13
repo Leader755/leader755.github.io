@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://leader755.com/"/>
-  <updated>2020-09-12T07:22:57.336Z</updated>
+  <updated>2020-09-13T06:08:06.761Z</updated>
   <id>https://leader755.com/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vscode设置一键同步--settings sync</title>
+    <link href="https://leader755.com/leader755/835.html"/>
+    <id>https://leader755.com/leader755/835.html</id>
+    <published>2020-09-12T13:59:49.000Z</published>
+    <updated>2020-09-13T06:08:06.761Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;最近换了新工作，然后作为程序猿首先是编辑器的设置。但是每个人的编辑器都有自己的编程习惯的。那能不能将 vscode 的编辑器设置同步呢？答案是有的：setttings-async&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vscode" scheme="https://leader755.com/categories/vscode/"/>
+    
+    
+      <category term="sync" scheme="https://leader755.com/tags/sync/"/>
+    
+      <category term="settings sync" scheme="https://leader755.com/tags/settings-sync/"/>
+    
+  </entry>
+  
+  <entry>
     <title>win安装Nodejs报2503、2502错误解决方案</title>
     <link href="https://leader755.com/leader755/36022.html"/>
     <id>https://leader755.com/leader755/36022.html</id>
     <published>2020-09-08T15:39:33.000Z</published>
-    <updated>2020-09-12T07:22:57.336Z</updated>
+    <updated>2020-09-13T06:08:06.761Z</updated>
     
     <summary type="html">
     
@@ -50,7 +82,7 @@
     <link href="https://leader755.com/leader755/46928.html"/>
     <id>https://leader755.com/leader755/46928.html</id>
     <published>2020-08-27T01:35:49.000Z</published>
-    <updated>2020-09-12T07:22:57.340Z</updated>
+    <updated>2020-09-13T06:08:06.765Z</updated>
     
     <summary type="html">
     
@@ -79,7 +111,7 @@
     <link href="https://leader755.com/leader755/46994.html"/>
     <id>https://leader755.com/leader755/46994.html</id>
     <published>2020-08-24T14:34:49.000Z</published>
-    <updated>2020-09-12T07:22:57.339Z</updated>
+    <updated>2020-09-13T06:08:06.765Z</updated>
     
     <summary type="html">
     
@@ -109,7 +141,7 @@
     <link href="https://leader755.com/leader755/5102.html"/>
     <id>https://leader755.com/leader755/5102.html</id>
     <published>2020-08-23T14:34:49.000Z</published>
-    <updated>2020-09-12T07:22:57.341Z</updated>
+    <updated>2020-09-13T06:08:06.764Z</updated>
     
     <summary type="html">
     
@@ -177,7 +209,7 @@
     <link href="https://leader755.com/leader755/26383.html"/>
     <id>https://leader755.com/leader755/26383.html</id>
     <published>2020-08-20T12:33:45.000Z</published>
-    <updated>2020-09-12T07:22:57.338Z</updated>
+    <updated>2020-09-13T06:08:06.764Z</updated>
     
     <summary type="html">
     
@@ -210,7 +242,7 @@
     <link href="https://leader755.com/leader755/11225.html"/>
     <id>https://leader755.com/leader755/11225.html</id>
     <published>2020-08-05T11:38:21.000Z</published>
-    <updated>2020-09-12T07:22:57.337Z</updated>
+    <updated>2020-09-13T06:08:06.763Z</updated>
     
     <summary type="html">
     
@@ -269,7 +301,7 @@
     <link href="https://leader755.com/leader755/2877.html"/>
     <id>https://leader755.com/leader755/2877.html</id>
     <published>2020-07-30T11:00:24.000Z</published>
-    <updated>2020-09-12T07:22:57.337Z</updated>
+    <updated>2020-09-13T06:08:06.762Z</updated>
     
     <summary type="html">
     
@@ -569,33 +601,6 @@
     
     
       <category term="serverless" scheme="https://leader755.com/tags/serverless/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo使用的问题指南</title>
-    <link href="https://leader755.com/leader755/52181.html"/>
-    <id>https://leader755.com/leader755/52181.html</id>
-    <published>2020-06-17T05:05:41.000Z</published>
-    <updated>2020-06-17T05:05:41.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-hexo-g-d-会报错&quot;&gt;&lt;a href=&quot;#1-hexo-g-d-会报错&quot; class=&quot;headerlink&quot; title=&quot;1.hexo g -d 会报错&quot;&gt;&lt;/a&gt;1.hexo g -d 会报错&lt;/h3&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://leader755.com/categories/hexo/"/>
-    
-    
-      <category term="问题指南" scheme="https://leader755.com/tags/%E9%97%AE%E9%A2%98%E6%8C%87%E5%8D%97/"/>
     
   </entry>
   
