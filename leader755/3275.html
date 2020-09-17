@@ -343,8 +343,8 @@
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')"> -->
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">    
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/23.jpg?@leader755')"> -->
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/23.jpg?@leader755')">    
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -505,14 +505,14 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2020-06-02
+          2020-09-17
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          581
+          579
         </div>
         
 
@@ -537,8 +537,8 @@
 <h2 id="2-加入此行代码到页面"><a href="#2-加入此行代码到页面" class="headerlink" title="2.加入此行代码到页面"></a>2.加入此行代码到页面<head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="leader755 Blogs" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head></h2><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"referrer"</span> content<span class="token operator">=</span><span class="token string">"no-referrer"</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
 <h2 id="3-暂时解决载了外链限制的问题"><a href="#3-暂时解决载了外链限制的问题" class="headerlink" title="3.暂时解决载了外链限制的问题"></a>3.暂时解决载了外链限制的问题</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595671131433-aced588a-b41e-406a-acf6-6133df722701.png#align=left&display=inline&height=195&margin=%5Bobject%20Object%5D&name=image.png&originHeight=390&originWidth=1288&size=105257&status=done&style=none&width=644" alt="image.png"></p>
-<h2 id="4-随之而来的问题出现了"><a href="#4-随之而来的问题出现了" class="headerlink" title="4.随之而来的问题出现了"></a>4.随之而来的问题出现了</h2><p>如果你同时使用了<a href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子</a>(<a href="https://busuanzi.ibruce.info/)统计，你会发现问题，查看控制台会出现不蒜子出现跨域的请求。这是为什么呢。由于使用了" target="_blank" rel="noopener">https://busuanzi.ibruce.info/)统计，你会发现问题，查看控制台会出现不蒜子出现跨域的请求。这是为什么呢。由于使用了</a> no-referrer。</p>
-<p>关于 no-refferrer 的相关问题可以查看此篇文章，在这里就不一一解释，直接给出解决方案。</p>
+<h2 id="4-随之而来的问题出现了"><a href="#4-随之而来的问题出现了" class="headerlink" title="4.随之而来的问题出现了"></a>4.随之而来的问题出现了</h2><p>如果你同时使用了 <a href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子 (https://busuanzi.ibruce.info/)</a>统计，你会发现问题，查看控制台会出现不蒜子出现跨域的请求。这是为什么呢。由于使用了 no-referrer。</p>
+<p>关于 no-refferrer 的相关问题可以自行搜索，在这里就不一一解释，直接给出解决方案。</p>
 <h2 id="5-目前的解决方案"><a href="#5-目前的解决方案" class="headerlink" title="5.目前的解决方案"></a>5.目前的解决方案</h2><h3 id="1-gt-方案-："><a href="#1-gt-方案-：" class="headerlink" title="1&gt;方案-："></a>1&gt;方案-：</h3><p>按照网友的说法是，meta 是可以放在 <code>&lt;body&gt;</code> 里的吧。<br>所以把 <code>&lt;meta name=&quot;referrer&quot; content=&quot;never&quot;&gt;</code> 放到 <strong>archive-book.ejs</strong> 的最前面。<br>然后在网页结构里就会是这个样子：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">...</span><span class="token operator">...</span>
 <span class="token operator">&lt;</span>head<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
@@ -909,9 +909,9 @@
 </div>
 
 <!-- <script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script> -->
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script> -->
 <script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
     new Valine({
         el: '#vcomments',
@@ -942,8 +942,8 @@
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="PicGo+ 又拍云创建个人图床工具"> -->
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="PicGo+ 又拍云创建个人图床工具">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/22.jpg?@leader755" class="responsive-img" alt="PicGo+ 又拍云创建个人图床工具"> -->
+                        <img src="https://img.leader755.com/leader755Blog/22.jpg?@leader755" class="responsive-img" alt="PicGo+ 又拍云创建个人图床工具">
                         
                         <span class="card-title">PicGo+ 又拍云创建个人图床工具</span>
                     </div>
@@ -951,14 +951,10 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.首先注册又拍云账号
-2.创建服务
-3.审核完成后（域名需要备案，10 分钟以内审核完毕）
-4.点击账户管理，添加操作员
-
-5.PicGo 的设置
-存储空间和存储员都是自己配置好的，操作密码也是复制好的。
-注意的是加速域名最好加上http
+                            1.首先注册又拍云账号点击云存储，创建新的云存储服务
+2.创建服务设置服务名称（唯一的性），加速区域 看自己需求决定。选择暂不授权。点击创建，创建成功过后会弹出成功框。
+3.进入配置，点击进行绑定自己的域名
+划重点，敲黑板（估计很多同学会搞
                         
                     </div>
                     <div class="publish-info">
@@ -1003,8 +999,8 @@
                     <div class="card-image">
                         
                         
-                        <!-- <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="4.mac 上使用 vi"> -->
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="4.mac 上使用 vi">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/11.jpg?@leader755" class="responsive-img" alt="4.mac 上使用 vi"> -->
+                        <img src="https://img.leader755.com/leader755Blog/11.jpg?@leader755" class="responsive-img" alt="4.mac 上使用 vi">
                         
                         <span class="card-title">4.mac 上使用 vi</span>
                     </div>
@@ -1195,7 +1191,7 @@
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">64.5k</span>&nbsp;字
+        class="white-color">64.9k</span>&nbsp;字
       
       
       
@@ -1475,7 +1471,7 @@ $(function () {
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1599977853525')
+  navigator.serviceWorker.register('/sw.js?t=1600354714125')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
