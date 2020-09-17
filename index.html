@@ -484,55 +484,43 @@
 
 
 <script>
-  $(function () {
-    let coverSlider = $('.carousel');
-    coverSlider.carousel({
-      duration: Number('120'),
-      fullWidth: true,
-      indicators: 'true' === 'true'
+    $(function () {
+        let coverSlider = $('.carousel');
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true'
+        });
+        let carouselIntervalId;
+        
+        // Loop to call the next cover article picture.
+        let autoCarousel = function() {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
+        let restartPlay = function () {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
     });
-    let carouselIntervalId; <
-    %
-    if (theme.cover.autoLoop) {
-      %
-      >
-      // Loop to call the next cover article picture.
-      let autoCarousel = function () {
-        carouselIntervalId = setInterval(function () {
-          coverSlider.carousel('next');
-        }, < % -theme.cover.intervalTime % > );
-      };
-      autoCarousel(); <
-      %
-    } % >
-    let restartPlay = function () {
-      <
-      %
-      if (theme.cover.autoLoop) {
-        %
-        >
-        clearInterval(carouselIntervalId);
-        autoCarousel(); <
-        %
-      } % >
-    }; <
-    %
-    if (theme.cover.showPrevNext) {
-      %
-      >
-      // prev and next cover post.
-      $('#prev-cover').click(function () {
-        coverSlider.carousel('prev');
-        restartPlay();
-      });
-      $('#next-cover').click(function () {
-        coverSlider.carousel('next');
-        restartPlay();
-      }); <
-      %
-    } % >
-  });
 </script>
+
 
 
 <main class="content">
@@ -1519,7 +1507,7 @@ $(function () {
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1600356106943')
+  navigator.serviceWorker.register('/sw.js?t=1600356806665')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
