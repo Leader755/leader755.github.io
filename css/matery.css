@@ -784,6 +784,7 @@ header .go-back i {
   padding: 20px 40px;
 }
 
+
 @media only screen and (min-width: 1418px) {
   .recommend {
     margin-top: 20px;
@@ -1295,6 +1296,8 @@ thead {
 
 #articleContent table td {
   min-width: 80px;
+  /* color: red !important; */
+
 }
 
 #articleContent [type="checkbox"]:not(:checked),
