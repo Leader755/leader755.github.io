@@ -1,0 +1,2156 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><link rel=manifest href=/manifest.json>
+  <meta charset="utf-8">
+  <meta name="keywords" content="前端面试（3）vue, 个人博客，leader755，hexo博客">
+  <meta name="description" content="Vue:
+vue 数据双向绑定原理；
+vue computed 原理、watch 和 methods 的区别；
+vue 编译器结构图、生命周期、vue 组件通信；
+mvc 模式、mvp 模式、mvvm 模式；
+vue dom diff、vu">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+  <!-- <meta name="referrer" content="no-referrer" /> -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>前端面试（3）vue | leader755 Blogs</title>
+  <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="white" />
+
+  <!-- <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+  <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/matery.css">
+  <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+  <script src="/libs/jquery/jquery.min.js"></script>
+  <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
+  <script src="/libs/jquery/jquery.min.js"></script>
+  <!-- 百度自动推送 -->
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+  <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
+
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="leader755 Blogs" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body>
+  <header class="navbar-fixed">
+  <nav id="headNav" class="bg-color nav-transparent">
+    <div id="navContainer" class="nav-wrapper container">
+      <!-- <div id="navContainer" class="nav-wrapper head-container"> -->
+      <div class="brand-logo">
+        <a href="/" class="waves-effect waves-light">
+          
+          <!-- <img src="/medias/logo.png" class="logo-img" alt="LOGO"> -->
+          <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+          
+          <span class="logo-span big-show">leader755 Blogs</span>
+        </a>
+      </div>
+      
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/articles" class="waves-effect waves-light">
+
+      
+      <i class="fa fa-bars" style="zoom: 0.6;"></i>
+      
+      <span>文章</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fa fa-tasks" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>简约风</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/timeline">
+          
+          <i class="fa fa-ellipsis-v" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>时间轴</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/data" class="waves-effect waves-light">
+      
+      <i class="fa fa-list-alt" style="zoom: 0.6;"></i>
+      
+      <span>统计</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友链</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <!-- <img src="/medias/logo.png" class="logo-img circle responsive-img"> -->
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">leader755 Blogs</div>
+        <div class="logo-desc">
+            
+            leader755 个人博客
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fa fa-bars"></i>
+			
+			文章
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/tags " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/categories " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-archive"></i>
+			
+			归档
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/archives " style="margin-left:75px";>
+				  
+				   <i class="fa fa fa-tasks" style="position: absolute;left:50px" ></i>
+			      
+		          <span>简约风</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/timeline " style="margin-left:75px";>
+				  
+				   <i class="fa fa fa-ellipsis-v" style="position: absolute;left:50px" ></i>
+			      
+		          <span>时间轴</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/data" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa fa-list-alt"></i>
+			
+			统计
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友链
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+  </nav>
+</header>
+  
+
+
+
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/13.jpg?@leader755')"> -->
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/13.jpg?@leader755')">    
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">前端面试（3）vue</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <!-- <link rel="stylesheet" href="/libs/tocbot/tocbot.css"> -->
+<link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 110px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+
+  <div class="card">
+
+    <div class="card-content article-info">
+      <div class="row tag-cate">
+        <div class="col s7">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/vue/">
+              <span class="chip bg-color">vue</span>
+            </a>
+            
+            <a href="/tags/vuex/">
+              <span class="chip bg-color">vuex</span>
+            </a>
+            
+            <a href="/tags/vue-router/">
+              <span class="chip bg-color">vue-router</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category">
+              面试
+            </a>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="post-info">
+        
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+          2020-08-20
+        </div>
+        
+
+        
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+          2020-09-26
+        </div>
+        
+
+        
+        <div class="info-break-policy">
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+          10.4k
+        </div>
+        
+
+        
+        <div class="info-break-policy">
+          <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+          40 分
+        </div>
+        
+
+        
+      </div>
+
+    </div>
+    <hr class="clearfix">
+    <div class="card-content article-card-content">
+      <!-- <meta name="referrer" content="never" /> -->
+      <div id="articleContent">
+
+        <h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue:"></a>Vue:</h2><ul>
+<li>vue 数据双向绑定原理；</li>
+<li>vue computed 原理、watch 和 methods 的区别；</li>
+<li>vue 编译器结构图、生命周期、vue 组件通信；</li>
+<li>mvc 模式、mvp 模式、mvvm 模式；</li>
+<li>vue dom diff、vuex、vue-router</li>
+</ul>
+<h2 id="数据双向绑定："><a href="#数据双向绑定：" class="headerlink" title="数据双向绑定："></a>数据双向绑定：</h2><pre><code>理解：**vue数据双向绑定是通过数据劫持结合发布者-订阅者模式的方式来实现的.**
+原理：是观察者`observer`通过`Object.defineProperty()`来劫持到各个属性的`getter` `setter`，在数据变动的时候，会被`observer`观察到，会通过`Dep`通知数据的订阅者watcher，之后进行相应的视图上面的变化。</code></pre><p><a href="https://juejin.im/entry/6844903479044112391" target="_blank" rel="noopener">https://juejin.im/entry/6844903479044112391</a></p>
+<h2 id="computed-原理、computed-和-watch-的区别"><a href="#computed-原理、computed-和-watch-的区别" class="headerlink" title="computed 原理、computed 和 watch 的区别"></a>computed 原理、computed 和 watch 的区别</h2><h4 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h4><p>定义：是一个计算属性,类似于过滤器,对绑定到 view 的数据进行处理</p>
+<blockquote>
+<p>适用于重新计算比较费时不用重复数据计算的环境。所有 getter 和 setter 的 this 上下文自动地绑定为 Vue 实例。如果一个数据依赖于其他数据，那么把这个数据设计为 computed。</p>
+</blockquote>
+<h5 id="computed-的常规使用"><a href="#computed-的常规使用" class="headerlink" title="computed 的常规使用"></a>computed 的常规使用</h5><pre class=" language-javascript"><code class="language-javascript">    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    firstName<span class="token punctuation">:</span> <span class="token string">'Foo'</span><span class="token punctuation">,</span>
+    lastName<span class="token punctuation">:</span> <span class="token string">'Bar'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+
+  computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+
+     <span class="token comment" spellcheck="true">//默认使用方式，读取并返回当前的属性值（无法去修改读取到的值）</span>
+     fullNameone<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastName
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment" spellcheck="true">//使用get 和 set 方去修改获取到的属性值</span>
+      fullNameSed：<span class="token punctuation">{</span>
+           <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//回调函数 当需要读取当前属性值是执行，根据相关数据计算并返回当前属性的值</span>
+              <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastName
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token keyword">set</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//监视当前属性值的变化，当属性值发生变化时执行，更新相关的属性数据</span>
+           <span class="token comment" spellcheck="true">//val就是fullName的最新属性值</span>
+           console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+           <span class="token keyword">const</span> names <span class="token operator">=</span> val<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span>
+           <span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">=</span> names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+           <span class="token keyword">this</span><span class="token punctuation">.</span>lastName <span class="token operator">=</span> names<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h5 id="vue-中-computed-的传参：利用闭包："><a href="#vue-中-computed-的传参：利用闭包：" class="headerlink" title="vue 中 computed 的传参：利用闭包："></a>vue 中 computed 的传参：利用闭包：</h5><pre class=" language-javascript"><code class="language-javascript">computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>Ratedata<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>currentRate<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'%'</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>####</p>
+<h4 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h4><p>定义：watch 是一个观察的动作</p>
+<h5 id="1-watch-监听数据变化"><a href="#1-watch-监听数据变化" class="headerlink" title="1.watch 监听数据变化"></a>1.watch 监听数据变化</h5><h6 id="1-gt-监听数据-单一数据"><a href="#1-gt-监听数据-单一数据" class="headerlink" title="1&gt;监听数据(单一数据)"></a>1&gt;监听数据(单一数据)</h6><pre class=" language-javascript"><code class="language-javascript"><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+       firstname<span class="token punctuation">:</span><span class="token string">''</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token function">firstname</span><span class="token punctuation">(</span>newVal<span class="token punctuation">,</span>oldVal<span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token keyword">this</span><span class="token punctuation">.</span>fullname <span class="token operator">=</span> newVal <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastname
+      <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+</code></pre>
+<h6 id="2-gt-监听对象的属性变化"><a href="#2-gt-监听对象的属性变化" class="headerlink" title="2&gt;监听对象的属性变化"></a>2&gt;监听对象的属性变化</h6><p><strong>1.直接通过 watch 的深度监听去监听对象的属性变化(deep 开启深度监听)</strong><br>**<code>deep</code>的意思就是深入观察，监听器会一层层的往下遍历，给对象的所有属性都加上这个监听器，但是这样性能开销就会非常大了，任何修改<code>obj</code>里面任何一个属性都会触发这个监听器里的 handler。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    formData<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      channel<span class="token punctuation">:</span> <span class="token string">"音乐"</span><span class="token punctuation">,</span>
+      style<span class="token punctuation">:</span> <span class="token string">"活泼"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    formData<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token function">handler</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> oldValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//监听对象的所有属性(性能开销就会非常大)</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">.</span>channel<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//返回的当前对象</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      deep<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><strong>优化，使用字符串形式监听,一层一层解析下去，直到遇到属性<code>a</code>，然后才给<code>a</code>设置监听函数</strong></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    formData<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      channel<span class="token punctuation">:</span> <span class="token string">"音乐"</span><span class="token punctuation">,</span>
+      style<span class="token punctuation">:</span> <span class="token string">"活泼"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"formData.channel"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token function">handler</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> oldValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//返回的为当前对象的属性channel的值</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h6 id="3-gt-初始化时就监听，由于初始化时-watch-不执行。"><a href="#3-gt-初始化时就监听，由于初始化时-watch-不执行。" class="headerlink" title="3&gt;初始化时就监听，由于初始化时 watch 不执行。"></a>3&gt;初始化时就监听，由于初始化时 watch 不执行。</h6><pre class=" language-javascript"><code class="language-javascript"> watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'defaultVal'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      immediate<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// immediate选项可以开启首次赋值监听</span>
+      handler <span class="token punctuation">(</span>newVal<span class="token punctuation">,</span> oldVal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>newVal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newVal，oldVal<span class="token punctuation">)</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>selectVal <span class="token operator">=</span> newVal
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span></code></pre>
+<h5 id="2-利用-computed-的属性-将对象的属性提取出来进行监听"><a href="#2-利用-computed-的属性-将对象的属性提取出来进行监听" class="headerlink" title="2.利用 computed 的属性(将对象的属性提取出来进行监听)"></a>2.利用 computed 的属性(将对象的属性提取出来进行监听)</h5><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    formData<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      channel<span class="token punctuation">:</span> <span class="token string">"音乐"</span><span class="token punctuation">,</span>
+      style<span class="token punctuation">:</span> <span class="token string">"活泼"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">channel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>formData<span class="token punctuation">.</span>channel<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">channel</span><span class="token punctuation">(</span>newValue<span class="token punctuation">,</span> oldValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newval<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h5 id="2-watch-监听路由变化"><a href="#2-watch-监听路由变化" class="headerlink" title="2.watch 监听路由变化"></a>2.watch 监听路由变化</h5><pre class=" language-javascript"><code class="language-javascript">watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token function">$route</span><span class="token punctuation">(</span> to <span class="token punctuation">,</span> <span class="token keyword">from</span> <span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// to要跳转到的路由的地址 , from 表示从哪跳转</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> to <span class="token punctuation">,</span> <span class="token keyword">from</span> <span class="token punctuation">)</span>
+
+      <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h4><blockquote>
+<ul>
+<li>可以使用 methods 来代替 computed，实际上效果是一样；</li>
+<li>其中 methods【有括号（）】，computed 不带括号；</li>
+<li>computed 是基于它的依赖缓存，只有相关依赖发生改变时才会重新取值；</li>
+<li>methods 在重新渲染的时候，函数总会重新调用执行；</li>
+<li>使用 computed 会比 methods 方法性能更好。</li>
+</ul>
+</blockquote>
+<blockquote>
+</blockquote>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><blockquote>
+<p>1.如果一个数据依赖于其他数据，那么把这个数据设计为 computed 的 。 2.如果你需要在某个数据变化时做一些事情，使用 watch 来观察这个数据变化 3.如果需要实时调用，使用 methods 比 computed 更合适</p>
+</blockquote>
+<h4 id="computed-和-watch-的区别："><a href="#computed-和-watch-的区别：" class="headerlink" title="computed 和 watch 的区别："></a>computed 和 watch 的区别：</h4><blockquote>
+<p>1.computed 是计算属性，watch 是监听，即观察属性。<br>2.comPuted 具有缓存性，页面重新渲染值不变化,计算属性会立即返回之前的计算结果，而不必再次执行函数。watch 每次都会去执行函数。<br>3.computed 是需要返回值的，且一般是对源数据进行过滤，为同步。watch 可监听异步请求返回的值。</p>
+</blockquote>
+<p>相关文章：<a href="https://www.yuque.com/docs/share/e153d391-2487-4dc7-a442-6a1ef00e6f20?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/e153d391-2487-4dc7-a442-6a1ef00e6f20?#</a> 《vue 的 data,props,computed,watch 详解》</p>
+<h2 id="vue-编译器结构图、生命周期"><a href="#vue-编译器结构图、生命周期" class="headerlink" title="vue 编译器结构图、生命周期"></a>vue 编译器结构图、生命周期</h2><h3 id="生命周期详解："><a href="#生命周期详解：" class="headerlink" title="生命周期详解："></a>生命周期详解：</h3><ul>
+<li><strong>beforeCreate（初始化界面前）</strong>组件未创建（加载动画）</li>
+<li><strong>created（初始化界面后）</strong>组件被创建了（获取数据）</li>
+<li><strong>beforeMount（渲染 dom 前）</strong>组件挂载前</li>
+<li><strong>mounted（渲染 dom 后）</strong>组件挂载（页面显示完成）</li>
+<li><strong>beforeUpdate（更新数据前）</strong>组件更新前调用的函数</li>
+<li><strong>updated（更新数据后）</strong>组件更新完毕</li>
+<li><strong>beforeDestroy（卸载组件前）</strong>组件销毁之前</li>
+<li><strong>destroyed（卸载组件后）</strong>组件销毁之后</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1597640375098-b2844b7d-609b-4e9d-a953-9d91bc6bd4a4.png#align=left&display=inline&height=1350&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3039&originWidth=1200&size=204653&status=done&style=none&width=533" alt="image.png"></p>
+<p>异步请求数据时应该位于生命周期：<br>一般在  <code>created</code>  里面就可以，如果涉及到需要页面加载完成之后的话就用  <code>mounted</code>。</p>
+<h3 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h3><p>定义：$nextTick 是在下次 DOM 更新循环结束之后执行延迟回调，在修改数据之后使用 $nextTick，则可以在回调中获取更新后的 DOM.<br>使用场景：在 Vue 生命周期的<code>created()</code>钩子函数进行的 DOM 操作一定要放在<code>Vue.nextTick()</code>的回调函数中  。</p>
+<h2 id="vue-组件通信"><a href="#vue-组件通信" class="headerlink" title="vue 组件通信"></a>vue 组件通信</h2><h3 id="父传子："><a href="#父传子：" class="headerlink" title="父传子："></a>父传子：</h3><h3 id="子传父："><a href="#子传父：" class="headerlink" title="子传父："></a>子传父：</h3><h2 id="同步异步父子组件生命周期顺序"><a href="#同步异步父子组件生命周期顺序" class="headerlink" title="同步异步父子组件生命周期顺序"></a>同步异步父子组件生命周期顺序</h2><blockquote>
+<p>在单一组件中，钩子的执行顺序是 beforeCreate-&gt; created -&gt; mounted-&gt;… -&gt;destroyed，但当父子组件嵌套时，父组件和子组件各拥有各自独立的钩子函数，<strong>这些父子组件的这些钩子是如何交融执行，且执行顺序又是怎样的呢?</strong></p>
+</blockquote>
+<h3 id="同步父子组件："><a href="#同步父子组件：" class="headerlink" title="同步父子组件："></a>同步父子组件：</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//同步组件引入方式</span>
+<span class="token keyword">import</span> Page <span class="token keyword">from</span> <span class="token string">"@/components/page"</span><span class="token punctuation">;</span></code></pre>
+<h4 id="加载渲染过程"><a href="#加载渲染过程" class="headerlink" title="加载渲染过程"></a>加载渲染过程</h4><pre class=" language-javascript"><code class="language-javascript">父beforeCreate<span class="token operator">-</span><span class="token operator">></span>父created<span class="token operator">-</span><span class="token operator">></span>父beforeMount<span class="token operator">-</span><span class="token operator">></span>子beforeCreate<span class="token operator">-</span><span class="token operator">></span>子created<span class="token operator">-</span><span class="token operator">></span>子beforeMount<span class="token operator">-</span><span class="token operator">></span>子mounted<span class="token operator">-</span><span class="token operator">></span>父mounted</code></pre>
+<p>####</p>
+<h4 id="更新过程"><a href="#更新过程" class="headerlink" title="更新过程"></a>更新过程</h4><pre class=" language-javascript"><code class="language-javascript">父beforeUpdate<span class="token operator">-</span><span class="token operator">></span>子beforeUpdate<span class="token operator">-</span><span class="token operator">></span>子updated<span class="token operator">-</span><span class="token operator">></span>父updated</code></pre>
+<p>####</p>
+<h4 id="销毁过程"><a href="#销毁过程" class="headerlink" title="销毁过程"></a>销毁过程</h4><pre class=" language-javascript"><code class="language-javascript">父beforeDestroy<span class="token operator">-</span><span class="token operator">></span>子beforeDestroy<span class="token operator">-</span><span class="token operator">></span>子destroyed<span class="token operator">-</span><span class="token operator">></span>父destroyed</code></pre>
+<p>####</p>
+<h4 id="常用钩子简易版"><a href="#常用钩子简易版" class="headerlink" title="常用钩子简易版"></a>常用钩子简易版</h4><pre class=" language-javascript"><code class="language-javascript">父create<span class="token operator">-</span><span class="token operator">></span>子created<span class="token operator">-</span><span class="token operator">></span>子mounted<span class="token operator">-</span><span class="token operator">></span>父mounted</code></pre>
+<blockquote>
+<p><strong>总结：</strong> &gt; <strong>同步父子组件渲染，更新，销毁的生命周期都是在当前父组件的生命周期中执行 **</strong>父 beforeMount， 父 beforeUpdate，beforeDestory 后，中间插入子组件的生命周期，最后才使用 父 Mounted，父 updated，父 destroyed。**</p>
+</blockquote>
+<p>**</p>
+<h3 id="异步父子组件："><a href="#异步父子组件：" class="headerlink" title="异步父子组件："></a>异步父子组件：</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//异步组件引入</span>
+<span class="token keyword">const</span> Page <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">"@/components/page"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Page <span class="token operator">=</span> <span class="token punctuation">(</span>resolve<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"@/components/page"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> page<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h4 id="加载渲染过程-1"><a href="#加载渲染过程-1" class="headerlink" title="加载渲染过程"></a>加载渲染过程</h4><pre class=" language-javascript"><code class="language-javascript">父beforeCreate<span class="token operator">-</span><span class="token operator">></span>父created<span class="token operator">-</span><span class="token operator">></span>父beforeMount<span class="token operator">-</span><span class="token operator">></span>父mounted<span class="token operator">-</span><span class="token operator">></span>父beforeUpdate<span class="token operator">-</span><span class="token operator">></span>子beforeCreate<span class="token operator">-</span><span class="token operator">></span>子created<span class="token operator">-</span><span class="token operator">></span>子beforeMount<span class="token operator">-</span><span class="token operator">></span>子mounted<span class="token operator">-</span><span class="token operator">></span>父updated</code></pre>
+<p>####</p>
+<h4 id="更新过程（异步和同步相同）"><a href="#更新过程（异步和同步相同）" class="headerlink" title="更新过程（异步和同步相同）"></a>更新过程（异步和同步相同）</h4><pre class=" language-javascript"><code class="language-javascript">父beforeUpdate<span class="token operator">-</span><span class="token operator">></span>子beforeUpdate<span class="token operator">-</span><span class="token operator">></span>子updated<span class="token operator">-</span><span class="token operator">></span>父updated</code></pre>
+<p>####</p>
+<h4 id="销毁过程（异步和同步相同）"><a href="#销毁过程（异步和同步相同）" class="headerlink" title="销毁过程（异步和同步相同）"></a>销毁过程（异步和同步相同）</h4><pre class=" language-javascript"><code class="language-javascript">父beforeDestroy<span class="token operator">-</span><span class="token operator">></span>子beforeDestroy<span class="token operator">-</span><span class="token operator">></span>子destroyed<span class="token operator">-</span><span class="token operator">></span>父destroyed</code></pre>
+<blockquote>
+<p><strong>总结：</strong><br>异步父子组件的渲染，更新，销毁，更新和销毁的生命周期和同步组件相同，但是渲染与同步的不同，<br>父组件的<code>beforeCreate、created、beforeMount、mounted、``beforeUpdate (其中多了一步 update)</code> –&gt;所有子组件的<code>mounted</code> —-&gt; 父组件的<code>Updated</code></p>
+</blockquote>
+<h3 id="总结：-1"><a href="#总结：-1" class="headerlink" title="总结："></a>总结：</h3><blockquote>
+</blockquote>
+<h5 id="两种引入方式的不同之处在于："><a href="#两种引入方式的不同之处在于：" class="headerlink" title="两种引入方式的不同之处在于："></a>两种引入方式的不同之处在于：</h5><blockquote>
+<p>同步引入时生命周期顺序为：父组件的<code>beforeCreate、created、beforeMount</code> –&gt; 所有子组件的<code>beforeCreate、created、beforeMount</code> –&gt; 所有子组件的<code>mounted</code> –&gt; 父组件的<code>mounted</code></p>
+</blockquote>
+<blockquote>
+<p>异步引入时生命周期顺序：父组件的<code>beforeCreate、created、beforeMount、mounted</code> –&gt; 子组件的<code>beforeCreate、created、beforeMount、mounted</code></p>
+</blockquote>
+<p>**<br>**</p>
+<h2 id="mvc、mvp、mvvm"><a href="#mvc、mvp、mvvm" class="headerlink" title="mvc、mvp、mvvm"></a>mvc、mvp、mvvm</h2><blockquote>
+<p>MVC，MVP 和 MVVM 都是常见的软件架构设计模式（Architectural Pattern），它通过分离关注点来改进代码的组织方式。不同于设计模式（Design Pattern），只是为了解决一类问题而总结出的抽象方法，一种架构模式往往使用了多种设计模式。</p>
+</blockquote>
+<blockquote>
+<p>要了解 MVC、MVP 和 MVVM，就要知道它们的相同点和不同点。不同部分是 C(Controller)、P(Presenter)、VM(View-Model)，而相同的部分则是 MV(Model-View)。</p>
+</blockquote>
+<p>Model（数据层）：Model 层用于封装和应用程序的业务逻辑相关的数据以及对数据的处理方法。<br>View（视图层）：主要负责数据的展示</p>
+<h3 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h3><p>MVC 模式的意思是，软件可以分成三个部分。</p>
+<ul>
+<li>视图（View）：用户界面。</li>
+<li>控制器（Controller）：业务逻辑</li>
+<li>模型（Model）：数据保存</li>
+</ul>
+<p>各部分之间的通信方式如下<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1597731631277-85e1a79d-6f5b-414c-affa-d6b574dfbcf3.png#align=left&display=inline&height=365&margin=%5Bobject%20Object%5D&originHeight=365&originWidth=601&size=0&status=done&style=none&width=601" alt=""></p>
+<blockquote>
+<ol>
+<li>MVC 是单向通信。也就是 View 跟 Model，必须通过 Controller 来承上启下。</li>
+<li>实例化 View 并向对应的 Model 实例注册，当 Model 发生变化时就去通知 View 做更新，这里用到了观察者模式。</li>
+<li>Controller 非常薄，只起到路由的作用，而 View 非常厚，业务逻辑都部署在 View。</li>
+</ol>
+</blockquote>
+<ul>
+<li>接受用户指令时，MVC 可以分成两种方式：<ul>
+<li>通过 View 接受指令，传递给 Controller。</li>
+<li>直接通过 controller 接受指令。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1597731692262-e83df13a-deea-40e2-aa2e-d5eb523c5752.png#align=left&display=inline&height=255&margin=%5Bobject%20Object%5D&name=image.png&originHeight=510&originWidth=583&size=28897&status=done&style=none&width=291.5" alt="image.png">)<img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1597731701799-cc0f8053-b059-49f4-83a3-099a510e7647.png#align=left&display=inline&height=255&margin=%5Bobject%20Object%5D&name=image.png&originHeight=486&originWidth=562&size=26205&status=done&style=none&width=295" alt="image.png"></p>
+<h3 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h3><p>定义：Model-View-Presenter，<br>MVP 模式将 Controller 改名为 Presenter，同时改变了通信方向。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1597731802955-171db3ab-b2af-46bd-b2c8-9bfa4356c12c.png#align=left&display=inline&height=323&margin=%5Bobject%20Object%5D&originHeight=323&originWidth=537&size=0&status=done&style=none&width=537" alt=""></p>
+<ol>
+<li>各部分之间的通信，都是双向的。</li>
+<li>View 与 Model 不发生联系，都通过 Presenter 传递。</li>
+<li><strong>View 非常薄，不部署任何业务逻辑，称为”被动视图”（Passive View），即没有任何主动性，而 Presenter 非常厚，所有逻辑都部署在 Presenter。</strong></li>
+</ol>
+<h3 id="MVVM："><a href="#MVVM：" class="headerlink" title="MVVM："></a>MVVM：</h3><p><strong>定义：指的是 Model - View -ViewModel 的简写，即模型-视图-视图模型</strong><br>MVVM 模式将 Presenter 改名为 ViewModel，基本上与 MVP 模式完全一致。唯一的区别是，它采用双向绑定（data-binding）：View 的变动，自动反映在 ViewModel，反之亦然。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1597731867672-4e25f08d-d2c8-419a-a9bc-5d532b609374.png#align=left&display=inline&height=380&margin=%5Bobject%20Object%5D&originHeight=423&originWidth=556&size=0&status=done&style=none&width=499" alt=""></p>
+<p>优点：<br>1、&gt; <strong>提高可维护性</strong>。解决了 MVP 大量的手动 View 和 Model 同步的问题，提供双向绑定机制。2、&gt; <strong>简化测试。</strong>因为同步逻辑是交由 Binder 做的，View 跟着 Model 同时变更，所以只需要保证 Model 的正确性，View 就正确。大大减少了对 View 同步更新的测试。<br>缺点：<br>1、过于简单的图形界面不适用，或说牛刀杀鸡。2、对于大型的图形应用程序，视图状态较多，ViewModel 的构建和维护的成本都会比较高。3、数据绑定的声明是指令式地写在 View 的模版当中的，这些内容是没办法去打断点 debug 的。</p>
+<h3 id="MVVM-模式及与-MVP-和-MVC-的区别"><a href="#MVVM-模式及与-MVP-和-MVC-的区别" class="headerlink" title="MVVM 模式及与 MVP 和 MVC 的区别"></a>MVVM 模式及与 MVP 和 MVC 的区别</h3><h4 id="MVC-和-MVP-的关系"><a href="#MVC-和-MVP-的关系" class="headerlink" title="MVC 和 MVP 的关系"></a>MVC 和 MVP 的关系</h4><ul>
+<li>相同点：MVP 是从经典的模式 MVC 演变而来，它们的基本思想有相通的地方：Controller/Presenter 负责逻辑的处理，Model 提供数 据，View 负责显示。</li>
+<li>不同点：在 MVP 中 View 并不直接使用 Model，它们之间的通信是通过 Presenter (MVC 中的 Controller)来进行的，所有的交互都发生在 Presenter 内部，而在 MVC 中 View 会直接从 Model 中读取数据而不是通过 Controller。MVC 全部是单项通信，而 MVP 是双向通信。</li>
+</ul>
+<h4 id="MVVM-和-MVP-的关系"><a href="#MVVM-和-MVP-的关系" class="headerlink" title="MVVM 和 MVP 的关系"></a>MVVM 和 MVP 的关系</h4><ul>
+<li>相同点：MVVM 模式将 Presenter 改名为 ViewModel，基本上与 MVP 模式完全一致。 唯一的区别是，</li>
+<li>不同点：MVVM 采用双向绑定（data-binding）：View 的变动，自动反映在 ViewModel，反之亦然。这样     开发者就不用处理接收事件和 View 更新的工作。MVVM 把 View 和 Model 的同步逻辑自动化了。以前 Presenter 负责的 View 和 Model 同步不再手动地进行操作，而是交给框架所提供的数据绑定功能进行负责，只需要告诉它 View 显示的数据对应的是 Model 哪一部分即可。简化了业务与界面的依赖，还解决了数据频繁更新的问题（以前用 jQuery 操作 DOM 很繁琐）。</li>
+</ul>
+<h2 id="vue-数据双向绑定原理"><a href="#vue-数据双向绑定原理" class="headerlink" title="vue 数据双向绑定原理"></a>vue 数据双向绑定原理</h2><p>在 Vue 中，使用了双向绑定技术（Two-Way-Data-Binding），就是 View 的变化能实时让 Model 发生变化，而 Model 的变化也能实时更新到 View。</p>
+<p>不同的 MVVM 框架中，实现双向数据绑定的技术有所不同。目前一些主流的前端框架实现数据绑定的方式大致有以下几种：</p>
+<ul>
+<li>数据劫持 (Vue)</li>
+<li>发布-订阅模式 (Knockout、Backbone)</li>
+<li>脏值检查 (Angular)</li>
+</ul>
+<p>我们这里主要讲讲<strong>Vue 的双向绑定</strong>：<br>Vue 采用数据劫持&amp;发布-订阅模式的方式，通过 ES5 提供的 <code>Object.defineProperty()</code> 方法来劫持（监控）各属性的 <code>getter</code> 、<code>setter</code> ，并在数据（对象）发生变动时通知订阅者，触发相应的监听回调。并且，由于是在不同的数据上触发同步，可以精确的将变更发送给绑定的视图，而不是对所有的数据都执行一次检测。 要实现 Vue 中的双向数据绑定，大致可以划分三个模块：Observer、Compile、Watcher，如图：<br><img src="https://cdn.nlark.com/yuque/0/2020/webp/241787/1597731278950-a02bf7fb-5b5c-4274-ae59-1f9e74e8829b.webp#align=left&display=inline&height=396&margin=%5Bobject%20Object%5D&originHeight=396&originWidth=1280&size=0&status=done&style=none&width=1280" alt=""></p>
+<ul>
+<li>Observer 数据监听器<br>负责对数据对象的所有属性进行监听（数据劫持），监听到数据发生变化后通知订阅者。</li>
+<li>Compiler 指令解析器<br>扫描模板，并对指令进行解析，然后绑定指定事件。</li>
+<li>Watcher 订阅者<br>关联 Observer 和 Compile，能够订阅并收到属性变动的通知，执行指令绑定的相应操作，更新视图。Update()是它自身的一个方法，用于执行 Compile 中绑定的回调，更新视图。</li>
+</ul>
+<h3 id="数据劫持"><a href="#数据劫持" class="headerlink" title="数据劫持"></a>数据劫持</h3><p>一般对数据的劫持都是通过 Object.defineProperty 方法进行的，Vue 中对应的函数为  <code>defineReactive</code> ，其普通对象的劫持的精简版代码如下：<br>从 MVC –&gt; MVP –&gt; MVVM</p>
+<h3 id="vue-的单项数据流："><a href="#vue-的单项数据流：" class="headerlink" title="vue 的单项数据流："></a>vue 的单项数据流：</h3><p>• Vue 是单向数据流，不是双向绑定<br>• Vue 的双向绑定不过是语法糖<br>• Object.definePropert 是劫持属性的 get 和 set 用来做响应式更新的。</p>
+<p>vue 还是单向数据流，v-model 只不过是语法糖，它是:value=”sth”和@change=”val =&gt; sth = val”的简写形式。</p>
+<h3 id="Vue-是怎么实现数据响应式更新的："><a href="#Vue-是怎么实现数据响应式更新的：" class="headerlink" title="Vue 是怎么实现数据响应式更新的："></a>Vue 是怎么实现数据响应式更新的：</h3><p>面试官期望听到的回答是：<strong>通过 Object.defineProperty()的 get 和 set 方法来实现响应式更新。</strong></p>
+<h2 id="Vue-的虚拟-Dom"><a href="#Vue-的虚拟-Dom" class="headerlink" title="Vue 的虚拟 Dom"></a>Vue 的虚拟 Dom</h2><p>浏览器解析一个 html 大致分为五步：<br><strong>创建 DOM tree –&gt; 创建 Style Rules -&gt; 构建 Render tree -&gt; 布局 Layout –&gt; 绘制 Painting。</strong><br><em>*<br>每次对真实 dom 进行操作的时候，浏览器都会从构建 dom 树开始从头到尾执行一遍流程。真实的 dom 操作代价昂贵，操作频繁还会引起页面卡顿影响用户体验，*<em>虚拟 dom 就是为了解决这个浏览器性能问题才被创造出来\</em>\</em><br>虚拟 dom 在执行 dom 的更新操作后，虚拟 dom 不会直接操作真实 dom，而是将更新的 diff 内容保存到本地 js 对象中，然后一次性 attach 到 dom 树上，通知浏览器进行 dom 绘制避免大量无谓的计算。</p>
+<p>简单总结：虚拟 DOM 是将真实的 DOM 节点用 JavaScript 模拟出来，将 DOM 变化的对比，放到 Js 层来做。</p>
+<h3 id="你的知道浏览器的虚拟-DOM-与真实-DOM-的区别"><a href="#你的知道浏览器的虚拟-DOM-与真实-DOM-的区别" class="headerlink" title="你的知道浏览器的虚拟 DOM 与真实 DOM 的区别"></a>你的知道浏览器的虚拟 DOM 与真实 DOM 的区别</h3><p>（<strong>注意：需不需要虚拟 DOM，其实与框架的 DOM 操作机制有关</strong>）：</p>
+<ol>
+<li>虚拟 DOM 不会进行排版与重绘操作</li>
+<li>虚拟 DOM 进行频繁修改，然后一次性比较并修改真实 DOM 中需要改的部分（注意！），最后并在真实 DOM 中进行排版与重绘，减少过多 DOM 节点排版与重绘损耗</li>
+<li>真实 DOM 频繁排版与重绘的效率是相当低的</li>
+<li>虚拟 DOM 有效降低大面积（真实 DOM 节点）的重绘与排版，因为最终与真实 DOM 比较差异，可以只渲染局部（同 2）</li>
+</ol>
+<p>使用虚拟 DOM 的损耗计算：</p>
+<pre class=" language-javascript"><code class="language-javascript">总损耗 <span class="token operator">=</span> 虚拟DOM增删改 <span class="token operator">+</span> （与Diff算法效率有关）真实DOM差异增删改 <span class="token operator">+</span> （较少的节点）排版与重绘</code></pre>
+<p>直接使用真实 DOM 的损耗计算：</p>
+<pre class=" language-javascript"><code class="language-javascript">总损耗 <span class="token operator">=</span> 真实DOM完全增删改 <span class="token operator">+</span> （可能较多的节点）排版与重绘</code></pre>
+<p>**<br><strong>总之，一切为了减弱频繁的大面积重绘引发的性能问题，不同框架不一定需要虚拟 DOM，关键看框架是否频繁会引发大面积的 DOM 操作</strong></p>
+<h3 id="vue-的-diff-是算法"><a href="#vue-的-diff-是算法" class="headerlink" title="vue 的 diff 是算法"></a>vue 的 diff 是算法</h3><p>在采取 diff 算法比较新旧节点的时候，比较只会在同层级进行, 不会跨层级比较。Vue 的 diff 算法是<strong>仅在同级的 vnode 间做 diff，递归地进行同级 vnode 的 diff，最终实现整个 DOM 树的更新</strong>。因为跨层级的操作是非常少的，忽略不计，这样时间复杂度就从 O(n3)变成 O(n)。</p>
+<h2 id="JavaScript：回流（重排）与重绘"><a href="#JavaScript：回流（重排）与重绘" class="headerlink" title="JavaScript：回流（重排）与重绘"></a><a href="https://segmentfault.com/a/1190000018452924" target="_blank" rel="noopener">JavaScript：回流（重排）与重绘</a></h2><h3 id="回流（元素的布局位置，规模尺寸，隐藏等改变）"><a href="#回流（元素的布局位置，规模尺寸，隐藏等改变）" class="headerlink" title="回流（元素的布局位置，规模尺寸，隐藏等改变）"></a>回流（元素的布局位置，规模尺寸，隐藏等改变）</h3><p>回流当 render tree 中的一部分或全部因为元素的规模尺寸、布局、隐藏等改变时，浏览器重新渲染部分 DOM 或全部 DOM 的过程。回流也被称为重排，其实从字面上来看，重排更容易让人形象易懂（即重新排版整个页面）。</p>
+<h3 id="重绘（不改变元素的位置，只改变元素的样式）"><a href="#重绘（不改变元素的位置，只改变元素的样式）" class="headerlink" title="重绘（不改变元素的位置，只改变元素的样式）"></a>重绘（不改变元素的位置，只改变元素的样式）</h3><p><strong>当页面元素样式改变不影响元素在文档流中的位置时</strong>（如 background-color，border-color，visibility），浏览器只会将新样式赋予元素并进行重新绘制操作。</p>
+<p><strong>回流必将引起重绘，而重绘不一定会引起回流。</strong></p>
+<h3 id="如何减少回流、重绘"><a href="#如何减少回流、重绘" class="headerlink" title="如何减少回流、重绘"></a>如何减少回流、重绘</h3><h4 id="CSS-中避免回流、重绘"><a href="#CSS-中避免回流、重绘" class="headerlink" title="CSS 中避免回流、重绘"></a>CSS 中避免回流、重绘</h4><p>1.尽可能在 DOM 树的最末端改变 class 2.避免设置多层内联样式 3.动画效果应用到 position 属性为 absolute 或 fixed 的元素上 4.避免使用 table 布局 5.使用 css3 硬件加速，可以让 transform、opacity、filters 等动画效果不会引起回流重绘</p>
+<h4 id="JS-操作避免回流、重绘"><a href="#JS-操作避免回流、重绘" class="headerlink" title="JS 操作避免回流、重绘"></a>JS 操作避免回流、重绘</h4><p><strong>1.避免使用 JS 一个样式修改完接着改下一个样式，最好一次性更改 CSS 样式，或者将样式列表定义为 class 的名称</strong> 2.避免频繁操作 DOM，使用文档片段创建一个子树，然后再拷贝到文档中 3.先隐藏元素，进行修改后再显示该元素，因为 display:none 上的 DOM 操作不会引发回流和重绘 4.避免循环读取 offsetLeft 等属性，在循环之前把它们存起来 5.对于复杂动画效果,使用绝对定位让其脱离文档流，否则会引起父元素及后续元素大量的回流</p>
+<h4 id="总结：-2"><a href="#总结：-2" class="headerlink" title="总结："></a>总结：</h4><p><strong>回流在浏览器中属于一种用户主导的操作，所以知道如何去改进回流时间以及知道各种文档属性（DOM 节点深度，css 的渲染效率，各种各样的样式改变）对回流时间的影响对于前端开发来讲是很有帮助的。有时即便是回流一个单一的元素，也可能要求它的父元素以及任何跟随它的元素也产生回流。例如需要改变某个元素的背景，这就不涉及该元素的属性，所以只发生重绘。</strong></p>
+<h2 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h2><h3 id="定义：vue-js-应用程序开发的状态管理模式"><a href="#定义：vue-js-应用程序开发的状态管理模式" class="headerlink" title="定义：vue.js 应用程序开发的状态管理模式"></a>定义：vue.js 应用程序开发的状态管理模式</h3><h3 id="vuex-五大核心属性：state，getter，mutation，action，module"><a href="#vuex-五大核心属性：state，getter，mutation，action，module" class="headerlink" title="vuex 五大核心属性：state，getter，mutation，action，module"></a>vuex 五大核心属性：state，getter，mutation，action，module</h3><ul>
+<li>state：存储数据，存储状态；在根实例中注册了 store 后，用 this.$store.state  访问数据。</li>
+<li>getters: store 的计算属性，它的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算，多用于过滤 state 的数据，用 this.$store.getter 访问数据。</li>
+<li>mutation：更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。用 this.$store.commit(‘add’, { amount: 10 })来提交数据。</li>
+<li>action：包含任意异步操作，通过提交 mutation 方法，通过 mutation 来改变 state。通过 this.$store.dispatch(‘addCountAction’)发起异步。</li>
+<li>module：将 store 分割成模块，每个模块都具有 state、mutation、action、getter、甚至是嵌套子模块。</li>
+</ul>
+<pre class=" language-javascript"><code class="language-javascript">└── store
+    ├── index<span class="token punctuation">.</span>js          # 我们组装模块并导出 store 的地方
+    ├── actions<span class="token punctuation">.</span>js        # 根级别的 action
+    ├── mutations<span class="token punctuation">.</span>js      # 根级别的 mutation
+    ├── state<span class="token punctuation">.</span>js          # 根级别的 state
+    └── modules
+        ├── module1<span class="token punctuation">.</span>js   # 模块<span class="token number">1</span>的state树
+        └── module2<span class="token punctuation">.</span>js   # 模块<span class="token number">2</span>的state树</code></pre>
+<p>module1.js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> WIDTH_ADD <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@/store/mutation-types.js"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 引入事件类型</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  namespaced<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  state<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+    height<span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  getters<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">modulegGetWidth</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> getters<span class="token punctuation">,</span> rootState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> state<span class="token punctuation">.</span>width<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">modulegetHeight</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> getters<span class="token punctuation">,</span> rootState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> state<span class="token punctuation">.</span>height<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  mutations<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>WIDTH_ADD<span class="token punctuation">]</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 使用常量替代 Mutation 事件类型</span>
+      <span class="token keyword">return</span> state<span class="token punctuation">.</span>width<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">addHeight</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 不使用常量</span>
+      <span class="token keyword">return</span> state<span class="token punctuation">.</span>height<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>index.js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> state <span class="token keyword">from</span> <span class="token string">"./state"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> getters <span class="token keyword">from</span> <span class="token string">"./getters"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> mutations <span class="token keyword">from</span> <span class="token string">"./mutations"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> actions <span class="token keyword">from</span> <span class="token string">"./actions"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> module1 <span class="token keyword">from</span> <span class="token string">"./modules/module1.js"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 引入module1</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  state<span class="token punctuation">,</span>
+  getters<span class="token punctuation">,</span>
+  mutations<span class="token punctuation">,</span>
+  actions<span class="token punctuation">,</span>
+  modules<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    module1<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 注册完成</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<h2 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h2><p><strong>定义：简单来说路由就是用来跟后端服务器进行交互的一种方式，通过不同的路径，来请求不同的资源（</strong>请求不同的页面是路由的其中一种功能<strong>）</strong>。</p>
+<p>异步交互体验的更高级版本就是 SPA —— 单页应用。单页应用不仅仅是在页面交互是无刷新的，连页面跳转都是无刷新的，为了实现单页应用，所以就有了前端路由。</p>
+<h3 id="前端路由"><a href="#前端路由" class="headerlink" title="前端路由"></a>前端路由</h3><h4 id="1-hash-模式"><a href="#1-hash-模式" class="headerlink" title="1. hash 模式"></a>1. hash 模式</h4><p>改变 url 的情况下，保证页面的不刷新。后面 hash 值的变化，并不会导致浏览器向服务器发出请求，浏览器不发出请求，也就不会刷新页面。另外每次 hash 值的变化，还会触发<code>hashchange</code>  这个事件，通过这个事件我们就可以知道 hash 值发生了哪些变化。然后我们便可以监听<code>hashchange</code>来实现更新页面部分内容的操作：<br><strong>hash 模式背后的原理是<code>onhashchange</code>事件,可以在<code>window</code>对象上监听这个事件。</strong></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//www.xxx.com/#/login</span>
+
+http<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token function">matchAndUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// todo 匹配 hash 做 dom 更新操作</span>
+<span class="token punctuation">}</span>
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"hashchange"</span><span class="token punctuation">,</span> matchAndUpdate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//onhashChange</span>
+window<span class="token punctuation">.</span>onhashchange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>oldURL<span class="token punctuation">,</span> event<span class="token punctuation">.</span>newURL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> hash <span class="token operator">=</span> location<span class="token punctuation">.</span>hash<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style<span class="token punctuation">.</span>color <span class="token operator">=</span> hash<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<h4 id="2-history-模式"><a href="#2-history-模式" class="headerlink" title="2. history 模式"></a>2. history 模式</h4><p>因为 HTML5 标准发布，多了两个 API，<code>pushState()</code>  和  <code>replaceState()。</code>通过这两个 API （1）可以改变 url 地址且不会发送请求，（2）不仅可以读取历史记录栈，还可以对<strong>浏览器历史记录栈进行修改。</strong><br>同时还有<code>popstate</code>  事件。通过这些就能用另一种方式来实现前端路由了，但原理都是跟 hash 实现相同的。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">matchAndUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// todo 匹配路径 做 dom 更新操作</span>
+<span class="token punctuation">}</span>
+
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"popstate"</span><span class="token punctuation">,</span> matchAndUpdate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+window<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">pushState</span><span class="token punctuation">(</span>stateObject<span class="token punctuation">,</span> title<span class="token punctuation">,</span> URL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+window<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">replaceState</span><span class="token punctuation">(</span>stateObject<span class="token punctuation">,</span> title<span class="token punctuation">,</span> URL<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<blockquote>
+<p>用了 HTML5 的实现，单页路由的 url 就不会多出一个#，变得更加美观。但因为没有 # 号，所以当用户刷新页面之类的操作时，浏览器还是会给服务器发送请求。为了避免出现这种情况，所以这个实现需要服务器的支持，需要把所有路由都重定向到根页面。</p>
+</blockquote>
+<blockquote>
+<p>区别：</p>
+<ul>
+<li>前面的 hashchange，你只能改变#后面的 url 片段。而 pushState 设置的新 URL 可以是与当前 URL 同源的任意 URL。</li>
+<li>history 模式则会将 URL 修改得就和正常请求后端的 URL 一样,如后端没有配置对应/user/id 的路由处理，则会返回 404 错误</li>
+</ul>
+<p>当用户刷新页面之类的操作时，浏览器会给服务器发送请求，所以这个实现需要服务器的支持，需要把所有路由都重定向到根页面。</p>
+</blockquote>
+<h2 id="vue-路由传参方式"><a href="#vue-路由传参方式" class="headerlink" title="vue 路由传参方式"></a>vue 路由传参方式</h2><h3 id="1-params-传参（刷新参数会丢失）："><a href="#1-params-传参（刷新参数会丢失）：" class="headerlink" title="1.params 传参（刷新参数会丢失）："></a>1.params 传参<strong>（刷新参数会丢失）</strong>：</h3><p><strong>name 与 params 结合使用   相当于 post。</strong><br>传参方式：this.$router.push({name:’路由命名’,params:{参数名:参数值,参数名:参数<strong>值}})</strong><br>url 展现方式：/detail</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//父组件传参</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">"Describe"</span><span class="token punctuation">,</span>
+  params<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    id<span class="token punctuation">:</span> id<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//子组件接收</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">;</span></code></pre>
+<h3 id="2-query-传参：（刷新不会丢失参数）"><a href="#2-query-传参：（刷新不会丢失参数）" class="headerlink" title="2.query 传参：（刷新不会丢失参数）"></a>2.query 传参：<strong>（刷新不会丢失参数）</strong></h3><p><strong>path 与 query 结合使用，相当于 get，参数会显示在地址栏里</strong><br><strong>传参方式：this.$router.push({path:’路由命名’, query:{ 参数名:参数值 } })</strong><br>url 展现方式：/detail?id=1&amp;user=123&amp;identity=1</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//父组件传值</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  path<span class="token punctuation">:</span> <span class="token string">"/describe"</span><span class="token punctuation">,</span>
+  query<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    id<span class="token punctuation">:</span> id<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//子组件</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>id<span class="token punctuation">;</span></code></pre>
+<h3 id="3-params-动态路由传参-刷新不会丢失参数）："><a href="#3-params-动态路由传参-刷新不会丢失参数）：" class="headerlink" title="3.params+动态路由传参(刷新不会丢失参数）："></a>3.params+动态路由传参(<strong>刷新不会丢失参数）</strong>：</h3><p><strong>参数会显示在地址栏</strong><br>**this.$router.push({path:’路由命名’, params:{ 参数名:参数值 } })url 展现方式：/detail/3/1</p>
+<p>父组件：</p>
+<pre class=" language-javascript"><code class="language-javascript">    <span class="token comment" spellcheck="true">//父组件</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          path<span class="token punctuation">:</span> <span class="token string">'/describe'</span><span class="token punctuation">,</span>
+          params<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            id<span class="token punctuation">:</span> id
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+            <span class="token comment" spellcheck="true">//路由写法</span>
+            <span class="token punctuation">{</span>
+                  path<span class="token punctuation">:</span> <span class="token string">'/describe/:id'</span><span class="token punctuation">,</span>
+                  name<span class="token punctuation">:</span> <span class="token string">'Describe'</span><span class="token punctuation">,</span>
+                  component<span class="token punctuation">:</span> Describe
+            <span class="token punctuation">}</span>
+
+            <span class="token comment" spellcheck="true">//子组件</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id
+</code></pre>
+<h3 id="4-router-link-传参"><a href="#4-router-link-传参" class="headerlink" title="4.router-link 传参"></a>4.router-link 传参</h3><p>1.路径：<a href="http://localhost:8081/#/test?name=1" target="_blank" rel="noopener">http://localhost:8081/#/test?name=1</a>(jquery 和 params 的结合)</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//(id是参数)</span>
+<span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token punctuation">:</span>to<span class="token operator">=</span><span class="token string">"{path:'/test',query: {name: id}, params:{id:id}}"</span><span class="token operator">></span>跳转<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">></span>
+
+<span class="token comment" spellcheck="true">//使用</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>id
+<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id
+</code></pre>
+<p>2.路径：<a href="http://localhost:8081/#/test/1（相当一动态路由传参）" target="_blank" rel="noopener">http://localhost:8081/#/test/1（相当一动态路由传参）</a></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//(id是参数)</span>
+<span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token punctuation">:</span>to<span class="token operator">=</span><span class="token string">"'/test/'+id"</span><span class="token operator">></span>跳转<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">></span>
+
+<span class="token comment" spellcheck="true">//路由</span>
+<span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span><span class="token string">'/test/:id/'</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span><span class="token string">'Test'</span><span class="token punctuation">,</span>
+      component<span class="token punctuation">:</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./components/Test.vue'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">//使用</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id   <span class="token comment" spellcheck="true">// (这个id给上图路由的配置有关）</span>
+</code></pre>
+<p><strong>注意：router-link 中链接如果是‘/’开始就是从根路由开始，如果开始不带‘/’，则从当前路由开始</strong></p>
+<h3 id="5-vuex-传参"><a href="#5-vuex-传参" class="headerlink" title="5.vuex 传参"></a>5.vuex 传参</h3><p>页面刷新 store.state 中的数据消失是不可避免的，那么使用 localStorage 或者 sessionStorage 来避免这个问题。如果是一个一个数据添加实在是太繁琐了。那么就需要一个全局的方法来，将 store 的数据存储在 localStorage 里。<br>App.vue</p>
+<pre class=" language-javascript"><code class="language-javascript">created<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">//在页面刷新时将vuex里的信息保存到localStorage里</span>
+  window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"beforeunload"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">"messageStore"</span><span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">//在页面加载时读取localStorage里的状态信息</span>
+  localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">"messageStore"</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">replaceState</span><span class="token punctuation">(</span>
+      Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">,</span>
+        JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">"messageStore"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="router-和-route-区别"><a href="#router-和-route-区别" class="headerlink" title="$router 和 $route 区别"></a>$router 和 $route 区别</h2><h3 id="1-gt-router-和-route-的区别"><a href="#1-gt-router-和-route-的区别" class="headerlink" title="1&gt;router 和 route 的区别"></a>1&gt;router 和 route 的区别</h3><ul>
+<li><strong>router：router 为 VueRouter 实例(路由实例)，是路由的操作对象，对象包括了路由的跳转方法，钩子函数等。</strong></li>
+<li><strong>route：route 为当前 router 跳转对象, 包含路由信息对象, 只读对象, 包括 path，params，hash，query，fullPath，matched，name 等路由信息参数。</strong></li>
+</ul>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//1、手写完整的 path:</span>
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`/user/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>userId<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//2、用 params 传递(url 不带参数，http:localhost:8080/#/user)：</span>
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">"user"</span><span class="token punctuation">,</span> params<span class="token punctuation">:</span> <span class="token punctuation">{</span> userId<span class="token punctuation">:</span> <span class="token string">"123"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>userId<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//3、用 query 传递(url 带参数:http:localhost:8080/#/user?userId=123)：</span>
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">"/user"</span><span class="token punctuation">,</span> query<span class="token punctuation">:</span> <span class="token punctuation">{</span> userId<span class="token punctuation">:</span> <span class="token string">"123"</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>userId<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2 id="vue-的首屏优化"><a href="#vue-的首屏优化" class="headerlink" title="vue 的首屏优化"></a>vue 的首屏优化</h2><h3 id="一、减小-chunk-vendors-js-体积"><a href="#一、减小-chunk-vendors-js-体积" class="headerlink" title="一、减小 chunk-vendors.js 体积**"></a>一、减小 chunk-vendors.js 体积**</h3><p>解决方式：<br><strong>1、路由懒加载</strong></p>
+<pre><code>const Home = () =&gt; import(/* webpackChunkName: &quot;home&quot; */ &#39;@/views/home&#39;);
+const Design = () =&gt; import(/* webpackChunkName: &quot;design&quot; */ &#39;@/views/design&#39;);
+const HotZone = () =&gt; import(/* webpackChunkName: &quot;hot-zone&quot; */ &#39;@/views/hot-zone&#39;);</code></pre><p><strong>2、lodash 按需加载</strong></p>
+<pre><code>import _ from &#39;lodash&#39;; // 或 import lodash from &#39;lodash&#39;
+// 改成
+import flow from &#39;lodash/flow&#39;;</code></pre><p>**<br><strong>3、gd-components 组件按需引入</strong><br>安装<code>babel-plugin-import</code> 插件，修改<code>babel.config.js</code> 文件</p>
+<pre><code>module.exports = {
+    presets: [&#39;@vue/app&#39;],
+    plugins: [
+        [&#39;import&#39;, {
+            &quot;libraryName&quot;: &#39;@gaoding/gd-components&#39;,
+            &quot;libraryDirectory&quot;: &#39;lib/components&#39;
+        }]
+    ]
+};</code></pre><p>4.对 css 和 js 进行压缩</p>
+<h3 id="二、DNS预解析"><a href="#二、DNS预解析" class="headerlink" title="二、DNS预解析"></a>二、<code>DNS</code>预解析</h3><pre><code>&lt;meta http-equiv=&quot;x-dns-prefetch-control&quot; content=&quot;on&quot; /&gt;
+&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//retcode.alicdn.com&quot;&gt;
+&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//st-gdx.dancf.com&quot;&gt;
+&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//alicdn.huanleguang.com&quot;&gt;</code></pre><p>关于这点，底下有详细的文章介绍，有兴趣的朋友可以点进去了解，这边不多介绍。</p>
+<h3 id="三、图片懒加载"><a href="#三、图片懒加载" class="headerlink" title="三、图片懒加载"></a>三、图片懒加载</h3><p>**<br><strong>四、减少 dom 数量和请求数</strong><br>由图片 lazy load，我们自然就考虑到了 dom 也可以 lazy load，所以把之前图片懒加载的方式延伸一下，改成 dom lazy load，同时对应的请求也放到后面再执行。<br>优化前的节点数和请求数：<br><strong>可以看到请求数和 dom 节点数都已经大幅度的减少。</strong><br>具体实现的原理很简单，也是利用<code>IntersectionObserver api</code>， 当 dom 刚刚进入视口再开始请求和渲染，对应的代码实现。</p>
+<pre><code>lazyLoadTemplate() {
+    this.intersectionObservers = new IntersectionObserver(entries =&gt; {
+        entries.forEach(e =&gt; {
+            if (e.intersectionRatio &lt; this.ratio) return;
+            const id = e.target.dataset.id;
+            this.loaded[id] = true;
+            const funcName = `load${firstUpperCase(id)}`;
+            this[funcName] &amp;&amp; this[funcName]();
+            this.intersectionObservers.unobserve(e.target);
+        });
+    }, {
+        threshold: [0, 0.1, 0.25, 1]
+    });
+    const sections = this.$el.querySelectorAll(&#39;.home-sections&#39;);
+    [...sections].forEach(item =&gt; {
+        this.intersectionObservers.observe(item);
+    });
+},</code></pre><h3 id="五、-SSR"><a href="#五、-SSR" class="headerlink" title="五、 SSR"></a>五、 SSR</h3><p>与传统 SPA (单页应用程序 (Single-Page Application)) 相比，服务器端渲染 (SSR) 的优势主要在于：</p>
+<ul>
+<li><strong>更好的 SEO，由于搜索引擎爬虫抓取工具可以直接查看完全渲染的页面。</strong></li>
+<li><strong>更快的内容到达时间 (time-to-content)，特别是对于缓慢的网络情况或运行缓慢的设备</strong>。无需等待所有的 JavaScript 都完成下载并执行，才显示服务器渲染的标记，所以你的用户将会更快速地看到完整渲染的页面。通常可以产生更好的用户体验，并且对于那些「内容到达时间(time-to-content) 与转化率直接相关」的应用程序而言，服务器端渲染 (SSR) 至关重要。</li>
+</ul>
+<p>服务端渲染实现原理机制：<strong>在服务端拿数据进行解析渲染，直接生成 html 片段返回给前端。然后前端可以通过解析后端返回的 html 片段到前端页面，大致有以下两种形式：</strong><br>1、服务器通过模版引擎直接渲染整个页面，例如 java 后端的 vm 模版引擎，php 后端的 smarty 模版引擎。<br>2、服务渲染生成 html 代码块, 前端通过 AJAX 获取然后使用 js 动态添加。</p>
+<p>作者：wqzwh<br>链接：<a href="https://juejin.im/post/6844903545448169479" target="_blank" rel="noopener">https://juejin.im/post/6844903545448169479</a><br>来源：掘金<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h3 id="六-预渲染-prerender-spa-plugin"><a href="#六-预渲染-prerender-spa-plugin" class="headerlink" title="六.预渲染(prerender-spa-plugin)"></a>六.预渲染(<a href="https://github.com/chrisvfritz/prerender-spa-plugin" target="_blank" rel="noopener">prerender-spa-plugin</a>)</h3><p>我们知道 SPA 有很多优点，不过一个缺点就是对(不是 Google 的)愚蠢的搜索引擎的 SEO 不友好，为了照顾这些引擎，目前主要有两个方案：<strong>服务端渲染</strong>(Server Side Rendering)、<strong>预渲染</strong>(Prerending)。<br>如果你只需要改善少数页面（例如 <code>/</code>, <code>/about</code>, <code>/contact</code> 等）的 <code>SEO</code>，那么你可能需要预渲染。无需使用 web 服务器实时动态编译 HTML (服务端渲染, SSR)，<strong>而是使用预渲染方式，在构建时(build time)简单地生成针对特定路由的静态 HTML 文件。</strong>它主要使用 <a href="https://github.com/chrisvfritz/prerender-spa-plugin" target="_blank" rel="noopener">prerender-spa-plugin</a> 插件，其与 SSR 一样都可以加快页面的加载速度，并且侵入性更小，在已上线的项目稍加改动也可以轻松引入预渲染机制，而 SSR 方案则需要将整个项目结构推翻；<br>访问预渲染出来的页面在访问时与<code>SSR</code>一样快，并且它将服务端编译 HTML 的时机提前到了构建时，因此也降低了服务端的压力，如果你的服务器跟我的一样买的 <strong>1M1G1 核</strong> 的小水管服务器 ( 穷 )，那么预渲染可能更适合你。不过 SSR 和预渲染的使用场景还是有较明显的区别的。预渲染的使用场景更多是简单的静态页面。服务端渲染适用于复杂、较大型、与服务端交互频繁的功能型网站，比如电商网站。</p>
+<p>最后如果希望进一步优化生成出来页面的 SEO，可以配合  <a href="https://github.com/muwoo/vue-meta-info" target="_blank" rel="noopener">vue-meta-info</a>  这个网上有很多文章，就不赘述了</p>
+<p>作者：SHERlocked93<br>链接：<a href="https://juejin.im/post/6844903668488093704" target="_blank" rel="noopener">https://juejin.im/post/6844903668488093704</a><br>来源：掘金<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h3 id="七-服务端开启-gzip-压缩"><a href="#七-服务端开启-gzip-压缩" class="headerlink" title="七.服务端开启 gzip 压缩"></a>七.服务端开启 gzip 压缩</h3><h3 id="8-app-js-分包"><a href="#8-app-js-分包" class="headerlink" title="8.app.js 分包"></a>8.app.js 分包</h3><h3 id="9-首页加-loading-或-骨架屏-（仅仅是优化体验）"><a href="#9-首页加-loading-或-骨架屏-（仅仅是优化体验）" class="headerlink" title="9.首页加 loading 或 骨架屏 （仅仅是优化体验）"></a>9.首页加 loading 或 骨架屏 （仅仅是优化体验）</h3><h2 id="webpack-模块"><a href="#webpack-模块" class="headerlink" title="webpack 模块"></a>webpack 模块</h2><h3 id="webpack-的优点："><a href="#webpack-的优点：" class="headerlink" title="webpack 的优点："></a>webpack 的优点：</h3><ul>
+<li>代码转换: <code>typeScript</code> 编译成 <code>javaScript</code>、<code>scss，less</code> 编译成 <code>css</code>.</li>
+<li>文件优化：压缩 <code>javaScript</code>、<code>css</code>、<code>html</code> 代码，压缩合并图片。</li>
+<li>代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码让其异步加载。</li>
+<li>模块合并：在采用模块化的项目里会有很多个模块和文件，需要构建功能把模块分类合并成一个文件。</li>
+<li>自动刷新：监听本地源代码的变化，自动重新构建、刷新浏览器。</li>
+<li>扩展性强，插件机制完善。</li>
+</ul>
+<h3 id="webpack-打包过程："><a href="#webpack-打包过程：" class="headerlink" title="webpack 打包过程："></a>webpack 打包过程：</h3><p>1.利用 babel 完成代码转换,并生成单个文件的依赖 2.从入口开始递归分析，并生成依赖图谱 3.将各个引用模块打包为一个立即执行函数 4.将最终的 bundle 文件写入 bundle.js 中</p>
+<h3 id="Webpack-的四大核心："><a href="#Webpack-的四大核心：" class="headerlink" title="Webpack 的四大核心："></a>Webpack 的四大核心：</h3><ul>
+<li>entry：js 入口源文件</li>
+<li>output：生成文件</li>
+<li>loader：进行文件处理</li>
+<li>plugins：插件，比 loader 更强大，能使用更多 webpack 的 api</li>
+</ul>
+<h2 id="Entry"><a href="#Entry" class="headerlink" title="Entry"></a>Entry</h2><p>webpack 应该使用哪个模块做为<strong>入口文件，</strong>来作为构建其内部依赖图的开始。进去入口起点后，webpack 会找出有哪些模块和库是入口起点（直接和间接）依赖的，每个依赖项随即被处理，最后输出到称之为 bundles 的文件中。<br>单⼊⼝：entry 是⼀个字符串</p>
+<pre><code>module.exports = {
+  entry: &#39;./src/index.js&#39;
+}</code></pre><p>多⼊⼝：entry 是⼀个对象</p>
+<pre><code>module.exports = {
+  entry: {
+    index: &#39;./src/index.js&#39;,
+    manager: &#39;./src/manager.js&#39;
+  }
+}</code></pre><h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>告诉 webpack 在哪里<strong>输出它所创建的 bund</strong>les，以及如何命名这些文件，这些都可以在 webpack 的配置文件中指定。<br>单⼊⼝配置</p>
+<pre><code>module.exports = {
+    entry: &#39;./src/index.js&#39;,
+    output: {
+        filename: &#39;bundle.js’,
+        path: __dirname + &#39;/dist&#39;
+    }
+};</code></pre><p>多⼊⼝配置</p>
+<pre><code>module.exports = {
+  entry: {
+    app: &#39;./src/app.js&#39;,
+    search: &#39;./src/search.js&#39;
+  },
+  output: {
+    filename: &#39;[name].js&#39;,
+    path: __dirname + &#39;/dist&#39;
+  }
+}</code></pre><p>通过[name]占位符确保⽂件名称的唯⼀</p>
+<h2 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h2><p><code>loader</code> 让 <code>webpack</code> 能够去处理那些非 <code>javaScript</code> 文件（<strong><code>webpack</code> 自身只理解 <code>javaScript</code></strong>）。<code>loader</code> 可以<strong>将所有类型的文件转换为 <code>webpack</code> 能够处理的有效模块</strong>，然后你就可以利用 <code>webpack</code> 的打包能力，对它们进行处理。</p>
+<h3 id="loader-的特点"><a href="#loader-的特点" class="headerlink" title="loader 的特点"></a>loader 的特点</h3><ul>
+<li>一个 Loader 的职责是单一的，只需要完成一种转换</li>
+<li>一个 Loader 其实就是一个 Node.js 模块，这个模块需要导出一个函数</li>
+<li>loader 总是从右到左地被调用。</li>
+</ul>
+<h3 id="常用的-loader"><a href="#常用的-loader" class="headerlink" title="常用的 loader"></a>常用的 loader</h3><h4 id="处理样式"><a href="#处理样式" class="headerlink" title="处理样式"></a>处理样式</h4><ul>
+<li><strong><code>css-loader</code>: 加载.css 文件，</strong></li>
+<li><strong><code>style-loader</code>:使用 style 标签将 <code>css-loader</code> 内部样式注入到我们的 html 页面</strong></li>
+<li><strong><code>less-loader, sass-loader</code>: 解析 css 预处理器</strong></li>
+</ul>
+<h4 id="处理-js"><a href="#处理-js" class="headerlink" title="处理 js"></a>处理 js</h4><ul>
+<li>让你能使用最新的 js 代码（ES6，ES7…）</li>
+<li>让你能使用基于 js 进行了拓展的语言，比如 React 的 JSX；</li>
+</ul>
+<h4 id="处理文件"><a href="#处理文件" class="headerlink" title="处理文件"></a>处理文件</h4><p>处理图片资源时，我们常用的两种 loader 是<code>file-loader</code>或者<code>url-loader</code>，两者的主要差异在于。<code>url-loader</code>可以设置图片大小限制，当图片超过限制时，其表现行为等同于<code>file-loader</code>，而当图片不超过限制时，则会将图片以<code>base64</code>的形式打包进 css 文件，以减少请求次数</p>
+<h4 id="处理-vue-文件"><a href="#处理-vue-文件" class="headerlink" title="处理.vue 文件"></a>处理.vue 文件</h4><p><code>vue-loader</code> 是 <code>webpack</code> 的加载器模块，它使我们可以用 <code>.vue</code> 文件格式编写单文件组件。单文件组件文件有三个部分，即模板、脚本和样式。 <code>vue-loader</code> 模块允许 <code>webpack</code> 使用单独的加载器模块（例如 <code>sass 或 scss 加载器</code>）提取和处理每个部分。该设置使我们可以使用 <code>.vue</code> 文件无缝编写程序。</p>
+<h3 id="开发一个-loader"><a href="#开发一个-loader" class="headerlink" title="开发一个 loader"></a>开发一个 loader</h3><p>需求：手写一个 <code>loader</code>，将 <code>&#39;kobe&#39;</code> 转换成 <code>&#39;Black Mamba&#39;</code>。当然大家可以根据自己的需求进行设计。这里只是讲解方法。</p>
+<h4 id="1、编写-loader"><a href="#1、编写-loader" class="headerlink" title="1、编写 loader"></a>1、编写 loader</h4><p>在根目录下，新建目录 <code>kobe-loader</code> 作为我们编写 <code>loader</code> 的名称，执行 <code>npm init -y</code> 命令，新建一个模块化项目，然后新建 <code>index.js</code> 文件，相关源码如下：</p>
+<pre><code>module.exports = function(content) {
+  return content &amp;&amp; content.replace(/kobe/gi, &#39;Black Mamba&#39;)
+}</code></pre><h4 id="2、注册模块"><a href="#2、注册模块" class="headerlink" title="2、注册模块"></a>2、注册模块</h4><p>正常我们安装的 <code>loader</code> 是从 <code>npm</code> 下载安装，但是我们可以在 <code>kobe-loader</code> 目录底下使用 <code>npm link</code> 做到在不发布模块的情况下，将本地的一个正在开发的模块的源码链接到项目的 <code>node_modules</code> 目录下，让项目可以直接使用本地的 <code>npm</code> 模块。</p>
+<pre><code>npm link</code></pre><p>然后在项目根目录执行以下命令，将注册到全局的本地 <code>npm</code> 模块链接到项目的 <code>node_modules</code> 下</p>
+<pre><code>$ npm link kobe-loader</code></pre><p>注册成功后，我们可以在 <code>node_modules</code> 目录下能查找到对应的 <code>loader</code>。</p>
+<h4 id="3、在-webpack-中配置-loader"><a href="#3、在-webpack-中配置-loader" class="headerlink" title="3、在 webpack 中配置 loader"></a>3、在 webpack 中配置 loader</h4><p>在 <code>webpack.base.conf.js</code> 加上如下配置</p>
+<pre><code>{
+  test:/\.js/,
+  loader: &#39;kobe-loader&#39;
+}</code></pre><p>此时，我们在所有 js 文件下书写的 <code>&#39;kobe&#39;</code> 就全部替换成 <code>&#39;Black Mamba&#39;</code>了。</p>
+<h4 id="4、配置参数"><a href="#4、配置参数" class="headerlink" title="4、配置参数"></a>4、配置参数</h4><p>上面我们是写死的替换文案，假如我想通过配置项来改变，可以在 loader 中做以下调整</p>
+<pre><code>// custom-loader/index.js
+var utils = require(&#39;loader-utils&#39;)
+module.exports = function (content) {
+  const options = utils.getOptions(this)
+  return content &amp;&amp; content.replace(/kobe/gi, options.name)
+}
+// webpack.base.conf.js
+{
+  test:/\.js/,
+  use: {
+    loader: &#39;kobe-loader&#39;,
+    options: {
+      name: &#39;kobe&#39;,
+    }
+  }
+}</code></pre><h2 id="Plugin"><a href="#Plugin" class="headerlink" title="Plugin"></a>Plugin</h2><p><strong>专注处理 webpack 在编译过程中的某个特定的任务的功能模块，可以称为插件。</strong></p>
+<h3 id="Plugin-的特点"><a href="#Plugin-的特点" class="headerlink" title="Plugin 的特点"></a>Plugin 的特点</h3><ul>
+<li>是一个独立的模块</li>
+<li>模块对外暴露一个 js 函数</li>
+<li>函数的原型 <code>(prototype)</code> 上定义了一个注入 <code>compiler</code> 对象的 <code>apply</code>方法 <code>apply</code> 函数中需要有通过 <code>compiler</code> 对象挂载的 <code>webpack</code> 事件钩子，钩子的回调中能拿到当前编译的 <code>compilation</code> 对象，如果是异步编译插件的话可以拿到回调 <code>callback</code></li>
+<li>完成自定义子编译流程并处理 <code>complition</code> 对象的内部数据</li>
+<li>如果异步编译插件的话，数据处理完成后执行 <code>callback</code> 回调。</li>
+</ul>
+<h3 id="常用-Plugin"><a href="#常用-Plugin" class="headerlink" title="常用 Plugin"></a>常用 Plugin</h3><ul>
+<li><code>HotModuleReplacementPlugin</code> 代码热替换。因为 <code>Hot-Module-Replacement</code> 的热更新是依赖于 <code>webpack-dev-server</code>，后者是在打包文件改变时更新打包文件或者 reload 刷新整个页面，<code>HRM</code> 是只更新修改的部分。</li>
+<li><code>HtmlWebpackPlugin</code>, 生成 html 文件。将 webpack 中<code>entry</code>配置的相关入口 chunk 和 <code>extract-text-webpack-plugin</code>抽取的 css 样式 插入到该插件提供的<code>template</code>或者<code>templateContent</code>配置项指定的内容基础上生成一个 html 文件，具体插入方式是将样式<code>link</code>插入到<code>head</code>元素中，<code>script</code>插入到<code>head</code>或者<code>body</code>中。</li>
+<li><code>ExtractTextPlugin</code>, 将 css 成生文件，而非内联 。该插件的主要是为了抽离 css 样式,防止将样式打包在 js 中引起页面样式加载错乱的现象。</li>
+<li><code>NoErrorsPlugin</code>报错但不退出 webpack 进程</li>
+<li><code>UglifyJsPlugin</code>，代码丑化，开发过程中不建议打开。 <code>uglifyJsPlugin</code> 用来对 js 文件进行压缩，从而减小 js 文件的大小，加速 load 速度。<code>uglifyJsPlugin</code> 会拖慢 webpack 的编译速度，所有建议在开发简单将其关闭，部署的时候再将其打开。多个 html 共用一个 js 文件(chunk)，可用 <code>CommonsChunkPlugin</code></li>
+<li><code>purifycss-webpack</code>  。打包编译时，可剔除页面和 js 中未被使用的 css，这样使用第三方的类库时，只加载被使用的类，大大减小 css 体积</li>
+<li><code>optimize-css-assets-webpack-plugin</code>   压缩 css，优化 css 结构，利于网页加载和渲染</li>
+<li><code>webpack-parallel-uglify-plugin</code>   可以并行运行 UglifyJS 插件，这可以有效减少构建时间</li>
+</ul>
+<h3 id="开发一个-plugin"><a href="#开发一个-plugin" class="headerlink" title="开发一个 plugin"></a>开发一个 plugin</h3><ul>
+<li>Webpack 在编译过程中，会广播很多事件，例如 run、compile、done、fail 等等，可以查看官网；</li>
+<li>Webpack 的事件流机制应用了观察者模式，我们编写的插件可以监听 Webpack 事件来触发对应的处理逻辑；</li>
+<li>插件中可以使用很多 Webpack 提供的 API，例如读取输出资源、代码块、模块及依赖等；</li>
+</ul>
+<h4 id="1、编写插件"><a href="#1、编写插件" class="headerlink" title="1、编写插件"></a>1、编写插件</h4><p>在根目录下，新建目录 my-plugin 作为我们编写插件的名称，执行 npm init -y 命令，新建一个模块化项目，然后新建 index.js 文件，相关源码如下：</p>
+<pre><code>class MyPlugin {
+  constructor(doneCallback, failCallback) {
+    // 保存在创建插件实例时传入的回调函数
+    this.doneCallback = doneCallback
+    this.failCallback = failCallback
+  }
+  apply(compiler) {
+    // 成功完成一次完整的编译和输出流程时，会触发 done 事件
+    compiler.plugin(&#39;done&#39;, stats =&gt; {
+      this.doneCallback(stats)
+    })
+    // 在编译和输出的流程中遇到异常时，会触发 failed 事件
+    compiler.plugin(&#39;failed&#39;, err =&gt; {
+      this.failCallback(err)
+    })
+  }
+}
+module.exports = MyPlugin</code></pre><h4 id="2、注册模块-1"><a href="#2、注册模块-1" class="headerlink" title="2、注册模块"></a>2、注册模块</h4><p>按照以上的方法，我们在 my-plugin 目录底下使用 npm link 做到在不发布模块的情况下，将本地的一个正在开发的模块的源码链接到项目的 node_modules 目录下，让项目可以直接使用本地的 npm 模块。</p>
+<pre><code>npm link</code></pre><p>然后在项目根目录执行以下命令，将注册到全局的本地 npm 模块链接到项目的 node_modules 下</p>
+<pre><code>$ npm link my-plugin</code></pre><p>注册成功后，我们可以在 node_modules 目录下能查找到对应的插件了。</p>
+<h4 id="3、配置插件"><a href="#3、配置插件" class="headerlink" title="3、配置插件"></a>3、配置插件</h4><p>在 webpack.base.conf.js 加上如下配置</p>
+<pre><code>plugins: [
+  new MyPlugin(
+    stats =&gt; {
+      console.info(&#39;编译成功!&#39;)
+    },
+    err =&gt; {
+      console.error(&#39;编译失败!&#39;)
+    }
+  )
+]</code></pre><p>执行运行 or 编译命令，就能看到我们的 plugin 起作用了。</p>
+<blockquote>
+<p>loader 是一个编译器，<code>loader</code> 让 <code>webpack</code> 能够去处理那些非 <code>javaScript</code> 文件（<strong><code>webpack</code> 自身只理解 <code>javaScript</code></strong>）。<code>loader</code> 可以<strong>将所有类型的文件转换为 <code>webpack</code> 能够处理的有效模块</strong>，<br>**<br>loader，它是一个转换器，将 A 文件进行编译成 B 文件，比如：将 A.less 转换为 A.css，单纯的文件转换过程。</p>
+</blockquote>
+<blockquote>
+<p>plugin 是一个扩展器，它丰富了 webpack 本身，针对是 loader 结束后，webpack 打包的整个过程，它并不直接操作文件，而是基于事件机制工作，会监听 webpack 打包过程中的某些节点，执行广泛的任务</p>
+</blockquote>
+<p>文章引用：<br><a href="https://juejin.im/post/6844904113914773518" target="_blank" rel="noopener">https://juejin.im/post/6844904113914773518</a><br><a href="https://juejin.im/post/6844903480126078989" target="_blank" rel="noopener">https://juejin.im/post/6844903480126078989</a></p>
+
+      </div>
+      <hr />
+
+      
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://leader755.com" rel="external nofollow noreferrer">leader755</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://leader755.com/leader755/26383.html">https://leader755.com/leader755/26383.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                       版权声明: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://leader755.com" target="_blank">leader755</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+      <div class="tag_share" style="display: block;">
+        <div class="post-meta__tag-list" style="display: inline-block;">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/vue/">
+              <span class="chip bg-color">vue</span>
+            </a>
+            
+            <a href="/tags/vuex/">
+              <span class="chip bg-color">vuex</span>
+            </a>
+            
+            <a href="/tags/vue-router/">
+              <span class="chip bg-color">vue-router</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="post_share"
+          style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+          <!-- <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css"> -->
+<link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,douban,google" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <!-- <script src="/libs/share/js/social-share.min.js"></script> -->
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<!-- <script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script> -->
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'RiorOdrNwqaBf5I71C58Dwom-gzGzoHsz',
+        appKey: 'pPTOvOPEC6KWBmHposk60qIc',
+        notify: 'true,' === 'true',
+        verify: 'true,' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mp',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+    });
+</script>
+
+  
+
+  
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/leader755/60928.html">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="https://img.leader755.com/leader755Blog/13.jpg?@leader755" class="responsive-img" alt="前端面试（4）less，sass，stylus"> -->
+                        <img src="https://img.leader755.com/leader755Blog/13.jpg?@leader755" class="responsive-img" alt="前端面试（4）less，sass，stylus">
+                        
+                        <span class="card-title">前端面试（4）less，sass，stylus</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ###
+##
+预编译：less，sass，stylus预处理语言的诞生其中 就我所知的有三门语言：Sass、Less 、Stylus 。
+
+Sass 诞生于 2007 年，Ruby 编写，其语法功能都十分全面，可以说 它完全把 CSS 变成
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category">
+                                    面试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/less/">
+                        <span class="chip bg-color">less</span>
+                    </a>
+                    
+                    <a href="/tags/sass/">
+                        <span class="chip bg-color">sass</span>
+                    </a>
+                    
+                    <a href="/tags/scss/">
+                        <span class="chip bg-color">scss</span>
+                    </a>
+                    
+                    <a href="/tags/stylus/">
+                        <span class="chip bg-color">stylus</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/leader755/11225.html">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="https://img.leader755.com/leader755Blog/9.jpg?@leader755" class="responsive-img" alt="前端面试（2）javascript"> -->
+                        <img src="https://img.leader755.com/leader755Blog/9.jpg?@leader755" class="responsive-img" alt="前端面试（2）javascript">
+                        
+                        <span class="card-title">前端面试（2）javascript</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            JavaScript：
+原型、继承、原型链、this 指向、设计模式、call, apply, bind,；
+new 实现、防抖节流、let, var, const 区别、暂时性死区、event、loop；
+promise 使用及实现、pr
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category">
+                                    面试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
+                    </a>
+                    
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script> -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script> -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+  code[class*="language-"],
+  pre[class*="language-"] {
+    white-space: pre !important;
+  }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<!-- <script src="/libs/tocbot/tocbot.min.js"></script> -->
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+  <footer class="page-footer bg-color">
+  <div class="container row center-align"
+    style="margin-bottom: 0px !important;">
+    <div class="col s12 m8 l8 copy-right">
+      <!-- Design by&nbsp;<a href="https://blog.csdn.net/weixin_41316842" target="_blank">leader755</a>
+      &nbsp|&nbsp&nbsp;Powered by&nbsp;<a href="https://github.com/hongweifuture/hexo-theme-halo"
+        target="_blank">Halo</a>
+      of <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <br> -->
+      
+      &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
+        class="white-color">64.9k</span>&nbsp;字
+      
+      
+      
+      
+      
+      
+      <span id="busuanzi_container_site_pv">
+        |&nbsp;<i class="far fa-eye"></i>&nbsp;访问量:&nbsp;<span id="busuanzi_value_site_pv"
+          class="white-color"></span>&nbsp;次
+      </span>
+      
+      
+      <span id="busuanzi_container_site_uv">
+        |&nbsp;<i class="fas fa-users"></i>&nbsp;点击量:&nbsp;<span id="busuanzi_value_site_uv"
+          class="white-color"></span>&nbsp;次
+      </span>
+      
+      <br>
+      Copyright&nbsp;&copy;
+      <span id="year">2019&nbsp-&nbsp2020 </span>&nbsp&nbsp|
+      &nbsp;<a href="https://leader755.com/sitemap.xml" target="_blank">Sitemap</a>&nbsp;&nbsp;|&nbsp;
+      
+
+      
+      <!-- <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
+      <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+        <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备20012827号-1</a>
+      </span>
+      
+
+
+      
+
+      <!-- <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
+      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img
+          style="height: 22px !important;width: 40px !important;vertical-align: middle;" class="ypyunlink"
+          src="/medias/upyun.png" style="vertical-align: text-bottom;" />
+      </a>
+      
+    </div>
+    <div class="col s12 m4 l4 social-link social-statis">
+<a href="https://github.com/leader755/" class="tooltipped" target="_blank" data-toggle="tooltip" data-placement="top"
+  title="访问我的GitHub">
+  <i class="fab fa-github"></i>
+</a>
+
+
+
+<a href="mailto:1181012791@qq.com" class="tooltipped" target="_blank" data-toggle="tooltip"
+  data-placement="top" title="邮件联系我">
+  <i class="fas fa-envelope-open"></i>
+</a>
+
+
+
+
+
+
+
+<a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181012791" class="tooltipped"
+  target="_blank" data-toggle="tooltip" data-placement="top" title="QQ 联系我: 1181012791">
+  <i class="fab fa-qq"></i>
+</a>
+
+
+
+
+
+
+
+<!-- <a href="https://me.csdn.net/weixin_41316842" class="tooltipped" target="_blank" data-tooltip="关注我的CSDN博客: https://me.csdn.net/weixin_41316842" data-position="top" data-delay="50"> -->
+<a href="https://me.csdn.net/weixin_41316842" class="tooltipped" target="_blank" data-toggle="tooltip" data-placement="top"
+  title="关注我的CSDN博客">
+  <i class="fa fa-bold"></i>
+</a>
+
+
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-toggle="tooltip" data-placement="top"
+  title="RSS 订阅">
+  <i class="fas fa-rss"></i>
+</a>
+</div>
+  </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+  <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<!-- <script src="/js/search.js"></script> -->
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    // searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+  <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+  <!-- <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script> -->
+
+  <script src="/libs/materialize/materialize.min.js"></script>
+  <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+  <script src="/libs/aos/aos.js"></script>
+  <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+  <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+  <script src="/libs/zepto/zepto.min.js"></script>
+  <script src="/js/matery.js"></script>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <!-- Baidu Analytics -->
+
+  <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+  
+
+  
+
+  
+  <script src="/libs/others/cursor.js"></script>
+  
+
+  
+  <!-- <script async src="/libs/others/busuanzi.pure.mini.js"></script> -->
+  <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+  
+
+  
+  <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js"></script>
+  <script>
+    $(document).ready(function () {
+      setInterval(change_Tidio, 50);
+
+      function change_Tidio() {
+        var tidio = $("#tidio-chat iframe");
+        if (tidio.css("display") == "block" && $(window).width() > 977) {
+          document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") ==
+            "none" && $(window).width() > 977) > 0 ? "-40px" : ($("div.toc-title").length && $(window).width() >
+            977) > 0 ? "85px" : "20px";
+          document.getElementById("tidio-chat-iframe").style.right = "-15px";
+          document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >= 520 ?
+            "520px" : tidio.css("height");
+          document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+        } else if (tidio.css("display") == "block" && $(window).width() > 601 && $(window).width() < 992) {
+          document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") ==
+            "none" && 601 < $(window).width() < 992) > 0 ? "-40px" : "20px";
+          document.getElementById("tidio-chat-iframe").style.right = "-15px";
+          document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+        } else if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) <
+          230) {
+          document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") ==
+            "none" && $(window).width() < 601) > 0 ? "-10px" : "45px";
+          document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+        }
+        if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) >= 230) {
+          document.getElementById("tidio-chat-iframe").style.zIndex = "998";
+        }
+      }
+    });
+  </script>
+  
+
+  
+
+  
+
+  
+
+  
+  <!-- <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script> -->
+  <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async">
+  </script>
+  
+
+  
+  <!-- <script src="/libs/instantpage/instantpage.js" type="module"></script> -->
+  <script src="/libs/instantpage/instantpage.js" type="module"></script>
+  
+
+  <script type="text/javascript">
+    var OriginTitile = document.title,
+      st;
+    document.addEventListener("visibilitychange", function () {
+      document.hidden ? (document.title = "ヽ(●-`Д´-)ノ风里雨里我在等你~", clearTimeout(st)) : (document.title =
+        "(๑•̀ㅂ•́) ✧ 欢迎回来~~！", st = setTimeout(function () {
+          document.title = OriginTitile
+        }, 3e3))
+    })
+  </script>
+
+  <div id="he-plugin-simple"></div>
+  <script>
+    WIDGET = {
+      CONFIG: {
+        "modules": "01234",
+        "background": 5,
+        "tmpColor": "FFFFFF",
+        "tmpSize": 16,
+        "cityColor": "FFFFFF",
+        "citySize": "16",
+        "aqiSize": 16,
+        "weatherIconSize": "20",
+        "alertIconSize": 18,
+        "padding": "10px 10px 10px 10px",
+        "shadow": "0",
+        "language": "auto",
+        "fixed": "true",
+        "vertical": "top",
+        "horizontal": "right",
+        "right": 10,
+        "top": "60",
+        "key": "2ccd90212a1d41dea248662765a0fb9c"
+      }
+    }
+    // WIDGET = {
+    //   CONFIG: {
+    //     "modules": "1234",
+    //     "background": 1,
+    //     "tmpColor": "FFFFFF",
+    //     "tmpSize": 16,
+    //     "cityColor": "FFFFFF",
+    //     "citySize": 16,
+    //     "aqiSize": 16,
+    //     "weatherIconSize": 24,
+    //     "alertIconSize": 18,
+    //     "padding": "10px 10px 10px 10px",
+    //     "shadow": "1",
+    //     "language": "auto",
+    //     "borderRadius": 5,
+    //     "fixed": "false",
+    //     "vertical": "middle",
+    //     "horizontal": "center",
+    //     "key": "608fecbe99a147ca822228026610905a"
+    //   }
+    // }
+  </script>
+  <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
+  </script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1601133289394')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+
+</html>
