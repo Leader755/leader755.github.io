@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2020-12-20T05:52:08.604Z</updated>
+  <updated>2021-01-10T15:02:22.049Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小程序开发知识必备-自定义组件</title>
+    <link href="https://www.leader755.com/leader755/31772.html"/>
+    <id>https://www.leader755.com/leader755/31772.html</id>
+    <published>2020-12-22T13:06:23.000Z</published>
+    <updated>2021-01-10T15:02:22.049Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-认识自定义组件的属性、数据、方法和生命周期。&quot;&gt;&lt;a href=&quot;#1-认识自定义组件的属性、数据、方法和生命周期。&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="微信小程序" scheme="https://www.leader755.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序自定义组件" scheme="https://www.leader755.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SSH配置</title>
+    <link href="https://www.leader755.com/leader755/20181.html"/>
+    <id>https://www.leader755.com/leader755/20181.html</id>
+    <published>2020-12-21T12:06:23.000Z</published>
+    <updated>2021-01-10T15:02:22.048Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一-配置单个-ssh&quot;&gt;&lt;a href=&quot;#一-配置单个-ssh&quot; class=&quot;headerlink&quot; title=&quot;一.配置单个 ssh&quot;&gt;&lt;/a&gt;一.配置单个 ssh&lt;/h2&gt;&lt;p&gt;单个 ssh key 是指一台 git 服务器只有一个 git
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ssh" scheme="https://www.leader755.com/categories/ssh/"/>
+    
+    
+      <category term="git" scheme="https://www.leader755.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>vue的修饰符!sync和el-dialog弹窗组件</title>
@@ -109,7 +163,7 @@
     <link href="https://www.leader755.com/leader755/56219.html"/>
     <id>https://www.leader755.com/leader755/56219.html</id>
     <published>2020-11-03T12:47:23.000Z</published>
-    <updated>2020-12-20T05:52:08.612Z</updated>
+    <updated>2021-01-05T15:22:03.454Z</updated>
     
     <summary type="html">
     
@@ -348,7 +402,7 @@
     <link href="https://www.leader755.com/leader755/59193.html"/>
     <id>https://www.leader755.com/leader755/59193.html</id>
     <published>2020-09-18T14:06:23.000Z</published>
-    <updated>2020-12-20T05:52:08.592Z</updated>
+    <updated>2021-01-10T15:02:22.049Z</updated>
     
     <summary type="html">
     
@@ -442,7 +496,7 @@
     <link href="https://www.leader755.com/leader755/46928.html"/>
     <id>https://www.leader755.com/leader755/46928.html</id>
     <published>2020-08-27T01:35:49.000Z</published>
-    <updated>2020-12-20T05:52:08.610Z</updated>
+    <updated>2021-01-05T15:22:03.454Z</updated>
     
     <summary type="html">
     
@@ -561,69 +615,6 @@
       <category term="scss" scheme="https://www.leader755.com/tags/scss/"/>
     
       <category term="stylus" scheme="https://www.leader755.com/tags/stylus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端面试（3）vue</title>
-    <link href="https://www.leader755.com/leader755/26383.html"/>
-    <id>https://www.leader755.com/leader755/26383.html</id>
-    <published>2020-08-20T12:33:45.000Z</published>
-    <updated>2020-12-20T05:52:08.606Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Vue&quot;&gt;&lt;a href=&quot;#Vue&quot; class=&quot;headerlink&quot; title=&quot;Vue:&quot;&gt;&lt;/a&gt;Vue:&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;vue 数据双向绑定原理；&lt;/li&gt;
-&lt;li&gt;vue computed 原理、watch 和 methods
-        
-      
-    
-    </summary>
-    
-    
-      <category term="面试" scheme="https://www.leader755.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="vue" scheme="https://www.leader755.com/tags/vue/"/>
-    
-      <category term="vuex" scheme="https://www.leader755.com/tags/vuex/"/>
-    
-      <category term="vue-router" scheme="https://www.leader755.com/tags/vue-router/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端面试（2）javascript</title>
-    <link href="https://www.leader755.com/leader755/11225.html"/>
-    <id>https://www.leader755.com/leader755/11225.html</id>
-    <published>2020-08-05T11:38:21.000Z</published>
-    <updated>2020-12-20T05:52:08.607Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;JavaScript：&quot;&gt;&lt;a href=&quot;#JavaScript：&quot; class=&quot;headerlink&quot; title=&quot;JavaScript：&quot;&gt;&lt;/a&gt;JavaScript：&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;原型、继承、原型链、this
-        
-      
-    
-    </summary>
-    
-    
-      <category term="面试" scheme="https://www.leader755.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="javascript" scheme="https://www.leader755.com/tags/javascript/"/>
-    
-      <category term="js" scheme="https://www.leader755.com/tags/js/"/>
     
   </entry>
   

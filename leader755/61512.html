@@ -35,11 +35,12 @@
   <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
   <link rel="stylesheet" type="text/css" href="/css/matery.css">
   <link rel="stylesheet" type="text/css" href="/css/my.css">
+  <meta name="google-site-verification" content="dUxZtBuXm550K6pq70-LL7yu7wQQHwvXpvMF8MwMQBU" />
 
   <script src="/libs/jquery/jquery.min.js"></script>
   <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
   <script src="/libs/jquery/jquery.min.js"></script>
-
+  <script data-ad-client="ca-pub-3737719102622478" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- 百度自动推送 -->
   <script>
     (function () {
@@ -518,7 +519,7 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2020-12-20
+          2021-01-05
         </div>
         
 
@@ -547,25 +548,31 @@
 
         <h1 id="style-总结："><a href="#style-总结：" class="headerlink" title=":style 总结："></a>:style 总结：</h1><p>写 inline style 的方法跟 class 大同小异，一样可以使用阵列及物件语法，但在给<strong>css 属性时要注意有些以**</strong><code>-</code>*<strong>*连结的词，要改为驼峰式写法，或者是使用单引号括起来</strong>。</p>
 <h2 id="一-对象语法"><a href="#一-对象语法" class="headerlink" title="一. 对象语法"></a>一. 对象语法</h2><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token comment" spellcheck="true">&lt;!--单个属性--></span>
+  　<span class="token comment" spellcheck="true">&lt;!--单个属性--></span>
+  　
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> activeColor<span class="token punctuation">}</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>color:{{activeColor}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  <span class="token comment" spellcheck="true">&lt;!--驼峰写法--></span>
+  　<span class="token comment" spellcheck="true">&lt;!--驼峰写法--></span>
+  　
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token punctuation">{</span><span class="token string">'text-align'</span><span class="token punctuation">:</span>textAlign,<span class="token property">fontSize</span><span class="token punctuation">:</span> fontSize + <span class="token string">'px'</span><span class="token punctuation">}</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     text-align:{{textAlign}},fontSize:{{fontSize}}px
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  <span class="token comment" spellcheck="true">&lt;!--一个对象--></span>
+  　<span class="token comment" spellcheck="true">&lt;!--一个对象--></span>
+  　
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value">styleObject</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{styleObject}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <h2 id="二-数组语法"><a href="#二-数组语法" class="headerlink" title="二. 数组语法"></a>二. 数组语法</h2><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token comment" spellcheck="true">&lt;!--整个数组--></span>
+  　<span class="token comment" spellcheck="true">&lt;!--整个数组--></span>
+  　
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value">[baseStyles, overridingStyles]</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     {{[baseStyles, overridingStyles]}}
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  <span class="token comment" spellcheck="true">&lt;!--数组+三元表达式--></span>
+  　<span class="token comment" spellcheck="true">&lt;!--数组+三元表达式--></span>
+  　
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token selector">[</span><span class="token punctuation">{</span><span class="token property">backgroundColor</span><span class="token punctuation">:</span>isActive ? <span class="token string">'#f00'</span> <span class="token punctuation">:</span> <span class="token string">'#00f'</span><span class="token punctuation">}</span>,baseStyles]</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     如果isActive==true,背景红色
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  <span class="token comment" spellcheck="true">&lt;!--对象+数组--></span>
+  　<span class="token comment" spellcheck="true">&lt;!--对象+数组--></span>
+  　
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token selector">[</span><span class="token punctuation">{</span> <span class="token property">baseStyles</span><span class="token punctuation">:</span> Active <span class="token punctuation">}</span>, overridingStyles]</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     {{[{ baseStyles: Active }, overridingStyles]}}
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -1401,7 +1408,7 @@ data<span class="token punctuation">:</span> <span class="token punctuation">{</
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">83.2k</span>&nbsp;字
+        class="white-color">87.4k</span>&nbsp;字
       
       
       
