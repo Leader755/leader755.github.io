@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2021-01-10T15:02:22.049Z</updated>
+  <updated>2021-01-14T00:14:52.485Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>谈谈你不知道的gist</title>
+    <link href="https://www.leader755.com/leader755/1491.html"/>
+    <id>https://www.leader755.com/leader755/1491.html</id>
+    <published>2021-01-04T13:38:23.000Z</published>
+    <updated>2021-01-14T00:14:52.485Z</updated>
+    
+    <summary type="html">
+    
+      Gist 是一种与其他人共享代码片段和粘贴的简单方法。 当您需要与同事或朋友共享示例代码或技术时，可以使用它。
+    
+    </summary>
+    
+    
+      <category term="share code" scheme="https://www.leader755.com/categories/share-code/"/>
+    
+    
+      <category term="gist" scheme="https://www.leader755.com/tags/gist/"/>
+    
+  </entry>
+  
+  <entry>
     <title>小程序开发知识必备-自定义组件</title>
     <link href="https://www.leader755.com/leader755/31772.html"/>
     <id>https://www.leader755.com/leader755/31772.html</id>
     <published>2020-12-22T13:06:23.000Z</published>
-    <updated>2021-01-10T15:02:22.049Z</updated>
+    <updated>2021-01-14T00:14:52.628Z</updated>
     
     <summary type="html">
     
@@ -48,7 +69,7 @@
     <link href="https://www.leader755.com/leader755/20181.html"/>
     <id>https://www.leader755.com/leader755/20181.html</id>
     <published>2020-12-21T12:06:23.000Z</published>
-    <updated>2021-01-10T15:02:22.048Z</updated>
+    <updated>2021-01-14T00:14:52.679Z</updated>
     
     <summary type="html">
     
@@ -75,7 +96,7 @@
     <link href="https://www.leader755.com/leader755/18719.html"/>
     <id>https://www.leader755.com/leader755/18719.html</id>
     <published>2020-11-29T12:47:23.000Z</published>
-    <updated>2020-12-20T05:52:08.604Z</updated>
+    <updated>2021-01-14T00:14:52.882Z</updated>
     
     <summary type="html">
     
@@ -105,7 +126,7 @@
     <link href="https://www.leader755.com/leader755/18298.html"/>
     <id>https://www.leader755.com/leader755/18298.html</id>
     <published>2020-11-19T12:06:23.000Z</published>
-    <updated>2020-12-20T05:52:08.604Z</updated>
+    <updated>2021-01-14T00:14:52.819Z</updated>
     
     <summary type="html">
     
@@ -134,7 +155,7 @@
     <link href="https://www.leader755.com/leader755/63393.html"/>
     <id>https://www.leader755.com/leader755/63393.html</id>
     <published>2020-11-10T14:06:23.000Z</published>
-    <updated>2020-12-20T05:52:08.603Z</updated>
+    <updated>2021-01-14T00:14:52.930Z</updated>
     
     <summary type="html">
     
@@ -163,7 +184,7 @@
     <link href="https://www.leader755.com/leader755/56219.html"/>
     <id>https://www.leader755.com/leader755/56219.html</id>
     <published>2020-11-03T12:47:23.000Z</published>
-    <updated>2021-01-05T15:22:03.454Z</updated>
+    <updated>2021-01-14T00:14:52.892Z</updated>
     
     <summary type="html">
     
@@ -193,7 +214,7 @@
     <link href="https://www.leader755.com/leader755/6934.html"/>
     <id>https://www.leader755.com/leader755/6934.html</id>
     <published>2020-11-03T12:06:23.000Z</published>
-    <updated>2020-12-20T05:52:08.603Z</updated>
+    <updated>2021-01-14T00:14:52.896Z</updated>
     
     <summary type="html">
     
@@ -222,7 +243,7 @@
     <link href="https://www.leader755.com/leader755/33767.html"/>
     <id>https://www.leader755.com/leader755/33767.html</id>
     <published>2020-10-26T14:34:23.000Z</published>
-    <updated>2020-12-20T05:52:08.599Z</updated>
+    <updated>2021-01-14T00:14:52.950Z</updated>
     
     <summary type="html">
     
@@ -249,7 +270,7 @@
     <link href="https://www.leader755.com/leader755/58433.html"/>
     <id>https://www.leader755.com/leader755/58433.html</id>
     <published>2020-10-04T16:50:10.000Z</published>
-    <updated>2020-12-20T05:52:08.599Z</updated>
+    <updated>2021-01-14T00:14:53.202Z</updated>
     
     <summary type="html">
     
@@ -283,7 +304,7 @@
     <link href="https://www.leader755.com/leader755/37600.html"/>
     <id>https://www.leader755.com/leader755/37600.html</id>
     <published>2020-10-04T16:42:45.000Z</published>
-    <updated>2020-12-20T05:52:08.594Z</updated>
+    <updated>2021-01-14T00:14:53.217Z</updated>
     
     <summary type="html">
     
@@ -313,7 +334,7 @@
     <link href="https://www.leader755.com/leader755/25342.html"/>
     <id>https://www.leader755.com/leader755/25342.html</id>
     <published>2020-10-04T14:34:23.000Z</published>
-    <updated>2020-12-20T05:52:08.597Z</updated>
+    <updated>2021-01-14T00:14:53.225Z</updated>
     
     <summary type="html">
     
@@ -343,7 +364,7 @@
     <link href="https://www.leader755.com/leader755/44714.html"/>
     <id>https://www.leader755.com/leader755/44714.html</id>
     <published>2020-09-28T16:34:23.000Z</published>
-    <updated>2020-12-20T05:52:08.598Z</updated>
+    <updated>2021-01-14T00:14:53.265Z</updated>
     
     <summary type="html">
     
@@ -375,7 +396,7 @@
     <link href="https://www.leader755.com/leader755/11638.html"/>
     <id>https://www.leader755.com/leader755/11638.html</id>
     <published>2020-09-27T15:06:23.000Z</published>
-    <updated>2020-12-20T05:52:08.591Z</updated>
+    <updated>2021-01-14T00:14:53.335Z</updated>
     
     <summary type="html">
     
@@ -402,7 +423,7 @@
     <link href="https://www.leader755.com/leader755/59193.html"/>
     <id>https://www.leader755.com/leader755/59193.html</id>
     <published>2020-09-18T14:06:23.000Z</published>
-    <updated>2021-01-10T15:02:22.049Z</updated>
+    <updated>2021-01-14T00:14:53.247Z</updated>
     
     <summary type="html">
     
@@ -435,7 +456,7 @@
     <link href="https://www.leader755.com/leader755/835.html"/>
     <id>https://www.leader755.com/leader755/835.html</id>
     <published>2020-09-12T13:59:49.000Z</published>
-    <updated>2020-12-20T05:52:08.601Z</updated>
+    <updated>2021-01-14T00:14:53.373Z</updated>
     
     <summary type="html">
     
@@ -467,7 +488,7 @@
     <link href="https://www.leader755.com/leader755/36022.html"/>
     <id>https://www.leader755.com/leader755/36022.html</id>
     <published>2020-09-08T15:39:33.000Z</published>
-    <updated>2020-12-20T05:52:08.605Z</updated>
+    <updated>2021-01-14T00:14:53.394Z</updated>
     
     <summary type="html">
     
@@ -496,7 +517,7 @@
     <link href="https://www.leader755.com/leader755/46928.html"/>
     <id>https://www.leader755.com/leader755/46928.html</id>
     <published>2020-08-27T01:35:49.000Z</published>
-    <updated>2021-01-05T15:22:03.454Z</updated>
+    <updated>2021-01-14T00:14:53.476Z</updated>
     
     <summary type="html">
     
@@ -525,7 +546,7 @@
     <link href="https://www.leader755.com/leader755/46994.html"/>
     <id>https://www.leader755.com/leader755/46994.html</id>
     <published>2020-08-24T14:34:49.000Z</published>
-    <updated>2020-12-20T05:52:08.609Z</updated>
+    <updated>2021-01-14T00:14:53.561Z</updated>
     
     <summary type="html">
     
@@ -555,7 +576,7 @@
     <link href="https://www.leader755.com/leader755/5102.html"/>
     <id>https://www.leader755.com/leader755/5102.html</id>
     <published>2020-08-23T14:34:49.000Z</published>
-    <updated>2020-12-20T05:52:08.608Z</updated>
+    <updated>2021-01-14T00:14:53.779Z</updated>
     
     <summary type="html">
     
@@ -580,41 +601,6 @@
       <category term="tcp" scheme="https://www.leader755.com/tags/tcp/"/>
     
       <category term="浏览器渲染" scheme="https://www.leader755.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端面试（4）less，sass，stylus</title>
-    <link href="https://www.leader755.com/leader755/60928.html"/>
-    <id>https://www.leader755.com/leader755/60928.html</id>
-    <published>2020-08-22T11:31:41.000Z</published>
-    <updated>2020-08-20T04:43:21.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;###&lt;/p&gt;
-&lt;p&gt;##&lt;/p&gt;
-&lt;h2 id=&quot;预编译：less，sass，stylus&quot;&gt;&lt;a href=&quot;#预编译：less，sass，stylus&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="面试" scheme="https://www.leader755.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="less" scheme="https://www.leader755.com/tags/less/"/>
-    
-      <category term="sass" scheme="https://www.leader755.com/tags/sass/"/>
-    
-      <category term="scss" scheme="https://www.leader755.com/tags/scss/"/>
-    
-      <category term="stylus" scheme="https://www.leader755.com/tags/stylus/"/>
     
   </entry>
   

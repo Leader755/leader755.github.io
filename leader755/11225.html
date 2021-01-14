@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="前端面试（2）javascript, 个人博客，leader755">
+  <meta name="keywords" content="前端面试（2）javascript, 个人博客，leader755，blogs，博客">
   <meta name="description" content="JavaScript：
 原型、继承、原型链、this 指向、设计模式、call, apply, bind,；
 new 实现、防抖节流、let, var, const 区别、暂时性死区、event、loop；
@@ -17,6 +17,7 @@ promise 使用及实现、pr">
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google-site-verification" content="dUxZtBuXm550K6pq70-LL7yu7wQQHwvXpvMF8MwMQBU" />
   <title>前端面试（2）javascript | leader755 Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
@@ -37,14 +38,13 @@ promise 使用及实现、pr">
   <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
   <link rel="stylesheet" type="text/css" href="/css/matery.css">
   <link rel="stylesheet" type="text/css" href="/css/my.css">
-  <meta name="google-site-verification" content="dUxZtBuXm550K6pq70-LL7yu7wQQHwvXpvMF8MwMQBU" />
 
   <script src="/libs/jquery/jquery.min.js"></script>
   <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
   <script src="/libs/jquery/jquery.min.js"></script>
   <script data-ad-client="ca-pub-3737719102622478" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- 百度自动推送 -->
-  <script>
+  <script async>
     (function () {
       var bp = document.createElement('script');
       var curProtocol = window.location.protocol.split(':')[0];
@@ -521,7 +521,7 @@ promise 使用及实现、pr">
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2021-01-05
+          2021-01-14
         </div>
         
 
@@ -1075,19 +1075,17 @@ ws<span class="token punctuation">.</span>onclose <span class="token operator">=
   <span class="token comment" spellcheck="true">// 连接关闭时触发</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <h4 id="postMessage"><a href="#postMessage" class="headerlink" title="postMessage"></a>postMessage</h4><ul>
-<li><p><strong>原理</strong>：HTML5 XMLHttpRequest Level 2 中的 API，且是为数不多可以跨域操作的 window 属性之。postMessage()方法允许来自不同源的脚本采用异步方式进行有限的通信，可以实现跨文本档、多窗口、跨域消息传递。</p>
-</li>
-<li><p>限制：对于目标域限制不严格导致的，<em>*大多数开发人员由于对于 postmessage 防范中 targetOrigin 参数默认为\</em> **，因此只要包含了该方法页面，构造利用代码，就能够获取到敏感信息。</p>
-</li>
-<li><p>使用场景：</p>
-<ul>
+<li><strong>原理</strong>：HTML5 XMLHttpRequest Level 2 中的 API，且是为数不多可以跨域操作的 window 属性之。postMessage()方法允许来自不同源的脚本采用异步方式进行有限的通信，可以实现跨文本档、多窗口、跨域消息传递。</li>
+<li>限制：对于目标域限制不严格导致的，<em>*大多数开发人员由于对于 postmessage 防范中 targetOrigin 参数默认为\</em> **，因此只要包含了该方法页面，构造利用代码，就能够获取到敏感信息。</li>
+<li>使用场景：<ul>
 <li>页面和其打开的新窗口的数据传递</li>
 <li>多窗口之间消息传递</li>
 <li>页面与嵌套的 iframe 消息传递</li>
 </ul>
 </li>
-<li><p>使用：</p>
-</li>
+</ul>
+<ul>
+<li>使用：</li>
 </ul>
 <p>a、localhost:3000 发送消息</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
@@ -1288,8 +1286,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <span class="token comment" spellcheck="true">//必须要有初始值</span>
 <span class="token keyword">const</span> PI<span class="token punctuation">;</span>
-PI <span class="token operator">=</span> <span class="token number">3.1415</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>PI<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Uncaught SyntaxError: Missing initializer in const declaration</span></code></pre>
+PI<span class="token operator">=</span><span class="token number">3.1415</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>PI<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//Uncaught SyntaxError: Missing initializer in const declaration</span>
+</code></pre>
 <ul>
 <li>作用域</li>
 </ul>
@@ -2704,7 +2703,7 @@ $(function () {
     //   }
     // }
   </script>
-  <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
+  <script async src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.4"></script>
   </script>
 </body>
 
