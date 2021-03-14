@@ -57,8 +57,9 @@ promise 使用及实现、pr">
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-   <!--pjax：防止跳转页面音乐暂停-->
-  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+  <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
+
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="leader755 Blogs" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
@@ -520,7 +521,7 @@ promise 使用及实现、pr">
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2021-02-10
+          2021-03-14
         </div>
         
 
@@ -1074,17 +1075,19 @@ ws<span class="token punctuation">.</span>onclose <span class="token operator">=
   <span class="token comment" spellcheck="true">// 连接关闭时触发</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <h4 id="postMessage"><a href="#postMessage" class="headerlink" title="postMessage"></a>postMessage</h4><ul>
-<li><strong>原理</strong>：HTML5 XMLHttpRequest Level 2 中的 API，且是为数不多可以跨域操作的 window 属性之。postMessage()方法允许来自不同源的脚本采用异步方式进行有限的通信，可以实现跨文本档、多窗口、跨域消息传递。</li>
-<li>限制：对于目标域限制不严格导致的，<em>*大多数开发人员由于对于 postmessage 防范中 targetOrigin 参数默认为\</em> **，因此只要包含了该方法页面，构造利用代码，就能够获取到敏感信息。</li>
-<li>使用场景：<ul>
+<li><p><strong>原理</strong>：HTML5 XMLHttpRequest Level 2 中的 API，且是为数不多可以跨域操作的 window 属性之。postMessage()方法允许来自不同源的脚本采用异步方式进行有限的通信，可以实现跨文本档、多窗口、跨域消息传递。</p>
+</li>
+<li><p>限制：对于目标域限制不严格导致的，<em>*大多数开发人员由于对于 postmessage 防范中 targetOrigin 参数默认为\</em> **，因此只要包含了该方法页面，构造利用代码，就能够获取到敏感信息。</p>
+</li>
+<li><p>使用场景：</p>
+<ul>
 <li>页面和其打开的新窗口的数据传递</li>
 <li>多窗口之间消息传递</li>
 <li>页面与嵌套的 iframe 消息传递</li>
 </ul>
 </li>
-</ul>
-<ul>
-<li>使用：</li>
+<li><p>使用：</p>
+</li>
 </ul>
 <p>a、localhost:3000 发送消息</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
@@ -1285,9 +1288,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <span class="token comment" spellcheck="true">//必须要有初始值</span>
 <span class="token keyword">const</span> PI<span class="token punctuation">;</span>
-PI<span class="token operator">=</span><span class="token number">3.1415</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>PI<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//Uncaught SyntaxError: Missing initializer in const declaration</span>
-</code></pre>
+PI <span class="token operator">=</span> <span class="token number">3.1415</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>PI<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Uncaught SyntaxError: Missing initializer in const declaration</span></code></pre>
 <ul>
 <li>作用域</li>
 </ul>
@@ -2111,7 +2113,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
-        <span style="font-size: 16px;color: #ccc;">（留下邮箱后可以快速收到回复）</span>
     </div>
     <div id="vcomments" class="card-content" style="display: grid">
     </div>
@@ -2405,7 +2406,7 @@ vue dom diff、vu
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">90k</span>&nbsp;字
+        class="white-color">91.4k</span>&nbsp;字
       
       
       
@@ -2680,73 +2681,30 @@ $(function () {
         "key": "2ccd90212a1d41dea248662765a0fb9c"
       }
     }
+    // WIDGET = {
+    //   CONFIG: {
+    //     "modules": "1234",
+    //     "background": 1,
+    //     "tmpColor": "FFFFFF",
+    //     "tmpSize": 16,
+    //     "cityColor": "FFFFFF",
+    //     "citySize": 16,
+    //     "aqiSize": 16,
+    //     "weatherIconSize": 24,
+    //     "alertIconSize": 18,
+    //     "padding": "10px 10px 10px 10px",
+    //     "shadow": "1",
+    //     "language": "auto",
+    //     "borderRadius": 5,
+    //     "fixed": "false",
+    //     "vertical": "middle",
+    //     "horizontal": "center",
+    //     "key": "608fecbe99a147ca822228026610905a"
+    //   }
+    // }
   </script>
   <script async src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.4"></script>
   </script>
-  <!--音乐-->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>  -->
-  <!-- <div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="3025663508" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div> -->
-  <!-- require APlayer -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-<div style="opacity:0.7">
-    <meting-js
-        server="netease"
-        type="playlist"
-        id="3025663508"
-        fixed="true"
-        volume="0.3"
-        order="random"
-        >
-    </meting-js>
-</div>
-
-<script>
-    ap = null
-    Object.defineProperty(document.querySelector('meting-js'),"aplayer",{
-        set: function(aplayer) {
-            ap=aplayer
-            ready();
-        }
-    });
-    
-    isRecover = false;
-    function ready(){
-        ap.on('canplay', function () {
-            if(!isRecover){
-                if(localStorage.getItem("musicIndex") != null){
-                    musicIndex = localStorage.getItem("musicIndex");
-                    musicTime = localStorage.getItem("musicTime");
-                    if(ap.list.index != musicIndex){
-                        ap.list.switch(musicIndex);
-                    }else{
-                        ap.seek(musicTime);
-                        ap.play();
-                        localStorage.clear();
-                        isRecover = true;
-                    }
-                }else{
-                    isRecover = true;
-                }
-            }
-        });
-    }
-
-    window.onbeforeunload = function(event) {
-        if(!ap.audio.paused){
-            musicIndex = ap.list.index;
-            musicTime = ap.audio.currentTime;
-            localStorage.setItem("musicIndex",musicIndex);
-            localStorage.setItem("musicTime",musicTime);
-        }
-    };
-</script>
-
 </body>
 
 </html>
