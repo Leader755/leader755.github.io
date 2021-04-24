@@ -1,0 +1,2547 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="hexo的next主题个性化教程, 个人博客，leader755，blogs，博客">
+  <meta name="description" content="
+看到有些 next 主题的网站很炫酷，那么是怎么配置的呢？接下来我会讲一讲如何实现一些炫酷的效果
+
+主要有以下 32 种：
+
+在右上角或者左上角实现 fork me on github
+添加 RSS
+添加动态背景
+实现点击出现桃心效果
+修">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+  <!-- <meta name="referrer" content="no-referrer" /> -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google-site-verification" content="dUxZtBuXm550K6pq70-LL7yu7wQQHwvXpvMF8MwMQBU" />
+  <title>hexo的next主题个性化教程 | leader755 Blogs</title>
+  <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+
+
+  <!-- <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+  <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/matery.css">
+  <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+  <script src="/libs/jquery/jquery.min.js"></script>
+  <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
+  <script src="/libs/jquery/jquery.min.js"></script>
+  <script data-ad-client="ca-pub-3737719102622478" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 百度自动推送 -->
+  <script async>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+  <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="leader755 Blogs" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body>
+  <header class="navbar-fixed">
+  <nav id="headNav" class="bg-color nav-transparent">
+    <div id="navContainer" class="nav-wrapper container">
+      <!-- <div id="navContainer" class="nav-wrapper head-container"> -->
+      <div class="brand-logo">
+        <a href="/" class="waves-effect waves-light">
+          
+          <!-- <img src="/medias/logo.png" class="logo-img" alt="LOGO"> -->
+          <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+          
+          <span class="logo-span big-show">leader755 Blogs</span>
+        </a>
+      </div>
+      
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/articles/" class="waves-effect waves-light">
+
+      
+      <i class="fa fa-bars" style="zoom: 0.6;"></i>
+      
+      <span>文章</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives/" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/archives/">
+          
+          <i class="fa fa-tasks" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>简约风</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/timeline/">
+          
+          <i class="fa fa-ellipsis-v" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>时间轴</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/data/" class="waves-effect waves-light">
+      
+      <i class="fa fa-list-alt" style="zoom: 0.6;"></i>
+      
+      <span>统计</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends/" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友链</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about/" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <!-- <img src="/medias/logo.png" class="logo-img circle responsive-img"> -->
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">leader755 Blogs</div>
+        <div class="logo-desc">
+            
+            leader755 个人Blogs
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fa fa-bars"></i>
+			
+			文章
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/categories/ " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/tags/ " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-archive"></i>
+			
+			归档
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/archives/ " style="margin-left:75px";>
+				  
+				   <i class="fa fa fa-tasks" style="position: absolute;left:50px" ></i>
+			      
+		          <span>简约风</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/timeline/ " style="margin-left:75px";>
+				  
+				   <i class="fa fa fa-ellipsis-v" style="position: absolute;left:50px" ></i>
+			      
+		          <span>时间轴</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/data/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa fa-list-alt"></i>
+			
+			统计
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友链
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+  </nav>
+</header>
+  
+<!-- <script src="/libs/cryptojs/crypto-js.min.js"></script> -->
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/11.jpg')">
+  <div class="container" style="right: 0px;left: 0px;">
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="brand">
+          <h1 class="description center-align post-title">hexo的next主题个性化教程</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <!-- <link rel="stylesheet" href="/libs/tocbot/tocbot.css"> -->
+<link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 110px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+
+  <div class="card">
+
+    <div class="card-content article-info">
+      <div class="row tag-cate">
+        <div class="col s7">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/hexo-%E4%B8%BB%E9%A2%98/">
+              <span class="chip bg-color">hexo 主题</span>
+            </a>
+            
+            <a href="/tags/%E6%95%99%E7%A8%8B/">
+              <span class="chip bg-color">教程</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/hexo/" class="post-category">
+              hexo
+            </a>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="post-info">
+        
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+          2020-10-05
+        </div>
+        
+
+        
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+          2020-10-05
+        </div>
+        
+
+        
+        <div class="info-break-policy">
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+          6.6k
+        </div>
+        
+
+        
+        <div class="info-break-policy">
+          <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+          31 分
+        </div>
+        
+
+        
+      </div>
+
+    </div>
+    <hr class="clearfix">
+    <div class="card-content article-card-content">
+      <!-- <meta name="referrer" content="never" /> -->
+      <div id="articleContent">
+
+        <blockquote>
+<p>看到有些 next 主题的网站很炫酷，那么是怎么配置的呢？接下来我会讲一讲如何实现一些炫酷的效果</p>
+</blockquote>
+<p>主要有以下 32 种：</p>
+<ul>
+<li>在右上角或者左上角实现 fork me on github</li>
+<li>添加 RSS</li>
+<li>添加动态背景</li>
+<li>实现点击出现桃心效果</li>
+<li>修改文章内链接文本样式</li>
+<li>修改文章底部的那个带 #号的标签</li>
+<li>在每篇文章末尾统一添加 “本文结束” 标记</li>
+<li>修改作者头像并旋转</li>
+<li>博文压缩</li>
+<li>修改 `` 代码块自定义样式</li>
+<li>侧边栏社交小图标设置</li>
+<li>主页文章添加阴影效果</li>
+<li>在网站底部加上访问量</li>
+<li>添加热度</li>
+<li>网站底部字数统计</li>
+<li>添加 README.md 文件</li>
+<li>设置网站的图标 Favicon</li>
+<li>实现统计功能</li>
+<li>添加顶部加载条</li>
+<li>在文章底部增加版权信息</li>
+<li>添加网易云跟帖 (跟帖关闭，已失效，改为来必力)</li>
+<li>隐藏网页底部 powered By Hexo / 强力驱动</li>
+<li>修改网页底部的桃心</li>
+<li>文章加密访问</li>
+<li>添加 jiathis 分享</li>
+<li>博文置顶</li>
+<li>修改字体大小</li>
+<li>修改打赏字体不闪动</li>
+<li>自定义鼠标样式</li>
+<li>为博客加上萌萌的宠物</li>
+<li>DaoVoice 在线联系</li>
+<li>点击爆炸效果</li>
+</ul>
+<h3 id="实现效果图"><a href="#实现效果图" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNzFjZjYxNDM2ZmUyZWYyNy5wbmc?x-oss-process=image/format,png#height=284&id=LcPtS&originHeight=284&originWidth=2528&originalType=binary&status=done&style=none&width=2528" alt=""></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNzMzNDU3ZWNkM2ZiZTI4OS5wbmc?x-oss-process=image/format,png#height=196&id=EWG0i&originHeight=196&originWidth=2530&originalType=binary&status=done&style=none&width=2530" alt=""></p>
+<h3 id="具体实现方法"><a href="#具体实现方法" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>点击<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="noopener">这里</a> 或者 <a href="http://tholman.com/github-corners/" target="_blank" rel="noopener">这里</a>挑选自己喜欢的样式，并复制代码。 例如，我是复制如下代码：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtOTZiMjJlYWNiZTQzODM4Yy5wbmc?x-oss-process=image/format,png#height=438&id=eutUn&originHeight=438&originWidth=1232&originalType=binary&status=done&style=none&width=1232" alt=""></p>
+<p>然后粘贴刚才复制的代码到<code>themes/next/layout/_layout.swig</code>文件中 (放在<code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</code>的下面)，并把<code>href</code>改为你的 github 地址<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZDI2MDFhZDQ1NmRiMDY0Yi5wbmc?x-oss-process=image/format,png#height=748&id=F67MS&originHeight=748&originWidth=1064&originalType=binary&status=done&style=none&width=1064" alt=""></p>
+<hr>
+<h3 id="实现效果图-1"><a href="#实现效果图-1" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtYTU0ZGFhZTkzNzEwNzU1MC5wbmc?x-oss-process=image/format,png#height=116&id=ep45m&originHeight=116&originWidth=456&originalType=binary&status=done&style=none&width=456" alt=""></p>
+<h3 id="具体实现方法-1"><a href="#具体实现方法-1" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>切换到你的 blog（我是取名 blog，具体的看你们的取名是什么）的路径，例如我是在<code>/Users/chenzekun/Code/Hexo/blog</code>这个路径上，也就是在你的根目录下<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZTgzNTZlMWNhMDVmMjNhMy5wbmc?x-oss-process=image/format,png#height=448&id=rVA1Y&originHeight=448&originWidth=880&originalType=binary&status=done&style=none&width=880" alt=""></p>
+<p>然后安装 Hexo 插件：(这个插件会放在<code>node_modules</code>这个文件夹里)</p>
+<pre><code>$ npm install --save hexo-generator-feed</code></pre><p>接下来打开画红线的文件，如下图：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNTVmMDM0ZTc0OWFhOGU2Yy5wbmc?x-oss-process=image/format,png#height=320&id=UgKdE&originHeight=320&originWidth=786&originalType=binary&status=done&style=none&width=786" alt=""></p>
+<p>在里面的末尾添加：(<strong>请注意</strong>在冒号后面要加一个空格，不然会发生错误！)</p>
+<pre><code># Extensions
+## Plugins: http://hexo.io/plugins/
+plugins: hexo-generate-feed</code></pre><p>然后打开 next 主题文件夹里面的<code>_config.yml</code>, 在里面配置为如下样子：(就是在<code>rss:</code>的后面加上<code>/atom.xml</code>,<strong>注意</strong>在冒号后面要加一个空格)</p>
+<pre><code># Set rss to false to disable feed link.
+# Leave rss as empty to use site&#39;s feed link.
+# Set rss to specific value if you have burned your feed already.
+rss: /atom.xml</code></pre><p>配置完之后运行：</p>
+<pre><code>$ hexo g</code></pre><p>重新生成一次，你会在<code>./public</code> 文件夹中看到 <code>atom.xml</code> 文件。然后启动服务器查看是否有效，之后再部署到 Github 中。</p>
+<hr>
+<h3 id="实现效果图-2"><a href="#实现效果图-2" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZWY2MDM1ODBiZTcwODg4Mi5naWY#height=185&id=NNdBp&originHeight=185&originWidth=466&originalType=binary&status=done&style=none&width=466" alt=""></p>
+<h3 id="具体实现方法-2"><a href="#具体实现方法-2" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>这个我之前有一篇文章有讲过了，详情点击<a href="http://shenzekun.cn/hexo%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF.html" target="_blank" rel="noopener">我的博客</a></p>
+<hr>
+<h3 id="实现效果图-3"><a href="#实现效果图-3" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNzhlNjRjMGE4MGJiNTU5ZS5naWY#height=114&id=xwZ7E&originHeight=114&originWidth=66&originalType=binary&status=done&style=none&width=66" alt=""></p>
+<h3 id="具体实现方法-3"><a href="#具体实现方法-3" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>在网址输入如下</p>
+<pre><code>http://7u2ss1.com1.z0.glb.clouddn.com/love.js</code></pre><p>然后将里面的代码 copy 一下，新建<code>love.js</code>文件并且将代码复制进去，然后保存。将<code>love.js</code>文件放到路径<code>/themes/next/source/js/src</code>里面，然后打开<code>\themes\next\layout\_layout.swig</code>文件, 在末尾（在前面引用会出现找不到的 bug）添加以下代码：</p>
+<pre><code>&lt;!-- 页面点击小红心 --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&gt;&lt;/script&gt;</code></pre><hr>
+<h3 id="实现效果图-4"><a href="#实现效果图-4" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtOGNjNGZjMThjMzk5YWY3ZS5naWY#height=61&id=mULf5&originHeight=61&originWidth=318&originalType=binary&status=done&style=none&width=318" alt=""></p>
+<h3 id="具体实现方法-4"><a href="#具体实现方法-4" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>修改文件 <code>themes\next\source\css\_common\components\post\post.styl</code>，在末尾添加如下 css 样式，：</p>
+<pre><code>// 文章内链接文本样式
+.post-body p a{
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+  &amp;:hover {
+    color: #fc6423;
+    border-bottom: none;
+    border-bottom: 1px solid #fc6423;
+  }
+}</code></pre><p>其中选择<code>.post-body</code> 是为了不影响标题，选择 <code>p</code> 是为了不影响首页 “阅读全文” 的显示样式, 颜色可以自己定义。</p>
+<hr>
+<h3 id="实现效果图-5"><a href="#实现效果图-5" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtOWYxODE3ZDJkNzYyN2Y3YS5wbmc?x-oss-process=image/format,png#height=64&id=HUa1x&originHeight=64&originWidth=94&originalType=binary&status=done&style=none&width=94" alt=""></p>
+<h3 id="具体实现方法-5"><a href="#具体实现方法-5" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>修改模板<code>/themes/next/layout/_macro/post.swig</code>，搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 # 换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
+<hr>
+<h3 id="实现效果图-6"><a href="#实现效果图-6" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtOTBiZTczYWNiYzVmOGE3YS5wbmc?x-oss-process=image/format,png#height=78&id=U0duM&originHeight=78&originWidth=694&originalType=binary&status=done&style=none&width=694" alt=""></p>
+<h3 id="具体实现方法-6"><a href="#具体实现方法-6" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>在路径 <code>\themes\next\layout\_macro</code> 中新建 <code>passage-end-tag.swig</code> 文件, 并添加以下内容：</p>
+<pre><code>&lt;div&gt;
+    {% if not is_index %}
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    {% endif %}
+&lt;/div&gt;</code></pre><p>接着打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code> 之后， <code>post-footer</code> 之前添加如下画红色部分代码（post-footer 之前两个 DIV）：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtODY1YzdmOTRmODliOTA3ZS5wbmc?x-oss-process=image/format,png#height=904&id=So4nw&originHeight=904&originWidth=1012&originalType=binary&status=done&style=none&width=1012" alt=""></p>
+<p>代码如下：</p>
+<pre><code>&lt;div&gt;
+  {% if not is_index %}
+    {% include 'passage-end-tag.swig' %}
+  {% endif %}
+&lt;/div&gt;</code></pre><p>然后打开主题配置文件（<code>_config.yml</code>), 在末尾添加：</p>
+<pre><code># 文章末尾添加“本文结束”标记
+passage_end_tag:
+  enabled: true</code></pre><p>完成以上设置之后，在每篇文章之后都会添加如上效果图的样子。</p>
+<hr>
+<h3 id="实现效果图："><a href="#实现效果图：" class="headerlink" title="实现效果图："></a>实现效果图：</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZTAzNWNlOGFjOGVhMGI1Yi5naWY#height=122&id=Rgv9t&originHeight=122&originWidth=138&originalType=binary&status=done&style=none&width=138" alt=""></p>
+<h3 id="具体实现方法-7"><a href="#具体实现方法-7" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>打开<code>\themes\next\source\css\_common\components\sidebar\sidebar-author.styl</code>，在里面添加如下代码：</p>
+<pre><code>.site-author-image {
+  display: block;
+  margin: 0 auto;
+  padding: $site-author-image-padding;
+  max-width: $site-author-image-width;
+  height: $site-author-image-height;
+  border: $site-author-image-border-width solid $site-author-image-border-color;
+
+  /* 头像圆形 */
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  box-shadow: inset 0 -1px 0 #333sf;
+
+  /* 设置循环动画 [animation: (play)动画名称 (2s)动画播放时长单位秒或微秒 (ase-out)动画播放的速度曲线为以低速结束
+    (1s)等待1秒然后开始动画 (1)动画播放次数(infinite为循环播放) ]*/
+
+
+  /* 鼠标经过头像旋转360度 */
+  -webkit-transition: -webkit-transform 1.0s ease-out;
+  -moz-transition: -moz-transform 1.0s ease-out;
+  transition: transform 1.0s ease-out;
+}
+
+img:hover {
+  /* 鼠标经过停止头像旋转
+  -webkit-animation-play-state:paused;
+  animation-play-state:paused;*/
+
+  /* 鼠标经过头像旋转360度 */
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+}
+
+/* Z 轴旋转动画 */
+@-webkit-keyframes play {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+  }
+}
+@-moz-keyframes play {
+  0% {
+    -moz-transform: rotateZ(0deg);
+  }
+  100% {
+    -moz-transform: rotateZ(-360deg);
+  }
+}
+@keyframes play {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}</code></pre><hr>
+<p>在站点的根目录下执行以下命令：</p>
+<pre><code>$ npm install gulp -g
+$ npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp-htmlclean gulp --save</code></pre><p>在如下图所示，新建 <code>gulpfile.js</code> ，并填入以下内容：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtYmI5NTljM2ZiNjEwZTY5Yy5wbmc?x-oss-process=image/format,png#height=466&id=G1sGP&originHeight=466&originWidth=844&originalType=binary&status=done&style=none&width=844" alt=""></p>
+<pre><code>var gulp = require(&#39;gulp&#39;);
+var minifycss = require(&#39;gulp-minify-css&#39;);
+var uglify = require(&#39;gulp-uglify&#39;);
+var htmlmin = require(&#39;gulp-htmlmin&#39;);
+var htmlclean = require(&#39;gulp-htmlclean&#39;);
+// 压缩 public 目录 css
+gulp.task(&#39;minify-css&#39;, function() {
+    return gulp.src(&#39;./public/**/*.css&#39;)
+        .pipe(minifycss())
+        .pipe(gulp.dest(&#39;./public&#39;));
+});
+// 压缩 public 目录 html
+gulp.task(&#39;minify-html&#39;, function() {
+  return gulp.src(&#39;./public/**/*.html&#39;)
+    .pipe(htmlclean())
+    .pipe(htmlmin({
+         removeComments: true,
+         minifyJS: true,
+         minifyCSS: true,
+         minifyURLs: true,
+    }))
+    .pipe(gulp.dest(&#39;./public&#39;))
+});
+// 压缩 public/js 目录 js
+gulp.task(&#39;minify-js&#39;, function() {
+    return gulp.src(&#39;./public/**/*.js&#39;)
+        .pipe(uglify())
+        .pipe(gulp.dest(&#39;./public&#39;));
+});
+// 执行 gulp 命令时执行的任务
+gulp.task(&#39;default&#39;, [
+    &#39;minify-html&#39;,&#39;minify-css&#39;,&#39;minify-js&#39;
+]);</code></pre><p>生成博文是执行 <code>hexo g &amp;&amp; gulp</code> 就会根据 <code>gulpfile.js</code> 中的配置，对 public 目录中的静态资源文件进行压缩。</p>
+<hr>
+<h3 id="实现效果图-7"><a href="#实现效果图-7" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZTgzYTZhYzAwZDRkMWRiMy5wbmc?x-oss-process=image/format,png#height=50&id=qRZUI&originHeight=50&originWidth=584&originalType=binary&status=done&style=none&width=584" alt=""></p>
+<h3 id="具体实现方法-8"><a href="#具体实现方法-8" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>打开<code>\themes\next\source\css\_custom\custom.styl</code>, 向里面加入：(颜色可以自己定义)</p>
+<pre><code>// Custom styles.
+code {
+    color: #ff7600;
+    background: #fbf7f8;
+    margin: 2px;
+}
+// 大代码块的自定义样式
+.highlight, pre {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
+}
+.highlight, code, pre {
+    border: 1px solid #d6d6d6;
+}</code></pre><hr>
+<h3 id="实现效果图-8"><a href="#实现效果图-8" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtMjBlOGJiYTFhZDNiMzQzZi5wbmc?x-oss-process=image/format,png#height=168&id=TXhqJ&originHeight=168&originWidth=550&originalType=binary&status=done&style=none&width=550" alt=""></p>
+<h3 id="具体实现方法-9"><a href="#具体实现方法-9" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>打开主题配置文件（<code>_config.yml</code>），搜索<code>social_icons:</code>, 在<a href="http://fontawesome.io/icons/" target="_blank" rel="noopener">图标库</a>找自己喜欢的小图标，并将名字复制在如下位置</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtMjFlMjJiMDVlZGM1N2I1Yi5wbmc?x-oss-process=image/format,png#height=1160&id=l3msG&originHeight=1160&originWidth=1466&originalType=binary&status=done&style=none&width=1466" alt=""></p>
+<hr>
+<h3 id="实现效果图-9"><a href="#实现效果图-9" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtMjEwNDZjNDQyOTAwYmYzZi5wbmc?x-oss-process=image/format,png#height=744&id=AvSs7&originHeight=744&originWidth=1584&originalType=binary&status=done&style=none&width=1584" alt=""></p>
+<h3 id="具体实现方法-10"><a href="#具体实现方法-10" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>打开<code>\themes\next\source\css\_custom\custom.styl</code>, 向里面加入：</p>
+<pre><code>// 主页文章添加阴影效果
+ .post {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   padding: 25px;
+   -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);
+   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
+  }</code></pre><hr>
+<h3 id="实现效果图-10"><a href="#实现效果图-10" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtMzEyNDU1N2RhMmI5Yzc1Zi5wbmc?x-oss-process=image/format,png#height=120&id=aV6eK&originHeight=120&originWidth=554&originalType=binary&status=done&style=none&width=554" alt=""></p>
+<h3 id="具体实现方法-11"><a href="#具体实现方法-11" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>打开<code>\themes\next\layout\_partials\footer.swig</code>文件, 在 copyright 前加上画红线这句话：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZWY4YTQ2NDNmMzNmYmFhMS5wbmc?x-oss-process=image/format,png#height=134&id=jYHDx&originHeight=134&originWidth=1040&originalType=binary&status=done&style=none&width=1040" alt=""></p>
+<p>代码如下：</p>
+<pre><code>&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code></pre><p>然后再合适的位置添加显示统计的代码，如图：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtYmQ2ZmI1NWI2ODQ3ZDEzYS5wbmc?x-oss-process=image/format,png#height=562&id=Nfm2N&originHeight=562&originWidth=1152&originalType=binary&status=done&style=none&width=1152" alt=""></p>
+<p>代码如下：</p>
+<pre><code>&lt;div class=&quot;powered-by&quot;&gt;
+&lt;i class=&quot;fa fa-user-md&quot;&gt;&lt;/i&gt;&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;
+  本站访客数:&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;/div&gt;</code></pre><p>在这里有两中不同计算方式的统计代码：</p>
+<ol>
+<li><strong>pv</strong>的方式，单个用户连续点击 n 篇文章，记录 n 次访问量</li>
+</ol>
+<pre><code>&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;
+    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次
+&lt;/span&gt;</code></pre><ol start="2">
+<li><strong>uv</strong>的方式，单个用户连续点击 n 篇文章，只记录 1 次访客数</li>
+</ol>
+<pre><code>&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;
+  本站总访问量&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;次
+&lt;/span&gt;</code></pre><p>添加之后再执行<code>hexo d -g</code>，然后再刷新页面就能看到效果</p>
+<hr>
+<h3 id="实现效果图：-1"><a href="#实现效果图：-1" class="headerlink" title="实现效果图："></a>实现效果图：</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtOWJjOGE2NTg3Y2QxYTU3NS5wbmc?x-oss-process=image/format,png#height=92&id=sB5jy&originHeight=92&originWidth=702&originalType=binary&status=done&style=none&width=702" alt=""></p>
+<h3 id="具体实现方法-12"><a href="#具体实现方法-12" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>next 主题集成 leanCloud，打开<code>/themes/next/layout/_macro/post.swig</code>, 在画红线的区域添加<code>℃</code>：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZjVkYmRhNjg4OGE3OWRkNC5wbmc?x-oss-process=image/format,png#height=766&id=mGzpq&originHeight=766&originWidth=852&originalType=binary&status=done&style=none&width=852" alt=""></p>
+<p>然后打开，<code>/themes/next/languages/zh-Hans.yml</code>, 将画红框的改为热度就可以了<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtYmQwZTFhYzU0NTZhMmYwYy5wbmc?x-oss-process=image/format,png#height=434&id=HeBUs&originHeight=434&originWidth=810&originalType=binary&status=done&style=none&width=810" alt=""></p>
+<hr>
+<h3 id="实现效果图-11"><a href="#实现效果图-11" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZjI2ZjIxZTJmMmIzNGUxOC5wbmc?x-oss-process=image/format,png#height=116&id=GrPOp&originHeight=116&originWidth=662&originalType=binary&status=done&style=none&width=662" alt=""></p>
+<h3 id="具体方法实现"><a href="#具体方法实现" class="headerlink" title="具体方法实现"></a>具体方法实现</h3><p>切换到根目录下，然后运行如下代码</p>
+<pre><code>$ npm install hexo-wordcount --save</code></pre><p>然后在<code>/themes/next/layout/_partials/footer.swig</code>文件尾部加上：</p>
+<pre><code>&lt;div class=&quot;theme-info&quot;&gt;
+  &lt;div class=&quot;powered-by&quot;&gt;&lt;/div&gt;
+  &lt;span class=&quot;post-count&quot;&gt;博客全站共{{ totalcount(site) }}字&lt;/span&gt;
+&lt;/div&gt;</code></pre><hr>
+<p>每个项目下一般都有一个 <code>README.md</code> 文件，但是使用 hexo 部署到仓库后，项目下是没有 <code>README.md</code> 文件的。</p>
+<p>在 Hexo 目录下的 <code>source</code> 根目录下添加一个 <code>README.md</code> 文件，修改站点配置文件 _<code>config.yml</code>，将 <code>skip_render</code> 参数的值设置为</p>
+<pre><code>skip_render: README.md</code></pre><p>保存退出即可。再次使用 <code>hexo d</code> 命令部署博客的时候就不会在渲染 README.md 这个文件了。</p>
+<hr>
+<h3 id="实现效果图-12"><a href="#实现效果图-12" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZGEwMTJkMmMwNTg2YTFlNy5wbmc?x-oss-process=image/format,png#height=68&id=NJBbx&originHeight=68&originWidth=240&originalType=binary&status=done&style=none&width=240" alt=""></p>
+<h3 id="具体方法实现-1"><a href="#具体方法实现-1" class="headerlink" title="具体方法实现"></a>具体方法实现</h3><p>在<a href="http://www.easyicon.net/" target="_blank" rel="noopener">EasyIcon</a>中找一张（32*32）的<code>ico</code>图标, 或者去别的网站下载或者制作，并将图标名称改为<code>favicon.ico</code>，然后把图标放在<code>/themes/next/source/images</code>里，并且修改主题配置文件：</p>
+<pre><code># Put your favicon.ico into `hexo-site/source/` directory.
+favicon: /favicon.ico</code></pre><hr>
+<h3 id="实现效果图-13"><a href="#实现效果图-13" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtMTFjZjExZmU4ODg3NDhhOS5wbmc?x-oss-process=image/format,png#height=90&id=kR433&originHeight=90&originWidth=656&originalType=binary&status=done&style=none&width=656" alt=""></p>
+<h3 id="具体实现方法-13"><a href="#具体实现方法-13" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>在根目录下安装 <code>hexo-wordcount</code>, 运行：</p>
+<pre><code>$ npm install hexo-wordcount --save</code></pre><p>然后在主题的配置文件中，配置如下：</p>
+<pre><code># Post wordcount display settings
+# Dependencies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: true
+  min2read: true</code></pre><hr>
+<h3 id="实现效果图-14"><a href="#实现效果图-14" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtMmY1MDUxZDlmMDM1MmI5MC5naWY#height=101&id=nxmAb&originHeight=101&originWidth=1276&originalType=binary&status=done&style=none&width=1276" alt=""></p>
+<h3 id="具体实现方法-14"><a href="#具体实现方法-14" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>打开<code>/themes/next/layout/_partials/head.swig</code>文件，添加红框上的代码<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNzJhNTc4YThlM2VlZTY3Mi5wbmc?x-oss-process=image/format,png#height=404&id=rdUYl&originHeight=404&originWidth=1064&originalType=binary&status=done&style=none&width=1064" alt=""></p>
+<p>代码如下：</p>
+<pre><code>&lt;script src=&quot;//cdn.bootcss.com/pace/1.0.2/pace.min.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre><p>但是，默认的是粉色的，要改变颜色可以在<code>/themes/next/layout/_partials/head.swig</code>文件中添加如下代码（接在刚才 link 的后面）</p>
+<pre><code>&lt;style&gt;
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+&lt;/style&gt;</code></pre><blockquote>
+<p>目前，博主的增加顶部加载条的 pull request 已被 Merge===&gt;<a href="https://github.com/iissnan/hexo-theme-next/pull/1689" target="_blank" rel="noopener">详情</a><br>现在升级最新版的 next 主题，升级后只需修改主题配置文件 (_config.yml) 将<code>pace: false</code>改为<code>pace: true</code>就行了，你还可以换不同样式的加载条，如下图：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNmQ0NGE3OGU3NmRiZjk1MC5wbmc?x-oss-process=image/format,png#height=812&id=FkUPv&originHeight=812&originWidth=990&originalType=binary&status=done&style=none&width=990" alt=""></p>
+</blockquote>
+<hr>
+<h3 id="实现效果图-15"><a href="#实现效果图-15" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtYTI2NDU0MmY1MzY2NTg0OS5wbmc?x-oss-process=image/format,png#height=410&id=dU69Y&originHeight=410&originWidth=1318&originalType=binary&status=done&style=none&width=1318" alt=""></p>
+<p>在目录 <code>next/layout/_macro / 下</code>添加 <code>my-copyright.swig</code>：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">if</span> page<span class="token punctuation">.</span>copyright <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"my_post_copyright"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+
+  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> JS库 sweetalert 可修改路径 <span class="token operator">--</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://unpkg.com/sweetalert/dist/sweetalert.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+  <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>span<span class="token operator">></span>本文标题<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"{{ url_for(page.path) }}"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> page<span class="token punctuation">.</span>title <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+  <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>span<span class="token operator">></span>文章作者<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"/"</span> title<span class="token operator">=</span><span class="token string">"访问 {{ theme.author }} 的个人博客"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> theme<span class="token punctuation">.</span>author <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+  <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>span<span class="token operator">></span>发布时间<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> page<span class="token punctuation">.</span>date<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"YYYY年MM月DD日 - HH:MM"</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+  <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>span<span class="token operator">></span>最后更新<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> page<span class="token punctuation">.</span>updated<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"YYYY年MM月DD日 - HH:MM"</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+  <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>span<span class="token operator">></span>原始链接<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"{{ url_for(page.path) }}"</span> title<span class="token operator">=</span><span class="token string">"{{ page.title }}"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> page<span class="token punctuation">.</span>permalink <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+    <span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"copy-path"</span>  title<span class="token operator">=</span><span class="token string">"点击复制文章链接"</span><span class="token operator">></span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-clipboard"</span> data<span class="token operator">-</span>clipboard<span class="token operator">-</span>text<span class="token operator">=</span><span class="token string">"{{ page.permalink }}"</span>  aria<span class="token operator">-</span>label<span class="token operator">=</span><span class="token string">"复制成功！"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+  <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>span<span class="token operator">></span>许可协议<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-creative-commons"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">></span> <span class="token operator">&lt;</span>a rel<span class="token operator">=</span><span class="token string">"license"</span> href<span class="token operator">=</span><span class="token string">"https://creativecommons.org/licenses/by-nc-nd/4.0/"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span> title<span class="token operator">=</span><span class="token string">"Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"</span><span class="token operator">></span>署名<span class="token operator">-</span>非商业性使用<span class="token operator">-</span>禁止演绎 <span class="token number">4.0</span> 国际<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span> 转载请保留原文链接及作者。<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token keyword">var</span> clipboard <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Clipboard</span><span class="token punctuation">(</span><span class="token string">'.fa-clipboard'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".fa-clipboard"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      clipboard<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'success'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">swal</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+          text<span class="token punctuation">:</span> <span class="token string">'复制成功'</span><span class="token punctuation">,</span>
+          icon<span class="token punctuation">:</span> <span class="token string">"success"</span><span class="token punctuation">,</span>
+          showConfirmButton<span class="token punctuation">:</span> <span class="token boolean">true</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token punctuation">{</span><span class="token operator">%</span> endif <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<p>在目录<code>next/source/css/_common/components/post/</code>下添加<code>my-post-copyright.styl</code>：</p>
+<pre><code>.my_post_copyright {
+  width: 85%;
+  max-width: 45em;
+  margin: 2.8em auto 0;
+  padding: 0.5em 1.0em;
+  border: 1px solid #d3d3d3;
+  font-size: 0.93rem;
+  line-height: 1.6em;
+  word-break: break-all;
+  background: rgba(255,255,255,0.4);
+}
+.my_post_copyright p{margin:0;}
+.my_post_copyright span {
+  display: inline-block;
+  width: 5.2em;
+  color: #b5b5b5;
+  font-weight: bold;
+}
+.my_post_copyright .raw {
+  margin-left: 1em;
+  width: 5em;
+}
+.my_post_copyright a {
+  color: #808080;
+  border-bottom:0;
+}
+.my_post_copyright a:hover {
+  color: #a3d2a3;
+  text-decoration: underline;
+}
+.my_post_copyright:hover .fa-clipboard {
+  color: #000;
+}
+.my_post_copyright .post-url:hover {
+  font-weight: normal;
+}
+.my_post_copyright .copy-path {
+  margin-left: 1em;
+  width: 1em;
+  +mobile(){display:none;}
+}
+.my_post_copyright .copy-path:hover {
+  color: #808080;
+  cursor: pointer;
+}</code></pre><p>修改<code>next/layout/_macro/post.swig</code>，在代码</p>
+<pre><code>&lt;div&gt;
+      {% if not is_index %}
+        {% include 'wechat-subscriber.swig' %}
+      {% endif %}
+&lt;/div&gt;</code></pre><p>之前添加增加如下代码：</p>
+<pre><code>&lt;div&gt;
+      {% if not is_index %}
+        {% include 'my-copyright.swig' %}
+      {% endif %}
+&lt;/div&gt;</code></pre><p>如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNzY5YTM4MmI2YzlhZGEzZS5wbmc?x-oss-process=image/format,png#height=580&id=Og6tt&originHeight=580&originWidth=1052&originalType=binary&status=done&style=none&width=1052" alt=""></p>
+<p>修改<code>next/source/css/_common/components/post/post.styl</code>文件，在最后一行增加代码：</p>
+<pre><code>@import &quot;my-post-copyright&quot;</code></pre><p>保存重新生成即可。<br>如果要在该博文下面增加版权信息的显示，需要在 Markdown 中增加 copyright: true 的设置，类似：</p>
+<pre><code>---
+title: 前端小项目：使用canvas绘画哆啦A梦
+date: 2017-05-22 22:53:53
+tags: canvas
+categories: 前端
+copyright: true
+---</code></pre><blockquote>
+<p><strong>小技巧</strong>：如果你觉得每次都要输入<code>copyright: true</code>很麻烦的话, 那么在<code>/scaffolds/post.md</code>文件中添加：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNTFmMDg3Y2UxZjE5MDNhNi5wbmc?x-oss-process=image/format,png#height=384&id=Bzc0L&originHeight=384&originWidth=416&originalType=binary&status=done&style=none&width=416" alt=""><br>这样每次<code>hexo new &quot;你的内容&quot;</code>之后，生成的 md 文件会自动把<code>copyright:</code>加到里面去<br>(<strong>注意</strong>：如果解析出来之后，你的原始链接有问题：如：<code>http://yoursite.com / 前端小项目：使用 canvas 绘画哆啦 A 梦. html</code>, 那么在根目录下<code>_config.yml</code>中写成类似这样：）<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtOTgwMTI5YjM2OTA3ZDEwMy5wbmc?x-oss-process=image/format,png#height=340&id=wAQqf&originHeight=340&originWidth=970&originalType=binary&status=done&style=none&width=970" alt=""><br>就行了。</p>
+</blockquote>
+<hr>
+<p><strong>实现效果图</strong></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtODZiMjEyYzEyMjEyOTJjYS5wbmc?x-oss-process=image/format,png#height=598&id=AsQK9&originHeight=598&originWidth=1338&originalType=binary&status=done&style=none&width=1338" alt=""></p>
+<p><strong>具体方法实现</strong><br>有两种实现方法：<br>① 更新 next 主题，因为最新版本的主题已经支持这种评论。直接在主题配置文件<code>_config.yml</code> 文件中添加如下配置:</p>
+<pre><code>gentie_productKey: #your-gentie-product-key</code></pre><p>② 如果你不想更新的话，那么按下面步骤进行：<br>首先，还是在主题配置文件<code>_config.yml</code> 文件中添加如下配置:</p>
+<pre><code>gentie_productKey: #your-gentie-product-key</code></pre><p>你的<code>productKey</code>就是下面画红线部分<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtMmQxZWVlZjU1ZGI1MGNmYy5wbmc?x-oss-process=image/format,png#height=274&id=T15oP&originHeight=274&originWidth=744&originalType=binary&status=done&style=none&width=744" alt=""></p>
+<p>然后在在<code>layout/_scripts/third-party/comments/</code> 目录中添加 <code>gentie.swig</code>，文件内容如下：</p>
+<pre><code>{% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname and not theme.disqus_shortname and not theme.hypercomments_id %}
+  {% if theme.gentie_productKey %}
+    {% set gentie_productKey = theme.gentie_productKey %}
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "{{gentie_productKey}}",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+  {% endif %}
+{% endif %}</code></pre><p>然后在<code>layout/_scripts/third-party/comments.swig</code>文件中追加：</p>
+<pre><code>{% include './comments/gentie.swig' %}</code></pre><p>最后，在 <code>layout/_partials/comments.swig</code> 文件中条件最后追加网易云跟帖插件引用的判断逻辑：</p>
+<pre><code>{% elseif theme.gentie_productKey %}
+      &lt;div id=&quot;cloud-tie-wrapper&quot; class=&quot;cloud-tie-wrapper&quot;&gt;
+      &lt;/div&gt;</code></pre><p>具体位置如下：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtYzkxOTk0MzlkMjM5Njk4OS5wbmc?x-oss-process=image/format,png#height=678&id=EOxlS&originHeight=678&originWidth=1178&originalType=binary&status=done&style=none&width=1178" alt=""></p>
+<p>可能你<code>hexo s</code>时可能看不到，直接<code>hexo d</code>就可以看到了</p>
+<hr>
+<blockquote>
+<p>近日，我朋友发来消息，说网易云跟帖要关了，我网上查了一下，果然如此</p>
+</blockquote>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZjYxY2ExODQ5NzVjZTMyYi5qcGc?x-oss-process=image/format,png#height=674&id=Et9aj&originHeight=674&originWidth=1316&originalType=binary&status=done&style=none&width=1316" alt=""></p>
+<blockquote>
+<p>都是泪, 上次用了多说，结果多说关了，接着是网易云跟帖，这次直接用国外的来必力，应该不会这么容易关吧</p>
+</blockquote>
+<p>方法其实还是跟上面差不多的</p>
+<p>首先在 <code>_config.yml</code> 文件中添加如下配置：</p>
+<pre><code># Support for LiveRe comments system.
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+livere_uid: your uid</code></pre><p>其中，<code>livere_uid</code>就是画红线的部分<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNTI4MzI4YjEzZjVjNGRmOC5qcGc?x-oss-process=image/format,png#height=106&id=uXTtp&originHeight=106&originWidth=820&originalType=binary&status=done&style=none&width=820" alt=""></p>
+<p>然后在 <code>layout/_scripts/third-party/comments/</code> 目录中添加 livere.swig，文件内容如下：</p>
+<pre><code>
+{% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname and not theme.disqus_shortname and not theme.hypercomments_id and not theme.gentie_productKey %}
+  {% if theme.livere_uid %}
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  {% endif %}
+{% endif %}</code></pre><p>然后在 <code>layout/_scripts/third-party/comments.swig</code>文件中追加：</p>
+<pre><code>{% include './comments/livere.swig' %}</code></pre><p>最后，在 <code>layout/_partials/comments.swig</code> 文件中条件最后追加 LiveRe 插件是否引用的判断逻辑：</p>
+<pre><code>{% elseif theme.livere_uid %}
+      &lt;div id=&quot;lv-container&quot; data-id=&quot;city&quot; data-uid=&quot;{{ theme.livere_uid }}&quot;&gt;&lt;/div&gt;
+{% endif %}</code></pre><p>完</p>
+<hr>
+<p>打开<code>themes/next/layout/_partials/footer.swig</code>, 使用” ” 隐藏之间的代码即可，或者直接删除。位置如图：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtOGU4MzQwYzdhMDQ4OWJjZS5wbmc?x-oss-process=image/format,png#height=928&id=kIkDm&originHeight=928&originWidth=1130&originalType=binary&status=done&style=none&width=1130" alt=""></p>
+<hr>
+<p>还是打开<code>themes/next/layout/_partials/footer.swig</code>，找到：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZjYzNTU4MjNhZWY3ZjcyMy5QTkc?x-oss-process=image/format,png#height=58&id=DQ96V&originHeight=58&originWidth=213&originalType=binary&status=done&style=none&width=213" alt=""><br>，然后还是在<a href="http://fontawesome.io/icons/" target="_blank" rel="noopener">图标库</a>中找到你自己喜欢的图标，然后修改画红线的部分就可以了。</p>
+<hr>
+<h3 id="实现效果图-16"><a href="#实现效果图-16" class="headerlink" title="实现效果图"></a>实现效果图</h3><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtMGM3ZTVlNjFiNzhkYzkzNy5naWY#height=521&id=ha4xS&originHeight=521&originWidth=1166&originalType=binary&status=done&style=none&width=1166" alt=""></p>
+<h3 id="具体实现方法-15"><a href="#具体实现方法-15" class="headerlink" title="具体实现方法"></a>具体实现方法</h3><p>打开<code>themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig</code>文件, 在以下位置插入这样一段代码：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNDQ2NzkzY2Q2ZDc0MGIxOS5wbmc?x-oss-process=image/format,png#height=830&id=YreXQ&originHeight=830&originWidth=1080&originalType=binary&status=done&style=none&width=1080" alt=""></p>
+<p>代码如下：</p>
+<pre><code>&lt;script&gt;
+    (function(){
+        if(&#39;{{ page.password }}&#39;){
+            if (prompt(&#39;请输入文章密码&#39;) !== &#39;{{ page.password }}&#39;){
+                alert(&#39;密码错误！&#39;);
+                history.back();
+            }
+        }
+    })();
+&lt;/script&gt;</code></pre><p>然后在文章上写成类似这样：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZTZjNzI2YTAxNTJjYjhlZS5wbmc?x-oss-process=image/format,png#height=438&id=GJyBa&originHeight=438&originWidth=720&originalType=binary&status=done&style=none&width=720" alt=""></p>
+<hr>
+<p>在<strong>主题配置文件</strong>中，jiathis 为 true，就行了，如下图</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtZjM4MWJjOWU3YzczYjFlNi5wbmc?x-oss-process=image/format,png#height=228&id=CvyrO&originHeight=228&originWidth=894&originalType=binary&status=done&style=none&width=894" alt=""></p>
+<p>默认是这样子的：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtYTg4MjI4YjllYTQzYWIyZC5wbmc?x-oss-process=image/format,png#height=110&id=fMstx&originHeight=110&originWidth=622&originalType=binary&status=done&style=none&width=622" alt=""></p>
+<p>如果你想自定义话，打开<code>themes/next/layout/_partials/share/jiathis.swig</code>修改画红线部分就可以了<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNjhjNTE0OTg3NDRlMTYzNi5wbmc?x-oss-process=image/format,png#height=564&id=sfaXW&originHeight=564&originWidth=1132&originalType=binary&status=done&style=none&width=1132" alt=""></p>
+<hr>
+<p>修改 <code>hero-generator-index</code> 插件，把文件：<code>node_modules/hexo-generator-index/lib/generator.js</code> 内的代码替换为：</p>
+<pre><code>&#39;use strict&#39;;
+var pagination = require(&#39;hexo-pagination&#39;);
+module.exports = function(locals){
+  var config = this.config;
+  var posts = locals.posts;
+    posts.data = posts.data.sort(function(a, b) {
+        if(a.top &amp;&amp; b.top) { // 两篇文章top都有定义
+            if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排
+            else return b.top - a.top; // 否则按照top值降序排
+        }
+        else if(a.top &amp;&amp; !b.top) { // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）
+            return -1;
+        }
+        else if(!a.top &amp;&amp; b.top) {
+            return 1;
+        }
+        else return b.date - a.date; // 都没定义按照文章日期降序排
+    });
+  var paginationDir = config.pagination_dir || &#39;page&#39;;
+  return pagination(&#39;&#39;, posts, {
+    perPage: config.index_generator.per_page,
+    layout: [&#39;index&#39;, &#39;archive&#39;],
+    format: paginationDir + &#39;/%d/&#39;,
+    data: {
+      __index: true
+    }
+  });
+};</code></pre><p>在文章中添加 <code>top</code> 值，数值越大文章越靠前，如</p>
+<pre><code>---
+title: 解决Charles乱码问题
+date: 2017-05-22 22:45:48
+tags: 技巧
+categories: 技巧
+copyright: true
+top: 100
+---</code></pre><hr>
+<p>打开<code>\themes\next\source\css\ _variables\base.styl</code>文件，将<code>$font-size-base</code>改成<code>16px</code>，如下所示：</p>
+<pre><code>$font-size-base            =16px</code></pre><hr>
+<p>修改文件<code>next/source/css/_common/components/post/post-reward.styl</code>，然后注释其中的函数<code>wechat:hover</code>和<code>alipay:hover</code>，如下：</p>
+<pre><code>/* 注释文字闪动函数
+ #wechat:hover p{
+    animation: roll 0.1s infinite linear;
+    -webkit-animation: roll 0.1s infinite linear;
+    -moz-animation: roll 0.1s infinite linear;
+}
+ #alipay:hover p{
+   animation: roll 0.1s infinite linear;
+    -webkit-animation: roll 0.1s infinite linear;
+    -moz-animation: roll 0.1s infinite linear;
+}
+*/</code></pre><p>打开<code>themes/next/source/css/_custom/custom.styl</code>, 在里面写下如下代码</p>
+<pre><code>// 鼠标样式
+  * {
+      cursor: url(&quot;http://om8u46rmb.bkt.clouddn.com/sword2.ico&quot;),auto!important
+  }
+  :active {
+      cursor: url(&quot;http://om8u46rmb.bkt.clouddn.com/sword1.ico&quot;),auto!important
+  }</code></pre><p>其中 url 里面必须是 ico 图片，ico 图片可以上传到网上（我是使用七牛云图床），然后获取外链，复制到 url 里就行了</p>
+<hr>
+<p><strong>实现效果图</strong><br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNzYyOWFjYzkzOTQzZTllZS5qcGc?x-oss-process=image/format,png#height=908&id=obFcd&originHeight=908&originWidth=2056&originalType=binary&status=done&style=none&width=2056" alt=""></p>
+<p><strong>具体实现方法</strong><br>在终端切换到你的博客的路径里，然后输入如下代码：</p>
+<pre><code>npm install -save hexo-helper-live2d</code></pre><p>然后打开<code>Hexo/blog/themes/next/layout</code><br>的<code>_layout.swig</code>, 将下面代码放到<code>&lt;/body&gt;</code>之前：</p>
+<pre><code>{{ live2d() }}</code></pre><p>然后在在 <code>hexo</code> 的 <code>_config.yml</code>中添加参数：</p>
+<pre><code>live2d:
+  model: wanko
+  bottom: -30</code></pre><p>然后 hexo clean ，hexo g ，hexo d 就可以看到了。</p>
+<p><strong>下面是一些 model，可以换不同的宠物</strong></p>
+<ul>
+<li>model 模型名称 默认值: z16<ul>
+<li>Gantzert_Felixander</li>
+<li>Epsilon2.1</li>
+<li>haru</li>
+<li>miku</li>
+<li>ni-j</li>
+<li>nico</li>
+<li>nito</li>
+<li>nipsilon</li>
+<li>nietzsche</li>
+<li>shizuku</li>
+<li>tsumiki</li>
+<li>wanko</li>
+<li>z16</li>
+<li>hibiki</li>
+<li>koharu</li>
+<li>haruto</li>
+<li>Unitychan</li>
+<li>tororo</li>
+<li>hijiki</li>
+</ul>
+</li>
+<li>width 宽度 默认值: 150</li>
+<li>height 高度 默认值： 300</li>
+<li>className <code>&lt;canvas&gt;</code>元素的类名 默认值： live2d</li>
+<li>id <code>&lt;canvas&gt;</code> 元素的 id 默认值： live2dcanvas</li>
+<li>bottom <code>&lt;canvas&gt;</code> 元素的底部偏移 默认值： -20 如果嫌模型位置不正确 可以调整这个参数</li>
+</ul>
+<p>~ 用这个有缺点，如果是在手机上看的话，感觉不是很好，宠物一直挡着文字，还有就是加载有点慢~<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtMDBmMDhhOTI3YjAzZGY1NS5qcGc?x-oss-process=image/format,png#height=1262&id=N5p7S&originHeight=1262&originWidth=712&originalType=binary&status=done&style=none&width=712" alt=""></p>
+<blockquote>
+<p>（感谢<a href="https://segmentfault.com/u/gengxuelei" target="_blank" rel="noopener">Layne</a>网友的提醒，目前手机上显示宠物的问题已经解决，如果不想在手机上显示宠物的话，修改主题配置文件，改为如下：）</p>
+</blockquote>
+<pre><code>live2d:
+  model: wanko
+  bottom: -30
+  mobileShow: false</code></pre><blockquote>
+<p>注意！如果你在 hexo d 的时候出现我下面这个问题<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtNWQ3Y2YwMWJkNGI3ZGFlNC5qcGc?x-oss-process=image/format,png#height=940&id=wFZtA&originHeight=940&originWidth=1784&originalType=binary&status=done&style=none&width=1784" alt=""><br>你可以这样，首先删除 hexo 下面的. deploy_git 文件夹，然后运行</p>
+</blockquote>
+<pre><code>git config --global core.autocrlf false</code></pre><blockquote>
+<p>重新 hexo clean,hexo g,hexo d 就行了</p>
+</blockquote>
+<hr>
+<p><strong>实现效果图</strong></p>
+<p>[外链图片转存失败, 源站可能有防盗链机制, 建议将图片保存下来直接上传 (img-lQ2kq1SI-1571136856003)(<a href="http://ohggtqwxx.bkt.clouddn.com/2017-12-18-053222.png" target="_blank" rel="noopener">http://ohggtqwxx.bkt.clouddn.com/2017-12-18-053222.png</a>)]</p>
+<p><strong>具体实现方法</strong></p>
+<p>首先在 <a href="https://account.daocloud.io/signin" target="_blank" rel="noopener">daovoice</a> 注册账号,<a href="http://dashboard.daovoice.io/get-started?invite_code=0f81ff2f" target="_blank" rel="noopener">邀请码</a>是<code>0f81ff2f</code>, 注册完成后会得到一个 app_id :</p>
+<p>[外链图片转存失败, 源站可能有防盗链机制, 建议将图片保存下来直接上传 (img-niJeM1e3-1571136856004)(<a href="http://ohggtqwxx.bkt.clouddn.com/2017-12-18-054308.png" target="_blank" rel="noopener">http://ohggtqwxx.bkt.clouddn.com/2017-12-18-054308.png</a>)]<br>, 记下这个 app_id 的值，然后打开<code>/themes/next/layout/_partials/head.swig</code>, 写下如下代码：</p>
+<pre><code>{% if theme.daovoice %}
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "{{theme.daovoice_app_id}}"
+    });
+  daovoice('update');
+  </script>
+{% endif %}</code></pre><p>[外链图片转存失败, 源站可能有防盗链机制, 建议将图片保存下来直接上传 (img-1VNWsyM9-1571136856005)(<a href="http://ohggtqwxx.bkt.clouddn.com/2017-12-18-054603.png" target="_blank" rel="noopener">http://ohggtqwxx.bkt.clouddn.com/2017-12-18-054603.png</a>)]</p>
+<p>接着打开<strong>主题配置文件</strong>，在最后写下如下代码：</p>
+<pre><code># Online contact
+daovoice: true
+
+daovoice_app_id: 这里填你的刚才获得的 app_id</code></pre><p>重新 hexo g ，hexo s 就能看到效果了。</p>
+<blockquote>
+<p>安装成功后可以在 DaoVoice 控制台上的聊天设置里设置聊天窗口样式，附上我的设置</p>
+</blockquote>
+<p>[外链图片转存失败, 源站可能有防盗链机制, 建议将图片保存下来直接上传 (img-sMW8L7x0-1571136856006)(<a href="http://ohggtqwxx.bkt.clouddn.com/2017-12-18-055639.png" target="_blank" rel="noopener">http://ohggtqwxx.bkt.clouddn.com/2017-12-18-055639.png</a>)]</p>
+<hr>
+<p><strong>实现效果图</strong></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzUzMDg0NzUtMzlhNzc3YzhjMzZjZWMxYS5wbmc?x-oss-process=image/format,png#height=930&id=CzGMV&originHeight=930&originWidth=990&originalType=binary&status=done&style=none&width=990" alt=""></p>
+<p><strong>实现方法</strong></p>
+<p>跟那个红心是差不多的，首先在<code>themes/next/source/js/src</code>里面建一个叫 fireworks.js 的文件，代码如下：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"use strict"</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">updateCoords</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">(</span>pointerX <span class="token operator">=</span>
+    <span class="token punctuation">(</span>e<span class="token punctuation">.</span>clientX <span class="token operator">||</span> e<span class="token punctuation">.</span>touches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientX<span class="token punctuation">)</span> <span class="token operator">-</span>
+    canvasEl<span class="token punctuation">.</span><span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>pointerY <span class="token operator">=</span>
+      e<span class="token punctuation">.</span>clientY <span class="token operator">||</span> e<span class="token punctuation">.</span>touches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientY <span class="token operator">-</span> canvasEl<span class="token punctuation">.</span><span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>top<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">setParticuleDirection</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> t <span class="token operator">=</span> <span class="token punctuation">(</span>anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">360</span><span class="token punctuation">)</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span>PI<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">180</span><span class="token punctuation">,</span>
+    a <span class="token operator">=</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    n <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">*</span> a<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> x<span class="token punctuation">:</span> e<span class="token punctuation">.</span>x <span class="token operator">+</span> n <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">cos</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> e<span class="token punctuation">.</span>y <span class="token operator">+</span> n <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">sin</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">createParticule</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>x <span class="token operator">=</span> e<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>y <span class="token operator">=</span> t<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>color <span class="token operator">=</span> colors<span class="token punctuation">[</span>anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> colors<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>radius <span class="token operator">=</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>endPos <span class="token operator">=</span> <span class="token function">setParticuleDirection</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>draw <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>x<span class="token punctuation">,</span> a<span class="token punctuation">.</span>y<span class="token punctuation">,</span> a<span class="token punctuation">.</span>radius<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span>PI<span class="token punctuation">,</span> <span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> a<span class="token punctuation">.</span>color<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    a
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">createCircle</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>x <span class="token operator">=</span> e<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>y <span class="token operator">=</span> t<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token string">"#F00"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>radius <span class="token operator">=</span> <span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>alpha <span class="token operator">=</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>lineWidth <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>draw <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>globalAlpha <span class="token operator">=</span> a<span class="token punctuation">.</span>alpha<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>x<span class="token punctuation">,</span> a<span class="token punctuation">.</span>y<span class="token punctuation">,</span> a<span class="token punctuation">.</span>radius<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span>PI<span class="token punctuation">,</span> <span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>lineWidth <span class="token operator">=</span> a<span class="token punctuation">.</span>lineWidth<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>strokeStyle <span class="token operator">=</span> a<span class="token punctuation">.</span>color<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>globalAlpha <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    a
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">renderParticule</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> t <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> t <span class="token operator">&lt;</span> e<span class="token punctuation">.</span>animatables<span class="token punctuation">.</span>length<span class="token punctuation">;</span> t<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span>animatables<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">.</span>target<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">animateParticules</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token function">createCircle</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">,</span> n <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numberOfParticules<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    n<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">createParticule</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  anime
+    <span class="token punctuation">.</span><span class="token function">timeline</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      targets<span class="token punctuation">:</span> n<span class="token punctuation">,</span>
+      x<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> e<span class="token punctuation">.</span>endPos<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      y<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> e<span class="token punctuation">.</span>endPos<span class="token punctuation">.</span>y<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      radius<span class="token punctuation">:</span> <span class="token number">0.1</span><span class="token punctuation">,</span>
+      duration<span class="token punctuation">:</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">1200</span><span class="token punctuation">,</span> <span class="token number">1800</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      easing<span class="token punctuation">:</span> <span class="token string">"easeOutExpo"</span><span class="token punctuation">,</span>
+      update<span class="token punctuation">:</span> renderParticule<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      targets<span class="token punctuation">:</span> a<span class="token punctuation">,</span>
+      radius<span class="token punctuation">:</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">160</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      lineWidth<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      alpha<span class="token punctuation">:</span> <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> easing<span class="token punctuation">:</span> <span class="token string">"linear"</span><span class="token punctuation">,</span> duration<span class="token punctuation">:</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">600</span><span class="token punctuation">,</span> <span class="token number">800</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      duration<span class="token punctuation">:</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">1200</span><span class="token punctuation">,</span> <span class="token number">1800</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      easing<span class="token punctuation">:</span> <span class="token string">"easeOutExpo"</span><span class="token punctuation">,</span>
+      update<span class="token punctuation">:</span> renderParticule<span class="token punctuation">,</span>
+      offset<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">,</span>
+      i <span class="token operator">=</span> arguments<span class="token punctuation">;</span>
+    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span>a <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> canvasEl <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".fireworks"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>canvasEl<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> ctx <span class="token operator">=</span> canvasEl<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">"2d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    numberOfParticules <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">,</span>
+    pointerX <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    pointerY <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    tap <span class="token operator">=</span> <span class="token string">"mousedown"</span><span class="token punctuation">,</span>
+    colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"#FF1461"</span><span class="token punctuation">,</span> <span class="token string">"#18FF92"</span><span class="token punctuation">,</span> <span class="token string">"#5A87FF"</span><span class="token punctuation">,</span> <span class="token string">"#FBF38C"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    setCanvasSize <span class="token operator">=</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">(</span>canvasEl<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> window<span class="token punctuation">.</span>innerWidth<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>canvasEl<span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> window<span class="token punctuation">.</span>innerHeight<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>canvasEl<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>canvasEl<span class="token punctuation">.</span>style<span class="token punctuation">.</span>height <span class="token operator">=</span> window<span class="token punctuation">.</span>innerHeight <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        canvasEl<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">"2d"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    render <span class="token operator">=</span> <span class="token function">anime</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      duration<span class="token punctuation">:</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      update<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ctx<span class="token punctuation">.</span><span class="token function">clearRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> canvasEl<span class="token punctuation">.</span>width<span class="token punctuation">,</span> canvasEl<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>
+    tap<span class="token punctuation">,</span>
+    <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token string">"sidebar"</span> <span class="token operator">!==</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>id <span class="token operator">&amp;&amp;</span>
+        <span class="token string">"toggle-sidebar"</span> <span class="token operator">!==</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>id <span class="token operator">&amp;&amp;</span>
+        <span class="token string">"A"</span> <span class="token operator">!==</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>nodeName <span class="token operator">&amp;&amp;</span>
+        <span class="token string">"IMG"</span> <span class="token operator">!==</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>nodeName <span class="token operator">&amp;&amp;</span>
+        <span class="token punctuation">(</span>render<span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">updateCoords</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">animateParticules</span><span class="token punctuation">(</span>pointerX<span class="token punctuation">,</span> pointerY<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">!</span><span class="token number">1</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">setCanvasSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"resize"</span><span class="token punctuation">,</span> setCanvasSize<span class="token punctuation">,</span> <span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">(</span><span class="token string">"use strict"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">updateCoords</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">(</span>pointerX <span class="token operator">=</span>
+    <span class="token punctuation">(</span>e<span class="token punctuation">.</span>clientX <span class="token operator">||</span> e<span class="token punctuation">.</span>touches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientX<span class="token punctuation">)</span> <span class="token operator">-</span>
+    canvasEl<span class="token punctuation">.</span><span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>pointerY <span class="token operator">=</span>
+      e<span class="token punctuation">.</span>clientY <span class="token operator">||</span> e<span class="token punctuation">.</span>touches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientY <span class="token operator">-</span> canvasEl<span class="token punctuation">.</span><span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>top<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">setParticuleDirection</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> t <span class="token operator">=</span> <span class="token punctuation">(</span>anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">360</span><span class="token punctuation">)</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span>PI<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">180</span><span class="token punctuation">,</span>
+    a <span class="token operator">=</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    n <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">*</span> a<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> x<span class="token punctuation">:</span> e<span class="token punctuation">.</span>x <span class="token operator">+</span> n <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">cos</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> e<span class="token punctuation">.</span>y <span class="token operator">+</span> n <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">sin</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">createParticule</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>x <span class="token operator">=</span> e<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>y <span class="token operator">=</span> t<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>color <span class="token operator">=</span> colors<span class="token punctuation">[</span>anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> colors<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>radius <span class="token operator">=</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>endPos <span class="token operator">=</span> <span class="token function">setParticuleDirection</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>draw <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>x<span class="token punctuation">,</span> a<span class="token punctuation">.</span>y<span class="token punctuation">,</span> a<span class="token punctuation">.</span>radius<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span>PI<span class="token punctuation">,</span> <span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> a<span class="token punctuation">.</span>color<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    a
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">createCircle</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>x <span class="token operator">=</span> e<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>y <span class="token operator">=</span> t<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token string">"#F00"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>radius <span class="token operator">=</span> <span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>alpha <span class="token operator">=</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>lineWidth <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>a<span class="token punctuation">.</span>draw <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>globalAlpha <span class="token operator">=</span> a<span class="token punctuation">.</span>alpha<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ctx<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>x<span class="token punctuation">,</span> a<span class="token punctuation">.</span>y<span class="token punctuation">,</span> a<span class="token punctuation">.</span>radius<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span>PI<span class="token punctuation">,</span> <span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>lineWidth <span class="token operator">=</span> a<span class="token punctuation">.</span>lineWidth<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>strokeStyle <span class="token operator">=</span> a<span class="token punctuation">.</span>color<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>globalAlpha <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    a
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">renderParticule</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> t <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> t <span class="token operator">&lt;</span> e<span class="token punctuation">.</span>animatables<span class="token punctuation">.</span>length<span class="token punctuation">;</span> t<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span>animatables<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">.</span>target<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">animateParticules</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token function">createCircle</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">,</span> n <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numberOfParticules<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    n<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">createParticule</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  anime
+    <span class="token punctuation">.</span><span class="token function">timeline</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      targets<span class="token punctuation">:</span> n<span class="token punctuation">,</span>
+      x<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> e<span class="token punctuation">.</span>endPos<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      y<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> e<span class="token punctuation">.</span>endPos<span class="token punctuation">.</span>y<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      radius<span class="token punctuation">:</span> <span class="token number">0.1</span><span class="token punctuation">,</span>
+      duration<span class="token punctuation">:</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">1200</span><span class="token punctuation">,</span> <span class="token number">1800</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      easing<span class="token punctuation">:</span> <span class="token string">"easeOutExpo"</span><span class="token punctuation">,</span>
+      update<span class="token punctuation">:</span> renderParticule<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      targets<span class="token punctuation">:</span> a<span class="token punctuation">,</span>
+      radius<span class="token punctuation">:</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">160</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      lineWidth<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      alpha<span class="token punctuation">:</span> <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> easing<span class="token punctuation">:</span> <span class="token string">"linear"</span><span class="token punctuation">,</span> duration<span class="token punctuation">:</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">600</span><span class="token punctuation">,</span> <span class="token number">800</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      duration<span class="token punctuation">:</span> anime<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token number">1200</span><span class="token punctuation">,</span> <span class="token number">1800</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      easing<span class="token punctuation">:</span> <span class="token string">"easeOutExpo"</span><span class="token punctuation">,</span>
+      update<span class="token punctuation">:</span> renderParticule<span class="token punctuation">,</span>
+      offset<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">,</span>
+      i <span class="token operator">=</span> arguments<span class="token punctuation">;</span>
+    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span>a <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> canvasEl <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".fireworks"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>canvasEl<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> ctx <span class="token operator">=</span> canvasEl<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">"2d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    numberOfParticules <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">,</span>
+    pointerX <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    pointerY <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    tap <span class="token operator">=</span> <span class="token string">"mousedown"</span><span class="token punctuation">,</span>
+    colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"#FF1461"</span><span class="token punctuation">,</span> <span class="token string">"#18FF92"</span><span class="token punctuation">,</span> <span class="token string">"#5A87FF"</span><span class="token punctuation">,</span> <span class="token string">"#FBF38C"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    setCanvasSize <span class="token operator">=</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">(</span>canvasEl<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> window<span class="token punctuation">.</span>innerWidth<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>canvasEl<span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> window<span class="token punctuation">.</span>innerHeight<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>canvasEl<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span>canvasEl<span class="token punctuation">.</span>style<span class="token punctuation">.</span>height <span class="token operator">=</span> window<span class="token punctuation">.</span>innerHeight <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        canvasEl<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">"2d"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    render <span class="token operator">=</span> <span class="token function">anime</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      duration<span class="token punctuation">:</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      update<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ctx<span class="token punctuation">.</span><span class="token function">clearRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> canvasEl<span class="token punctuation">.</span>width<span class="token punctuation">,</span> canvasEl<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>
+    tap<span class="token punctuation">,</span>
+    <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token string">"sidebar"</span> <span class="token operator">!==</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>id <span class="token operator">&amp;&amp;</span>
+        <span class="token string">"toggle-sidebar"</span> <span class="token operator">!==</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>id <span class="token operator">&amp;&amp;</span>
+        <span class="token string">"A"</span> <span class="token operator">!==</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>nodeName <span class="token operator">&amp;&amp;</span>
+        <span class="token string">"IMG"</span> <span class="token operator">!==</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>nodeName <span class="token operator">&amp;&amp;</span>
+        <span class="token punctuation">(</span>render<span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">updateCoords</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">animateParticules</span><span class="token punctuation">(</span>pointerX<span class="token punctuation">,</span> pointerY<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">!</span><span class="token number">1</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">setCanvasSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"resize"</span><span class="token punctuation">,</span> setCanvasSize<span class="token punctuation">,</span> <span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>打开<code>themes/next/layout/_layout.swig</code>, 在<code>&lt;/body&gt;</code>上面写下如下代码：</p>
+<pre><code>{% if theme.fireworks %}
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+{% endif %}</code></pre><p>打开主题配置文件，在里面最后写下：</p>
+<pre><code># Fireworks
+fireworks: true</code></pre><hr>
+<h3 id="参考的文章："><a href="#参考的文章：" class="headerlink" title="参考的文章："></a>参考的文章：</h3><ol>
+<li><a href="http://blog.csdn.net/MasterAnt_D/article/details/56839222" target="_blank" rel="noopener">http://blog.csdn.net/MasterAnt_D/article/details/56839222</a></li>
+<li><a href="http://zidingyi4qh.com/2017/04/27/NexT%E5%BA%95%E9%83%A8logo%E6%B7%BB%E5%8A%A0%E8%AE%BF%E9%97%AE%E9%87%8F/" target="_blank" rel="noopener">http://zidingyi4qh.com/2017/04/27/NexT%E5%BA%95%E9%83%A8logo%E6%B7%BB%E5%8A%A0%E8%AE%BF%E9%97%AE%E9%87%8F/</a></li>
+<li><a href="https://fuyis.me/2017/01/25/Hexo-theme-next-and-optimized-configuration/" target="_blank" rel="noopener">https://fuyis.me/2017/01/25/Hexo-theme-next-and-optimized-configuration/</a></li>
+<li><a href="http://www.vitah.net/posts/20f300cc/" target="_blank" rel="noopener">http://www.vitah.net/posts/20f300cc/</a></li>
+<li><a href="http://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">http://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</a></li>
+<li><a href="https://chanshiyu.com/2017/11/24/%E5%8F%98%E5%BD%A2%E8%AE%B0%20%E2%97%8F%20NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" target="_blank" rel="noopener">https://chanshiyu.com/2017/11/24/%E5%8F%98%E5%BD%A2%E8%AE%B0%20%E2%97%8F%20NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</a></li>
+</ol>
+<hr>
+<p>原文地址：<a href="https://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">https://blog.csdn.net/qq_33699981/article/details/72716951</a></p>
+
+      </div>
+      <hr />
+
+      
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.leader755.com" rel="external nofollow noreferrer">leader755</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.leader755.com/leader755/58433.html">https://www.leader755.com/leader755/58433.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                       版权声明: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://www.leader755.com" target="_blank">leader755</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+      <div class="tag_share" style="display: block;">
+        <div class="post-meta__tag-list" style="display: inline-block;">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/hexo-%E4%B8%BB%E9%A2%98/">
+              <span class="chip bg-color">hexo 主题</span>
+            </a>
+            
+            <a href="/tags/%E6%95%99%E7%A8%8B/">
+              <span class="chip bg-color">教程</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="post_share"
+          style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+          <!-- <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css"> -->
+<link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,douban,google" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <!-- <script src="/libs/share/js/social-share.min.js"></script> -->
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+        </div>
+      </div>
+      
+      <style>
+  #reward {
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  #reward .reward-link {
+    font-size: 1.4rem;
+    line-height: 38px;
+  }
+
+  #reward .btn-floating:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  #rewardModal {
+    width: 320px;
+    height: 350px;
+  }
+
+  #rewardModal .reward-title {
+    margin: 15px auto;
+    padding-bottom: 5px;
+  }
+
+  #rewardModal .modal-content {
+    padding: 10px;
+  }
+
+  #rewardModal .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
+    line-height: 20px;
+    cursor: pointer;
+  }
+
+  #rewardModal .close:hover {
+    color: #ef5350;
+    transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -o-transform: scale(1.3);
+  }
+
+  #rewardModal .reward-tabs {
+    margin: 0 auto;
+    width: 210px;
+  }
+
+  .reward-tabs .tabs {
+    height: 38px;
+    margin: 10px auto;
+    padding-left: 0;
+  }
+
+  .reward-content ul {
+    padding-left: 0 !important;
+  }
+
+  .reward-tabs .tabs .tab {
+    height: 38px;
+    line-height: 38px;
+  }
+
+  .reward-tabs .tab a {
+    color: #fff;
+    background-color: #ccc;
+  }
+
+  .reward-tabs .tab a:hover {
+    background-color: #ccc;
+    color: #fff;
+  }
+
+  .reward-tabs .wechat-tab .active {
+    color: #fff !important;
+    background-color: #22AB38 !important;
+  }
+
+  .reward-tabs .alipay-tab .active {
+    color: #fff !important;
+    background-color: #019FE8 !important;
+  }
+
+  .reward-tabs .reward-img {
+    width: 210px;
+    height: 210px;
+  }
+</style>
+
+<div id="reward">
+  <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+  <!-- Modal Structure -->
+  <div id="rewardModal" class="modal">
+    <div class="modal-content">
+      <a class="close modal-close"><i class="fas fa-times"></i></a>
+      <h4 class="reward-title">给作者买杯咖啡</h4>
+      <div class="reward-content">
+        <div class="reward-tabs">
+          <ul class="tabs row">
+            <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+            <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+          </ul>
+          <div id="alipay">
+            <!-- <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码"> -->
+            <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+          </div>
+          <div id="wechat">
+            <!-- <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码"> -->
+            <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function () {
+    $('.tabs').tabs();
+  });
+</script>
+      
+    </div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<!-- <script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script> -->
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'RiorOdrNwqaBf5I71C58Dwom-gzGzoHsz',
+        appKey: 'pPTOvOPEC6KWBmHposk60qIc',
+        notify: 'true,' === 'true',
+        verify: 'true,' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mp',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+    });
+</script>
+
+  
+
+  
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/leader755/33767.html">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/0.jpg" class="responsive-img" alt="input输入框的限制"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/0.jpg" class="responsive-img" alt="input输入框的限制">
+                        
+                        <span class="card-title">input输入框的限制</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            原生输入对复制粘贴也会生效，但是 vue 中的双向绑定 v-model 会出现，实际值并没有改变而使显示值变化了。1.文本框只能输入数字&lt;input onkeyup="this.value=this.value.replace(/\D
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/input-%E8%BE%93%E5%85%A5%E9%99%90%E5%88%B6/" class="post-category">
+                                    input 输入限制
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/input-%E8%BE%93%E5%85%A5/">
+                        <span class="chip bg-color">input 输入</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/leader755/37600.html">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/20.jpg" class="responsive-img" alt="hexo博客添加百度统计和Google统计"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/20.jpg" class="responsive-img" alt="hexo博客添加百度统计和Google统计">
+                        
+                        <span class="card-title">hexo博客添加百度统计和Google统计</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简介
+百度统计和 Google 统计主要用于分析网站数据：流量、访客量等。需要注册账号，然后将代码（脚本）嵌入到网站中，然后在后台就会生成对应数据，然后进行分析。
+
+百度统计网址：https://tongji.baidu.com
+Googl
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1/">
+                        <span class="chip bg-color">百度统计</span>
+                    </a>
+                    
+                    <a href="/tags/Google-%E7%BB%9F%E8%AE%A1/">
+                        <span class="chip bg-color">Google 统计</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script> -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script> -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+  code[class*="language-"],
+  pre[class*="language-"] {
+    white-space: pre !important;
+  }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<!-- <script src="/libs/tocbot/tocbot.min.js"></script> -->
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+  <footer class="page-footer bg-color">
+  <div class="container row center-align"
+    style="margin-bottom: 0px !important;">
+    <div class="col s12 m8 l8 copy-right">
+      <!-- Design by&nbsp;<a href="https://www.cnblogs.com/leader755/" target="_blank">leader755</a>
+      &nbsp|&nbsp&nbsp;Powered by&nbsp;<a href="https://github.com/hongweifuture/hexo-theme-halo"
+        target="_blank">Halo</a>
+      of <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <br> -->
+      
+      &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
+        class="white-color">97.9k</span>&nbsp;字
+      
+      
+      
+      
+      
+      
+      <span id="busuanzi_container_site_pv">
+        |&nbsp;<i class="far fa-eye"></i>&nbsp;访问量:&nbsp;<span id="busuanzi_value_site_pv"
+          class="white-color"></span>&nbsp;次
+      </span>
+      
+      
+      <span id="busuanzi_container_site_uv">
+        |&nbsp;<i class="fas fa-users"></i>&nbsp;点击量:&nbsp;<span id="busuanzi_value_site_uv"
+          class="white-color"></span>&nbsp;次
+      </span>
+      
+      <br>
+      Copyright&nbsp;&copy;
+      <span id="year">2019&nbsp-&nbsp2020 </span>&nbsp&nbsp|
+      &nbsp;<a href="https://www.leader755.com/sitemap.xml" target="_blank">Sitemap</a>&nbsp;&nbsp;|&nbsp;
+      
+
+      
+      <!-- <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
+      <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+        <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备20012827号-1</a>
+      </span>
+      
+
+
+      
+
+      <!-- <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
+      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img
+          style="height: 22px !important;width: 40px !important;vertical-align: middle;" class="ypyunlink"
+          src="/medias/upyun.png" style="vertical-align: text-bottom;" />
+      </a>
+      
+    </div>
+    <div class="col s12 m4 l4 social-link social-statis">
+<a href="https://github.com/leader755/" class="tooltipped" target="_blank" data-toggle="tooltip" data-placement="top"
+  title="访问我的GitHub">
+  <i class="fab fa-github"></i>
+</a>
+
+
+
+<a href="mailto:1181012791@qq.com" class="tooltipped" target="_blank" data-toggle="tooltip"
+  data-placement="top" title="邮件联系我">
+  <i class="fas fa-envelope-open"></i>
+</a>
+
+
+
+
+
+
+
+<a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181012791" class="tooltipped"
+  target="_blank" data-toggle="tooltip" data-placement="top" title="QQ 联系我: 1181012791">
+  <i class="fab fa-qq"></i>
+</a>
+
+
+
+
+
+
+
+<a href="https://www.cnblogs.com/leader755/" class="tooltipped" target="_blank" data-toggle="tooltip" data-placement="top"
+  title="关注我的博客园">
+  <i class="fa fa-bold"></i>
+</a>
+
+
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-toggle="tooltip" data-placement="top"
+  title="RSS 订阅">
+  <i class="fas fa-rss"></i>
+</a>
+</div>
+  </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+  <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<!-- <script src="/js/search.js"></script> -->
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    // searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+  <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+  <!-- <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script> -->
+
+  <script src="/libs/materialize/materialize.min.js"></script>
+  <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+  <script src="/libs/aos/aos.js"></script>
+  <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+  <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+  <script src="/libs/zepto/zepto.min.js"></script>
+  <script src="/js/matery.js"></script>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172870001-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-172870001-1');
+</script>
+
+
+  <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?74dfb013d45a0618e37b66859a53a159";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+  <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+  
+
+  
+
+  
+  <script src="/libs/others/cursor.js"></script>
+  
+
+  
+  <!-- <script async src="/libs/others/busuanzi.pure.mini.js"></script> -->
+  <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+  
+
+  
+  <script defer async src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js"></script>
+  
+  <script defer>
+    $(document).ready(function () {
+      setInterval(change_Tidio, 50);
+
+      function change_Tidio() {
+        var tidio = $("#tidio-chat iframe");
+        if (tidio.css("display") == "block" && $(window).width() > 977) {
+          document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") ==
+            "none" && $(window).width() > 977) > 0 ? "-40px" : ($("div.toc-title").length && $(window).width() >
+            977) > 0 ? "85px" : "20px";
+          document.getElementById("tidio-chat-iframe").style.right = "-15px";
+          document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >= 520 ?
+            "520px" : tidio.css("height");
+          document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+        } else if (tidio.css("display") == "block" && $(window).width() > 601 && $(window).width() < 992) {
+          document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") ==
+            "none" && 601 < $(window).width() < 992) > 0 ? "-40px" : "20px";
+          document.getElementById("tidio-chat-iframe").style.right = "-15px";
+          document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+        } else if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) <
+          230) {
+          document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") ==
+            "none" && $(window).width() < 601) > 0 ? "-10px" : "45px";
+          document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+        }
+        if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) >= 230) {
+          document.getElementById("tidio-chat-iframe").style.zIndex = "998";
+        }
+      }
+    });
+  </script>
+  
+
+  
+
+  
+
+  
+
+  
+  <!-- <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script> -->
+  <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async">
+  </script>
+  
+
+  
+  <!-- <script src="/libs/instantpage/instantpage.js" type="module"></script> -->
+  <script src="/libs/instantpage/instantpage.js" type="module"></script>
+  
+
+  <script type="text/javascript">
+    var OriginTitile = document.title,
+      st;
+    document.addEventListener("visibilitychange", function () {
+      document.hidden ? (document.title = "ヽ(●-`Д´-)ノ风里雨里我在等你~", clearTimeout(st)) : (document.title =
+        "(๑•̀ㅂ•́) ✧ 欢迎回来~~！", st = setTimeout(function () {
+          document.title = OriginTitile
+        }, 3e3))
+    })
+  </script>
+
+  <div id="he-plugin-simple"></div>
+  <script>
+    WIDGET = {
+      CONFIG: {
+        "modules": "01234",
+        "background": 5,
+        "tmpColor": "FFFFFF",
+        "tmpSize": 16,
+        "cityColor": "FFFFFF",
+        "citySize": "16",
+        "aqiSize": 16,
+        "weatherIconSize": "20",
+        "alertIconSize": 18,
+        "padding": "10px 10px 10px 10px",
+        "shadow": "0",
+        "language": "auto",
+        "fixed": "true",
+        "vertical": "top",
+        "horizontal": "right",
+        "right": 10,
+        "top": "60",
+        "key": "2ccd90212a1d41dea248662765a0fb9c"
+      }
+    }
+    // WIDGET = {
+    //   CONFIG: {
+    //     "modules": "1234",
+    //     "background": 1,
+    //     "tmpColor": "FFFFFF",
+    //     "tmpSize": 16,
+    //     "cityColor": "FFFFFF",
+    //     "citySize": 16,
+    //     "aqiSize": 16,
+    //     "weatherIconSize": 24,
+    //     "alertIconSize": 18,
+    //     "padding": "10px 10px 10px 10px",
+    //     "shadow": "1",
+    //     "language": "auto",
+    //     "borderRadius": 5,
+    //     "fixed": "false",
+    //     "vertical": "middle",
+    //     "horizontal": "center",
+    //     "key": "608fecbe99a147ca822228026610905a"
+    //   }
+    // }
+  </script>
+  <script async src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.4"></script>
+  </script>
+
+        <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
+        <script>
+        $('a').each(function() {
+          const $this = $(this);
+          const href = $this.attr('href');
+          if (href && href.match('^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)')) {
+            const strs = href.split('/');
+            if (strs.length >= 3) {
+                const host = strs[2];
+                if (host !== 'your_domain' || window.location.host) {
+                    $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (true) {
+                        $this.attr('target', '_blank');
+                    }
+                }
+            }
+          }
+        });
+        </script></body>
+
+</html>

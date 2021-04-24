@@ -1,0 +1,1795 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="vue修饰符, 个人博客，leader755，blogs，博客">
+  <meta name="description" content="目录导航
+表单修饰符
+事件修饰符
+鼠标按键修饰符
+键值修饰符
+v-bind 修饰符（实在不知道叫啥名字）
+
+1.表单修饰符填写表单，最常用的是什么？input！v-model~而我们的修饰符正是为了简化这些东西而存在的
+1&amp;gt;.lazy">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+  <!-- <meta name="referrer" content="no-referrer" /> -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google-site-verification" content="dUxZtBuXm550K6pq70-LL7yu7wQQHwvXpvMF8MwMQBU" />
+  <title>vue修饰符 | leader755 Blogs</title>
+  <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+
+
+  <!-- <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+  <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/matery.css">
+  <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+  <script src="/libs/jquery/jquery.min.js"></script>
+  <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
+  <script src="/libs/jquery/jquery.min.js"></script>
+  <script data-ad-client="ca-pub-3737719102622478" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 百度自动推送 -->
+  <script async>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+  <!-- <script src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js" async></script> -->
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="leader755 Blogs" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body>
+  <header class="navbar-fixed">
+  <nav id="headNav" class="bg-color nav-transparent">
+    <div id="navContainer" class="nav-wrapper container">
+      <!-- <div id="navContainer" class="nav-wrapper head-container"> -->
+      <div class="brand-logo">
+        <a href="/" class="waves-effect waves-light">
+          
+          <!-- <img src="/medias/logo.png" class="logo-img" alt="LOGO"> -->
+          <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+          
+          <span class="logo-span big-show">leader755 Blogs</span>
+        </a>
+      </div>
+      
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/articles/" class="waves-effect waves-light">
+
+      
+      <i class="fa fa-bars" style="zoom: 0.6;"></i>
+      
+      <span>文章</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives/" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/archives/">
+          
+          <i class="fa fa-tasks" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>简约风</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/timeline/">
+          
+          <i class="fa fa-ellipsis-v" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>时间轴</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/data/" class="waves-effect waves-light">
+      
+      <i class="fa fa-list-alt" style="zoom: 0.6;"></i>
+      
+      <span>统计</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends/" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友链</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about/" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <!-- <img src="/medias/logo.png" class="logo-img circle responsive-img"> -->
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">leader755 Blogs</div>
+        <div class="logo-desc">
+            
+            leader755 个人Blogs
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fa fa-bars"></i>
+			
+			文章
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/categories/ " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/tags/ " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-archive"></i>
+			
+			归档
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/archives/ " style="margin-left:75px";>
+				  
+				   <i class="fa fa fa-tasks" style="position: absolute;left:50px" ></i>
+			      
+		          <span>简约风</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/timeline/ " style="margin-left:75px";>
+				  
+				   <i class="fa fa fa-ellipsis-v" style="position: absolute;left:50px" ></i>
+			      
+		          <span>时间轴</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/data/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa fa-list-alt"></i>
+			
+			统计
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友链
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+  </nav>
+</header>
+  
+<!-- <script src="/libs/cryptojs/crypto-js.min.js"></script> -->
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/2.jpg')">
+  <div class="container" style="right: 0px;left: 0px;">
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="brand">
+          <h1 class="description center-align post-title">vue修饰符</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <!-- <link rel="stylesheet" href="/libs/tocbot/tocbot.css"> -->
+<link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 110px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+
+  <div class="card">
+
+    <div class="card-content article-info">
+      <div class="row tag-cate">
+        <div class="col s7">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/vue-%E4%BF%AE%E9%A5%B0%E7%AC%A6/">
+              <span class="chip bg-color">vue 修饰符</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/vue/" class="post-category">
+              vue
+            </a>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="post-info">
+        
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+          2019-10-22
+        </div>
+        
+
+        
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+          2019-10-22
+        </div>
+        
+
+        
+        <div class="info-break-policy">
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+          3.2k
+        </div>
+        
+
+        
+        <div class="info-break-policy">
+          <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+          13 分
+        </div>
+        
+
+        
+      </div>
+
+    </div>
+    <hr class="clearfix">
+    <div class="card-content article-card-content">
+      <!-- <meta name="referrer" content="never" /> -->
+      <div id="articleContent">
+
+        <h2 id="目录导航"><a href="#目录导航" class="headerlink" title="目录导航"></a>目录导航</h2><ul>
+<li>表单修饰符</li>
+<li>事件修饰符</li>
+<li>鼠标按键修饰符</li>
+<li>键值修饰符</li>
+<li>v-bind 修饰符（实在不知道叫啥名字）</li>
+</ul>
+<h2 id="1-表单修饰符"><a href="#1-表单修饰符" class="headerlink" title="1.表单修饰符"></a>1.表单修饰符</h2><p>填写表单，最常用的是什么？input！v-model~而我们的修饰符正是为了简化这些东西而存在的</p>
+<h3 id="1-gt-lazy"><a href="#1-gt-lazy" class="headerlink" title="1&gt;.lazy"></a>1&gt;.lazy</h3><p>从这里我们可以看到，我们还在输入的时候，光标还在的时候，下面的值就已经出来了，可以说是非常地实时。但是有时候我们希望，在我们输入完所有东西，光标离开才更新视图。这样即可~这样只有当我们光标离开输入框的时候，它才会更新视图，<strong>相当于在 onchange 事件</strong>触发更新。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div<span class="token operator">></span>
+   <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>lazy<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">></span>
+   <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<h3 id="2-gt-trim"><a href="#2-gt-trim" class="headerlink" title="2&gt;.trim"></a>2&gt;.trim</h3><p>在我们的输入框中，我们经常需要过滤一下一些输入完密码不小心多敲了一下空格的兄弟输入的内容。需要注意的是，它只能<strong>过滤首尾的空格</strong>！首尾，中间的是不会过滤的</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>trim<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">></span></code></pre>
+<h3 id="3-gt-number"><a href="#3-gt-number" class="headerlink" title="3&gt;.number"></a>3&gt;.number</h3><p>如果你先输入数字，那它就会限制你输入的只能是数字。<br>如果你先输入字符串，那它就相当于没有加.number</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>number<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">></span></code></pre>
+<h2 id="2-事件修饰符"><a href="#2-事件修饰符" class="headerlink" title="2.事件修饰符"></a>2.事件修饰符</h2><h3 id="1-gt-stop"><a href="#1-gt-stop" class="headerlink" title="1&gt;.stop"></a>1&gt;.stop</h3><p>由于事件冒泡的机制，我们给元素绑定点击事件的时候，也会触发父级的点击事件。一键阻止事件冒泡，简直方便得不行。相当于调用了 event.stopPropagation()方法。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(2)"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>stop<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">/</span><span class="token operator">/</span>只输出<span class="token number">1</span></code></pre>
+<h3 id="2-gt-prevent"><a href="#2-gt-prevent" class="headerlink" title="2&gt;.prevent"></a>2&gt;.prevent</h3><p>用于阻止事件的默认行为，例如，当点击提交按钮时阻止对表单的提交。相当于调用了 event.preventDefault()方法。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 提交事件不再重载页面 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>form v<span class="token operator">-</span>on<span class="token symbol">:submit</span><span class="token punctuation">.</span>prevent<span class="token operator">=</span><span class="token string">"onSubmit"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span></code></pre>
+<blockquote>
+<p><strong>注意：</strong>修饰符可以同时使用多个,但是可能会因为顺序而有所不同。<br>用 v-on:click.prevent.self 会阻止所有的点击，而 v-on:click.self.prevent 只会阻止对元素自身的点击。<br>也就是<strong>从左往右判断~</strong></p>
+</blockquote>
+<h3 id="3-gt-self"><a href="#3-gt-self" class="headerlink" title="3&gt;.self"></a>3&gt;.self</h3><p>只当事件是从事件绑定的元素本身触发时才触发回调。像下面所示，刚刚我们从.stop 时候知道子元素会冒泡到父元素导致触发父元素的点击事件，当我们加了这个.self 以后，我们点击 button 不会触发父元素的点击事件 shout，只有当点击到父元素的时候（蓝色背景）才会 shout~从这个 self 的英文翻译过来就是‘自己，本身’可以看出这个修饰符的用法</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"blue"</span> <span class="token variable">@click</span><span class="token punctuation">.</span><span class="token keyword">self</span><span class="token operator">=</span><span class="token string">"shout(2)"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<h3 id="4-gt-once"><a href="#4-gt-once" class="headerlink" title="4&gt;.once"></a>4&gt;.once</h3><p>这个修饰符的用法也是和名字一样简单粗暴，只能用一次，绑定了事件以后只能触发一次，第二次就不会触发。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>键盘按坏都只能shout一次
+<span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>once<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
+<h3 id="5-gt-capture"><a href="#5-gt-capture" class="headerlink" title="5&gt;.capture"></a>5&gt;.capture</h3><p>从上面我们知道了事件的冒泡，其实完整的事件机制是：捕获阶段–目标阶段–冒泡阶段。<br>默认的呢，是事件触发是从目标开始往上冒泡。<br>当我们加了这个.capture 以后呢，我们就反过来了，事件触发从包含这个元素的顶层开始往下触发。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token punctuation">.</span>capture<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>
+      obj1
+      <span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token punctuation">.</span>capture<span class="token operator">=</span><span class="token string">"shout(2)"</span><span class="token operator">></span>
+        obj2
+        <span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(3)"</span><span class="token operator">></span>
+          obj3
+          <span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span>
+            obj4
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">/</span><span class="token operator">/</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">4</span> <span class="token number">3</span></code></pre>
+<p>从上面这个例子我们点击 obj4 的时候，就可以清楚地看出区别，obj1，obj2 在捕获阶段就触发了事件，因此是先 1 后 2，后面的 obj3，obj4 是默认的冒泡阶段触发，因此是先 4 然后冒泡到 3~</p>
+<h3 id="6-gt-passive"><a href="#6-gt-passive" class="headerlink" title="6&gt;.passive"></a>6&gt;.passive</h3><p>当我们在监听元素滚动事件的时候，会一直触发 onscroll 事件，在 pc 端是没啥问题的，但是在移动端，会让我们的网页变卡，因此我们使用这个修饰符的时候，相当于给 onscroll 事件整了一个.lazy 修饰符</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 滚动事件的默认行为 <span class="token punctuation">(</span>即滚动行为<span class="token punctuation">)</span> 将会立即触发 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 而不会等待 `onScroll` 完成  <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 这其中包含 `event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>` 的情况 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>div v<span class="token operator">-</span>on<span class="token symbol">:scroll</span><span class="token punctuation">.</span>passive<span class="token operator">=</span><span class="token string">"onScroll"</span><span class="token operator">></span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<h3 id="7-gt-native"><a href="#7-gt-native" class="headerlink" title="7&gt;.native"></a>7&gt;.native</h3><p>我们经常会写很多的小组件，有些小组件可能会绑定一些事件，但是，像下面这样绑定事件是不会触发的</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span><span class="token constant">My</span><span class="token operator">-</span>component <span class="token variable">@click</span><span class="token punctuation">.</span>native<span class="token operator">=</span><span class="token string">"shout(3)"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token constant">My</span><span class="token operator">-</span>component<span class="token operator">></span></code></pre>
+<p>必须使用.native 来修饰这个 click 事件（即&lt;My-component @click.native=”shout(3)”&gt;</My-component>），可以理解为该修饰符的作用就是把一个 vue 组件转化为一个普通的 HTML 标签，<br>注意：<strong>使用.native 修饰符来操作普通 HTML 标签是会令事件失效的</strong></p>
+<h2 id="鼠标按钮修饰符"><a href="#鼠标按钮修饰符" class="headerlink" title="鼠标按钮修饰符"></a>鼠标按钮修饰符</h2><p>刚刚我们讲到这个 click 事件，我们一般是会用左键触发，有时候我们需要更改右键菜单啥的，就需要用到右键点击或者中间键点击，这个时候就要用到鼠标按钮修饰符</p>
+<ul>
+<li>.left 左键点击</li>
+<li>.right 右键点击</li>
+<li>.middle 中键点击</li>
+</ul>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>right<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
+<h2 id="键值修饰符"><a href="#键值修饰符" class="headerlink" title="键值修饰符"></a>键值修饰符</h2><p>其实这个也算是事件修饰符的一种，因为它都是用来修饰键盘事件的。<br>比如 onkeyup，onkeydown 啊</p>
+<h3 id="1-gt-keyCode"><a href="#1-gt-keyCode" class="headerlink" title="1&gt;.keyCode"></a>1&gt;.keyCode</h3><p>如果不用 keyCode 修饰符，那我们每次按下键盘都会触发 shout，当我们想指定按下某一个键才触发这个 shout 的时候，这个修饰符就有用了，具体键码查看<a href="https://zhidao.baidu.com/question/266291349.html" target="_blank" rel="noopener">键码对应表</a></p>
+<pre><code>&lt;input type=&quot;text&quot; @keyup.keyCode=&quot;shout(4)&quot;&gt;</code></pre><p>为了方便我们使用，vue 给一些常用的键提供了别名</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>普通键
+<span class="token punctuation">.</span>enter
+<span class="token punctuation">.</span>tab
+<span class="token punctuation">.</span>delete <span class="token operator">/</span><span class="token operator">/</span><span class="token punctuation">(</span>捕获“删除”和“退格”键<span class="token punctuation">)</span>
+<span class="token punctuation">.</span>space
+<span class="token punctuation">.</span>esc
+<span class="token punctuation">.</span>up
+<span class="token punctuation">.</span>down
+<span class="token punctuation">.</span>left
+<span class="token punctuation">.</span>right</code></pre>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>系统修饰键
+<span class="token punctuation">.</span>ctrl
+<span class="token punctuation">.</span>alt
+<span class="token punctuation">.</span>meta
+<span class="token punctuation">.</span>shift</code></pre>
+<p>可以通过全局 config.keyCodes 对象自定义按键修饰符别名：</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span> 可以使用 `v<span class="token operator">-</span>on<span class="token symbol">:keyup</span><span class="token punctuation">.</span>f1`
+<span class="token constant">Vue</span><span class="token punctuation">.</span>config<span class="token punctuation">.</span>keyCodes<span class="token punctuation">.</span>f1 <span class="token operator">=</span> <span class="token number">112</span></code></pre>
+<p>我们从上面看到，键分成了普通常用的键和系统修饰键，区别是什么呢？<br>当我们写如下代码的时候,我们会发现如果<strong>仅仅</strong>使用系统修饰键是无法触发 keyup 事件的。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token variable">@keyup</span><span class="token punctuation">.</span>ctrl<span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span></code></pre>
+<p>那该如何呢？我们需要将系统修饰键和其他键码链接起来使用，比如</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token variable">@keyup</span><span class="token punctuation">.</span>ctrl<span class="token number">.67</span><span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span></code></pre>
+<p>这样当我们同时按下 ctrl+c 时，就会触发 keyup 事件。</p>
+<p>另，如果是鼠标事件，那就可以单独使用系统修饰符。</p>
+<pre class=" language-ruby"><code class="language-ruby">            <span class="token operator">&lt;</span>button <span class="token variable">@mouseover</span><span class="token punctuation">.</span>ctrl<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span>button <span class="token variable">@mousedown</span><span class="token punctuation">.</span>ctrl<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>ctrl<span class="token number">.67</span><span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
+<p>大概是什么意思呢，就是你不能<strong>单手指使用系统修饰键的修饰符</strong>（最少两个手指，可以多个）。你可以一个手指按住系统修饰键一个手指按住另外一个键来实现键盘事件。也可以用一个手指按住系统修饰键，另一只手按住鼠标来实现鼠标事件。</p>
+<h3 id="2-gt-exact-2-5-新增"><a href="#2-gt-exact-2-5-新增" class="headerlink" title="2&gt;.exact (2.5 新增)"></a>2&gt;.exact (2.5 新增)</h3><p>我们上面说了这个系统修饰键，当我们像这样&lt;button type=”text” @click.ctrl=”shout(4)”&gt;</button>绑定了 click 键按下的事件，惊奇的是，我们同时按下几个系统修饰键，比如 ctrl shift 点击，也能触发，可能有些场景我们<strong>只需要或者只能</strong>按一个系统修饰键来触发（像制作一些快捷键的时候），而当我们按下 ctrl 和其他键的时候则无法触发。那就这样写。<br>注意：这个<strong>只是限制系统修饰键</strong>的，像下面这样书写以后你还是可以按下 ctrl + c，ctrl+v 或者 ctrl+普通键 来触发，但是不能按下 ctrl + shift +普通键来触发。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token variable">@click</span><span class="token punctuation">.</span>ctrl<span class="token punctuation">.</span>exact<span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
+<p>然后下面这个你可以同时按下 enter+普通键来触发，但是不能按下系统修饰键+enter 来触发。相信你已经能听懂了 8~</p>
+<pre><code>&lt;input type=&quot;text&quot; @keydown.enter.exact=&quot;shout(&#39;我被触发了&#39;)&quot;&gt;</code></pre><h2 id="v-bind-修饰符"><a href="#v-bind-修饰符" class="headerlink" title="v-bind 修饰符"></a>v-bind 修饰符</h2><h3 id="1-gt-sync-2-3-0-新增"><a href="#1-gt-sync-2-3-0-新增" class="headerlink" title="1&gt;.sync(2.3.0+ 新增)"></a>1&gt;.sync(2.3.0+ 新增)</h3><p>在有些情况下，我们可能需要对一个 prop 进行“双向绑定”。不幸的是，真正的双向绑定会带来维护上的问题，因为子组件可以修改父组件，且在父组件和子组件都没有明显的改动来源。我们通常的做法是</p>
+<pre><code>//父亲组件
+&lt;comp :myMessage=&quot;bar&quot; @update:myMessage=&quot;func&quot;&gt;&lt;/comp&gt;
+//js
+func(e){
+ this.bar = e;
+}</code></pre><pre><code>//子组件js
+func2(){
+  this.$emit(&#39;update:myMessage&#39;,params);
+}</code></pre><p>现在这个.sync 修饰符就是简化了上面的步骤</p>
+<pre><code>//父组件
+&lt;comp :myMessage.sync=&quot;bar&quot;&gt;&lt;/comp&gt;
+//子组件
+this.$emit(&#39;update:myMessage&#39;,params);</code></pre><p>这样确实会方便很多，但是也有很多需要<strong>注意</strong>的点</p>
+<ol>
+<li>使用 sync 的时候，子组件传递的事件名必须为 update:value，其中 value 必须与子组件中 props 中声明的名称完全一致(如上例中的 myMessage，不能使用 my-message)</li>
+<li>注意带有 .sync 修饰符的 v-bind 不能和表达式一起使用 (例如 v-bind:title.sync=”doc.title + ‘!’” 是无效的)。取而代之的是，你只能提供你想要绑定的属性名，类似 v-model。</li>
+<li>将 v-bind.sync 用在一个字面量的对象上，例如 v-bind.sync=”{ title: doc.title }”，是无法正常工作的，因为在解析一个像这样的复杂表达式的时候，有很多边缘情况需要考虑。</li>
+</ol>
+<h3 id="2-gt-prop"><a href="#2-gt-prop" class="headerlink" title="2&gt;.prop"></a>2&gt;.prop</h3><p>要学习这个修饰符，我们首先要搞懂两个东西的区别。</p>
+<pre><code>Property：节点对象在内存中存储的属性，可以访问和设置。
+Attribute：节点对象的其中一个属性( property )，值是一个对象。
+可以通过点访问法 document.getElementById(&#39;xx&#39;).attributes 或者 document.getElementById(&#39;xx&#39;).getAttributes(&#39;xx&#39;) 读取，通过 document.getElementById(&#39;xx&#39;).setAttribute(&#39;xx&#39;,value) 新增和修改。
+在标签里定义的所有属性包括 HTML 属性和自定义属性都会在 attributes 对象里以键值对的方式存在。</code></pre><p>其实 attribute 和 property 两个单词，翻译出来都是属性，但是《javascript 高级程序设计》将它们翻译为特性和属性，以示区分</p>
+<pre><code>//这里的id,value,style都属于property
+//index属于attribute
+//id、title等既是属性，也是特性。修改属性，其对应的特性会发生改变；修改特性，属性也会改变
+&lt;input id=&quot;uid&quot; title=&quot;title1&quot; value=&quot;1&quot; :index=&quot;index&quot;&gt;
+//input.index === undefined
+//input.attributes.index === this.index</code></pre><p>从上面我们可以看到如果直接使用 v-bind 绑定，则默认会绑定到 dom 节点的 attribute。<br>为了</p>
+<ul>
+<li>通过自定义属性存储变量，避免暴露数据</li>
+<li>防止污染 HTML 结构</li>
+</ul>
+<p>我们可以使用这个修饰符，如下</p>
+<pre><code>&lt;input id=&quot;uid&quot; title=&quot;title1&quot; value=&quot;1&quot; :index.prop=&quot;index&quot;&gt;
+//input.index === this.index
+//input.attributes.index === undefined</code></pre><ul>
+<li><strong>.camel</strong></li>
+</ul>
+<p>由于 HTML 特性是不区分大小写的。</p>
+<pre><code>&lt;svg :viewBox=&quot;viewBox&quot;&gt;&lt;/svg&gt;</code></pre><p>实际上会渲染为</p>
+<pre><code>&lt;svg viewbox=&quot;viewBox&quot;&gt;&lt;/svg&gt;</code></pre><p>这将导致渲染失败，因为 SVG 标签只认 viewBox，却不知道 viewbox 是什么。<br>如果我们使用.camel 修饰符，那它就会被渲染为驼峰名。<br>另，如果你使用字符串模版，则没有这些限制。</p>
+<pre><code>new Vue({
+  template: &#39;&lt;svg :viewBox=&quot;viewBox&quot;&gt;&lt;/svg&gt;&#39;
+})</code></pre><h3 id="vue-使用-element-ui-的-el-input-监听不了键盘事件解决"><a href="#vue-使用-element-ui-的-el-input-监听不了键盘事件解决" class="headerlink" title="vue 使用 element-ui 的 el-input 监听不了键盘事件解决"></a>vue 使用 element-ui 的 el-input 监听不了键盘事件解决</h3><p>vue 使用 element-ui 的 el-input 监听不了键盘事件，原因应该是 element-ui 自身封装了一层 div 在 input 标签外面，把原来的事件隐藏了，情况如下：直接使用标签:</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>账号<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>doLogin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>input</span><span class="token punctuation">></span></span>
+element-ui:
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>账号<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter.native</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>doLogin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+如果你使用了form表单 使用 @keyup.enter.native="doLogin" ,
+两个el-input 键盘事件有效, 如:
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">autoComplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>on<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>邮箱<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter.native</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>handleLogin<span class="token punctuation">"</span></span>  <span class="token attr-name">autoComplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>on<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>密码<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span><span class="token punctuation">></span></span>
+　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span>  <span class="token attr-name">@click.native.prevent</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>handleLogin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>登录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form</span><span class="token punctuation">></span></span>
+如果只有一个el-input , 则无效, 需加上@submit.native.prevent才有效,阻值冒泡,默认事件,  如:
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form</span>  <span class="token attr-name">@submit.native.prevent</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span><span class="token punctuation">></span></span>
+　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span>  <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>请输入内容<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter.native</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submitImage<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="文章转载："><a href="#文章转载：" class="headerlink" title="文章转载："></a>文章转载：</h2><p><a href="https://segmentfault.com/a/1190000016786254" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016786254</a></p>
+
+      </div>
+      <hr />
+
+      
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.leader755.com" rel="external nofollow noreferrer">leader755</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.leader755.com/leader755/17199.html">https://www.leader755.com/leader755/17199.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                       版权声明: &nbsp;
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://www.leader755.com" target="_blank">leader755</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+      <div class="tag_share" style="display: block;">
+        <div class="post-meta__tag-list" style="display: inline-block;">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/vue-%E4%BF%AE%E9%A5%B0%E7%AC%A6/">
+              <span class="chip bg-color">vue 修饰符</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="post_share"
+          style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+          <!-- <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css"> -->
+<link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,douban,google" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <!-- <script src="/libs/share/js/social-share.min.js"></script> -->
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+        </div>
+      </div>
+      
+      <style>
+  #reward {
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  #reward .reward-link {
+    font-size: 1.4rem;
+    line-height: 38px;
+  }
+
+  #reward .btn-floating:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  #rewardModal {
+    width: 320px;
+    height: 350px;
+  }
+
+  #rewardModal .reward-title {
+    margin: 15px auto;
+    padding-bottom: 5px;
+  }
+
+  #rewardModal .modal-content {
+    padding: 10px;
+  }
+
+  #rewardModal .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
+    line-height: 20px;
+    cursor: pointer;
+  }
+
+  #rewardModal .close:hover {
+    color: #ef5350;
+    transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -o-transform: scale(1.3);
+  }
+
+  #rewardModal .reward-tabs {
+    margin: 0 auto;
+    width: 210px;
+  }
+
+  .reward-tabs .tabs {
+    height: 38px;
+    margin: 10px auto;
+    padding-left: 0;
+  }
+
+  .reward-content ul {
+    padding-left: 0 !important;
+  }
+
+  .reward-tabs .tabs .tab {
+    height: 38px;
+    line-height: 38px;
+  }
+
+  .reward-tabs .tab a {
+    color: #fff;
+    background-color: #ccc;
+  }
+
+  .reward-tabs .tab a:hover {
+    background-color: #ccc;
+    color: #fff;
+  }
+
+  .reward-tabs .wechat-tab .active {
+    color: #fff !important;
+    background-color: #22AB38 !important;
+  }
+
+  .reward-tabs .alipay-tab .active {
+    color: #fff !important;
+    background-color: #019FE8 !important;
+  }
+
+  .reward-tabs .reward-img {
+    width: 210px;
+    height: 210px;
+  }
+</style>
+
+<div id="reward">
+  <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+  <!-- Modal Structure -->
+  <div id="rewardModal" class="modal">
+    <div class="modal-content">
+      <a class="close modal-close"><i class="fas fa-times"></i></a>
+      <h4 class="reward-title">给作者买杯咖啡</h4>
+      <div class="reward-content">
+        <div class="reward-tabs">
+          <ul class="tabs row">
+            <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+            <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+          </ul>
+          <div id="alipay">
+            <!-- <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码"> -->
+            <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+          </div>
+          <div id="wechat">
+            <!-- <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码"> -->
+            <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function () {
+    $('.tabs').tabs();
+  });
+</script>
+      
+    </div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<!-- <script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script> -->
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'RiorOdrNwqaBf5I71C58Dwom-gzGzoHsz',
+        appKey: 'pPTOvOPEC6KWBmHposk60qIc',
+        notify: 'true,' === 'true',
+        verify: 'true,' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mp',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+    });
+</script>
+
+  
+
+  
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/leader755/65348.html">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/17.jpg" class="responsive-img" alt="mac 使用 homebrew"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/17.jpg" class="responsive-img" alt="mac 使用 homebrew">
+                        
+                        <span class="card-title">mac 使用 homebrew</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            使用 brew update 指令
+报错Error: The following directories are not writable by your user:/usr/local/sbin/usr/local/share/man/m
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/mac/">
+                        <span class="chip bg-color">mac</span>
+                    </a>
+                    
+                    <a href="/tags/homebrew/">
+                        <span class="chip bg-color">homebrew</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/leader755/14064.html">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/20.jpg" class="responsive-img" alt="Tomcat下部署vue项目[history模式]"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/20.jpg" class="responsive-img" alt="Tomcat下部署vue项目[history模式]">
+                        
+                        <span class="card-title">Tomcat下部署vue项目[history模式]</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1.项目发布后通常有两种访问方式，第一种： IP+端口直接访问的方式，如 http://192.168.1.107:8080/第二种：IP+端口+项目名，如 http://192.168.1.107:8080/saas/
+2.第一种方式：i
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/vue/" class="post-category">
+                                    vue
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/history/">
+                        <span class="chip bg-color">history</span>
+                    </a>
+                    
+                    <a href="/tags/tomcat/">
+                        <span class="chip bg-color">tomcat</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script> -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script> -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<!-- <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+  code[class*="language-"],
+  pre[class*="language-"] {
+    white-space: pre !important;
+  }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<!-- <script src="/libs/tocbot/tocbot.min.js"></script> -->
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+  <footer class="page-footer bg-color">
+  <div class="container row center-align"
+    style="margin-bottom: 0px !important;">
+    <div class="col s12 m8 l8 copy-right">
+      <!-- Design by&nbsp;<a href="https://www.cnblogs.com/leader755/" target="_blank">leader755</a>
+      &nbsp|&nbsp&nbsp;Powered by&nbsp;<a href="https://github.com/hongweifuture/hexo-theme-halo"
+        target="_blank">Halo</a>
+      of <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <br> -->
+      
+      &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
+        class="white-color">97.9k</span>&nbsp;字
+      
+      
+      
+      
+      
+      
+      <span id="busuanzi_container_site_pv">
+        |&nbsp;<i class="far fa-eye"></i>&nbsp;访问量:&nbsp;<span id="busuanzi_value_site_pv"
+          class="white-color"></span>&nbsp;次
+      </span>
+      
+      
+      <span id="busuanzi_container_site_uv">
+        |&nbsp;<i class="fas fa-users"></i>&nbsp;点击量:&nbsp;<span id="busuanzi_value_site_uv"
+          class="white-color"></span>&nbsp;次
+      </span>
+      
+      <br>
+      Copyright&nbsp;&copy;
+      <span id="year">2019&nbsp-&nbsp2020 </span>&nbsp&nbsp|
+      &nbsp;<a href="https://www.leader755.com/sitemap.xml" target="_blank">Sitemap</a>&nbsp;&nbsp;|&nbsp;
+      
+
+      
+      <!-- <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
+      <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+        <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备20012827号-1</a>
+      </span>
+      
+
+
+      
+
+      <!-- <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
+      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img
+          style="height: 22px !important;width: 40px !important;vertical-align: middle;" class="ypyunlink"
+          src="/medias/upyun.png" style="vertical-align: text-bottom;" />
+      </a>
+      
+    </div>
+    <div class="col s12 m4 l4 social-link social-statis">
+<a href="https://github.com/leader755/" class="tooltipped" target="_blank" data-toggle="tooltip" data-placement="top"
+  title="访问我的GitHub">
+  <i class="fab fa-github"></i>
+</a>
+
+
+
+<a href="mailto:1181012791@qq.com" class="tooltipped" target="_blank" data-toggle="tooltip"
+  data-placement="top" title="邮件联系我">
+  <i class="fas fa-envelope-open"></i>
+</a>
+
+
+
+
+
+
+
+<a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181012791" class="tooltipped"
+  target="_blank" data-toggle="tooltip" data-placement="top" title="QQ 联系我: 1181012791">
+  <i class="fab fa-qq"></i>
+</a>
+
+
+
+
+
+
+
+<a href="https://www.cnblogs.com/leader755/" class="tooltipped" target="_blank" data-toggle="tooltip" data-placement="top"
+  title="关注我的博客园">
+  <i class="fa fa-bold"></i>
+</a>
+
+
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-toggle="tooltip" data-placement="top"
+  title="RSS 订阅">
+  <i class="fas fa-rss"></i>
+</a>
+</div>
+  </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+  <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<!-- <script src="/js/search.js"></script> -->
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    // searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+  <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+  <!-- <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script> -->
+
+  <script src="/libs/materialize/materialize.min.js"></script>
+  <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+  <script src="/libs/aos/aos.js"></script>
+  <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+  <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+  <script src="/libs/zepto/zepto.min.js"></script>
+  <script src="/js/matery.js"></script>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172870001-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-172870001-1');
+</script>
+
+
+  <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?74dfb013d45a0618e37b66859a53a159";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+  <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+  
+
+  
+
+  
+  <script src="/libs/others/cursor.js"></script>
+  
+
+  
+  <!-- <script async src="/libs/others/busuanzi.pure.mini.js"></script> -->
+  <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+  
+
+  
+  <script defer async src="//code.tidio.co/xa4hrncuzritgmxn9k8grhylgw3suori.js"></script>
+  
+  <script defer>
+    $(document).ready(function () {
+      setInterval(change_Tidio, 50);
+
+      function change_Tidio() {
+        var tidio = $("#tidio-chat iframe");
+        if (tidio.css("display") == "block" && $(window).width() > 977) {
+          document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") ==
+            "none" && $(window).width() > 977) > 0 ? "-40px" : ($("div.toc-title").length && $(window).width() >
+            977) > 0 ? "85px" : "20px";
+          document.getElementById("tidio-chat-iframe").style.right = "-15px";
+          document.getElementById("tidio-chat-iframe").style.height = parseInt(tidio.css("height")) >= 520 ?
+            "520px" : tidio.css("height");
+          document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+        } else if (tidio.css("display") == "block" && $(window).width() > 601 && $(window).width() < 992) {
+          document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") ==
+            "none" && 601 < $(window).width() < 992) > 0 ? "-40px" : "20px";
+          document.getElementById("tidio-chat-iframe").style.right = "-15px";
+          document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+        } else if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) <
+          230) {
+          document.getElementById("tidio-chat-iframe").style.bottom = ($("div#backTop.top-scroll").css("display") ==
+            "none" && $(window).width() < 601) > 0 ? "-10px" : "45px";
+          document.getElementById("tidio-chat-iframe").style.zIndex = "997";
+        }
+        if (tidio.css("display") == "block" && $(window).width() < 601 && parseInt(tidio.css("height")) >= 230) {
+          document.getElementById("tidio-chat-iframe").style.zIndex = "998";
+        }
+      }
+    });
+  </script>
+  
+
+  
+
+  
+
+  
+
+  
+  <!-- <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script> -->
+  <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async">
+  </script>
+  
+
+  
+  <!-- <script src="/libs/instantpage/instantpage.js" type="module"></script> -->
+  <script src="/libs/instantpage/instantpage.js" type="module"></script>
+  
+
+  <script type="text/javascript">
+    var OriginTitile = document.title,
+      st;
+    document.addEventListener("visibilitychange", function () {
+      document.hidden ? (document.title = "ヽ(●-`Д´-)ノ风里雨里我在等你~", clearTimeout(st)) : (document.title =
+        "(๑•̀ㅂ•́) ✧ 欢迎回来~~！", st = setTimeout(function () {
+          document.title = OriginTitile
+        }, 3e3))
+    })
+  </script>
+
+  <div id="he-plugin-simple"></div>
+  <script>
+    WIDGET = {
+      CONFIG: {
+        "modules": "01234",
+        "background": 5,
+        "tmpColor": "FFFFFF",
+        "tmpSize": 16,
+        "cityColor": "FFFFFF",
+        "citySize": "16",
+        "aqiSize": 16,
+        "weatherIconSize": "20",
+        "alertIconSize": 18,
+        "padding": "10px 10px 10px 10px",
+        "shadow": "0",
+        "language": "auto",
+        "fixed": "true",
+        "vertical": "top",
+        "horizontal": "right",
+        "right": 10,
+        "top": "60",
+        "key": "2ccd90212a1d41dea248662765a0fb9c"
+      }
+    }
+    // WIDGET = {
+    //   CONFIG: {
+    //     "modules": "1234",
+    //     "background": 1,
+    //     "tmpColor": "FFFFFF",
+    //     "tmpSize": 16,
+    //     "cityColor": "FFFFFF",
+    //     "citySize": 16,
+    //     "aqiSize": 16,
+    //     "weatherIconSize": 24,
+    //     "alertIconSize": 18,
+    //     "padding": "10px 10px 10px 10px",
+    //     "shadow": "1",
+    //     "language": "auto",
+    //     "borderRadius": 5,
+    //     "fixed": "false",
+    //     "vertical": "middle",
+    //     "horizontal": "center",
+    //     "key": "608fecbe99a147ca822228026610905a"
+    //   }
+    // }
+  </script>
+  <script async src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.4"></script>
+  </script>
+
+        <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
+        <script>
+        $('a').each(function() {
+          const $this = $(this);
+          const href = $this.attr('href');
+          if (href && href.match('^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)')) {
+            const strs = href.split('/');
+            if (strs.length >= 3) {
+                const host = strs[2];
+                if (host !== 'your_domain' || window.location.host) {
+                    $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (true) {
+                        $this.attr('target', '_blank');
+                    }
+                }
+            }
+          }
+        });
+        </script></body>
+
+</html>

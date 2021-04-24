@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>leader755 Blogs</title>
+  
+  <subtitle>Welcome</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.leader755.com/"/>
+  <updated>2021-04-21T13:55:23.000Z</updated>
+  <id>https://www.leader755.com/</id>
+  
+  <author>
+    <name>leader755</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centons7安装nginx，jenkins，tomcat</title>
+    <link href="https://www.leader755.com/leader755/20831.html"/>
+    <id>https://www.leader755.com/leader755/20831.html</id>
+    <published>2021-04-21T13:55:23.000Z</published>
+    <updated>2021-04-21T13:55:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##&lt;/p&gt;
+&lt;h2 id=&quot;1-centons7-安装-tomcat&quot;&gt;&lt;a href=&quot;#1-centons7-安装-tomcat&quot; class=&quot;headerlink&quot; title=&quot;1.centons7 安装 tomcat&quot;&gt;&lt;/a&gt;1.centons7 安装
+        
+      
+    
+    </summary>
+    
+    
+      <category term="nginx" scheme="https://www.leader755.com/categories/nginx/"/>
+    
+    
+      <category term="tomcat" scheme="https://www.leader755.com/tags/tomcat/"/>
+    
+      <category term="centons7" scheme="https://www.leader755.com/tags/centons7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue通信-组件传值</title>
+    <link href="https://www.leader755.com/leader755/37560.html"/>
+    <id>https://www.leader755.com/leader755/37560.html</id>
+    <published>2021-04-15T13:55:23.000Z</published>
+    <updated>2021-04-15T13:55:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;1&amp;gt;在介绍组件传值之前先明确三种组件关系：父子组件、兄弟组件、无关系组件。&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
+    
+    
+      <category term="vue 通信" scheme="https://www.leader755.com/tags/vue-%E9%80%9A%E4%BF%A1/"/>
+    
+      <category term="组件传值" scheme="https://www.leader755.com/tags/%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>节流和防抖</title>
+    <link href="https://www.leader755.com/leader755/7973.html"/>
+    <id>https://www.leader755.com/leader755/7973.html</id>
+    <published>2021-03-29T12:38:23.000Z</published>
+    <updated>2021-03-29T12:38:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;防抖&quot;&gt;&lt;a href=&quot;#防抖&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://www.leader755.com/categories/js/"/>
+    
+    
+      <category term="节流" scheme="https://www.leader755.com/tags/%E8%8A%82%E6%B5%81/"/>
+    
+      <category term="防抖" scheme="https://www.leader755.com/tags/%E9%98%B2%E6%8A%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Element表单验证</title>
+    <link href="https://www.leader755.com/leader755/35753.html"/>
+    <id>https://www.leader755.com/leader755/35753.html</id>
+    <published>2021-03-06T04:38:23.000Z</published>
+    <updated>2021-04-21T13:38:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-gt-常规验证和自定义验证&quot;&gt;&lt;a href=&quot;#1-gt-常规验证和自定义验证&quot; class=&quot;headerlink&quot; title=&quot;1&amp;gt;常规验证和自定义验证&quot;&gt;&lt;/a&gt;1&amp;gt;常规验证和自定义验证&lt;/h2&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
+    
+    
+      <category term="element-ui" scheme="https://www.leader755.com/tags/element-ui/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github域名加上1s，在线VS Code阅读源码神器诞生</title>
+    <link href="https://www.leader755.com/leader755/18017.html"/>
+    <id>https://www.leader755.com/leader755/18017.html</id>
+    <published>2021-02-19T16:38:23.000Z</published>
+    <updated>2021-02-19T16:38:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;原文链接：&quot;&gt;&lt;a href=&quot;#原文链接：&quot; class=&quot;headerlink&quot; title=&quot;原文链接：&quot;&gt;&lt;/a&gt;原文链接：&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;阅读原文请移步：&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://www.leader755.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="github 阅读" scheme="https://www.leader755.com/tags/github-%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo博客增加音乐播放器功能</title>
+    <link href="https://www.leader755.com/leader755/44650.html"/>
+    <id>https://www.leader755.com/leader755/44650.html</id>
+    <published>2021-01-21T16:50:23.000Z</published>
+    <updated>2021-01-21T16:50:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-在-layout-ejs-中-body-标签内粘贴入以下&quot;&gt;&lt;a href=&quot;#1-在-layout-ejs-中-body-标签内粘贴入以下&quot; class=&quot;headerlink&quot; title=&quot;1.在 layout.ejs 中 body
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo 博客" scheme="https://www.leader755.com/categories/hexo-%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="音乐播放器" scheme="https://www.leader755.com/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序轮播图片高度自适应</title>
+    <link href="https://www.leader755.com/leader755/23959.html"/>
+    <id>https://www.leader755.com/leader755/23959.html</id>
+    <published>2021-01-19T10:50:23.000Z</published>
+    <updated>2021-01-19T10:50:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;微信小程序中使用 swiper 组件可以实现图片轮播效果，但是默认 swiper 高度是固定的 150px，如果项目中图片大于固定高度就会被隐藏，所以本篇文章要实现轮播图片的高度自适应。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="微信小程序" scheme="https://www.leader755.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="swiper" scheme="https://www.leader755.com/tags/swiper/"/>
+    
+      <category term="图片自适应" scheme="https://www.leader755.com/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E9%80%82%E5%BA%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github 的actions重试</title>
+    <link href="https://www.leader755.com/leader755/31085.html"/>
+    <id>https://www.leader755.com/leader755/31085.html</id>
+    <published>2021-01-18T13:38:23.000Z</published>
+    <updated>2021-01-18T13:38:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;github 的 actions 中运行失败，重试步骤（或整个作业）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-Github-actions-解决办法&quot;&gt;&lt;a href=&quot;#1-Github-actions-解决办法&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端工程化" scheme="https://www.leader755.com/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+    
+      <category term="github" scheme="https://www.leader755.com/tags/github/"/>
+    
+      <category term="actions" scheme="https://www.leader755.com/tags/actions/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客园主题美化</title>
+    <link href="https://www.leader755.com/leader755/33440.html"/>
+    <id>https://www.leader755.com/leader755/33440.html</id>
+    <published>2021-01-16T16:38:23.000Z</published>
+    <updated>2021-01-16T16:38:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-主题效果&quot;&gt;&lt;a href=&quot;#1-主题效果&quot; class=&quot;headerlink&quot; title=&quot;1.主题效果&quot;&gt;&lt;/a&gt;1.主题效果&lt;/h2&gt;&lt;p&gt;实际网站效果 &lt;a href=&quot;https://www.cnblogs.com/leader755/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="主题美化" scheme="https://www.leader755.com/categories/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
+    
+    
+      <category term="博客园美化" scheme="https://www.leader755.com/tags/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E7%BE%8E%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue插槽</title>
+    <link href="https://www.leader755.com/leader755/43144.html"/>
+    <id>https://www.leader755.com/leader755/43144.html</id>
+    <published>2021-01-13T13:38:23.000Z</published>
+    <updated>2021-01-13T13:38:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##&lt;/p&gt;
+&lt;h2 id=&quot;1-单个插槽-默认插槽-匿名插槽&quot;&gt;&lt;a href=&quot;#1-单个插槽-默认插槽-匿名插槽&quot; class=&quot;headerlink&quot; title=&quot;1.单个插槽 | 默认插槽 | 匿名插槽&quot;&gt;&lt;/a&gt;1.单个插槽 | 默认插槽 |
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
+    
+    
+      <category term="vue 插槽" scheme="https://www.leader755.com/tags/vue-%E6%8F%92%E6%A7%BD/"/>
+    
+      <category term="slot" scheme="https://www.leader755.com/tags/slot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈谈你不知道的gist</title>
+    <link href="https://www.leader755.com/leader755/1491.html"/>
+    <id>https://www.leader755.com/leader755/1491.html</id>
+    <published>2021-01-04T13:38:23.000Z</published>
+    <updated>2021-01-04T13:38:23.000Z</updated>
+    
+    <summary type="html">
+    
+      Gist 是一种与其他人共享代码片段和粘贴的简单方法。 当您需要与同事或朋友共享示例代码或技术时，可以使用它。
+    
+    </summary>
+    
+    
+      <category term="share code" scheme="https://www.leader755.com/categories/share-code/"/>
+    
+    
+      <category term="gist" scheme="https://www.leader755.com/tags/gist/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序开发知识必备-自定义组件</title>
+    <link href="https://www.leader755.com/leader755/31772.html"/>
+    <id>https://www.leader755.com/leader755/31772.html</id>
+    <published>2020-12-22T13:06:23.000Z</published>
+    <updated>2020-12-22T13:06:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-认识自定义组件的属性、数据、方法和生命周期。&quot;&gt;&lt;a href=&quot;#1-认识自定义组件的属性、数据、方法和生命周期。&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="微信小程序" scheme="https://www.leader755.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序自定义组件" scheme="https://www.leader755.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SSH配置</title>
+    <link href="https://www.leader755.com/leader755/20181.html"/>
+    <id>https://www.leader755.com/leader755/20181.html</id>
+    <published>2020-12-21T12:06:23.000Z</published>
+    <updated>2020-12-21T12:06:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一-配置单个-ssh&quot;&gt;&lt;a href=&quot;#一-配置单个-ssh&quot; class=&quot;headerlink&quot; title=&quot;一.配置单个 ssh&quot;&gt;&lt;/a&gt;一.配置单个 ssh&lt;/h2&gt;&lt;p&gt;单个 ssh key 是指一台 git 服务器只有一个 git
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ssh" scheme="https://www.leader755.com/categories/ssh/"/>
+    
+    
+      <category term="git" scheme="https://www.leader755.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue的修饰符!sync和el-dialog弹窗组件</title>
+    <link href="https://www.leader755.com/leader755/18719.html"/>
+    <id>https://www.leader755.com/leader755/18719.html</id>
+    <published>2020-11-29T12:47:23.000Z</published>
+    <updated>2020-11-29T12:47:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;父组件 index.vue：&lt;/p&gt;
+&lt;pre class=&quot; language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
+    
+    
+      <category term="element" scheme="https://www.leader755.com/tags/element/"/>
+    
+      <category term="el-dialog 弹窗" scheme="https://www.leader755.com/tags/el-dialog-%E5%BC%B9%E7%AA%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue自定义指令</title>
+    <link href="https://www.leader755.com/leader755/18298.html"/>
+    <id>https://www.leader755.com/leader755/18298.html</id>
+    <published>2020-11-19T12:06:23.000Z</published>
+    <updated>2020-11-19T12:06:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-注册自定义指令（全局和局部）&quot;&gt;&lt;a href=&quot;#1-注册自定义指令（全局和局部）&quot; class=&quot;headerlink&quot; title=&quot;1.注册自定义指令（全局和局部）&quot;&gt;&lt;/a&gt;1.注册自定义指令（全局和局部）&lt;/h2&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
+    
+    
+      <category term="自定义指令" scheme="https://www.leader755.com/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
+    
+      <category term="directives" scheme="https://www.leader755.com/tags/directives/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue的混入mixins</title>
+    <link href="https://www.leader755.com/leader755/63393.html"/>
+    <id>https://www.leader755.com/leader755/63393.html</id>
+    <published>2020-11-10T14:06:23.000Z</published>
+    <updated>2020-11-10T14:06:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-gt-使用&quot;&gt;&lt;a href=&quot;#1-gt-使用&quot; class=&quot;headerlink&quot; title=&quot;1&amp;gt;使用&quot;&gt;&lt;/a&gt;1&amp;gt;使用&lt;/h2&gt;&lt;p&gt;1、在您的 Vue 应用程序内部，我们将创建一个名为 mixins 的文件夹，并且新建文件命名为
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
+    
+    
+      <category term="vue 混入" scheme="https://www.leader755.com/tags/vue-%E6%B7%B7%E5%85%A5/"/>
+    
+      <category term="mixinx" scheme="https://www.leader755.com/tags/mixinx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器的安全组策略</title>
+    <link href="https://www.leader755.com/leader755/56219.html"/>
+    <id>https://www.leader755.com/leader755/56219.html</id>
+    <published>2020-11-03T12:47:23.000Z</published>
+    <updated>2020-11-03T12:47:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##&lt;/p&gt;
+&lt;h2 id=&quot;开放全部安全组-不安全&quot;&gt;&lt;a href=&quot;#开放全部安全组-不安全&quot; class=&quot;headerlink&quot; title=&quot;开放全部安全组:(不安全)&quot;&gt;&lt;/a&gt;开放全部安全组:(不安全)&lt;/h2&gt;&lt;p&gt;主要是添加 2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="服务器" scheme="https://www.leader755.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="安全组策略" scheme="https://www.leader755.com/tags/%E5%AE%89%E5%85%A8%E7%BB%84%E7%AD%96%E7%95%A5/"/>
+    
+      <category term="开放端口" scheme="https://www.leader755.com/tags/%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue的动态组件 !is的使用</title>
+    <link href="https://www.leader755.com/leader755/6934.html"/>
+    <id>https://www.leader755.com/leader755/6934.html</id>
+    <published>2020-11-03T12:06:23.000Z</published>
+    <updated>2020-11-03T12:06:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre class=&quot; language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;template&lt;span class=&quot;token
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
+    
+    
+      <category term="动态组件" scheme="https://www.leader755.com/tags/%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6/"/>
+    
+      <category term=":is 动态组件" scheme="https://www.leader755.com/tags/is-%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>input输入框的限制</title>
+    <link href="https://www.leader755.com/leader755/33767.html"/>
+    <id>https://www.leader755.com/leader755/33767.html</id>
+    <published>2020-10-26T14:34:23.000Z</published>
+    <updated>2020-10-26T14:34:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;原生输入对复制粘贴也会生效，但是-vue-中的双向绑定-v-model-会出现，实际值并没有改变而使显示值变化了。&quot;&gt;&lt;a href=&quot;#原生输入对复制粘贴也会生效，但是-vue-中的双向绑定-v-model-会出现，实际值并没有改变而使显示值变化了。&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="input 输入限制" scheme="https://www.leader755.com/categories/input-%E8%BE%93%E5%85%A5%E9%99%90%E5%88%B6/"/>
+    
+    
+      <category term="input 输入" scheme="https://www.leader755.com/tags/input-%E8%BE%93%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo的next主题个性化教程</title>
+    <link href="https://www.leader755.com/leader755/58433.html"/>
+    <id>https://www.leader755.com/leader755/58433.html</id>
+    <published>2020-10-04T16:50:10.000Z</published>
+    <updated>2020-10-04T16:50:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;看到有些 next 主题的网站很炫酷，那么是怎么配置的呢？接下来我会讲一讲如何实现一些炫酷的效果&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;主要有以下 32 种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在右上角或者左上角实现 fork me on
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://www.leader755.com/categories/hexo/"/>
+    
+    
+      <category term="hexo 主题" scheme="https://www.leader755.com/tags/hexo-%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="教程" scheme="https://www.leader755.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+</feed>
