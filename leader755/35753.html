@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="Element表单验证, 个人博客，leader755，blogs，博客">
+  <meta name="keywords" content="Element表单验证, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
   <meta name="description" content="1&amp;gt;常规验证和自定义验证1.element-ui 中的表单校验要加验证之前一定要确保已经写了 prop 属性，该属性是跟 rule 绑定在一起的，也可以在行内单独制定 rules。
 
 
@@ -772,12 +772,12 @@ el-from :rules">
 </blockquote>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>el<span class="token operator">-</span>form <span class="token punctuation">:</span>model<span class="token operator">=</span><span class="token string">"formData"</span> <span class="token punctuation">:</span>rules<span class="token operator">=</span><span class="token string">"rules"</span> ref<span class="token operator">=</span><span class="token string">"ruleForm"</span> <span class="token operator">></span>
    <span class="token operator">&lt;</span>template v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(Item, Index) in formData.Parent"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>el<span class="token operator">-</span>form<span class="token operator">-</span>item label<span class="token operator">=</span><span class="token string">"姓名"</span> <span class="token punctuation">:</span>prop<span class="token operator">=</span><span class="token string">"'Parent.' + Index + 'name'"</span>
+    <span class="token operator">&lt;</span>el<span class="token operator">-</span>form<span class="token operator">-</span>item label<span class="token operator">=</span><span class="token string">"姓名"</span> <span class="token punctuation">:</span>prop<span class="token operator">=</span><span class="token string">"'Parent.' + Index + '.name'"</span>
                                 <span class="token punctuation">:</span>rules<span class="token operator">=</span><span class="token string">"{required: true, message: '请输入姓名',trigger: 'blur'}"</span><span class="token operator">></span>
        <span class="token operator">&lt;</span>el<span class="token operator">-</span>input v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"Item.name"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>input<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>form<span class="token operator">-</span>item<span class="token operator">></span>
     <span class="token operator">&lt;</span>template v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(item, index) in Item.children"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>el<span class="token operator">-</span>form<span class="token operator">-</span>item label<span class="token operator">=</span><span class="token string">"性别"</span> <span class="token punctuation">:</span>prop<span class="token operator">=</span><span class="token string">"'Parent.' + Index + '.children.' + index + 'sex'"</span>
+      <span class="token operator">&lt;</span>el<span class="token operator">-</span>form<span class="token operator">-</span>item label<span class="token operator">=</span><span class="token string">"性别"</span> <span class="token punctuation">:</span>prop<span class="token operator">=</span><span class="token string">"'Parent.' + Index + '.children.' + index + '.sex'"</span>
                                   <span class="token punctuation">:</span>rules<span class="token operator">=</span><span class="token string">"{required: true, message: '请输入性别',trigger: 'blur'}"</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>el<span class="token operator">-</span>input v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"item.sex"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>input<span class="token operator">></span>
         <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>form<span class="token operator">-</span>item<span class="token operator">></span>
@@ -1557,7 +1557,7 @@ function debounce(func, time) {
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">97.9k</span>&nbsp;字
+        class="white-color">99.7k</span>&nbsp;字
       
       
       
