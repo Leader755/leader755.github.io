@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2021-04-30T13:55:23.000Z</updated>
+  <updated>2021-05-16T11:55:00.000Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -15,6 +15,153 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux 的定时任务crontab</title>
+    <link href="https://www.leader755.com/leader755/58426.html"/>
+    <id>https://www.leader755.com/leader755/58426.html</id>
+    <published>2021-05-16T11:55:00.000Z</published>
+    <updated>2021-05-16T11:55:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;背景：&lt;br&gt;本人博客的评论为 valine 评论，为了及时知道评论，设置了邮件通知。奈何 leancloud 的每天活跃状态为 16 小时，且半小时内无人访问，则自动进入休眠状态。为了解决这一问题，研究了下 linux 系统自带的
+        
+      
+    
+    </summary>
+    
+    
+      <category term="crontab" scheme="https://www.leader755.com/categories/crontab/"/>
+    
+    
+      <category term="crontab" scheme="https://www.leader755.com/tags/crontab/"/>
+    
+      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux安装 docker</title>
+    <link href="https://www.leader755.com/leader755/10309.html"/>
+    <id>https://www.leader755.com/leader755/10309.html</id>
+    <published>2021-05-05T11:55:00.000Z</published>
+    <updated>2021-05-05T11:55:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1、安装前置条件&quot;&gt;&lt;a href=&quot;#1、安装前置条件&quot; class=&quot;headerlink&quot; title=&quot;1、安装前置条件&quot;&gt;&lt;/a&gt;1、安装前置条件&lt;/h2&gt;&lt;p&gt;docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是
+        
+      
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="https://www.leader755.com/categories/docker/"/>
+    
+    
+      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
+    
+      <category term="docker" scheme="https://www.leader755.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jenkins配置 jdk，maven，git，node</title>
+    <link href="https://www.leader755.com/leader755/1179.html"/>
+    <id>https://www.leader755.com/leader755/1179.html</id>
+    <published>2021-05-05T11:55:00.000Z</published>
+    <updated>2021-05-05T11:55:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-centos-中安装-JDK&quot;&gt;&lt;a href=&quot;#1-centos-中安装-JDK&quot; class=&quot;headerlink&quot; title=&quot;1.centos 中安装 JDK:&quot;&gt;&lt;/a&gt;1.centos 中安装 JDK:&lt;/h2&gt;&lt;pre class=&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="jenkins" scheme="https://www.leader755.com/categories/jenkins/"/>
+    
+    
+      <category term="jdk" scheme="https://www.leader755.com/tags/jdk/"/>
+    
+      <category term="node" scheme="https://www.leader755.com/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在CentOS7上搭建Jenkins</title>
+    <link href="https://www.leader755.com/leader755/2040.html"/>
+    <id>https://www.leader755.com/leader755/2040.html</id>
+    <published>2021-05-05T06:55:00.000Z</published>
+    <updated>2021-05-05T06:55:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-安装-Jenkins：&quot;&gt;&lt;a href=&quot;#1-安装-Jenkins：&quot; class=&quot;headerlink&quot; title=&quot;1. 安装 Jenkins：&quot;&gt;&lt;/a&gt;1. 安装 Jenkins：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;安装 Jenkins
+        
+      
+    
+    </summary>
+    
+    
+      <category term="jenkins" scheme="https://www.leader755.com/categories/jenkins/"/>
+    
+    
+      <category term="git" scheme="https://www.leader755.com/tags/git/"/>
+    
+      <category term="centos7" scheme="https://www.leader755.com/tags/centos7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jenkins的nginx反向代理配置域名</title>
+    <link href="https://www.leader755.com/leader755/4285.html"/>
+    <id>https://www.leader755.com/leader755/4285.html</id>
+    <published>2021-05-05T05:55:23.000Z</published>
+    <updated>2021-05-05T05:55:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;假设 nginx 在目标服务器已经安装好了。没有安装好的，参考[《&lt;strong&gt;centos7 安装 jdk ,maven，tomcat，nginx&lt;/strong&gt;》](&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="jenkins" scheme="https://www.leader755.com/categories/jenkins/"/>
+    
+    
+      <category term="niginx" scheme="https://www.leader755.com/tags/niginx/"/>
+    
+      <category term="ssl" scheme="https://www.leader755.com/tags/ssl/"/>
+    
+  </entry>
   
   <entry>
     <title>halo博客配置oss 云存储</title>
@@ -62,9 +209,9 @@
       
         
         
-          &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;具备一定的 Linux 基础。&lt;/li&gt;
-&lt;li&gt;具备一定的 Docker
+          &lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;官方文档：https-docs-halo-run-install-docker&quot;&gt;&lt;a href=&quot;#官方文档：https-docs-halo-run-install-docker&quot;
         
       
     
@@ -81,11 +228,41 @@
   </entry>
   
   <entry>
-    <title>centons7安装nginx，jenkins，tomcat</title>
-    <link href="https://www.leader755.com/leader755/20831.html"/>
-    <id>https://www.leader755.com/leader755/20831.html</id>
+    <title>halo配置 域名和 ssl</title>
+    <link href="https://www.leader755.com/leader755/63549.html"/>
+    <id>https://www.leader755.com/leader755/63549.html</id>
+    <published>2021-04-28T13:55:00.000Z</published>
+    <updated>2021-05-05T12:03:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-docker-环境&quot;&gt;&lt;a href=&quot;#1-docker-环境&quot; class=&quot;headerlink&quot; title=&quot;1 .docker 环境&quot;&gt;&lt;/a&gt;1 .docker 环境&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;假设 docker
+        
+      
+    
+    </summary>
+    
+    
+      <category term="博客" scheme="https://www.leader755.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="halo" scheme="https://www.leader755.com/tags/halo/"/>
+    
+      <category term="halo 主题" scheme="https://www.leader755.com/tags/halo-%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos7安装jdk ,maven，tomcat，nginx</title>
+    <link href="https://www.leader755.com/leader755/50783.html"/>
+    <id>https://www.leader755.com/leader755/50783.html</id>
     <published>2021-04-21T13:55:23.000Z</published>
-    <updated>2021-04-21T13:55:23.000Z</updated>
+    <updated>2021-05-04T16:22:23.000Z</updated>
     
     <summary type="html">
     
@@ -94,7 +271,7 @@
         
         
           &lt;p&gt;##&lt;/p&gt;
-&lt;h2 id=&quot;1-centons7-安装-tomcat&quot;&gt;&lt;a href=&quot;#1-centons7-安装-tomcat&quot; class=&quot;headerlink&quot; title=&quot;1.centons7 安装 tomcat&quot;&gt;&lt;/a&gt;1.centons7 安装
+&lt;h2 id=&quot;1-centos7-安装-tomcat&quot;&gt;&lt;a href=&quot;#1-centos7-安装-tomcat&quot; class=&quot;headerlink&quot; title=&quot;1.centos7 安装 tomcat&quot;&gt;&lt;/a&gt;1.centos7 安装
         
       
     
@@ -106,7 +283,7 @@
     
       <category term="tomcat" scheme="https://www.leader755.com/tags/tomcat/"/>
     
-      <category term="centons7" scheme="https://www.leader755.com/tags/centons7/"/>
+      <category term="centos7" scheme="https://www.leader755.com/tags/centos7/"/>
     
   </entry>
   
@@ -417,180 +594,6 @@
     
     
       <category term="小程序自定义组件" scheme="https://www.leader755.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SSH配置</title>
-    <link href="https://www.leader755.com/leader755/20181.html"/>
-    <id>https://www.leader755.com/leader755/20181.html</id>
-    <published>2020-12-21T12:06:23.000Z</published>
-    <updated>2020-12-21T12:06:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;一-配置单个-ssh&quot;&gt;&lt;a href=&quot;#一-配置单个-ssh&quot; class=&quot;headerlink&quot; title=&quot;一.配置单个 ssh&quot;&gt;&lt;/a&gt;一.配置单个 ssh&lt;/h2&gt;&lt;p&gt;单个 ssh key 是指一台 git 服务器只有一个 git
-        
-      
-    
-    </summary>
-    
-    
-      <category term="ssh" scheme="https://www.leader755.com/categories/ssh/"/>
-    
-    
-      <category term="git" scheme="https://www.leader755.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue的修饰符!sync和el-dialog弹窗组件</title>
-    <link href="https://www.leader755.com/leader755/18719.html"/>
-    <id>https://www.leader755.com/leader755/18719.html</id>
-    <published>2020-11-29T12:47:23.000Z</published>
-    <updated>2020-11-29T12:47:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;父组件 index.vue：&lt;/p&gt;
-&lt;pre class=&quot; language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
-    
-    
-      <category term="element" scheme="https://www.leader755.com/tags/element/"/>
-    
-      <category term="el-dialog 弹窗" scheme="https://www.leader755.com/tags/el-dialog-%E5%BC%B9%E7%AA%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue自定义指令</title>
-    <link href="https://www.leader755.com/leader755/18298.html"/>
-    <id>https://www.leader755.com/leader755/18298.html</id>
-    <published>2020-11-19T12:06:23.000Z</published>
-    <updated>2020-11-19T12:06:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-注册自定义指令（全局和局部）&quot;&gt;&lt;a href=&quot;#1-注册自定义指令（全局和局部）&quot; class=&quot;headerlink&quot; title=&quot;1.注册自定义指令（全局和局部）&quot;&gt;&lt;/a&gt;1.注册自定义指令（全局和局部）&lt;/h2&gt;&lt;h3
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
-    
-    
-      <category term="自定义指令" scheme="https://www.leader755.com/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
-    
-      <category term="directives" scheme="https://www.leader755.com/tags/directives/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue的混入mixins</title>
-    <link href="https://www.leader755.com/leader755/63393.html"/>
-    <id>https://www.leader755.com/leader755/63393.html</id>
-    <published>2020-11-10T14:06:23.000Z</published>
-    <updated>2020-11-10T14:06:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-gt-使用&quot;&gt;&lt;a href=&quot;#1-gt-使用&quot; class=&quot;headerlink&quot; title=&quot;1&amp;gt;使用&quot;&gt;&lt;/a&gt;1&amp;gt;使用&lt;/h2&gt;&lt;p&gt;1、在您的 Vue 应用程序内部，我们将创建一个名为 mixins 的文件夹，并且新建文件命名为
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
-    
-    
-      <category term="vue 混入" scheme="https://www.leader755.com/tags/vue-%E6%B7%B7%E5%85%A5/"/>
-    
-      <category term="mixinx" scheme="https://www.leader755.com/tags/mixinx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>服务器的安全组策略</title>
-    <link href="https://www.leader755.com/leader755/56219.html"/>
-    <id>https://www.leader755.com/leader755/56219.html</id>
-    <published>2020-11-03T12:47:23.000Z</published>
-    <updated>2020-11-03T12:47:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;##&lt;/p&gt;
-&lt;h2 id=&quot;开放全部安全组-不安全&quot;&gt;&lt;a href=&quot;#开放全部安全组-不安全&quot; class=&quot;headerlink&quot; title=&quot;开放全部安全组:(不安全)&quot;&gt;&lt;/a&gt;开放全部安全组:(不安全)&lt;/h2&gt;&lt;p&gt;主要是添加 2
-        
-      
-    
-    </summary>
-    
-    
-      <category term="服务器" scheme="https://www.leader755.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-      <category term="安全组策略" scheme="https://www.leader755.com/tags/%E5%AE%89%E5%85%A8%E7%BB%84%E7%AD%96%E7%95%A5/"/>
-    
-      <category term="开放端口" scheme="https://www.leader755.com/tags/%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue的动态组件 !is的使用</title>
-    <link href="https://www.leader755.com/leader755/6934.html"/>
-    <id>https://www.leader755.com/leader755/6934.html</id>
-    <published>2020-11-03T12:06:23.000Z</published>
-    <updated>2020-11-03T12:06:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre class=&quot; language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;template&lt;span class=&quot;token
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
-    
-    
-      <category term="动态组件" scheme="https://www.leader755.com/tags/%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6/"/>
-    
-      <category term=":is 动态组件" scheme="https://www.leader755.com/tags/is-%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6/"/>
     
   </entry>
   
