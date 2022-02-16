@@ -4,12 +4,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="git常见的命令, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
-  <meta name="description" content="主要目的
-实现 git 项目管理，本地开发与提交。
-立本地分支与远程分支的映射关系（或者为跟踪关系 track）。这样使用 git pull 或者 git push 时就不必每次都要指定从远程的哪个分支拉取合并和推送到远程的哪个分支了。
+  <meta name="keywords" content="小程序之间互相跳转, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
+  <meta name="description" content="一.背景：
+在小程序里可以打开另一个小程序，让小程序之间可以互相连接跳转，类似于网页之间通过 URL 链接互相跳转。不仅可以打开另一个小程序的首页，还可以打开另一个小程序的任何一个页面，这让小程序之间的功能连接更自由。
 
-">
+​
+二.解决方案：">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google-site-verification" content="dUxZtBuXm550K6pq70-LL7yu7wQQHwvXpvMF8MwMQBU" />
-  <title>git常见的命令 | leader755 Blogs</title>
+  <title>小程序之间互相跳转 | leader755 Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
@@ -200,6 +200,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://leader755.com/" target="_blank" rel="noopener" class="waves-effect waves-light">
+      
+      <i class="fa fa-external-link-alt" style="zoom: 0.6;"></i>
+      
+      <span>个人网站</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -340,6 +351,17 @@
           
         </li>
         
+        <li class="m-nav-item">
+	  
+		<a href="https://leader755.com/" target="_blank" rel="noopener" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa fa-external-link-alt"></i>
+			
+			个人网站
+		</a>
+          
+        </li>
+        
         
         <li><div class="divider"></div></li>
         <li>
@@ -430,12 +452,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/3.jpg')">
   <div class="container" style="right: 0px;left: 0px;">
     <div class="row">
       <div class="col s12 m12 l12">
         <div class="brand">
-          <h1 class="description center-align post-title">git常见的命令</h1>
+          <h1 class="description center-align post-title">小程序之间互相跳转</h1>
         </div>
       </div>
     </div>
@@ -554,16 +576,8 @@
           
           <div class="article-tag">
             
-            <a href="/tags/git-%E5%88%86%E6%94%AF/">
-              <span class="chip bg-color">git 分支</span>
-            </a>
-            
-            <a href="/tags/git-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF/">
-              <span class="chip bg-color">git 远程分支</span>
-            </a>
-            
-            <a href="/tags/git-%E5%91%BD%E4%BB%A4/">
-              <span class="chip bg-color">git 命令</span>
+            <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+              <span class="chip bg-color">小程序</span>
             </a>
             
           </div>
@@ -574,8 +588,8 @@
           <div class="post-cate">
             <i class="fas fa-bookmark fa-fw icon-category"></i>
             
-            <a href="/categories/git/" class="post-category">
-              git
+            <a href="/categories/%E5%BE%AE%E4%BF%A1/" class="post-category">
+              微信
             </a>
             
           </div>
@@ -587,28 +601,28 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2020-09-18
+          2022-08-06
         </div>
         
 
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2020-09-18
+          2022-08-06
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          950
+          695
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          3 分
+          2 分
         </div>
         
 
@@ -621,131 +635,67 @@
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <h2 id="主要目的"><a href="#主要目的" class="headerlink" title="主要目的"></a>主要目的</h2><ul>
-<li>实现 git 项目管理，本地开发与提交。</li>
-<li>立本地分支与远程分支的映射关系（或者为跟踪关系 track）。这样使用 git pull 或者 git push 时就不必每次都要指定从远程的哪个分支拉取合并和推送到远程的哪个分支了。</li>
+        <h2 id="一-背景："><a href="#一-背景：" class="headerlink" title="一.背景："></a>一.背景：</h2><blockquote>
+<p>在小程序里可以打开另一个小程序，让小程序之间可以互相连接跳转，类似于网页之间通过 URL 链接互相跳转。不仅可以打开另一个小程序的首页，还可以打开另一个小程序的任何一个页面，这让小程序之间的功能连接更自由。</p>
+</blockquote>
+<p>​</p>
+<h2 id="二-解决方案："><a href="#二-解决方案：" class="headerlink" title="二.解决方案："></a>二.解决方案：</h2><p>小程序之间互相跳转，使用 *<em>wx.navigateToMiniProgram *</em>来实现。<br>不同主体的小程序可以相互跳转，不需要关联小程序（重点）。<br>官方文档：<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html</a></p>
+<h2 id="三-使用限制"><a href="#三-使用限制" class="headerlink" title="三.使用限制"></a>三.使用限制</h2><h5 id="1-需要用户触发跳转"><a href="#1-需要用户触发跳转" class="headerlink" title="1.需要用户触发跳转"></a>1.需要用户触发跳转</h5><p>从 2.3.0 版本开始，若用户未点击小程序页面任意位置，则开发者将无法调用此接口自动跳转至其他小程序。</p>
+<h5 id="2-需要用户确认跳转"><a href="#2-需要用户确认跳转" class="headerlink" title="2.需要用户确认跳转"></a>2.需要用户确认跳转</h5><p>从 2.3.0 版本开始，在跳转至其他小程序前，将统一增加弹窗，询问是否跳转，用户确认后才可以跳转其他小程序。如果用户点击取消，则回调 fail cancel。</p>
+<h5 id="3-无需声明跳转名单，不限跳转数量（众测中）"><a href="#3-无需声明跳转名单，不限跳转数量（众测中）" class="headerlink" title="3.无需声明跳转名单，不限跳转数量（众测中）"></a>3.无需声明跳转名单，不限跳转数量（众测中）</h5><ol>
+<li>从 2020 年 4 月 24 日起，使用跳转其他小程序功能将无需在全局配置中声明跳转名单，调用此接口时将不再校验所跳转的 AppID 是否在 navigateToMiniProgramAppIdList 中。</li>
+<li>从 2020 年 4 月 24 日起，跳转其他小程序将不再受数量限制，使用此功能时请注意遵守运营规范。</li>
+</ol>
+<h2 id="四-运营规范"><a href="#四-运营规范" class="headerlink" title="四.运营规范"></a>四.运营规范</h2><p>平台将坚决打击小程序盒子等互推行为，使用此功能时请严格遵守<a href="https://developers.weixin.qq.com/miniprogram/product/#_5-10-%E4%BA%92%E6%8E%A8%E8%A1%8C%E4%B8%BA" target="_blank" rel="noopener">《微信小程序平台运营规范》</a>，若发现小程序违反运营规范将被下架处理。</p>
+<h2 id="五-关于调试"><a href="#五-关于调试" class="headerlink" title="五.关于调试"></a>五.关于调试</h2><ul>
+<li>在开发者工具上调用此 API 并不会真实的跳转到另外的小程序，但是开发者工具会校验本次调用跳转是否成功。<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/different.html#%E8%B7%B3%E8%BD%AC%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B0%83%E8%AF%95%E6%94%AF%E6%8C%81" target="_blank" rel="noopener">详情</a></li>
+<li>开发者工具上支持被跳转的小程序处理接收参数的调试。<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/different.html#%E8%B7%B3%E8%BD%AC%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B0%83%E8%AF%95%E6%94%AF%E6%8C%81" target="_blank" rel="noopener">详情</a></li>
 </ul>
-<h2 id="命令及说明"><a href="#命令及说明" class="headerlink" title="命令及说明"></a>命令及说明</h2><ol>
-<li>从远程拉取分支到本地</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> checkout -b 本地分支名 origin/远程分支名</code></pre>
-<ol start="2">
-<li>查看本地分支</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch</code></pre>
-<ol start="3">
-<li>查看远程分支</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch -r</code></pre>
-<ol start="4">
-<li>查看所有分支</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch -a</code></pre>
-<ol start="5">
-<li>新建一个本地分支</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch 本地分支名</code></pre>
-<ol start="6">
-<li>新建一个本地分支并切换到该分支</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> checkout -b 本地分支名</code></pre>
-<ol start="7">
-<li>切换到另一个分支</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> checkout 分支名</code></pre>
-<ol start="8">
-<li>将本地新建的分支与远程分支相关联（在当前分支下输入以下命令）</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch -u origin/分支名   其中origin/分支名 中分支名 为远程分支名</code></pre>
-<p>或使用下面命令</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch --set-upstream-to origin/分支名</code></pre>
-<ol start="9">
-<li>查看本地分支与远程分支的映射关系</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch -vv</code></pre>
-<ol start="10">
-<li>撤销本地分支与远程分支的关系</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch --unset-upstream</code></pre>
-<p>11、拉取远程分支</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> fetch origin（不指定分支名就是远程全部分支<span class="token punctuation">)</span>
-<span class="token function">git</span> fetch origin XXX<span class="token punctuation">(</span>拉下远程指定的分支<span class="token punctuation">)</span></code></pre>
-<p>12、删除本地的分支</p>
-<pre class=" language-java"><code class="language-java">git branch <span class="token operator">-</span>d XXX</code></pre>
-<p>13、删除远程仓库的 分支.</p>
-<pre class=" language-java"><code class="language-java">git push origin <span class="token operator">--</span>delete XXX</code></pre>
-<p>14、合并分支</p>
-<p>例如：想将 dev 分支合并到 master 分支，操作如下：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span>  checkout master    //切换到master分支上
-<span class="token function">git</span> pull origin master  //把远程分支pull下去，及时更新
-<span class="token function">git</span>  merge dev          //把dev分支的代码合并到master上
-<span class="token function">git</span> branch --merged     //只是为了确认所有内容都已合并，请运行以下命令：
-<span class="token function">git</span> status              // 查看状态
-<span class="token function">git</span> push origin master  //push到远程分支</code></pre>
-<p>其他命令</p>
-<pre class=" language-bash"><code class="language-bash">更新远程分支列表
-<span class="token function">git</span> remote update origin --prune
+<h2 id="六-代码示例"><a href="#六-代码示例" class="headerlink" title="六.代码示例"></a>六.代码示例</h2><table>
+<thead>
+<tr>
+<th>envVersion 的 合法值</th>
+<th>说明（要打开的小程序版本。仅在当前小程序为开发版或体验版时此参数有效。如果当前小程序是正式版，则打开的小程序必定是正式版。）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>develop</td>
+<td>开发版</td>
+</tr>
+<tr>
+<td>trial</td>
+<td>体验版</td>
+</tr>
+<tr>
+<td>release</td>
+<td>正式版（默认值）</td>
+</tr>
+</tbody></table>
+<p><strong>示例代码：</strong></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 方法一 事件跳转<span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>button bindtap<span class="token operator">=</span><span class="token string">"toNavigate"</span><span class="token operator">></span>Leader755博客<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
 
-查看所有分支
-<span class="token function">git</span> branch -a
+<span class="token function">toNavigate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    wx<span class="token punctuation">.</span><span class="token function">navigateToMiniProgram</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    appId<span class="token punctuation">:</span> <span class="token string">'wx106ee470bb6fff70'</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">:</span> <span class="token string">'pages/index/index'</span><span class="token punctuation">,</span>
+    extraData<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      foo<span class="token punctuation">:</span> <span class="token string">'bar'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    envVersion<span class="token punctuation">:</span> <span class="token string">'develop'</span><span class="token punctuation">,</span>
+    <span class="token function">success</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'跳转小程序成功'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">fail</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'跳转小程序失败'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-删除远程分支Chapater6
-<span class="token function">git</span> push origin --delete Chapater6
 
-删除本地分支 Chapater6
-<span class="token function">git</span> branch -d  Chapater6</code></pre>
-<p>15、推送本地分支到远程分支</p>
-<pre class=" language-bash"><code class="language-bash">//远程先开好分支然后拉到本地
-<span class="token function">git</span> checkout -b feature origin/feature //检出远程的feature分支到本地
-
-//本地先开好分支然后推送到远程
-<span class="token function">git</span> checkout -b feature    //创建并切换到分支feature
-<span class="token function">git</span> push origin feature:feature  //推送本地的feature<span class="token punctuation">(</span>冒号前面的<span class="token punctuation">)</span>分支到远程origin的feature<span class="token punctuation">(</span>冒号后面的<span class="token punctuation">)</span>分支<span class="token punctuation">(</span>没有会自动创建<span class="token punctuation">)</span></code></pre>
-<p>15、保存当前工作进度</p>
-<pre class=" language-bash"><code class="language-bash">保存当前工作进度
-<span class="token function">git</span> stash
-
-添加一些注释
-<span class="token function">git</span> stash save <span class="token string">'message...'</span>
-
-恢复最新的进度到工作区
-<span class="token function">git</span> stash pop</code></pre>
-<p>16、用于比较两次修改的差异</p>
-<pre class=" language-bash"><code class="language-bash">工作区与暂存区<span class="token punctuation">(</span>默认<span class="token punctuation">)</span>
-<span class="token function">git</span> <span class="token function">diff</span>
-
-Git仓库 vs Git仓库
-<span class="token function">git</span> <span class="token function">diff</span> <span class="token operator">&lt;</span>commit<span class="token operator">></span> <span class="token operator">&lt;</span>commit<span class="token operator">></span>
-
-暂存区 vs Git仓库
-<span class="token function">git</span> <span class="token function">diff</span> --cached <span class="token operator">&lt;</span>filename<span class="token operator">></span></code></pre>
-<p>17、git tag 给当前分支打标签</p>
-<pre class=" language-bash"><code class="language-bash">列出当前分支所有标签
-<span class="token function">git</span> tag
-
-查看标签版本信息
-<span class="token function">git</span> show v0.1.2
-
-打标签（轻量标签和附注标签）
-<span class="token function">git</span> tag v0.1.2  （标签版本）
-<span class="token function">git</span> tag -a v0.1.2 -m <span class="token string">'0.1.2版本'</span>  <span class="token punctuation">(</span>带标注的标签<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 补打标签</span>
-<span class="token function">git</span> tag -a v0.1.2 9fbc3d0  （为之前的版本补打标签）
-
-删除标签
-<span class="token function">git</span> tag -d v0.1.2   删除标签
-
-标签发布（git push 不会将标签对象提交到git服务器）
-<span class="token function">git</span> push origin v0.1.2    <span class="token comment" spellcheck="true"># 将v0.1.2标签提交到git服务器</span>
-<span class="token function">git</span> push origin –-tags     <span class="token comment" spellcheck="true"># 将本地所有标签一次性提交到git服务器</span></code></pre>
-<p>18、远程分支覆盖本地分支（慎用）</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> fetch --all  <span class="token punctuation">(</span>拉取所有分支<span class="token punctuation">)</span>
-<span class="token function">git</span> reset --hard origin/master <span class="token punctuation">(</span>master指定远程的分支<span class="token punctuation">)</span>
-<span class="token function">git</span> pull</code></pre>
-<p>19、本地分支覆盖远程分支（慎用）</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> push origin 分支名 --force       <span class="token punctuation">(</span>远程分支名<span class="token punctuation">)</span></code></pre>
-<h2 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h2><p><a href="https://blog.csdn.net/litongqiang/article/details/107388918" target="_blank" rel="noopener">https://blog.csdn.net/litongqiang/article/details/107388918</a></p>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 方法二 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>navigator target<span class="token operator">=</span><span class="token string">"miniProgram"</span> open<span class="token operator">-</span>type<span class="token operator">=</span><span class="token string">'navigate'</span> app<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"wx106ee470bb6fff70"</span> version<span class="token operator">=</span><span class="token string">"release"</span><span class="token operator">></span>Leader755博客<span class="token operator">&lt;</span><span class="token operator">/</span>navigator<span class="token operator">></span></code></pre>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/jpeg/241787/1644405432217-b5562973-3873-45e6-936c-212000a13f4a.jpeg#clientId=ue1231a42-0dea-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=582&id=u598fb0e4&margin=%5Bobject%20Object%5D&name=be2ee931cba2b28c321e1881cfa0478.jpg&originHeight=2532&originWidth=1170&originalType=binary&ratio=1&rotation=0&showTitle=false&size=120730&status=done&style=none&taskId=uafad4d95-e19f-4ce6-b099-88b28ae296b&title=&width=269" alt="be2ee931cba2b28c321e1881cfa0478.jpg"></p>
 
       </div>
       <hr />
@@ -771,7 +721,7 @@ Git仓库 vs Git仓库
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.leader755.com/leader755/59193.html">https://www.leader755.com/leader755/59193.html</a>
+                    <a href="https://www.leader755.com/leader755/62737.html">https://www.leader755.com/leader755/62737.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -809,16 +759,8 @@ Git仓库 vs Git仓库
           
           <div class="article-tag">
             
-            <a href="/tags/git-%E5%88%86%E6%94%AF/">
-              <span class="chip bg-color">git 分支</span>
-            </a>
-            
-            <a href="/tags/git-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF/">
-              <span class="chip bg-color">git 远程分支</span>
-            </a>
-            
-            <a href="/tags/git-%E5%91%BD%E4%BB%A4/">
-              <span class="chip bg-color">git 命令</span>
+            <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+              <span class="chip bg-color">小程序</span>
             </a>
             
           </div>
@@ -1256,47 +1198,53 @@ Git仓库 vs Git仓库
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/leader755/11638.html">
+                <a href="/leader755/62737.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/7.jpg" class="responsive-img" alt="YAML"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/7.jpg" class="responsive-img" alt="YAML">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/3.jpg" class="responsive-img" alt="小程序之间互相跳转"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/3.jpg" class="responsive-img" alt="小程序之间互相跳转">
                         
-                        <span class="card-title">YAML</span>
+                        <span class="card-title">小程序之间互相跳转</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            现代编程中，少不了编写配置文件，常用的配置文件编写格式有：xml，json，在前端工程化开发中，甚至还有使用 js 作为配置文件的。本文将介绍一种更适合编写配置的语言 YAML（Yet Another Markup Language）。并记
+                            一.背景：
+在小程序里可以打开另一个小程序，让小程序之间可以互相连接跳转，类似于网页之间通过 URL 链接互相跳转。不仅可以打开另一个小程序的首页，还可以打开另一个小程序的任何一个页面，这让小程序之间的功能连接更自由。
+
+​
+二.解决方案：
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/YAML/" class="post-category">
-                                    YAML
+                            <a href="/categories/%E5%BE%AE%E4%BF%A1/" class="post-category">
+                                    微信
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/yml/">
-                        <span class="chip bg-color">.yml</span>
+                    <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">小程序</span>
                     </a>
                     
                 </div>
@@ -1310,52 +1258,33 @@ Git仓库 vs Git仓库
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/835.html">
+                <a href="/leader755/39615.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/9.jpg" class="responsive-img" alt="vscode设置一键同步--settings sync"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/9.jpg" class="responsive-img" alt="vscode设置一键同步--settings sync">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/14.jpg" class="responsive-img" alt="微前端乾坤"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/14.jpg" class="responsive-img" alt="微前端乾坤">
                         
-                        <span class="card-title">vscode设置一键同步--settings sync</span>
+                        <span class="card-title">微前端乾坤</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-最近换了新工作，然后作为程序猿首先是编辑器的设置。但是每个人的编辑器都有自己的编程习惯的。那能不能将 vscode 的编辑器设置同步呢？答案是有的：setttings-async
-
-1.vscode 插件中查找插件 setting-syn
+                            1.什么是微前端？微前端（Micro-Frontends）是一种类似于微服务的架构，它将微服务的理念应用于浏览器端，即将 Web 应用由单一的单体应用转变为多个小型前端应用聚合为一的应用。各个前端应用还可以独立运行、独立开发、独立部署。微前
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-17
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/vscode/" class="post-category">
-                                    vscode
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            leader755
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/sync/">
-                        <span class="chip bg-color">sync</span>
-                    </a>
-                    
-                    <a href="/tags/settings-sync/">
-                        <span class="chip bg-color">settings sync</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1508,7 +1437,7 @@ Git仓库 vs Git仓库
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">104.5k</span>&nbsp;字
+        class="white-color">110.9k</span>&nbsp;字
       
       
       
@@ -1534,9 +1463,9 @@ Git仓库 vs Git仓库
 
       
       <!-- <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" /> -->
-      <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+      <a href="https://beian.miit.gov.cn/" target="_blank" id="icp"><span></span><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
         <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备20012827号-1</a>
-      </span>
+      </span></a>
       
 
 

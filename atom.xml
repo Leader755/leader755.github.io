@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2021-05-16T11:55:00.000Z</updated>
+  <updated>2022-08-05T17:24:00.000Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -15,6 +15,196 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小程序之间互相跳转</title>
+    <link href="https://www.leader755.com/leader755/62737.html"/>
+    <id>https://www.leader755.com/leader755/62737.html</id>
+    <published>2022-08-05T17:24:00.000Z</published>
+    <updated>2022-08-05T17:24:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一-背景：&quot;&gt;&lt;a href=&quot;#一-背景：&quot; class=&quot;headerlink&quot; title=&quot;一.背景：&quot;&gt;&lt;/a&gt;一.背景：&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在小程序里可以打开另一个小程序，让小程序之间可以互相连接跳转，类似于网页之间通过 URL
+        
+      
+    
+    </summary>
+    
+    
+      <category term="微信" scheme="https://www.leader755.com/categories/%E5%BE%AE%E4%BF%A1/"/>
+    
+    
+      <category term="小程序" scheme="https://www.leader755.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微前端乾坤</title>
+    <link href="https://www.leader755.com/leader755/39615.html"/>
+    <id>https://www.leader755.com/leader755/39615.html</id>
+    <published>2022-02-16T16:23:00.898Z</published>
+    <updated>2022-02-16T16:23:00.898Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-什么是微前端？&quot;&gt;&lt;a href=&quot;#1-什么是微前端？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>抓包工具——charles</title>
+    <link href="https://www.leader755.com/leader755/32104.html"/>
+    <id>https://www.leader755.com/leader755/32104.html</id>
+    <published>2021-07-25T17:24:00.000Z</published>
+    <updated>2021-07-25T17:24:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-Charles-设置-Proxy-代理和-Proxy-SSL-代理&quot;&gt;&lt;a href=&quot;#1-Charles-设置-Proxy-代理和-Proxy-SSL-代理&quot; class=&quot;headerlink&quot; title=&quot;1.Charles 设置 Proxy
+        
+      
+    
+    </summary>
+    
+    
+      <category term="charles" scheme="https://www.leader755.com/categories/charles/"/>
+    
+    
+      <category term="抓包" scheme="https://www.leader755.com/tags/%E6%8A%93%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>table表格拖拽</title>
+    <link href="https://www.leader755.com/leader755/50466.html"/>
+    <id>https://www.leader755.com/leader755/50466.html</id>
+    <published>2021-06-27T10:15:00.000Z</published>
+    <updated>2021-06-27T10:15:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;el-table 的拖拽使用 Sortable.js&lt;br&gt;官方文档 :&lt;a href=&quot;https://github.com/SortableJS/Sortable&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="el-table" scheme="https://www.leader755.com/categories/el-table/"/>
+    
+    
+      <category term="拖拽" scheme="https://www.leader755.com/tags/%E6%8B%96%E6%8B%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字体图标iconfont的使用</title>
+    <link href="https://www.leader755.com/leader755/48604.html"/>
+    <id>https://www.leader755.com/leader755/48604.html</id>
+    <published>2021-06-22T05:15:00.000Z</published>
+    <updated>2021-06-22T14:16:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-将从阿里矢量图标库中图标并下载到本地&quot;&gt;&lt;a href=&quot;#1-将从阿里矢量图标库中图标并下载到本地&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="css3" scheme="https://www.leader755.com/categories/css3/"/>
+    
+    
+      <category term="iconfont" scheme="https://www.leader755.com/tags/iconfont/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开源的git 服务器</title>
+    <link href="https://www.leader755.com/leader755/61705.html"/>
+    <id>https://www.leader755.com/leader755/61705.html</id>
+    <published>2021-06-20T15:46:00.000Z</published>
+    <updated>2021-06-20T15:46:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;​&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1、GitLab-开源版本&quot;&gt;&lt;a href=&quot;#1、GitLab-开源版本&quot; class=&quot;headerlink&quot; title=&quot;1、GitLab 开源版本&quot;&gt;&lt;/a&gt;1、GitLab
+        
+      
+    
+    </summary>
+    
+    
+      <category term="git 工具" scheme="https://www.leader755.com/categories/git-%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="git 服务器" scheme="https://www.leader755.com/tags/git-%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网站一键置灰</title>
+    <link href="https://www.leader755.com/leader755/65405.html"/>
+    <id>https://www.leader755.com/leader755/65405.html</id>
+    <published>2021-05-22T03:46:00.000Z</published>
+    <updated>2021-05-22T03:46:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;背景：&lt;br&gt;某些时候，需要让网站一键变灰。只需要短短几行代码就能做到。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;1-直接上代码&quot;&gt;&lt;a href=&quot;#1-直接上代码&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="一键置灰" scheme="https://www.leader755.com/categories/%E4%B8%80%E9%94%AE%E7%BD%AE%E7%81%B0/"/>
+    
+    
+      <category term="hexo" scheme="https://www.leader755.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>linux 的定时任务crontab</title>
@@ -47,35 +237,6 @@
   </entry>
   
   <entry>
-    <title>linux安装 docker</title>
-    <link href="https://www.leader755.com/leader755/10309.html"/>
-    <id>https://www.leader755.com/leader755/10309.html</id>
-    <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2021-05-05T11:55:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1、安装前置条件&quot;&gt;&lt;a href=&quot;#1、安装前置条件&quot; class=&quot;headerlink&quot; title=&quot;1、安装前置条件&quot;&gt;&lt;/a&gt;1、安装前置条件&lt;/h2&gt;&lt;p&gt;docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是
-        
-      
-    
-    </summary>
-    
-    
-      <category term="docker" scheme="https://www.leader755.com/categories/docker/"/>
-    
-    
-      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
-    
-      <category term="docker" scheme="https://www.leader755.com/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
     <title>jenkins配置 jdk，maven，git，node</title>
     <link href="https://www.leader755.com/leader755/1179.html"/>
     <id>https://www.leader755.com/leader755/1179.html</id>
@@ -101,6 +262,35 @@
       <category term="jdk" scheme="https://www.leader755.com/tags/jdk/"/>
     
       <category term="node" scheme="https://www.leader755.com/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux安装 docker</title>
+    <link href="https://www.leader755.com/leader755/10309.html"/>
+    <id>https://www.leader755.com/leader755/10309.html</id>
+    <published>2021-05-05T11:55:00.000Z</published>
+    <updated>2021-05-05T11:55:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1、安装前置条件&quot;&gt;&lt;a href=&quot;#1、安装前置条件&quot; class=&quot;headerlink&quot; title=&quot;1、安装前置条件&quot;&gt;&lt;/a&gt;1、安装前置条件&lt;/h2&gt;&lt;p&gt;docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是
+        
+      
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="https://www.leader755.com/categories/docker/"/>
+    
+    
+      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
+    
+      <category term="docker" scheme="https://www.leader755.com/tags/docker/"/>
     
   </entry>
   
@@ -398,202 +588,6 @@
     
     
       <category term="github 阅读" scheme="https://www.leader755.com/tags/github-%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客增加音乐播放器功能</title>
-    <link href="https://www.leader755.com/leader755/44650.html"/>
-    <id>https://www.leader755.com/leader755/44650.html</id>
-    <published>2021-01-21T16:50:23.000Z</published>
-    <updated>2021-01-21T16:50:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-在-layout-ejs-中-body-标签内粘贴入以下&quot;&gt;&lt;a href=&quot;#1-在-layout-ejs-中-body-标签内粘贴入以下&quot; class=&quot;headerlink&quot; title=&quot;1.在 layout.ejs 中 body
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo 博客" scheme="https://www.leader755.com/categories/hexo-%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="音乐播放器" scheme="https://www.leader755.com/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小程序轮播图片高度自适应</title>
-    <link href="https://www.leader755.com/leader755/23959.html"/>
-    <id>https://www.leader755.com/leader755/23959.html</id>
-    <published>2021-01-19T10:50:23.000Z</published>
-    <updated>2021-01-19T10:50:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;微信小程序中使用 swiper 组件可以实现图片轮播效果，但是默认 swiper 高度是固定的 150px，如果项目中图片大于固定高度就会被隐藏，所以本篇文章要实现轮播图片的高度自适应。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-    
-      <category term="微信小程序" scheme="https://www.leader755.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-      <category term="swiper" scheme="https://www.leader755.com/tags/swiper/"/>
-    
-      <category term="图片自适应" scheme="https://www.leader755.com/tags/%E5%9B%BE%E7%89%87%E8%87%AA%E9%80%82%E5%BA%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github 的actions重试</title>
-    <link href="https://www.leader755.com/leader755/31085.html"/>
-    <id>https://www.leader755.com/leader755/31085.html</id>
-    <published>2021-01-18T13:38:23.000Z</published>
-    <updated>2021-01-18T13:38:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;github 的 actions 中运行失败，重试步骤（或整个作业）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;1-Github-actions-解决办法&quot;&gt;&lt;a href=&quot;#1-Github-actions-解决办法&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端工程化" scheme="https://www.leader755.com/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
-    
-    
-      <category term="github" scheme="https://www.leader755.com/tags/github/"/>
-    
-      <category term="actions" scheme="https://www.leader755.com/tags/actions/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客园主题美化</title>
-    <link href="https://www.leader755.com/leader755/33440.html"/>
-    <id>https://www.leader755.com/leader755/33440.html</id>
-    <published>2021-01-16T16:38:23.000Z</published>
-    <updated>2021-01-16T16:38:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-主题效果&quot;&gt;&lt;a href=&quot;#1-主题效果&quot; class=&quot;headerlink&quot; title=&quot;1.主题效果&quot;&gt;&lt;/a&gt;1.主题效果&lt;/h2&gt;&lt;p&gt;实际网站效果 &lt;a href=&quot;https://www.cnblogs.com/leader755/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="主题美化" scheme="https://www.leader755.com/categories/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
-    
-    
-      <category term="博客园美化" scheme="https://www.leader755.com/tags/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E7%BE%8E%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue插槽</title>
-    <link href="https://www.leader755.com/leader755/43144.html"/>
-    <id>https://www.leader755.com/leader755/43144.html</id>
-    <published>2021-01-13T13:38:23.000Z</published>
-    <updated>2021-01-13T13:38:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;##&lt;/p&gt;
-&lt;h2 id=&quot;1-单个插槽-默认插槽-匿名插槽&quot;&gt;&lt;a href=&quot;#1-单个插槽-默认插槽-匿名插槽&quot; class=&quot;headerlink&quot; title=&quot;1.单个插槽 | 默认插槽 | 匿名插槽&quot;&gt;&lt;/a&gt;1.单个插槽 | 默认插槽 |
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
-    
-    
-      <category term="vue 插槽" scheme="https://www.leader755.com/tags/vue-%E6%8F%92%E6%A7%BD/"/>
-    
-      <category term="slot" scheme="https://www.leader755.com/tags/slot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谈谈你不知道的gist</title>
-    <link href="https://www.leader755.com/leader755/1491.html"/>
-    <id>https://www.leader755.com/leader755/1491.html</id>
-    <published>2021-01-04T13:38:23.000Z</published>
-    <updated>2021-01-04T13:38:23.000Z</updated>
-    
-    <summary type="html">
-    
-      Gist 是一种与其他人共享代码片段和粘贴的简单方法。 当您需要与同事或朋友共享示例代码或技术时，可以使用它。
-    
-    </summary>
-    
-    
-      <category term="share code" scheme="https://www.leader755.com/categories/share-code/"/>
-    
-    
-      <category term="gist" scheme="https://www.leader755.com/tags/gist/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小程序开发知识必备-自定义组件</title>
-    <link href="https://www.leader755.com/leader755/31772.html"/>
-    <id>https://www.leader755.com/leader755/31772.html</id>
-    <published>2020-12-22T13:06:23.000Z</published>
-    <updated>2020-12-22T13:06:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-认识自定义组件的属性、数据、方法和生命周期。&quot;&gt;&lt;a href=&quot;#1-认识自定义组件的属性、数据、方法和生命周期。&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="微信小程序" scheme="https://www.leader755.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-      <category term="小程序自定义组件" scheme="https://www.leader755.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/"/>
     
   </entry>
   
