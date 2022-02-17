@@ -937,10 +937,10 @@
   }</code></pre>
 <h4 id="传事件"><a href="#传事件" class="headerlink" title="传事件"></a>传事件</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//子组件给父组件传递值（通过方法传值）</span>
 <span class="token comment" spellcheck="true">// 这里的 getNowData 要和外部的 bind:getNowData ，名称一定要对应</span>
-<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">triggerEvent</span><span class="token punctuation">(</span><span class="token string">"getNowData"</span><span class="token punctuation">,</span> nowDate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">triggerEvent</span><span class="token punctuation">(</span><span class="token string">'getNowData'</span><span class="token punctuation">,</span> nowDate<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment" spellcheck="true">//父组件</span>
-<span class="token operator">&lt;</span>v<span class="token operator">-</span>select bind<span class="token punctuation">:</span>getNowData<span class="token operator">=</span><span class="token string">"getCurrentTextAction"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>v<span class="token operator">-</span>elect<span class="token operator">></span><span class="token punctuation">;</span></code></pre>
+<span class="token operator">&lt;</span>v<span class="token operator">-</span>select  bind<span class="token punctuation">:</span>getNowData<span class="token operator">=</span><span class="token string">'getCurrentTextAction'</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>v<span class="token operator">-</span>elect<span class="token operator">></span></code></pre>
 <p>文章参考：<br><a href="https://www.cnblogs.com/xiao-apple36/p/12867092.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiao-apple36/p/12867092.html</a><br><a href="https://www.jianshu.com/p/1b83e00738a9" target="_blank" rel="noopener">https://www.jianshu.com/p/1b83e00738a9</a><br><a href="https://blog.csdn.net/qq_35872379/article/details/87935688" target="_blank" rel="noopener">https://blog.csdn.net/qq_35872379/article/details/87935688</a></p>
 
       </div>

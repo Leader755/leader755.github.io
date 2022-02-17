@@ -6,8 +6,9 @@
   <meta charset="utf-8">
   <meta name="keywords" content="5.hexo文档部署到 Github和 coding, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
   <meta name="description" content="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：如果不部署到 coding，就只写 github 就行。
-deploy: type: git;
-repo: g">
+deploy:
+  type: git
+  repo">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -638,10 +639,12 @@ repo: g">
       <div id="articleContent">
 
         <h2 id="1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："><a href="#1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：" class="headerlink" title="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："></a>1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&size=44477&status=done&style=none&width=526" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#align=left&display=inline&height=120&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&size=33032&status=done&style=none&width=486" alt="image.png"><br>如果不部署到 coding，就只写 github 就行。</p>
-<pre class=" language-javascript"><code class="language-javascript">deploy<span class="token punctuation">:</span> type<span class="token punctuation">:</span> git<span class="token punctuation">;</span>
-repo<span class="token punctuation">:</span> github<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//github.com/Leader755/leader755.github.io.git</span>
-https<span class="token punctuation">:</span> coding<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">//e.coding.net/Leader755/leader755.coding.git</span>
-https<span class="token punctuation">:</span> branch<span class="token punctuation">:</span> master<span class="token punctuation">;</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript">deploy<span class="token punctuation">:</span>
+  type<span class="token punctuation">:</span> git
+  repo<span class="token punctuation">:</span>
+       github<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>Leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git
+    coding<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>e<span class="token punctuation">.</span>coding<span class="token punctuation">.</span>net<span class="token operator">/</span>Leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>coding<span class="token punctuation">.</span>git
+    branch<span class="token punctuation">:</span> master</code></pre>
 <h2 id="2：要安装一个部署插件-hexo-deployer-git。"><a href="#2：要安装一个部署插件-hexo-deployer-git。" class="headerlink" title="2：要安装一个部署插件 hexo-deployer-git。"></a>2：要安装一个部署插件 <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>。</h2><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save</code></pre>
 <h2 id="3：发布到-github"><a href="#3：发布到-github" class="headerlink" title="3：发布到 github"></a>3：发布到 github</h2><p>最后执行以下命令就可以部署上传啦，以下 g 是 generate 缩写，d 是 deploy 缩写：</p>
 <pre class=" language-javascript"><code class="language-javascript">hexo g <span class="token operator">-</span>d</code></pre>
