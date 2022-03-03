@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="SSH配置, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
+  <meta name="keywords" content="生成SSH秘钥, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
   <meta name="description" content="一.配置单个 ssh单个 ssh key 是指一台 git 服务器只有一个 git 账号。也就是说，如果你不仅在 github 有账号，在 coding 也有账号，甚至团队内部自己搭建了私有的 git 服务器等，这些服务器都可以公用同一个 ">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google-site-verification" content="dUxZtBuXm550K6pq70-LL7yu7wQQHwvXpvMF8MwMQBU" />
-  <title>SSH配置 | leader755 Blogs</title>
+  <title>生成SSH秘钥 | leader755 Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
@@ -448,12 +448,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/20.jpg')">
   <div class="container" style="right: 0px;left: 0px;">
     <div class="row">
       <div class="col s12 m12 l12">
         <div class="brand">
-          <h1 class="description center-align post-title">SSH配置</h1>
+          <h1 class="description center-align post-title">生成SSH秘钥</h1>
         </div>
       </div>
     </div>
@@ -642,31 +642,31 @@
 <pre class=" language-bash"><code class="language-bash">//生公钥私钥
 ssh-keygen -t rsa -C <span class="token string">"1181012791@qq.com"</span>
 
-//复制公钥（win10上默认的 公钥文件名称是 id_rsa.pub）
+//复制公钥（win10上默认的 公钥文件名称默认是 id_rsa.pub）可自定义名称
 <span class="token function">cd</span> ~/.ssh
 <span class="token function">cat</span> id_rsa.pub</code></pre>
 <h2 id="二-配置多个-ssh"><a href="#二-配置多个-ssh" class="headerlink" title="二.配置多个 ssh"></a>二.配置多个 ssh</h2><h3 id="1-配置-github-com-的-ssh"><a href="#1-配置-github-com-的-ssh" class="headerlink" title="1.配置 github.com 的 ssh"></a>1.配置 github.com 的 ssh</h3><h4 id="1-gt-生成-github-com-的私钥公钥"><a href="#1-gt-生成-github-com-的私钥公钥" class="headerlink" title="1&gt;生成 github.com 的私钥公钥"></a>1&gt;生成 github.com 的私钥公钥</h4><blockquote>
 <p>建 github 对应的 sshkey，命名为 id_rsa_github，密码 *123456 **（自行设置）</p>
 </blockquote>
 <pre class=" language-bash"><code class="language-bash">ssh-keygen -t rsa -C 1181012791@qq.com</code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608198518773-9aaba593-af5e-4848-880f-64cf0e7d3a9e.png#height=357&id=OIznt&margin=%5Bobject%20Object%5D&name=image.png&originHeight=357&originWidth=684&originalType=binary&size=30820&status=done&style=none&width=684" alt="image.png"></p>
-<h4 id="2-gt-查看复制-id-rsa-github-pub-公钥"><a href="#2-gt-查看复制-id-rsa-github-pub-公钥" class="headerlink" title="2&gt;查看复制 id_rsa.github.pub 公钥"></a>2&gt;查看复制 id_rsa.github.pub 公钥</h4><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608205775573-1d92d41d-8a26-477a-849a-db1bb704719c.png#height=111&id=vOEao&margin=%5Bobject%20Object%5D&name=image.png&originHeight=111&originWidth=688&originalType=binary&size=63658&status=done&style=none&width=688" alt="image.png"></p>
-<h4 id="3-gt-github-上传公钥"><a href="#3-gt-github-上传公钥" class="headerlink" title="3&gt;github 上传公钥"></a>3&gt;github 上传公钥</h4><p>公钥是以 .pub 结尾的文件，私钥在本地。GitHub 添加 SSH key 的方式如下图所示，将公钥复制到 value，name 自己随意填就行。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608205258621-7259fa21-2f4c-4408-ad38-4f346e567b89.png#height=798&id=nLQtY&margin=%5Bobject%20Object%5D&name=image.png&originHeight=798&originWidth=1278&originalType=binary&size=81081&status=done&style=none&width=1278" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608198518773-9aaba593-af5e-4848-880f-64cf0e7d3a9e.png#crop=0&crop=0&crop=1&crop=1&height=357&id=OIznt&margin=%5Bobject%20Object%5D&name=image.png&originHeight=357&originWidth=684&originalType=binary&ratio=1&rotation=0&showTitle=false&size=30820&status=done&style=none&title=&width=684" alt="image.png"></p>
+<h4 id="2-gt-查看复制-id-rsa-github-pub-公钥"><a href="#2-gt-查看复制-id-rsa-github-pub-公钥" class="headerlink" title="2&gt;查看复制 id_rsa.github.pub 公钥"></a>2&gt;查看复制 id_rsa.github.pub 公钥</h4><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608205775573-1d92d41d-8a26-477a-849a-db1bb704719c.png#crop=0&crop=0&crop=1&crop=1&height=111&id=vOEao&margin=%5Bobject%20Object%5D&name=image.png&originHeight=111&originWidth=688&originalType=binary&ratio=1&rotation=0&showTitle=false&size=63658&status=done&style=none&title=&width=688" alt="image.png"></p>
+<h4 id="3-gt-github-上传公钥"><a href="#3-gt-github-上传公钥" class="headerlink" title="3&gt;github 上传公钥"></a>3&gt;github 上传公钥</h4><p>公钥是以 .pub 结尾的文件，私钥在本地。GitHub 添加 SSH key 的方式如下图所示，将公钥复制到 value，name 自己随意填就行。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608205258621-7259fa21-2f4c-4408-ad38-4f346e567b89.png#crop=0&crop=0&crop=1&crop=1&height=798&id=nLQtY&margin=%5Bobject%20Object%5D&name=image.png&originHeight=798&originWidth=1278&originalType=binary&ratio=1&rotation=0&showTitle=false&size=81081&status=done&style=none&title=&width=1278" alt="image.png"></p>
 <h4 id="4-gt-测试"><a href="#4-gt-测试" class="headerlink" title="4&gt;测试"></a>4&gt;测试</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">ssh</span> -T git@github.com</code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608552705239-36321810-bc84-440e-b467-f6d7f20ba6b5.png#height=115&id=wNeyA&margin=%5Bobject%20Object%5D&name=image.png&originHeight=115&originWidth=803&originalType=binary&size=13994&status=done&style=none&width=803" alt="image.png"><br>验证结果消息是否包含您的用户名。如果收到“权限被拒绝”消息，请参阅<a href="https://help.github.com/articles/error-permission-denied-publickey" target="_blank" rel="noopener">“错误：权限被拒绝（公钥）”</a>。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608552705239-36321810-bc84-440e-b467-f6d7f20ba6b5.png#crop=0&crop=0&crop=1&crop=1&height=115&id=wNeyA&margin=%5Bobject%20Object%5D&name=image.png&originHeight=115&originWidth=803&originalType=binary&ratio=1&rotation=0&showTitle=false&size=13994&status=done&style=none&title=&width=803" alt="image.png"><br>验证结果消息是否包含您的用户名。如果收到“权限被拒绝”消息，请参阅<a href="https://help.github.com/articles/error-permission-denied-publickey" target="_blank" rel="noopener">“错误：权限被拒绝（公钥）”</a>。</p>
 <h3 id="2-配置-gitee-com-的-ssh"><a href="#2-配置-gitee-com-的-ssh" class="headerlink" title="2.配置 gitee.com 的 ssh"></a>2.配置 gitee.com 的 ssh</h3><h4 id="1-gt-生成-gitee-com-的私钥公钥"><a href="#1-gt-生成-gitee-com-的私钥公钥" class="headerlink" title="1&gt;生成 gitee.com 的私钥公钥"></a>1&gt;生成 gitee.com 的私钥公钥</h4><blockquote>
 <p><strong>创建 gitee 对应的 sshkey，命名为</strong>id_rsa_gitee，密码 *123456 **（自行设置）。<br>(邮箱地址可以相同或者不同，本文相同)</p>
 </blockquote>
 <pre class=" language-bash"><code class="language-bash">ssh-keygen -t rsa -C 1181012791@qq.com</code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608199525357-d7f7367c-6e47-4786-a74c-d528e0cb4cd2.png#height=327&id=PzYbL&margin=%5Bobject%20Object%5D&name=image.png&originHeight=327&originWidth=677&originalType=binary&size=28208&status=done&style=none&width=677" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608205596390-3321816d-316a-4c36-bf96-8b43fa45bc09.png#height=412&id=h7B4W&margin=%5Bobject%20Object%5D&name=image.png&originHeight=412&originWidth=688&originalType=binary&size=245271&status=done&style=none&width=688" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608199525357-d7f7367c-6e47-4786-a74c-d528e0cb4cd2.png#crop=0&crop=0&crop=1&crop=1&height=327&id=PzYbL&margin=%5Bobject%20Object%5D&name=image.png&originHeight=327&originWidth=677&originalType=binary&ratio=1&rotation=0&showTitle=false&size=28208&status=done&style=none&title=&width=677" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608205596390-3321816d-316a-4c36-bf96-8b43fa45bc09.png#crop=0&crop=0&crop=1&crop=1&height=412&id=h7B4W&margin=%5Bobject%20Object%5D&name=image.png&originHeight=412&originWidth=688&originalType=binary&ratio=1&rotation=0&showTitle=false&size=245271&status=done&style=none&title=&width=688" alt="image.png"></p>
 <h2 id="三-查看、复制-key"><a href="#三-查看、复制-key" class="headerlink" title="三.查看、复制 key"></a>三.查看、复制 key</h2><h3 id="1-查看-ssh-目录下的所有的文件"><a href="#1-查看-ssh-目录下的所有的文件" class="headerlink" title="1.查看~/.ssh/目录下的所有的文件"></a>1.查看~/.ssh/目录下的所有的文件</h3><pre class=" language-bash"><code class="language-bash">//切换到 ~/.ssh 目录
 <span class="token function">cd</span> ~/.shh
 
 //查看
 ll
 <span class="token function">ls</span></code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608204813131-8bf028e5-dfc8-4bd5-b68a-bb767275139f.png#height=215&id=PKbHm&margin=%5Bobject%20Object%5D&name=image.png&originHeight=215&originWidth=683&originalType=binary&size=24276&status=done&style=none&width=683" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1608204813131-8bf028e5-dfc8-4bd5-b68a-bb767275139f.png#crop=0&crop=0&crop=1&crop=1&height=215&id=PKbHm&margin=%5Bobject%20Object%5D&name=image.png&originHeight=215&originWidth=683&originalType=binary&ratio=1&rotation=0&showTitle=false&size=24276&status=done&style=none&title=&width=683" alt="image.png"></p>
 <h3 id="2-文本编辑工具查看"><a href="#2-文本编辑工具查看" class="headerlink" title="2.文本编辑工具查看"></a>2.文本编辑工具查看</h3><blockquote>
 <p>切换到 ~/.shh 文件夹，选择使用文本编辑器 打开，id_rsa_pub(上面自定义的文件名称，默认为 id_rsa_pub)文件，全部复制。</p>
 </blockquote>
@@ -733,7 +733,7 @@ Hi yourname<span class="token operator">!</span> You've successfully authenticat
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.leader755.com/leader755/20181.html">https://www.leader755.com/leader755/20181.html</a>
+                    <a href="https://www.leader755.com/leader755/14076.html">https://www.leader755.com/leader755/14076.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
