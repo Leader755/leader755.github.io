@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2022-03-03T00:02:34.194Z</updated>
+  <updated>2022-03-03T01:07:18.419Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.leader755.com/leader755/62737.html"/>
     <id>https://www.leader755.com/leader755/62737.html</id>
     <published>2022-08-05T17:24:00.000Z</published>
-    <updated>2022-03-03T00:02:34.194Z</updated>
+    <updated>2022-03-03T01:07:18.419Z</updated>
     
     <summary type="html">
     
@@ -41,6 +41,35 @@
     
     
       <category term="小程序" scheme="https://www.leader755.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客自动化部署</title>
+    <link href="https://www.leader755.com/leader755/16745.html"/>
+    <id>https://www.leader755.com/leader755/16745.html</id>
+    <published>2022-03-02T00:07:00.000Z</published>
+    <updated>2022-03-03T01:07:18.415Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;为什么要写-Blog？&quot;&gt;&lt;a href=&quot;#为什么要写-Blog？&quot; class=&quot;headerlink&quot; title=&quot;为什么要写 Blog？&quot;&gt;&lt;/a&gt;为什么要写 Blog？&lt;/h2&gt;&lt;p&gt;是啊，为什么要写
+        
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="https://www.leader755.com/categories/blog/"/>
+    
+    
+      <category term="自动化" scheme="https://www.leader755.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+      <category term="部署" scheme="https://www.leader755.com/tags/%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   
@@ -214,35 +243,6 @@
   </entry>
   
   <entry>
-    <title>linux安装 docker</title>
-    <link href="https://www.leader755.com/leader755/10309.html"/>
-    <id>https://www.leader755.com/leader755/10309.html</id>
-    <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2021-05-05T11:55:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1、安装前置条件&quot;&gt;&lt;a href=&quot;#1、安装前置条件&quot; class=&quot;headerlink&quot; title=&quot;1、安装前置条件&quot;&gt;&lt;/a&gt;1、安装前置条件&lt;/h2&gt;&lt;p&gt;docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是
-        
-      
-    
-    </summary>
-    
-    
-      <category term="docker" scheme="https://www.leader755.com/categories/docker/"/>
-    
-    
-      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
-    
-      <category term="docker" scheme="https://www.leader755.com/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
     <title>jenkins配置 jdk，maven，git，node</title>
     <link href="https://www.leader755.com/leader755/1179.html"/>
     <id>https://www.leader755.com/leader755/1179.html</id>
@@ -268,6 +268,35 @@
       <category term="jdk" scheme="https://www.leader755.com/tags/jdk/"/>
     
       <category term="node" scheme="https://www.leader755.com/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux安装 docker</title>
+    <link href="https://www.leader755.com/leader755/10309.html"/>
+    <id>https://www.leader755.com/leader755/10309.html</id>
+    <published>2021-05-05T11:55:00.000Z</published>
+    <updated>2021-05-05T11:55:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1、安装前置条件&quot;&gt;&lt;a href=&quot;#1、安装前置条件&quot; class=&quot;headerlink&quot; title=&quot;1、安装前置条件&quot;&gt;&lt;/a&gt;1、安装前置条件&lt;/h2&gt;&lt;p&gt;docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是
+        
+      
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="https://www.leader755.com/categories/docker/"/>
+    
+    
+      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
+    
+      <category term="docker" scheme="https://www.leader755.com/tags/docker/"/>
     
   </entry>
   
@@ -429,7 +458,7 @@
     <link href="https://www.leader755.com/leader755/50783.html"/>
     <id>https://www.leader755.com/leader755/50783.html</id>
     <published>2021-04-21T13:55:23.000Z</published>
-    <updated>2022-03-03T00:02:34.190Z</updated>
+    <updated>2022-03-03T01:07:18.411Z</updated>
     
     <summary type="html">
     
@@ -565,33 +594,6 @@
     
     
       <category term="github 阅读" scheme="https://www.leader755.com/tags/github-%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客增加音乐播放器功能</title>
-    <link href="https://www.leader755.com/leader755/44650.html"/>
-    <id>https://www.leader755.com/leader755/44650.html</id>
-    <published>2021-01-21T16:50:23.000Z</published>
-    <updated>2021-01-21T16:50:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-在-layout-ejs-中-body-标签内粘贴入以下&quot;&gt;&lt;a href=&quot;#1-在-layout-ejs-中-body-标签内粘贴入以下&quot; class=&quot;headerlink&quot; title=&quot;1.在 layout.ejs 中 body
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo 博客" scheme="https://www.leader755.com/categories/hexo-%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="音乐播放器" scheme="https://www.leader755.com/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
     
   </entry>
   
