@@ -618,7 +618,7 @@ hexo 官网：https://hexo.i">
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          796
+          847
         </div>
         
 
@@ -761,8 +761,17 @@ hexo server               <span class="token comment" spellcheck="true">//启动
   <span class="token punctuation">}</span></code></pre>
 <p>##</p>
 <h2 id="三-全自动部署博客"><a href="#三-全自动部署博客" class="headerlink" title="三.全自动部署博客"></a>三.全自动部署博客</h2><blockquote>
-<p>使用 Hexo + Github + 语雀 + yuque-hexo +actions+severless 打造全自动持续集成个人博客，云端写作，自动部署，完美体验~。</p>
+<p>使用 Hexo + Github + 语雀 + yuque-hexo +actions+severless + jenkins 打造全自动持续集成个人博客，云端写作，自动部署，完美体验~。</p>
 </blockquote>
+<p>​</p>
+<p>整体流程：<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646269646502-af190978-7f2b-44e6-813b-caffd7e5928b.png#clientId=u9e229585-be37-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=223&id=u0c4b2cc0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=446&originWidth=1268&originalType=binary&ratio=1&rotation=0&showTitle=false&size=33636&status=done&style=none&taskId=u77ab6dd8-eb11-40bb-850d-b3c7db51633&title=&width=634" alt="image.png"></p>
+<ul>
+<li>语雀发布一篇文章</li>
+<li>webhook 调用 serverless 函数</li>
+<li>serverless 发起请求 trigger 一个 build 任务</li>
+<li>travis-ci 同步语雀文章并构建 hexo</li>
+<li>github 生成静态页面展示</li>
+</ul>
 <p>​</p>
 <p>​</p>
 
