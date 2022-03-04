@@ -366,7 +366,7 @@ yuque<span class="token operator">-</span>hexo clean</code></pre>
           npm install yuque-hexo -g
           npm install</span>
 
-      <span class="token comment" spellcheck="true"># 此处请勿使用hexo clean&amp;&amp;yuque-hexo（重新构建时无需此命令行）忽略此条命令</span>
+      <span class="token comment" spellcheck="true"># 此处请勿使用hexo clean&amp;&amp;yuque-hexo（重新构建时无需此命令行）同步语雀文章</span>
       <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> yuque<span class="token punctuation">-</span>hexo sync
         <span class="token key atrule">env</span><span class="token punctuation">:</span>
           <span class="token key atrule">YUQUE_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.YUQUE_TOKEN_HEXO_SYNC_GITHUB_ONLINE<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true"># from: 这里是YUQUE_TOKEN: $不能随意改</span>
