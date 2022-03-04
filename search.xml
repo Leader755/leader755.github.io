@@ -5687,7 +5687,7 @@ hexo server               <span class="token comment" spellcheck="true">//启动
 <h3 id="2-hexo-的主题配置-https-www-yuque-com-docs-share-30051f74-be55-4a32-adc5-9f6b26999e1d-《7-hexo-主题配置》-以-常用插件-https-www-yuque-com-docs-share-7892854b-88f5-408d-b1d5-7f2195251637-《6-hexo-插件篇（必看）》"><a href="#2-hexo-的主题配置-https-www-yuque-com-docs-share-30051f74-be55-4a32-adc5-9f6b26999e1d-《7-hexo-主题配置》-以-常用插件-https-www-yuque-com-docs-share-7892854b-88f5-408d-b1d5-7f2195251637-《6-hexo-插件篇（必看）》" class="headerlink" title="2.[hexo 的主题配置](https://www.yuque.com/docs/share/30051f74-be55-4a32-adc5-9f6b26999e1d?# 《7.hexo 主题配置》) 以 [常用插件](https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?# 《6.hexo 插件篇（必看）》)"></a>2.[hexo 的主题配置](<a href="https://www.yuque.com/docs/share/30051f74-be55-4a32-adc5-9f6b26999e1d?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/30051f74-be55-4a32-adc5-9f6b26999e1d?#</a> 《7.hexo 主题配置》) 以 [常用插件](<a href="https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?#</a> 《6.hexo 插件篇（必看）》)</h3><p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646267896636-404c358f-0c99-4195-966b-98adb34cd8f9.png#clientId=u1d289fd2-cb50-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=375&id=uc5cc75b9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1098&originWidth=756&originalType=binary&ratio=1&rotation=0&showTitle=false&size=112142&status=done&style=none&taskId=u3bcc9ed4-5cb1-4316-a54a-77670b0f13e&title=&width=258" alt="image.png"></p>
 <pre class=" language-javascript"><code class="language-javascript">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>iissnan<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next</code></pre>
 <pre class=" language-javascript"><code class="language-javascript">theme<span class="token punctuation">:</span> next<span class="token punctuation">;</span></code></pre>
-<h3 id="3-hexo-博客部署到-Github-https-www-yuque-com-docs-share-2f8ee538-dee2-48fa-81aa-df649c7a6a5f-《5-hexo-博客部署到-Github-和-coding》"><a href="#3-hexo-博客部署到-Github-https-www-yuque-com-docs-share-2f8ee538-dee2-48fa-81aa-df649c7a6a5f-《5-hexo-博客部署到-Github-和-coding》" class="headerlink" title="3.[hexo 博客部署到 Github](https://www.yuque.com/docs/share/2f8ee538-dee2-48fa-81aa-df649c7a6a5f?# 《5.hexo 博客部署到 Github 和 coding》)"></a>3.[hexo 博客部署到 Github](<a href="https://www.yuque.com/docs/share/2f8ee538-dee2-48fa-81aa-df649c7a6a5f?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/2f8ee538-dee2-48fa-81aa-df649c7a6a5f?#</a> 《5.hexo 博客部署到 Github 和 coding》)</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save</code></pre>
+<h3 id="3-hexo-博客部署到-Github"><a href="#3-hexo-博客部署到-Github" class="headerlink" title="3.hexo 博客部署到 Github"></a>3.<a href="https://www.yuque.com/leader755/blog/diqcug" target="_blank" rel="noopener">hexo 博客部署到 Github</a></h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save</code></pre>
 <pre class=" language-javascript"><code class="language-javascript">deploy<span class="token punctuation">:</span>
   <span class="token operator">-</span> type<span class="token punctuation">:</span> <span class="token string">'git'</span>
   repo<span class="token punctuation">:</span>
@@ -5896,7 +5896,63 @@ jobs<span class="token punctuation">:</span>
 <p>利用 GitHub Actions 实现博客自动发布，将静态博客页面部署到多个服务器上，比如 GitHub Pages、Gitee pages 、云服务器上。</p>
 </blockquote>
 <p>​</p>
-<h3 id="4-jenkins-的自动化部署"><a href="#4-jenkins-的自动化部署" class="headerlink" title="4.jenkins 的自动化部署"></a>4.jenkins 的自动化部署</h3><p><a href="https://www.yuque.com/leader755/blog/vx9gsg" target="_blank" rel="noopener">Github 的 jenkins 的自动化部署</a><br><a href="https://www.yuque.com/leader755/blog/eswt7t" target="_blank" rel="noopener">Gitee 的 jenkins 的自动化部署</a></p>
+<h3 id="4-jenkins-的自动化部署"><a href="#4-jenkins-的自动化部署" class="headerlink" title="4.jenkins 的自动化部署"></a>4.jenkins 的自动化部署</h3><ul>
+<li><a href="https://www.yuque.com/leader755/blog/slfxnw" target="_blank" rel="noopener">在 CentOS7 上搭建 Jenkins</a></li>
+<li><a href="https://www.yuque.com/leader755/blog/vx9gsg" target="_blank" rel="noopener">Github 的 jenkins 的自动化部署</a></li>
+<li><a href="https://www.yuque.com/leader755/blog/eswt7t" target="_blank" rel="noopener">Gitee 的 jenkins 的自动化部署</a></li>
+</ul>
+<h4 id="1-gt-搭建-jenkins"><a href="#1-gt-搭建-jenkins" class="headerlink" title="1&gt;搭建 jenkins"></a>1&gt;搭建 jenkins</h4><p>​</p>
+<ul>
+<li><strong>yum 安装</strong></li>
+</ul>
+<pre class=" language-python"><code class="language-python"><span class="token operator">//</span>yum安装 （yum的repos中默认是没有Jenkins的，需要先将Jenkins存储库添加到yum repos<span class="token punctuation">)</span>
+<span class="token number">1</span><span class="token operator">></span>cd <span class="token operator">~</span> <span class="token operator">//</span>回到主目录进行安装 jenkins
+<span class="token number">2</span><span class="token operator">></span>sudo wget <span class="token operator">-</span>O <span class="token operator">/</span>etc<span class="token operator">/</span>yum<span class="token punctuation">.</span>repos<span class="token punctuation">.</span>d<span class="token operator">/</span>jenkins<span class="token punctuation">.</span>repo https<span class="token punctuation">:</span><span class="token operator">//</span>pkg<span class="token punctuation">.</span>jenkins<span class="token punctuation">.</span>io<span class="token operator">/</span>redhat<span class="token operator">-</span>stable<span class="token operator">/</span>jenkins<span class="token punctuation">.</span>repo
+<span class="token number">3</span><span class="token operator">></span>sudo rpm <span class="token operator">-</span><span class="token operator">-</span><span class="token keyword">import</span> https<span class="token punctuation">:</span><span class="token operator">//</span>pkg<span class="token punctuation">.</span>jenkins<span class="token punctuation">.</span>io<span class="token operator">/</span>redhat<span class="token operator">-</span>stable<span class="token operator">/</span>jenkins<span class="token punctuation">.</span>io<span class="token punctuation">.</span>key
+<span class="token number">4</span><span class="token operator">></span>yum install jenkins <span class="token operator">//</span> 安装jenkins<span class="token punctuation">(</span>稳定版<span class="token punctuation">)</span></code></pre>
+<ul>
+<li><strong>修改用户为 root（为了不因为权限出现各种问题，这里直接使用 root）</strong></li>
+</ul>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> vim <span class="token operator">/</span>etc<span class="token operator">/</span>sysconfig<span class="token operator">/</span>jenkins
+<span class="token number">2</span><span class="token operator">></span>修改其中的<span class="token number">2</span>处为（防止权限问题）
+   JENKINS_USER<span class="token operator">=</span><span class="token string">"root"</span>
+   JENKINS_PORT<span class="token operator">=</span><span class="token string">"8081"</span>
+<span class="token number">3</span><span class="token operator">></span>查看到 jenkins根目录是 <span class="token string">"/var/lib/jenkins"</span></code></pre>
+<ul>
+<li><strong>启动 jenkins 服务（默认端口是 8080，目前已经修改为 8081）</strong></li>
+</ul>
+<pre class=" language-python"><code class="language-python">  <span class="token number">1</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true"># systemctl start jenkins.service  //启动 jenkins 服务</span>
+  <span class="token number">2</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true"># chkconfig jenkins on  //将Jenkins服务设置为开机启动</span>
+  <span class="token number">3</span><span class="token operator">></span>web访问页面<span class="token punctuation">:</span>   ip<span class="token operator">+</span>端口
+
+  <span class="token comment" spellcheck="true">#jenkins启动/停止/重启</span>
+  service jenkins start<span class="token operator">/</span>stop<span class="token operator">/</span>restart
+
+  <span class="token comment" spellcheck="true">#重载服务（由于前面修改了Jenkins启动脚本）</span>
+    sudo systemctl daemon<span class="token operator">-</span>reload
+
+  <span class="token comment" spellcheck="true">#查看 jenkins 信息</span>
+  ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep jenkins
+</code></pre>
+<p>​</p>
+<h4 id="2-gt-github-的-jenkins-自动化部署"><a href="#2-gt-github-的-jenkins-自动化部署" class="headerlink" title="2&gt;github 的 jenkins 自动化部署"></a>2&gt;github 的 jenkins 自动化部署</h4><ul>
+<li>创建一个空白项目</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646403860015-61adf3dc-7645-4b72-942d-ab0a159efb70.png#clientId=u4fb840f5-313a-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=404&id=u2f6f6395&margin=%5Bobject%20Object%5D&name=image.png&originHeight=808&originWidth=1500&originalType=binary&ratio=1&rotation=0&showTitle=false&size=176298&status=done&style=none&taskId=u1ff08f30-1f41-478b-bc63-0b97541befa&title=&width=750" alt="image.png"></p>
+<ul>
+<li>General 设置</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606051576608-6cc8989d-1206-4cf1-8535-01f5e183db41.png#crop=0&crop=0&crop=1&crop=1&height=690&id=gbgYZ&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1380&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=209155&status=done&style=none&title=&width=1278" alt="image.png"></p>
+<ul>
+<li>构建触发器，勾选 GitHub hook trigger for GITScm polling 即可</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606052327987-e91ac2b0-a7da-49c6-bb08-1c12b4068c59.png#crop=0&crop=0&crop=1&crop=1&height=263&id=bGMqz&margin=%5Bobject%20Object%5D&name=image.png&originHeight=526&originWidth=2178&originalType=binary&ratio=1&rotation=0&showTitle=false&size=71026&status=done&style=none&title=&width=1089" alt="image.png"></p>
+<ul>
+<li>设置超时的处理，解决 jenkins git timeout，设置时间为 60 分钟。</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606054780964-8808d4cd-cfa7-41e2-bf69-eab4f3bfa862.png#crop=0&crop=0&crop=1&crop=1&height=445&id=VJGND&margin=%5Bobject%20Object%5D&name=image.png&originHeight=890&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=182896&status=done&style=none&title=&width=1278" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606054616609-57c9bbb6-7697-4271-a12d-88901d115e03.png#crop=0&crop=0&crop=1&crop=1&height=598&id=YmelV&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1196&originWidth=2272&originalType=binary&ratio=1&rotation=0&showTitle=false&size=196033&status=done&style=none&title=&width=1136" alt="image.png"></p>
+<p>-</p>
 <p>​</p>
 <p>​</p>
 ]]></content>
