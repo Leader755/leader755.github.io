@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2022-03-04T15:30:38.364Z</updated>
+  <updated>2022-03-04T15:39:56.735Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.leader755.com/leader755/62737.html"/>
     <id>https://www.leader755.com/leader755/62737.html</id>
     <published>2022-08-05T17:24:00.000Z</published>
-    <updated>2022-03-04T15:30:38.364Z</updated>
+    <updated>2022-03-04T15:39:56.735Z</updated>
     
     <summary type="html">
     
@@ -49,7 +49,7 @@
     <link href="https://www.leader755.com/leader755/16745.html"/>
     <id>https://www.leader755.com/leader755/16745.html</id>
     <published>2022-03-02T00:07:00.000Z</published>
-    <updated>2022-03-04T15:30:38.360Z</updated>
+    <updated>2022-03-04T15:39:56.735Z</updated>
     
     <summary type="html">
     
@@ -74,11 +74,38 @@
   </entry>
   
   <entry>
+    <title>vuePress</title>
+    <link href="https://www.leader755.com/leader755/33285.html"/>
+    <id>https://www.leader755.com/leader755/33285.html</id>
+    <published>2022-02-04T13:38:23.000Z</published>
+    <updated>2022-03-04T15:39:56.735Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;VuePress 由两部分组成：第一部分是一个&lt;a href=&quot;https://github.com/vuejs/vuepress/tree/master/packages/%40vuepress/core&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vuePress" scheme="https://www.leader755.com/categories/vuePress/"/>
+    
+    
+      <category term="blog" scheme="https://www.leader755.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Serverless云函数自动化</title>
     <link href="https://www.leader755.com/leader755/33649.html"/>
     <id>https://www.leader755.com/leader755/33649.html</id>
     <published>2021-10-19T11:05:41.000Z</published>
-    <updated>2022-03-04T15:30:38.360Z</updated>
+    <updated>2022-03-04T15:39:56.735Z</updated>
     
     <summary type="html">
     
@@ -110,7 +137,7 @@
     <link href="https://www.leader755.com/leader755/60370.html"/>
     <id>https://www.leader755.com/leader755/60370.html</id>
     <published>2021-09-22T06:55:00.000Z</published>
-    <updated>2022-03-04T15:30:38.360Z</updated>
+    <updated>2022-03-04T15:39:56.735Z</updated>
     
     <summary type="html">
     
@@ -304,35 +331,6 @@
   </entry>
   
   <entry>
-    <title>linux安装 docker</title>
-    <link href="https://www.leader755.com/leader755/10309.html"/>
-    <id>https://www.leader755.com/leader755/10309.html</id>
-    <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2021-05-05T11:55:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1、安装前置条件&quot;&gt;&lt;a href=&quot;#1、安装前置条件&quot; class=&quot;headerlink&quot; title=&quot;1、安装前置条件&quot;&gt;&lt;/a&gt;1、安装前置条件&lt;/h2&gt;&lt;p&gt;docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是
-        
-      
-    
-    </summary>
-    
-    
-      <category term="docker" scheme="https://www.leader755.com/categories/docker/"/>
-    
-    
-      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
-    
-      <category term="docker" scheme="https://www.leader755.com/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
     <title>jenkins配置 jdk，maven，git，node</title>
     <link href="https://www.leader755.com/leader755/1179.html"/>
     <id>https://www.leader755.com/leader755/1179.html</id>
@@ -358,6 +356,35 @@
       <category term="jdk" scheme="https://www.leader755.com/tags/jdk/"/>
     
       <category term="node" scheme="https://www.leader755.com/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux安装 docker</title>
+    <link href="https://www.leader755.com/leader755/10309.html"/>
+    <id>https://www.leader755.com/leader755/10309.html</id>
+    <published>2021-05-05T11:55:00.000Z</published>
+    <updated>2021-05-05T11:55:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1、安装前置条件&quot;&gt;&lt;a href=&quot;#1、安装前置条件&quot; class=&quot;headerlink&quot; title=&quot;1、安装前置条件&quot;&gt;&lt;/a&gt;1、安装前置条件&lt;/h2&gt;&lt;p&gt;docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是
+        
+      
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="https://www.leader755.com/categories/docker/"/>
+    
+    
+      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
+    
+      <category term="docker" scheme="https://www.leader755.com/tags/docker/"/>
     
   </entry>
   
@@ -519,7 +546,7 @@
     <link href="https://www.leader755.com/leader755/50783.html"/>
     <id>https://www.leader755.com/leader755/50783.html</id>
     <published>2021-04-21T13:55:23.000Z</published>
-    <updated>2022-03-04T15:30:38.356Z</updated>
+    <updated>2022-03-04T15:39:56.727Z</updated>
     
     <summary type="html">
     
@@ -570,35 +597,6 @@
       <category term="vue 通信" scheme="https://www.leader755.com/tags/vue-%E9%80%9A%E4%BF%A1/"/>
     
       <category term="组件传值" scheme="https://www.leader755.com/tags/%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>节流和防抖</title>
-    <link href="https://www.leader755.com/leader755/7973.html"/>
-    <id>https://www.leader755.com/leader755/7973.html</id>
-    <published>2021-03-29T12:38:23.000Z</published>
-    <updated>2021-03-29T12:38:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;防抖&quot;&gt;&lt;a href=&quot;#防抖&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="js" scheme="https://www.leader755.com/categories/js/"/>
-    
-    
-      <category term="节流" scheme="https://www.leader755.com/tags/%E8%8A%82%E6%B5%81/"/>
-    
-      <category term="防抖" scheme="https://www.leader755.com/tags/%E9%98%B2%E6%8A%96/"/>
     
   </entry>
   
