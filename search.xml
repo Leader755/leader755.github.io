@@ -952,6 +952,23 @@ halo<span class="token punctuation">:</span>
       </tags>
   </entry>
   <entry>
+    <title>hexo使用的问题指南</title>
+    <url>/leader755/52181.html</url>
+    <content><![CDATA[<h3 id="1-hexo-g-d-会报错"><a href="#1-hexo-g-d-会报错" class="headerlink" title="1.hexo g -d 会报错"></a>1.hexo g -d 会报错</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588475689582-0959dce9-cdf9-4e4f-937b-175fcab6f7ce.png#align=left&display=inline&height=127&margin=%5Bobject%20Object%5D&name=image.png&originHeight=254&originWidth=1160&size=179534&status=done&style=none&width=580" alt="image.png"><br>win 本地仓库：将 https 改为 ssh</p>
+<pre class=" language-javascript"><code class="language-javascript">deploy：
+   type：git
+   repo：git@github<span class="token punctuation">.</span>com<span class="token punctuation">:</span>Leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git
+   branch：master</code></pre>
+<p>mac:</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>问题指南</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>halo配置 域名和 ssl</title>
     <url>/leader755/63549.html</url>
     <content><![CDATA[<h2 id="1-docker-环境"><a href="#1-docker-环境" class="headerlink" title="1 .docker 环境"></a>1 .docker 环境</h2><blockquote>
@@ -1055,23 +1072,6 @@ server <span class="token punctuation">{</span>
       <tags>
         <tag>halo</tag>
         <tag>halo 主题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo使用的问题指南</title>
-    <url>/leader755/52181.html</url>
-    <content><![CDATA[<h3 id="1-hexo-g-d-会报错"><a href="#1-hexo-g-d-会报错" class="headerlink" title="1.hexo g -d 会报错"></a>1.hexo g -d 会报错</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588475689582-0959dce9-cdf9-4e4f-937b-175fcab6f7ce.png#align=left&display=inline&height=127&margin=%5Bobject%20Object%5D&name=image.png&originHeight=254&originWidth=1160&size=179534&status=done&style=none&width=580" alt="image.png"><br>win 本地仓库：将 https 改为 ssh</p>
-<pre class=" language-javascript"><code class="language-javascript">deploy：
-   type：git
-   repo：git@github<span class="token punctuation">.</span>com<span class="token punctuation">:</span>Leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git
-   branch：master</code></pre>
-<p>mac:</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>问题指南</tag>
       </tags>
   </entry>
   <entry>
@@ -2738,154 +2738,6 @@ npm config <span class="token function">set</span> cache <span class="token stri
       </tags>
   </entry>
   <entry>
-    <title>博客自动化部署</title>
-    <url>/leader755/16745.html</url>
-    <content><![CDATA[<h2 id="为什么要写-Blog？"><a href="#为什么要写-Blog？" class="headerlink" title="为什么要写 Blog？"></a>为什么要写 Blog？</h2><p>是啊，为什么要写 Blog？毕竟这里没有人支付稿酬，也看不出有任何明显的物质性收益。<br>不管你选择那种博客，这本身也是一个学习过程。 ——​ 阮一峰</p>
-<h2 id="一-目前常见的博客框架："><a href="#一-目前常见的博客框架：" class="headerlink" title="一.目前常见的博客框架："></a>一.目前常见的博客框架：</h2><blockquote>
-<ul>
-<li>hexo 官网：<a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io</a>，基于 node.js 的静态博客。</li>
-<li>vuepress 官网：<a href="https://vuepress.vuejs.org/zh/" target="_blank" rel="noopener">https://vuepress.vuejs.org/zh/</a>基于 vue.js 的</li>
-<li>halo 官网：<a href="https://halo.run/" target="_blank" rel="noopener">https://halo.run/</a> 基于 springboot vue 动态博客。</li>
-<li>WordPress 官网：<a href="https://wordpress.org/" target="_blank" rel="noopener">https://wordpress.org/,</a>php 动态博客</li>
-<li>Z-Blog 官网：<a href="https://www.zblogcn.com/" target="_blank" rel="noopener">https://www.zblogcn.com/</a> PHP</li>
-<li>typecho <a href="http://typecho.org/" target="_blank" rel="noopener">http://typecho.org/</a> PHP</li>
-<li>emlog <a href="https://emlog.cn/" target="_blank" rel="noopener">https://emlog.cn/</a> PHP</li>
-<li>jekyll <a href="http://jekyllcn.com/" target="_blank" rel="noopener">http://jekyllcn.com/</a> 将纯文本转换为静态博客网站</li>
-<li>hugo 官网：<a href="https://www.gohugo.org/" target="_blank" rel="noopener">https://www.gohugo.org/</a>，基于 go 语言</li>
-<li>solo 官网：<a href="https://solo.b3log.org/" target="_blank" rel="noopener">https://solo.b3log.org/</a> 基于 java,有后台管理</li>
-</ul>
-</blockquote>
-<h2 id="二-hexo-博客搭建部署"><a href="#二-hexo-博客搭建部署" class="headerlink" title="二.hexo 博客搭建部署"></a>二.hexo 博客搭建部署</h2><h3 id="1-搭建本地-hexo-博客-https-www-yuque-com-docs-share-8a9b5524-90b2-4ef3-b961-017edfa3e73d-《1-搭建本地的-hexo-的博客》"><a href="#1-搭建本地-hexo-博客-https-www-yuque-com-docs-share-8a9b5524-90b2-4ef3-b961-017edfa3e73d-《1-搭建本地的-hexo-的博客》" class="headerlink" title="1.[搭建本地 hexo 博客](https://www.yuque.com/docs/share/8a9b5524-90b2-4ef3-b961-017edfa3e73d?# 《1.搭建本地的 hexo 的博客》)"></a>1.[搭建本地 hexo 博客](<a href="https://www.yuque.com/docs/share/8a9b5524-90b2-4ef3-b961-017edfa3e73d?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/8a9b5524-90b2-4ef3-b961-017edfa3e73d?#</a> 《1.搭建本地的 hexo 的博客》)</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g   <span class="token comment" spellcheck="true">//全局安装 hexo</span>
-hexo init blog            <span class="token comment" spellcheck="true">//初始化</span>
-hexo <span class="token keyword">new</span> <span class="token string">"Hello Hexo"</span>     <span class="token comment" spellcheck="true">//新建一个makedown 文档</span>
-hexo generate             <span class="token comment" spellcheck="true">//打包生成静态文件</span>
-hexo server               <span class="token comment" spellcheck="true">//启动服务(可以看到新增的文档)</span></code></pre>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
-    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
-    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
-    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span>
-  <span class="token punctuation">}</span></code></pre>
-<h3 id="2-hexo-的主题配置-https-www-yuque-com-docs-share-30051f74-be55-4a32-adc5-9f6b26999e1d-《7-hexo-主题配置》-以-常用插件-https-www-yuque-com-docs-share-7892854b-88f5-408d-b1d5-7f2195251637-《6-hexo-插件篇（必看）》"><a href="#2-hexo-的主题配置-https-www-yuque-com-docs-share-30051f74-be55-4a32-adc5-9f6b26999e1d-《7-hexo-主题配置》-以-常用插件-https-www-yuque-com-docs-share-7892854b-88f5-408d-b1d5-7f2195251637-《6-hexo-插件篇（必看）》" class="headerlink" title="2.[hexo 的主题配置](https://www.yuque.com/docs/share/30051f74-be55-4a32-adc5-9f6b26999e1d?# 《7.hexo 主题配置》) 以 [常用插件](https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?# 《6.hexo 插件篇（必看）》)"></a>2.[hexo 的主题配置](<a href="https://www.yuque.com/docs/share/30051f74-be55-4a32-adc5-9f6b26999e1d?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/30051f74-be55-4a32-adc5-9f6b26999e1d?#</a> 《7.hexo 主题配置》) 以 [常用插件](<a href="https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?#</a> 《6.hexo 插件篇（必看）》)</h3><p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646267896636-404c358f-0c99-4195-966b-98adb34cd8f9.png#clientId=u1d289fd2-cb50-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=375&id=uc5cc75b9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1098&originWidth=756&originalType=binary&ratio=1&rotation=0&showTitle=false&size=112142&status=done&style=none&taskId=u3bcc9ed4-5cb1-4316-a54a-77670b0f13e&title=&width=258" alt="image.png"></p>
-<pre class=" language-javascript"><code class="language-javascript">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>iissnan<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next</code></pre>
-<pre class=" language-javascript"><code class="language-javascript">theme<span class="token punctuation">:</span> next<span class="token punctuation">;</span></code></pre>
-<h3 id="3-hexo-博客部署到-Github-https-www-yuque-com-docs-share-2f8ee538-dee2-48fa-81aa-df649c7a6a5f-《5-hexo-博客部署到-Github-和-coding》"><a href="#3-hexo-博客部署到-Github-https-www-yuque-com-docs-share-2f8ee538-dee2-48fa-81aa-df649c7a6a5f-《5-hexo-博客部署到-Github-和-coding》" class="headerlink" title="3.[hexo 博客部署到 Github](https://www.yuque.com/docs/share/2f8ee538-dee2-48fa-81aa-df649c7a6a5f?# 《5.hexo 博客部署到 Github 和 coding》)"></a>3.[hexo 博客部署到 Github](<a href="https://www.yuque.com/docs/share/2f8ee538-dee2-48fa-81aa-df649c7a6a5f?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/2f8ee538-dee2-48fa-81aa-df649c7a6a5f?#</a> 《5.hexo 博客部署到 Github 和 coding》)</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save</code></pre>
-<pre class=" language-javascript"><code class="language-javascript">deploy<span class="token punctuation">:</span>
-  <span class="token operator">-</span> type<span class="token punctuation">:</span> <span class="token string">'git'</span>
-  repo<span class="token punctuation">:</span>
-    gitee<span class="token punctuation">:</span> git@gitee<span class="token punctuation">.</span>com<span class="token punctuation">:</span>leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>git<span class="token punctuation">,</span>master
-    github<span class="token punctuation">:</span> git@github<span class="token punctuation">.</span>com<span class="token punctuation">:</span>Leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git<span class="token punctuation">,</span>master
-  name<span class="token punctuation">:</span> <span class="token string">"Leader755"</span>
-  email<span class="token punctuation">:</span> <span class="token string">"1181012791@qq.com"</span></code></pre>
-<pre class=" language-javascript"><code class="language-javascript">hexo g <span class="token operator">-</span>d</code></pre>
-<h3 id="4-语雀文档同步到-hexo-博客-https-www-yuque-com-docs-share-7892854b-88f5-408d-b1d5-7f2195251637-《6-hexo-插件篇（必看）》"><a href="#4-语雀文档同步到-hexo-博客-https-www-yuque-com-docs-share-7892854b-88f5-408d-b1d5-7f2195251637-《6-hexo-插件篇（必看）》" class="headerlink" title="4.[语雀文档同步到 hexo 博客](https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?# 《6.hexo 插件篇（必看）》)"></a>4.[语雀文档同步到 hexo 博客](<a href="https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?#</a> 《6.hexo 插件篇（必看）》)</h3><h4 id="1-gt-安装-yuque-hexo-同步文章插件"><a href="#1-gt-安装-yuque-hexo-同步文章插件" class="headerlink" title="1&gt;安装 yuque-hexo 同步文章插件"></a>1&gt;安装 yuque-hexo 同步文章插件</h4><pre class=" language-javascript"><code class="language-javascript">npm i <span class="token operator">-</span>g yuque<span class="token operator">-</span>hexo  <span class="token comment" spellcheck="true">//安装 yuque-hexo</span></code></pre>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//底部新增以下配置</span>
-<span class="token string">"yuqueConfig"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"postPath"</span><span class="token punctuation">:</span> <span class="token string">"source/_posts/yuque"</span><span class="token punctuation">,</span>
-    <span class="token string">"cachePath"</span><span class="token punctuation">:</span> <span class="token string">"yuque.json"</span><span class="token punctuation">,</span>
-    <span class="token string">"mdNameFormat"</span><span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span>
-    <span class="token string">"adapter"</span><span class="token punctuation">:</span> <span class="token string">"hexo"</span><span class="token punctuation">,</span>
-    <span class="token string">"concurrency"</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-    <span class="token string">"baseUrl"</span><span class="token punctuation">:</span> <span class="token string">"https://www.yuque.com/api/v2"</span><span class="token punctuation">,</span>
-    <span class="token string">"login"</span><span class="token punctuation">:</span> <span class="token string">"leader755"</span><span class="token punctuation">,</span>
-    <span class="token string">"repo"</span><span class="token punctuation">:</span> <span class="token string">"blog"</span><span class="token punctuation">,</span>
-    <span class="token string">"token"</span><span class="token punctuation">:</span> <span class="token string">"在语雀上申请的 token"</span><span class="token punctuation">,</span>
-    <span class="token string">"onlyPublished"</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-    <span class="token string">"onlyPublic"</span><span class="token punctuation">:</span> <span class="token boolean">false</span>
-  <span class="token punctuation">}</span></code></pre>
-<p>参数含义：</p>
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>含义</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>postPath</td>
-<td>文档同步后生成的路径</td>
-<td>source/_posts/yuque</td>
-</tr>
-<tr>
-<td>cachePath</td>
-<td>文档下载缓存文件</td>
-<td>yuque.json</td>
-</tr>
-<tr>
-<td>mdNameFormat</td>
-<td>文件名命名方式 (title / slug)</td>
-<td>title</td>
-</tr>
-<tr>
-<td>adapter</td>
-<td>文档生成格式 (hexo/markdown)</td>
-<td>hexo</td>
-</tr>
-<tr>
-<td>concurrency</td>
-<td>下载文章并发数</td>
-<td>5</td>
-</tr>
-<tr>
-<td>baseUrl</td>
-<td>语雀 API 地址</td>
-<td>-</td>
-</tr>
-<tr>
-<td>login</td>
-<td>语雀 login (group), 也称为个人路径</td>
-<td>-</td>
-</tr>
-<tr>
-<td>repo</td>
-<td>语雀仓库短名称，也称为语雀知识库路径</td>
-<td>-</td>
-</tr>
-<tr>
-<td>onlyPublished</td>
-<td>只展示已经发布的文章</td>
-<td>false</td>
-</tr>
-<tr>
-<td>onlyPublic</td>
-<td>只展示公开文章</td>
-<td>false</td>
-</tr>
-</tbody></table>
-<h4 id="2-gt-语雀上申请-token"><a href="#2-gt-语雀上申请-token" class="headerlink" title="2&gt;语雀上申请 token"></a>2&gt;<a href="https://www.yuque.com/yuque/developer/api" target="_blank" rel="noopener">语雀上申请 token</a></h4><h4 id="3-gt-可执行的命令行"><a href="#3-gt-可执行的命令行" class="headerlink" title="3&gt;可执行的命令行"></a>3&gt;可执行的命令行</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
-    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
-    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
-    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span><span class="token punctuation">,</span>
-    <span class="token string">"sync"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
-    <span class="token string">"clean:yuque"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo clean"</span>
-  <span class="token punctuation">}</span></code></pre>
-<p>##</p>
-<h2 id="三-全自动部署博客"><a href="#三-全自动部署博客" class="headerlink" title="三.全自动部署博客"></a>三.全自动部署博客</h2><blockquote>
-<p>使用 Hexo + Github + 语雀 + yuque-hexo +actions+severless + jenkins 打造全自动持续集成个人博客，云端写作，自动部署，完美体验~。</p>
-</blockquote>
-<p>​</p>
-<p>整体流程：<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646269646502-af190978-7f2b-44e6-813b-caffd7e5928b.png#clientId=u9e229585-be37-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=223&id=u0c4b2cc0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=446&originWidth=1268&originalType=binary&ratio=1&rotation=0&showTitle=false&size=33636&status=done&style=none&taskId=u77ab6dd8-eb11-40bb-850d-b3c7db51633&title=&width=634" alt="image.png"></p>
-<ul>
-<li>语雀发布一篇文章</li>
-<li>webhook 调用 serverless 函数</li>
-<li>serverless 发起请求 trigger 一个 build 任务</li>
-<li>travis-ci 同步语雀文章并构建 hexo</li>
-<li>github 生成静态页面展示</li>
-</ul>
-<p>​</p>
-<p>​</p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>自动化</tag>
-        <tag>部署</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何绕开referrer防盗链</title>
     <url>/leader755/49766.html</url>
     <content><![CDATA[<h2 id="什么是-referrer"><a href="#什么是-referrer" class="headerlink" title="什么是 referrer"></a>什么是 referrer</h2><p>当一用户点击当前页面中的一个链接，然后跳转到目标页面时，目标页面会收到一个信息，即用户是从哪个源链接跳转过来的。如下图所示：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595703140078-870fec1d-0742-4dea-828a-1f32819af187.png#align=left&display=inline&height=543&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1086&originWidth=1184&size=153142&status=done&style=none&width=592" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/webp/241787/1595702418075-1743cd6e-ed7c-4b5b-9f96-7f89fff17373.webp#align=left&display=inline&height=543&margin=%5Bobject%20Object%5D&originHeight=543&originWidth=896&size=0&status=done&style=none&width=896" alt=""><br>也就是说，当你发起一个 http 请求，请求头中的<code>referrer</code>字段就说明了你是从哪个页面发起该请求的。</p>
@@ -3068,34 +2920,6 @@ overflow: hidden; font-size: 50px; color: red;<span class="token comment" spellc
       </tags>
   </entry>
   <entry>
-    <title>小程序中setData修改属性值</title>
-    <url>/leader755/16589.html</url>
-    <content><![CDATA[<h2 id="1-修改对象属性"><a href="#1-修改对象属性" class="headerlink" title="1.修改对象属性"></a>1.修改对象属性</h2><p>##</p>
-<h3 id="1-gt-第一种"><a href="#1-gt-第一种" class="headerlink" title="1&gt;第一种"></a>1&gt;第一种</h3><pre class=" language-javascript"><code class="language-javascript"> changePerson<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'person.name'</span><span class="token punctuation">;</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-      <span class="token punctuation">[</span>str<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">'fxjzzyo'</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<p>###</p>
-<h3 id="2-gt-第二种"><a href="#2-gt-第二种" class="headerlink" title="2&gt;第二种"></a>2&gt;第二种</h3><pre class=" language-javascript"><code class="language-javascript">changePerson<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-      <span class="token string">'person.name'</span><span class="token punctuation">:</span> <span class="token string">'fxjzzyo'</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<p>#</p>
-<h2 id="2-修改数组属性"><a href="#2-修改数组属性" class="headerlink" title="2.修改数组属性"></a>2.修改数组属性</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  <span class="token punctuation">[</span><span class="token string">"array["</span> <span class="token operator">+</span> index <span class="token operator">+</span> <span class="token string">"].amount"</span><span class="token punctuation">]</span><span class="token punctuation">:</span> amount<span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-]]></content>
-      <categories>
-        <category>小程序</category>
-      </categories>
-      <tags>
-        <tag>setData</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>小程序之间互相跳转</title>
     <url>/leader755/62737.html</url>
     <content><![CDATA[<h2 id="一-背景："><a href="#一-背景：" class="headerlink" title="一.背景："></a>一.背景：</h2><blockquote>
@@ -3165,6 +2989,34 @@ overflow: hidden; font-size: 50px; color: red;<span class="token comment" spellc
       </categories>
       <tags>
         <tag>小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小程序中setData修改属性值</title>
+    <url>/leader755/16589.html</url>
+    <content><![CDATA[<h2 id="1-修改对象属性"><a href="#1-修改对象属性" class="headerlink" title="1.修改对象属性"></a>1.修改对象属性</h2><p>##</p>
+<h3 id="1-gt-第一种"><a href="#1-gt-第一种" class="headerlink" title="1&gt;第一种"></a>1&gt;第一种</h3><pre class=" language-javascript"><code class="language-javascript"> changePerson<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'person.name'</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token punctuation">[</span>str<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">'fxjzzyo'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<p>###</p>
+<h3 id="2-gt-第二种"><a href="#2-gt-第二种" class="headerlink" title="2&gt;第二种"></a>2&gt;第二种</h3><pre class=" language-javascript"><code class="language-javascript">changePerson<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token string">'person.name'</span><span class="token punctuation">:</span> <span class="token string">'fxjzzyo'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<p>#</p>
+<h2 id="2-修改数组属性"><a href="#2-修改数组属性" class="headerlink" title="2.修改数组属性"></a>2.修改数组属性</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token punctuation">[</span><span class="token string">"array["</span> <span class="token operator">+</span> index <span class="token operator">+</span> <span class="token string">"].amount"</span><span class="token punctuation">]</span><span class="token punctuation">:</span> amount<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+]]></content>
+      <categories>
+        <category>小程序</category>
+      </categories>
+      <tags>
+        <tag>setData</tag>
       </tags>
   </entry>
   <entry>
@@ -5801,6 +5653,181 @@ console<span class="token punctuation">.</span><span class="token function">log<
       </categories>
       <tags>
         <tag>博客园美化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客自动化部署</title>
+    <url>/leader755/16745.html</url>
+    <content><![CDATA[<h2 id="为什么要写-Blog？"><a href="#为什么要写-Blog？" class="headerlink" title="为什么要写 Blog？"></a>为什么要写 Blog？</h2><p>是啊，为什么要写 Blog？毕竟这里没有人支付稿酬，也看不出有任何明显的物质性收益。<br>不管你选择那种博客，这本身也是一个学习过程。 ——​ 阮一峰</p>
+<h2 id="一-目前常见的博客框架："><a href="#一-目前常见的博客框架：" class="headerlink" title="一.目前常见的博客框架："></a>一.目前常见的博客框架：</h2><blockquote>
+<ul>
+<li>hexo 官网：<a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io</a>，基于 node.js 的静态博客。</li>
+<li>vuepress 官网：<a href="https://vuepress.vuejs.org/zh/" target="_blank" rel="noopener">https://vuepress.vuejs.org/zh/</a>基于 vue.js 的</li>
+<li>halo 官网：<a href="https://halo.run/" target="_blank" rel="noopener">https://halo.run/</a> 基于 springboot vue 动态博客。</li>
+<li>WordPress 官网：<a href="https://wordpress.org/" target="_blank" rel="noopener">https://wordpress.org/,</a>php 动态博客</li>
+<li>Z-Blog 官网：<a href="https://www.zblogcn.com/" target="_blank" rel="noopener">https://www.zblogcn.com/</a> PHP</li>
+<li>typecho <a href="http://typecho.org/" target="_blank" rel="noopener">http://typecho.org/</a> PHP</li>
+<li>emlog <a href="https://emlog.cn/" target="_blank" rel="noopener">https://emlog.cn/</a> PHP</li>
+<li>jekyll <a href="http://jekyllcn.com/" target="_blank" rel="noopener">http://jekyllcn.com/</a> 将纯文本转换为静态博客网站</li>
+<li>hugo 官网：<a href="https://www.gohugo.org/" target="_blank" rel="noopener">https://www.gohugo.org/</a>，基于 go 语言</li>
+<li>solo 官网：<a href="https://solo.b3log.org/" target="_blank" rel="noopener">https://solo.b3log.org/</a> 基于 java,有后台管理</li>
+</ul>
+</blockquote>
+<h2 id="二-hexo-博客搭建部署"><a href="#二-hexo-博客搭建部署" class="headerlink" title="二.hexo 博客搭建部署"></a>二.hexo 博客搭建部署</h2><h3 id="1-搭建本地-hexo-博客-https-www-yuque-com-docs-share-8a9b5524-90b2-4ef3-b961-017edfa3e73d-《1-搭建本地的-hexo-的博客》"><a href="#1-搭建本地-hexo-博客-https-www-yuque-com-docs-share-8a9b5524-90b2-4ef3-b961-017edfa3e73d-《1-搭建本地的-hexo-的博客》" class="headerlink" title="1.[搭建本地 hexo 博客](https://www.yuque.com/docs/share/8a9b5524-90b2-4ef3-b961-017edfa3e73d?# 《1.搭建本地的 hexo 的博客》)"></a>1.[搭建本地 hexo 博客](<a href="https://www.yuque.com/docs/share/8a9b5524-90b2-4ef3-b961-017edfa3e73d?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/8a9b5524-90b2-4ef3-b961-017edfa3e73d?#</a> 《1.搭建本地的 hexo 的博客》)</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g   <span class="token comment" spellcheck="true">//全局安装 hexo</span>
+hexo init blog            <span class="token comment" spellcheck="true">//初始化</span>
+hexo <span class="token keyword">new</span> <span class="token string">"Hello Hexo"</span>     <span class="token comment" spellcheck="true">//新建一个makedown 文档</span>
+hexo generate             <span class="token comment" spellcheck="true">//打包生成静态文件</span>
+hexo server               <span class="token comment" spellcheck="true">//启动服务(可以看到新增的文档)</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
+    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
+    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span>
+  <span class="token punctuation">}</span></code></pre>
+<h3 id="2-hexo-的主题配置-https-www-yuque-com-docs-share-30051f74-be55-4a32-adc5-9f6b26999e1d-《7-hexo-主题配置》-以-常用插件-https-www-yuque-com-docs-share-7892854b-88f5-408d-b1d5-7f2195251637-《6-hexo-插件篇（必看）》"><a href="#2-hexo-的主题配置-https-www-yuque-com-docs-share-30051f74-be55-4a32-adc5-9f6b26999e1d-《7-hexo-主题配置》-以-常用插件-https-www-yuque-com-docs-share-7892854b-88f5-408d-b1d5-7f2195251637-《6-hexo-插件篇（必看）》" class="headerlink" title="2.[hexo 的主题配置](https://www.yuque.com/docs/share/30051f74-be55-4a32-adc5-9f6b26999e1d?# 《7.hexo 主题配置》) 以 [常用插件](https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?# 《6.hexo 插件篇（必看）》)"></a>2.[hexo 的主题配置](<a href="https://www.yuque.com/docs/share/30051f74-be55-4a32-adc5-9f6b26999e1d?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/30051f74-be55-4a32-adc5-9f6b26999e1d?#</a> 《7.hexo 主题配置》) 以 [常用插件](<a href="https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?#</a> 《6.hexo 插件篇（必看）》)</h3><p>说明：在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646267896636-404c358f-0c99-4195-966b-98adb34cd8f9.png#clientId=u1d289fd2-cb50-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=375&id=uc5cc75b9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1098&originWidth=756&originalType=binary&ratio=1&rotation=0&showTitle=false&size=112142&status=done&style=none&taskId=u3bcc9ed4-5cb1-4316-a54a-77670b0f13e&title=&width=258" alt="image.png"></p>
+<pre class=" language-javascript"><code class="language-javascript">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>iissnan<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next</code></pre>
+<pre class=" language-javascript"><code class="language-javascript">theme<span class="token punctuation">:</span> next<span class="token punctuation">;</span></code></pre>
+<h3 id="3-hexo-博客部署到-Github-https-www-yuque-com-docs-share-2f8ee538-dee2-48fa-81aa-df649c7a6a5f-《5-hexo-博客部署到-Github-和-coding》"><a href="#3-hexo-博客部署到-Github-https-www-yuque-com-docs-share-2f8ee538-dee2-48fa-81aa-df649c7a6a5f-《5-hexo-博客部署到-Github-和-coding》" class="headerlink" title="3.[hexo 博客部署到 Github](https://www.yuque.com/docs/share/2f8ee538-dee2-48fa-81aa-df649c7a6a5f?# 《5.hexo 博客部署到 Github 和 coding》)"></a>3.[hexo 博客部署到 Github](<a href="https://www.yuque.com/docs/share/2f8ee538-dee2-48fa-81aa-df649c7a6a5f?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/2f8ee538-dee2-48fa-81aa-df649c7a6a5f?#</a> 《5.hexo 博客部署到 Github 和 coding》)</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save</code></pre>
+<pre class=" language-javascript"><code class="language-javascript">deploy<span class="token punctuation">:</span>
+  <span class="token operator">-</span> type<span class="token punctuation">:</span> <span class="token string">'git'</span>
+  repo<span class="token punctuation">:</span>
+    gitee<span class="token punctuation">:</span> git@gitee<span class="token punctuation">.</span>com<span class="token punctuation">:</span>leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>git<span class="token punctuation">,</span>master
+    github<span class="token punctuation">:</span> git@github<span class="token punctuation">.</span>com<span class="token punctuation">:</span>Leader755<span class="token operator">/</span>leader755<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">.</span>git<span class="token punctuation">,</span>master
+  name<span class="token punctuation">:</span> <span class="token string">"Leader755"</span>
+  email<span class="token punctuation">:</span> <span class="token string">"1181012791@qq.com"</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript">hexo g <span class="token operator">-</span>d</code></pre>
+<h3 id="4-语雀文档同步到-hexo-博客-https-www-yuque-com-docs-share-7892854b-88f5-408d-b1d5-7f2195251637-《6-hexo-插件篇（必看）》"><a href="#4-语雀文档同步到-hexo-博客-https-www-yuque-com-docs-share-7892854b-88f5-408d-b1d5-7f2195251637-《6-hexo-插件篇（必看）》" class="headerlink" title="4.[语雀文档同步到 hexo 博客](https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?# 《6.hexo 插件篇（必看）》)"></a>4.[语雀文档同步到 hexo 博客](<a href="https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/7892854b-88f5-408d-b1d5-7f2195251637?#</a> 《6.hexo 插件篇（必看）》)</h3><h4 id="1-gt-安装-yuque-hexo-同步文章插件"><a href="#1-gt-安装-yuque-hexo-同步文章插件" class="headerlink" title="1&gt;安装 yuque-hexo 同步文章插件"></a>1&gt;安装 yuque-hexo 同步文章插件</h4><pre class=" language-javascript"><code class="language-javascript">npm i <span class="token operator">-</span>g yuque<span class="token operator">-</span>hexo  <span class="token comment" spellcheck="true">//安装 yuque-hexo</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//底部新增以下配置</span>
+<span class="token string">"yuqueConfig"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"postPath"</span><span class="token punctuation">:</span> <span class="token string">"source/_posts/yuque"</span><span class="token punctuation">,</span>
+    <span class="token string">"cachePath"</span><span class="token punctuation">:</span> <span class="token string">"yuque.json"</span><span class="token punctuation">,</span>
+    <span class="token string">"mdNameFormat"</span><span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span>
+    <span class="token string">"adapter"</span><span class="token punctuation">:</span> <span class="token string">"hexo"</span><span class="token punctuation">,</span>
+    <span class="token string">"concurrency"</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token string">"baseUrl"</span><span class="token punctuation">:</span> <span class="token string">"https://www.yuque.com/api/v2"</span><span class="token punctuation">,</span>
+    <span class="token string">"login"</span><span class="token punctuation">:</span> <span class="token string">"leader755"</span><span class="token punctuation">,</span>
+    <span class="token string">"repo"</span><span class="token punctuation">:</span> <span class="token string">"blog"</span><span class="token punctuation">,</span>
+    <span class="token string">"token"</span><span class="token punctuation">:</span> <span class="token string">"在语雀上申请的 token"</span><span class="token punctuation">,</span>
+    <span class="token string">"onlyPublished"</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">"onlyPublic"</span><span class="token punctuation">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span></code></pre>
+<p>参数含义：</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>含义</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>postPath</td>
+<td>文档同步后生成的路径</td>
+<td>source/_posts/yuque</td>
+</tr>
+<tr>
+<td>cachePath</td>
+<td>文档下载缓存文件</td>
+<td>yuque.json</td>
+</tr>
+<tr>
+<td>mdNameFormat</td>
+<td>文件名命名方式 (title / slug)</td>
+<td>title</td>
+</tr>
+<tr>
+<td>adapter</td>
+<td>文档生成格式 (hexo/markdown)</td>
+<td>hexo</td>
+</tr>
+<tr>
+<td>concurrency</td>
+<td>下载文章并发数</td>
+<td>5</td>
+</tr>
+<tr>
+<td>baseUrl</td>
+<td>语雀 API 地址</td>
+<td>-</td>
+</tr>
+<tr>
+<td>login</td>
+<td>语雀 login (group), 也称为个人路径</td>
+<td>-</td>
+</tr>
+<tr>
+<td>repo</td>
+<td>语雀仓库短名称，也称为语雀知识库路径</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onlyPublished</td>
+<td>只展示已经发布的文章</td>
+<td>false</td>
+</tr>
+<tr>
+<td>onlyPublic</td>
+<td>只展示公开文章</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<h4 id="2-gt-语雀上申请-token"><a href="#2-gt-语雀上申请-token" class="headerlink" title="2&gt;语雀上申请 token"></a>2&gt;<a href="https://www.yuque.com/yuque/developer/api" target="_blank" rel="noopener">语雀上申请 token</a></h4><h4 id="3-gt-可执行的命令行"><a href="#3-gt-可执行的命令行" class="headerlink" title="3&gt;可执行的命令行"></a>3&gt;可执行的命令行</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean"</span><span class="token punctuation">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
+    <span class="token string">"deploy"</span><span class="token punctuation">:</span> <span class="token string">"hexo deploy"</span><span class="token punctuation">,</span>
+    <span class="token string">"server"</span><span class="token punctuation">:</span> <span class="token string">"hexo server"</span><span class="token punctuation">,</span>
+    <span class="token string">"sync"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
+    <span class="token string">"clean:yuque"</span><span class="token punctuation">:</span> <span class="token string">"yuque-hexo clean"</span>
+  <span class="token punctuation">}</span></code></pre>
+<p>##</p>
+<h2 id="三-全自动部署博客"><a href="#三-全自动部署博客" class="headerlink" title="三.全自动部署博客"></a>三.全自动部署博客</h2><blockquote>
+<p>使用 Hexo + Github + 语雀 + yuque-hexo +actions+severless + jenkins 打造全自动持续集成个人博客，云端写作，自动部署，完美体验~。</p>
+</blockquote>
+<p>​</p>
+<p>整体流程：<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646269646502-af190978-7f2b-44e6-813b-caffd7e5928b.png#clientId=u9e229585-be37-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=223&id=u0c4b2cc0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=446&originWidth=1268&originalType=binary&ratio=1&rotation=0&showTitle=false&size=33636&status=done&style=none&taskId=u77ab6dd8-eb11-40bb-850d-b3c7db51633&title=&width=634" alt="image.png"></p>
+<ul>
+<li>语雀发布一篇文章</li>
+<li>webhook 调用 serverless 函数</li>
+<li>serverless 发起请求 trigger 一个 build 任务</li>
+<li>actions 同步语雀文章并构建 hexo</li>
+<li>github 生成静态页面展示</li>
+</ul>
+<p><strong>​</strong></p>
+<p><strong>​</strong></p>
+<h3 id="1-serverless-配置"><a href="#1-serverless-配置" class="headerlink" title="1. serverless 配置"></a>1. <a href="https://www.yuque.com/leader755/blog/tl24xf" target="_blank" rel="noopener">serverless 配置</a></h3><p>目前阿里云和腾讯云都有 serverless 服务，免费的额度完全够用了，目前用的腾讯云的。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646354266872-d2adab7c-2d7b-4d5c-b027-9ee0bbe263cd.png#clientId=u78eea9c2-dae5-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=434&id=u688e1e08&margin=%5Bobject%20Object%5D&name=image.png&originHeight=868&originWidth=2446&originalType=binary&ratio=1&rotation=0&showTitle=false&size=215351&status=done&style=none&taskId=u974283ec-35ca-4e29-8441-5d0ad6c2b71&title=&width=1223" alt="image.png"></p>
+<p><strong>1）创建函数</strong>​<br><img src="https://cdn.nlark.com/yuque/0/2019/png/155457/1546855514908-08a6c588-774a-404e-8425-89ce6a3f7167.png#crop=0&crop=0&crop=1&crop=1&from=url&id=vT2z7&margin=%5Bobject%20Object%5D&originHeight=767&originWidth=1408&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=" alt=""></p>
+<p><strong>2）serverless 函数示例:</strong><br>​</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># -*- coding: utf8 -*-</span>
+<span class="token keyword">import</span> requests<span class="token punctuation">,</span>time
+
+text <span class="token operator">=</span> time<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">"%Y-%m-%d, %H:%M:%S"</span><span class="token punctuation">,</span> time<span class="token punctuation">.</span>localtime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main_handler</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string">"https://gitee.com/api/v5/repos/leader755/blog-master/hooks/572161/tests"</span><span class="token punctuation">,</span>
+    json <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">"access_token"</span><span class="token punctuation">:</span><span class="token string">"token0"</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true"># "body":"语雀文章更新，itee触发构建" + str(text)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">"User-Agent"</span><span class="token punctuation">:</span><span class="token string">'curl/7.52.1'</span><span class="token punctuation">,</span>
+        <span class="token string">'Content-Type'</span><span class="token punctuation">:</span> <span class="token string">'application/json;charset=UTF-8'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> r<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">204</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">"This's OK!"</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> r<span class="token punctuation">.</span>status_code</code></pre>
+<p>​</p>
+<p>​</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646324442611-caa6f1bb-db32-4594-bd18-fc2bfa823925.png#clientId=u19b2aa08-ed0f-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=481&id=I7u9L&margin=%5Bobject%20Object%5D&name=image.png&originHeight=962&originWidth=1694&originalType=binary&ratio=1&rotation=0&showTitle=false&size=190548&status=done&style=none&taskId=u72cc9755-73aa-427e-bca9-679731662bf&title=&width=847" alt="image.png"><br>​</p>
+<h3 id="1-hexo-github-actions-github-pages"><a href="#1-hexo-github-actions-github-pages" class="headerlink" title="1.hexo+github+actions + github pages"></a>1.<a href="https://www.yuque.com/leader755/blog/bgwk8l" target="_blank" rel="noopener">hexo+github+actions + github pages</a></h3><p>​</p>
+<p>​</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>自动化</tag>
+        <tag>部署</tag>
       </tags>
   </entry>
   <entry>
