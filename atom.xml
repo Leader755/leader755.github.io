@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2022-03-04T00:30:10.695Z</updated>
+  <updated>2022-03-04T01:11:33.463Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.leader755.com/leader755/62737.html"/>
     <id>https://www.leader755.com/leader755/62737.html</id>
     <published>2022-08-05T17:24:00.000Z</published>
-    <updated>2022-03-04T00:30:10.695Z</updated>
+    <updated>2022-03-04T01:11:33.463Z</updated>
     
     <summary type="html">
     
@@ -49,7 +49,7 @@
     <link href="https://www.leader755.com/leader755/16745.html"/>
     <id>https://www.leader755.com/leader755/16745.html</id>
     <published>2022-03-02T00:07:00.000Z</published>
-    <updated>2022-03-04T00:30:10.695Z</updated>
+    <updated>2022-03-04T01:11:33.463Z</updated>
     
     <summary type="html">
     
@@ -74,11 +74,43 @@
   </entry>
   
   <entry>
+    <title>Serverless云函数自动化部署</title>
+    <link href="https://www.leader755.com/leader755/27261.html"/>
+    <id>https://www.leader755.com/leader755/27261.html</id>
+    <published>2021-10-19T11:05:41.000Z</published>
+    <updated>2022-03-04T01:11:33.463Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-流程：&quot;&gt;&lt;a href=&quot;#1-流程：&quot; class=&quot;headerlink&quot; title=&quot;1.流程：&quot;&gt;&lt;/a&gt;1.流程：&lt;/h2&gt;&lt;p&gt;语雀 webhook→Serverless→Github Actions→Github Pages&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="serverless" scheme="https://www.leader755.com/categories/serverless/"/>
+    
+    
+      <category term="github" scheme="https://www.leader755.com/tags/github/"/>
+    
+      <category term="hexo" scheme="https://www.leader755.com/tags/hexo/"/>
+    
+      <category term="gitee" scheme="https://www.leader755.com/tags/gitee/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Github Actions自动化部署 hexo博客</title>
     <link href="https://www.leader755.com/leader755/60370.html"/>
     <id>https://www.leader755.com/leader755/60370.html</id>
     <published>2021-09-22T06:55:00.000Z</published>
-    <updated>2022-03-04T00:30:10.695Z</updated>
+    <updated>2022-03-04T01:11:33.463Z</updated>
     
     <summary type="html">
     
@@ -487,7 +519,7 @@
     <link href="https://www.leader755.com/leader755/50783.html"/>
     <id>https://www.leader755.com/leader755/50783.html</id>
     <published>2021-04-21T13:55:23.000Z</published>
-    <updated>2022-03-04T00:30:10.687Z</updated>
+    <updated>2022-03-04T01:11:33.455Z</updated>
     
     <summary type="html">
     
@@ -567,33 +599,6 @@
       <category term="节流" scheme="https://www.leader755.com/tags/%E8%8A%82%E6%B5%81/"/>
     
       <category term="防抖" scheme="https://www.leader755.com/tags/%E9%98%B2%E6%8A%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Element表单验证</title>
-    <link href="https://www.leader755.com/leader755/35753.html"/>
-    <id>https://www.leader755.com/leader755/35753.html</id>
-    <published>2021-03-06T04:38:23.000Z</published>
-    <updated>2021-04-21T13:38:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-gt-常规验证和自定义验证&quot;&gt;&lt;a href=&quot;#1-gt-常规验证和自定义验证&quot; class=&quot;headerlink&quot; title=&quot;1&amp;gt;常规验证和自定义验证&quot;&gt;&lt;/a&gt;1&amp;gt;常规验证和自定义验证&lt;/h2&gt;&lt;h3
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
-    
-    
-      <category term="element-ui" scheme="https://www.leader755.com/tags/element-ui/"/>
     
   </entry>
   

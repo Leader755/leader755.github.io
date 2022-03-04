@@ -657,6 +657,59 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
       </tags>
   </entry>
   <entry>
+    <title>Serverless云函数自动化部署</title>
+    <url>/leader755/27261.html</url>
+    <content><![CDATA[<h2 id="1-流程："><a href="#1-流程：" class="headerlink" title="1.流程："></a>1.流程：</h2><p>语雀 webhook→Serverless→Github Actions→Github Pages</p>
+<h2 id="2-Serverless-配置"><a href="#2-Serverless-配置" class="headerlink" title="2.Serverless 配置"></a>2.Serverless 配置</h2><blockquote>
+<ol>
+<li>你得先有腾讯云或者阿里云账户，没有注册的话，这些注册需要验证手机，甚至实名认证。这里以腾讯云为例，在<a href="https://curl.qcloud.com/DgJ9bO9s" target="_blank" rel="noopener">腾讯云</a>中开通 Serverless（无服务架构），有叫函数计算，有叫云函数。</li>
+<li>新建云函数，函数名称自己随意，运行环境 Python2.7 创建方式 空白函数 ，点击高级设置，启用 运行角色 为 SCF_QcsRole。</li>
+<li>点击完成后，在 函数代码 → 函数管理 复制如下代码做相应修改。</li>
+</ol>
+</blockquote>
+<p>新建 index.py 文件</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># -*- coding: utf8 -*-</span>
+<span class="token keyword">import</span> requests
+
+<span class="token keyword">def</span> <span class="token function">main_handler</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string">"https://api.github.com/repos/Leader755/blog-master/dispatches"</span><span class="token punctuation">,</span>
+                      json <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"event_type"</span><span class="token punctuation">:</span> <span class="token string">"run-it"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                      headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"User-Agent"</span><span class="token punctuation">:</span><span class="token string">'curl/7.52.1'</span><span class="token punctuation">,</span>
+                                 <span class="token string">'Content-Type'</span><span class="token punctuation">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+                                 <span class="token string">'Accept'</span><span class="token punctuation">:</span> <span class="token string">'application/vnd.github.everest-preview+json'</span><span class="token punctuation">,</span>
+                                 <span class="token string">'Authorization'</span><span class="token punctuation">:</span> <span class="token string">'token 自己的token'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> r<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">204</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">"This's OK!"</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> r<span class="token punctuation">.</span>status_code</code></pre>
+<blockquote>
+<p>描述：<br>特别注意的是 ‘Authorization’: ‘token bc9aa5a5dfa324545007eab6c1865d’ 这样形式存在的。<br>触发方式如下，没有可以在触发管理中新建触发管理。</p>
+<ul>
+<li>触发方式：API 网关触发器</li>
+<li>API 服务类型：新建 API 服务</li>
+<li>API 服务：SCF_API_SERVICE</li>
+<li>请求方法：ANY</li>
+<li>发布环境：发布</li>
+<li>鉴权方法：免鉴权</li>
+<li>启动集成响应：未启用</li>
+<li>在 触发管理 中能看到访问路径，记下这个访问路径，我们要写入语雀中去</li>
+</ul>
+</blockquote>
+<p>​</p>
+<h2 id="3-在-github-申请-token"><a href="#3-在-github-申请-token" class="headerlink" title="3.在 github 申请 token"></a>3.在 github 申请 token</h2><p>先去登录 GitHub，定位到如此网址 <a href="https://github.com/settings/profile" target="_blank" rel="noopener">https://github.com/settings/profile</a> ，点击 Developer settings，新建一个 token，然后勾选 repo 后确定申请。或点击查看《Github 申请 token》，然后填写好。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646355775441-aa348ea1-e121-4ab6-b231-e1cb0d5ca623.png#clientId=ude0b8dbc-e0fa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=733&id=uc189193b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1466&originWidth=2458&originalType=binary&ratio=1&rotation=0&showTitle=false&size=402845&status=done&style=none&taskId=u9a7fc622-8c01-4769-aee3-a29814a0935&title=&width=1229" alt="image.png"><br>​</p>
+<h2 id="4-在-gitee-申请-token-扩展"><a href="#4-在-gitee-申请-token-扩展" class="headerlink" title="4.在 gitee 申请 token(扩展)"></a>4.在 gitee 申请 token(扩展)</h2><p>在 gitee 申请 token<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646356085217-4b27e338-a8e2-47f0-9cda-8c333a9550a1.png#clientId=ude0b8dbc-e0fa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=715&id=u1c4eefc4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1430&originWidth=2442&originalType=binary&ratio=1&rotation=0&showTitle=false&size=411653&status=done&style=none&taskId=u505beec1-0e75-4fbe-bfbb-3a8b0255b1c&title=&width=1221" alt="image.png"><br>​</p>
+<p>​</p>
+]]></content>
+      <categories>
+        <category>serverless</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+        <tag>hexo</tag>
+        <tag>gitee</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Tomcat下部署vue项目[history模式]</title>
     <url>/leader755/14064.html</url>
     <content><![CDATA[<h2 id="1-项目发布后通常有两种访问方式，"><a href="#1-项目发布后通常有两种访问方式，" class="headerlink" title="1.项目发布后通常有两种访问方式，"></a>1.项目发布后通常有两种访问方式，</h2><p>第一种： IP+端口直接访问的方式，如 <a href="http://192.168.4.160:6090/" target="_blank" rel="noopener">http://192.168.1.107:8080/</a><br>第二种：IP+端口+项目名，如 <a href="https://links.jianshu.com/go?to=http%3A%2F%2F192.168.4.160%3A6090%2Fhuangshi%2F" target="_blank" rel="noopener">http://192.168.1.107:8080/saas/</a></p>
