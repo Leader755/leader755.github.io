@@ -4093,258 +4093,6 @@ bin<span class="token regex">/gen/</span></code></pre>
       </tags>
   </entry>
   <entry>
-    <title>YAML</title>
-    <url>/leader755/11638.html</url>
-    <content><![CDATA[<p>现代编程中，少不了编写配置文件，常用的配置文件编写格式有：<code>xml</code>，<code>json</code>，在前端工程化开发中，甚至还有使用 <code>js</code> 作为配置文件的。<br>本文将介绍一种更适合编写配置的语言 <code>YAML（Yet Another Markup Language）</code>。并记录其标准语法。</p>
-<p><strong>YAML</strong> 的语法和其他高级语言类似，并且可以简单表达 <code>清单（数组）、散列表（对象），标量（纯量）</code> 等数据形态。它使用 <strong>空白符号</strong> 缩进和大量依赖外观的特色，特别适合用来表达或编辑数据结构、各种配置文件、倾印调试内容、文件大纲（例如：许多电子邮件标题格式和 <strong>YAML</strong> 非常接近）。</p>
-<p><strong>YAML</strong> 的配置文件后缀为 <code>.yml</code>，如：<code>_config.yml</code> 。</p>
-<pre class=" language-html"><code class="language-html">1. 大小写敏感。 2. 使用缩进表示层级关系。 3. 缩进时不允许使用 Tab
-键，只允许使用空格。 4. 缩进的空格数目不重要，只要相同层级的元素左侧对齐即可。
-5. 键值对之间，一定要存在空格。</code></pre>
-<p>在 <code>YAML</code> 中，使用 <code>#</code> 进行注释标识。以 <code>#</code> 开头的行都会被解析器忽略。</p>
-<pre class=" language-yml"><code class="language-yml"># 我是一行注释</code></pre>
-<p><code>YAML</code> 支持的数据结构有 <strong>3</strong> 种。</p>
-<pre class=" language-html"><code class="language-html">对象：键值对的集合，又称为映射（mapping）/ 哈希（hashes） / 字典（dictionary）
-数组：一组按次序排列的值，又称为序列（sequence） / 列表（list）
-纯量（scalars）：单个的、不可再分的值</code></pre>
-<p>接下来，介绍他们各自的书写语法。并以 <a href="https://github.com/nodeca/js-yaml" target="_blank" rel="noopener">js-yaml</a> 的实现为例进行讲解。</p>
-<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>YAML 语言（发音 /ˈjæməl/ ）的设计目标，就是方便人类读写。它实质上是一种通用的数据串行化格式。<br>它的基本语法规则如下。</p>
-<blockquote>
-<ul>
-<li>大小写敏感</li>
-<li>使用缩进表示层级关系</li>
-<li>缩进时不允许使用 Tab 键，只允许使用空格。</li>
-<li>缩进的空格数目不重要，只要相同层级的元素左侧对齐即可</li>
-</ul>
-</blockquote>
-<p><code>#</code> 表示注释，从这个字符一直到行尾，都会被解析器忽略。<br>YAML 支持的数据结构有三种。</p>
-<blockquote>
-<ul>
-<li>对象：键值对的集合，又称为映射（mapping）/ 哈希（hashes） / 字典（dictionary）</li>
-<li>数组：一组按次序排列的值，又称为序列（sequence） / 列表（list）</li>
-<li>纯量（scalars）：单个的、不可再分的值</li>
-</ul>
-</blockquote>
-<p>以下分别介绍这三种数据结构。</p>
-<h2 id="二、对象"><a href="#二、对象" class="headerlink" title="二、对象"></a>二、对象</h2><p>对象的一组键值对，使用冒号结构表示。</p>
-<pre><code>1.
-2.
-3. animal: pets
-4.</code></pre><p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> animal<span class="token punctuation">:</span> <span class="token string">'pets'</span> <span class="token punctuation">}</span></code></pre>
-<p>Yaml 也允许另一种写法，将所有键值对写成一个行内对象。</p>
-<pre class=" language-ruby"><code class="language-ruby">hash<span class="token punctuation">:</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token constant">Steve</span><span class="token punctuation">,</span> foo<span class="token punctuation">:</span> bar <span class="token punctuation">}</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> hash<span class="token punctuation">:</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'Steve'</span><span class="token punctuation">,</span> foo<span class="token punctuation">:</span> <span class="token string">'bar'</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
-</code></pre>
-<h2 id="三、数组"><a href="#三、数组" class="headerlink" title="三、数组"></a>三、数组</h2><p>一组连词线开头的行，构成一个数组。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token operator">-</span> <span class="token constant">Cat</span>
- <span class="token operator">-</span> <span class="token constant">Dog</span>
- <span class="token operator">-</span> <span class="token constant">Goldfish</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">[</span> <span class="token string">'Cat'</span><span class="token punctuation">,</span> <span class="token string">'Dog'</span><span class="token punctuation">,</span> <span class="token string">'Goldfish'</span> <span class="token punctuation">]</span></code></pre>
-<p>数据结构的子成员是一个数组，则可以在该项下面缩进一个空格。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token operator">-</span>
- <span class="token operator">-</span> <span class="token constant">Cat</span>
- <span class="token operator">-</span> <span class="token constant">Dog</span>
- <span class="token operator">-</span> <span class="token constant">Goldfish</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">[</span> <span class="token punctuation">[</span> <span class="token string">'Cat'</span><span class="token punctuation">,</span> <span class="token string">'Dog'</span><span class="token punctuation">,</span> <span class="token string">'Goldfish'</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span></code></pre>
-<p>数组也可以采用行内表示法。</p>
-<pre class=" language-ruby"><code class="language-ruby">animal<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token constant">Cat</span><span class="token punctuation">,</span> <span class="token constant">Dog</span><span class="token punctuation">]</span></code></pre>
-<p>转为 JavaScript 如下</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> animal<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">'Cat'</span><span class="token punctuation">,</span> <span class="token string">'Dog'</span> <span class="token punctuation">]</span> <span class="token punctuation">}</span></code></pre>
-<h2 id="四、复合结构"><a href="#四、复合结构" class="headerlink" title="四、复合结构"></a>四、复合结构</h2><p>对象和数组可以结合使用，形成复合结构。</p>
-<pre class=" language-ruby"><code class="language-ruby"> languages<span class="token punctuation">:</span>
- <span class="token operator">-</span> <span class="token constant">Ruby</span>
- <span class="token operator">-</span> <span class="token constant">Perl</span>
- <span class="token operator">-</span> <span class="token constant">Python</span>
-websites<span class="token punctuation">:</span>
- <span class="token constant">YAML</span><span class="token punctuation">:</span> yaml<span class="token punctuation">.</span>org
- <span class="token constant">Ruby</span><span class="token punctuation">:</span> ruby<span class="token operator">-</span>lang<span class="token punctuation">.</span>org
- <span class="token constant">Python</span><span class="token punctuation">:</span> python<span class="token punctuation">.</span>org
- <span class="token constant">Perl</span><span class="token punctuation">:</span> use<span class="token punctuation">.</span>perl<span class="token punctuation">.</span>org</code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> languages<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">'Ruby'</span><span class="token punctuation">,</span> <span class="token string">'Perl'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
-websites<span class="token punctuation">:</span>
- <span class="token punctuation">{</span> <span class="token constant">YAML</span><span class="token punctuation">:</span> <span class="token string">'yaml.org'</span><span class="token punctuation">,</span>
-   <span class="token constant">Ruby</span><span class="token punctuation">:</span> <span class="token string">'ruby-lang.org'</span><span class="token punctuation">,</span>
-     <span class="token constant">Python</span><span class="token punctuation">:</span> <span class="token string">'python.org'</span><span class="token punctuation">,</span>
-   <span class="token constant">Perl</span><span class="token punctuation">:</span> <span class="token string">'use.perl.org'</span>
-  <span class="token punctuation">}</span> <span class="token punctuation">}</span></code></pre>
-<h2 id="五、纯量"><a href="#五、纯量" class="headerlink" title="五、纯量"></a>五、纯量</h2><p>纯量是最基本的、不可再分的值。以下数据类型都属于 JavaScript 的纯量。</p>
-<blockquote>
-<ul>
-<li>字符串</li>
-<li>布尔值</li>
-<li>整数</li>
-<li>浮点数</li>
-<li>Null</li>
-<li>时间</li>
-<li>日期</li>
-</ul>
-</blockquote>
-<p>数值直接以字面量的形式表示。</p>
-<pre class=" language-ruby"><code class="language-ruby"> number<span class="token punctuation">:</span> <span class="token number">12.30</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> number<span class="token punctuation">:</span> <span class="token number">12.30</span> <span class="token punctuation">}</span></code></pre>
-<p>布尔值用<code>true</code>和<code>false</code>表示。</p>
-<pre class=" language-ruby"><code class="language-ruby"> isSet<span class="token punctuation">:</span> <span class="token keyword">true</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> isSet<span class="token punctuation">:</span> <span class="token keyword">true</span> <span class="token punctuation">}</span></code></pre>
-<p><code>null</code>用<code>~</code>表示。</p>
-<pre class=" language-ruby"><code class="language-ruby"> parent<span class="token punctuation">:</span> <span class="token operator">~</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> parent<span class="token punctuation">:</span> null <span class="token punctuation">}</span></code></pre>
-<p>时间采用 ISO8601 格式。</p>
-<pre><code> iso8601: 2001-12-14t21:59:43.10-05:00</code></pre><p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> iso8601<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2001-12-14t21:59:43.10-05:00'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span></code></pre>
-<p>日期采用复合 iso8601 格式的年、月、日表示。</p>
-<pre class=" language-ruby"><code class="language-ruby"> date<span class="token punctuation">:</span> <span class="token number">1976</span><span class="token operator">-</span><span class="token number">07</span><span class="token operator">-</span><span class="token number">31</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> date<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'1976-07-31'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span></code></pre>
-<p>YAML 允许使用两个感叹号，强制转换数据类型。</p>
-<pre class=" language-ruby"><code class="language-ruby"> e<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>str <span class="token number">123</span>
- f<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>str <span class="token keyword">true</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> e<span class="token punctuation">:</span> <span class="token string">'123'</span><span class="token punctuation">,</span> f<span class="token punctuation">:</span> <span class="token string">'true'</span> <span class="token punctuation">}</span></code></pre>
-<h2 id="六、字符串"><a href="#六、字符串" class="headerlink" title="六、字符串"></a>六、字符串</h2><p>字符串是最常见，也是最复杂的一种数据类型。<br>字符串默认不使用引号表示。</p>
-<pre class=" language-ruby"><code class="language-ruby">str<span class="token punctuation">:</span> 这是一行字符串</code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> str<span class="token punctuation">:</span> <span class="token string">'这是一行字符串'</span> <span class="token punctuation">}</span></code></pre>
-<p>如果字符串之中包含空格或特殊字符，需要放在引号之中。</p>
-<pre class=" language-ruby"><code class="language-ruby">str<span class="token punctuation">:</span> <span class="token string">'内容： 字符串'</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> str<span class="token punctuation">:</span> <span class="token string">'内容: 字符串'</span> <span class="token punctuation">}</span></code></pre>
-<p>单引号和双引号都可以使用，双引号不会对特殊字符转义。</p>
-<pre class=" language-ruby"><code class="language-ruby"> s1<span class="token punctuation">:</span> <span class="token string">'内容\n字符串'</span>
- s2<span class="token punctuation">:</span> <span class="token string">"内容\n字符串"</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> s1<span class="token punctuation">:</span> <span class="token string">'内容\\n字符串'</span><span class="token punctuation">,</span> s2<span class="token punctuation">:</span> <span class="token string">'内容\n字符串'</span> <span class="token punctuation">}</span></code></pre>
-<p>单引号之中如果还有单引号，必须连续使用两个单引号转义。</p>
-<pre class=" language-ruby"><code class="language-ruby"> str<span class="token punctuation">:</span> <span class="token string">'labor'</span><span class="token string">'s day'</span></code></pre>
-<p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> str<span class="token punctuation">:</span> <span class="token string">'labor\'s day'</span> <span class="token punctuation">}</span></code></pre>
-<p>字符串可以写成多行，从第二行开始，必须有一个单空格缩进。换行符会被转为空格。</p>
-<pre><code> str: 这是一段
-       多行
-      字符串</code></pre><p>转为 JavaScript 如下。</p>
-<pre><code> { str: &#39;这是一段 多行 字符串&#39; }</code></pre><p>多行字符串可以使用<code>|</code>保留换行符，也可以使用<code>&gt;</code>折叠换行。</p>
-<pre><code> this: |
-         Foo
-       Bar
-        that: &gt;
-      Foo
-      Bar</code></pre><p>转为 JavaScript 代码如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> this<span class="token punctuation">:</span> <span class="token string">'Foo\nBar\n'</span><span class="token punctuation">,</span> that<span class="token punctuation">:</span> <span class="token string">'Foo Bar\n'</span> <span class="token punctuation">}</span></code></pre>
-<p><code>+</code>表示保留文字块末尾的换行，<code>-</code>表示删除字符串末尾的换行。</p>
-<pre><code>         s1: |
-       Foo
-
-         s2: |+
-         Foo
-
-
-         s3: |-
-         Foo</code></pre><p>转为 JavaScript 代码如下。</p>
-<pre class=" language-ruby"><code class="language-ruby">  <span class="token punctuation">{</span> s1<span class="token punctuation">:</span> <span class="token string">'Foo\n'</span><span class="token punctuation">,</span> s2<span class="token punctuation">:</span> <span class="token string">'Foo\n\n\n'</span><span class="token punctuation">,</span> s3<span class="token punctuation">:</span> <span class="token string">'Foo'</span> <span class="token punctuation">}</span>
-</code></pre>
-<p>字符串之中可以插入 HTML 标记。</p>
-<pre><code> message: |
-
-        &lt;p style=&quot;color: red&quot;&gt;
-     段落
-       &lt;/p&gt;
-</code></pre><p>转为 JavaScript 如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> message<span class="token punctuation">:</span> <span class="token string">'\n&lt;p style="color: red">\n  段落\n&lt;/p>\n'</span> <span class="token punctuation">}</span></code></pre>
-<h2 id="七、引用"><a href="#七、引用" class="headerlink" title="七、引用"></a>七、引用</h2><p>锚点<code>&amp;</code>和别名<code>*</code>，可以用来引用。</p>
-<pre class=" language-ruby"><code class="language-ruby">defaults<span class="token punctuation">:</span> <span class="token operator">&amp;</span>defaults
-   adapter<span class="token punctuation">:</span>  postgres
-   host<span class="token punctuation">:</span>     localhost
-
-     development<span class="token punctuation">:</span>
-  database<span class="token punctuation">:</span> myapp_development
-  <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token punctuation">:</span> <span class="token operator">*</span>defaults
-
-     test<span class="token punctuation">:</span>
-   database<span class="token punctuation">:</span> myapp_test
-   <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token punctuation">:</span> <span class="token operator">*</span>defaults
-</code></pre>
-<p>等同于下面的代码。</p>
-<pre class=" language-ruby"><code class="language-ruby">
-    defaults<span class="token punctuation">:</span>
-       adapter<span class="token punctuation">:</span>  postgres
-       host<span class="token punctuation">:</span>      localhost
-
-  development<span class="token punctuation">:</span>
-   database<span class="token punctuation">:</span> myapp_development
-   adapter<span class="token punctuation">:</span>  postgres
-   host<span class="token punctuation">:</span>     localhost
-
-  test<span class="token punctuation">:</span>
-   database<span class="token punctuation">:</span> myapp_test
-     adapter<span class="token punctuation">:</span>  postgres
-   host<span class="token punctuation">:</span>     localhost
-</code></pre>
-<p><code>&amp;</code>用来建立锚点（<code>defaults</code>），<code>&lt;&lt;</code>表示合并到当前数据，<code>*</code>用来引用锚点。<br>下面是另一个例子。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">-</span> <span class="token operator">&amp;</span>showell <span class="token constant">Steve</span>
- <span class="token operator">-</span> <span class="token constant">Clark</span>
- <span class="token operator">-</span> <span class="token constant">Brian</span>
- <span class="token operator">-</span> <span class="token constant">Oren</span>
- <span class="token operator">-</span> <span class="token operator">*</span>showell</code></pre>
-<p>转为 JavaScript 代码如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">[</span> <span class="token string">'Steve'</span><span class="token punctuation">,</span> <span class="token string">'Clark'</span><span class="token punctuation">,</span> <span class="token string">'Brian'</span><span class="token punctuation">,</span> <span class="token string">'Oren'</span><span class="token punctuation">,</span> <span class="token string">'Steve'</span> <span class="token punctuation">]</span></code></pre>
-<h2 id="八、函数和正则表达式的转换"><a href="#八、函数和正则表达式的转换" class="headerlink" title="八、函数和正则表达式的转换"></a>八、函数和正则表达式的转换</h2><p>这是 <a href="https://github.com/nodeca/js-yaml" target="_blank" rel="noopener">JS-YAML</a> 库特有的功能，可以把函数和正则表达式转为字符串。</p>
-<pre class=" language-ruby"><code class="language-ruby"> <span class="token comment" spellcheck="true"># example.yml</span>
- fn<span class="token punctuation">:</span> <span class="token function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token number">1</span> <span class="token punctuation">}</span>
- reg<span class="token punctuation">:</span> <span class="token regex">/test/</span>
-</code></pre>
-<p>解析上面的 yml 文件的代码如下。</p>
-<pre class=" language-ruby"><code class="language-ruby"> var yaml <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'js-yaml'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- var fs   <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
- try <span class="token punctuation">{</span>
-   var doc <span class="token operator">=</span> yaml<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>
-     fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'./example.yml'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span>
-   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>doc<span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span> <span class="token function">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span></code></pre>
-<p>从 JavaScript 对象还原到 yaml 文件的代码如下。</p>
-<pre class=" language-ruby"><code class="language-ruby">var yaml <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'js-yaml'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-var fs   <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
- var obj <span class="token operator">=</span> <span class="token punctuation">{</span>
-   fn<span class="token punctuation">:</span> <span class="token function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-   reg<span class="token punctuation">:</span> <span class="token regex">/test/</span>
- <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
- try <span class="token punctuation">{</span>
-   fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span>
-     <span class="token string">'./example.yml'</span><span class="token punctuation">,</span>
-     yaml<span class="token punctuation">.</span><span class="token function">dump</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">,</span>
-     <span class="token string">'utf8'</span>
-   <span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span> <span class="token function">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span></code></pre>
-<h2 id="九、参考链接"><a href="#九、参考链接" class="headerlink" title="九、参考链接"></a>九、参考链接</h2><ul>
-<li><a href="http://www.yaml.org/spec/1.2/spec.html" target="_blank" rel="noopener">YAML 1.2 规格</a></li>
-<li><a href="https://en.wikipedia.org/wiki/YAML" target="_blank" rel="noopener">YAML from Wikipedia</a></li>
-<li><a href="http://yaml.org/YAML_for_ruby.html" target="_blank" rel="noopener">YAML for Ruby</a></li>
-</ul>
-<p>（完）</p>
-<p>原文地址：<a href="http://www.ruanyifeng.com/blog/2016/07/yaml.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/07/yaml.html</a></p>
-]]></content>
-      <categories>
-        <category>YAML</category>
-      </categories>
-      <tags>
-        <tag>.yml</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>centos7安装jdk ,maven，tomcat，nginx</title>
     <url>/leader755/50783.html</url>
     <content><![CDATA[<p>##</p>
@@ -4623,6 +4371,258 @@ firewall<span class="token operator">-</span>cmd <span class="token operator">--
       <tags>
         <tag>tomcat</tag>
         <tag>centos7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>YAML</title>
+    <url>/leader755/11638.html</url>
+    <content><![CDATA[<p>现代编程中，少不了编写配置文件，常用的配置文件编写格式有：<code>xml</code>，<code>json</code>，在前端工程化开发中，甚至还有使用 <code>js</code> 作为配置文件的。<br>本文将介绍一种更适合编写配置的语言 <code>YAML（Yet Another Markup Language）</code>。并记录其标准语法。</p>
+<p><strong>YAML</strong> 的语法和其他高级语言类似，并且可以简单表达 <code>清单（数组）、散列表（对象），标量（纯量）</code> 等数据形态。它使用 <strong>空白符号</strong> 缩进和大量依赖外观的特色，特别适合用来表达或编辑数据结构、各种配置文件、倾印调试内容、文件大纲（例如：许多电子邮件标题格式和 <strong>YAML</strong> 非常接近）。</p>
+<p><strong>YAML</strong> 的配置文件后缀为 <code>.yml</code>，如：<code>_config.yml</code> 。</p>
+<pre class=" language-html"><code class="language-html">1. 大小写敏感。 2. 使用缩进表示层级关系。 3. 缩进时不允许使用 Tab
+键，只允许使用空格。 4. 缩进的空格数目不重要，只要相同层级的元素左侧对齐即可。
+5. 键值对之间，一定要存在空格。</code></pre>
+<p>在 <code>YAML</code> 中，使用 <code>#</code> 进行注释标识。以 <code>#</code> 开头的行都会被解析器忽略。</p>
+<pre class=" language-yml"><code class="language-yml"># 我是一行注释</code></pre>
+<p><code>YAML</code> 支持的数据结构有 <strong>3</strong> 种。</p>
+<pre class=" language-html"><code class="language-html">对象：键值对的集合，又称为映射（mapping）/ 哈希（hashes） / 字典（dictionary）
+数组：一组按次序排列的值，又称为序列（sequence） / 列表（list）
+纯量（scalars）：单个的、不可再分的值</code></pre>
+<p>接下来，介绍他们各自的书写语法。并以 <a href="https://github.com/nodeca/js-yaml" target="_blank" rel="noopener">js-yaml</a> 的实现为例进行讲解。</p>
+<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>YAML 语言（发音 /ˈjæməl/ ）的设计目标，就是方便人类读写。它实质上是一种通用的数据串行化格式。<br>它的基本语法规则如下。</p>
+<blockquote>
+<ul>
+<li>大小写敏感</li>
+<li>使用缩进表示层级关系</li>
+<li>缩进时不允许使用 Tab 键，只允许使用空格。</li>
+<li>缩进的空格数目不重要，只要相同层级的元素左侧对齐即可</li>
+</ul>
+</blockquote>
+<p><code>#</code> 表示注释，从这个字符一直到行尾，都会被解析器忽略。<br>YAML 支持的数据结构有三种。</p>
+<blockquote>
+<ul>
+<li>对象：键值对的集合，又称为映射（mapping）/ 哈希（hashes） / 字典（dictionary）</li>
+<li>数组：一组按次序排列的值，又称为序列（sequence） / 列表（list）</li>
+<li>纯量（scalars）：单个的、不可再分的值</li>
+</ul>
+</blockquote>
+<p>以下分别介绍这三种数据结构。</p>
+<h2 id="二、对象"><a href="#二、对象" class="headerlink" title="二、对象"></a>二、对象</h2><p>对象的一组键值对，使用冒号结构表示。</p>
+<pre><code>1.
+2.
+3. animal: pets
+4.</code></pre><p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> animal<span class="token punctuation">:</span> <span class="token string">'pets'</span> <span class="token punctuation">}</span></code></pre>
+<p>Yaml 也允许另一种写法，将所有键值对写成一个行内对象。</p>
+<pre class=" language-ruby"><code class="language-ruby">hash<span class="token punctuation">:</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token constant">Steve</span><span class="token punctuation">,</span> foo<span class="token punctuation">:</span> bar <span class="token punctuation">}</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> hash<span class="token punctuation">:</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'Steve'</span><span class="token punctuation">,</span> foo<span class="token punctuation">:</span> <span class="token string">'bar'</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="三、数组"><a href="#三、数组" class="headerlink" title="三、数组"></a>三、数组</h2><p>一组连词线开头的行，构成一个数组。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token operator">-</span> <span class="token constant">Cat</span>
+ <span class="token operator">-</span> <span class="token constant">Dog</span>
+ <span class="token operator">-</span> <span class="token constant">Goldfish</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">[</span> <span class="token string">'Cat'</span><span class="token punctuation">,</span> <span class="token string">'Dog'</span><span class="token punctuation">,</span> <span class="token string">'Goldfish'</span> <span class="token punctuation">]</span></code></pre>
+<p>数据结构的子成员是一个数组，则可以在该项下面缩进一个空格。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token operator">-</span>
+ <span class="token operator">-</span> <span class="token constant">Cat</span>
+ <span class="token operator">-</span> <span class="token constant">Dog</span>
+ <span class="token operator">-</span> <span class="token constant">Goldfish</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">[</span> <span class="token punctuation">[</span> <span class="token string">'Cat'</span><span class="token punctuation">,</span> <span class="token string">'Dog'</span><span class="token punctuation">,</span> <span class="token string">'Goldfish'</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span></code></pre>
+<p>数组也可以采用行内表示法。</p>
+<pre class=" language-ruby"><code class="language-ruby">animal<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token constant">Cat</span><span class="token punctuation">,</span> <span class="token constant">Dog</span><span class="token punctuation">]</span></code></pre>
+<p>转为 JavaScript 如下</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> animal<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">'Cat'</span><span class="token punctuation">,</span> <span class="token string">'Dog'</span> <span class="token punctuation">]</span> <span class="token punctuation">}</span></code></pre>
+<h2 id="四、复合结构"><a href="#四、复合结构" class="headerlink" title="四、复合结构"></a>四、复合结构</h2><p>对象和数组可以结合使用，形成复合结构。</p>
+<pre class=" language-ruby"><code class="language-ruby"> languages<span class="token punctuation">:</span>
+ <span class="token operator">-</span> <span class="token constant">Ruby</span>
+ <span class="token operator">-</span> <span class="token constant">Perl</span>
+ <span class="token operator">-</span> <span class="token constant">Python</span>
+websites<span class="token punctuation">:</span>
+ <span class="token constant">YAML</span><span class="token punctuation">:</span> yaml<span class="token punctuation">.</span>org
+ <span class="token constant">Ruby</span><span class="token punctuation">:</span> ruby<span class="token operator">-</span>lang<span class="token punctuation">.</span>org
+ <span class="token constant">Python</span><span class="token punctuation">:</span> python<span class="token punctuation">.</span>org
+ <span class="token constant">Perl</span><span class="token punctuation">:</span> use<span class="token punctuation">.</span>perl<span class="token punctuation">.</span>org</code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> languages<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">'Ruby'</span><span class="token punctuation">,</span> <span class="token string">'Perl'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+websites<span class="token punctuation">:</span>
+ <span class="token punctuation">{</span> <span class="token constant">YAML</span><span class="token punctuation">:</span> <span class="token string">'yaml.org'</span><span class="token punctuation">,</span>
+   <span class="token constant">Ruby</span><span class="token punctuation">:</span> <span class="token string">'ruby-lang.org'</span><span class="token punctuation">,</span>
+     <span class="token constant">Python</span><span class="token punctuation">:</span> <span class="token string">'python.org'</span><span class="token punctuation">,</span>
+   <span class="token constant">Perl</span><span class="token punctuation">:</span> <span class="token string">'use.perl.org'</span>
+  <span class="token punctuation">}</span> <span class="token punctuation">}</span></code></pre>
+<h2 id="五、纯量"><a href="#五、纯量" class="headerlink" title="五、纯量"></a>五、纯量</h2><p>纯量是最基本的、不可再分的值。以下数据类型都属于 JavaScript 的纯量。</p>
+<blockquote>
+<ul>
+<li>字符串</li>
+<li>布尔值</li>
+<li>整数</li>
+<li>浮点数</li>
+<li>Null</li>
+<li>时间</li>
+<li>日期</li>
+</ul>
+</blockquote>
+<p>数值直接以字面量的形式表示。</p>
+<pre class=" language-ruby"><code class="language-ruby"> number<span class="token punctuation">:</span> <span class="token number">12.30</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> number<span class="token punctuation">:</span> <span class="token number">12.30</span> <span class="token punctuation">}</span></code></pre>
+<p>布尔值用<code>true</code>和<code>false</code>表示。</p>
+<pre class=" language-ruby"><code class="language-ruby"> isSet<span class="token punctuation">:</span> <span class="token keyword">true</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> isSet<span class="token punctuation">:</span> <span class="token keyword">true</span> <span class="token punctuation">}</span></code></pre>
+<p><code>null</code>用<code>~</code>表示。</p>
+<pre class=" language-ruby"><code class="language-ruby"> parent<span class="token punctuation">:</span> <span class="token operator">~</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> parent<span class="token punctuation">:</span> null <span class="token punctuation">}</span></code></pre>
+<p>时间采用 ISO8601 格式。</p>
+<pre><code> iso8601: 2001-12-14t21:59:43.10-05:00</code></pre><p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> iso8601<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2001-12-14t21:59:43.10-05:00'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span></code></pre>
+<p>日期采用复合 iso8601 格式的年、月、日表示。</p>
+<pre class=" language-ruby"><code class="language-ruby"> date<span class="token punctuation">:</span> <span class="token number">1976</span><span class="token operator">-</span><span class="token number">07</span><span class="token operator">-</span><span class="token number">31</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> date<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'1976-07-31'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span></code></pre>
+<p>YAML 允许使用两个感叹号，强制转换数据类型。</p>
+<pre class=" language-ruby"><code class="language-ruby"> e<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>str <span class="token number">123</span>
+ f<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>str <span class="token keyword">true</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> e<span class="token punctuation">:</span> <span class="token string">'123'</span><span class="token punctuation">,</span> f<span class="token punctuation">:</span> <span class="token string">'true'</span> <span class="token punctuation">}</span></code></pre>
+<h2 id="六、字符串"><a href="#六、字符串" class="headerlink" title="六、字符串"></a>六、字符串</h2><p>字符串是最常见，也是最复杂的一种数据类型。<br>字符串默认不使用引号表示。</p>
+<pre class=" language-ruby"><code class="language-ruby">str<span class="token punctuation">:</span> 这是一行字符串</code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> str<span class="token punctuation">:</span> <span class="token string">'这是一行字符串'</span> <span class="token punctuation">}</span></code></pre>
+<p>如果字符串之中包含空格或特殊字符，需要放在引号之中。</p>
+<pre class=" language-ruby"><code class="language-ruby">str<span class="token punctuation">:</span> <span class="token string">'内容： 字符串'</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> str<span class="token punctuation">:</span> <span class="token string">'内容: 字符串'</span> <span class="token punctuation">}</span></code></pre>
+<p>单引号和双引号都可以使用，双引号不会对特殊字符转义。</p>
+<pre class=" language-ruby"><code class="language-ruby"> s1<span class="token punctuation">:</span> <span class="token string">'内容\n字符串'</span>
+ s2<span class="token punctuation">:</span> <span class="token string">"内容\n字符串"</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> s1<span class="token punctuation">:</span> <span class="token string">'内容\\n字符串'</span><span class="token punctuation">,</span> s2<span class="token punctuation">:</span> <span class="token string">'内容\n字符串'</span> <span class="token punctuation">}</span></code></pre>
+<p>单引号之中如果还有单引号，必须连续使用两个单引号转义。</p>
+<pre class=" language-ruby"><code class="language-ruby"> str<span class="token punctuation">:</span> <span class="token string">'labor'</span><span class="token string">'s day'</span></code></pre>
+<p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token punctuation">{</span> str<span class="token punctuation">:</span> <span class="token string">'labor\'s day'</span> <span class="token punctuation">}</span></code></pre>
+<p>字符串可以写成多行，从第二行开始，必须有一个单空格缩进。换行符会被转为空格。</p>
+<pre><code> str: 这是一段
+       多行
+      字符串</code></pre><p>转为 JavaScript 如下。</p>
+<pre><code> { str: &#39;这是一段 多行 字符串&#39; }</code></pre><p>多行字符串可以使用<code>|</code>保留换行符，也可以使用<code>&gt;</code>折叠换行。</p>
+<pre><code> this: |
+         Foo
+       Bar
+        that: &gt;
+      Foo
+      Bar</code></pre><p>转为 JavaScript 代码如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> this<span class="token punctuation">:</span> <span class="token string">'Foo\nBar\n'</span><span class="token punctuation">,</span> that<span class="token punctuation">:</span> <span class="token string">'Foo Bar\n'</span> <span class="token punctuation">}</span></code></pre>
+<p><code>+</code>表示保留文字块末尾的换行，<code>-</code>表示删除字符串末尾的换行。</p>
+<pre><code>         s1: |
+       Foo
+
+         s2: |+
+         Foo
+
+
+         s3: |-
+         Foo</code></pre><p>转为 JavaScript 代码如下。</p>
+<pre class=" language-ruby"><code class="language-ruby">  <span class="token punctuation">{</span> s1<span class="token punctuation">:</span> <span class="token string">'Foo\n'</span><span class="token punctuation">,</span> s2<span class="token punctuation">:</span> <span class="token string">'Foo\n\n\n'</span><span class="token punctuation">,</span> s3<span class="token punctuation">:</span> <span class="token string">'Foo'</span> <span class="token punctuation">}</span>
+</code></pre>
+<p>字符串之中可以插入 HTML 标记。</p>
+<pre><code> message: |
+
+        &lt;p style=&quot;color: red&quot;&gt;
+     段落
+       &lt;/p&gt;
+</code></pre><p>转为 JavaScript 如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">{</span> message<span class="token punctuation">:</span> <span class="token string">'\n&lt;p style="color: red">\n  段落\n&lt;/p>\n'</span> <span class="token punctuation">}</span></code></pre>
+<h2 id="七、引用"><a href="#七、引用" class="headerlink" title="七、引用"></a>七、引用</h2><p>锚点<code>&amp;</code>和别名<code>*</code>，可以用来引用。</p>
+<pre class=" language-ruby"><code class="language-ruby">defaults<span class="token punctuation">:</span> <span class="token operator">&amp;</span>defaults
+   adapter<span class="token punctuation">:</span>  postgres
+   host<span class="token punctuation">:</span>     localhost
+
+     development<span class="token punctuation">:</span>
+  database<span class="token punctuation">:</span> myapp_development
+  <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token punctuation">:</span> <span class="token operator">*</span>defaults
+
+     test<span class="token punctuation">:</span>
+   database<span class="token punctuation">:</span> myapp_test
+   <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token punctuation">:</span> <span class="token operator">*</span>defaults
+</code></pre>
+<p>等同于下面的代码。</p>
+<pre class=" language-ruby"><code class="language-ruby">
+    defaults<span class="token punctuation">:</span>
+       adapter<span class="token punctuation">:</span>  postgres
+       host<span class="token punctuation">:</span>      localhost
+
+  development<span class="token punctuation">:</span>
+   database<span class="token punctuation">:</span> myapp_development
+   adapter<span class="token punctuation">:</span>  postgres
+   host<span class="token punctuation">:</span>     localhost
+
+  test<span class="token punctuation">:</span>
+   database<span class="token punctuation">:</span> myapp_test
+     adapter<span class="token punctuation">:</span>  postgres
+   host<span class="token punctuation">:</span>     localhost
+</code></pre>
+<p><code>&amp;</code>用来建立锚点（<code>defaults</code>），<code>&lt;&lt;</code>表示合并到当前数据，<code>*</code>用来引用锚点。<br>下面是另一个例子。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">-</span> <span class="token operator">&amp;</span>showell <span class="token constant">Steve</span>
+ <span class="token operator">-</span> <span class="token constant">Clark</span>
+ <span class="token operator">-</span> <span class="token constant">Brian</span>
+ <span class="token operator">-</span> <span class="token constant">Oren</span>
+ <span class="token operator">-</span> <span class="token operator">*</span>showell</code></pre>
+<p>转为 JavaScript 代码如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token punctuation">[</span> <span class="token string">'Steve'</span><span class="token punctuation">,</span> <span class="token string">'Clark'</span><span class="token punctuation">,</span> <span class="token string">'Brian'</span><span class="token punctuation">,</span> <span class="token string">'Oren'</span><span class="token punctuation">,</span> <span class="token string">'Steve'</span> <span class="token punctuation">]</span></code></pre>
+<h2 id="八、函数和正则表达式的转换"><a href="#八、函数和正则表达式的转换" class="headerlink" title="八、函数和正则表达式的转换"></a>八、函数和正则表达式的转换</h2><p>这是 <a href="https://github.com/nodeca/js-yaml" target="_blank" rel="noopener">JS-YAML</a> 库特有的功能，可以把函数和正则表达式转为字符串。</p>
+<pre class=" language-ruby"><code class="language-ruby"> <span class="token comment" spellcheck="true"># example.yml</span>
+ fn<span class="token punctuation">:</span> <span class="token function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token number">1</span> <span class="token punctuation">}</span>
+ reg<span class="token punctuation">:</span> <span class="token regex">/test/</span>
+</code></pre>
+<p>解析上面的 yml 文件的代码如下。</p>
+<pre class=" language-ruby"><code class="language-ruby"> var yaml <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'js-yaml'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ var fs   <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ try <span class="token punctuation">{</span>
+   var doc <span class="token operator">=</span> yaml<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>
+     fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'./example.yml'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span>
+   <span class="token punctuation">)</span><span class="token punctuation">;</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>doc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span> <span class="token function">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span></code></pre>
+<p>从 JavaScript 对象还原到 yaml 文件的代码如下。</p>
+<pre class=" language-ruby"><code class="language-ruby">var yaml <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'js-yaml'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+var fs   <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ var obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+   fn<span class="token punctuation">:</span> <span class="token function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   reg<span class="token punctuation">:</span> <span class="token regex">/test/</span>
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+ try <span class="token punctuation">{</span>
+   fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span>
+     <span class="token string">'./example.yml'</span><span class="token punctuation">,</span>
+     yaml<span class="token punctuation">.</span><span class="token function">dump</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">,</span>
+     <span class="token string">'utf8'</span>
+   <span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span> <span class="token function">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span></code></pre>
+<h2 id="九、参考链接"><a href="#九、参考链接" class="headerlink" title="九、参考链接"></a>九、参考链接</h2><ul>
+<li><a href="http://www.yaml.org/spec/1.2/spec.html" target="_blank" rel="noopener">YAML 1.2 规格</a></li>
+<li><a href="https://en.wikipedia.org/wiki/YAML" target="_blank" rel="noopener">YAML from Wikipedia</a></li>
+<li><a href="http://yaml.org/YAML_for_ruby.html" target="_blank" rel="noopener">YAML for Ruby</a></li>
+</ul>
+<p>（完）</p>
+<p>原文地址：<a href="http://www.ruanyifeng.com/blog/2016/07/yaml.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/07/yaml.html</a></p>
+]]></content>
+      <categories>
+        <category>YAML</category>
+      </categories>
+      <tags>
+        <tag>.yml</tag>
       </tags>
   </entry>
   <entry>
@@ -5952,7 +5952,6 @@ jobs<span class="token punctuation">:</span>
 </ul>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606054780964-8808d4cd-cfa7-41e2-bf69-eab4f3bfa862.png#crop=0&crop=0&crop=1&crop=1&height=445&id=VJGND&margin=%5Bobject%20Object%5D&name=image.png&originHeight=890&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=182896&status=done&style=none&title=&width=1278" alt="image.png"></p>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606054616609-57c9bbb6-7697-4271-a12d-88901d115e03.png#crop=0&crop=0&crop=1&crop=1&height=598&id=YmelV&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1196&originWidth=2272&originalType=binary&ratio=1&rotation=0&showTitle=false&size=196033&status=done&style=none&title=&width=1136" alt="image.png"></p>
-<p>-</p>
 <p>​</p>
 <p>​</p>
 ]]></content>
