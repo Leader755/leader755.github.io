@@ -308,6 +308,98 @@ yuque<span class="token operator">-</span>hexo clean</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>Github Actions自动化部署 hexo博客</title>
+    <url>/leader755/60370.html</url>
+    <content><![CDATA[<h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h2><p>利用 GitHub Actions 实现博客自动发布，将静态博客页面部署到多个服务器上，比如 GitHub Pages、Gitee pages 、云服务器上。本文介绍使用 GitHub Actions 实现将 Hexo 博客自动编译并发布到 GitHub Pages 上。</p>
+<h2 id="2-生成-SSH-秘钥"><a href="#2-生成-SSH-秘钥" class="headerlink" title="2.生成 SSH 秘钥"></a>2.<a href="https://www.yuque.com/leader755/blog/vrcytd" target="_blank" rel="noopener">生成 SSH 秘钥</a></h2><p>生成秘钥用于仓库间的推送：</p>
+<pre class=" language-bash"><code class="language-bash">ssh-keygen -f hexo-deploy-key -t rsa -C <span class="token string">"1181012791@qq.com"</span></code></pre>
+<blockquote>
+<p>一直回车，以上命令会在当前路径下生成公钥和私钥并且命名为 hexo-deploy-key：秘钥 <code>hexo-deploy-key</code> 和公钥 <code>hexo-deploy-key.pub</code>。</p>
+</blockquote>
+<p>​</p>
+<h2 id="3-准备-2-个-github-仓库"><a href="#3-准备-2-个-github-仓库" class="headerlink" title="3.准备 2 个 github 仓库"></a>3.准备 2 个 github 仓库</h2><p>博客源文件库：<a href="https://github.com/Leader755/blog-master.git" target="_blank" rel="noopener">https://github.com/Leader755/blog-master.git</a><br>页面文件仓库：<a href="https://github.com/Leader755/leader755.github.io.git" target="_blank" rel="noopener">https://github.com/Leader755/leader755.github.io.git</a></p>
+<h2 id="4-为-github-仓库配置秘钥"><a href="#4-为-github-仓库配置秘钥" class="headerlink" title="4.为 github 仓库配置秘钥"></a>4.为 github 仓库配置秘钥</h2><blockquote>
+<p><strong>目的：源码仓库代码推送到 githubPage 仓库</strong></p>
+</blockquote>
+<ul>
+<li>页面文件仓库（即 <a href="https://leader755.github.io/" target="_blank" rel="noopener">leader755.github.io</a>）:<ul>
+<li>在 <code>**Settings &gt; Deploy keys**</code> 中添加 Deploy key，内容为 <code>**hexo-deploy-key.pub**</code> 文件内容，同时勾选 <code>**Allow write access**</code> 选项。</li>
+</ul>
+</li>
+<li>博客源文件库：<ul>
+<li>在 <code>**Settings &gt; Secrets**</code> 中添加一个 Secret，名称为 <code>**DEPLOY_KEY**</code>，内容为 <code>**hexo-deploy-key**</code> 文件内容。后续在 Workflow 中通过名称 <strong>DEPLOY_KEY</strong> 使用这个密钥。</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-Workflow-配置"><a href="#5-Workflow-配置" class="headerlink" title="5.Workflow 配置"></a>5.Workflow 配置</h2><p>在博客源文件库中新建文件 <code>.github/workflows/deploy.yml</code>，配置内容如下：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># workflow name</span>
+<span class="token key atrule">name</span><span class="token punctuation">:</span> actions single
+
+<span class="token comment" spellcheck="true"># 当有 push 到仓库和外部触发的时候就运行</span>
+<span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>push<span class="token punctuation">,</span> repository_dispatch<span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true"># YQ_TOKEN</span>
+<span class="token comment" spellcheck="true"># YUQUE_GIT_HEXO</span>
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy Hexo Public To Pages
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">env</span><span class="token punctuation">:</span>
+      <span class="token key atrule">TZ</span><span class="token punctuation">:</span> Asia/Shanghai
+
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token comment" spellcheck="true"># check it to your workflow can access it</span>
+      <span class="token comment" spellcheck="true"># from: https://github.com/actions/checkout</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout Repository master branch
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@master
+
+      <span class="token comment" spellcheck="true"># from: https://github.com/actions/setup-node</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Setup Node.js 10.x
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@master
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token string">"10.x"</span>
+
+      <span class="token comment" spellcheck="true">#安装依赖(包含yuque-hexo，此处无需安装) from https://github.com/x-cold/yuque-hexo</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          npm install hexo-cli -g
+          npm install yuque-hexo -g
+          npm install</span>
+
+      <span class="token comment" spellcheck="true"># 此处请勿使用hexo clean&amp;&amp;yuque-hexo（重新构建时无需此命令行）忽略此条命令</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> yuque<span class="token punctuation">-</span>hexo sync
+        <span class="token key atrule">env</span><span class="token punctuation">:</span>
+          <span class="token key atrule">YUQUE_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.YUQUE_TOKEN_HEXO_SYNC_GITHUB_ONLINE<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true"># from: 这里是YUQUE_TOKEN: $不能随意改</span>
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          hexo clean
+          yuque-hexo sync || yuque-hexo sync || yuque-hexo sync  # 用 || 来重试的次数</span>
+
+      <span class="token comment" spellcheck="true"># 生成可访问的文档</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> hexo generate
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          hexo g</span>
+
+      <span class="token comment" spellcheck="true"># 生成pages且推送到文件仓库 from https://github.com/peaceiris/actions-gh-pages</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy hexo to Github pages
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">deploy_key</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.YUQUE_GIT_HEXO <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true"># 此处为 hexo-deploy-key</span>
+          <span class="token key atrule">external_repository</span><span class="token punctuation">:</span> Leader755/leader755.github.io
+          <span class="token key atrule">publish_branch</span><span class="token punctuation">:</span> master
+          <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> ./public
+          <span class="token key atrule">commit_message</span><span class="token punctuation">:</span> deploy githubPage
+          <span class="token comment" spellcheck="true"># commit_message: ${{ github.event.head_commit.message }}</span></code></pre>
+<h2 id="6-效果"><a href="#6-效果" class="headerlink" title="6.效果"></a>6.效果</h2><p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646353381466-86a6e57f-599e-4f9a-a69b-65e318cddfd9.png#clientId=uf6df5dba-c62d-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=706&id=ufb52c53d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1412&originWidth=2864&originalType=binary&ratio=1&rotation=0&showTitle=false&size=287456&status=done&style=none&taskId=ua3419686-4e1a-4a88-af1f-4cca4cc049a&title=&width=1432" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+        <tag>actions</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github 的actions重试</title>
     <url>/leader755/31085.html</url>
     <content><![CDATA[<blockquote>

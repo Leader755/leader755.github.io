@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2022-03-04T00:01:09.288Z</updated>
+  <updated>2022-03-04T00:30:10.695Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.leader755.com/leader755/62737.html"/>
     <id>https://www.leader755.com/leader755/62737.html</id>
     <published>2022-08-05T17:24:00.000Z</published>
-    <updated>2022-03-04T00:01:09.288Z</updated>
+    <updated>2022-03-04T00:30:10.695Z</updated>
     
     <summary type="html">
     
@@ -49,7 +49,7 @@
     <link href="https://www.leader755.com/leader755/16745.html"/>
     <id>https://www.leader755.com/leader755/16745.html</id>
     <published>2022-03-02T00:07:00.000Z</published>
-    <updated>2022-03-04T00:01:09.288Z</updated>
+    <updated>2022-03-04T00:30:10.695Z</updated>
     
     <summary type="html">
     
@@ -70,6 +70,35 @@
       <category term="自动化" scheme="https://www.leader755.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
       <category term="部署" scheme="https://www.leader755.com/tags/%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github Actions自动化部署 hexo博客</title>
+    <link href="https://www.leader755.com/leader755/60370.html"/>
+    <id>https://www.leader755.com/leader755/60370.html</id>
+    <published>2021-09-22T06:55:00.000Z</published>
+    <updated>2022-03-04T00:30:10.695Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-背景&quot;&gt;&lt;a href=&quot;#1-背景&quot; class=&quot;headerlink&quot; title=&quot;1.背景&quot;&gt;&lt;/a&gt;1.背景&lt;/h2&gt;&lt;p&gt;利用 GitHub Actions 实现博客自动发布，将静态博客页面部署到多个服务器上，比如 GitHub
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://www.leader755.com/categories/hexo/"/>
+    
+    
+      <category term="github" scheme="https://www.leader755.com/tags/github/"/>
+    
+      <category term="actions" scheme="https://www.leader755.com/tags/actions/"/>
     
   </entry>
   
@@ -458,7 +487,7 @@
     <link href="https://www.leader755.com/leader755/50783.html"/>
     <id>https://www.leader755.com/leader755/50783.html</id>
     <published>2021-04-21T13:55:23.000Z</published>
-    <updated>2022-03-04T00:01:09.284Z</updated>
+    <updated>2022-03-04T00:30:10.687Z</updated>
     
     <summary type="html">
     
@@ -565,35 +594,6 @@
     
     
       <category term="element-ui" scheme="https://www.leader755.com/tags/element-ui/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github域名加上1s，在线VS Code阅读源码神器诞生</title>
-    <link href="https://www.leader755.com/leader755/18017.html"/>
-    <id>https://www.leader755.com/leader755/18017.html</id>
-    <published>2021-02-19T16:38:23.000Z</published>
-    <updated>2021-02-19T16:38:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;原文链接：&quot;&gt;&lt;a href=&quot;#原文链接：&quot; class=&quot;headerlink&quot; title=&quot;原文链接：&quot;&gt;&lt;/a&gt;原文链接：&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;阅读原文请移步：&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="https://www.leader755.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="github 阅读" scheme="https://www.leader755.com/tags/github-%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
