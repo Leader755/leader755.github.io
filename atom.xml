@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2022-03-04T16:28:31.194Z</updated>
+  <updated>2022-03-05T06:43:13.769Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -17,39 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>小程序之间互相跳转</title>
-    <link href="https://www.leader755.com/leader755/62737.html"/>
-    <id>https://www.leader755.com/leader755/62737.html</id>
-    <published>2022-08-05T17:24:00.000Z</published>
-    <updated>2022-03-04T16:28:31.194Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;一-背景：&quot;&gt;&lt;a href=&quot;#一-背景：&quot; class=&quot;headerlink&quot; title=&quot;一.背景：&quot;&gt;&lt;/a&gt;一.背景：&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;在小程序里可以打开另一个小程序，让小程序之间可以互相连接跳转，类似于网页之间通过 URL
-        
-      
-    
-    </summary>
-    
-    
-      <category term="微信" scheme="https://www.leader755.com/categories/%E5%BE%AE%E4%BF%A1/"/>
-    
-    
-      <category term="小程序" scheme="https://www.leader755.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>博客自动化部署</title>
     <link href="https://www.leader755.com/leader755/16745.html"/>
     <id>https://www.leader755.com/leader755/16745.html</id>
     <published>2022-03-02T00:07:00.000Z</published>
-    <updated>2022-03-04T16:28:31.194Z</updated>
+    <updated>2022-03-05T06:43:13.769Z</updated>
     
     <summary type="html">
     
@@ -74,11 +46,39 @@
   </entry>
   
   <entry>
+    <title>小程序之间互相跳转</title>
+    <link href="https://www.leader755.com/leader755/62737.html"/>
+    <id>https://www.leader755.com/leader755/62737.html</id>
+    <published>2022-02-05T17:24:00.000Z</published>
+    <updated>2022-03-05T06:43:13.773Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一-背景：&quot;&gt;&lt;a href=&quot;#一-背景：&quot; class=&quot;headerlink&quot; title=&quot;一.背景：&quot;&gt;&lt;/a&gt;一.背景：&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在小程序里可以打开另一个小程序，让小程序之间可以互相连接跳转，类似于网页之间通过 URL
+        
+      
+    
+    </summary>
+    
+    
+      <category term="微信" scheme="https://www.leader755.com/categories/%E5%BE%AE%E4%BF%A1/"/>
+    
+    
+      <category term="小程序" scheme="https://www.leader755.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vuePress</title>
     <link href="https://www.leader755.com/leader755/33285.html"/>
     <id>https://www.leader755.com/leader755/33285.html</id>
     <published>2022-02-04T13:38:23.000Z</published>
-    <updated>2022-03-04T16:28:31.194Z</updated>
+    <updated>2022-03-05T06:43:13.769Z</updated>
     
     <summary type="html">
     
@@ -105,7 +105,7 @@
     <link href="https://www.leader755.com/leader755/33649.html"/>
     <id>https://www.leader755.com/leader755/33649.html</id>
     <published>2021-10-19T11:05:41.000Z</published>
-    <updated>2022-03-04T16:28:31.190Z</updated>
+    <updated>2022-03-05T06:43:13.769Z</updated>
     
     <summary type="html">
     
@@ -137,7 +137,7 @@
     <link href="https://www.leader755.com/leader755/60370.html"/>
     <id>https://www.leader755.com/leader755/60370.html</id>
     <published>2021-09-22T06:55:00.000Z</published>
-    <updated>2022-03-04T16:28:31.194Z</updated>
+    <updated>2022-03-05T06:43:13.769Z</updated>
     
     <summary type="html">
     
@@ -546,7 +546,7 @@
     <link href="https://www.leader755.com/leader755/50783.html"/>
     <id>https://www.leader755.com/leader755/50783.html</id>
     <published>2021-04-21T13:55:23.000Z</published>
-    <updated>2022-03-04T16:28:31.186Z</updated>
+    <updated>2022-03-05T06:43:13.765Z</updated>
     
     <summary type="html">
     
