@@ -105,20 +105,6 @@ git config <span class="token operator">--</span>global user<span class="token p
       </tags>
   </entry>
   <entry>
-    <title>4.mac 上使用 vi</title>
-    <url>/leader755/38612.html</url>
-    <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
-<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>mac</tag>
-        <tag>vi</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5.hexo博客部署到 Github和 coding</title>
     <url>/leader755/36193.html</url>
     <content><![CDATA[<h2 id="1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："><a href="#1：打开项目根目录下的-config-yml-配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：" class="headerlink" title="1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）："></a>1：打开项目根目录下的 _config.yml 配置文件配置参数。拉到文件末尾，填上如下配置（也可同时部署到多个仓库，后面再说）：</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588313278812-df6c1515-c7b2-4988-ab07-98655129341a.png#crop=0&crop=0&crop=1&crop=1&height=144&id=XKQUU&margin=%5Bobject%20Object%5D&name=image.png&originHeight=288&originWidth=1052&originalType=binary&ratio=1&rotation=0&showTitle=false&size=44477&status=done&style=none&title=&width=526" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588333533439-ce902a29-c0fc-49e0-90a7-90e71ce9c3aa.png#crop=0&crop=0&crop=1&crop=1&height=120&id=Y8B8Y&margin=%5Bobject%20Object%5D&name=image.png&originHeight=240&originWidth=972&originalType=binary&ratio=1&rotation=0&showTitle=false&size=33032&status=done&style=none&title=&width=486" alt="image.png"><br>如果不部署到 coding，就只写 github 就行。</p>
@@ -154,6 +140,20 @@ hexo g <span class="token operator">-</span>d</code></pre>
       <tags>
         <tag>github</tag>
         <tag>coding</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4.mac 上使用 vi</title>
+    <url>/leader755/38612.html</url>
+    <content><![CDATA[<p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
+<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>vi</tag>
       </tags>
   </entry>
   <entry>
