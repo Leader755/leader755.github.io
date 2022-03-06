@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2022-03-06T15:31:32.525Z</updated>
+  <updated>2022-03-06T15:33:01.916Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.leader755.com/leader755/16745.html"/>
     <id>https://www.leader755.com/leader755/16745.html</id>
     <published>2022-03-02T00:07:00.000Z</published>
-    <updated>2022-03-06T15:31:32.525Z</updated>
+    <updated>2022-03-06T15:33:01.916Z</updated>
     
     <summary type="html">
     
@@ -46,11 +46,38 @@
   </entry>
   
   <entry>
+    <title>微前端乾坤</title>
+    <link href="https://www.leader755.com/leader755/39615.html"/>
+    <id>https://www.leader755.com/leader755/39615.html</id>
+    <published>2022-02-16T11:05:41.000Z</published>
+    <updated>2022-03-06T15:33:01.916Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1.什么是微前端？&lt;br&gt;微前端（Micro-Frontends）是一种类似于微服务的架构，它将微服务的理念应用于浏览器端，即将 Web
+        
+      
+    
+    </summary>
+    
+    
+      <category term="微前端" scheme="https://www.leader755.com/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="qiankun" scheme="https://www.leader755.com/tags/qiankun/"/>
+    
+  </entry>
+  
+  <entry>
     <title>小程序之间互相跳转</title>
     <link href="https://www.leader755.com/leader755/62737.html"/>
     <id>https://www.leader755.com/leader755/62737.html</id>
     <published>2022-02-05T17:24:00.000Z</published>
-    <updated>2022-03-06T15:31:32.525Z</updated>
+    <updated>2022-03-06T15:33:01.916Z</updated>
     
     <summary type="html">
     
@@ -78,7 +105,7 @@
     <link href="https://www.leader755.com/leader755/33285.html"/>
     <id>https://www.leader755.com/leader755/33285.html</id>
     <published>2022-02-04T13:38:23.000Z</published>
-    <updated>2022-03-06T15:31:32.525Z</updated>
+    <updated>2022-03-06T15:33:01.916Z</updated>
     
     <summary type="html">
     
@@ -105,7 +132,7 @@
     <link href="https://www.leader755.com/leader755/33649.html"/>
     <id>https://www.leader755.com/leader755/33649.html</id>
     <published>2021-10-19T11:05:41.000Z</published>
-    <updated>2022-03-06T15:31:32.525Z</updated>
+    <updated>2022-03-06T15:33:01.916Z</updated>
     
     <summary type="html">
     
@@ -137,7 +164,7 @@
     <link href="https://www.leader755.com/leader755/60370.html"/>
     <id>https://www.leader755.com/leader755/60370.html</id>
     <published>2021-09-22T06:55:00.000Z</published>
-    <updated>2022-03-06T15:31:32.525Z</updated>
+    <updated>2022-03-06T15:33:01.916Z</updated>
     
     <summary type="html">
     
@@ -305,7 +332,7 @@
     <link href="https://www.leader755.com/leader755/58426.html"/>
     <id>https://www.leader755.com/leader755/58426.html</id>
     <published>2021-05-16T11:55:00.000Z</published>
-    <updated>2022-03-06T15:31:32.525Z</updated>
+    <updated>2022-03-06T15:33:01.916Z</updated>
     
     <summary type="html">
     
@@ -335,7 +362,7 @@
     <link href="https://www.leader755.com/leader755/1179.html"/>
     <id>https://www.leader755.com/leader755/1179.html</id>
     <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2022-03-06T15:31:32.525Z</updated>
+    <updated>2022-03-06T15:33:01.916Z</updated>
     
     <summary type="html">
     
@@ -364,7 +391,7 @@
     <link href="https://www.leader755.com/leader755/10309.html"/>
     <id>https://www.leader755.com/leader755/10309.html</id>
     <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2022-03-06T15:31:32.525Z</updated>
+    <updated>2022-03-06T15:33:01.916Z</updated>
     
     <summary type="html">
     
@@ -393,7 +420,7 @@
     <link href="https://www.leader755.com/leader755/2040.html"/>
     <id>https://www.leader755.com/leader755/2040.html</id>
     <published>2021-05-05T06:55:00.000Z</published>
-    <updated>2022-03-06T15:31:32.525Z</updated>
+    <updated>2022-03-06T15:33:01.916Z</updated>
     
     <summary type="html">
     
@@ -422,7 +449,7 @@
     <link href="https://www.leader755.com/leader755/4285.html"/>
     <id>https://www.leader755.com/leader755/4285.html</id>
     <published>2021-05-05T05:55:23.000Z</published>
-    <updated>2022-03-06T15:31:32.525Z</updated>
+    <updated>2022-03-06T15:33:01.916Z</updated>
     
     <summary type="html">
     
@@ -546,7 +573,7 @@
     <link href="https://www.leader755.com/leader755/50783.html"/>
     <id>https://www.leader755.com/leader755/50783.html</id>
     <published>2021-04-21T13:55:23.000Z</published>
-    <updated>2022-03-06T15:31:32.517Z</updated>
+    <updated>2022-03-06T15:33:01.908Z</updated>
     
     <summary type="html">
     
@@ -568,35 +595,6 @@
       <category term="tomcat" scheme="https://www.leader755.com/tags/tomcat/"/>
     
       <category term="centos7" scheme="https://www.leader755.com/tags/centos7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue通信-组件传值</title>
-    <link href="https://www.leader755.com/leader755/37560.html"/>
-    <id>https://www.leader755.com/leader755/37560.html</id>
-    <published>2021-04-15T13:55:23.000Z</published>
-    <updated>2021-04-15T13:55:23.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;1&amp;gt;在介绍组件传值之前先明确三种组件关系：父子组件、兄弟组件、无关系组件。&lt;br&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://www.leader755.com/categories/vue/"/>
-    
-    
-      <category term="vue 通信" scheme="https://www.leader755.com/tags/vue-%E9%80%9A%E4%BF%A1/"/>
-    
-      <category term="组件传值" scheme="https://www.leader755.com/tags/%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/"/>
     
   </entry>
   
