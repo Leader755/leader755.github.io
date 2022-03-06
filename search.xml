@@ -504,7 +504,6 @@ yuque<span class="token operator">-</span>hexo clean</code></pre>
       </categories>
       <tags>
         <tag>github</tag>
-        <tag>jenkins</tag>
       </tags>
   </entry>
   <entry>
@@ -1464,6 +1463,68 @@ server<span class="token punctuation">{</span>
       </tags>
   </entry>
   <entry>
+    <title>jenkins配置 jdk，maven，git，node</title>
+    <url>/leader755/1179.html</url>
+    <content><![CDATA[<h2 id="1-centos-中安装-JDK"><a href="#1-centos-中安装-JDK" class="headerlink" title="1.centos 中安装 JDK:"></a>1.centos 中安装 JDK:</h2><pre class=" language-ruby"><code class="language-ruby"><span class="token number">1</span><span class="token operator">></span>查看系统是否已安装 <span class="token function">Java</span><span class="token punctuation">(</span><span class="token constant">Jenkins</span>需要在 <span class="token constant">Java</span> 环境下运行<span class="token punctuation">)</span>
+yum list installed <span class="token operator">|</span> grep jdk
+
+<span class="token number">2</span><span class="token operator">></span>yun 安装 java
+yum search openjdk
+yum <span class="token operator">-</span>y install java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token operator">-</span>devel
+
+<span class="token number">3</span><span class="token operator">></span>验证 java 是否安装成功
+java <span class="token operator">-</span>version</code></pre>
+<h2 id="2-centos-安装-Maven-非必须"><a href="#2-centos-安装-Maven-非必须" class="headerlink" title="2.centos 安装 Maven(非必须):"></a>2.centos 安装 Maven(非必须):</h2><pre class=" language-ruby"><code class="language-ruby"><span class="token number">1</span><span class="token operator">></span>安装 maven
+wget http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>repos<span class="token punctuation">.</span>fedorapeople<span class="token punctuation">.</span>org<span class="token operator">/</span>repos<span class="token operator">/</span>dchen<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>epel<span class="token operator">-</span>apache<span class="token operator">-</span>maven<span class="token punctuation">.</span>repo <span class="token operator">-</span><span class="token constant">O</span> <span class="token operator">/</span>etc<span class="token operator">/</span>yum<span class="token punctuation">.</span>repos<span class="token punctuation">.</span>d<span class="token operator">/</span>epel<span class="token operator">-</span>apache<span class="token operator">-</span>maven<span class="token punctuation">.</span>repo
+yum <span class="token operator">-</span>y install apache<span class="token operator">-</span>maven
+
+<span class="token number">2</span><span class="token operator">></span>验证 <span class="token constant">Maven</span> 是否安装成功
+mvn <span class="token operator">-</span>v
+
+<span class="token number">3</span><span class="token operator">></span>卸载 maven
+yum remove apache<span class="token operator">-</span>maven</code></pre>
+<blockquote>
+<p>关于 JDK 和 maven 的安装详细的，请参考<a href="https://www.yuque.com/leader755/blog/mlnd6i#36d395a02bb9c89efdc5687df83e0819" target="_blank" rel="noopener">《<strong>centos7 安装 jdk ,maven，tomcat，nginx</strong>》</a>。</p>
+</blockquote>
+<h2 id="3-centos-安装-Git"><a href="#3-centos-安装-Git" class="headerlink" title="3.centos 安装 Git"></a>3.centos 安装 Git</h2><pre class=" language-ruby"><code class="language-ruby">yum <span class="token operator">-</span>y install git
+git <span class="token operator">--</span>version</code></pre>
+<h2 id="4-jenkins-安装-nodejs"><a href="#4-jenkins-安装-nodejs" class="headerlink" title="4.jenkins 安装 nodejs"></a>4.jenkins 安装 nodejs</h2><h3 id="1-gt-node-插件安装"><a href="#1-gt-node-插件安装" class="headerlink" title="1&gt;node 插件安装"></a>1&gt;node 插件安装</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620208745508-261b3fb1-ef17-4464-b022-310933389e95.png#clientId=uadb33ceb-25bc-4&from=paste&height=360&id=u94351d42&margin=%5Bobject%20Object%5D&name=image.png&originHeight=720&originWidth=2804&originalType=binary&size=136050&status=done&style=none&taskId=u1d26eb07-4abe-4c79-a22d-80766a376d6&width=1402" alt="image.png"></p>
+<h2 id="5-Jenkins-中配置-JDK、Maven、Git-和-node"><a href="#5-Jenkins-中配置-JDK、Maven、Git-和-node" class="headerlink" title="5. Jenkins 中配置 JDK、Maven、Git 和 node"></a>5. Jenkins 中配置 JDK、Maven、Git 和 node</h2><p>进入 Manage Jenkins -&gt; Global Tool Configuration，依次配置 JDK、Maven 、Git 和 node 路径。</p>
+<h3 id="1-查看-JDK-路径"><a href="#1-查看-JDK-路径" class="headerlink" title="1. 查看 JDK 路径"></a>1. 查看 JDK 路径</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看 java</span>
+<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java
+  看到 <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java 指向了 <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java，很遗憾，还不是我们要找的真正路径
+
+<span class="token comment" spellcheck="true">//JDK 真正所在的地方 （/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64）</span>
+<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java
+ lrwxrwxrwx <span class="token number">1</span> root root <span class="token number">73</span> <span class="token number">11</span>月 <span class="token number">21</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">30</span> <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>jvm<span class="token operator">/</span>java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0.272</span><span class="token punctuation">.</span>b10<span class="token number">-1</span><span class="token punctuation">.</span>el7_9<span class="token punctuation">.</span>x86_64<span class="token operator">/</span>jre<span class="token operator">/</span>bin<span class="token operator">/</span>java
+</code></pre>
+<h3 id="2-gt-查看-maven-路径"><a href="#2-gt-查看-maven-路径" class="headerlink" title="2&gt;查看 maven 路径"></a>2&gt;查看 maven 路径</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看</span>
+<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+  lrwxrwxrwx <span class="token number">1</span> root root <span class="token number">31</span> <span class="token number">11</span>月 <span class="token number">21</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">54</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+
+<span class="token comment" spellcheck="true">//mvn 真正所在的地方 /usr/share/apache-maven/</span>
+<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l  <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+    rwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">1</span> root root <span class="token number">5969</span> <span class="token number">10</span>月 <span class="token number">18</span> <span class="token number">2017</span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+</code></pre>
+<p>3&gt;插卡 git 路径</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看</span>
+<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+ <span class="token operator">-</span>rwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">113</span> root root <span class="token number">1527752</span> <span class="token number">5</span>月  <span class="token number">29</span> <span class="token number">2020</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>git</code></pre>
+<h3 id="3-gt-全局配置-jdk-，mvn-git，node-也可全部选择自动安装"><a href="#3-gt-全局配置-jdk-，mvn-git，node-也可全部选择自动安装" class="headerlink" title="3&gt;全局配置 jdk ，mvn, git，node(也可全部选择自动安装)"></a>3&gt;全局配置 jdk ，mvn, git，node(也可全部选择自动安装)</h3><p>jenkins 面板–》全局配置工具<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606047882164-c17da9e2-6526-4ce3-9e9a-e38d20640439.png#height=354&id=iRVgA&margin=%5Bobject%20Object%5D&name=image.png&originHeight=708&originWidth=1880&originalType=binary&size=67088&status=done&style=none&width=940" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209685480-06264a43-c0da-4eaf-8c3d-b859d8d4de34.png#clientId=uadb33ceb-25bc-4&from=paste&height=361&id=u210324c5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=722&originWidth=2246&originalType=binary&size=70037&status=done&style=none&taskId=ub282f6a1-3296-4120-bd63-8ce58d9bde7&width=1123" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209753638-d6bdd1d2-d865-482d-9282-d1d0a7acbf7d.png#clientId=uadb33ceb-25bc-4&from=paste&height=379&id=ue45b5a8b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=758&originWidth=2176&originalType=binary&size=65134&status=done&style=none&taskId=u77a606fb-9d0e-44aa-bcb9-4709c977171&width=1088" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209201830-a3796ee3-1cca-4afc-baca-5354ec63c19c.png#clientId=uadb33ceb-25bc-4&from=paste&height=773&id=Oc9TH&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1546&originWidth=2858&originalType=binary&size=220266&status=done&style=none&taskId=u0659ca0d-189e-4a16-b436-6ec1ee1dcd5&width=1429" alt="image.png"></p>
+<h2 id="6-nodejs-在-job-中的应用"><a href="#6-nodejs-在-job-中的应用" class="headerlink" title="6.nodejs 在 job 中的应用"></a>6.nodejs 在 job 中的应用</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620210323919-25d3c27f-005a-4e77-8a20-bafbc3c0dc62.png#clientId=u5c8a301e-c27f-4&from=paste&height=793&id=ua4c82c56&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1586&originWidth=2880&originalType=binary&size=272376&status=done&style=none&taskId=u65a1aa55-af72-4af9-aee7-ea064a318fb&width=1440" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>jenkins</category>
+      </categories>
+      <tags>
+        <tag>jdk</tag>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux 的定时任务crontab</title>
     <url>/leader755/58426.html</url>
     <content><![CDATA[<blockquote>
@@ -1542,11 +1603,11 @@ W <span class="token function">：指定离给定日期最近的工作日</span>
 <h2 id="三、定时任务相关网站推荐"><a href="#三、定时任务相关网站推荐" class="headerlink" title="三、定时任务相关网站推荐"></a>三、定时任务相关网站推荐</h2><ul>
 <li><strong>设置 cron 定时的网站：</strong><a href="https://console.cron-job.org/jobs" target="_blank" rel="noopener"><strong>https://console.cron-job.org/jobs</strong></a></li>
 </ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1621173755251-72853e3d-28e8-432f-84ee-3df3b588bb78.png#clientId=uba7a3344-3d2c-4&from=paste&height=765&id=u62766af0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1530&originWidth=2880&originalType=binary&size=330274&status=done&style=none&taskId=u1e54fd58-9b6f-44e5-bea3-9f517ec5ac1&width=1440" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1621173755251-72853e3d-28e8-432f-84ee-3df3b588bb78.png#clientId=uba7a3344-3d2c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=765&id=u62766af0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1530&originWidth=2880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=330274&status=done&style=none&taskId=u1e54fd58-9b6f-44e5-bea3-9f517ec5ac1&title=&width=1440" alt="image.png"></p>
 <ul>
 <li>** 效验表达式的网站：<strong>[</strong><a href="https://tool.lu/crontab**](https://tool.lu/crontab)" target="_blank" rel="noopener">https://tool.lu/crontab**](https://tool.lu/crontab)</a></li>
 </ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1621172152399-18980836-1323-4a95-9c4a-1a674ded214d.png#clientId=u0bdf43c1-5e9e-4&from=paste&height=632&id=uf28d6180&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1264&originWidth=1904&originalType=binary&size=188811&status=done&style=none&taskId=u489fd11e-183e-466e-8497-5d1ec82d008&width=952" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1621172152399-18980836-1323-4a95-9c4a-1a674ded214d.png#clientId=u0bdf43c1-5e9e-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=632&id=uf28d6180&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1264&originWidth=1904&originalType=binary&ratio=1&rotation=0&showTitle=false&size=188811&status=done&style=none&taskId=u489fd11e-183e-466e-8497-5d1ec82d008&title=&width=952" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>crontab</category>
@@ -1554,68 +1615,6 @@ W <span class="token function">：指定离给定日期最近的工作日</span>
       <tags>
         <tag>crontab</tag>
         <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>jenkins配置 jdk，maven，git，node</title>
-    <url>/leader755/1179.html</url>
-    <content><![CDATA[<h2 id="1-centos-中安装-JDK"><a href="#1-centos-中安装-JDK" class="headerlink" title="1.centos 中安装 JDK:"></a>1.centos 中安装 JDK:</h2><pre class=" language-ruby"><code class="language-ruby"><span class="token number">1</span><span class="token operator">></span>查看系统是否已安装 <span class="token function">Java</span><span class="token punctuation">(</span><span class="token constant">Jenkins</span>需要在 <span class="token constant">Java</span> 环境下运行<span class="token punctuation">)</span>
-yum list installed <span class="token operator">|</span> grep jdk
-
-<span class="token number">2</span><span class="token operator">></span>yun 安装 java
-yum search openjdk
-yum <span class="token operator">-</span>y install java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token operator">-</span>devel
-
-<span class="token number">3</span><span class="token operator">></span>验证 java 是否安装成功
-java <span class="token operator">-</span>version</code></pre>
-<h2 id="2-centos-安装-Maven-非必须"><a href="#2-centos-安装-Maven-非必须" class="headerlink" title="2.centos 安装 Maven(非必须):"></a>2.centos 安装 Maven(非必须):</h2><pre class=" language-ruby"><code class="language-ruby"><span class="token number">1</span><span class="token operator">></span>安装 maven
-wget http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>repos<span class="token punctuation">.</span>fedorapeople<span class="token punctuation">.</span>org<span class="token operator">/</span>repos<span class="token operator">/</span>dchen<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>epel<span class="token operator">-</span>apache<span class="token operator">-</span>maven<span class="token punctuation">.</span>repo <span class="token operator">-</span><span class="token constant">O</span> <span class="token operator">/</span>etc<span class="token operator">/</span>yum<span class="token punctuation">.</span>repos<span class="token punctuation">.</span>d<span class="token operator">/</span>epel<span class="token operator">-</span>apache<span class="token operator">-</span>maven<span class="token punctuation">.</span>repo
-yum <span class="token operator">-</span>y install apache<span class="token operator">-</span>maven
-
-<span class="token number">2</span><span class="token operator">></span>验证 <span class="token constant">Maven</span> 是否安装成功
-mvn <span class="token operator">-</span>v
-
-<span class="token number">3</span><span class="token operator">></span>卸载 maven
-yum remove apache<span class="token operator">-</span>maven</code></pre>
-<blockquote>
-<p>关于 JDK 和 maven 的安装详细的，请参考<a href="https://www.yuque.com/leader755/blog/mlnd6i#36d395a02bb9c89efdc5687df83e0819" target="_blank" rel="noopener">《<strong>centos7 安装 jdk ,maven，tomcat，nginx</strong>》</a>。</p>
-</blockquote>
-<h2 id="3-centos-安装-Git"><a href="#3-centos-安装-Git" class="headerlink" title="3.centos 安装 Git"></a>3.centos 安装 Git</h2><pre class=" language-ruby"><code class="language-ruby">yum <span class="token operator">-</span>y install git
-git <span class="token operator">--</span>version</code></pre>
-<h2 id="4-jenkins-安装-nodejs"><a href="#4-jenkins-安装-nodejs" class="headerlink" title="4.jenkins 安装 nodejs"></a>4.jenkins 安装 nodejs</h2><h3 id="1-gt-node-插件安装"><a href="#1-gt-node-插件安装" class="headerlink" title="1&gt;node 插件安装"></a>1&gt;node 插件安装</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620208745508-261b3fb1-ef17-4464-b022-310933389e95.png#clientId=uadb33ceb-25bc-4&from=paste&height=360&id=u94351d42&margin=%5Bobject%20Object%5D&name=image.png&originHeight=720&originWidth=2804&originalType=binary&size=136050&status=done&style=none&taskId=u1d26eb07-4abe-4c79-a22d-80766a376d6&width=1402" alt="image.png"></p>
-<h2 id="5-Jenkins-中配置-JDK、Maven、Git-和-node"><a href="#5-Jenkins-中配置-JDK、Maven、Git-和-node" class="headerlink" title="5. Jenkins 中配置 JDK、Maven、Git 和 node"></a>5. Jenkins 中配置 JDK、Maven、Git 和 node</h2><p>进入 Manage Jenkins -&gt; Global Tool Configuration，依次配置 JDK、Maven 、Git 和 node 路径。</p>
-<h3 id="1-查看-JDK-路径"><a href="#1-查看-JDK-路径" class="headerlink" title="1. 查看 JDK 路径"></a>1. 查看 JDK 路径</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看 java</span>
-<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java
-  看到 <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java 指向了 <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java，很遗憾，还不是我们要找的真正路径
-
-<span class="token comment" spellcheck="true">//JDK 真正所在的地方 （/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64）</span>
-<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java
- lrwxrwxrwx <span class="token number">1</span> root root <span class="token number">73</span> <span class="token number">11</span>月 <span class="token number">21</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">30</span> <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>jvm<span class="token operator">/</span>java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0.272</span><span class="token punctuation">.</span>b10<span class="token number">-1</span><span class="token punctuation">.</span>el7_9<span class="token punctuation">.</span>x86_64<span class="token operator">/</span>jre<span class="token operator">/</span>bin<span class="token operator">/</span>java
-</code></pre>
-<h3 id="2-gt-查看-maven-路径"><a href="#2-gt-查看-maven-路径" class="headerlink" title="2&gt;查看 maven 路径"></a>2&gt;查看 maven 路径</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看</span>
-<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
-  lrwxrwxrwx <span class="token number">1</span> root root <span class="token number">31</span> <span class="token number">11</span>月 <span class="token number">21</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">54</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
-
-<span class="token comment" spellcheck="true">//mvn 真正所在的地方 /usr/share/apache-maven/</span>
-<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l  <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
-    rwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">1</span> root root <span class="token number">5969</span> <span class="token number">10</span>月 <span class="token number">18</span> <span class="token number">2017</span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
-</code></pre>
-<p>3&gt;插卡 git 路径</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看</span>
-<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
- <span class="token operator">-</span>rwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">113</span> root root <span class="token number">1527752</span> <span class="token number">5</span>月  <span class="token number">29</span> <span class="token number">2020</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>git</code></pre>
-<h3 id="3-gt-全局配置-jdk-，mvn-git，node-也可全部选择自动安装"><a href="#3-gt-全局配置-jdk-，mvn-git，node-也可全部选择自动安装" class="headerlink" title="3&gt;全局配置 jdk ，mvn, git，node(也可全部选择自动安装)"></a>3&gt;全局配置 jdk ，mvn, git，node(也可全部选择自动安装)</h3><p>jenkins 面板–》全局配置工具<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606047882164-c17da9e2-6526-4ce3-9e9a-e38d20640439.png#height=354&id=iRVgA&margin=%5Bobject%20Object%5D&name=image.png&originHeight=708&originWidth=1880&originalType=binary&size=67088&status=done&style=none&width=940" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209685480-06264a43-c0da-4eaf-8c3d-b859d8d4de34.png#clientId=uadb33ceb-25bc-4&from=paste&height=361&id=u210324c5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=722&originWidth=2246&originalType=binary&size=70037&status=done&style=none&taskId=ub282f6a1-3296-4120-bd63-8ce58d9bde7&width=1123" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209753638-d6bdd1d2-d865-482d-9282-d1d0a7acbf7d.png#clientId=uadb33ceb-25bc-4&from=paste&height=379&id=ue45b5a8b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=758&originWidth=2176&originalType=binary&size=65134&status=done&style=none&taskId=u77a606fb-9d0e-44aa-bcb9-4709c977171&width=1088" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209201830-a3796ee3-1cca-4afc-baca-5354ec63c19c.png#clientId=uadb33ceb-25bc-4&from=paste&height=773&id=Oc9TH&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1546&originWidth=2858&originalType=binary&size=220266&status=done&style=none&taskId=u0659ca0d-189e-4a16-b436-6ec1ee1dcd5&width=1429" alt="image.png"></p>
-<h2 id="6-nodejs-在-job-中的应用"><a href="#6-nodejs-在-job-中的应用" class="headerlink" title="6.nodejs 在 job 中的应用"></a>6.nodejs 在 job 中的应用</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620210323919-25d3c27f-005a-4e77-8a20-bafbc3c0dc62.png#clientId=u5c8a301e-c27f-4&from=paste&height=793&id=ua4c82c56&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1586&originWidth=2880&originalType=binary&size=272376&status=done&style=none&taskId=u65a1aa55-af72-4af9-aee7-ea064a318fb&width=1440" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>jenkins</category>
-      </categories>
-      <tags>
-        <tag>jdk</tag>
-        <tag>node</tag>
       </tags>
   </entry>
   <entry>
@@ -1688,7 +1687,7 @@ docker rmi $(docker images -q)</code></pre>
 <blockquote>
 <p>docker rm 容器 ID 或容器名</p>
 <ol>
-<li>先 docker ps -a 寻找已经停止运行的实例<br>2.docker rm 59ec 删除实例<br>3.docker ps -a 查看实例已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630199-471ec578-4dbb-4698-9bee-35e1501e9d4f.png#height=269&id=jUyrG&originHeight=269&originWidth=1307&originalType=binary&size=0&status=done&style=none&width=1307" alt=""><br>如果容器实例在运行状态下 是不能通过上面的命令删除的，会提示容器实例正在运行中。需要先停止在删除,不会停止实例的看这里<a href="https://blog.csdn.net/Michel4Liu/article/details/80889977" target="_blank" rel="noopener">https://blog.csdn.net/Michel4Liu/article/details/80889977</a>，也可以通过参数强制删除<br>参数：<br>-f : 通过 SIGKILL 信号强制删除一个运行中的容器,主要删除正在运行的容器实例<br>-l : 移除容器间的网络连接，而非容器本身<br>-v : 删除容器挂载卷</li>
+<li>先 docker ps -a 寻找已经停止运行的实例<br>2.docker rm 59ec 删除实例<br>3.docker ps -a 查看实例已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630199-471ec578-4dbb-4698-9bee-35e1501e9d4f.png#crop=0&crop=0&crop=1&crop=1&height=269&id=jUyrG&originHeight=269&originWidth=1307&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1307" alt=""><br>如果容器实例在运行状态下 是不能通过上面的命令删除的，会提示容器实例正在运行中。需要先停止在删除,不会停止实例的看这里<a href="https://blog.csdn.net/Michel4Liu/article/details/80889977" target="_blank" rel="noopener">https://blog.csdn.net/Michel4Liu/article/details/80889977</a>，也可以通过参数强制删除<br>参数：<br>-f : 通过 SIGKILL 信号强制删除一个运行中的容器,主要删除正在运行的容器实例<br>-l : 移除容器间的网络连接，而非容器本身<br>-v : 删除容器挂载卷</li>
 </ol>
 </blockquote>
 <p>2、删除镜像</p>
@@ -1696,7 +1695,7 @@ docker rmi $(docker images -q)</code></pre>
 <p>docker rmi 容器 ID 或容器名</p>
 <ol>
 <li>首先 docker images 查看所有镜像</li>
-<li>然后 docker rmi fe200 删除镜像 3.再次通过 docker images 查看镜像 发现已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630192-3c1c37e2-3250-4ea1-b537-dd41489dcb10.png#height=441&id=INqi8&originHeight=441&originWidth=1014&originalType=binary&size=0&status=done&style=none&width=1014" alt=""><br>如果删除的镜像已经产生了容器实例(run 过)不容器实例是否启动都会提示无法删除，因为被占用。这时需要先删除容器实例或添加删除参数<br>参数<br>-f :强制删除，一般用于被占用的删除<br>–no-prune :不移除该镜像的过程镜像，默认移除</li>
+<li>然后 docker rmi fe200 删除镜像 3.再次通过 docker images 查看镜像 发现已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630192-3c1c37e2-3250-4ea1-b537-dd41489dcb10.png#crop=0&crop=0&crop=1&crop=1&height=441&id=INqi8&originHeight=441&originWidth=1014&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1014" alt=""><br>如果删除的镜像已经产生了容器实例(run 过)不容器实例是否启动都会提示无法删除，因为被占用。这时需要先删除容器实例或添加删除参数<br>参数<br>-f :强制删除，一般用于被占用的删除<br>–no-prune :不移除该镜像的过程镜像，默认移除</li>
 </ol>
 </blockquote>
 ]]></content>
@@ -2169,123 +2168,6 @@ footer<span class="token punctuation">:</span> 页尾
       </tags>
   </entry>
   <entry>
-    <title>vue的!class和!style</title>
-    <url>/leader755/61512.html</url>
-    <content><![CDATA[<h1 id="style-总结："><a href="#style-总结：" class="headerlink" title=":style 总结："></a>:style 总结：</h1><p>写 inline style 的方法跟 class 大同小异，一样可以使用阵列及物件语法，但在给<strong>css 属性时要注意有些以</strong><code>**-**</code><strong>连结的词，要改为驼峰式写法，或者是使用单引号括起来</strong>。</p>
-<h2 id="一-对象语法"><a href="#一-对象语法" class="headerlink" title="一. 对象语法"></a>一. 对象语法</h2><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  　<span class="token comment" spellcheck="true">&lt;!--单个属性--></span>
-  　
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> activeColor<span class="token punctuation">}</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>color:{{activeColor}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  　<span class="token comment" spellcheck="true">&lt;!--驼峰写法--></span>
-  　
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token punctuation">{</span><span class="token string">'text-align'</span><span class="token punctuation">:</span>textAlign,<span class="token property">fontSize</span><span class="token punctuation">:</span> fontSize + <span class="token string">'px'</span><span class="token punctuation">}</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    text-align:{{textAlign}},fontSize:{{fontSize}}px
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  　<span class="token comment" spellcheck="true">&lt;!--一个对象--></span>
-  　
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value">styleObject</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{styleObject}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<h2 id="二-数组语法"><a href="#二-数组语法" class="headerlink" title="二. 数组语法"></a>二. 数组语法</h2><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  　<span class="token comment" spellcheck="true">&lt;!--整个数组--></span>
-  　
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value">[baseStyles, overridingStyles]</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    {{[baseStyles, overridingStyles]}}
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  　<span class="token comment" spellcheck="true">&lt;!--数组+三元表达式--></span>
-  　
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token selector">[</span><span class="token punctuation">{</span><span class="token property">backgroundColor</span><span class="token punctuation">:</span>isActive ? <span class="token string">'#f00'</span> <span class="token punctuation">:</span> <span class="token string">'#00f'</span><span class="token punctuation">}</span>,baseStyles]</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    如果isActive==true,背景红色
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  　<span class="token comment" spellcheck="true">&lt;!--对象+数组--></span>
-  　
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token selector">[</span><span class="token punctuation">{</span> <span class="token property">baseStyles</span><span class="token punctuation">:</span> Active <span class="token punctuation">}</span>, overridingStyles]</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    {{[{ baseStyles: Active }, overridingStyles]}}
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<h2 id="三-style-动态背景"><a href="#三-style-动态背景" class="headerlink" title="三. :style 动态背景"></a>三. :style 动态背景</h2><pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"istrue=!istrue"</span> <span class="token symbol">:style</span><span class="token operator">=</span>"<span class="token punctuation">{</span><span class="token string">'height'</span><span class="token punctuation">:</span><span class="token string">'200px'</span><span class="token punctuation">,</span><span class="token string">'width'</span><span class="token punctuation">:</span><span class="token string">'100px'</span><span class="token punctuation">,</span><span class="token string">'background-size'</span><span class="token punctuation">:</span>'<span class="token number">100</span><span class="token string">%,100%',</span><span class="token string">'background-repeat'</span><span class="token punctuation">:</span><span class="token string">'no-repeat'</span><span class="token punctuation">,</span><span class="token string">'background-image'</span><span class="token punctuation">:</span>`<span class="token function">url</span><span class="token punctuation">(</span>$<span class="token punctuation">{</span>istrue<span class="token operator">?</span><span class="token string">'../../../static/1.png'</span><span class="token punctuation">:</span><span class="token string">'../../../static/2.png'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>`<span class="token punctuation">}</span>"<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-
-data<span class="token punctuation">:</span><span class="token punctuation">{</span>
-    istrue<span class="token symbol">:false</span>
-<span class="token punctuation">}</span></code></pre>
-<h1 id="class-总结"><a href="#class-总结" class="headerlink" title=":class 总结"></a>:class 总结</h1><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>style<span class="token operator">></span>
-　　<span class="token punctuation">.</span>red<span class="token punctuation">{</span>color<span class="token punctuation">:</span>red<span class="token punctuation">;</span><span class="token punctuation">}</span>
-　　<span class="token punctuation">.</span>blue<span class="token punctuation">{</span>background<span class="token operator">-</span>color<span class="token punctuation">:</span>blue<span class="token punctuation">;</span><span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span></code></pre>
-<h2 id="方法一：单体写法"><a href="#方法一：单体写法" class="headerlink" title="方法一：单体写法"></a>方法一：单体写法</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"classA"</span><span class="token operator">></span>Demo2<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-  classA<span class="token punctuation">:</span> <span class="token string">'class-a'</span>  <span class="token comment" spellcheck="true">//当classA改变时将更新class</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="方法二：对象语法"><a href="#方法二：对象语法" class="headerlink" title="方法二：对象语法"></a>方法二：对象语法</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//1.单或多对象写法</span>
-    <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{red:isred,blue:isbule}"</span>
-　 data<span class="token punctuation">:</span><span class="token punctuation">{</span>
-        isred<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
-      isblue<span class="token punctuation">:</span><span class="token boolean">false</span>
-   <span class="token punctuation">}</span>
-
-<span class="token comment" spellcheck="true">//2.json对象</span>
- <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"json"</span>
-　data<span class="token punctuation">:</span><span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//把属性都放在一个对象里面</span>
-　　 json<span class="token punctuation">:</span><span class="token punctuation">{</span>
-　　　     red<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>
-　　　  blue<span class="token punctuation">:</span><span class="token boolean">true</span>
-　　 <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span></code></pre>
-<h2 id="方法三：数组语法"><a href="#方法三：数组语法" class="headerlink" title="方法三：数组语法"></a>方法三：<strong>数组语法</strong></h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//1.整个数组</span>
-    <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"[reds,blues]"</span><span class="token operator">></span>
-　 data<span class="token punctuation">:</span><span class="token punctuation">{</span>
-  　　reds<span class="token punctuation">:</span><span class="token string">"red"</span><span class="token punctuation">,</span>   <span class="token comment" spellcheck="true">//此处的red和blue指的是style中的red类和blue类</span>
-　　　blues<span class="token punctuation">:</span><span class="token string">"blue"</span>
-　 <span class="token punctuation">}</span>
-　
-<span class="token comment" spellcheck="true">//2.对象+数组</span>
-    <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"[classA, classB]"</span>
-　 data<span class="token punctuation">:</span><span class="token punctuation">{</span>
-  　　classA<span class="token punctuation">:</span> <span class="token string">'class-a'</span><span class="token punctuation">,</span>
-          objectClass<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            classB<span class="token punctuation">:</span> <span class="token string">'class-b'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">// classB 的值为class-b, 则将classB的值添加到class列表</span>
-                classC<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">// classC值为false,将不添加classC</span>
-            classD<span class="token punctuation">:</span> <span class="token boolean">true</span>    <span class="token comment" spellcheck="true">// classD 值为true，classC将被直接添加到class列表</span>
-             <span class="token punctuation">}</span>
-   <span class="token punctuation">}</span>
-     <span class="token comment" spellcheck="true">//渲染后: class="class-a class-b classD"</span>
-
-<span class="token comment" spellcheck="true">//3.数组+三元表达式</span>
-<span class="token number">1</span><span class="token operator">></span>
- <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"[isActive ? activeClass : '', errorClass]"</span>
- data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-   isActive<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-   activeClass<span class="token punctuation">:</span> <span class="token string">'active'</span><span class="token punctuation">,</span>
-   errorClass<span class="token punctuation">:</span> <span class="token string">'text-danger'</span>
- <span class="token punctuation">}</span>
-
-<span class="token number">2</span><span class="token operator">></span>
- <span class="token operator">&lt;</span>el<span class="token operator">-</span>button  <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"['uploadclass',status === 'view'? 'uploadClass-no':'uploadClass-hover']"</span> <span class="token punctuation">:</span>disabled<span class="token operator">=</span><span class="token string">"status === 'view'"</span><span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>button<span class="token operator">></span>
-</code></pre>
-<h2 id="方法四：利用-computed-的计算属性"><a href="#方法四：利用-computed-的计算属性" class="headerlink" title="方法四：利用 computed 的计算属性"></a>方法四：利用 computed 的计算属性</h2><pre class=" language-javascript"><code class="language-javascript">    <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"classObject"</span>
-     data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          isActive<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-          error<span class="token punctuation">:</span> <span class="token keyword">null</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-             classObject <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">return</span> <span class="token punctuation">{</span>
-                      active<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>isActive <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>error<span class="token punctuation">,</span>
-                      text<span class="token operator">-</span>danger<span class="token string">': this.error &amp;&amp; this.error.type === '</span>fatal'
-                    <span class="token punctuation">}</span>
-           <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span></code></pre>
-<h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><p>总体而言，:class 和:style 语法基本相似，但是需要注意的是<strong>css 属性时要注意有些以</strong><code>**-**</code><strong>连结的词，要改为驼峰式写法，或者是使用单引号括起来。</strong></p>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>:class</tag>
-        <tag>:style</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vue插槽</title>
     <url>/leader755/43144.html</url>
     <content><![CDATA[<p>##</p>
@@ -2441,6 +2323,123 @@ data<span class="token punctuation">:</span> <span class="token punctuation">{</
       <tags>
         <tag>vue 插槽</tag>
         <tag>slot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue的!class和!style</title>
+    <url>/leader755/61512.html</url>
+    <content><![CDATA[<h1 id="style-总结："><a href="#style-总结：" class="headerlink" title=":style 总结："></a>:style 总结：</h1><p>写 inline style 的方法跟 class 大同小异，一样可以使用阵列及物件语法，但在给<strong>css 属性时要注意有些以</strong><code>**-**</code><strong>连结的词，要改为驼峰式写法，或者是使用单引号括起来</strong>。</p>
+<h2 id="一-对象语法"><a href="#一-对象语法" class="headerlink" title="一. 对象语法"></a>一. 对象语法</h2><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  　<span class="token comment" spellcheck="true">&lt;!--单个属性--></span>
+  　
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> activeColor<span class="token punctuation">}</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>color:{{activeColor}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  　<span class="token comment" spellcheck="true">&lt;!--驼峰写法--></span>
+  　
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token punctuation">{</span><span class="token string">'text-align'</span><span class="token punctuation">:</span>textAlign,<span class="token property">fontSize</span><span class="token punctuation">:</span> fontSize + <span class="token string">'px'</span><span class="token punctuation">}</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    text-align:{{textAlign}},fontSize:{{fontSize}}px
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  　<span class="token comment" spellcheck="true">&lt;!--一个对象--></span>
+  　
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value">styleObject</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{styleObject}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="二-数组语法"><a href="#二-数组语法" class="headerlink" title="二. 数组语法"></a>二. 数组语法</h2><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  　<span class="token comment" spellcheck="true">&lt;!--整个数组--></span>
+  　
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value">[baseStyles, overridingStyles]</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    {{[baseStyles, overridingStyles]}}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  　<span class="token comment" spellcheck="true">&lt;!--数组+三元表达式--></span>
+  　
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token selector">[</span><span class="token punctuation">{</span><span class="token property">backgroundColor</span><span class="token punctuation">:</span>isActive ? <span class="token string">'#f00'</span> <span class="token punctuation">:</span> <span class="token string">'#00f'</span><span class="token punctuation">}</span>,baseStyles]</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    如果isActive==true,背景红色
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  　<span class="token comment" spellcheck="true">&lt;!--对象+数组--></span>
+  　
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name"><span class="token namespace">v-bind:</span></span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token selector">[</span><span class="token punctuation">{</span> <span class="token property">baseStyles</span><span class="token punctuation">:</span> Active <span class="token punctuation">}</span>, overridingStyles]</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    {{[{ baseStyles: Active }, overridingStyles]}}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="三-style-动态背景"><a href="#三-style-动态背景" class="headerlink" title="三. :style 动态背景"></a>三. :style 动态背景</h2><pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"istrue=!istrue"</span> <span class="token symbol">:style</span><span class="token operator">=</span>"<span class="token punctuation">{</span><span class="token string">'height'</span><span class="token punctuation">:</span><span class="token string">'200px'</span><span class="token punctuation">,</span><span class="token string">'width'</span><span class="token punctuation">:</span><span class="token string">'100px'</span><span class="token punctuation">,</span><span class="token string">'background-size'</span><span class="token punctuation">:</span>'<span class="token number">100</span><span class="token string">%,100%',</span><span class="token string">'background-repeat'</span><span class="token punctuation">:</span><span class="token string">'no-repeat'</span><span class="token punctuation">,</span><span class="token string">'background-image'</span><span class="token punctuation">:</span>`<span class="token function">url</span><span class="token punctuation">(</span>$<span class="token punctuation">{</span>istrue<span class="token operator">?</span><span class="token string">'../../../static/1.png'</span><span class="token punctuation">:</span><span class="token string">'../../../static/2.png'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>`<span class="token punctuation">}</span>"<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    istrue<span class="token symbol">:false</span>
+<span class="token punctuation">}</span></code></pre>
+<h1 id="class-总结"><a href="#class-总结" class="headerlink" title=":class 总结"></a>:class 总结</h1><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>style<span class="token operator">></span>
+　　<span class="token punctuation">.</span>red<span class="token punctuation">{</span>color<span class="token punctuation">:</span>red<span class="token punctuation">;</span><span class="token punctuation">}</span>
+　　<span class="token punctuation">.</span>blue<span class="token punctuation">{</span>background<span class="token operator">-</span>color<span class="token punctuation">:</span>blue<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span></code></pre>
+<h2 id="方法一：单体写法"><a href="#方法一：单体写法" class="headerlink" title="方法一：单体写法"></a>方法一：单体写法</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"classA"</span><span class="token operator">></span>Demo2<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  classA<span class="token punctuation">:</span> <span class="token string">'class-a'</span>  <span class="token comment" spellcheck="true">//当classA改变时将更新class</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="方法二：对象语法"><a href="#方法二：对象语法" class="headerlink" title="方法二：对象语法"></a>方法二：对象语法</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//1.单或多对象写法</span>
+    <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{red:isred,blue:isbule}"</span>
+　 data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        isred<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+      isblue<span class="token punctuation">:</span><span class="token boolean">false</span>
+   <span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">//2.json对象</span>
+ <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"json"</span>
+　data<span class="token punctuation">:</span><span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//把属性都放在一个对象里面</span>
+　　 json<span class="token punctuation">:</span><span class="token punctuation">{</span>
+　　　     red<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>
+　　　  blue<span class="token punctuation">:</span><span class="token boolean">true</span>
+　　 <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre>
+<h2 id="方法三：数组语法"><a href="#方法三：数组语法" class="headerlink" title="方法三：数组语法"></a>方法三：<strong>数组语法</strong></h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//1.整个数组</span>
+    <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"[reds,blues]"</span><span class="token operator">></span>
+　 data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+  　　reds<span class="token punctuation">:</span><span class="token string">"red"</span><span class="token punctuation">,</span>   <span class="token comment" spellcheck="true">//此处的red和blue指的是style中的red类和blue类</span>
+　　　blues<span class="token punctuation">:</span><span class="token string">"blue"</span>
+　 <span class="token punctuation">}</span>
+　
+<span class="token comment" spellcheck="true">//2.对象+数组</span>
+    <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"[classA, classB]"</span>
+　 data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+  　　classA<span class="token punctuation">:</span> <span class="token string">'class-a'</span><span class="token punctuation">,</span>
+          objectClass<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            classB<span class="token punctuation">:</span> <span class="token string">'class-b'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">// classB 的值为class-b, 则将classB的值添加到class列表</span>
+                classC<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">// classC值为false,将不添加classC</span>
+            classD<span class="token punctuation">:</span> <span class="token boolean">true</span>    <span class="token comment" spellcheck="true">// classD 值为true，classC将被直接添加到class列表</span>
+             <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+     <span class="token comment" spellcheck="true">//渲染后: class="class-a class-b classD"</span>
+
+<span class="token comment" spellcheck="true">//3.数组+三元表达式</span>
+<span class="token number">1</span><span class="token operator">></span>
+ <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"[isActive ? activeClass : '', errorClass]"</span>
+ data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+   isActive<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+   activeClass<span class="token punctuation">:</span> <span class="token string">'active'</span><span class="token punctuation">,</span>
+   errorClass<span class="token punctuation">:</span> <span class="token string">'text-danger'</span>
+ <span class="token punctuation">}</span>
+
+<span class="token number">2</span><span class="token operator">></span>
+ <span class="token operator">&lt;</span>el<span class="token operator">-</span>button  <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"['uploadclass',status === 'view'? 'uploadClass-no':'uploadClass-hover']"</span> <span class="token punctuation">:</span>disabled<span class="token operator">=</span><span class="token string">"status === 'view'"</span><span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>button<span class="token operator">></span>
+</code></pre>
+<h2 id="方法四：利用-computed-的计算属性"><a href="#方法四：利用-computed-的计算属性" class="headerlink" title="方法四：利用 computed 的计算属性"></a>方法四：利用 computed 的计算属性</h2><pre class=" language-javascript"><code class="language-javascript">    <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"classObject"</span>
+     data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          isActive<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          error<span class="token punctuation">:</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+             classObject <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                      active<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>isActive <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>error<span class="token punctuation">,</span>
+                      text<span class="token operator">-</span>danger<span class="token string">': this.error &amp;&amp; this.error.type === '</span>fatal'
+                    <span class="token punctuation">}</span>
+           <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span></code></pre>
+<h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><p>总体而言，:class 和:style 语法基本相似，但是需要注意的是<strong>css 属性时要注意有些以</strong><code>**-**</code><strong>连结的词，要改为驼峰式写法，或者是使用单引号括起来。</strong></p>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>:class</tag>
+        <tag>:style</tag>
       </tags>
   </entry>
   <entry>
@@ -3271,34 +3270,6 @@ overflow: hidden; font-size: 50px; color: red;<span class="token comment" spellc
       </tags>
   </entry>
   <entry>
-    <title>开源的git 服务器</title>
-    <url>/leader755/61705.html</url>
-    <content><![CDATA[<p><strong>​</strong></p>
-<h2 id="1、GitLab-开源版本"><a href="#1、GitLab-开源版本" class="headerlink" title="1、GitLab 开源版本"></a>1、GitLab 开源版本</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201546221-ba9ce11f-955a-487a-8f27-2285d44e0a12.png#clientId=u741f1d1d-08bf-4&from=paste&id=ub8a25e67&margin=%5Bobject%20Object%5D&name=image.png&originHeight=333&originWidth=800&originalType=url&ratio=2&size=77530&status=done&style=none&taskId=u660572a7-e7f0-4b81-927e-2902516765f" alt="image.png"><br><strong>简介：</strong>GitLab 是一个利用 <a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/ruby%2Bon%2Brails">Ruby on Rails</a> 开发的开源应用程序，实现一个自托管的<a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a>项目仓库，可通过 Web 界面进行访问公开的或者私人项目。<br>它拥有与<a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/github">Github</a>类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。它还提供一个代码片段收集功能可以轻松实现代码复用，便于日后有需要的时候进行查找。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/mirrors/gitlab">https://gitee.com/mirrors/gitlab</a></p>
-<h2 id="2、Gogs-开源版本"><a href="#2、Gogs-开源版本" class="headerlink" title="2、Gogs 开源版本"></a>2、Gogs 开源版本</h2><p><strong>简介：</strong>Gogs 是一款极易搭建的自助 Git 服务，其目标是打造一个最简单、最快速和最轻松的方式搭建自助 Git 服务。使用 Go 语言开发使得 Gogs 能够通过独立的二进制分发，并且支持 Go 语言支持的 <strong>所有平台</strong>，包括 Linux、Mac OS X、Windows 以及 ARM 平台。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/Unknown/gogs">https://gitee.com/Unknown/gogs</a><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547011-3ba01a6d-7798-494e-b529-9cd9784ea4f4.png#clientId=u741f1d1d-08bf-4&from=paste&id=u4af37ad6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=588&originWidth=1146&originalType=url&ratio=2&size=446184&status=done&style=none&taskId=ub6b63586-7394-486c-8459-68c655436eb" alt="image.png"><br><a href="https://link.zhihu.com/?target=https%3A//gitee.com/Unknown/gogs">
-</a></p>
-<h2 id="3、Gitea-开源版本"><a href="#3、Gitea-开源版本" class="headerlink" title="3、Gitea 开源版本"></a>3、Gitea 开源版本</h2><p><strong>简介：</strong>Gitea 的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。我们采用 Go 作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了 x86，amd64，还包括 ARM 和 PowerPC。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/gitea/gitea">https://gitee.com/gitea/gitea</a><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547571-641758ab-f020-453f-ac90-53f587872b5d.png#clientId=u741f1d1d-08bf-4&from=paste&id=u7f7306f6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2614&originWidth=1440&originalType=url&ratio=2&size=790746&status=done&style=none&taskId=uf821bce4-9144-446f-bf02-e0310a9d086" alt="image.png"></p>
-<h2 id="4、Gitosis-开源版本"><a href="#4、Gitosis-开源版本" class="headerlink" title="4、Gitosis 开源版本"></a>4、Gitosis 开源版本</h2><p><strong>简介：</strong><a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a> 是非常著名的分布式版本控制系统。Gitosis 则是方便通过 Git 与 ssh 架设中央服务器的软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitosis">https://www.oschina.net/p/gitosis</a></p>
-<h2 id="5、GitStack-开源版本"><a href="#5、GitStack-开源版本" class="headerlink" title="5、GitStack 开源版本"></a>5、GitStack 开源版本</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547611-8ef2728f-2c8b-4a26-b6f4-7c0c1edd8a24.png#clientId=u741f1d1d-08bf-4&from=paste&id=ud1a85389&margin=%5Bobject%20Object%5D&name=image.png&originHeight=912&originWidth=1440&originalType=url&ratio=2&size=798657&status=done&style=none&taskId=u8cc546fd-3391-48bc-bf2a-55dc5f6e7b5" alt="image.png"><br><strong>简介：</strong>gitstack 是 Windows 下的 <a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a> 版本控制软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitstack">https://www.oschina.net/p/gitstack</a><br>​</p>
-<h2 id="6、Gitolite-开源版本"><a href="#6、Gitolite-开源版本" class="headerlink" title="6、Gitolite 开源版本"></a>6、Gitolite 开源版本</h2><p><strong>简介：</strong>Git 是非常著名的分布式版本控制系统。gitolite 则是方便通过 Git 与 ssh 架设中央服务器的软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitolite">https://www.oschina.net/p/gitolite</a></p>
-<h2 id="7、Gidder-开源版本"><a href="#7、Gidder-开源版本" class="headerlink" title="7、Gidder 开源版本"></a>7、Gidder 开源版本</h2><p><strong>简介：</strong>Gidder 是通过 SSH 访问的 Andriod Git 服务器！</p>
-<ul>
-<li>支持 push pull fetch clone</li>
-<li>支持用户管理</li>
-<li>支持仓库管理</li>
-<li>支持动态 dns</li>
-</ul>
-<p><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gidder">https://www.oschina.net/p/gidder</a><br>​</p>
-<h2 id="文章引用："><a href="#文章引用：" class="headerlink" title="文章引用："></a>文章引用：</h2><p><a href="https://www.zhihu.com/question/283143882/answer/434872781" target="_blank" rel="noopener">https://www.zhihu.com/question/283143882/answer/434872781</a></p>
-]]></content>
-      <categories>
-        <category>git 工具</category>
-      </categories>
-      <tags>
-        <tag>git 服务器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>常见的git命令</title>
     <url>/leader755/22649.html</url>
     <content><![CDATA[<blockquote>
@@ -3535,6 +3506,34 @@ Git仓库 vs Git仓库
         <tag>git 分支</tag>
         <tag>git 远程分支</tag>
         <tag>git 命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开源的git 服务器</title>
+    <url>/leader755/61705.html</url>
+    <content><![CDATA[<p><strong>​</strong></p>
+<h2 id="1、GitLab-开源版本"><a href="#1、GitLab-开源版本" class="headerlink" title="1、GitLab 开源版本"></a>1、GitLab 开源版本</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201546221-ba9ce11f-955a-487a-8f27-2285d44e0a12.png#clientId=u741f1d1d-08bf-4&from=paste&id=ub8a25e67&margin=%5Bobject%20Object%5D&name=image.png&originHeight=333&originWidth=800&originalType=url&ratio=2&size=77530&status=done&style=none&taskId=u660572a7-e7f0-4b81-927e-2902516765f" alt="image.png"><br><strong>简介：</strong>GitLab 是一个利用 <a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/ruby%2Bon%2Brails">Ruby on Rails</a> 开发的开源应用程序，实现一个自托管的<a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a>项目仓库，可通过 Web 界面进行访问公开的或者私人项目。<br>它拥有与<a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/github">Github</a>类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。它还提供一个代码片段收集功能可以轻松实现代码复用，便于日后有需要的时候进行查找。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/mirrors/gitlab">https://gitee.com/mirrors/gitlab</a></p>
+<h2 id="2、Gogs-开源版本"><a href="#2、Gogs-开源版本" class="headerlink" title="2、Gogs 开源版本"></a>2、Gogs 开源版本</h2><p><strong>简介：</strong>Gogs 是一款极易搭建的自助 Git 服务，其目标是打造一个最简单、最快速和最轻松的方式搭建自助 Git 服务。使用 Go 语言开发使得 Gogs 能够通过独立的二进制分发，并且支持 Go 语言支持的 <strong>所有平台</strong>，包括 Linux、Mac OS X、Windows 以及 ARM 平台。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/Unknown/gogs">https://gitee.com/Unknown/gogs</a><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547011-3ba01a6d-7798-494e-b529-9cd9784ea4f4.png#clientId=u741f1d1d-08bf-4&from=paste&id=u4af37ad6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=588&originWidth=1146&originalType=url&ratio=2&size=446184&status=done&style=none&taskId=ub6b63586-7394-486c-8459-68c655436eb" alt="image.png"><br><a href="https://link.zhihu.com/?target=https%3A//gitee.com/Unknown/gogs">
+</a></p>
+<h2 id="3、Gitea-开源版本"><a href="#3、Gitea-开源版本" class="headerlink" title="3、Gitea 开源版本"></a>3、Gitea 开源版本</h2><p><strong>简介：</strong>Gitea 的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。我们采用 Go 作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了 x86，amd64，还包括 ARM 和 PowerPC。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/gitea/gitea">https://gitee.com/gitea/gitea</a><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547571-641758ab-f020-453f-ac90-53f587872b5d.png#clientId=u741f1d1d-08bf-4&from=paste&id=u7f7306f6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2614&originWidth=1440&originalType=url&ratio=2&size=790746&status=done&style=none&taskId=uf821bce4-9144-446f-bf02-e0310a9d086" alt="image.png"></p>
+<h2 id="4、Gitosis-开源版本"><a href="#4、Gitosis-开源版本" class="headerlink" title="4、Gitosis 开源版本"></a>4、Gitosis 开源版本</h2><p><strong>简介：</strong><a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a> 是非常著名的分布式版本控制系统。Gitosis 则是方便通过 Git 与 ssh 架设中央服务器的软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitosis">https://www.oschina.net/p/gitosis</a></p>
+<h2 id="5、GitStack-开源版本"><a href="#5、GitStack-开源版本" class="headerlink" title="5、GitStack 开源版本"></a>5、GitStack 开源版本</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547611-8ef2728f-2c8b-4a26-b6f4-7c0c1edd8a24.png#clientId=u741f1d1d-08bf-4&from=paste&id=ud1a85389&margin=%5Bobject%20Object%5D&name=image.png&originHeight=912&originWidth=1440&originalType=url&ratio=2&size=798657&status=done&style=none&taskId=u8cc546fd-3391-48bc-bf2a-55dc5f6e7b5" alt="image.png"><br><strong>简介：</strong>gitstack 是 Windows 下的 <a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a> 版本控制软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitstack">https://www.oschina.net/p/gitstack</a><br>​</p>
+<h2 id="6、Gitolite-开源版本"><a href="#6、Gitolite-开源版本" class="headerlink" title="6、Gitolite 开源版本"></a>6、Gitolite 开源版本</h2><p><strong>简介：</strong>Git 是非常著名的分布式版本控制系统。gitolite 则是方便通过 Git 与 ssh 架设中央服务器的软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitolite">https://www.oschina.net/p/gitolite</a></p>
+<h2 id="7、Gidder-开源版本"><a href="#7、Gidder-开源版本" class="headerlink" title="7、Gidder 开源版本"></a>7、Gidder 开源版本</h2><p><strong>简介：</strong>Gidder 是通过 SSH 访问的 Andriod Git 服务器！</p>
+<ul>
+<li>支持 push pull fetch clone</li>
+<li>支持用户管理</li>
+<li>支持仓库管理</li>
+<li>支持动态 dns</li>
+</ul>
+<p><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gidder">https://www.oschina.net/p/gidder</a><br>​</p>
+<h2 id="文章引用："><a href="#文章引用：" class="headerlink" title="文章引用："></a>文章引用：</h2><p><a href="https://www.zhihu.com/question/283143882/answer/434872781" target="_blank" rel="noopener">https://www.zhihu.com/question/283143882/answer/434872781</a></p>
+]]></content>
+      <categories>
+        <category>git 工具</category>
+      </categories>
+      <tags>
+        <tag>git 服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -6197,9 +6196,9 @@ yum <span class="token operator">-</span>y remove jenkins
 
 </code></pre>
 <h2 id="2-首次进入-jenkins-的基本配置"><a href="#2-首次进入-jenkins-的基本配置" class="headerlink" title="2.首次进入 jenkins 的基本配置"></a>2.首次进入 jenkins 的基本配置</h2><h3 id="1-首次进入-Jenkins-需要输入管理员密码，使用以下命令在-xshell-查看初始密码："><a href="#1-首次进入-Jenkins-需要输入管理员密码，使用以下命令在-xshell-查看初始密码：" class="headerlink" title="1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码："></a>1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码：</h3><pre class=" language-javascript"><code class="language-javascript"> cat <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins<span class="token operator">/</span>secrets<span class="token operator">/</span>initialAdminPassword</code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606044243973-bd75a837-3e16-40fd-8b1d-d87184b7a1e1.png#height=361&id=e54f1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=622&originWidth=990&originalType=binary&size=87633&status=done&style=none&width=574" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606044243973-bd75a837-3e16-40fd-8b1d-d87184b7a1e1.png#crop=0&crop=0&crop=1&crop=1&height=361&id=e54f1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=622&originWidth=990&originalType=binary&ratio=1&rotation=0&showTitle=false&size=87633&status=done&style=none&title=&width=574" alt="image.png"></p>
 <blockquote>
-<p>注意：可能会出现权限不够的提示：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620148616485-c1b60ad9-2f91-45ba-83f1-5470d82ea3f6.png#clientId=u027f9086-1089-4&from=paste&height=42&id=fO6dc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=84&originWidth=1072&originalType=binary&size=20175&status=done&style=none&taskId=ua8b74177-8237-4e14-b4df-c51ce1b9ea9&width=536" alt="image.png"><br>解决办法：配置权限，按照上面安装 jenkins 中的 第三点** <strong>[</strong>配置 jenkins 权限（点我直达）**](<a href="https://www.yuque.com/pxs/fo1e8s/aed00c02-7c81-41d0-961b-6ea527dec51f#gFsHl)重新操作一遍或者检查下哪一步骤遗漏了。" target="_blank" rel="noopener">https://www.yuque.com/pxs/fo1e8s/aed00c02-7c81-41d0-961b-6ea527dec51f#gFsHl)重新操作一遍或者检查下哪一步骤遗漏了。</a></p>
+<p>注意：可能会出现权限不够的提示：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620148616485-c1b60ad9-2f91-45ba-83f1-5470d82ea3f6.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=42&id=fO6dc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=84&originWidth=1072&originalType=binary&ratio=1&rotation=0&showTitle=false&size=20175&status=done&style=none&taskId=ua8b74177-8237-4e14-b4df-c51ce1b9ea9&title=&width=536" alt="image.png"><br>解决办法：配置权限，按照上面安装 jenkins 中的 第三点** <strong>[</strong>配置 jenkins 权限（点我直达）**](<a href="https://www.yuque.com/pxs/fo1e8s/aed00c02-7c81-41d0-961b-6ea527dec51f#gFsHl)重新操作一遍或者检查下哪一步骤遗漏了。" target="_blank" rel="noopener">https://www.yuque.com/pxs/fo1e8s/aed00c02-7c81-41d0-961b-6ea527dec51f#gFsHl)重新操作一遍或者检查下哪一步骤遗漏了。</a></p>
 </blockquote>
 <h3 id="2-设置配置的访问-pluginManager-advanced（解决插件下载慢）"><a href="#2-设置配置的访问-pluginManager-advanced（解决插件下载慢）" class="headerlink" title="2.设置配置的访问/pluginManager/advanced（解决插件下载慢）"></a>2.设置配置的访问/pluginManager/advanced（解决插件下载慢）</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//先不要急着安装插件，在国内用户都能遇到下载插件慢的问题</span>
 <span class="token number">1</span><span class="token operator">></span> ip<span class="token operator">+</span> 端口<span class="token operator">/</span>pluginManager<span class="token operator">/</span>advanced，进入系统配置
@@ -6210,13 +6209,13 @@ yum <span class="token operator">-</span>y remove jenkins
 <h3 id="3-解决页面-403-问题"><a href="#3-解决页面-403-问题" class="headerlink" title="3.解决页面 403 问题"></a>3.解决页面 403 问题</h3><blockquote>
 <p>1&gt;ip+ 端口/configureSecurity/，进入系统配置<br>2&gt;去配置页面的允许跨域</p>
 </blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181612160-9800c3db-c955-49ac-80ff-f910772f9f03.png#clientId=u027f9086-1089-4&from=paste&height=537&id=u6f745595&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1074&originWidth=2868&originalType=binary&size=153822&status=done&style=none&taskId=u0922823f-da93-4119-acc4-aae93058f42&width=1434" alt="image.png"></p>
-<h3 id="4-返回到最初的页面配置插件，进行安装"><a href="#4-返回到最初的页面配置插件，进行安装" class="headerlink" title="4.返回到最初的页面配置插件，进行安装"></a>4.返回到最初的页面配置插件，进行安装</h3><p>注意最好选择默认的安装方式，如果比较熟悉了可以选择自行选择插件安装，静待安装完成。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181715510-e0253ed4-a63c-4693-b4f3-af16318e938c.png#clientId=u027f9086-1089-4&from=paste&height=755&id=u579be651&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1510&originWidth=2044&originalType=binary&size=300206&status=done&style=none&taskId=ua49be6eb-4b8b-4d51-9e9f-908300cf032&width=1022" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181801678-a50f7b51-8405-4b6e-a80d-adfc04142506.png#clientId=u027f9086-1089-4&from=paste&height=687&id=ufa4f4757&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1374&originWidth=1992&originalType=binary&size=202292&status=done&style=none&taskId=u8f6229b3-261d-4260-8846-083f77555ef&width=996" alt="image.png"></p>
-<h3 id="5-安装完插件后，设置用户登录账户和密码"><a href="#5-安装完插件后，设置用户登录账户和密码" class="headerlink" title="5.安装完插件后，设置用户登录账户和密码"></a>5.安装完插件后，设置用户登录账户和密码</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606044620530-a1bc007c-7531-4184-8eda-7297033eaab6.png#height=635&id=nf7F7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1270&originWidth=2006&originalType=binary&size=105553&status=done&style=none&width=1003" alt="image.png"></p>
-<h3 id="6-汉化-jenkins"><a href="#6-汉化-jenkins" class="headerlink" title="6.汉化 jenkins"></a>6.汉化 jenkins</h3><p>1&gt;在 jenkins 面板–》Manage Plugins ，搜索 local，下载如下图的 3 个插件。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606045044944-b7b0499a-a7e8-492e-a507-41fd967b2a34.png#height=682&id=aQ94W&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1364&originWidth=2558&originalType=binary&size=280750&status=done&style=none&width=1279" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181612160-9800c3db-c955-49ac-80ff-f910772f9f03.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=537&id=u6f745595&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1074&originWidth=2868&originalType=binary&ratio=1&rotation=0&showTitle=false&size=153822&status=done&style=none&taskId=u0922823f-da93-4119-acc4-aae93058f42&title=&width=1434" alt="image.png"></p>
+<h3 id="4-返回到最初的页面配置插件，进行安装"><a href="#4-返回到最初的页面配置插件，进行安装" class="headerlink" title="4.返回到最初的页面配置插件，进行安装"></a>4.返回到最初的页面配置插件，进行安装</h3><p>注意最好选择默认的安装方式，如果比较熟悉了可以选择自行选择插件安装，静待安装完成。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181715510-e0253ed4-a63c-4693-b4f3-af16318e938c.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=755&id=u579be651&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1510&originWidth=2044&originalType=binary&ratio=1&rotation=0&showTitle=false&size=300206&status=done&style=none&taskId=ua49be6eb-4b8b-4d51-9e9f-908300cf032&title=&width=1022" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181801678-a50f7b51-8405-4b6e-a80d-adfc04142506.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=687&id=ufa4f4757&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1374&originWidth=1992&originalType=binary&ratio=1&rotation=0&showTitle=false&size=202292&status=done&style=none&taskId=u8f6229b3-261d-4260-8846-083f77555ef&title=&width=996" alt="image.png"></p>
+<h3 id="5-安装完插件后，设置用户登录账户和密码"><a href="#5-安装完插件后，设置用户登录账户和密码" class="headerlink" title="5.安装完插件后，设置用户登录账户和密码"></a>5.安装完插件后，设置用户登录账户和密码</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606044620530-a1bc007c-7531-4184-8eda-7297033eaab6.png#crop=0&crop=0&crop=1&crop=1&height=635&id=nf7F7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1270&originWidth=2006&originalType=binary&ratio=1&rotation=0&showTitle=false&size=105553&status=done&style=none&title=&width=1003" alt="image.png"></p>
+<h3 id="6-汉化-jenkins"><a href="#6-汉化-jenkins" class="headerlink" title="6.汉化 jenkins"></a>6.汉化 jenkins</h3><p>1&gt;在 jenkins 面板–》Manage Plugins ，搜索 local，下载如下图的 3 个插件。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606045044944-b7b0499a-a7e8-492e-a507-41fd967b2a34.png#crop=0&crop=0&crop=1&crop=1&height=682&id=aQ94W&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1364&originWidth=2558&originalType=binary&ratio=1&rotation=0&showTitle=false&size=280750&status=done&style=none&title=&width=1279" alt="image.png"></p>
 <p>2&gt;在 jenkins 面板–》 Configuration System ，找到 lcoal 项，输入 zh_CN，并勾选上。保存后即可看到汉化了（没有汉化的需要重启 jenkins）。</p>
 <pre class=" language-javascript"><code class="language-javascript">重启：ip<span class="token operator">+</span>端口号<span class="token operator">/</span>restart</code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606045466353-ae8ace11-b552-4358-b7b8-aa0e617876ac.png#height=683&id=Eypv8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1366&originWidth=2560&originalType=binary&size=193821&status=done&style=none&width=1280" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606045466353-ae8ace11-b552-4358-b7b8-aa0e617876ac.png#crop=0&crop=0&crop=1&crop=1&height=683&id=Eypv8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1366&originWidth=2560&originalType=binary&ratio=1&rotation=0&showTitle=false&size=193821&status=done&style=none&title=&width=1280" alt="image.png"></p>
 <p>#</p>
 <h2 id="3-jenkins-配置邮箱（选配）"><a href="#3-jenkins-配置邮箱（选配）" class="headerlink" title="3.jenkins 配置邮箱（选配）"></a>3.jenkins 配置邮箱（选配）</h2><p>最好使用 163 邮箱，qq 邮箱限制比较大。</p>
 <ul>
@@ -6224,12 +6223,12 @@ yum <span class="token operator">-</span>y remove jenkins
 <li>② 邮箱 smtp 开通和密码获取</li>
 <li>③ 项目构建配置</li>
 </ul>
-<h3 id="1-配置系统设置"><a href="#1-配置系统设置" class="headerlink" title="1.配置系统设置"></a>1.配置系统设置</h3><p>1&gt;进入设置<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606049376995-4e26a3c6-623b-4de0-a92a-d4bde4e45ba2.png#height=395&id=B1mJ2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=789&originWidth=1600&originalType=binary&size=135649&status=done&style=none&width=800" alt="image.png"><br>2&gt;配置监控<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606049283664-fbd9c717-3dfd-4ff2-98c3-6b3b79dbda34.png#height=683&id=od1e5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1366&originWidth=2556&originalType=binary&size=198860&status=done&style=none&width=1278" alt="image.png"><br>3&gt;配置邮件通知，然后测试下邮箱可不可以收到，查看自己的邮箱。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606050027158-46c9558e-d0c8-41b0-b2f4-18c1cd24aff5.png#height=688&id=ux1BS&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1376&originWidth=2558&originalType=binary&size=195435&status=done&style=none&width=1279" alt="image.png"></p>
+<h3 id="1-配置系统设置"><a href="#1-配置系统设置" class="headerlink" title="1.配置系统设置"></a>1.配置系统设置</h3><p>1&gt;进入设置<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606049376995-4e26a3c6-623b-4de0-a92a-d4bde4e45ba2.png#crop=0&crop=0&crop=1&crop=1&height=395&id=B1mJ2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=789&originWidth=1600&originalType=binary&ratio=1&rotation=0&showTitle=false&size=135649&status=done&style=none&title=&width=800" alt="image.png"><br>2&gt;配置监控<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606049283664-fbd9c717-3dfd-4ff2-98c3-6b3b79dbda34.png#crop=0&crop=0&crop=1&crop=1&height=683&id=od1e5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1366&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=198860&status=done&style=none&title=&width=1278" alt="image.png"><br>3&gt;配置邮件通知，然后测试下邮箱可不可以收到，查看自己的邮箱。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606050027158-46c9558e-d0c8-41b0-b2f4-18c1cd24aff5.png#crop=0&crop=0&crop=1&crop=1&height=688&id=ux1BS&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1376&originWidth=2558&originalType=binary&ratio=1&rotation=0&showTitle=false&size=195435&status=done&style=none&title=&width=1279" alt="image.png"></p>
 <h3 id="2-gt-配置-Extended-E-mail-Notification"><a href="#2-gt-配置-Extended-E-mail-Notification" class="headerlink" title="2&gt;配置  Extended E-mail Notification"></a>2&gt;配置  Extended E-mail Notification</h3><blockquote>
 <p>基本配置同上面，注意 在邮件通知上面有个  <strong>Triggers</strong>  的设置，可以设置邮件发送条件。常用的三个：<br><strong>always</strong>  是只要构建完就会发送。<br><strong>success</strong>  是成功就发送。<br><strong>failed-any</strong>  是只要构建失败就发送。<br>注：这个里的  <strong>triggers</strong>  还没发现实际用处，可以不配，后面项目里的才是关键。</p>
 </blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606050531905-f72947a0-1bf7-46aa-adc8-2754cc299038.png#height=1899&id=MgX4V&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3798&originWidth=2556&originalType=binary&size=521924&status=done&style=none&width=1278" alt="image.png"></p>
-<h3 id="3-gt-项目中邮件配置"><a href="#3-gt-项目中邮件配置" class="headerlink" title="3&gt;项目中邮件配置"></a>3&gt;项目中邮件配置</h3><p>这里主要配置两个地方就可以了。<br>进入我们要配置邮箱的项目。<br>1&gt;增加一个构建后操作步骤。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606055280761-4bedbe67-87a4-4390-8900-565f68b69402.png#height=687&id=SVRNV&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1374&originWidth=2556&originalType=binary&size=226392&status=done&style=none&width=1278" alt="image.png"><br>2&gt;邮件接收人和邮件内容配置<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606056472299-e0ae3771-1ce2-4bff-a69b-665231a52b75.png#height=1317&id=Q1ysE&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2634&originWidth=2558&originalType=binary&size=460895&status=done&style=none&width=1279" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606050531905-f72947a0-1bf7-46aa-adc8-2754cc299038.png#crop=0&crop=0&crop=1&crop=1&height=1899&id=MgX4V&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3798&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=521924&status=done&style=none&title=&width=1278" alt="image.png"></p>
+<h3 id="3-gt-项目中邮件配置"><a href="#3-gt-项目中邮件配置" class="headerlink" title="3&gt;项目中邮件配置"></a>3&gt;项目中邮件配置</h3><p>这里主要配置两个地方就可以了。<br>进入我们要配置邮箱的项目。<br>1&gt;增加一个构建后操作步骤。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606055280761-4bedbe67-87a4-4390-8900-565f68b69402.png#crop=0&crop=0&crop=1&crop=1&height=687&id=SVRNV&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1374&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=226392&status=done&style=none&title=&width=1278" alt="image.png"><br>2&gt;邮件接收人和邮件内容配置<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606056472299-e0ae3771-1ce2-4bff-a69b-665231a52b75.png#crop=0&crop=0&crop=1&crop=1&height=1317&id=Q1ysE&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2634&originWidth=2558&originalType=binary&ratio=1&rotation=0&showTitle=false&size=460895&status=done&style=none&title=&width=1279" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>jenkins</category>
