@@ -609,7 +609,7 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2022-03-06
+          2022-03-08
         </div>
         
 
@@ -639,7 +639,6 @@
         <blockquote>
 <p>背景：<br>本人博客的评论为 valine 评论，为了及时知道评论，设置了邮件通知。奈何 leancloud 的每天活跃状态为 16 小时，且半小时内无人访问，则自动进入休眠状态。为了解决这一问题，研究了下 linux 系统自带的 crontab 定时器，通过 定时访问评论网站 去解决这一问题。</p>
 </blockquote>
-<p><strong>​</strong></p>
 <h2 id="一、认识-crond-服务基本命令"><a href="#一、认识-crond-服务基本命令" class="headerlink" title="一、认识 crond 服务基本命令"></a>一、认识 crond 服务基本命令</h2><h3 id="1-gt-安装-crontab："><a href="#1-gt-安装-crontab：" class="headerlink" title="1&gt;安装 crontab："></a>1&gt;安装 crontab：</h3><pre class=" language-javascript"><code class="language-javascript">yum install crontabs</code></pre>
 <h3 id="2-gt-查看-crontab-服务状态："><a href="#2-gt-查看-crontab-服务状态：" class="headerlink" title="2&gt;查看 crontab 服务状态："></a>2&gt;查看 crontab 服务状态：</h3><pre class=" language-javascript"><code class="language-javascript">service crond status</code></pre>
 <h3 id="3-gt-手动启动-crontab-服务："><a href="#3-gt-手动启动-crontab-服务：" class="headerlink" title="3&gt;手动启动 crontab 服务："></a>3&gt;手动启动 crontab 服务：</h3><pre class=" language-javascript"><code class="language-javascript">service crond start</code></pre>
@@ -686,9 +685,7 @@ crontab <span class="token operator">-</span>r</code></pre>
 周几                  <span class="token number">1</span><span class="token operator">-</span><span class="token number">7</span> or SUN<span class="token operator">-</span>SAT                   <span class="token punctuation">,</span> <span class="token operator">-</span> <span class="token operator">*</span> <span class="token operator">?</span> <span class="token operator">/</span> L C #
 年 <span class="token punctuation">(</span>可选字段<span class="token punctuation">)</span>          empty<span class="token punctuation">,</span> <span class="token number">1970</span><span class="token operator">-</span><span class="token number">2099</span>                 <span class="token punctuation">,</span> <span class="token operator">-</span> <span class="token operator">*</span> <span class="token operator">/</span></code></pre>
 <h3 id="2-gt-说明"><a href="#2-gt-说明" class="headerlink" title="2&gt;说明"></a>2&gt;说明</h3><blockquote>
-<p>Month<br>一年中的几月：可以用 0-11 或用字符串 “JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV and DEC” 表示<br>​</p>
-</blockquote>
-<blockquote>
+<p>Month<br>一年中的几月：可以用 0-11 或用字符串 “JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV and DEC” 表示</p>
 <p>Day-of-Week<br>每周：数字 1-7（1 ＝ 星期日），或用字符口串“SUN, MON, TUE, WED, THU, FRI and SAT”</p>
 </blockquote>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">*</span> ：代表整个时间段
@@ -708,7 +705,6 @@ W <span class="token function">：指定离给定日期最近的工作日</span>
 <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token operator">*</span> L  每周星期天凌晨<span class="token number">1</span>点实行一次
 <span class="token number">0</span> <span class="token number">26</span><span class="token punctuation">,</span><span class="token number">29</span><span class="token punctuation">,</span><span class="token number">33</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">?</span>  在<span class="token number">26</span>分、<span class="token number">29</span>分、<span class="token number">33</span>分执行一次
 <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">13</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">,</span><span class="token number">21</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">?</span> 每天的<span class="token number">0</span>点、<span class="token number">13</span>点、<span class="token number">18</span>点、<span class="token number">21</span>点都执行一次</code></pre>
-<p>​</p>
 <h2 id="三、定时任务相关网站推荐"><a href="#三、定时任务相关网站推荐" class="headerlink" title="三、定时任务相关网站推荐"></a>三、定时任务相关网站推荐</h2><ul>
 <li><strong>设置 cron 定时的网站：</strong><a href="https://console.cron-job.org/jobs" target="_blank" rel="noopener"><strong>https://console.cron-job.org/jobs</strong></a></li>
 </ul>
@@ -1483,7 +1479,7 @@ yum search openjdk
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">114.6k</span>&nbsp;字
+        class="white-color">115.8k</span>&nbsp;字
       
       
       

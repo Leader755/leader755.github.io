@@ -604,7 +604,7 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2022-03-06
+          2022-03-08
         </div>
         
 
@@ -632,7 +632,7 @@
       <div id="articleContent">
 
         <p>1.什么是微前端？<br>微前端（Micro-Frontends）是一种类似于微服务的架构，它将微服务的理念应用于浏览器端，即将 Web 应用由单一的单体应用转变为多个小型前端应用聚合为一的应用。各个前端应用还可以独立运行、独立开发、独立部署。<strong>微前端不是单纯的前端框架或者工具，而是一套架构体系</strong>，</p>
-<p>qiankun 是一个基于 <a href="https://github.com/CanopyTax/single-spa" target="_blank" rel="noopener">single-spa</a> 的<a href="https://micro-frontends.org/" target="_blank" rel="noopener">微前端</a>实现库，旨在帮助大家能更简单、无痛的构建一个生产可用微前端架构系统。qiankun 孵化自蚂蚁金融科技基于微前端架构的云产品统一接入平台。<br>​</p>
+<p>qiankun 是一个基于 <a href="https://github.com/CanopyTax/single-spa" target="_blank" rel="noopener">single-spa</a> 的<a href="https://micro-frontends.org/" target="_blank" rel="noopener">微前端</a>实现库，旨在帮助大家能更简单、无痛的构建一个生产可用微前端架构系统。qiankun 孵化自蚂蚁金融科技基于微前端架构的云产品统一接入平台。</p>
 <blockquote>
 <ul>
 <li>📦 *<em>基于 *</em><a href="https://github.com/CanopyTax/single-spa" target="_blank" rel="noopener">single-spa</a> 封装，提供了更加开箱即用的 API。</li>
@@ -644,14 +644,11 @@
 <li>🔌 <strong>umi 插件</strong>，提供了 <a href="https://github.com/umijs/plugins/tree/master/packages/plugin-qiankun" target="_blank" rel="noopener">@umijs/plugin-qiankun</a> 供 umi 应用一键切换成微前端架构系统。</li>
 </ul>
 </blockquote>
-<p>​</p>
-<p>​</p>
 <h2 id="2-qiankun-框架的应用"><a href="#2-qiankun-框架的应用" class="headerlink" title="2.qiankun 框架的应用"></a>2.qiankun 框架的应用</h2><h3 id="主应用中操作"><a href="#主应用中操作" class="headerlink" title="主应用中操作"></a>主应用中操作</h3><h4 id="1-在主应用中安装-qiankun"><a href="#1-在主应用中安装-qiankun" class="headerlink" title="1. 在主应用中安装 qiankun"></a>1. 在主应用中安装 qiankun</h4><pre class=" language-javascript"><code class="language-javascript">npm i qiankun <span class="token operator">-</span>S
 <span class="token comment" spellcheck="true">//yarn add qiankun</span></code></pre>
 <h4 id="2-在主应用中注册微应用"><a href="#2-在主应用中注册微应用" class="headerlink" title="2. 在主应用中注册微应用"></a>2. 在主应用中注册微应用</h4><blockquote>
 <p>当微应用信息注册完之后，一旦浏览器的 url 发生变化，便会自动触发 qiankun 的匹配逻辑，所有 activeRule 规则匹配上的微应用就会被插入到指定的 container 中，同时依次调用微应用暴露出的生命周期钩子。如果微应用不是直接跟路由关联的时候，你也可以选择手动加载微应用的方式：</p>
 </blockquote>
-<p>​</p>
 <p>a.自动加载微应用</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//自动加载</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> registerMicroApps<span class="token punctuation">,</span> start <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"qiankun"</span><span class="token punctuation">;</span>
@@ -672,7 +669,6 @@
 <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>​</p>
 <p>b.手动加载微应用：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//手动加载</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> loadMicroApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"qiankun"</span><span class="token punctuation">;</span>
@@ -743,8 +739,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li>第二种是基于 redux 实现的通信方式 - Shared 通信，适合需要跟踪通信状态，子应用具备独立运行能力，较为复杂的微前端应用。</li>
 </ol>
 </blockquote>
-<p>​</p>
-<p>​</p>
 <h2 id="3-项目实战"><a href="#3-项目实战" class="headerlink" title="3.项目实战"></a>3.项目实战</h2>
       </div>
       <hr />
@@ -1264,10 +1258,10 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为什么要写 Blog？是啊，为什么要写 Blog？毕竟这里没有人支付稿酬，也看不出有任何明显的物质性收益。不管你选择那种博客，这本身也是一个学习过程。 ——​ 阮一峰
+                            为什么要写 Blog？是啊，为什么要写 Blog？毕竟这里没有人支付稿酬，也看不出有任何明显的物质性收益。不管你选择那种博客，这本身也是一个学习过程。 ——阮一峰
 一.目前常见的博客框架：
 
-hexo 官网：https://hexo.i
+hexo 官网：https://hexo.io，
                         
                     </div>
                     <div class="publish-info">
@@ -1324,8 +1318,7 @@ hexo 官网：https://hexo.i
                             一.背景：
 在小程序里可以打开另一个小程序，让小程序之间可以互相连接跳转，类似于网页之间通过 URL 链接互相跳转。不仅可以打开另一个小程序的首页，还可以打开另一个小程序的任何一个页面，这让小程序之间的功能连接更自由。
 
-​
-二.解决方案：
+二.解决方案：小程
                         
                     </div>
                     <div class="publish-info">
@@ -1503,7 +1496,7 @@ hexo 官网：https://hexo.i
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">114.6k</span>&nbsp;字
+        class="white-color">115.8k</span>&nbsp;字
       
       
       

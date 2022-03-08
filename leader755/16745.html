@@ -5,10 +5,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="keywords" content="博客自动化部署, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
-  <meta name="description" content="为什么要写 Blog？是啊，为什么要写 Blog？毕竟这里没有人支付稿酬，也看不出有任何明显的物质性收益。不管你选择那种博客，这本身也是一个学习过程。 ——​ 阮一峰
+  <meta name="description" content="为什么要写 Blog？是啊，为什么要写 Blog？毕竟这里没有人支付稿酬，也看不出有任何明显的物质性收益。不管你选择那种博客，这本身也是一个学习过程。 ——阮一峰
 一.目前常见的博客框架：
 
-hexo 官网：https://hexo.i">
+hexo 官网：https://hexo.io，">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -611,7 +611,7 @@ hexo 官网：https://hexo.i">
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2022-03-06
+          2022-03-08
         </div>
         
 
@@ -638,7 +638,7 @@ hexo 官网：https://hexo.i">
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <h2 id="为什么要写-Blog？"><a href="#为什么要写-Blog？" class="headerlink" title="为什么要写 Blog？"></a>为什么要写 Blog？</h2><p>是啊，为什么要写 Blog？毕竟这里没有人支付稿酬，也看不出有任何明显的物质性收益。<br>不管你选择那种博客，这本身也是一个学习过程。 ——​ 阮一峰</p>
+        <h2 id="为什么要写-Blog？"><a href="#为什么要写-Blog？" class="headerlink" title="为什么要写 Blog？"></a>为什么要写 Blog？</h2><p>是啊，为什么要写 Blog？毕竟这里没有人支付稿酬，也看不出有任何明显的物质性收益。<br>不管你选择那种博客，这本身也是一个学习过程。 ——阮一峰</p>
 <h2 id="一-目前常见的博客框架："><a href="#一-目前常见的博客框架：" class="headerlink" title="一.目前常见的博客框架："></a>一.目前常见的博客框架：</h2><blockquote>
 <ul>
 <li>hexo 官网：<a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io</a>，基于 node.js 的静态博客。</li>
@@ -653,7 +653,6 @@ hexo 官网：https://hexo.i">
 <li>solo 官网：<a href="https://solo.b3log.org/" target="_blank" rel="noopener">https://solo.b3log.org/</a> 基于 java,有后台管理</li>
 </ul>
 </blockquote>
-<p>​</p>
 <h2 id="二-hexo-博客搭建部署"><a href="#二-hexo-博客搭建部署" class="headerlink" title="二.hexo 博客搭建部署"></a>二.hexo 博客搭建部署</h2><h3 id="1-搭建本地-hexo-博客"><a href="#1-搭建本地-hexo-博客" class="headerlink" title="1.搭建本地 hexo 博客"></a>1.<a href="https://www.yuque.com/leader755/blog/dqugvo" target="_blank" rel="noopener">搭建本地 hexo 博客</a></h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g   <span class="token comment" spellcheck="true">//全局安装 hexo</span>
 hexo init blog            <span class="token comment" spellcheck="true">//初始化</span>
 hexo <span class="token keyword">new</span> <span class="token string">"Hello Hexo"</span>     <span class="token comment" spellcheck="true">//新建一个makedown 文档</span>
@@ -765,7 +764,6 @@ hexo server               <span class="token comment" spellcheck="true">//启动
 <h2 id="三-全自动部署博客"><a href="#三-全自动部署博客" class="headerlink" title="三.全自动部署博客"></a>三.全自动部署博客</h2><blockquote>
 <p>使用 Hexo + Github + 语雀 + yuque-hexo +actions+severless + jenkins 打造全自动持续集成个人博客，云端写作，自动部署，完美体验~。</p>
 </blockquote>
-<p>​</p>
 <p>整体流程：<br><a href="https://www.processon.com/embed/6222efc56376890772902783" target="_blank" rel="noopener">https://www.processon.com/embed/6222efc56376890772902783</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646459238938-4761bf3c-abe5-45d1-a1a4-dde08853e05a.png#clientId=u821c819c-1be3-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=108&id=u659eda6c&margin=%5Bobject%20Object%5D&name=%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2.png&originHeight=215&originWidth=1449&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36206&status=done&style=none&taskId=u4a1b9bfd-a3d9-4cef-a154-86732e343ea&title=&width=729.5" alt="博客自动化部署.png"></p>
 <ul>
 <li>语雀发布一篇文章</li>
@@ -776,7 +774,7 @@ hexo server               <span class="token comment" spellcheck="true">//启动
 <li>jenkins 自动拉取代码部署到个人网站</li>
 </ul>
 <h3 id="1-Serverless-云函数自动化"><a href="#1-Serverless-云函数自动化" class="headerlink" title="1. Serverless 云函数自动化"></a>1. <a href="https://www.yuque.com/leader755/blog/tl24xf" target="_blank" rel="noopener">Serverless 云函数自动化</a></h3><p>目前阿里云和腾讯云都有 serverless 服务，免费的额度完全够用了，目前用的腾讯云的。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646354266872-d2adab7c-2d7b-4d5c-b027-9ee0bbe263cd.png#clientId=u78eea9c2-dae5-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=434&id=u688e1e08&margin=%5Bobject%20Object%5D&name=image.png&originHeight=868&originWidth=2446&originalType=binary&ratio=1&rotation=0&showTitle=false&size=215351&status=done&style=none&taskId=u974283ec-35ca-4e29-8441-5d0ad6c2b71&title=&width=1223" alt="image.png"></p>
-<p><strong>1）创建函数</strong>​<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646368992000-3d961401-62ea-468c-9629-d3bb5b3ff0ed.png#clientId=ucacb647c-3f93-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=724&id=u43be68bd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1448&originWidth=2404&originalType=binary&ratio=1&rotation=0&showTitle=false&size=233070&status=done&style=none&taskId=u891e5236-6014-41b8-850b-a26d22ecac0&title=&width=1202" alt="image.png"></p>
+<p><strong>1）创建函数</strong><br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646368992000-3d961401-62ea-468c-9629-d3bb5b3ff0ed.png#clientId=ucacb647c-3f93-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=724&id=u43be68bd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1448&originWidth=2404&originalType=binary&ratio=1&rotation=0&showTitle=false&size=233070&status=done&style=none&taskId=u891e5236-6014-41b8-850b-a26d22ecac0&title=&width=1202" alt="image.png"></p>
 <p><strong>2）serverless 函数示例:</strong></p>
 <pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># -*- coding: utf8 -*-</span>
 <span class="token keyword">import</span> requests<span class="token punctuation">,</span>time
@@ -875,14 +873,12 @@ jobs<span class="token punctuation">:</span>
 <blockquote>
 <p>利用 GitHub Actions 实现博客自动发布，将静态博客页面部署到多个服务器上，比如 GitHub Pages、Gitee pages 、云服务器上。</p>
 </blockquote>
-<p>​</p>
 <h3 id="4-jenkins-的自动化部署"><a href="#4-jenkins-的自动化部署" class="headerlink" title="4.jenkins 的自动化部署"></a>4.jenkins 的自动化部署</h3><ul>
 <li><a href="https://www.yuque.com/leader755/blog/slfxnw" target="_blank" rel="noopener">在 CentOS7 上搭建 Jenkins</a></li>
 <li><a href="https://www.yuque.com/leader755/blog/vx9gsg" target="_blank" rel="noopener">Github 的 jenkins 的自动化部署</a></li>
 <li><a href="https://www.yuque.com/leader755/blog/eswt7t" target="_blank" rel="noopener">Gitee 的 jenkins 的自动化部署</a></li>
 </ul>
-<h4 id="1-gt-搭建-jenkins"><a href="#1-gt-搭建-jenkins" class="headerlink" title="1&gt;搭建 jenkins"></a>1&gt;搭建 jenkins</h4><p>​</p>
-<ul>
+<h4 id="1-gt-搭建-jenkins"><a href="#1-gt-搭建-jenkins" class="headerlink" title="1&gt;搭建 jenkins"></a>1&gt;搭建 jenkins</h4><ul>
 <li><strong>yum 安装</strong></li>
 </ul>
 <pre class=" language-python"><code class="language-python"><span class="token operator">//</span>yum安装 （yum的repos中默认是没有Jenkins的，需要先将Jenkins存储库添加到yum repos<span class="token punctuation">)</span>
@@ -914,7 +910,6 @@ jobs<span class="token punctuation">:</span>
   <span class="token comment" spellcheck="true">#查看 jenkins 信息</span>
   ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep jenkins
 </code></pre>
-<p>​</p>
 <h4 id="2-gt-github-的-jenkins-自动化部署"><a href="#2-gt-github-的-jenkins-自动化部署" class="headerlink" title="2&gt;github 的 jenkins 自动化部署"></a>2&gt;github 的 jenkins 自动化部署</h4><ul>
 <li>创建一个空白项目</li>
 </ul>
@@ -940,8 +935,6 @@ jobs<span class="token punctuation">:</span>
 </ul>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646407550026-c37091d2-aaf9-445d-bd33-b4edc21c805c.png#clientId=u283f59f9-e4c8-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=787&id=ua95552e8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1574&originWidth=2252&originalType=binary&ratio=1&rotation=0&showTitle=false&size=389221&status=done&style=none&taskId=u008884d5-27c4-4d18-9b13-cfe3b42d4ec&title=&width=1126" alt="image.png"></p>
 <p>-</p>
-<p>​</p>
-<p>​</p>
 
       </div>
       <hr />
@@ -1448,58 +1441,37 @@ jobs<span class="token punctuation">:</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/16745.html">
+                <a href="/leader755/19560.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/22.jpg" class="responsive-img" alt="博客自动化部署"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/22.jpg" class="responsive-img" alt="博客自动化部署">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/22.jpg" class="responsive-img" alt="vue-cli2和 vue-cli3中px自动转化为rem"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/22.jpg" class="responsive-img" alt="vue-cli2和 vue-cli3中px自动转化为rem">
                         
-                        <span class="card-title">博客自动化部署</span>
+                        <span class="card-title">vue-cli2和 vue-cli3中px自动转化为rem</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为什么要写 Blog？是啊，为什么要写 Blog？毕竟这里没有人支付稿酬，也看不出有任何明显的物质性收益。不管你选择那种博客，这本身也是一个学习过程。 ——​ 阮一峰
-一.目前常见的博客框架：
-
-hexo 官网：https://hexo.i
+                            在项目中是不是经常使用 rem，自动设置根节点 html 的 font-size，因为 rem 单位是相对于根节点的字体大小的，所以通过设置根节点的字体大小可以动态的改变 rem 的大小。但是我们常见的是 px,那有什么好的方法能自动转化为
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-02
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-08
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/blog/" class="post-category">
-                                    blog
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            leader755
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">
-                        <span class="chip bg-color">自动化</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%83%A8%E7%BD%B2/">
-                        <span class="chip bg-color">部署</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1702,7 +1674,7 @@ hexo 官网：https://hexo.i
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">114.6k</span>&nbsp;字
+        class="white-color">115.8k</span>&nbsp;字
       
       
       
