@@ -4,11 +4,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="Serverless云函数自动化, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
-  <meta name="description" content="1.流程：语雀 webhook→Serverless→github api
-2.Serverless 配置
-
-你得先有腾讯云或者阿里云账户，没有注册的话，这些注册需要验证手机，甚至实名认证。这里以腾讯云为例，在腾讯云中开通 Serverle">
+  <meta name="keywords" content="github的 actions 执行定时任务, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
+  <meta name="description" content="怎么用 GitHub action想要使用 GitHub action 的功能，首先需要在 GitHub 上创建一个公开仓库，GitHub action 对公开仓库是不收费的。
+创建 hello GitHub aciton 工作流首先，先写">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +16,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google-site-verification" content="dUxZtBuXm550K6pq70-LL7yu7wQQHwvXpvMF8MwMQBU" />
-  <title>Serverless云函数自动化 | leader755 Blogs</title>
+  <title>github的 actions 执行定时任务 | leader755 Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
@@ -451,12 +449,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/17.jpg')">
   <div class="container" style="right: 0px;left: 0px;">
     <div class="row">
       <div class="col s12 m12 l12">
         <div class="brand">
-          <h1 class="description center-align post-title">Serverless云函数自动化</h1>
+          <h1 class="description center-align post-title">github的 actions 执行定时任务</h1>
         </div>
       </div>
     </div>
@@ -574,32 +572,11 @@
         <div class="col s7">
           
           <div class="article-tag">
-            
-            <a href="/tags/github/">
-              <span class="chip bg-color">github</span>
-            </a>
-            
-            <a href="/tags/hexo/">
-              <span class="chip bg-color">hexo</span>
-            </a>
-            
-            <a href="/tags/gitee/">
-              <span class="chip bg-color">gitee</span>
-            </a>
-            
+            <span class="chip bg-color">无标签</span>
           </div>
           
         </div>
         <div class="col s5 right-align">
-          
-          <div class="post-cate">
-            <i class="fas fa-bookmark fa-fw icon-category"></i>
-            
-            <a href="/categories/serverless/" class="post-category">
-              serverless
-            </a>
-            
-          </div>
           
         </div>
       </div>
@@ -608,7 +585,7 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2021-10-19
+          2022-03-14
         </div>
         
 
@@ -622,7 +599,7 @@
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          403
+          135
         </div>
         
 
@@ -642,44 +619,12 @@
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <h2 id="1-流程："><a href="#1-流程：" class="headerlink" title="1.流程："></a>1.流程：</h2><p>语雀 webhook→Serverless→github api</p>
-<h2 id="2-Serverless-配置"><a href="#2-Serverless-配置" class="headerlink" title="2.Serverless 配置"></a>2.Serverless 配置</h2><blockquote>
-<ol>
-<li>你得先有腾讯云或者阿里云账户，没有注册的话，这些注册需要验证手机，甚至实名认证。这里以腾讯云为例，在<a href="https://curl.qcloud.com/DgJ9bO9s" target="_blank" rel="noopener">腾讯云</a>中开通 Serverless（无服务架构），有叫函数计算，有叫云函数。</li>
-<li>新建云函数，函数名称自己随意，运行环境 Python2.7 创建方式 空白函数 ，点击高级设置，启用 运行角色 为 SCF_QcsRole。</li>
-<li>点击完成后，在 函数代码 → 函数管理 复制如下代码做相应修改。</li>
-</ol>
-</blockquote>
-<p>新建 index.py 文件</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># -*- coding: utf8 -*-</span>
-<span class="token keyword">import</span> requests
-
-<span class="token keyword">def</span> <span class="token function">main_handler</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string">"https://api.github.com/repos/Leader755/blog-master/dispatches"</span><span class="token punctuation">,</span>
-                      json <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"event_type"</span><span class="token punctuation">:</span> <span class="token string">"run-it"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-                      headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"User-Agent"</span><span class="token punctuation">:</span><span class="token string">'curl/7.52.1'</span><span class="token punctuation">,</span>
-                                 <span class="token string">'Content-Type'</span><span class="token punctuation">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
-                                 <span class="token string">'Accept'</span><span class="token punctuation">:</span> <span class="token string">'application/vnd.github.everest-preview+json'</span><span class="token punctuation">,</span>
-                                 <span class="token string">'Authorization'</span><span class="token punctuation">:</span> <span class="token string">'token 自己的token'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token keyword">if</span> r<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">204</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token string">"This's OK!"</span>
-    <span class="token keyword">else</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> r<span class="token punctuation">.</span>status_code</code></pre>
-<blockquote>
-<p>描述：<br>特别注意的是 ‘Authorization’: ‘token bc9aa5a5dfa324545007eab6c1865d’ 这样形式存在的。<br>触发方式如下，没有可以在触发管理中新建触发管理。</p>
-<ul>
-<li>触发方式：API 网关触发器</li>
-<li>API 服务类型：新建 API 服务</li>
-<li>API 服务：SCF_API_SERVICE</li>
-<li>请求方法：ANY</li>
-<li>发布环境：发布</li>
-<li>鉴权方法：免鉴权</li>
-<li>启动集成响应：未启用</li>
-<li>在 触发管理 中能看到访问路径，记下这个访问路径，我们要写入语雀中去</li>
-</ul>
-</blockquote>
-<h2 id="3-在-github-申请-token"><a href="#3-在-github-申请-token" class="headerlink" title="3.在 github 申请 token"></a>3.在 github 申请 token</h2><p>先去登录 GitHub，定位到如此网址 <a href="https://github.com/settings/profile" target="_blank" rel="noopener">https://github.com/settings/profile</a> ，点击 Developer settings，新建一个 token，然后勾选 repo 后确定申请。或点击查看《Github 申请 token》，然后填写好。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646355775441-aa348ea1-e121-4ab6-b231-e1cb0d5ca623.png#clientId=ude0b8dbc-e0fa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=733&id=uc189193b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1466&originWidth=2458&originalType=binary&ratio=1&rotation=0&showTitle=false&size=402845&status=done&style=none&taskId=u9a7fc622-8c01-4769-aee3-a29814a0935&title=&width=1229" alt="image.png"></p>
-<h2 id="4-在-gitee-申请-token-扩展"><a href="#4-在-gitee-申请-token-扩展" class="headerlink" title="4.在 gitee 申请 token(扩展)"></a>4.在 gitee 申请 token(扩展)</h2><p>在 gitee 申请 token<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646356085217-4b27e338-a8e2-47f0-9cda-8c333a9550a1.png#clientId=ude0b8dbc-e0fa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=715&id=u1c4eefc4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1430&originWidth=2442&originalType=binary&ratio=1&rotation=0&showTitle=false&size=411653&status=done&style=none&taskId=u505beec1-0e75-4fbe-bfbb-3a8b0255b1c&title=&width=1221" alt="image.png"></p>
+        <h2 id="怎么用-GitHub-action"><a href="#怎么用-GitHub-action" class="headerlink" title="怎么用 GitHub action"></a>怎么用 GitHub action</h2><p>想要使用 GitHub action 的功能，首先需要在 GitHub 上创建一个公开仓库，GitHub action 对公开仓库是不收费的。</p>
+<h2 id="创建-hello-GitHub-aciton-工作流"><a href="#创建-hello-GitHub-aciton-工作流" class="headerlink" title="创建 hello GitHub aciton 工作流"></a>创建 hello GitHub aciton 工作流</h2><p>首先，先写一个最简单的 GitHub action 的工作流来直观的看看其需要什么要素，其实很大部分的内容在 GitHub action 的官方文档里将的很清楚了,<a href="https://docs.github.com/en/free-pro-team@latest/actions" target="_blank" rel="noopener">GITHUB ACTION 官方文档</a>。</p>
+<p><a href="https://blog.csdn.net/qq_40748336/article/details/110749375" target="_blank" rel="noopener">
+</a></p>
+<p>1.先创建一个公开的仓库<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1647224225875-63823aa5-8e11-4776-96e4-4054d19cf589.png#clientId=u5bddb04e-ffe9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=718&id=u2b74f4f0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1436&originWidth=2862&originalType=binary&ratio=1&rotation=0&showTitle=false&size=264638&status=done&style=none&taskId=u3389a2cc-a4d4-493b-8f63-86046b94a2f&title=&width=1431" alt="image.png"></p>
+<p>2.进入自己的 GitHub 公开仓库，点击 ACTION 按钮</p>
 
       </div>
       <hr />
@@ -705,7 +650,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.leader755.com/leader755/33649.html">https://www.leader755.com/leader755/33649.html</a>
+                    <a href="https://www.leader755.com/leader755/17809.html">https://www.leader755.com/leader755/17809.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -742,19 +687,7 @@
         <div class="post-meta__tag-list" style="display: inline-block;">
           
           <div class="article-tag">
-            
-            <a href="/tags/github/">
-              <span class="chip bg-color">github</span>
-            </a>
-            
-            <a href="/tags/hexo/">
-              <span class="chip bg-color">hexo</span>
-            </a>
-            
-            <a href="/tags/gitee/">
-              <span class="chip bg-color">gitee</span>
-            </a>
-            
+            <span class="chip bg-color">无标签</span>
           </div>
           
         </div>
@@ -1190,50 +1123,41 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/leader755/33285.html">
+                <a href="/leader755/17809.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/19.jpg" class="responsive-img" alt="vuePress"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/19.jpg" class="responsive-img" alt="vuePress">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/17.jpg" class="responsive-img" alt="github的 actions 执行定时任务"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/17.jpg" class="responsive-img" alt="github的 actions 执行定时任务">
                         
-                        <span class="card-title">vuePress</span>
+                        <span class="card-title">github的 actions 执行定时任务</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            VuePress 由两部分组成：第一部分是一个极简静态网站生成器(opens new window)，它包含由 Vue 驱动的主题系统和插件 API，另一个部分是为书写技术文档而优化的默认主题，它的诞生初衷是为了支持 Vue 及其子项目的文
+                            怎么用 GitHub action想要使用 GitHub action 的功能，首先需要在 GitHub 上创建一个公开仓库，GitHub action 对公开仓库是不收费的。
+创建 hello GitHub aciton 工作流首先，先写
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-14
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/vuePress/" class="post-category">
-                                    vuePress
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            leader755
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1244,32 +1168,33 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/60370.html">
+                <a href="/leader755/54576.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/2.jpg" class="responsive-img" alt="Github Actions自动化部署 hexo博客"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/2.jpg" class="responsive-img" alt="Github Actions自动化部署 hexo博客">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/1.jpg" class="responsive-img" alt="vue中px自动转化为rem"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/1.jpg" class="responsive-img" alt="vue中px自动转化为rem">
                         
-                        <span class="card-title">Github Actions自动化部署 hexo博客</span>
+                        <span class="card-title">vue中px自动转化为rem</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.背景利用 GitHub Actions 实现博客自动发布，将静态博客页面部署到多个服务器上，比如 GitHub Pages、Gitee pages 、云服务器上。本文介绍使用 GitHub Actions 实现将 Hexo 博客自动编译
+                            
+在项目中是不是经常使用 rem，自动设置根节点 html 的 font-size，因为 rem 单位是相对于根节点的字体大小的，所以通过设置根节点的字体大小可以动态的改变 rem 的大小。但是我们常见的是 px,那有什么好的方法能自动转化
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/vue/" class="post-category">
+                                    vue
                                 </a>
                             
                             
@@ -1279,12 +1204,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
+                    <a href="/tags/rem/">
+                        <span class="chip bg-color">rem</span>
                     </a>
                     
-                    <a href="/tags/actions/">
-                        <span class="chip bg-color">actions</span>
+                    <a href="/tags/css/">
+                        <span class="chip bg-color">css</span>
                     </a>
                     
                 </div>
