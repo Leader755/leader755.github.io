@@ -465,6 +465,47 @@ yuque<span class="token operator">-</span>hexo clean</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>Github的jenkins的自动化部署</title>
+    <url>/leader755/59468.html</url>
+    <content><![CDATA[<h2 id="1-gt-创建项目"><a href="#1-gt-创建项目" class="headerlink" title="1&gt;创建项目"></a>1&gt;创建项目</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606051065895-ad1cd5cf-d131-4c52-9a8a-59df1bdc1eb5.png#crop=0&crop=0&crop=1&crop=1&height=688&id=CYfiK&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1376&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=343612&status=done&style=none&title=&width=1278" alt="image.png"></p>
+<h2 id="2-gt-General-设置"><a href="#2-gt-General-设置" class="headerlink" title="2&gt;General 设置"></a>2&gt;General 设置</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606051576608-6cc8989d-1206-4cf1-8535-01f5e183db41.png#crop=0&crop=0&crop=1&crop=1&height=690&id=gbgYZ&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1380&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=209155&status=done&style=none&title=&width=1278" alt="image.png"></p>
+<h2 id="3-gt-配置源码管理"><a href="#3-gt-配置源码管理" class="headerlink" title="3&gt;配置源码管理"></a>3&gt;配置源码管理</h2><p>1&gt;勾选<code>Git</code>选项之后，就会出现相关的填写项，根据下图的指引来填写就行了</p>
+<blockquote>
+<ul>
+<li>填写项目的 git 地址, eg： <a href="https://github.com/Leader755/leader755.github.io.git" target="_blank" rel="noopener">https://github.com/Leader755/leader755.github.io.git</a></li>
+<li>添加 github 用户和密码（要是一个有写权限的 github 账号，此步骤见下图）</li>
+<li>选择 githubweb 源码库浏览器，并填上你的项目 URL，这样每次构建都会生成对应的 changes，可直接链到 github 上看变更详情</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606052091783-c4a7fff0-5bdd-49ae-be72-ac8c7a24e6b1.png#crop=0&crop=0&crop=1&crop=1&height=764&id=le67F&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1528&originWidth=1944&originalType=binary&ratio=1&rotation=0&showTitle=false&size=811061&status=done&style=none&title=&width=972" alt="image.png"></p>
+<p>2&gt;点击添加增加 Credentials：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606051810554-cbed33af-7f39-416a-bbf8-05f3dff8cedd.png#crop=0&crop=0&crop=1&crop=1&height=513&id=VSzqR&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1026&originWidth=1930&originalType=binary&ratio=1&rotation=0&showTitle=false&size=148714&status=done&style=none&title=&width=965" alt="image.png"></p>
+<h2 id="4-gt-构建触发器"><a href="#4-gt-构建触发器" class="headerlink" title="4&gt;构建触发器"></a>4&gt;构建触发器</h2><p>勾选 GitHub hook trigger for GITScm polling 即可<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606052327987-e91ac2b0-a7da-49c6-bb08-1c12b4068c59.png#crop=0&crop=0&crop=1&crop=1&height=263&id=bGMqz&margin=%5Bobject%20Object%5D&name=image.png&originHeight=526&originWidth=2178&originalType=binary&ratio=1&rotation=0&showTitle=false&size=71026&status=done&style=none&title=&width=1089" alt="image.png"></p>
+<h2 id="5-gt-github-设置代码变动自动触发构建"><a href="#5-gt-github-设置代码变动自动触发构建" class="headerlink" title="5&gt;github 设置代码变动自动触发构建"></a>5&gt;github 设置代码变动自动触发构建</h2><ul>
+<li><strong>github 设置 GitHub webhooks（具体需要持续集成的项目），新建或者设置现有项目的 webhooks 选项，url：部署的服务器的 IP + 端口 + github-webhook</strong></li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646407550026-c37091d2-aaf9-445d-bd33-b4edc21c805c.png#clientId=u283f59f9-e4c8-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=787&id=ua95552e8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1574&originWidth=2252&originalType=binary&ratio=1&rotation=0&showTitle=false&size=389221&status=done&style=none&taskId=u008884d5-27c4-4d18-9b13-cfe3b42d4ec&title=&width=1126" alt="image.png"></p>
+<p>##</p>
+<h2 id="5-gt-构建环境配置"><a href="#5-gt-构建环境配置" class="headerlink" title="5&gt;构建环境配置"></a>5&gt;构建环境配置</h2><blockquote>
+<p>勾选 Use secret test(s) or file(s),<br>选择绑定 –&gt; 点击新增按钮 –&gt; 选择 Secret text –&gt; 下拉选择，添加 secret token –&gt; 之后应用</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606052439111-0a1b3ab6-6744-4998-91db-ba3b524c4703.png#crop=0&crop=0&crop=1&crop=1&height=488&id=zluVd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=976&originWidth=2006&originalType=binary&ratio=1&rotation=0&showTitle=false&size=153545&status=done&style=none&title=&width=1003" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606052676607-93f4082f-ceab-43ba-969a-e7e8c45661b6.png#crop=0&crop=0&crop=1&crop=1&height=514&id=L0Itc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1028&originWidth=1922&originalType=binary&ratio=1&rotation=0&showTitle=false&size=130883&status=done&style=none&title=&width=961" alt="image.png"></p>
+<p>去 github 创建 access token ，将其值填入 secret 中。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620199674550-1a2b7237-d2c4-45c9-9a51-29a073625301.png#clientId=uade9a517-7185-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=777&id=u8ec7a9b0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1554&originWidth=2866&originalType=binary&ratio=1&rotation=0&showTitle=false&size=336738&status=done&style=none&taskId=ub56a21c5-05d7-4c98-8e64-9e52d1cefb0&title=&width=1433" alt="image.png"></p>
+<h2 id="5-gt-设置构建"><a href="#5-gt-设置构建" class="headerlink" title="5&gt;设置构建"></a>5&gt;设置构建</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606053494011-dd24f3ea-656b-426c-9e87-1fd8e5f94226.png#crop=0&crop=0&crop=1&crop=1&height=700&id=vg30d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1400&originWidth=2560&originalType=binary&ratio=1&rotation=0&showTitle=false&size=195440&status=done&style=none&title=&width=1280" alt="image.png"></p>
+<p>##</p>
+<h2 id="6-gt-设置构建后的操作"><a href="#6-gt-设置构建后的操作" class="headerlink" title="6&gt;设置构建后的操作"></a>6&gt;设置构建后的操作</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606053904769-011124e1-0095-4df8-85cc-3abcbd31dc5a.png#crop=0&crop=0&crop=1&crop=1&height=1097&id=PaE4P&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2194&originWidth=2560&originalType=binary&ratio=1&rotation=0&showTitle=false&size=310466&status=done&style=none&title=&width=1280" alt="image.png"></p>
+<h2 id="7-gt-设置超时的处理"><a href="#7-gt-设置超时的处理" class="headerlink" title="7&gt;设置超时的处理"></a>7&gt;设置超时的处理</h2><p>解决 jenkins git timeout，设置时间为 60 分钟。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606054780964-8808d4cd-cfa7-41e2-bf69-eab4f3bfa862.png#crop=0&crop=0&crop=1&crop=1&height=445&id=VJGND&margin=%5Bobject%20Object%5D&name=image.png&originHeight=890&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=182896&status=done&style=none&title=&width=1278" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606054616609-57c9bbb6-7697-4271-a12d-88901d115e03.png#crop=0&crop=0&crop=1&crop=1&height=598&id=YmelV&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1196&originWidth=2272&originalType=binary&ratio=1&rotation=0&showTitle=false&size=196033&status=done&style=none&title=&width=1136" alt="image.png"></p>
+<h2 id="8-gt-其他的构建方式"><a href="#8-gt-其他的构建方式" class="headerlink" title="8&gt;其他的构建方式"></a>8&gt;其他的构建方式</h2><p>gitee 的利用 jenkins 构建，详细请查看[<strong>《gitee 的 jenkin 的自动化部署》</strong>](<a href="https://www.yuque.com/docs/share/0b157b88-5724-4608-a727-2be4f5fe5fd5?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/0b157b88-5724-4608-a727-2be4f5fe5fd5?#</a> 《gitee 的 jenkin 的自动化部署》)</p>
+]]></content>
+      <categories>
+        <category>jenkins</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客提交百度和Google收录</title>
     <url>/leader755/13299.html</url>
     <content><![CDATA[<p>一个网站的 SEO 对一个网站非常重要，<a href="https://link.jianshu.com/?t=https://baike.baidu.com/item/SEO/102990?fr=aladdin" target="_blank" rel="noopener">SEO</a>指的是搜索引擎优化。通过搜索引擎优化，可以提高网站的网站关键词排名以及博客文章的曝光度。一般来说，我们针对百度和 Google 这两个搜索引擎进行优化，提高对网站资源的索引量，使我们的文章更容易被发现。虽然我的博客的主要读者是我自己，但也不妨碍我做些优化，对吧！接下来向大家展示如何使博客被百度和 Google 收录。</p>
@@ -552,47 +593,6 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
       <tags>
         <tag>百度收录</tag>
         <tag>谷歌收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github的jenkins的自动化部署</title>
-    <url>/leader755/59468.html</url>
-    <content><![CDATA[<h2 id="1-gt-创建项目"><a href="#1-gt-创建项目" class="headerlink" title="1&gt;创建项目"></a>1&gt;创建项目</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606051065895-ad1cd5cf-d131-4c52-9a8a-59df1bdc1eb5.png#crop=0&crop=0&crop=1&crop=1&height=688&id=CYfiK&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1376&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=343612&status=done&style=none&title=&width=1278" alt="image.png"></p>
-<h2 id="2-gt-General-设置"><a href="#2-gt-General-设置" class="headerlink" title="2&gt;General 设置"></a>2&gt;General 设置</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606051576608-6cc8989d-1206-4cf1-8535-01f5e183db41.png#crop=0&crop=0&crop=1&crop=1&height=690&id=gbgYZ&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1380&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=209155&status=done&style=none&title=&width=1278" alt="image.png"></p>
-<h2 id="3-gt-配置源码管理"><a href="#3-gt-配置源码管理" class="headerlink" title="3&gt;配置源码管理"></a>3&gt;配置源码管理</h2><p>1&gt;勾选<code>Git</code>选项之后，就会出现相关的填写项，根据下图的指引来填写就行了</p>
-<blockquote>
-<ul>
-<li>填写项目的 git 地址, eg： <a href="https://github.com/Leader755/leader755.github.io.git" target="_blank" rel="noopener">https://github.com/Leader755/leader755.github.io.git</a></li>
-<li>添加 github 用户和密码（要是一个有写权限的 github 账号，此步骤见下图）</li>
-<li>选择 githubweb 源码库浏览器，并填上你的项目 URL，这样每次构建都会生成对应的 changes，可直接链到 github 上看变更详情</li>
-</ul>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606052091783-c4a7fff0-5bdd-49ae-be72-ac8c7a24e6b1.png#crop=0&crop=0&crop=1&crop=1&height=764&id=le67F&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1528&originWidth=1944&originalType=binary&ratio=1&rotation=0&showTitle=false&size=811061&status=done&style=none&title=&width=972" alt="image.png"></p>
-<p>2&gt;点击添加增加 Credentials：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606051810554-cbed33af-7f39-416a-bbf8-05f3dff8cedd.png#crop=0&crop=0&crop=1&crop=1&height=513&id=VSzqR&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1026&originWidth=1930&originalType=binary&ratio=1&rotation=0&showTitle=false&size=148714&status=done&style=none&title=&width=965" alt="image.png"></p>
-<h2 id="4-gt-构建触发器"><a href="#4-gt-构建触发器" class="headerlink" title="4&gt;构建触发器"></a>4&gt;构建触发器</h2><p>勾选 GitHub hook trigger for GITScm polling 即可<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606052327987-e91ac2b0-a7da-49c6-bb08-1c12b4068c59.png#crop=0&crop=0&crop=1&crop=1&height=263&id=bGMqz&margin=%5Bobject%20Object%5D&name=image.png&originHeight=526&originWidth=2178&originalType=binary&ratio=1&rotation=0&showTitle=false&size=71026&status=done&style=none&title=&width=1089" alt="image.png"></p>
-<h2 id="5-gt-github-设置代码变动自动触发构建"><a href="#5-gt-github-设置代码变动自动触发构建" class="headerlink" title="5&gt;github 设置代码变动自动触发构建"></a>5&gt;github 设置代码变动自动触发构建</h2><ul>
-<li><strong>github 设置 GitHub webhooks（具体需要持续集成的项目），新建或者设置现有项目的 webhooks 选项，url：部署的服务器的 IP + 端口 + github-webhook</strong></li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1646407550026-c37091d2-aaf9-445d-bd33-b4edc21c805c.png#clientId=u283f59f9-e4c8-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=787&id=ua95552e8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1574&originWidth=2252&originalType=binary&ratio=1&rotation=0&showTitle=false&size=389221&status=done&style=none&taskId=u008884d5-27c4-4d18-9b13-cfe3b42d4ec&title=&width=1126" alt="image.png"></p>
-<p>##</p>
-<h2 id="5-gt-构建环境配置"><a href="#5-gt-构建环境配置" class="headerlink" title="5&gt;构建环境配置"></a>5&gt;构建环境配置</h2><blockquote>
-<p>勾选 Use secret test(s) or file(s),<br>选择绑定 –&gt; 点击新增按钮 –&gt; 选择 Secret text –&gt; 下拉选择，添加 secret token –&gt; 之后应用</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606052439111-0a1b3ab6-6744-4998-91db-ba3b524c4703.png#crop=0&crop=0&crop=1&crop=1&height=488&id=zluVd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=976&originWidth=2006&originalType=binary&ratio=1&rotation=0&showTitle=false&size=153545&status=done&style=none&title=&width=1003" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606052676607-93f4082f-ceab-43ba-969a-e7e8c45661b6.png#crop=0&crop=0&crop=1&crop=1&height=514&id=L0Itc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1028&originWidth=1922&originalType=binary&ratio=1&rotation=0&showTitle=false&size=130883&status=done&style=none&title=&width=961" alt="image.png"></p>
-<p>去 github 创建 access token ，将其值填入 secret 中。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620199674550-1a2b7237-d2c4-45c9-9a51-29a073625301.png#clientId=uade9a517-7185-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=777&id=u8ec7a9b0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1554&originWidth=2866&originalType=binary&ratio=1&rotation=0&showTitle=false&size=336738&status=done&style=none&taskId=ub56a21c5-05d7-4c98-8e64-9e52d1cefb0&title=&width=1433" alt="image.png"></p>
-<h2 id="5-gt-设置构建"><a href="#5-gt-设置构建" class="headerlink" title="5&gt;设置构建"></a>5&gt;设置构建</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606053494011-dd24f3ea-656b-426c-9e87-1fd8e5f94226.png#crop=0&crop=0&crop=1&crop=1&height=700&id=vg30d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1400&originWidth=2560&originalType=binary&ratio=1&rotation=0&showTitle=false&size=195440&status=done&style=none&title=&width=1280" alt="image.png"></p>
-<p>##</p>
-<h2 id="6-gt-设置构建后的操作"><a href="#6-gt-设置构建后的操作" class="headerlink" title="6&gt;设置构建后的操作"></a>6&gt;设置构建后的操作</h2><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606053904769-011124e1-0095-4df8-85cc-3abcbd31dc5a.png#crop=0&crop=0&crop=1&crop=1&height=1097&id=PaE4P&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2194&originWidth=2560&originalType=binary&ratio=1&rotation=0&showTitle=false&size=310466&status=done&style=none&title=&width=1280" alt="image.png"></p>
-<h2 id="7-gt-设置超时的处理"><a href="#7-gt-设置超时的处理" class="headerlink" title="7&gt;设置超时的处理"></a>7&gt;设置超时的处理</h2><p>解决 jenkins git timeout，设置时间为 60 分钟。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606054780964-8808d4cd-cfa7-41e2-bf69-eab4f3bfa862.png#crop=0&crop=0&crop=1&crop=1&height=445&id=VJGND&margin=%5Bobject%20Object%5D&name=image.png&originHeight=890&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=182896&status=done&style=none&title=&width=1278" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606054616609-57c9bbb6-7697-4271-a12d-88901d115e03.png#crop=0&crop=0&crop=1&crop=1&height=598&id=YmelV&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1196&originWidth=2272&originalType=binary&ratio=1&rotation=0&showTitle=false&size=196033&status=done&style=none&title=&width=1136" alt="image.png"></p>
-<h2 id="8-gt-其他的构建方式"><a href="#8-gt-其他的构建方式" class="headerlink" title="8&gt;其他的构建方式"></a>8&gt;其他的构建方式</h2><p>gitee 的利用 jenkins 构建，详细请查看[<strong>《gitee 的 jenkin 的自动化部署》</strong>](<a href="https://www.yuque.com/docs/share/0b157b88-5724-4608-a727-2be4f5fe5fd5?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/0b157b88-5724-4608-a727-2be4f5fe5fd5?#</a> 《gitee 的 jenkin 的自动化部署》)</p>
-]]></content>
-      <categories>
-        <category>jenkins</category>
-      </categories>
-      <tags>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -1712,23 +1712,6 @@ docker rmi $(docker images -q)</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>mac 使用 homebrew</title>
-    <url>/leader755/65348.html</url>
-    <content><![CDATA[<p>使用 brew update 指令</p>
-<h1 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h1><p>Error: The following directories are not writable by your user:<br>/usr/local/sbin<br>/usr/local/share/man/man5<br>/usr/local/share/man/man7</p>
-<p>解决办法：</p>
-<pre class=" language-javascript"><code class="language-javascript">sudo chown <span class="token operator">-</span>R <span class="token function">$</span><span class="token punctuation">(</span>whoami<span class="token punctuation">)</span> <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token operator">*</span></code></pre>
-<p>重新调用即可：</p>
-<pre><code>brew update</code></pre>]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>mac</tag>
-        <tag>homebrew</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mac 上使用brew安装 nvm</title>
     <url>/leader755/59816.html</url>
     <content><![CDATA[<h2 id="1-nvm-介绍"><a href="#1-nvm-介绍" class="headerlink" title="1.nvm 介绍"></a>1.nvm 介绍</h2><blockquote>
@@ -1742,10 +1725,6 @@ docker rmi $(docker images -q)</code></pre>
 <li>npm：nodejs 包管理工具。<br>在安装的 nodejs 的时候，npm 也会跟着一起安装，它是包管理工具。<br>npm 管理 nodejs 中的第三方插件</li>
 </ul>
 </li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
 <li>关联：<ul>
 <li>nvm 管理 nodejs 和 npm 的版本。npm 可以管理 nodejs 的第三方插件。</li>
 </ul>
@@ -1756,7 +1735,7 @@ docker rmi $(docker images -q)</code></pre>
 <p>此处选择 mac 系统自带的 Homebrew 安装 nvm。</p>
 </blockquote>
 <pre><code>Homebrew是一款Mac OS平台下的软件包管理工具，拥有安装、卸载、更新、查看、搜索等很多实用的功能。简单的一条指令，就可以实现包管理，而不用你关心各种依赖和文件路径的情况，十分方便快捷。</code></pre><p>简单来说，Homebrew 提供 Apple 没有预装但你需要的东西。详情请见<a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">Homebrew 官网</a> 。</p>
-<h3 id="2-1-安装-Homebrew"><a href="#2-1-安装-Homebrew" class="headerlink" title="2.1 安装 Homebrew"></a>2.1 安装 Homebrew</h3><ul>
+<h3 id="2-1-检查是否有安装-Homebrew"><a href="#2-1-检查是否有安装-Homebrew" class="headerlink" title="2.1 检查是否有安装 Homebrew"></a>2.1 检查是否有安装 Homebrew</h3><ul>
 <li>检查电脑是否有安装 Homebrew，在终端输入</li>
 </ul>
 <pre class=" language-shell"><code class="language-shell">brew -v  //检查 brew 的版本
@@ -1776,11 +1755,11 @@ brew -v</code></pre>
 </ul>
 <pre class=" language-shell"><code class="language-shell">brew install nvm</code></pre>
 <ul>
-<li>安装成功后不能直接使用 nvm 命令，</li>
-</ul>
-<blockquote>
+<li>安装成功后不能直接使用 nvm 命令，<blockquote>
 <p>安装成功之后，还不能直接使用 nvm 命令，需要进行以下配置，将以下命令复制到终端执行：</p>
 </blockquote>
+</li>
+</ul>
 <pre class=" language-shell"><code class="language-shell">echo "source $(brew --prefix nvm)/nvm.sh" >> .bash_profile
 
 . ~/.bash_profile   //需要重新定向来源</code></pre>
@@ -1791,36 +1770,36 @@ brew -v</code></pre>
 <blockquote>
 <p>如果未曾安装 node，则显示为空。<br>如果安装了 node，则可查看当前电脑中安装的 node 版本。</p>
 </blockquote>
-<h2 id="3-nvm-常用命令介绍"><a href="#3-nvm-常用命令介绍" class="headerlink" title="3.nvm 常用命令介绍"></a>3.nvm 常用命令介绍</h2><pre class=" language-shell"><code class="language-shell">nvm list 是查找本电脑上所有的node版本
-    - nvm list 查看已经安装的版本
-    - nvm list installed 查看已经安装的版本
-    - nvm list available 查看网络可以安装的版本
+<h2 id="3-nvm-常用命令介绍"><a href="#3-nvm-常用命令介绍" class="headerlink" title="3.nvm 常用命令介绍"></a>3.nvm 常用命令介绍</h2><pre class=" language-shell"><code class="language-shell">nvm list                 ##是查找本电脑上所有的node版本
+    - nvm list     ##查看已经安装的版本
+    - nvm list installed ##查看已经安装的版本
+    - nvm list available ##查看网络可以安装的版本
 
-nvm install <version> 安装指定版本node
-nvm uninstall <version> 卸载制定的版本
-nvm install stable ## 安装最新稳定版 node，当前是node v9.5.0 (npm v5.6.0)
-nvm install <version> ## 安装指定版本，可模糊安装，如：安装v4.4.0，既可nvm install v4.4.0，又可nvm install 4.4
+nvm install <version>   ##安装指定版本node
+nvm uninstall <version> ##卸载制定的版本
+nvm install stable             ## 安装最新稳定版 node，当前是node v9.5.0 (npm v5.6.0)
+nvm install <version>     ##安装指定版本，可模糊安装，如：安装v4.4.0，既可nvm install v4.4.0，又可nvm install 4.4
 
-nvm use <version> ##切换使用指定的版本node
-nvm -v 查看当前的版本
+nvm use <version>             ##切换使用指定的版本node
+nvm -v                                     ##查看当前的版本
 
-nvm ls ## 列出所有安装的版本
-nvm ls-remote ## 列出所有远程服务器的版本（官方node version list）
-nvm current ## 显示当前的版本
+nvm ls                                     ## 列出所有安装的版本
+nvm ls-remote                     ## 列出所有远程服务器的版本（官方node version list）
+nvm current                          ## 显示当前的版本
 
-nvm alias <name> <version> ## 给不同的版本号添加别名
-nvm unalias <name> ## 删除已定义的别名
+nvm alias <name> <version>     ## 给不同的版本号添加别名
+nvm unalias <name>                     ## 删除已定义的别名
 
-nvm reinstall-packages <version> ## 在当前版本 node 环境下，重新全局安装指定版本号的 npm 包
+nvm reinstall-packages <version>     ## 在当前版本 node 环境下，重新全局安装指定版本号的 npm 包
 
-nvm on 打开nodejs控制
-nvm off 关闭nodejs控制
-nvm proxy 查看设置与代理
-nvm node_mirror [url] 设置或者查看setting.txt中的node_mirror，如果不设置的默认是 https://nodejs.org/dist/
-nvm npm_mirror [url] 设置或者查看setting.txt中的npm_mirror,如果不设置的话默认的是： https://github.com/npm/npm/archive/.
+nvm on                         ##打开nodejs控制
+nvm off                     ##关闭nodejs控制
+nvm proxy                 ##查看设置与代理
+nvm node_mirror [url] ##设置或者查看setting.txt中的node_mirror，如果不设置的默认是 https://nodejs.org/dist/
+nvm npm_mirror [url]  ##设置或者查看setting.txt中的npm_mirror,如果不设置的话默认的是： https://github.com/npm/npm/archive/.
 
-nvm use [version] [arch] 切换制定的node版本和位数
-nvm root [path] 设置和查看root路径</code></pre>
+nvm use [version] [arch] ##切换制定的node版本和位数
+nvm root [path]          ##设置和查看root路径</code></pre>
 ]]></content>
       <categories>
         <category>nvm</category>
@@ -1828,6 +1807,23 @@ nvm root [path] 设置和查看root路径</code></pre>
       <tags>
         <tag>mac</tag>
         <tag>brew</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac 使用 homebrew</title>
+    <url>/leader755/65348.html</url>
+    <content><![CDATA[<p>使用 brew update 指令</p>
+<h1 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h1><p>Error: The following directories are not writable by your user:<br>/usr/local/sbin<br>/usr/local/share/man/man5<br>/usr/local/share/man/man7</p>
+<p>解决办法：</p>
+<pre class=" language-javascript"><code class="language-javascript">sudo chown <span class="token operator">-</span>R <span class="token function">$</span><span class="token punctuation">(</span>whoami<span class="token punctuation">)</span> <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token operator">*</span></code></pre>
+<p>重新调用即可：</p>
+<pre><code>brew update</code></pre>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>homebrew</tag>
       </tags>
   </entry>
   <entry>
@@ -2704,78 +2700,6 @@ data<span class="token punctuation">:</span> <span class="token punctuation">{</
       </tags>
   </entry>
   <entry>
-    <title>vue的动态组件 !is的使用</title>
-    <url>/leader755/6934.html</url>
-    <content><![CDATA[<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>template<span class="token operator">></span>
-<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"app-container"</span> v<span class="token operator">-</span>loading<span class="token operator">=</span><span class="token string">"loading"</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"baseSet"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu <span class="token symbol">:default</span><span class="token operator">-</span>active<span class="token operator">=</span><span class="token string">"currentView"</span>  mode<span class="token operator">=</span><span class="token string">"horizontal"</span> <span class="token variable">@select</span><span class="token operator">=</span><span class="token string">"handleSelect"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(  Item,Index) in tabList"</span> <span class="token symbol">:key</span><span class="token operator">=</span><span class="token string">"Index"</span> <span class="token symbol">:index</span><span class="token operator">=</span><span class="token string">"Item.label"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token constant">Item</span><span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>div<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>动态地绑定到它的 is 特性，我们让多个组件可以使用同一个挂载点，并动态切换。<span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>div <span class="token symbol">:is</span><span class="token operator">=</span><span class="token string">"currentView"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span></code></pre>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>script<span class="token operator">></span>
-  <span class="token operator">/</span><span class="token operator">/</span> 导入子组件
-  import basecardSet from <span class="token string">'./cardBaseSet'</span>
-  import basememberSet from <span class="token string">'./memberInfoSet'</span>
-  import basestoreSet from <span class="token string">'./storeCashierSet'</span>
-  export default <span class="token punctuation">{</span>
-    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      basecardSet<span class="token punctuation">,</span>
-      basememberSet<span class="token punctuation">,</span>
-      basestoreSet
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token operator">/</span><span class="token operator">/</span> <span class="token function">currentView</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token operator">/</span><span class="token operator">/</span>   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
-      <span class="token operator">/</span><span class="token operator">/</span> <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token punctuation">{</span>
-        tabList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
-          name<span class="token punctuation">:</span> <span class="token string">'基础设置'</span><span class="token punctuation">,</span>
-          label<span class="token punctuation">:</span> <span class="token string">'basecardSet'</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-          name<span class="token punctuation">:</span> <span class="token string">'门店收银'</span><span class="token punctuation">,</span>
-          label<span class="token punctuation">:</span> <span class="token string">'basestoreSet'</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-          name<span class="token punctuation">:</span> <span class="token string">'会员资料'</span><span class="token punctuation">,</span>
-          label<span class="token punctuation">:</span> <span class="token string">'basememberSet'</span>
-        <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        currentView<span class="token punctuation">:</span> <span class="token string">'basecardSet'</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      this<span class="token punctuation">.</span>currentView <span class="token operator">=</span> this<span class="token punctuation">.</span><span class="token variable">$route</span><span class="token punctuation">.</span>query<span class="token punctuation">.</span>type <span class="token operator">||</span> <span class="token string">'basecardSet'</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token function">handleSelect</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> keyPath<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        this<span class="token punctuation">.</span>currentView <span class="token operator">=</span> key
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-
-<span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"scss"</span> scoped<span class="token operator">></span>
-
-<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span></code></pre>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>动态组件</tag>
-        <tag>:is 动态组件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vue的修饰符!sync和el-dialog弹窗组件</title>
     <url>/leader755/18719.html</url>
     <content><![CDATA[<p>父组件 index.vue：</p>
@@ -2950,6 +2874,78 @@ data<span class="token punctuation">:</span> <span class="token punctuation">{</
       <tags>
         <tag>element</tag>
         <tag>el-dialog 弹窗</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue的动态组件 !is的使用</title>
+    <url>/leader755/6934.html</url>
+    <content><![CDATA[<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"app-container"</span> v<span class="token operator">-</span>loading<span class="token operator">=</span><span class="token string">"loading"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"baseSet"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu <span class="token symbol">:default</span><span class="token operator">-</span>active<span class="token operator">=</span><span class="token string">"currentView"</span>  mode<span class="token operator">=</span><span class="token string">"horizontal"</span> <span class="token variable">@select</span><span class="token operator">=</span><span class="token string">"handleSelect"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(  Item,Index) in tabList"</span> <span class="token symbol">:key</span><span class="token operator">=</span><span class="token string">"Index"</span> <span class="token symbol">:index</span><span class="token operator">=</span><span class="token string">"Item.label"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token constant">Item</span><span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>动态地绑定到它的 is 特性，我们让多个组件可以使用同一个挂载点，并动态切换。<span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>div <span class="token symbol">:is</span><span class="token operator">=</span><span class="token string">"currentView"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span></code></pre>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+  <span class="token operator">/</span><span class="token operator">/</span> 导入子组件
+  import basecardSet from <span class="token string">'./cardBaseSet'</span>
+  import basememberSet from <span class="token string">'./memberInfoSet'</span>
+  import basestoreSet from <span class="token string">'./storeCashierSet'</span>
+  export default <span class="token punctuation">{</span>
+    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      basecardSet<span class="token punctuation">,</span>
+      basememberSet<span class="token punctuation">,</span>
+      basestoreSet
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token operator">/</span><span class="token operator">/</span> <span class="token function">currentView</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token operator">/</span><span class="token operator">/</span>   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+      <span class="token operator">/</span><span class="token operator">/</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        tabList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'基础设置'</span><span class="token punctuation">,</span>
+          label<span class="token punctuation">:</span> <span class="token string">'basecardSet'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'门店收银'</span><span class="token punctuation">,</span>
+          label<span class="token punctuation">:</span> <span class="token string">'basestoreSet'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'会员资料'</span><span class="token punctuation">,</span>
+          label<span class="token punctuation">:</span> <span class="token string">'basememberSet'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        currentView<span class="token punctuation">:</span> <span class="token string">'basecardSet'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      this<span class="token punctuation">.</span>currentView <span class="token operator">=</span> this<span class="token punctuation">.</span><span class="token variable">$route</span><span class="token punctuation">.</span>query<span class="token punctuation">.</span>type <span class="token operator">||</span> <span class="token string">'basecardSet'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token function">handleSelect</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> keyPath<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        this<span class="token punctuation">.</span>currentView <span class="token operator">=</span> key
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"scss"</span> scoped<span class="token operator">></span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span></code></pre>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>动态组件</tag>
+        <tag>:is 动态组件</tag>
       </tags>
   </entry>
   <entry>
