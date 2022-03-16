@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2022-03-16T06:11:29.005Z</updated>
+  <updated>2022-03-16T06:17:14.872Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -17,34 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>github的 actions 执行定时任务</title>
-    <link href="https://www.leader755.com/leader755/17809.html"/>
-    <id>https://www.leader755.com/leader755/17809.html</id>
-    <published>2022-03-16T06:11:29.005Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;怎么用-GitHub-action&quot;&gt;&lt;a href=&quot;#怎么用-GitHub-action&quot; class=&quot;headerlink&quot; title=&quot;怎么用 GitHub action&quot;&gt;&lt;/a&gt;怎么用 GitHub action&lt;/h2&gt;&lt;p&gt;想要使用
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>mac 上使用brew安装 nvm</title>
     <link href="https://www.leader755.com/leader755/59816.html"/>
     <id>https://www.leader755.com/leader755/59816.html</id>
     <published>2022-03-14T10:48:00.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -74,7 +51,7 @@
     <link href="https://www.leader755.com/leader755/54576.html"/>
     <id>https://www.leader755.com/leader755/54576.html</id>
     <published>2022-03-08T11:55:00.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -104,7 +81,7 @@
     <link href="https://www.leader755.com/leader755/16745.html"/>
     <id>https://www.leader755.com/leader755/16745.html</id>
     <published>2022-03-02T00:07:00.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -133,7 +110,7 @@
     <link href="https://www.leader755.com/leader755/39615.html"/>
     <id>https://www.leader755.com/leader755/39615.html</id>
     <published>2022-02-16T11:05:41.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -160,7 +137,7 @@
     <link href="https://www.leader755.com/leader755/62737.html"/>
     <id>https://www.leader755.com/leader755/62737.html</id>
     <published>2022-02-05T17:24:00.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -188,7 +165,7 @@
     <link href="https://www.leader755.com/leader755/33285.html"/>
     <id>https://www.leader755.com/leader755/33285.html</id>
     <published>2022-02-04T13:38:23.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -215,7 +192,7 @@
     <link href="https://www.leader755.com/leader755/33649.html"/>
     <id>https://www.leader755.com/leader755/33649.html</id>
     <published>2021-10-19T11:05:41.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -247,7 +224,7 @@
     <link href="https://www.leader755.com/leader755/60370.html"/>
     <id>https://www.leader755.com/leader755/60370.html</id>
     <published>2021-09-22T06:55:00.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -276,7 +253,7 @@
     <link href="https://www.leader755.com/leader755/32104.html"/>
     <id>https://www.leader755.com/leader755/32104.html</id>
     <published>2021-07-25T17:24:00.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -414,7 +391,7 @@
     <link href="https://www.leader755.com/leader755/58426.html"/>
     <id>https://www.leader755.com/leader755/58426.html</id>
     <published>2021-05-16T11:55:00.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -440,40 +417,11 @@
   </entry>
   
   <entry>
-    <title>linux安装 docker</title>
-    <link href="https://www.leader755.com/leader755/10309.html"/>
-    <id>https://www.leader755.com/leader755/10309.html</id>
-    <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1、安装前置条件&quot;&gt;&lt;a href=&quot;#1、安装前置条件&quot; class=&quot;headerlink&quot; title=&quot;1、安装前置条件&quot;&gt;&lt;/a&gt;1、安装前置条件&lt;/h2&gt;&lt;p&gt;docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是
-        
-      
-    
-    </summary>
-    
-    
-      <category term="docker" scheme="https://www.leader755.com/categories/docker/"/>
-    
-    
-      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
-    
-      <category term="docker" scheme="https://www.leader755.com/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
     <title>jenkins配置 jdk，maven，git，node</title>
     <link href="https://www.leader755.com/leader755/1179.html"/>
     <id>https://www.leader755.com/leader755/1179.html</id>
     <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -498,11 +446,40 @@
   </entry>
   
   <entry>
+    <title>linux安装 docker</title>
+    <link href="https://www.leader755.com/leader755/10309.html"/>
+    <id>https://www.leader755.com/leader755/10309.html</id>
+    <published>2021-05-05T11:55:00.000Z</published>
+    <updated>2022-03-16T06:17:14.872Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1、安装前置条件&quot;&gt;&lt;a href=&quot;#1、安装前置条件&quot; class=&quot;headerlink&quot; title=&quot;1、安装前置条件&quot;&gt;&lt;/a&gt;1、安装前置条件&lt;/h2&gt;&lt;p&gt;docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是
+        
+      
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="https://www.leader755.com/categories/docker/"/>
+    
+    
+      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
+    
+      <category term="docker" scheme="https://www.leader755.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在CentOS7上搭建Jenkins</title>
     <link href="https://www.leader755.com/leader755/2040.html"/>
     <id>https://www.leader755.com/leader755/2040.html</id>
     <published>2021-05-05T06:55:00.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -531,7 +508,7 @@
     <link href="https://www.leader755.com/leader755/4285.html"/>
     <id>https://www.leader755.com/leader755/4285.html</id>
     <published>2021-05-05T05:55:23.000Z</published>
-    <updated>2022-03-16T06:11:29.005Z</updated>
+    <updated>2022-03-16T06:17:14.872Z</updated>
     
     <summary type="html">
     
@@ -586,6 +563,37 @@
       <category term="halo" scheme="https://www.leader755.com/tags/halo/"/>
     
       <category term="halo 配置云存储" scheme="https://www.leader755.com/tags/halo-%E9%85%8D%E7%BD%AE%E4%BA%91%E5%AD%98%E5%82%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>halo搭建</title>
+    <link href="https://www.leader755.com/leader755/48810.html"/>
+    <id>https://www.leader755.com/leader755/48810.html</id>
+    <published>2021-04-28T13:55:23.000Z</published>
+    <updated>2021-04-28T13:55:23.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;官方文档：https-docs-halo-run-install-docker&quot;&gt;&lt;a href=&quot;#官方文档：https-docs-halo-run-install-docker&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="博客" scheme="https://www.leader755.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="halo" scheme="https://www.leader755.com/tags/halo/"/>
+    
+      <category term="halo 主题" scheme="https://www.leader755.com/tags/halo-%E4%B8%BB%E9%A2%98/"/>
     
   </entry>
   
