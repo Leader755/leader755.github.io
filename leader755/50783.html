@@ -617,14 +617,14 @@ j">
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2022-03-14
+          2022-03-16
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          2k
+          2.1k
         </div>
         
 
@@ -772,7 +772,9 @@ firewall<span class="token operator">-</span>cmd <span class="token operator">--
     <span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># yum install nginx
   <span class="token number">3</span><span class="token operator">></span>查看nginx信息
     <span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># yum info nginx
-  <span class="token number">4</span><span class="token operator">></span><span class="token punctuation">.</span><span class="token function">卸载nginx</span><span class="token punctuation">(</span>通过yum安装可使用如下卸载<span class="token punctuation">)</span>
+  <span class="token number">4</span><span class="token operator">></span>nginx开机自启
+  <span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># sudo systemctl enable nginx
+  <span class="token number">5</span><span class="token operator">></span><span class="token function">卸载nginx</span><span class="token punctuation">(</span>通过yum安装可使用如下卸载<span class="token punctuation">)</span>
   <span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># yum remove nginx
 
 <span class="token number">2</span><span class="token punctuation">.</span>启动<span class="token operator">/</span>停止<span class="token operator">/</span>重启nginx
@@ -821,6 +823,14 @@ firewall<span class="token operator">-</span>cmd <span class="token operator">--
       <span class="token number">1</span><span class="token operator">></span>sudo netstat <span class="token operator">-</span>ntpl <span class="token comment" spellcheck="true">//提示是端口被占用，输入指令查看端口占用情况</span>
         <span class="token number">2</span><span class="token operator">></span>sudo kill <span class="token number">80</span>  <span class="token comment" spellcheck="true">// 可以看到是任务占用80端口，杀死该进程即可</span>
         <span class="token number">3</span><span class="token operator">></span>nginx <span class="token operator">-</span>s reload <span class="token comment" spellcheck="true">// 重新启动nginx</span>
+
+ <span class="token number">10</span><span class="token punctuation">.</span>以下是Nginx的默认路径：
+    <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> Nginx配置路径：<span class="token operator">/</span>etc<span class="token regex">/nginx/</span>
+    <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> PID目录：<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>run<span class="token operator">/</span>nginx<span class="token punctuation">.</span>pid
+    <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> 错误日志：<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>nginx<span class="token operator">/</span>error<span class="token punctuation">.</span>log
+    <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span> 访问日志：<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>nginx<span class="token operator">/</span>access<span class="token punctuation">.</span>log
+    <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span> 默认站点目录：<span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>nginx<span class="token operator">/</span>html
+    <span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>其他路径均可在<span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>nginx<span class="token punctuation">.</span>conf 以及<span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>conf<span class="token punctuation">.</span>d<span class="token operator">/</span><span class="token keyword">default</span><span class="token punctuation">.</span>conf
 </code></pre>
 <p>##</p>
 <h3 id="1-gt-nginx-域名配置详细"><a href="#1-gt-nginx-域名配置详细" class="headerlink" title="1&gt;nginx 域名配置详细"></a>1&gt;nginx 域名配置详细</h3><pre class=" language-javascript"><code class="language-javascript"># <span class="token number">1</span><span class="token punctuation">.</span>默认配置文件（检查服务器是否开放 <span class="token number">80</span> 端口）
@@ -1677,7 +1687,7 @@ firewall<span class="token operator">-</span>cmd <span class="token operator">--
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">116.9k</span>&nbsp;字
+        class="white-color">117k</span>&nbsp;字
       
       
       
