@@ -1137,6 +1137,37 @@ baiduAnalytics<span class="token punctuation">:</span>
       </tags>
   </entry>
   <entry>
+    <title>hexo博客的生成永久标题链接</title>
+    <url>/leader755/9481.html</url>
+    <content><![CDATA[<h2 id="1-hexo-博客默认链接规则："><a href="#1-hexo-博客默认链接规则：" class="headerlink" title="1.hexo 博客默认链接规则："></a>1.hexo 博客默认链接规则：</h2><p><strong>hexo 生成的标题默认规则（年、月、日、标题）：:year/:month/:day/:title。复制后的链接是一长串，非常不利于阅读，也不简洁。</strong></p>
+<h2 id="2-解决方案："><a href="#2-解决方案：" class="headerlink" title="2.解决方案："></a>2.解决方案：</h2><h3 id="1-使用hexo-permalink-pinyin"><a href="#1-使用hexo-permalink-pinyin" class="headerlink" title="1.使用hexo-permalink-pinyin"></a>1.使用<a href="">hexo-permalink-pinyin</a></h3><p>将中文转英文，这样方案也存在一定的缺陷，比如修改了文章标题，重新 hexo 三连后，URL 就变了，以前的文章地址变成了 404。而且这样生成的 URL 层级也很深，不利于 SEO。</p>
+<h4 id="1-gt-安装-hexo-permalink-pinyin"><a href="#1-gt-安装-hexo-permalink-pinyin" class="headerlink" title="1&gt;安装 hexo-permalink-pinyin"></a>1&gt;安装 hexo-permalink-pinyin</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
+<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink_pinyin<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  separator<span class="token punctuation">:</span> <span class="token string">'-'</span> # <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
+permalink_pinyin<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>             # Enable <span class="token keyword">this</span> plugin
+  separator<span class="token punctuation">:</span> <span class="token string">'-'</span>           # Separator <span class="token keyword">of</span> the slug<span class="token punctuation">,</span> <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
+  exclude<span class="token punctuation">:</span> <span class="token operator">/</span>ignore_post<span class="token operator">/</span>   # Regex <span class="token keyword">for</span> which post should skip</code></pre>
+<p>###</p>
+<h3 id="2-使用hexo-abbrlink"><a href="#2-使用hexo-abbrlink" class="headerlink" title="2.使用hexo-abbrlink"></a>2.使用<a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a></h3><p>生成唯一不变的 URl 链接，链接可以调整自己想要的。弊端</p>
+<h4 id="1-gt-安装-hexo-abbrlink"><a href="#1-gt-安装-hexo-abbrlink" class="headerlink" title="1&gt;安装 hexo-abbrlink"></a>1&gt;安装 hexo-abbrlink</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
+<p>####</p>
+<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink<span class="token punctuation">:</span> post<span class="token operator">/</span><span class="token punctuation">:</span>abbrlink<span class="token punctuation">.</span>html  # 文章的永久链接格式<span class="token punctuation">,</span>post可以自定义
+abbrlink<span class="token punctuation">:</span>
+  alg<span class="token punctuation">:</span> crc32  # 算法： <span class="token function">crc16</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and crc32
+  rep<span class="token punctuation">:</span> hex    # 进制： <span class="token function">dec</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and hex</code></pre>
+<p>生成后的博客链接如下：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588694804547-5dbe637d-46af-4bfc-9b3d-4d5228b573a6.png#align=left&display=inline&height=37&margin=%5Bobject%20Object%5D&name=image.png&originHeight=74&originWidth=908&size=11417&status=done&style=none&width=454" alt="image.png"></p>
+<p>如果觉得对你有帮助，点个赞呗。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>永久标签</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo博客的评论功能</title>
     <url>/leader755/38478.html</url>
     <content><![CDATA[<h2 id="1-这里推荐的评论功能插件为valine"><a href="#1-这里推荐的评论功能插件为valine" class="headerlink" title="1.这里推荐的评论功能插件为valine"></a>1.这里推荐的评论功能插件为<a href="https://valine.js.org/" target="_blank" rel="noopener">valine</a></h2><p>官网：<a href="https://valine.js.org/" target="_blank" rel="noopener">https://valine.js.org/</a><br>注册登录网站：<a href="https://leancloud.cn/" target="_blank" rel="noopener">https://leancloud.cn/</a><br>      需要实名注册登记，可以使用支付宝来实名认证，很快的，秒过。</p>
@@ -1167,37 +1198,6 @@ valine<span class="token punctuation">:</span>
       <tags>
         <tag>valine</tag>
         <tag>leancloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo博客的生成永久标题链接</title>
-    <url>/leader755/9481.html</url>
-    <content><![CDATA[<h2 id="1-hexo-博客默认链接规则："><a href="#1-hexo-博客默认链接规则：" class="headerlink" title="1.hexo 博客默认链接规则："></a>1.hexo 博客默认链接规则：</h2><p><strong>hexo 生成的标题默认规则（年、月、日、标题）：:year/:month/:day/:title。复制后的链接是一长串，非常不利于阅读，也不简洁。</strong></p>
-<h2 id="2-解决方案："><a href="#2-解决方案：" class="headerlink" title="2.解决方案："></a>2.解决方案：</h2><h3 id="1-使用hexo-permalink-pinyin"><a href="#1-使用hexo-permalink-pinyin" class="headerlink" title="1.使用hexo-permalink-pinyin"></a>1.使用<a href="">hexo-permalink-pinyin</a></h3><p>将中文转英文，这样方案也存在一定的缺陷，比如修改了文章标题，重新 hexo 三连后，URL 就变了，以前的文章地址变成了 404。而且这样生成的 URL 层级也很深，不利于 SEO。</p>
-<h4 id="1-gt-安装-hexo-permalink-pinyin"><a href="#1-gt-安装-hexo-permalink-pinyin" class="headerlink" title="1&gt;安装 hexo-permalink-pinyin"></a>1&gt;安装 hexo-permalink-pinyin</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
-<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink_pinyin<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  separator<span class="token punctuation">:</span> <span class="token string">'-'</span> # <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
-permalink_pinyin<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>             # Enable <span class="token keyword">this</span> plugin
-  separator<span class="token punctuation">:</span> <span class="token string">'-'</span>           # Separator <span class="token keyword">of</span> the slug<span class="token punctuation">,</span> <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
-  exclude<span class="token punctuation">:</span> <span class="token operator">/</span>ignore_post<span class="token operator">/</span>   # Regex <span class="token keyword">for</span> which post should skip</code></pre>
-<p>###</p>
-<h3 id="2-使用hexo-abbrlink"><a href="#2-使用hexo-abbrlink" class="headerlink" title="2.使用hexo-abbrlink"></a>2.使用<a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a></h3><p>生成唯一不变的 URl 链接，链接可以调整自己想要的。弊端</p>
-<h4 id="1-gt-安装-hexo-abbrlink"><a href="#1-gt-安装-hexo-abbrlink" class="headerlink" title="1&gt;安装 hexo-abbrlink"></a>1&gt;安装 hexo-abbrlink</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
-<p>####</p>
-<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink<span class="token punctuation">:</span> post<span class="token operator">/</span><span class="token punctuation">:</span>abbrlink<span class="token punctuation">.</span>html  # 文章的永久链接格式<span class="token punctuation">,</span>post可以自定义
-abbrlink<span class="token punctuation">:</span>
-  alg<span class="token punctuation">:</span> crc32  # 算法： <span class="token function">crc16</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and crc32
-  rep<span class="token punctuation">:</span> hex    # 进制： <span class="token function">dec</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and hex</code></pre>
-<p>生成后的博客链接如下：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588694804547-5dbe637d-46af-4bfc-9b3d-4d5228b573a6.png#align=left&display=inline&height=37&margin=%5Bobject%20Object%5D&name=image.png&originHeight=74&originWidth=908&size=11417&status=done&style=none&width=454" alt="image.png"></p>
-<p>如果觉得对你有帮助，点个赞呗。</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>永久标签</tag>
       </tags>
   </entry>
   <entry>
@@ -1460,6 +1460,68 @@ server<span class="token punctuation">{</span>
       </tags>
   </entry>
   <entry>
+    <title>jenkins配置 jdk，maven，git，node</title>
+    <url>/leader755/1179.html</url>
+    <content><![CDATA[<h2 id="1-centos-中安装-JDK"><a href="#1-centos-中安装-JDK" class="headerlink" title="1.centos 中安装 JDK:"></a>1.centos 中安装 JDK:</h2><pre class=" language-ruby"><code class="language-ruby"><span class="token number">1</span><span class="token operator">></span>查看系统是否已安装 <span class="token function">Java</span><span class="token punctuation">(</span><span class="token constant">Jenkins</span>需要在 <span class="token constant">Java</span> 环境下运行<span class="token punctuation">)</span>
+yum list installed <span class="token operator">|</span> grep jdk
+
+<span class="token number">2</span><span class="token operator">></span>yun 安装 java
+yum search openjdk
+yum <span class="token operator">-</span>y install java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token operator">-</span>devel
+
+<span class="token number">3</span><span class="token operator">></span>验证 java 是否安装成功
+java <span class="token operator">-</span>version</code></pre>
+<h2 id="2-centos-安装-Maven-非必须"><a href="#2-centos-安装-Maven-非必须" class="headerlink" title="2.centos 安装 Maven(非必须):"></a>2.centos 安装 Maven(非必须):</h2><pre class=" language-ruby"><code class="language-ruby"><span class="token number">1</span><span class="token operator">></span>安装 maven
+wget http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>repos<span class="token punctuation">.</span>fedorapeople<span class="token punctuation">.</span>org<span class="token operator">/</span>repos<span class="token operator">/</span>dchen<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>epel<span class="token operator">-</span>apache<span class="token operator">-</span>maven<span class="token punctuation">.</span>repo <span class="token operator">-</span><span class="token constant">O</span> <span class="token operator">/</span>etc<span class="token operator">/</span>yum<span class="token punctuation">.</span>repos<span class="token punctuation">.</span>d<span class="token operator">/</span>epel<span class="token operator">-</span>apache<span class="token operator">-</span>maven<span class="token punctuation">.</span>repo
+yum <span class="token operator">-</span>y install apache<span class="token operator">-</span>maven
+
+<span class="token number">2</span><span class="token operator">></span>验证 <span class="token constant">Maven</span> 是否安装成功
+mvn <span class="token operator">-</span>v
+
+<span class="token number">3</span><span class="token operator">></span>卸载 maven
+yum remove apache<span class="token operator">-</span>maven</code></pre>
+<blockquote>
+<p>关于 JDK 和 maven 的安装详细的，请参考<a href="https://www.yuque.com/leader755/blog/mlnd6i#36d395a02bb9c89efdc5687df83e0819" target="_blank" rel="noopener">《<strong>centos7 安装 jdk ,maven，tomcat，nginx</strong>》</a>。</p>
+</blockquote>
+<h2 id="3-centos-安装-Git"><a href="#3-centos-安装-Git" class="headerlink" title="3.centos 安装 Git"></a>3.centos 安装 Git</h2><pre class=" language-ruby"><code class="language-ruby">yum <span class="token operator">-</span>y install git
+git <span class="token operator">--</span>version</code></pre>
+<h2 id="4-jenkins-安装-nodejs"><a href="#4-jenkins-安装-nodejs" class="headerlink" title="4.jenkins 安装 nodejs"></a>4.jenkins 安装 nodejs</h2><h3 id="1-gt-node-插件安装"><a href="#1-gt-node-插件安装" class="headerlink" title="1&gt;node 插件安装"></a>1&gt;node 插件安装</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620208745508-261b3fb1-ef17-4464-b022-310933389e95.png#clientId=uadb33ceb-25bc-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=360&id=u94351d42&margin=%5Bobject%20Object%5D&name=image.png&originHeight=720&originWidth=2804&originalType=binary&ratio=1&rotation=0&showTitle=false&size=136050&status=done&style=none&taskId=u1d26eb07-4abe-4c79-a22d-80766a376d6&title=&width=1402" alt="image.png"></p>
+<h2 id="5-Jenkins-中配置-JDK、Maven、Git-和-node"><a href="#5-Jenkins-中配置-JDK、Maven、Git-和-node" class="headerlink" title="5. Jenkins 中配置 JDK、Maven、Git 和 node"></a>5. Jenkins 中配置 JDK、Maven、Git 和 node</h2><p>进入 Manage Jenkins -&gt; Global Tool Configuration，依次配置 JDK、Maven 、Git 和 node 路径。</p>
+<h3 id="1-查看-JDK-路径"><a href="#1-查看-JDK-路径" class="headerlink" title="1. 查看 JDK 路径"></a>1. 查看 JDK 路径</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看 java</span>
+<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java
+  看到 <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java 指向了 <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java，很遗憾，还不是我们要找的真正路径
+
+<span class="token comment" spellcheck="true">//JDK 真正所在的地方 （/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64）</span>
+<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java
+ lrwxrwxrwx <span class="token number">1</span> root root <span class="token number">73</span> <span class="token number">11</span>月 <span class="token number">21</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">30</span> <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>jvm<span class="token operator">/</span>java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0.272</span><span class="token punctuation">.</span>b10<span class="token number">-1</span><span class="token punctuation">.</span>el7_9<span class="token punctuation">.</span>x86_64<span class="token operator">/</span>jre<span class="token operator">/</span>bin<span class="token operator">/</span>java
+</code></pre>
+<h3 id="2-gt-查看-maven-路径"><a href="#2-gt-查看-maven-路径" class="headerlink" title="2&gt;查看 maven 路径"></a>2&gt;查看 maven 路径</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看</span>
+<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+  lrwxrwxrwx <span class="token number">1</span> root root <span class="token number">31</span> <span class="token number">11</span>月 <span class="token number">21</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">54</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+
+<span class="token comment" spellcheck="true">//mvn 真正所在的地方 /usr/share/apache-maven/</span>
+<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l  <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+    rwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">1</span> root root <span class="token number">5969</span> <span class="token number">10</span>月 <span class="token number">18</span> <span class="token number">2017</span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+</code></pre>
+<p>3&gt;插卡 git 路径</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看</span>
+<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+ <span class="token operator">-</span>rwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">113</span> root root <span class="token number">1527752</span> <span class="token number">5</span>月  <span class="token number">29</span> <span class="token number">2020</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>git</code></pre>
+<h3 id="3-gt-全局配置-jdk-，mvn-git，node-也可全部选择自动安装"><a href="#3-gt-全局配置-jdk-，mvn-git，node-也可全部选择自动安装" class="headerlink" title="3&gt;全局配置 jdk ，mvn, git，node(也可全部选择自动安装)"></a>3&gt;全局配置 jdk ，mvn, git，node(也可全部选择自动安装)</h3><p>jenkins 面板–》全局配置工具<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606047882164-c17da9e2-6526-4ce3-9e9a-e38d20640439.png#crop=0&crop=0&crop=1&crop=1&height=354&id=iRVgA&margin=%5Bobject%20Object%5D&name=image.png&originHeight=708&originWidth=1880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=67088&status=done&style=none&title=&width=940" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209685480-06264a43-c0da-4eaf-8c3d-b859d8d4de34.png#clientId=uadb33ceb-25bc-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=361&id=u210324c5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=722&originWidth=2246&originalType=binary&ratio=1&rotation=0&showTitle=false&size=70037&status=done&style=none&taskId=ub282f6a1-3296-4120-bd63-8ce58d9bde7&title=&width=1123" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209753638-d6bdd1d2-d865-482d-9282-d1d0a7acbf7d.png#clientId=uadb33ceb-25bc-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=379&id=ue45b5a8b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=758&originWidth=2176&originalType=binary&ratio=1&rotation=0&showTitle=false&size=65134&status=done&style=none&taskId=u77a606fb-9d0e-44aa-bcb9-4709c977171&title=&width=1088" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209201830-a3796ee3-1cca-4afc-baca-5354ec63c19c.png#clientId=uadb33ceb-25bc-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=773&id=Oc9TH&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1546&originWidth=2858&originalType=binary&ratio=1&rotation=0&showTitle=false&size=220266&status=done&style=none&taskId=u0659ca0d-189e-4a16-b436-6ec1ee1dcd5&title=&width=1429" alt="image.png"></p>
+<h2 id="6-nodejs-在-job-中的应用"><a href="#6-nodejs-在-job-中的应用" class="headerlink" title="6.nodejs 在 job 中的应用"></a>6.nodejs 在 job 中的应用</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620210323919-25d3c27f-005a-4e77-8a20-bafbc3c0dc62.png#clientId=u5c8a301e-c27f-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=793&id=ua4c82c56&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1586&originWidth=2880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=272376&status=done&style=none&taskId=u65a1aa55-af72-4af9-aee7-ea064a318fb&title=&width=1440" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>jenkins</category>
+      </categories>
+      <tags>
+        <tag>jdk</tag>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux 的定时任务crontab</title>
     <url>/leader755/58426.html</url>
     <content><![CDATA[<blockquote>
@@ -1549,65 +1611,93 @@ W <span class="token function">：指定离给定日期最近的工作日</span>
       </tags>
   </entry>
   <entry>
-    <title>jenkins配置 jdk，maven，git，node</title>
-    <url>/leader755/1179.html</url>
-    <content><![CDATA[<h2 id="1-centos-中安装-JDK"><a href="#1-centos-中安装-JDK" class="headerlink" title="1.centos 中安装 JDK:"></a>1.centos 中安装 JDK:</h2><pre class=" language-ruby"><code class="language-ruby"><span class="token number">1</span><span class="token operator">></span>查看系统是否已安装 <span class="token function">Java</span><span class="token punctuation">(</span><span class="token constant">Jenkins</span>需要在 <span class="token constant">Java</span> 环境下运行<span class="token punctuation">)</span>
-yum list installed <span class="token operator">|</span> grep jdk
-
-<span class="token number">2</span><span class="token operator">></span>yun 安装 java
-yum search openjdk
-yum <span class="token operator">-</span>y install java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token operator">-</span>devel
-
-<span class="token number">3</span><span class="token operator">></span>验证 java 是否安装成功
-java <span class="token operator">-</span>version</code></pre>
-<h2 id="2-centos-安装-Maven-非必须"><a href="#2-centos-安装-Maven-非必须" class="headerlink" title="2.centos 安装 Maven(非必须):"></a>2.centos 安装 Maven(非必须):</h2><pre class=" language-ruby"><code class="language-ruby"><span class="token number">1</span><span class="token operator">></span>安装 maven
-wget http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>repos<span class="token punctuation">.</span>fedorapeople<span class="token punctuation">.</span>org<span class="token operator">/</span>repos<span class="token operator">/</span>dchen<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>epel<span class="token operator">-</span>apache<span class="token operator">-</span>maven<span class="token punctuation">.</span>repo <span class="token operator">-</span><span class="token constant">O</span> <span class="token operator">/</span>etc<span class="token operator">/</span>yum<span class="token punctuation">.</span>repos<span class="token punctuation">.</span>d<span class="token operator">/</span>epel<span class="token operator">-</span>apache<span class="token operator">-</span>maven<span class="token punctuation">.</span>repo
-yum <span class="token operator">-</span>y install apache<span class="token operator">-</span>maven
-
-<span class="token number">2</span><span class="token operator">></span>验证 <span class="token constant">Maven</span> 是否安装成功
-mvn <span class="token operator">-</span>v
-
-<span class="token number">3</span><span class="token operator">></span>卸载 maven
-yum remove apache<span class="token operator">-</span>maven</code></pre>
-<blockquote>
-<p>关于 JDK 和 maven 的安装详细的，请参考<a href="https://www.yuque.com/leader755/blog/mlnd6i#36d395a02bb9c89efdc5687df83e0819" target="_blank" rel="noopener">《<strong>centos7 安装 jdk ,maven，tomcat，nginx</strong>》</a>。</p>
+    <title>linux安装 docker</title>
+    <url>/leader755/10309.html</url>
+    <content><![CDATA[<h2 id="1、安装前置条件"><a href="#1、安装前置条件" class="headerlink" title="1、安装前置条件"></a>1、安装前置条件</h2><p>docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是 2.x，需要升级 linux 内核</p>
+<h2 id="2、安装步骤"><a href="#2、安装步骤" class="headerlink" title="2、安装步骤"></a>2、安装步骤</h2><h3 id="1）升级本地-yum-包"><a href="#1）升级本地-yum-包" class="headerlink" title="1）升级本地 yum 包"></a>1）升级本地 yum 包</h3><pre class=" language-javascript"><code class="language-javascript">yum update</code></pre>
+<h3 id="2）-安装工具集"><a href="#2）-安装工具集" class="headerlink" title="2） 安装工具集"></a>2） 安装工具集</h3><pre class=" language-javascript"><code class="language-javascript">yum install <span class="token operator">-</span>y yum<span class="token operator">-</span>utils device<span class="token operator">-</span>mapper<span class="token operator">-</span>persistent<span class="token operator">-</span>data lvm2</code></pre>
+<h3 id="3）安装阿里云-docker-源"><a href="#3）安装阿里云-docker-源" class="headerlink" title="3）安装阿里云 docker 源"></a>3）安装阿里云 docker 源</h3><pre class=" language-javascript"><code class="language-javascript">sudo yum<span class="token operator">-</span>config<span class="token operator">-</span>manager <span class="token operator">--</span>add<span class="token operator">-</span>repo https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>aliyun<span class="token punctuation">.</span>com<span class="token operator">/</span>docker<span class="token operator">-</span>ce<span class="token operator">/</span>linux<span class="token operator">/</span>centos<span class="token operator">/</span>docker<span class="token operator">-</span>ce<span class="token punctuation">.</span>repo</code></pre>
+<h3 id="4）更新-yum-缓存"><a href="#4）更新-yum-缓存" class="headerlink" title="4）更新 yum 缓存"></a>4）更新 yum 缓存</h3><pre class=" language-javascript"><code class="language-javascript">yum makecache fast
+yum clean  all</code></pre>
+<h3 id="5）安装-docker"><a href="#5）安装-docker" class="headerlink" title="5）安装 docker"></a>5）安装 docker</h3><pre class=" language-javascript"><code class="language-javascript">yum <span class="token operator">-</span>y install docker<span class="token operator">-</span>ce</code></pre>
+<h3 id="6）启动-docker-服务"><a href="#6）启动-docker-服务" class="headerlink" title="6）启动 docker 服务"></a>6）启动 docker 服务</h3><pre class=" language-javascript"><code class="language-javascript">service docker start</code></pre>
+<h3 id="7）查看-docker-版本"><a href="#7）查看-docker-版本" class="headerlink" title="7）查看 docker 版本"></a>7）查看 docker 版本</h3><pre class=" language-javascript"><code class="language-javascript">docker <span class="token operator">-</span> v<span class="token punctuation">;</span></code></pre>
+<h3 id="8）开机启动-docker-服务"><a href="#8）开机启动-docker-服务" class="headerlink" title="8）开机启动 docker 服务"></a>8）开机启动 docker 服务</h3><pre class=" language-javascript"><code class="language-javascript">systemctl enable docker<span class="token punctuation">.</span>service</code></pre>
+<h2 id="3-docker-设置镜像-未设置镜像"><a href="#3-docker-设置镜像-未设置镜像" class="headerlink" title="3.docker 设置镜像(未设置镜像)"></a>3.docker 设置镜像(未设置镜像)</h2><blockquote>
+<p>docker pull 很慢解决办法，经常拉取镜像的时候很慢或者拉不下来，这里可以使用阿里云镜像加速器，然后试试看有没有效果</p>
 </blockquote>
-<h2 id="3-centos-安装-Git"><a href="#3-centos-安装-Git" class="headerlink" title="3.centos 安装 Git"></a>3.centos 安装 Git</h2><pre class=" language-ruby"><code class="language-ruby">yum <span class="token operator">-</span>y install git
-git <span class="token operator">--</span>version</code></pre>
-<h2 id="4-jenkins-安装-nodejs"><a href="#4-jenkins-安装-nodejs" class="headerlink" title="4.jenkins 安装 nodejs"></a>4.jenkins 安装 nodejs</h2><h3 id="1-gt-node-插件安装"><a href="#1-gt-node-插件安装" class="headerlink" title="1&gt;node 插件安装"></a>1&gt;node 插件安装</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620208745508-261b3fb1-ef17-4464-b022-310933389e95.png#clientId=uadb33ceb-25bc-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=360&id=u94351d42&margin=%5Bobject%20Object%5D&name=image.png&originHeight=720&originWidth=2804&originalType=binary&ratio=1&rotation=0&showTitle=false&size=136050&status=done&style=none&taskId=u1d26eb07-4abe-4c79-a22d-80766a376d6&title=&width=1402" alt="image.png"></p>
-<h2 id="5-Jenkins-中配置-JDK、Maven、Git-和-node"><a href="#5-Jenkins-中配置-JDK、Maven、Git-和-node" class="headerlink" title="5. Jenkins 中配置 JDK、Maven、Git 和 node"></a>5. Jenkins 中配置 JDK、Maven、Git 和 node</h2><p>进入 Manage Jenkins -&gt; Global Tool Configuration，依次配置 JDK、Maven 、Git 和 node 路径。</p>
-<h3 id="1-查看-JDK-路径"><a href="#1-查看-JDK-路径" class="headerlink" title="1. 查看 JDK 路径"></a>1. 查看 JDK 路径</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看 java</span>
-<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java
-  看到 <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java 指向了 <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java，很遗憾，还不是我们要找的真正路径
+<pre class=" language-shell"><code class="language-shell">##使用阿里云镜像加速器
+[root@localhost ~]# mkdir -p /etc/docker
 
-<span class="token comment" spellcheck="true">//JDK 真正所在的地方 （/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.272.b10-1.el7_9.x86_64）</span>
-<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java
- lrwxrwxrwx <span class="token number">1</span> root root <span class="token number">73</span> <span class="token number">11</span>月 <span class="token number">21</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">30</span> <span class="token operator">/</span>etc<span class="token operator">/</span>alternatives<span class="token operator">/</span>java <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>jvm<span class="token operator">/</span>java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0.272</span><span class="token punctuation">.</span>b10<span class="token number">-1</span><span class="token punctuation">.</span>el7_9<span class="token punctuation">.</span>x86_64<span class="token operator">/</span>jre<span class="token operator">/</span>bin<span class="token operator">/</span>java
-</code></pre>
-<h3 id="2-gt-查看-maven-路径"><a href="#2-gt-查看-maven-路径" class="headerlink" title="2&gt;查看 maven 路径"></a>2&gt;查看 maven 路径</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看</span>
-<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
-  lrwxrwxrwx <span class="token number">1</span> root root <span class="token number">31</span> <span class="token number">11</span>月 <span class="token number">21</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">54</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn <span class="token operator">-</span><span class="token operator">></span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
+[root@localhost ~]# tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://9cpn8tt6.mirror.aliyuncs.com"]
+}
+EOF
 
-<span class="token comment" spellcheck="true">//mvn 真正所在的地方 /usr/share/apache-maven/</span>
-<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l  <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
-    rwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">1</span> root root <span class="token number">5969</span> <span class="token number">10</span>月 <span class="token number">18</span> <span class="token number">2017</span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>apache<span class="token operator">-</span>maven<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
-</code></pre>
-<p>3&gt;插卡 git 路径</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看</span>
-<span class="token punctuation">[</span>root@VM<span class="token number">-0</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span>centos <span class="token operator">~</span><span class="token punctuation">]</span># ls <span class="token operator">-</span>l <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>mvn
- <span class="token operator">-</span>rwxr<span class="token operator">-</span>xr<span class="token operator">-</span>x <span class="token number">113</span> root root <span class="token number">1527752</span> <span class="token number">5</span>月  <span class="token number">29</span> <span class="token number">2020</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>git</code></pre>
-<h3 id="3-gt-全局配置-jdk-，mvn-git，node-也可全部选择自动安装"><a href="#3-gt-全局配置-jdk-，mvn-git，node-也可全部选择自动安装" class="headerlink" title="3&gt;全局配置 jdk ，mvn, git，node(也可全部选择自动安装)"></a>3&gt;全局配置 jdk ，mvn, git，node(也可全部选择自动安装)</h3><p>jenkins 面板–》全局配置工具<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606047882164-c17da9e2-6526-4ce3-9e9a-e38d20640439.png#crop=0&crop=0&crop=1&crop=1&height=354&id=iRVgA&margin=%5Bobject%20Object%5D&name=image.png&originHeight=708&originWidth=1880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=67088&status=done&style=none&title=&width=940" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209685480-06264a43-c0da-4eaf-8c3d-b859d8d4de34.png#clientId=uadb33ceb-25bc-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=361&id=u210324c5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=722&originWidth=2246&originalType=binary&ratio=1&rotation=0&showTitle=false&size=70037&status=done&style=none&taskId=ub282f6a1-3296-4120-bd63-8ce58d9bde7&title=&width=1123" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209753638-d6bdd1d2-d865-482d-9282-d1d0a7acbf7d.png#clientId=uadb33ceb-25bc-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=379&id=ue45b5a8b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=758&originWidth=2176&originalType=binary&ratio=1&rotation=0&showTitle=false&size=65134&status=done&style=none&taskId=u77a606fb-9d0e-44aa-bcb9-4709c977171&title=&width=1088" alt="image.png"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620209201830-a3796ee3-1cca-4afc-baca-5354ec63c19c.png#clientId=uadb33ceb-25bc-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=773&id=Oc9TH&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1546&originWidth=2858&originalType=binary&ratio=1&rotation=0&showTitle=false&size=220266&status=done&style=none&taskId=u0659ca0d-189e-4a16-b436-6ec1ee1dcd5&title=&width=1429" alt="image.png"></p>
-<h2 id="6-nodejs-在-job-中的应用"><a href="#6-nodejs-在-job-中的应用" class="headerlink" title="6.nodejs 在 job 中的应用"></a>6.nodejs 在 job 中的应用</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620210323919-25d3c27f-005a-4e77-8a20-bafbc3c0dc62.png#clientId=u5c8a301e-c27f-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=793&id=ua4c82c56&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1586&originWidth=2880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=272376&status=done&style=none&taskId=u65a1aa55-af72-4af9-aee7-ea064a318fb&title=&width=1440" alt="image.png"></p>
+[root@localhost ~]# systemctl daemon-reload
+[root@localhost ~]# systemctl restart docker</code></pre>
+<h2 id="4-docker-服务启动-重启-关闭命令"><a href="#4-docker-服务启动-重启-关闭命令" class="headerlink" title="4.docker 服务启动,重启,关闭命令"></a>4.docker 服务启动,重启,关闭命令</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token operator">></span>docker官网地址  https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>docker<span class="token punctuation">.</span>com<span class="token operator">/</span>
+
+<span class="token number">2</span><span class="token operator">></span>docker命令
+  启动：systemctl start docker
+    重启：sudo service docker restart
+  守护进程重启 sudo systemctl daemon<span class="token operator">-</span>reload
+  关闭 docker service docker stop
+  关闭 docker systemctl stop docker</code></pre>
+<h2 id="5-Docker-退出容器但不关闭当前容器"><a href="#5-Docker-退出容器但不关闭当前容器" class="headerlink" title="5.Docker 退出容器但不关闭当前容器"></a>5.Docker 退出容器但不关闭当前容器</h2><hr>
+<p>方法一：如果要正常退出不关闭容器，请按 Ctrl+P+Q 进行退出容器</p>
+<hr>
+<p>方法二：如果使用 exit 退出，那么在退出之后会关闭容器，可以使用下面的流程进行恢复</p>
+<ul>
+<li>使用 docker restart 命令重启容器</li>
+<li>使用 docker attach 命令进入容器</li>
+</ul>
+<p>重启 httpd（service httpd restart）和 radosgw(/etc/init.d/ceph-radosgw restart)，并且使用 wget 验证是否将 radosgw 重启成功(wget <a href="http://127.0.0.1/" target="_blank" rel="noopener">http://127.0.0.1</a>)</p>
+<h2 id="6-Docker-删除镜像"><a href="#6-Docker-删除镜像" class="headerlink" title="6.Docker 删除镜像"></a>6.Docker 删除镜像</h2><blockquote>
+<pre><code>Docker：删除images报错（Error response from daemon: conflict: unable to delete 6885a5e3712a (must be forced) - image is being used by stopped container 0cf27d7d29c7）</code></pre></blockquote>
+<pre class=" language-shell"><code class="language-shell">1.进入root权限
+sudo su
+
+2.停止所有的container，这样才能够删除其中的images：
+docker stop $(docker ps -a -q)
+
+如果想要删除所有container的话再加一个指令：
+docker rm $(docker ps -a -q)
+
+3.查看当前有些什么images
+docker images
+
+4.删除images，通过image的id来指定删除谁
+docker rmi
+
+想要删除untagged images，也就是那些id为的image的话可以用
+docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
+
+要删除全部image的话
+docker rmi $(docker images -q)</code></pre>
+<p>1、删除容器实例</p>
+<blockquote>
+<p>docker rm 容器 ID 或容器名</p>
+<ol>
+<li>先 docker ps -a 寻找已经停止运行的实例<br>2.docker rm 59ec 删除实例<br>3.docker ps -a 查看实例已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630199-471ec578-4dbb-4698-9bee-35e1501e9d4f.png#crop=0&crop=0&crop=1&crop=1&height=269&id=jUyrG&originHeight=269&originWidth=1307&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1307" alt=""><br>如果容器实例在运行状态下 是不能通过上面的命令删除的，会提示容器实例正在运行中。需要先停止在删除,不会停止实例的看这里<a href="https://blog.csdn.net/Michel4Liu/article/details/80889977" target="_blank" rel="noopener">https://blog.csdn.net/Michel4Liu/article/details/80889977</a>，也可以通过参数强制删除<br>参数：<br>-f : 通过 SIGKILL 信号强制删除一个运行中的容器,主要删除正在运行的容器实例<br>-l : 移除容器间的网络连接，而非容器本身<br>-v : 删除容器挂载卷</li>
+</ol>
+</blockquote>
+<p>2、删除镜像</p>
+<blockquote>
+<p>docker rmi 容器 ID 或容器名</p>
+<ol>
+<li>首先 docker images 查看所有镜像</li>
+<li>然后 docker rmi fe200 删除镜像 3.再次通过 docker images 查看镜像 发现已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630192-3c1c37e2-3250-4ea1-b537-dd41489dcb10.png#crop=0&crop=0&crop=1&crop=1&height=441&id=INqi8&originHeight=441&originWidth=1014&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1014" alt=""><br>如果删除的镜像已经产生了容器实例(run 过)不容器实例是否启动都会提示无法删除，因为被占用。这时需要先删除容器实例或添加删除参数<br>参数<br>-f :强制删除，一般用于被占用的删除<br>–no-prune :不移除该镜像的过程镜像，默认移除</li>
+</ol>
+</blockquote>
 ]]></content>
       <categories>
-        <category>jenkins</category>
+        <category>docker</category>
       </categories>
       <tags>
-        <tag>jdk</tag>
-        <tag>node</tag>
+        <tag>linux</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
@@ -1706,96 +1796,6 @@ nvm root [path]          ##设置和查看root路径</code></pre>
       <tags>
         <tag>mac</tag>
         <tag>brew</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux安装 docker</title>
-    <url>/leader755/10309.html</url>
-    <content><![CDATA[<h2 id="1、安装前置条件"><a href="#1、安装前置条件" class="headerlink" title="1、安装前置条件"></a>1、安装前置条件</h2><p>docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是 2.x，需要升级 linux 内核</p>
-<h2 id="2、安装步骤"><a href="#2、安装步骤" class="headerlink" title="2、安装步骤"></a>2、安装步骤</h2><h3 id="1）升级本地-yum-包"><a href="#1）升级本地-yum-包" class="headerlink" title="1）升级本地 yum 包"></a>1）升级本地 yum 包</h3><pre class=" language-javascript"><code class="language-javascript">yum update</code></pre>
-<h3 id="2）-安装工具集"><a href="#2）-安装工具集" class="headerlink" title="2） 安装工具集"></a>2） 安装工具集</h3><pre class=" language-javascript"><code class="language-javascript">yum install <span class="token operator">-</span>y yum<span class="token operator">-</span>utils device<span class="token operator">-</span>mapper<span class="token operator">-</span>persistent<span class="token operator">-</span>data lvm2</code></pre>
-<h3 id="3）安装阿里云-docker-源"><a href="#3）安装阿里云-docker-源" class="headerlink" title="3）安装阿里云 docker 源"></a>3）安装阿里云 docker 源</h3><pre class=" language-javascript"><code class="language-javascript">sudo yum<span class="token operator">-</span>config<span class="token operator">-</span>manager <span class="token operator">--</span>add<span class="token operator">-</span>repo https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>aliyun<span class="token punctuation">.</span>com<span class="token operator">/</span>docker<span class="token operator">-</span>ce<span class="token operator">/</span>linux<span class="token operator">/</span>centos<span class="token operator">/</span>docker<span class="token operator">-</span>ce<span class="token punctuation">.</span>repo</code></pre>
-<h3 id="4）更新-yum-缓存"><a href="#4）更新-yum-缓存" class="headerlink" title="4）更新 yum 缓存"></a>4）更新 yum 缓存</h3><pre class=" language-javascript"><code class="language-javascript">yum makecache fast
-yum clean  all</code></pre>
-<h3 id="5）安装-docker"><a href="#5）安装-docker" class="headerlink" title="5）安装 docker"></a>5）安装 docker</h3><pre class=" language-javascript"><code class="language-javascript">yum <span class="token operator">-</span>y install docker<span class="token operator">-</span>ce</code></pre>
-<h3 id="6）启动-docker-服务"><a href="#6）启动-docker-服务" class="headerlink" title="6）启动 docker 服务"></a>6）启动 docker 服务</h3><pre class=" language-javascript"><code class="language-javascript">service docker start</code></pre>
-<h3 id="7）查看-docker-版本"><a href="#7）查看-docker-版本" class="headerlink" title="7）查看 docker 版本"></a>7）查看 docker 版本</h3><pre class=" language-javascript"><code class="language-javascript">docker <span class="token operator">-</span> v<span class="token punctuation">;</span></code></pre>
-<h3 id="8）开机启动-docker-服务"><a href="#8）开机启动-docker-服务" class="headerlink" title="8）开机启动 docker 服务"></a>8）开机启动 docker 服务</h3><pre class=" language-javascript"><code class="language-javascript">systemctl enable docker<span class="token punctuation">.</span>service</code></pre>
-<h2 id="3-docker-设置镜像-未设置镜像"><a href="#3-docker-设置镜像-未设置镜像" class="headerlink" title="3.docker 设置镜像(未设置镜像)"></a>3.docker 设置镜像(未设置镜像)</h2><blockquote>
-<p>docker pull 很慢解决办法，经常拉取镜像的时候很慢或者拉不下来，这里可以使用阿里云镜像加速器，然后试试看有没有效果</p>
-</blockquote>
-<pre class=" language-shell"><code class="language-shell">##使用阿里云镜像加速器
-[root@localhost ~]# mkdir -p /etc/docker
-
-[root@localhost ~]# tee /etc/docker/daemon.json <<-'EOF'
-{
-  "registry-mirrors": ["https://9cpn8tt6.mirror.aliyuncs.com"]
-}
-EOF
-
-[root@localhost ~]# systemctl daemon-reload
-[root@localhost ~]# systemctl restart docker</code></pre>
-<h2 id="4-docker-服务启动-重启-关闭命令"><a href="#4-docker-服务启动-重启-关闭命令" class="headerlink" title="4.docker 服务启动,重启,关闭命令"></a>4.docker 服务启动,重启,关闭命令</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token operator">></span>docker官网地址  https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>docker<span class="token punctuation">.</span>com<span class="token operator">/</span>
-
-<span class="token number">2</span><span class="token operator">></span>docker命令
-  启动：systemctl start docker
-    重启：sudo service docker restart
-  守护进程重启 sudo systemctl daemon<span class="token operator">-</span>reload
-  关闭 docker service docker stop
-  关闭 docker systemctl stop docker</code></pre>
-<h2 id="5-Docker-退出容器但不关闭当前容器"><a href="#5-Docker-退出容器但不关闭当前容器" class="headerlink" title="5.Docker 退出容器但不关闭当前容器"></a>5.Docker 退出容器但不关闭当前容器</h2><hr>
-<p>方法一：如果要正常退出不关闭容器，请按 Ctrl+P+Q 进行退出容器</p>
-<hr>
-<p>方法二：如果使用 exit 退出，那么在退出之后会关闭容器，可以使用下面的流程进行恢复</p>
-<ul>
-<li>使用 docker restart 命令重启容器</li>
-<li>使用 docker attach 命令进入容器</li>
-</ul>
-<p>重启 httpd（service httpd restart）和 radosgw(/etc/init.d/ceph-radosgw restart)，并且使用 wget 验证是否将 radosgw 重启成功(wget <a href="http://127.0.0.1/" target="_blank" rel="noopener">http://127.0.0.1</a>)</p>
-<h2 id="6-Docker-删除镜像"><a href="#6-Docker-删除镜像" class="headerlink" title="6.Docker 删除镜像"></a>6.Docker 删除镜像</h2><blockquote>
-<pre><code>Docker：删除images报错（Error response from daemon: conflict: unable to delete 6885a5e3712a (must be forced) - image is being used by stopped container 0cf27d7d29c7）</code></pre></blockquote>
-<pre class=" language-shell"><code class="language-shell">1.进入root权限
-sudo su
-
-2.停止所有的container，这样才能够删除其中的images：
-docker stop $(docker ps -a -q)
-
-如果想要删除所有container的话再加一个指令：
-docker rm $(docker ps -a -q)
-
-3.查看当前有些什么images
-docker images
-
-4.删除images，通过image的id来指定删除谁
-docker rmi
-
-想要删除untagged images，也就是那些id为的image的话可以用
-docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
-
-要删除全部image的话
-docker rmi $(docker images -q)</code></pre>
-<p>1、删除容器实例</p>
-<blockquote>
-<p>docker rm 容器 ID 或容器名</p>
-<ol>
-<li>先 docker ps -a 寻找已经停止运行的实例<br>2.docker rm 59ec 删除实例<br>3.docker ps -a 查看实例已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630199-471ec578-4dbb-4698-9bee-35e1501e9d4f.png#crop=0&crop=0&crop=1&crop=1&height=269&id=jUyrG&originHeight=269&originWidth=1307&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1307" alt=""><br>如果容器实例在运行状态下 是不能通过上面的命令删除的，会提示容器实例正在运行中。需要先停止在删除,不会停止实例的看这里<a href="https://blog.csdn.net/Michel4Liu/article/details/80889977" target="_blank" rel="noopener">https://blog.csdn.net/Michel4Liu/article/details/80889977</a>，也可以通过参数强制删除<br>参数：<br>-f : 通过 SIGKILL 信号强制删除一个运行中的容器,主要删除正在运行的容器实例<br>-l : 移除容器间的网络连接，而非容器本身<br>-v : 删除容器挂载卷</li>
-</ol>
-</blockquote>
-<p>2、删除镜像</p>
-<blockquote>
-<p>docker rmi 容器 ID 或容器名</p>
-<ol>
-<li>首先 docker images 查看所有镜像</li>
-<li>然后 docker rmi fe200 删除镜像 3.再次通过 docker images 查看镜像 发现已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630192-3c1c37e2-3250-4ea1-b537-dd41489dcb10.png#crop=0&crop=0&crop=1&crop=1&height=441&id=INqi8&originHeight=441&originWidth=1014&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1014" alt=""><br>如果删除的镜像已经产生了容器实例(run 过)不容器实例是否启动都会提示无法删除，因为被占用。这时需要先删除容器实例或添加删除参数<br>参数<br>-f :强制删除，一般用于被占用的删除<br>–no-prune :不移除该镜像的过程镜像，默认移除</li>
-</ol>
-</blockquote>
-]]></content>
-      <categories>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
@@ -2128,6 +2128,134 @@ npm install sortablejs <span class="token operator">--</span>save
       </tags>
   </entry>
   <entry>
+    <title>vuePress</title>
+    <url>/leader755/33285.html</url>
+    <content><![CDATA[<p>VuePress 由两部分组成：第一部分是一个<a href="https://github.com/vuejs/vuepress/tree/master/packages/%40vuepress/core" target="_blank" rel="noopener">极简静态网站生成器(opens new window)</a>，它包含由 Vue 驱动的<a href="https://vuepress.vuejs.org/zh/theme/" target="_blank" rel="noopener">主题系统</a>和<a href="https://vuepress.vuejs.org/zh/plugin/" target="_blank" rel="noopener">插件 API</a>，另一个部分是为书写技术文档而优化的<a href="https://vuepress.vuejs.org/zh/theme/default-theme-config.html" target="_blank" rel="noopener">默认主题</a>，它的诞生初衷是为了支持 Vue 及其子项目的文档需求。</p>
+<h3 id="1-项目初始化"><a href="#1-项目初始化" class="headerlink" title="1.项目初始化"></a>1.项目初始化</h3><pre class=" language-javascript"><code class="language-javascript">yarn init # npm init</code></pre>
+<h3 id="2-安装依赖"><a href="#2-安装依赖" class="headerlink" title="2.安装依赖"></a>2.安装依赖</h3><p>将 VuePress 安装为本地依赖<br>我们已经不再推荐全局安装 VuePress</p>
+<pre class=" language-javascript"><code class="language-javascript">yarn add <span class="token operator">-</span>D vuepress # npm install <span class="token operator">-</span>D vuepress</code></pre>
+<p>###</p>
+<h3 id="3-配置-package-json"><a href="#3-配置-package-json" class="headerlink" title="3.配置 package.json"></a>3.配置 package.json</h3><p>在 package.json 中添加一些 <a href="https://classic.yarnpkg.com/zh-Hans/docs/package-json#toc-scripts" target="_blank" rel="noopener">scripts(opens new window)</a>这一步骤是可选的，但我们推荐你完成它。在下文中，我们会默认这些 scripts 已经被添加。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
+  <span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"docs:dev"</span><span class="token punctuation">:</span> <span class="token string">"vuepress dev docs"</span><span class="token punctuation">,</span>
+    <span class="token string">"docs:build"</span><span class="token punctuation">:</span> <span class="token string">"vuepress build docs"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>4.安装主题 vuepress-theme-reco</p>
+<pre class=" language-javascript"><code class="language-javascript">yarn add vuepress<span class="token operator">-</span>theme<span class="token operator">-</span>reco # npm install vuepress<span class="token operator">-</span>theme<span class="token operator">-</span>reco <span class="token operator">--</span>save<span class="token operator">-</span>dev</code></pre>
+<p>5.创建.vuepress 文件夹并创建 config.js 配置文件</p>
+<pre class=" language-javascript"><code class="language-javascript">mkdir docs<span class="token regex">/.vuepress &amp;&amp; touch docs/</span><span class="token punctuation">.</span>vuepress<span class="token operator">/</span>config<span class="token punctuation">.</span>js</code></pre>
+<ol>
+<li>编辑 config.js 文件</li>
+</ol>
+<pre class=" language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  title<span class="token punctuation">:</span> <span class="token string">"Title"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//首页左上角title</span>
+  theme<span class="token punctuation">:</span> <span class="token string">"reco"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 应用博客主题</span>
+  themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> <span class="token string">"blog"</span><span class="token punctuation">,</span>
+    nav<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token comment" spellcheck="true">// 首页导航栏</span>
+      <span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">"Home"</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span> icon<span class="token punctuation">:</span> <span class="token string">"reco-home"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">"TimeLine"</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">"/timeline/"</span><span class="token punctuation">,</span> icon<span class="token punctuation">:</span> <span class="token string">"reco-date"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    author<span class="token punctuation">:</span> <span class="token string">"xxx"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 首页作者</span>
+    authorAvatar<span class="token punctuation">:</span> <span class="token string">"https://vuepress.vuejs.org/hero.png"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 首页头像</span>
+    subSidebar<span class="token punctuation">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 博客页面的目录</span>
+    <span class="token comment" spellcheck="true">// 博客配置</span>
+    blogConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      category<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        location<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 在导航栏菜单中所占的位置，默认2</span>
+        text<span class="token punctuation">:</span> <span class="token string">"Category"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 默认文案 “分类”</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      tag<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        location<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 在导航栏菜单中所占的位置，默认3</span>
+        text<span class="token punctuation">:</span> <span class="token string">"Tag"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 默认文案 “标签”</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      socialLinks<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token comment" spellcheck="true">// 信息栏展示社交信息</span>
+        <span class="token punctuation">{</span> icon<span class="token punctuation">:</span> <span class="token string">"reco-github"</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">"https://github.com/recoluan"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> icon<span class="token punctuation">:</span> <span class="token string">"reco-npm"</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">"https://www.npmjs.com/~reco_luan"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<h3 id="5-创建主页"><a href="#5-创建主页" class="headerlink" title="5.创建主页"></a>5.创建主页</h3><p>新建 docs 文件夹用来存放博客文件</p>
+<pre class=" language-javascript"><code class="language-javascript">mkdir docs <span class="token operator">&amp;&amp;</span> echo <span class="token string">'# Hello VuePress'</span> <span class="token operator">></span> docs<span class="token operator">/</span>README<span class="token punctuation">.</span>md</code></pre>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/jpeg/241787/1644926361030-95e2561c-a65e-4f2d-8e86-f6de4c2224aa.jpeg#clientId=u2912d710-93b1-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u0f2a10cf&margin=%5Bobject%20Object%5D&originHeight=138&originWidth=812&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u39ff22a1-349b-4dad-b37d-79eeceb3cbd&title=" alt=""> 进入到 docs 里面创建一个<code>README.md</code>文件，这个文件就是我们的首页，我们在里面编辑一些内容</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">--</span><span class="token operator">-</span>
+home<span class="token punctuation">:</span> <span class="token boolean">true</span>
+heroImage<span class="token punctuation">:</span> <span class="token operator">/</span>logo<span class="token punctuation">.</span>jpg
+actionText<span class="token punctuation">:</span> 快速上手 →
+actionLink<span class="token punctuation">:</span> <span class="token operator">/</span>zh<span class="token regex">/guide/</span>
+features<span class="token punctuation">:</span>
+<span class="token operator">-</span> title<span class="token punctuation">:</span> 简洁至上
+  details<span class="token punctuation">:</span> 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+<span class="token operator">-</span> title<span class="token punctuation">:</span> Vue驱动
+  details<span class="token punctuation">:</span> 享受 Vue <span class="token operator">+</span> webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+<span class="token operator">-</span> title<span class="token punctuation">:</span> 高性能
+  details<span class="token punctuation">:</span> VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+footer<span class="token punctuation">:</span> 页尾
+<span class="token operator">--</span><span class="token operator">-</span></code></pre>
+<h3 id="6-在本地启动服务器"><a href="#6-在本地启动服务器" class="headerlink" title="6.在本地启动服务器"></a>6.在本地启动服务器</h3><pre class=" language-javascript"><code class="language-javascript">yarn docs<span class="token punctuation">:</span>dev # npm run docs<span class="token punctuation">:</span>dev</code></pre>
+<p>###</p>
+<h3 id="7、编译"><a href="#7、编译" class="headerlink" title="7、编译"></a>7、编译</h3><p>按 ctrl+C 结束运行，执行以下命令编译</p>
+<pre class=" language-javascript"><code class="language-javascript">npm run build</code></pre>
+<p>编译完成以后在 docs 文件夹下多了一个.vuepress 文件夹<br><img src="https://cdn.nlark.com/yuque/0/2022/jpeg/241787/1644926421476-e49326f4-78a2-4b0d-9c68-a5ff3185c1f7.jpeg#clientId=u2912d710-93b1-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ud0f3ee0f&margin=%5Bobject%20Object%5D&originHeight=215&originWidth=814&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u62e138c9-fe57-4c4b-8352-afeff589239&title=" alt=""></p>
+<p><strong>这个文件是全局重要的配置文件，包括配置网站的标题、描述、主题、导航栏等信息</strong>，内容如下：</p>
+<pre class=" language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  title<span class="token punctuation">:</span> <span class="token string">"XXX的博客"</span><span class="token punctuation">,</span>
+  description<span class="token punctuation">:</span> <span class="token string">"XXX的博客"</span><span class="token punctuation">,</span>
+  dest<span class="token punctuation">:</span> <span class="token string">"./dist"</span><span class="token punctuation">,</span>
+  port<span class="token punctuation">:</span> <span class="token string">"8080"</span><span class="token punctuation">,</span>
+  head<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">"link"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> rel<span class="token punctuation">:</span> <span class="token string">"icon"</span><span class="token punctuation">,</span> href<span class="token punctuation">:</span> <span class="token string">"/logo.jpg"</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  markdown<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    lineNumbers<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    nav<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        text<span class="token punctuation">:</span> <span class="token string">"指南"</span><span class="token punctuation">,</span>
+        link<span class="token punctuation">:</span> <span class="token string">"/guide/"</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    sidebar<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"/guide/"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">"新手指南"</span><span class="token punctuation">,</span>
+          collapsable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"/guide/notes/one"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">"java"</span><span class="token punctuation">,</span>
+          collapsable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"/guide/notes/two"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    sidebarDepth<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    lastUpdated<span class="token punctuation">:</span> <span class="token string">"Last Updated"</span><span class="token punctuation">,</span>
+    searchMaxSuggestoins<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    serviceWorker<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      updatePopup<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        message<span class="token punctuation">:</span> <span class="token string">"有新的内容."</span><span class="token punctuation">,</span>
+        buttonText<span class="token punctuation">:</span> <span class="token string">"更新"</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    editLinks<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    editLinkText<span class="token punctuation">:</span> <span class="token string">"在 GitHub 上编辑此页 ！"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<h3 id="9、写文章"><a href="#9、写文章" class="headerlink" title="9、写文章"></a>9、写文章</h3><p>完成了基础搭建后，按照 config.js 里面配置的目录结构，在 docs 目录下新增相应的.md 文件，一篇文章就是一个.md 文件<br><img src="https://cdn.nlark.com/yuque/0/2022/jpeg/241787/1644926486998-300dab60-819d-4248-94b1-a1ae3f917a94.jpeg#clientId=u2912d710-93b1-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uc6c99fe6&margin=%5Bobject%20Object%5D&originHeight=227&originWidth=859&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ud7d47712-23b5-4f7c-8064-dd44ad4279b&title=" alt=""></p>
+]]></content>
+      <categories>
+        <category>vuePress</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue中px自动转化为rem</title>
     <url>/leader755/54576.html</url>
     <content><![CDATA[<blockquote>
@@ -2283,134 +2411,6 @@ npm install postcss-px<span class="token number">2</span>rem --save-dev</code></
       <tags>
         <tag>rem</tag>
         <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vuePress</title>
-    <url>/leader755/33285.html</url>
-    <content><![CDATA[<p>VuePress 由两部分组成：第一部分是一个<a href="https://github.com/vuejs/vuepress/tree/master/packages/%40vuepress/core" target="_blank" rel="noopener">极简静态网站生成器(opens new window)</a>，它包含由 Vue 驱动的<a href="https://vuepress.vuejs.org/zh/theme/" target="_blank" rel="noopener">主题系统</a>和<a href="https://vuepress.vuejs.org/zh/plugin/" target="_blank" rel="noopener">插件 API</a>，另一个部分是为书写技术文档而优化的<a href="https://vuepress.vuejs.org/zh/theme/default-theme-config.html" target="_blank" rel="noopener">默认主题</a>，它的诞生初衷是为了支持 Vue 及其子项目的文档需求。</p>
-<h3 id="1-项目初始化"><a href="#1-项目初始化" class="headerlink" title="1.项目初始化"></a>1.项目初始化</h3><pre class=" language-javascript"><code class="language-javascript">yarn init # npm init</code></pre>
-<h3 id="2-安装依赖"><a href="#2-安装依赖" class="headerlink" title="2.安装依赖"></a>2.安装依赖</h3><p>将 VuePress 安装为本地依赖<br>我们已经不再推荐全局安装 VuePress</p>
-<pre class=" language-javascript"><code class="language-javascript">yarn add <span class="token operator">-</span>D vuepress # npm install <span class="token operator">-</span>D vuepress</code></pre>
-<p>###</p>
-<h3 id="3-配置-package-json"><a href="#3-配置-package-json" class="headerlink" title="3.配置 package.json"></a>3.配置 package.json</h3><p>在 package.json 中添加一些 <a href="https://classic.yarnpkg.com/zh-Hans/docs/package-json#toc-scripts" target="_blank" rel="noopener">scripts(opens new window)</a>这一步骤是可选的，但我们推荐你完成它。在下文中，我们会默认这些 scripts 已经被添加。</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
-  <span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"docs:dev"</span><span class="token punctuation">:</span> <span class="token string">"vuepress dev docs"</span><span class="token punctuation">,</span>
-    <span class="token string">"docs:build"</span><span class="token punctuation">:</span> <span class="token string">"vuepress build docs"</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<p>4.安装主题 vuepress-theme-reco</p>
-<pre class=" language-javascript"><code class="language-javascript">yarn add vuepress<span class="token operator">-</span>theme<span class="token operator">-</span>reco # npm install vuepress<span class="token operator">-</span>theme<span class="token operator">-</span>reco <span class="token operator">--</span>save<span class="token operator">-</span>dev</code></pre>
-<p>5.创建.vuepress 文件夹并创建 config.js 配置文件</p>
-<pre class=" language-javascript"><code class="language-javascript">mkdir docs<span class="token regex">/.vuepress &amp;&amp; touch docs/</span><span class="token punctuation">.</span>vuepress<span class="token operator">/</span>config<span class="token punctuation">.</span>js</code></pre>
-<ol>
-<li>编辑 config.js 文件</li>
-</ol>
-<pre class=" language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
-  title<span class="token punctuation">:</span> <span class="token string">"Title"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//首页左上角title</span>
-  theme<span class="token punctuation">:</span> <span class="token string">"reco"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 应用博客主题</span>
-  themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    type<span class="token punctuation">:</span> <span class="token string">"blog"</span><span class="token punctuation">,</span>
-    nav<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token comment" spellcheck="true">// 首页导航栏</span>
-      <span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">"Home"</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span> icon<span class="token punctuation">:</span> <span class="token string">"reco-home"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">"TimeLine"</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">"/timeline/"</span><span class="token punctuation">,</span> icon<span class="token punctuation">:</span> <span class="token string">"reco-date"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    author<span class="token punctuation">:</span> <span class="token string">"xxx"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 首页作者</span>
-    authorAvatar<span class="token punctuation">:</span> <span class="token string">"https://vuepress.vuejs.org/hero.png"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 首页头像</span>
-    subSidebar<span class="token punctuation">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 博客页面的目录</span>
-    <span class="token comment" spellcheck="true">// 博客配置</span>
-    blogConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      category<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        location<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 在导航栏菜单中所占的位置，默认2</span>
-        text<span class="token punctuation">:</span> <span class="token string">"Category"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 默认文案 “分类”</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      tag<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        location<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 在导航栏菜单中所占的位置，默认3</span>
-        text<span class="token punctuation">:</span> <span class="token string">"Tag"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 默认文案 “标签”</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      socialLinks<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-        <span class="token comment" spellcheck="true">// 信息栏展示社交信息</span>
-        <span class="token punctuation">{</span> icon<span class="token punctuation">:</span> <span class="token string">"reco-github"</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">"https://github.com/recoluan"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span> icon<span class="token punctuation">:</span> <span class="token string">"reco-npm"</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">"https://www.npmjs.com/~reco_luan"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<h3 id="5-创建主页"><a href="#5-创建主页" class="headerlink" title="5.创建主页"></a>5.创建主页</h3><p>新建 docs 文件夹用来存放博客文件</p>
-<pre class=" language-javascript"><code class="language-javascript">mkdir docs <span class="token operator">&amp;&amp;</span> echo <span class="token string">'# Hello VuePress'</span> <span class="token operator">></span> docs<span class="token operator">/</span>README<span class="token punctuation">.</span>md</code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/jpeg/241787/1644926361030-95e2561c-a65e-4f2d-8e86-f6de4c2224aa.jpeg#clientId=u2912d710-93b1-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u0f2a10cf&margin=%5Bobject%20Object%5D&originHeight=138&originWidth=812&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u39ff22a1-349b-4dad-b37d-79eeceb3cbd&title=" alt=""> 进入到 docs 里面创建一个<code>README.md</code>文件，这个文件就是我们的首页，我们在里面编辑一些内容</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">--</span><span class="token operator">-</span>
-home<span class="token punctuation">:</span> <span class="token boolean">true</span>
-heroImage<span class="token punctuation">:</span> <span class="token operator">/</span>logo<span class="token punctuation">.</span>jpg
-actionText<span class="token punctuation">:</span> 快速上手 →
-actionLink<span class="token punctuation">:</span> <span class="token operator">/</span>zh<span class="token regex">/guide/</span>
-features<span class="token punctuation">:</span>
-<span class="token operator">-</span> title<span class="token punctuation">:</span> 简洁至上
-  details<span class="token punctuation">:</span> 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-<span class="token operator">-</span> title<span class="token punctuation">:</span> Vue驱动
-  details<span class="token punctuation">:</span> 享受 Vue <span class="token operator">+</span> webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-<span class="token operator">-</span> title<span class="token punctuation">:</span> 高性能
-  details<span class="token punctuation">:</span> VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer<span class="token punctuation">:</span> 页尾
-<span class="token operator">--</span><span class="token operator">-</span></code></pre>
-<h3 id="6-在本地启动服务器"><a href="#6-在本地启动服务器" class="headerlink" title="6.在本地启动服务器"></a>6.在本地启动服务器</h3><pre class=" language-javascript"><code class="language-javascript">yarn docs<span class="token punctuation">:</span>dev # npm run docs<span class="token punctuation">:</span>dev</code></pre>
-<p>###</p>
-<h3 id="7、编译"><a href="#7、编译" class="headerlink" title="7、编译"></a>7、编译</h3><p>按 ctrl+C 结束运行，执行以下命令编译</p>
-<pre class=" language-javascript"><code class="language-javascript">npm run build</code></pre>
-<p>编译完成以后在 docs 文件夹下多了一个.vuepress 文件夹<br><img src="https://cdn.nlark.com/yuque/0/2022/jpeg/241787/1644926421476-e49326f4-78a2-4b0d-9c68-a5ff3185c1f7.jpeg#clientId=u2912d710-93b1-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ud0f3ee0f&margin=%5Bobject%20Object%5D&originHeight=215&originWidth=814&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u62e138c9-fe57-4c4b-8352-afeff589239&title=" alt=""></p>
-<p><strong>这个文件是全局重要的配置文件，包括配置网站的标题、描述、主题、导航栏等信息</strong>，内容如下：</p>
-<pre class=" language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
-  title<span class="token punctuation">:</span> <span class="token string">"XXX的博客"</span><span class="token punctuation">,</span>
-  description<span class="token punctuation">:</span> <span class="token string">"XXX的博客"</span><span class="token punctuation">,</span>
-  dest<span class="token punctuation">:</span> <span class="token string">"./dist"</span><span class="token punctuation">,</span>
-  port<span class="token punctuation">:</span> <span class="token string">"8080"</span><span class="token punctuation">,</span>
-  head<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">"link"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> rel<span class="token punctuation">:</span> <span class="token string">"icon"</span><span class="token punctuation">,</span> href<span class="token punctuation">:</span> <span class="token string">"/logo.jpg"</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  markdown<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    lineNumbers<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    nav<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        text<span class="token punctuation">:</span> <span class="token string">"指南"</span><span class="token punctuation">,</span>
-        link<span class="token punctuation">:</span> <span class="token string">"/guide/"</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    sidebar<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token string">"/guide/"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-        <span class="token punctuation">{</span>
-          title<span class="token punctuation">:</span> <span class="token string">"新手指南"</span><span class="token punctuation">,</span>
-          collapsable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-          children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"/guide/notes/one"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span>
-          title<span class="token punctuation">:</span> <span class="token string">"java"</span><span class="token punctuation">,</span>
-          collapsable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-          children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"/guide/notes/two"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    sidebarDepth<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    lastUpdated<span class="token punctuation">:</span> <span class="token string">"Last Updated"</span><span class="token punctuation">,</span>
-    searchMaxSuggestoins<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
-    serviceWorker<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      updatePopup<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        message<span class="token punctuation">:</span> <span class="token string">"有新的内容."</span><span class="token punctuation">,</span>
-        buttonText<span class="token punctuation">:</span> <span class="token string">"更新"</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    editLinks<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    editLinkText<span class="token punctuation">:</span> <span class="token string">"在 GitHub 上编辑此页 ！"</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<h3 id="9、写文章"><a href="#9、写文章" class="headerlink" title="9、写文章"></a>9、写文章</h3><p>完成了基础搭建后，按照 config.js 里面配置的目录结构，在 docs 目录下新增相应的.md 文件，一篇文章就是一个.md 文件<br><img src="https://cdn.nlark.com/yuque/0/2022/jpeg/241787/1644926486998-300dab60-819d-4248-94b1-a1ae3f917a94.jpeg#clientId=u2912d710-93b1-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uc6c99fe6&margin=%5Bobject%20Object%5D&originHeight=227&originWidth=859&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ud7d47712-23b5-4f7c-8064-dd44ad4279b&title=" alt=""></p>
-]]></content>
-      <categories>
-        <category>vuePress</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -4939,27 +4939,25 @@ systemctl start tomcat
 systemctl stop tomcat
 
 <span class="token operator">/</span><span class="token operator">/</span>重启tomcat
-systemctl restart tomcat</code></pre>
+systemctl restart tomcat
+
+<span class="token operator">/</span><span class="token operator">/</span>查看<span class="token constant">Tomcat</span>是否启动成功执行
+ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep tomcat</code></pre>
 <h4 id="4-gt-卸载-tomcat"><a href="#4-gt-卸载-tomcat" class="headerlink" title="4&gt;卸载 tomcat"></a>4&gt;卸载 tomcat</h4><pre class=" language-ruby"><code class="language-ruby">yum remove tomcat</code></pre>
-<h4 id="5-gt-防火墙开启关闭"><a href="#5-gt-防火墙开启关闭" class="headerlink" title="5&gt;防火墙开启关闭"></a>5&gt;防火墙开启关闭</h4><p>Tomcat 正常启动，但是网页无法访问，而且不报 404 等任何异常</p>
+<h4 id="5-gt-浏览器访问-Tomcat"><a href="#5-gt-浏览器访问-Tomcat" class="headerlink" title="5&gt;浏览器访问 Tomcat"></a>5&gt;浏览器访问 Tomcat</h4><p>使用浏览器访问 Tomcat，地址 Linux 的： ip+8080(默认端口)。</p>
+<h4 id="6-gt-防火墙开启关闭"><a href="#6-gt-防火墙开启关闭" class="headerlink" title="6&gt;防火墙开启关闭"></a>6&gt;防火墙开启关闭</h4><p>Tomcat 正常启动，但是网页无法访问，而且不报 404 等任何异常。开放 8080 端口或者关闭防火墙，然后重启，重新访问 ： ip+8080。</p>
 <blockquote>
-<p>Windows：控制面板—所有控制面板项-—Windows 防火墙—自定义设置<br>     Ubuntu：查看 ufw status（active 激活、inactive 关闭）<br>                      开启关闭 ufw enable|disable<br>                      开启某个端口 ufw allow [端口号]<br>      ＜ CentOs7：防火墙机制 iptables（被淘汰的内容，请自行百度）<br>      ＞＝ CentOs7：1.CentOS7 使用 firewalld 打开关闭防火墙与端口。<br>                         2.systemctl 是 CentOS7 的服务管理工具中主要的工具，它融合之前 service 和 chkconfig 的功能于一体。<br>                        启动： systemctl start firewalld<br>                        查看状态： systemctl status firewalld ( 或者 firewall -cmd state)<br>                        停止： systemctl disable firewalld<br>                        禁用： systemctl stop firewalld<br>                        添加： firewall-cmd –zone=public –add-port=80/tcp –permanent   （–permanent 永久生效，没有此参数重启后失效）<br>                        重新载入：firewall-cmd –reload</p>
+<p>Windows：控制面板—所有控制面板项-—Windows 防火墙—自定义设置<br>     Ubuntu：查看 ufw status（active 激活、inactive 关闭）<br>                      开启关闭 ufw enable|disable<br>                      开启某个端口 ufw allow [端口号]<br>      ＜ CentOs7：防火墙机制 iptables（被淘汰的内容，请自行百度）<br>      ＞＝ CentOs7：1.CentOS7 使用 firewalld 打开关闭防火墙与端口。<br>                         2.systemctl 是 CentOS7 的服务管理工具中主要的工具，它融合之前 service 和 chkconfig 的功能于一体。<br>                        启动： systemctl start firewalld<br>                        查看状态： systemctl status firewalld ( 或者 firewall -cmd state)<br>                        停止： systemctl disable firewalld<br>                        禁用： systemctl stop firewalld<br>                        添加： firewall-cmd –zone=public –add-port=8080/tcp –permanent   （–permanent 永久生效，没有此参数重启后失效）<br>                        重新载入：firewall-cmd –reload</p>
 </blockquote>
 <p>防火墙的操作：</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>查看状态：
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>查看<span class="token constant">Tomcat</span>是否启动成功执行
 systemctl status firewalld <span class="token operator">|</span> firewall <span class="token operator">-</span>cmd state
 
-<span class="token operator">/</span><span class="token operator">/</span>启动：
-systemctl start firewalld
-
-<span class="token operator">/</span><span class="token operator">/</span>停止：
-systemctl disable firewalld
-
-<span class="token operator">/</span><span class="token operator">/</span>禁用：
-systemctl stop firewalld
+<span class="token operator">/</span><span class="token operator">/</span>启动<span class="token operator">/</span>停止<span class="token operator">/</span>禁用
+systemctl start<span class="token operator">/</span>stop<span class="token operator">/</span>disable firewalld
 
 <span class="token operator">/</span><span class="token operator">/</span>添加： （<span class="token operator">--</span>permanent永久生效，没有此参数重启后失效）
-firewall<span class="token operator">-</span>cmd  <span class="token operator">--</span>zone<span class="token operator">=</span>public <span class="token operator">--</span>add<span class="token operator">-</span>port<span class="token operator">=</span><span class="token number">80</span><span class="token operator">/</span>tcp <span class="token operator">--</span>permanent
+firewall<span class="token operator">-</span>cmd  <span class="token operator">--</span>zone<span class="token operator">=</span>public <span class="token operator">--</span>add<span class="token operator">-</span>port<span class="token operator">=</span><span class="token number">8080</span><span class="token operator">/</span>tcp <span class="token operator">--</span>permanent
 
 <span class="token operator">/</span><span class="token operator">/</span>重新载入：
 firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>reload</code></pre>
