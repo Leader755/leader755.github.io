@@ -308,6 +308,68 @@ yuque<span class="token operator">-</span>hexo clean</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>CentOS7 系统清空删除系统日志的方法</title>
+    <url>/leader755/58434.html</url>
+    <content><![CDATA[<h2 id="1-手动清除日志"><a href="#1-手动清除日志" class="headerlink" title="1.手动清除日志"></a>1.手动清除日志</h2><pre class=" language-ruby"><code class="language-ruby">cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>boot<span class="token punctuation">.</span>log
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>btmp
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>cron
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>dmesg
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>firewalld
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>grubby
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>lastlog
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>mail<span class="token punctuation">.</span>info
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>maillog
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>messages
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>secure
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>spooler
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>syslog
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>tallylog
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>wpa_supplicant<span class="token punctuation">.</span>log
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>wtmp
+cat <span class="token operator">/</span>dev<span class="token operator">/</span>null <span class="token operator">></span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>yum<span class="token punctuation">.</span>log</code></pre>
+<h2 id="2-利用-crontab-定时清理日志文件"><a href="#2-利用-crontab-定时清理日志文件" class="headerlink" title="2.利用 crontab 定时清理日志文件"></a>2.利用 crontab 定时清理日志文件</h2><h3 id="1-创建脚本文件"><a href="#1-创建脚本文件" class="headerlink" title="1.创建脚本文件"></a>1.创建脚本文件</h3><pre class=" language-ruby"><code class="language-ruby">vim cleanLog<span class="token punctuation">.</span>sh</code></pre>
+<h3 id="2-编辑内容"><a href="#2-编辑内容" class="headerlink" title="2.编辑内容"></a>2.编辑内容</h3><blockquote>
+<p>按需添加或修改如下内容：<br>注解：sed 命令，清除前 50 行内容<br>echo 命令清空日志内容<br>rm 命令删除后缀以日期命名的日志文件<br>注意：以上日志清理并没有导致系统或者其他服务出错</p>
+</blockquote>
+<pre class=" language-shell"><code class="language-shell">#!/bin/bash
+echo "开始清除日志文件"
+sed -i '1,50d' /var/log/cron #清除定时任务记录
+sed -i '1,50d' /var/log/xferlog #清除ftp记录
+sed -i '1,50' /var/log/mariadb/mariadb.log #清除数据库日志
+sed -i '1,50d' /var/log/secure #清除sshd信息
+sed -i '1,50d' /var/log/firewalld
+sed -i '1,50d' /var/log/httpd/access_log
+sed -i '1,50d' /var/log/httpd/ssl_access_log
+sed -i '1,50d' /var/log/httpd/ssl_error_log
+sed -i '1,50d' /var/log/httpd/ssl_request_log
+sed -i '1,50d' /var/log/messages #清除系统开机发生的错误
+sed -i '1,50d' /var/log/tuned/tuned.log
+sed -i '1,50d' /var/log/hawkey.log
+sed -i '1,50d' /var/log/yum.log
+sed -i '1,50d' /var/log/dnf.log
+sed -i '1,50d' /var/log/dnf.rpm.log
+sed -i '1,50d' /var/log/ntp.log
+sed -i '1,50d' /var/log/audit/audit.log
+history -c #清除历史执行命令
+echo > /var/log/wtmp  #清除系统登录成功的记录
+echo > /var/log/btmp #清除系统登录失败的记录
+echo > /var/log/lastlog
+rm -fr /var/log/boot.log-* /var/log/btmp-* /var/log/cron-* /var/log/maillog-* /var/log/messages-* /var/log/secure-* /var/log/spooler-* /var/log/xferlog-* /var/log/messages-* /var/log/multi-nic-util/*
+rm -fr /var/log/httpd/access_log-* /var/log/httpd/error_log-* /var/log/httpd/ssl_access_log-* /var/log/httpd/ssl_error_log-* /var/log/httpd/ssl_request_log-*</code></pre>
+<h3 id="3-设置定时任务"><a href="#3-设置定时任务" class="headerlink" title="3.设置定时任务"></a>3.设置定时任务</h3><pre class=" language-shell"><code class="language-shell">crontab -e</code></pre>
+<p>设置每 30 天清理一次（日志清理太频繁不方便以后按日志排错）</p>
+<pre class=" language-shell"><code class="language-shell">0 0 */30 * * ./cleanLog.sh</code></pre>
+<p>原文链接：<a href="https://www.yuque.com/leader755/blog/gq06mg" target="_blank" rel="noopener">https://www.yuque.com/leader755/blog/gq06mg</a></p>
+]]></content>
+      <categories>
+        <category>centos7</category>
+      </categories>
+      <tags>
+        <tag>crontab</tag>
+        <tag>清理日志</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github Actions自动化部署 hexo博客</title>
     <url>/leader755/60370.html</url>
     <content><![CDATA[<h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h2><p>利用 GitHub Actions 实现博客自动发布，将静态博客页面部署到多个服务器上，比如 GitHub Pages、Gitee pages 、云服务器上。本文介绍使用 GitHub Actions 实现将 Hexo 博客自动编译并发布到 GitHub Pages 上。</p>
