@@ -2928,78 +2928,6 @@ data<span class="token punctuation">:</span> <span class="token punctuation">{</
       </tags>
   </entry>
   <entry>
-    <title>vue的动态组件 !is的使用</title>
-    <url>/leader755/6934.html</url>
-    <content><![CDATA[<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>template<span class="token operator">></span>
-<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"app-container"</span> v<span class="token operator">-</span>loading<span class="token operator">=</span><span class="token string">"loading"</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"baseSet"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu <span class="token symbol">:default</span><span class="token operator">-</span>active<span class="token operator">=</span><span class="token string">"currentView"</span>  mode<span class="token operator">=</span><span class="token string">"horizontal"</span> <span class="token variable">@select</span><span class="token operator">=</span><span class="token string">"handleSelect"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(  Item,Index) in tabList"</span> <span class="token symbol">:key</span><span class="token operator">=</span><span class="token string">"Index"</span> <span class="token symbol">:index</span><span class="token operator">=</span><span class="token string">"Item.label"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token constant">Item</span><span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>div<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>动态地绑定到它的 is 特性，我们让多个组件可以使用同一个挂载点，并动态切换。<span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>div <span class="token symbol">:is</span><span class="token operator">=</span><span class="token string">"currentView"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span></code></pre>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>script<span class="token operator">></span>
-  <span class="token operator">/</span><span class="token operator">/</span> 导入子组件
-  import basecardSet from <span class="token string">'./cardBaseSet'</span>
-  import basememberSet from <span class="token string">'./memberInfoSet'</span>
-  import basestoreSet from <span class="token string">'./storeCashierSet'</span>
-  export default <span class="token punctuation">{</span>
-    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      basecardSet<span class="token punctuation">,</span>
-      basememberSet<span class="token punctuation">,</span>
-      basestoreSet
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token operator">/</span><span class="token operator">/</span> <span class="token function">currentView</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token operator">/</span><span class="token operator">/</span>   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
-      <span class="token operator">/</span><span class="token operator">/</span> <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token punctuation">{</span>
-        tabList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
-          name<span class="token punctuation">:</span> <span class="token string">'基础设置'</span><span class="token punctuation">,</span>
-          label<span class="token punctuation">:</span> <span class="token string">'basecardSet'</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-          name<span class="token punctuation">:</span> <span class="token string">'门店收银'</span><span class="token punctuation">,</span>
-          label<span class="token punctuation">:</span> <span class="token string">'basestoreSet'</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-          name<span class="token punctuation">:</span> <span class="token string">'会员资料'</span><span class="token punctuation">,</span>
-          label<span class="token punctuation">:</span> <span class="token string">'basememberSet'</span>
-        <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-        currentView<span class="token punctuation">:</span> <span class="token string">'basecardSet'</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      this<span class="token punctuation">.</span>currentView <span class="token operator">=</span> this<span class="token punctuation">.</span><span class="token variable">$route</span><span class="token punctuation">.</span>query<span class="token punctuation">.</span>type <span class="token operator">||</span> <span class="token string">'basecardSet'</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token function">handleSelect</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> keyPath<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        this<span class="token punctuation">.</span>currentView <span class="token operator">=</span> key
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-
-<span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"scss"</span> scoped<span class="token operator">></span>
-
-<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span></code></pre>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>动态组件</tag>
-        <tag>:is 动态组件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vue的混入mixins</title>
     <url>/leader755/63393.html</url>
     <content><![CDATA[<h2 id="1-gt-使用"><a href="#1-gt-使用" class="headerlink" title="1&gt;使用"></a>1&gt;使用</h2><p>1、在您的 Vue 应用程序内部，我们将创建一个名为 mixins 的文件夹，并且新建文件命名为 nomeMixins.js</p>
@@ -4389,6 +4317,78 @@ bin<span class="token regex">/gen/</span></code></pre>
       </tags>
   </entry>
   <entry>
+    <title>vue的动态组件 !is的使用</title>
+    <url>/leader755/6934.html</url>
+    <content><![CDATA[<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"app-container"</span> v<span class="token operator">-</span>loading<span class="token operator">=</span><span class="token string">"loading"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"baseSet"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu <span class="token symbol">:default</span><span class="token operator">-</span>active<span class="token operator">=</span><span class="token string">"currentView"</span>  mode<span class="token operator">=</span><span class="token string">"horizontal"</span> <span class="token variable">@select</span><span class="token operator">=</span><span class="token string">"handleSelect"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(  Item,Index) in tabList"</span> <span class="token symbol">:key</span><span class="token operator">=</span><span class="token string">"Index"</span> <span class="token symbol">:index</span><span class="token operator">=</span><span class="token string">"Item.label"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token constant">Item</span><span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>动态地绑定到它的 is 特性，我们让多个组件可以使用同一个挂载点，并动态切换。<span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>div <span class="token symbol">:is</span><span class="token operator">=</span><span class="token string">"currentView"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span></code></pre>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+  <span class="token operator">/</span><span class="token operator">/</span> 导入子组件
+  import basecardSet from <span class="token string">'./cardBaseSet'</span>
+  import basememberSet from <span class="token string">'./memberInfoSet'</span>
+  import basestoreSet from <span class="token string">'./storeCashierSet'</span>
+  export default <span class="token punctuation">{</span>
+    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      basecardSet<span class="token punctuation">,</span>
+      basememberSet<span class="token punctuation">,</span>
+      basestoreSet
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token operator">/</span><span class="token operator">/</span> <span class="token function">currentView</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token operator">/</span><span class="token operator">/</span>   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+      <span class="token operator">/</span><span class="token operator">/</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        tabList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'基础设置'</span><span class="token punctuation">,</span>
+          label<span class="token punctuation">:</span> <span class="token string">'basecardSet'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'门店收银'</span><span class="token punctuation">,</span>
+          label<span class="token punctuation">:</span> <span class="token string">'basestoreSet'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          name<span class="token punctuation">:</span> <span class="token string">'会员资料'</span><span class="token punctuation">,</span>
+          label<span class="token punctuation">:</span> <span class="token string">'basememberSet'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        currentView<span class="token punctuation">:</span> <span class="token string">'basecardSet'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      this<span class="token punctuation">.</span>currentView <span class="token operator">=</span> this<span class="token punctuation">.</span><span class="token variable">$route</span><span class="token punctuation">.</span>query<span class="token punctuation">.</span>type <span class="token operator">||</span> <span class="token string">'basecardSet'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token function">handleSelect</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> keyPath<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        this<span class="token punctuation">.</span>currentView <span class="token operator">=</span> key
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"scss"</span> scoped<span class="token operator">></span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span></code></pre>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>动态组件</tag>
+        <tag>:is 动态组件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Element表单验证</title>
     <url>/leader755/35753.html</url>
     <content><![CDATA[<h2 id="1-gt-常规验证和自定义验证"><a href="#1-gt-常规验证和自定义验证" class="headerlink" title="1&gt;常规验证和自定义验证"></a>1&gt;常规验证和自定义验证</h2><h3 id="1-element-ui-中的表单校验"><a href="#1-element-ui-中的表单校验" class="headerlink" title="1.element-ui 中的表单校验"></a>1.element-ui 中的表单校验</h3><p>要加验证之前一定要确保已经写了 prop 属性，该属性是跟 rule 绑定在一起的，也可以在行内单独制定 rules。</p>
@@ -4904,6 +4904,299 @@ var fs   <span class="token operator">=</span> <span class="token keyword">requi
       </tags>
   </entry>
   <entry>
+    <title>travis-ci + github + hexo 持续集成</title>
+    <url>/leader755/34284.html</url>
+    <content><![CDATA[<h2 id="Hexo-博客源代码-GitHub-托管"><a href="#Hexo-博客源代码-GitHub-托管" class="headerlink" title="Hexo 博客源代码 GitHub 托管"></a>Hexo 博客源代码 GitHub 托管</h2><h2 id="1-注册-travis-ci"><a href="#1-注册-travis-ci" class="headerlink" title="1.注册 travis-ci"></a>1.注册 travis-ci</h2><p>Travis CI 的网站有两个，<br><code>travis-ci.org</code>  专门针对开源项目，GitHub 上所有的公开仓库都能够免费使用；<br><code>travis-ci.com</code>  针对私有及商业项目，新用户前 100 次构建是免费的，后面就要收费了。</p>
+<h2 id="2-登录-Travis-CI-网站"><a href="#2-登录-Travis-CI-网站" class="headerlink" title="2.登录 Travis CI 网站"></a>2.登录 Travis CI 网站</h2><ol>
+<li>前往 <a href="https://travis-ci.com/" target="_blank" rel="noopener">Travis-ci.com</a> and Sign up with GitHub.</li>
+<li>接受授权</li>
+<li>选择你想要使用 Travis CI 的仓库 或者 你也可以在 Github-settings-Applications-TravisCI-Configure 中去更新配置；</li>
+<li>在你仓库怎增加 <code>.travis.yml</code> 文件，这个文件定义了构建的步骤，例如<a href="https://docs.travis-ci.com/user/job-lifecycle/#customizing-the-installation-phase" target="_blank" rel="noopener">安装依赖</a>等等。</li>
+<li>将 <code>.travis.yml</code> 文件推送到你的远端仓库，然后就会触发 Travis CI 构建；</li>
+<li>登录 <a href="https://travis-ci.com/" target="_blank" rel="noopener">Travis CI</a>然后选择你的仓库查看构建任务的执行详情；</li>
+</ol>
+<h2 id="3-配置-Travis-CI"><a href="#3-配置-Travis-CI" class="headerlink" title="3.配置 Travis CI"></a>3.配置 Travis CI</h2><h4 id="1-gt-网页端配置"><a href="#1-gt-网页端配置" class="headerlink" title="1&gt;网页端配置"></a>1&gt;网页端配置</h4><p>首先进入 <a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI 官网</a>，这里我们使用的是免费版的，因为考虑到一般放在 GitHub 上的博客都是公开的，所以不需要付费版本。如果有私有仓库要使用这种方式，可以使用 <a href="https://travis-ci.com/" target="_blank" rel="noopener">付费版的 Travis CI</a>。然后直接通过 GitHub 账户登陆即可，登陆后可以看到我们的共有仓库，找到博客的仓库，我这里是选择 blog-master 源码仓库（博客仓库：leader755.github.io），把旁边的勾勾上，然后点击旁边的 <code>Settings</code> 进入设置页面。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595728277292-624821ea-7b95-4db8-89fe-22ece79e75db.png#height=457&id=ElrGC&margin=%5Bobject%20Object%5D&name=image.png&originHeight=914&originWidth=1686&originalType=binary&size=85154&status=done&style=none&width=843" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595728301454-068409c1-f596-4e35-aa3a-d9d2d3c5b39c.png#height=527&id=fSY46&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1054&originWidth=1752&originalType=binary&size=108378&status=done&style=none&width=876" alt="image.png"></p>
+<p>在设置页面中，General 中只勾选 <code>Build pushed branches</code>，表示当有新的代码 push 到 GitHub 仓库时，自动执行构建任务。其他设置保持默认即可。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595728534111-16bc9014-0036-44ef-8036-8117eb15dffd.png#height=532&id=bLKBm&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1064&originWidth=1910&originalType=binary&size=135305&status=done&style=none&width=955" alt="image.png"></p>
+<p>接下来为 Travis 添加对 GitHub 仓库的读写权限。进入 <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">Personal access tokens</a> 页面，点击 <code>Generate new token</code>，选择 token 权限(这里直选 repo 即可)，设置别名并生成。然后将生成的 token 值复制。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595728617792-342093c6-0176-4ece-90e0-f1395c93d7cf.png#height=645&id=PoYaj&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1290&originWidth=2304&originalType=binary&size=230289&status=done&style=none&width=1152" alt="image.png"><br>接着在原来 Travis 的设置界面添加 token。如图所示：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595728826735-1b3d72da-2248-4837-9c46-4b6ce410bfdf.png#height=324&id=OEGtc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=648&originWidth=2006&originalType=binary&size=113373&status=done&style=none&width=1003" alt="image.png"><br>在 Name 中填入 token 的别名，Value 中填入刚刚得到的 token，然后点击 Add 进行添加即可。注意 token 一旦生成，只能在生成时得到其值，后面无法查看。所以如果还有需要，可以记下来或者重新生成新的 token。</p>
+<h4 id="2-gt-Travis-配置文件"><a href="#2-gt-Travis-配置文件" class="headerlink" title="2&gt;Travis 配置文件"></a>2&gt;Travis 配置文件</h4><p>接下来还需要编写 Travis 的配置文件，用于指定构建时使用哪些命令。配置文件名为 <code>.travis.yml</code>，是自动化构建的配置文件。文件内容示例如下：</p>
+<pre class=" language-javascript"><code class="language-javascript"># 指定构建环境是Node<span class="token punctuation">.</span>js，当前版本是稳定版 <span class="token punctuation">(</span>stable<span class="token punctuation">)</span><span class="token punctuation">,</span>版本这里我们选择最新的长期支持版本（ LTS） 应该就够用了
+anguage<span class="token punctuation">:</span> node_js
+node_js<span class="token punctuation">:</span>
+  <span class="token operator">-</span> lts<span class="token operator">/</span><span class="token operator">*</span>  # 稳定版 <span class="token punctuation">(</span>stable<span class="token punctuation">)</span> <span class="token punctuation">,</span>最新长期支持版（ <span class="token operator">-</span> lts<span class="token operator">/</span><span class="token operator">*</span> ）
+
+# 指定缓存模块，可加快编译速度
+cache<span class="token punctuation">:</span>
+  directories<span class="token punctuation">:</span>
+    <span class="token operator">-</span> node_modules
+
+# 在构建之前
+before_install<span class="token punctuation">:</span>
+  <span class="token operator">-</span> <span class="token keyword">export</span> TZ<span class="token operator">=</span><span class="token string">'Asia/Shanghai'</span> # 更改时区
+  <span class="token operator">-</span> npm install <span class="token operator">-</span>g hexo<span class="token operator">-</span>cli # 安装hexo环境
+
+#<span class="token function">部署环境的安装</span><span class="token punctuation">(</span>安装一个部署插件<span class="token punctuation">)</span>
+install<span class="token punctuation">:</span>
+  <span class="token operator">-</span> npm install
+  <span class="token operator">-</span> npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save
+
+before_script<span class="token punctuation">:</span>
+ #
+
+# 执行清缓存，生成网页操作
+script<span class="token punctuation">:</span>
+  <span class="token operator">-</span> hexo clean <span class="token operator">&amp;&amp;</span> hexo g
+
+after_script<span class="token punctuation">:</span>  # 未能成功
+  <span class="token operator">-</span> git config user<span class="token punctuation">.</span>name <span class="token string">"Leader755"</span>
+  <span class="token operator">-</span> git config user<span class="token punctuation">.</span>email <span class="token string">"1181012791@qq.com"</span>
+   # 替换同目录下的_config<span class="token punctuation">.</span>yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
+  <span class="token operator">-</span> sed <span class="token operator">-</span>i <span class="token string">"s/gh_token/${GH_TOKEN}/g"</span> <span class="token punctuation">.</span><span class="token operator">/</span>_config<span class="token punctuation">.</span>yml
+  <span class="token operator">-</span> hexo deploy
+
+    # 版本 二（未能成功）
+  # <span class="token operator">-</span> cd <span class="token punctuation">.</span>deploy_git
+  # <span class="token operator">-</span> git checkout master
+  # <span class="token operator">-</span> cd <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>
+  # <span class="token operator">-</span> sed <span class="token operator">-</span>i<span class="token string">''</span> <span class="token string">"s~${GH_REF}~${GH_TOKEN}:x-oauth-basic@${GH_REF}~"</span> _config<span class="token punctuation">.</span>yml
+  # <span class="token operator">-</span> hexo d <span class="token operator">></span> log<span class="token punctuation">.</span>txt <span class="token number">2</span><span class="token operator">></span><span class="token operator">&amp;</span><span class="token number">1</span>
+  # <span class="token operator">-</span> cat log<span class="token punctuation">.</span>txt <span class="token operator">|</span> sed <span class="token string">"自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"</span>
+  # <span class="token operator">-</span> echo <span class="token string">"自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"</span> # 构建后输出时间标识
+
+    # 版本三（能正常构建提交到博客 leader755<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">,</span>但是并不是使用 hexo d  命令触发的）
+    # after_script<span class="token punctuation">:</span>
+  # <span class="token operator">-</span> cd <span class="token punctuation">.</span><span class="token operator">/</span><span class="token keyword">public</span>
+  # <span class="token operator">-</span> git init
+  # <span class="token operator">-</span> git config user<span class="token punctuation">.</span>name <span class="token string">"your-git-name"</span>
+  # <span class="token operator">-</span> git config user<span class="token punctuation">.</span>email <span class="token string">"your-email-address"</span>
+  # <span class="token operator">-</span> git add <span class="token punctuation">.</span>
+  # <span class="token operator">-</span> git commit <span class="token operator">-</span>m <span class="token string">"Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"</span>
+  # <span class="token operator">-</span> git push <span class="token operator">--</span>force <span class="token operator">--</span>quiet <span class="token string">"https://${GH_TOKEN}@${GH_REF}"</span> master<span class="token punctuation">:</span>master
+
+
+# 指定博客源码分支，Travis CI 监控哪一个分支的变动，这里是 master 分支（若博客备份文件和 GitHub Pages 共用一个仓库的话需设置为博客备份文件所在分支）。
+branches<span class="token punctuation">:</span>
+  only<span class="token punctuation">:</span>
+    <span class="token operator">-</span> master
+
+# End<span class="token punctuation">:</span> Build LifeCycle
+
+# configure notifications <span class="token punctuation">(</span>email<span class="token punctuation">,</span> IRC<span class="token punctuation">,</span> campfire etc<span class="token punctuation">)</span>
+# please update <span class="token keyword">this</span> section to your needs<span class="token operator">!</span>
+# https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>docs<span class="token punctuation">.</span>travis<span class="token operator">-</span>ci<span class="token punctuation">.</span>com<span class="token operator">/</span>user<span class="token regex">/notifications/</span>
+notifications<span class="token punctuation">:</span>
+  email<span class="token punctuation">:</span>
+    <span class="token operator">-</span> <span class="token number">1181012791</span>@qq<span class="token punctuation">.</span>com
+  on_success<span class="token punctuation">:</span> change
+  on_failure<span class="token punctuation">:</span> always
+
+</code></pre>
+<p>到这里我就出问题了，虽然能成功触发构建，但是并不能使用 hexo d 发布到 leader755.github.io 这个博客仓库。目前还没找出问题在哪里，出现问题地方应该在生命周期 after_script: ,如果有知道还请留言回复，感激不尽。虽然没有成功使用吧。但是也算对 travis-ci 有初步的认识吧。继续折腾吧。</p>
+<h2 id="4-认识-Job-Lifecycle–Job-的生命周期"><a href="#4-认识-Job-Lifecycle–Job-的生命周期" class="headerlink" title="4.认识 Job Lifecycle–Job 的生命周期"></a>4.认识 Job Lifecycle–Job 的生命周期</h2><p>Travis CI 为每种编程语言提供默认构建环境和默认的阶段集。 创建虚拟机为你的 Job 提供构建环境，将存储库克隆到其中，安装可选的插件，然后运行构建阶段。<br>job 的声明周期，主要包含两大部分：<br>install：安装依赖，官网有专门讲解的 <a href="https://docs.travis-ci.com/user/installing-dependencies/" target="_blank" rel="noopener">Installing Dependencies</a><br>script：运行构建脚本；<br>在 installation 阶段之前（beofore_install）、在 script phase 之前（before_script）或之后（after_script），你可以运行自定义命令；<br>当构建成功或失败置换后，可以使用 after_success（例如构建文档）或 after_failure（例如上载日志文件）阶段执行其他操作（actions）。 在 after_failure 和 after_success 中，您可以使用$TRAVIS_TEST_RESULT 环境变量获取构建结果。</p>
+<p>完整的 job 生命周期(包括三个可选的部署阶段，以及在检出 git 存储库 和更改到存储库目录) 如下：</p>
+<ul>
+<li><a href="https://docs.travis-ci.com/user/installing-dependencies/#installing-packages-with-the-apt-addon" target="_blank" rel="noopener"><strong>apt addons</strong></a>** 可选安装**</li>
+<li><a href="https://docs.travis-ci.com/user/caching" target="_blank" rel="noopener"><strong>cache components</strong></a>** 可选安装**</li>
+<li><strong>before_install</strong></li>
+<li><strong>install</strong></li>
+<li><strong>before_script</strong></li>
+<li><strong>script</strong></li>
+<li><strong>before_cache (for cleaning up cache) 可选</strong></li>
+<li><strong>after_success or after_failure</strong></li>
+<li><strong>before_deploy 可选</strong></li>
+<li><strong>deploy 可选</strong></li>
+<li><strong>after_deploy 可选</strong></li>
+<li><strong>after_script</strong></li>
+</ul>
+<p>一次构建任务可有许多 job 组成。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+        <tag>travis-ci</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue修饰符</title>
+    <url>/leader755/17199.html</url>
+    <content><![CDATA[<h2 id="目录导航"><a href="#目录导航" class="headerlink" title="目录导航"></a>目录导航</h2><ul>
+<li>表单修饰符</li>
+<li>事件修饰符</li>
+<li>鼠标按键修饰符</li>
+<li>键值修饰符</li>
+<li>v-bind 修饰符（实在不知道叫啥名字）</li>
+</ul>
+<h2 id="1-表单修饰符"><a href="#1-表单修饰符" class="headerlink" title="1.表单修饰符"></a>1.表单修饰符</h2><p>填写表单，最常用的是什么？input！v-model~而我们的修饰符正是为了简化这些东西而存在的</p>
+<h3 id="1-gt-lazy"><a href="#1-gt-lazy" class="headerlink" title="1&gt;.lazy"></a>1&gt;.lazy</h3><p>从这里我们可以看到，我们还在输入的时候，光标还在的时候，下面的值就已经出来了，可以说是非常地实时。但是有时候我们希望，在我们输入完所有东西，光标离开才更新视图。这样即可~这样只有当我们光标离开输入框的时候，它才会更新视图，<strong>相当于在 onchange 事件</strong>触发更新。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div<span class="token operator">></span>
+   <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>lazy<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">></span>
+   <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<h3 id="2-gt-trim"><a href="#2-gt-trim" class="headerlink" title="2&gt;.trim"></a>2&gt;.trim</h3><p>在我们的输入框中，我们经常需要过滤一下一些输入完密码不小心多敲了一下空格的兄弟输入的内容。需要注意的是，它只能<strong>过滤首尾的空格</strong>！首尾，中间的是不会过滤的</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>trim<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">></span></code></pre>
+<h3 id="3-gt-number"><a href="#3-gt-number" class="headerlink" title="3&gt;.number"></a>3&gt;.number</h3><p>如果你先输入数字，那它就会限制你输入的只能是数字。<br>如果你先输入字符串，那它就相当于没有加.number</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>number<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">></span></code></pre>
+<h2 id="2-事件修饰符"><a href="#2-事件修饰符" class="headerlink" title="2.事件修饰符"></a>2.事件修饰符</h2><h3 id="1-gt-stop"><a href="#1-gt-stop" class="headerlink" title="1&gt;.stop"></a>1&gt;.stop</h3><p>由于事件冒泡的机制，我们给元素绑定点击事件的时候，也会触发父级的点击事件。一键阻止事件冒泡，简直方便得不行。相当于调用了 event.stopPropagation()方法。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(2)"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>stop<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">/</span><span class="token operator">/</span>只输出<span class="token number">1</span></code></pre>
+<h3 id="2-gt-prevent"><a href="#2-gt-prevent" class="headerlink" title="2&gt;.prevent"></a>2&gt;.prevent</h3><p>用于阻止事件的默认行为，例如，当点击提交按钮时阻止对表单的提交。相当于调用了 event.preventDefault()方法。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 提交事件不再重载页面 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>form v<span class="token operator">-</span>on<span class="token symbol">:submit</span><span class="token punctuation">.</span>prevent<span class="token operator">=</span><span class="token string">"onSubmit"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span></code></pre>
+<blockquote>
+<p><strong>注意：</strong>修饰符可以同时使用多个,但是可能会因为顺序而有所不同。<br>用 v-on:click.prevent.self 会阻止所有的点击，而 v-on:click.self.prevent 只会阻止对元素自身的点击。<br>也就是<strong>从左往右判断~</strong></p>
+</blockquote>
+<h3 id="3-gt-self"><a href="#3-gt-self" class="headerlink" title="3&gt;.self"></a>3&gt;.self</h3><p>只当事件是从事件绑定的元素本身触发时才触发回调。像下面所示，刚刚我们从.stop 时候知道子元素会冒泡到父元素导致触发父元素的点击事件，当我们加了这个.self 以后，我们点击 button 不会触发父元素的点击事件 shout，只有当点击到父元素的时候（蓝色背景）才会 shout~从这个 self 的英文翻译过来就是‘自己，本身’可以看出这个修饰符的用法</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"blue"</span> <span class="token variable">@click</span><span class="token punctuation">.</span><span class="token keyword">self</span><span class="token operator">=</span><span class="token string">"shout(2)"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<h3 id="4-gt-once"><a href="#4-gt-once" class="headerlink" title="4&gt;.once"></a>4&gt;.once</h3><p>这个修饰符的用法也是和名字一样简单粗暴，只能用一次，绑定了事件以后只能触发一次，第二次就不会触发。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>键盘按坏都只能shout一次
+<span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>once<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
+<h3 id="5-gt-capture"><a href="#5-gt-capture" class="headerlink" title="5&gt;.capture"></a>5&gt;.capture</h3><p>从上面我们知道了事件的冒泡，其实完整的事件机制是：捕获阶段–目标阶段–冒泡阶段。<br>默认的呢，是事件触发是从目标开始往上冒泡。<br>当我们加了这个.capture 以后呢，我们就反过来了，事件触发从包含这个元素的顶层开始往下触发。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token punctuation">.</span>capture<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>
+      obj1
+      <span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token punctuation">.</span>capture<span class="token operator">=</span><span class="token string">"shout(2)"</span><span class="token operator">></span>
+        obj2
+        <span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(3)"</span><span class="token operator">></span>
+          obj3
+          <span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span>
+            obj4
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">/</span><span class="token operator">/</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">4</span> <span class="token number">3</span></code></pre>
+<p>从上面这个例子我们点击 obj4 的时候，就可以清楚地看出区别，obj1，obj2 在捕获阶段就触发了事件，因此是先 1 后 2，后面的 obj3，obj4 是默认的冒泡阶段触发，因此是先 4 然后冒泡到 3~</p>
+<h3 id="6-gt-passive"><a href="#6-gt-passive" class="headerlink" title="6&gt;.passive"></a>6&gt;.passive</h3><p>当我们在监听元素滚动事件的时候，会一直触发 onscroll 事件，在 pc 端是没啥问题的，但是在移动端，会让我们的网页变卡，因此我们使用这个修饰符的时候，相当于给 onscroll 事件整了一个.lazy 修饰符</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 滚动事件的默认行为 <span class="token punctuation">(</span>即滚动行为<span class="token punctuation">)</span> 将会立即触发 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 而不会等待 `onScroll` 完成  <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 这其中包含 `event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>` 的情况 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>div v<span class="token operator">-</span>on<span class="token symbol">:scroll</span><span class="token punctuation">.</span>passive<span class="token operator">=</span><span class="token string">"onScroll"</span><span class="token operator">></span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<h3 id="7-gt-native"><a href="#7-gt-native" class="headerlink" title="7&gt;.native"></a>7&gt;.native</h3><p>我们经常会写很多的小组件，有些小组件可能会绑定一些事件，但是，像下面这样绑定事件是不会触发的</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span><span class="token constant">My</span><span class="token operator">-</span>component <span class="token variable">@click</span><span class="token punctuation">.</span>native<span class="token operator">=</span><span class="token string">"shout(3)"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token constant">My</span><span class="token operator">-</span>component<span class="token operator">></span></code></pre>
+<p>必须使用.native 来修饰这个 click 事件（即&lt;My-component @click.native=”shout(3)”&gt;</My-component>），可以理解为该修饰符的作用就是把一个 vue 组件转化为一个普通的 HTML 标签，<br>注意：<strong>使用.native 修饰符来操作普通 HTML 标签是会令事件失效的</strong></p>
+<h2 id="鼠标按钮修饰符"><a href="#鼠标按钮修饰符" class="headerlink" title="鼠标按钮修饰符"></a>鼠标按钮修饰符</h2><p>刚刚我们讲到这个 click 事件，我们一般是会用左键触发，有时候我们需要更改右键菜单啥的，就需要用到右键点击或者中间键点击，这个时候就要用到鼠标按钮修饰符</p>
+<ul>
+<li>.left 左键点击</li>
+<li>.right 右键点击</li>
+<li>.middle 中键点击</li>
+</ul>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>right<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
+<h2 id="键值修饰符"><a href="#键值修饰符" class="headerlink" title="键值修饰符"></a>键值修饰符</h2><p>其实这个也算是事件修饰符的一种，因为它都是用来修饰键盘事件的。<br>比如 onkeyup，onkeydown 啊</p>
+<h3 id="1-gt-keyCode"><a href="#1-gt-keyCode" class="headerlink" title="1&gt;.keyCode"></a>1&gt;.keyCode</h3><p>如果不用 keyCode 修饰符，那我们每次按下键盘都会触发 shout，当我们想指定按下某一个键才触发这个 shout 的时候，这个修饰符就有用了，具体键码查看<a href="https://zhidao.baidu.com/question/266291349.html" target="_blank" rel="noopener">键码对应表</a></p>
+<pre><code>&lt;input type=&quot;text&quot; @keyup.keyCode=&quot;shout(4)&quot;&gt;</code></pre><p>为了方便我们使用，vue 给一些常用的键提供了别名</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>普通键
+<span class="token punctuation">.</span>enter
+<span class="token punctuation">.</span>tab
+<span class="token punctuation">.</span>delete <span class="token operator">/</span><span class="token operator">/</span><span class="token punctuation">(</span>捕获“删除”和“退格”键<span class="token punctuation">)</span>
+<span class="token punctuation">.</span>space
+<span class="token punctuation">.</span>esc
+<span class="token punctuation">.</span>up
+<span class="token punctuation">.</span>down
+<span class="token punctuation">.</span>left
+<span class="token punctuation">.</span>right</code></pre>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>系统修饰键
+<span class="token punctuation">.</span>ctrl
+<span class="token punctuation">.</span>alt
+<span class="token punctuation">.</span>meta
+<span class="token punctuation">.</span>shift</code></pre>
+<p>可以通过全局 config.keyCodes 对象自定义按键修饰符别名：</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span> 可以使用 `v<span class="token operator">-</span>on<span class="token symbol">:keyup</span><span class="token punctuation">.</span>f1`
+<span class="token constant">Vue</span><span class="token punctuation">.</span>config<span class="token punctuation">.</span>keyCodes<span class="token punctuation">.</span>f1 <span class="token operator">=</span> <span class="token number">112</span></code></pre>
+<p>我们从上面看到，键分成了普通常用的键和系统修饰键，区别是什么呢？<br>当我们写如下代码的时候,我们会发现如果<strong>仅仅</strong>使用系统修饰键是无法触发 keyup 事件的。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token variable">@keyup</span><span class="token punctuation">.</span>ctrl<span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span></code></pre>
+<p>那该如何呢？我们需要将系统修饰键和其他键码链接起来使用，比如</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token variable">@keyup</span><span class="token punctuation">.</span>ctrl<span class="token number">.67</span><span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span></code></pre>
+<p>这样当我们同时按下 ctrl+c 时，就会触发 keyup 事件。</p>
+<p>另，如果是鼠标事件，那就可以单独使用系统修饰符。</p>
+<pre class=" language-ruby"><code class="language-ruby">            <span class="token operator">&lt;</span>button <span class="token variable">@mouseover</span><span class="token punctuation">.</span>ctrl<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span>button <span class="token variable">@mousedown</span><span class="token punctuation">.</span>ctrl<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>ctrl<span class="token number">.67</span><span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
+<p>大概是什么意思呢，就是你不能<strong>单手指使用系统修饰键的修饰符</strong>（最少两个手指，可以多个）。你可以一个手指按住系统修饰键一个手指按住另外一个键来实现键盘事件。也可以用一个手指按住系统修饰键，另一只手按住鼠标来实现鼠标事件。</p>
+<h3 id="2-gt-exact-2-5-新增"><a href="#2-gt-exact-2-5-新增" class="headerlink" title="2&gt;.exact (2.5 新增)"></a>2&gt;.exact (2.5 新增)</h3><p>我们上面说了这个系统修饰键，当我们像这样&lt;button type=”text” @click.ctrl=”shout(4)”&gt;</button>绑定了 click 键按下的事件，惊奇的是，我们同时按下几个系统修饰键，比如 ctrl shift 点击，也能触发，可能有些场景我们<strong>只需要或者只能</strong>按一个系统修饰键来触发（像制作一些快捷键的时候），而当我们按下 ctrl 和其他键的时候则无法触发。那就这样写。<br>注意：这个<strong>只是限制系统修饰键</strong>的，像下面这样书写以后你还是可以按下 ctrl + c，ctrl+v 或者 ctrl+普通键 来触发，但是不能按下 ctrl + shift +普通键来触发。</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token variable">@click</span><span class="token punctuation">.</span>ctrl<span class="token punctuation">.</span>exact<span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
+<p>然后下面这个你可以同时按下 enter+普通键来触发，但是不能按下系统修饰键+enter 来触发。相信你已经能听懂了 8~</p>
+<pre><code>&lt;input type=&quot;text&quot; @keydown.enter.exact=&quot;shout(&#39;我被触发了&#39;)&quot;&gt;</code></pre><h2 id="v-bind-修饰符"><a href="#v-bind-修饰符" class="headerlink" title="v-bind 修饰符"></a>v-bind 修饰符</h2><h3 id="1-gt-sync-2-3-0-新增"><a href="#1-gt-sync-2-3-0-新增" class="headerlink" title="1&gt;.sync(2.3.0+ 新增)"></a>1&gt;.sync(2.3.0+ 新增)</h3><p>在有些情况下，我们可能需要对一个 prop 进行“双向绑定”。不幸的是，真正的双向绑定会带来维护上的问题，因为子组件可以修改父组件，且在父组件和子组件都没有明显的改动来源。我们通常的做法是</p>
+<pre><code>//父亲组件
+&lt;comp :myMessage=&quot;bar&quot; @update:myMessage=&quot;func&quot;&gt;&lt;/comp&gt;
+//js
+func(e){
+ this.bar = e;
+}</code></pre><pre><code>//子组件js
+func2(){
+  this.$emit(&#39;update:myMessage&#39;,params);
+}</code></pre><p>现在这个.sync 修饰符就是简化了上面的步骤</p>
+<pre><code>//父组件
+&lt;comp :myMessage.sync=&quot;bar&quot;&gt;&lt;/comp&gt;
+//子组件
+this.$emit(&#39;update:myMessage&#39;,params);</code></pre><p>这样确实会方便很多，但是也有很多需要<strong>注意</strong>的点</p>
+<ol>
+<li>使用 sync 的时候，子组件传递的事件名必须为 update:value，其中 value 必须与子组件中 props 中声明的名称完全一致(如上例中的 myMessage，不能使用 my-message)</li>
+<li>注意带有 .sync 修饰符的 v-bind 不能和表达式一起使用 (例如 v-bind:title.sync=”doc.title + ‘!’” 是无效的)。取而代之的是，你只能提供你想要绑定的属性名，类似 v-model。</li>
+<li>将 v-bind.sync 用在一个字面量的对象上，例如 v-bind.sync=”{ title: doc.title }”，是无法正常工作的，因为在解析一个像这样的复杂表达式的时候，有很多边缘情况需要考虑。</li>
+</ol>
+<h3 id="2-gt-prop"><a href="#2-gt-prop" class="headerlink" title="2&gt;.prop"></a>2&gt;.prop</h3><p>要学习这个修饰符，我们首先要搞懂两个东西的区别。</p>
+<pre><code>Property：节点对象在内存中存储的属性，可以访问和设置。
+Attribute：节点对象的其中一个属性( property )，值是一个对象。
+可以通过点访问法 document.getElementById(&#39;xx&#39;).attributes 或者 document.getElementById(&#39;xx&#39;).getAttributes(&#39;xx&#39;) 读取，通过 document.getElementById(&#39;xx&#39;).setAttribute(&#39;xx&#39;,value) 新增和修改。
+在标签里定义的所有属性包括 HTML 属性和自定义属性都会在 attributes 对象里以键值对的方式存在。</code></pre><p>其实 attribute 和 property 两个单词，翻译出来都是属性，但是《javascript 高级程序设计》将它们翻译为特性和属性，以示区分</p>
+<pre><code>//这里的id,value,style都属于property
+//index属于attribute
+//id、title等既是属性，也是特性。修改属性，其对应的特性会发生改变；修改特性，属性也会改变
+&lt;input id=&quot;uid&quot; title=&quot;title1&quot; value=&quot;1&quot; :index=&quot;index&quot;&gt;
+//input.index === undefined
+//input.attributes.index === this.index</code></pre><p>从上面我们可以看到如果直接使用 v-bind 绑定，则默认会绑定到 dom 节点的 attribute。<br>为了</p>
+<ul>
+<li>通过自定义属性存储变量，避免暴露数据</li>
+<li>防止污染 HTML 结构</li>
+</ul>
+<p>我们可以使用这个修饰符，如下</p>
+<pre><code>&lt;input id=&quot;uid&quot; title=&quot;title1&quot; value=&quot;1&quot; :index.prop=&quot;index&quot;&gt;
+//input.index === this.index
+//input.attributes.index === undefined</code></pre><ul>
+<li><strong>.camel</strong></li>
+</ul>
+<p>由于 HTML 特性是不区分大小写的。</p>
+<pre><code>&lt;svg :viewBox=&quot;viewBox&quot;&gt;&lt;/svg&gt;</code></pre><p>实际上会渲染为</p>
+<pre><code>&lt;svg viewbox=&quot;viewBox&quot;&gt;&lt;/svg&gt;</code></pre><p>这将导致渲染失败，因为 SVG 标签只认 viewBox，却不知道 viewbox 是什么。<br>如果我们使用.camel 修饰符，那它就会被渲染为驼峰名。<br>另，如果你使用字符串模版，则没有这些限制。</p>
+<pre><code>new Vue({
+  template: &#39;&lt;svg :viewBox=&quot;viewBox&quot;&gt;&lt;/svg&gt;&#39;
+})</code></pre><h3 id="vue-使用-element-ui-的-el-input-监听不了键盘事件解决"><a href="#vue-使用-element-ui-的-el-input-监听不了键盘事件解决" class="headerlink" title="vue 使用 element-ui 的 el-input 监听不了键盘事件解决"></a>vue 使用 element-ui 的 el-input 监听不了键盘事件解决</h3><p>vue 使用 element-ui 的 el-input 监听不了键盘事件，原因应该是 element-ui 自身封装了一层 div 在 input 标签外面，把原来的事件隐藏了，情况如下：直接使用标签:</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>账号<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>doLogin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>input</span><span class="token punctuation">></span></span>
+element-ui:
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>账号<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter.native</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>doLogin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+如果你使用了form表单 使用 @keyup.enter.native="doLogin" ,
+两个el-input 键盘事件有效, 如:
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">autoComplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>on<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>邮箱<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter.native</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>handleLogin<span class="token punctuation">"</span></span>  <span class="token attr-name">autoComplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>on<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>密码<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span><span class="token punctuation">></span></span>
+　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span>  <span class="token attr-name">@click.native.prevent</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>handleLogin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>登录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form</span><span class="token punctuation">></span></span>
+如果只有一个el-input , 则无效, 需加上@submit.native.prevent才有效,阻值冒泡,默认事件,  如:
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form</span>  <span class="token attr-name">@submit.native.prevent</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span><span class="token punctuation">></span></span>
+　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span>  <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>请输入内容<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter.native</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submitImage<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="文章转载："><a href="#文章转载：" class="headerlink" title="文章转载："></a>文章转载：</h2><p><a href="https://segmentfault.com/a/1190000016786254" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016786254</a></p>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue 修饰符</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>centos7安装jdk ,maven，tomcat，nginx</title>
     <url>/leader755/50783.html</url>
     <content><![CDATA[<h2 id="1-centos7-安装-tomcat"><a href="#1-centos7-安装-tomcat" class="headerlink" title="1.centos7 安装 tomcat"></a>1.centos7 安装 tomcat</h2><h3 id="1-gt-JDK-安装"><a href="#1-gt-JDK-安装" class="headerlink" title="1&gt;JDK 安装"></a>1&gt;JDK 安装</h3><p>1、查看系统版本命令</p>
@@ -5198,299 +5491,6 @@ yum update</code></pre>
       <tags>
         <tag>tomcat</tag>
         <tag>centos7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>travis-ci + github + hexo 持续集成</title>
-    <url>/leader755/34284.html</url>
-    <content><![CDATA[<h2 id="Hexo-博客源代码-GitHub-托管"><a href="#Hexo-博客源代码-GitHub-托管" class="headerlink" title="Hexo 博客源代码 GitHub 托管"></a>Hexo 博客源代码 GitHub 托管</h2><h2 id="1-注册-travis-ci"><a href="#1-注册-travis-ci" class="headerlink" title="1.注册 travis-ci"></a>1.注册 travis-ci</h2><p>Travis CI 的网站有两个，<br><code>travis-ci.org</code>  专门针对开源项目，GitHub 上所有的公开仓库都能够免费使用；<br><code>travis-ci.com</code>  针对私有及商业项目，新用户前 100 次构建是免费的，后面就要收费了。</p>
-<h2 id="2-登录-Travis-CI-网站"><a href="#2-登录-Travis-CI-网站" class="headerlink" title="2.登录 Travis CI 网站"></a>2.登录 Travis CI 网站</h2><ol>
-<li>前往 <a href="https://travis-ci.com/" target="_blank" rel="noopener">Travis-ci.com</a> and Sign up with GitHub.</li>
-<li>接受授权</li>
-<li>选择你想要使用 Travis CI 的仓库 或者 你也可以在 Github-settings-Applications-TravisCI-Configure 中去更新配置；</li>
-<li>在你仓库怎增加 <code>.travis.yml</code> 文件，这个文件定义了构建的步骤，例如<a href="https://docs.travis-ci.com/user/job-lifecycle/#customizing-the-installation-phase" target="_blank" rel="noopener">安装依赖</a>等等。</li>
-<li>将 <code>.travis.yml</code> 文件推送到你的远端仓库，然后就会触发 Travis CI 构建；</li>
-<li>登录 <a href="https://travis-ci.com/" target="_blank" rel="noopener">Travis CI</a>然后选择你的仓库查看构建任务的执行详情；</li>
-</ol>
-<h2 id="3-配置-Travis-CI"><a href="#3-配置-Travis-CI" class="headerlink" title="3.配置 Travis CI"></a>3.配置 Travis CI</h2><h4 id="1-gt-网页端配置"><a href="#1-gt-网页端配置" class="headerlink" title="1&gt;网页端配置"></a>1&gt;网页端配置</h4><p>首先进入 <a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI 官网</a>，这里我们使用的是免费版的，因为考虑到一般放在 GitHub 上的博客都是公开的，所以不需要付费版本。如果有私有仓库要使用这种方式，可以使用 <a href="https://travis-ci.com/" target="_blank" rel="noopener">付费版的 Travis CI</a>。然后直接通过 GitHub 账户登陆即可，登陆后可以看到我们的共有仓库，找到博客的仓库，我这里是选择 blog-master 源码仓库（博客仓库：leader755.github.io），把旁边的勾勾上，然后点击旁边的 <code>Settings</code> 进入设置页面。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595728277292-624821ea-7b95-4db8-89fe-22ece79e75db.png#height=457&id=ElrGC&margin=%5Bobject%20Object%5D&name=image.png&originHeight=914&originWidth=1686&originalType=binary&size=85154&status=done&style=none&width=843" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595728301454-068409c1-f596-4e35-aa3a-d9d2d3c5b39c.png#height=527&id=fSY46&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1054&originWidth=1752&originalType=binary&size=108378&status=done&style=none&width=876" alt="image.png"></p>
-<p>在设置页面中，General 中只勾选 <code>Build pushed branches</code>，表示当有新的代码 push 到 GitHub 仓库时，自动执行构建任务。其他设置保持默认即可。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595728534111-16bc9014-0036-44ef-8036-8117eb15dffd.png#height=532&id=bLKBm&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1064&originWidth=1910&originalType=binary&size=135305&status=done&style=none&width=955" alt="image.png"></p>
-<p>接下来为 Travis 添加对 GitHub 仓库的读写权限。进入 <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">Personal access tokens</a> 页面，点击 <code>Generate new token</code>，选择 token 权限(这里直选 repo 即可)，设置别名并生成。然后将生成的 token 值复制。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595728617792-342093c6-0176-4ece-90e0-f1395c93d7cf.png#height=645&id=PoYaj&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1290&originWidth=2304&originalType=binary&size=230289&status=done&style=none&width=1152" alt="image.png"><br>接着在原来 Travis 的设置界面添加 token。如图所示：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595728826735-1b3d72da-2248-4837-9c46-4b6ce410bfdf.png#height=324&id=OEGtc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=648&originWidth=2006&originalType=binary&size=113373&status=done&style=none&width=1003" alt="image.png"><br>在 Name 中填入 token 的别名，Value 中填入刚刚得到的 token，然后点击 Add 进行添加即可。注意 token 一旦生成，只能在生成时得到其值，后面无法查看。所以如果还有需要，可以记下来或者重新生成新的 token。</p>
-<h4 id="2-gt-Travis-配置文件"><a href="#2-gt-Travis-配置文件" class="headerlink" title="2&gt;Travis 配置文件"></a>2&gt;Travis 配置文件</h4><p>接下来还需要编写 Travis 的配置文件，用于指定构建时使用哪些命令。配置文件名为 <code>.travis.yml</code>，是自动化构建的配置文件。文件内容示例如下：</p>
-<pre class=" language-javascript"><code class="language-javascript"># 指定构建环境是Node<span class="token punctuation">.</span>js，当前版本是稳定版 <span class="token punctuation">(</span>stable<span class="token punctuation">)</span><span class="token punctuation">,</span>版本这里我们选择最新的长期支持版本（ LTS） 应该就够用了
-anguage<span class="token punctuation">:</span> node_js
-node_js<span class="token punctuation">:</span>
-  <span class="token operator">-</span> lts<span class="token operator">/</span><span class="token operator">*</span>  # 稳定版 <span class="token punctuation">(</span>stable<span class="token punctuation">)</span> <span class="token punctuation">,</span>最新长期支持版（ <span class="token operator">-</span> lts<span class="token operator">/</span><span class="token operator">*</span> ）
-
-# 指定缓存模块，可加快编译速度
-cache<span class="token punctuation">:</span>
-  directories<span class="token punctuation">:</span>
-    <span class="token operator">-</span> node_modules
-
-# 在构建之前
-before_install<span class="token punctuation">:</span>
-  <span class="token operator">-</span> <span class="token keyword">export</span> TZ<span class="token operator">=</span><span class="token string">'Asia/Shanghai'</span> # 更改时区
-  <span class="token operator">-</span> npm install <span class="token operator">-</span>g hexo<span class="token operator">-</span>cli # 安装hexo环境
-
-#<span class="token function">部署环境的安装</span><span class="token punctuation">(</span>安装一个部署插件<span class="token punctuation">)</span>
-install<span class="token punctuation">:</span>
-  <span class="token operator">-</span> npm install
-  <span class="token operator">-</span> npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save
-
-before_script<span class="token punctuation">:</span>
- #
-
-# 执行清缓存，生成网页操作
-script<span class="token punctuation">:</span>
-  <span class="token operator">-</span> hexo clean <span class="token operator">&amp;&amp;</span> hexo g
-
-after_script<span class="token punctuation">:</span>  # 未能成功
-  <span class="token operator">-</span> git config user<span class="token punctuation">.</span>name <span class="token string">"Leader755"</span>
-  <span class="token operator">-</span> git config user<span class="token punctuation">.</span>email <span class="token string">"1181012791@qq.com"</span>
-   # 替换同目录下的_config<span class="token punctuation">.</span>yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
-  <span class="token operator">-</span> sed <span class="token operator">-</span>i <span class="token string">"s/gh_token/${GH_TOKEN}/g"</span> <span class="token punctuation">.</span><span class="token operator">/</span>_config<span class="token punctuation">.</span>yml
-  <span class="token operator">-</span> hexo deploy
-
-    # 版本 二（未能成功）
-  # <span class="token operator">-</span> cd <span class="token punctuation">.</span>deploy_git
-  # <span class="token operator">-</span> git checkout master
-  # <span class="token operator">-</span> cd <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>
-  # <span class="token operator">-</span> sed <span class="token operator">-</span>i<span class="token string">''</span> <span class="token string">"s~${GH_REF}~${GH_TOKEN}:x-oauth-basic@${GH_REF}~"</span> _config<span class="token punctuation">.</span>yml
-  # <span class="token operator">-</span> hexo d <span class="token operator">></span> log<span class="token punctuation">.</span>txt <span class="token number">2</span><span class="token operator">></span><span class="token operator">&amp;</span><span class="token number">1</span>
-  # <span class="token operator">-</span> cat log<span class="token punctuation">.</span>txt <span class="token operator">|</span> sed <span class="token string">"自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"</span>
-  # <span class="token operator">-</span> echo <span class="token string">"自动构建Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"</span> # 构建后输出时间标识
-
-    # 版本三（能正常构建提交到博客 leader755<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">,</span>但是并不是使用 hexo d  命令触发的）
-    # after_script<span class="token punctuation">:</span>
-  # <span class="token operator">-</span> cd <span class="token punctuation">.</span><span class="token operator">/</span><span class="token keyword">public</span>
-  # <span class="token operator">-</span> git init
-  # <span class="token operator">-</span> git config user<span class="token punctuation">.</span>name <span class="token string">"your-git-name"</span>
-  # <span class="token operator">-</span> git config user<span class="token punctuation">.</span>email <span class="token string">"your-email-address"</span>
-  # <span class="token operator">-</span> git add <span class="token punctuation">.</span>
-  # <span class="token operator">-</span> git commit <span class="token operator">-</span>m <span class="token string">"Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"</span>
-  # <span class="token operator">-</span> git push <span class="token operator">--</span>force <span class="token operator">--</span>quiet <span class="token string">"https://${GH_TOKEN}@${GH_REF}"</span> master<span class="token punctuation">:</span>master
-
-
-# 指定博客源码分支，Travis CI 监控哪一个分支的变动，这里是 master 分支（若博客备份文件和 GitHub Pages 共用一个仓库的话需设置为博客备份文件所在分支）。
-branches<span class="token punctuation">:</span>
-  only<span class="token punctuation">:</span>
-    <span class="token operator">-</span> master
-
-# End<span class="token punctuation">:</span> Build LifeCycle
-
-# configure notifications <span class="token punctuation">(</span>email<span class="token punctuation">,</span> IRC<span class="token punctuation">,</span> campfire etc<span class="token punctuation">)</span>
-# please update <span class="token keyword">this</span> section to your needs<span class="token operator">!</span>
-# https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>docs<span class="token punctuation">.</span>travis<span class="token operator">-</span>ci<span class="token punctuation">.</span>com<span class="token operator">/</span>user<span class="token regex">/notifications/</span>
-notifications<span class="token punctuation">:</span>
-  email<span class="token punctuation">:</span>
-    <span class="token operator">-</span> <span class="token number">1181012791</span>@qq<span class="token punctuation">.</span>com
-  on_success<span class="token punctuation">:</span> change
-  on_failure<span class="token punctuation">:</span> always
-
-</code></pre>
-<p>到这里我就出问题了，虽然能成功触发构建，但是并不能使用 hexo d 发布到 leader755.github.io 这个博客仓库。目前还没找出问题在哪里，出现问题地方应该在生命周期 after_script: ,如果有知道还请留言回复，感激不尽。虽然没有成功使用吧。但是也算对 travis-ci 有初步的认识吧。继续折腾吧。</p>
-<h2 id="4-认识-Job-Lifecycle–Job-的生命周期"><a href="#4-认识-Job-Lifecycle–Job-的生命周期" class="headerlink" title="4.认识 Job Lifecycle–Job 的生命周期"></a>4.认识 Job Lifecycle–Job 的生命周期</h2><p>Travis CI 为每种编程语言提供默认构建环境和默认的阶段集。 创建虚拟机为你的 Job 提供构建环境，将存储库克隆到其中，安装可选的插件，然后运行构建阶段。<br>job 的声明周期，主要包含两大部分：<br>install：安装依赖，官网有专门讲解的 <a href="https://docs.travis-ci.com/user/installing-dependencies/" target="_blank" rel="noopener">Installing Dependencies</a><br>script：运行构建脚本；<br>在 installation 阶段之前（beofore_install）、在 script phase 之前（before_script）或之后（after_script），你可以运行自定义命令；<br>当构建成功或失败置换后，可以使用 after_success（例如构建文档）或 after_failure（例如上载日志文件）阶段执行其他操作（actions）。 在 after_failure 和 after_success 中，您可以使用$TRAVIS_TEST_RESULT 环境变量获取构建结果。</p>
-<p>完整的 job 生命周期(包括三个可选的部署阶段，以及在检出 git 存储库 和更改到存储库目录) 如下：</p>
-<ul>
-<li><a href="https://docs.travis-ci.com/user/installing-dependencies/#installing-packages-with-the-apt-addon" target="_blank" rel="noopener"><strong>apt addons</strong></a>** 可选安装**</li>
-<li><a href="https://docs.travis-ci.com/user/caching" target="_blank" rel="noopener"><strong>cache components</strong></a>** 可选安装**</li>
-<li><strong>before_install</strong></li>
-<li><strong>install</strong></li>
-<li><strong>before_script</strong></li>
-<li><strong>script</strong></li>
-<li><strong>before_cache (for cleaning up cache) 可选</strong></li>
-<li><strong>after_success or after_failure</strong></li>
-<li><strong>before_deploy 可选</strong></li>
-<li><strong>deploy 可选</strong></li>
-<li><strong>after_deploy 可选</strong></li>
-<li><strong>after_script</strong></li>
-</ul>
-<p>一次构建任务可有许多 job 组成。</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>github</tag>
-        <tag>travis-ci</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vue修饰符</title>
-    <url>/leader755/17199.html</url>
-    <content><![CDATA[<h2 id="目录导航"><a href="#目录导航" class="headerlink" title="目录导航"></a>目录导航</h2><ul>
-<li>表单修饰符</li>
-<li>事件修饰符</li>
-<li>鼠标按键修饰符</li>
-<li>键值修饰符</li>
-<li>v-bind 修饰符（实在不知道叫啥名字）</li>
-</ul>
-<h2 id="1-表单修饰符"><a href="#1-表单修饰符" class="headerlink" title="1.表单修饰符"></a>1.表单修饰符</h2><p>填写表单，最常用的是什么？input！v-model~而我们的修饰符正是为了简化这些东西而存在的</p>
-<h3 id="1-gt-lazy"><a href="#1-gt-lazy" class="headerlink" title="1&gt;.lazy"></a>1&gt;.lazy</h3><p>从这里我们可以看到，我们还在输入的时候，光标还在的时候，下面的值就已经出来了，可以说是非常地实时。但是有时候我们希望，在我们输入完所有东西，光标离开才更新视图。这样即可~这样只有当我们光标离开输入框的时候，它才会更新视图，<strong>相当于在 onchange 事件</strong>触发更新。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div<span class="token operator">></span>
-   <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>lazy<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">></span>
-   <span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
-<h3 id="2-gt-trim"><a href="#2-gt-trim" class="headerlink" title="2&gt;.trim"></a>2&gt;.trim</h3><p>在我们的输入框中，我们经常需要过滤一下一些输入完密码不小心多敲了一下空格的兄弟输入的内容。需要注意的是，它只能<strong>过滤首尾的空格</strong>！首尾，中间的是不会过滤的</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>trim<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">></span></code></pre>
-<h3 id="3-gt-number"><a href="#3-gt-number" class="headerlink" title="3&gt;.number"></a>3&gt;.number</h3><p>如果你先输入数字，那它就会限制你输入的只能是数字。<br>如果你先输入字符串，那它就相当于没有加.number</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token punctuation">.</span>number<span class="token operator">=</span><span class="token string">"value"</span><span class="token operator">></span></code></pre>
-<h2 id="2-事件修饰符"><a href="#2-事件修饰符" class="headerlink" title="2.事件修饰符"></a>2.事件修饰符</h2><h3 id="1-gt-stop"><a href="#1-gt-stop" class="headerlink" title="1&gt;.stop"></a>1&gt;.stop</h3><p>由于事件冒泡的机制，我们给元素绑定点击事件的时候，也会触发父级的点击事件。一键阻止事件冒泡，简直方便得不行。相当于调用了 event.stopPropagation()方法。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(2)"</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>stop<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">/</span><span class="token operator">/</span>只输出<span class="token number">1</span></code></pre>
-<h3 id="2-gt-prevent"><a href="#2-gt-prevent" class="headerlink" title="2&gt;.prevent"></a>2&gt;.prevent</h3><p>用于阻止事件的默认行为，例如，当点击提交按钮时阻止对表单的提交。相当于调用了 event.preventDefault()方法。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 提交事件不再重载页面 <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>form v<span class="token operator">-</span>on<span class="token symbol">:submit</span><span class="token punctuation">.</span>prevent<span class="token operator">=</span><span class="token string">"onSubmit"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span></code></pre>
-<blockquote>
-<p><strong>注意：</strong>修饰符可以同时使用多个,但是可能会因为顺序而有所不同。<br>用 v-on:click.prevent.self 会阻止所有的点击，而 v-on:click.self.prevent 只会阻止对元素自身的点击。<br>也就是<strong>从左往右判断~</strong></p>
-</blockquote>
-<h3 id="3-gt-self"><a href="#3-gt-self" class="headerlink" title="3&gt;.self"></a>3&gt;.self</h3><p>只当事件是从事件绑定的元素本身触发时才触发回调。像下面所示，刚刚我们从.stop 时候知道子元素会冒泡到父元素导致触发父元素的点击事件，当我们加了这个.self 以后，我们点击 button 不会触发父元素的点击事件 shout，只有当点击到父元素的时候（蓝色背景）才会 shout~从这个 self 的英文翻译过来就是‘自己，本身’可以看出这个修饰符的用法</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"blue"</span> <span class="token variable">@click</span><span class="token punctuation">.</span><span class="token keyword">self</span><span class="token operator">=</span><span class="token string">"shout(2)"</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
-<h3 id="4-gt-once"><a href="#4-gt-once" class="headerlink" title="4&gt;.once"></a>4&gt;.once</h3><p>这个修饰符的用法也是和名字一样简单粗暴，只能用一次，绑定了事件以后只能触发一次，第二次就不会触发。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>键盘按坏都只能shout一次
-<span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>once<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
-<h3 id="5-gt-capture"><a href="#5-gt-capture" class="headerlink" title="5&gt;.capture"></a>5&gt;.capture</h3><p>从上面我们知道了事件的冒泡，其实完整的事件机制是：捕获阶段–目标阶段–冒泡阶段。<br>默认的呢，是事件触发是从目标开始往上冒泡。<br>当我们加了这个.capture 以后呢，我们就反过来了，事件触发从包含这个元素的顶层开始往下触发。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token punctuation">.</span>capture<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>
-      obj1
-      <span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token punctuation">.</span>capture<span class="token operator">=</span><span class="token string">"shout(2)"</span><span class="token operator">></span>
-        obj2
-        <span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(3)"</span><span class="token operator">></span>
-          obj3
-          <span class="token operator">&lt;</span>div <span class="token variable">@click</span><span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span>
-            obj4
-          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-    <span class="token operator">/</span><span class="token operator">/</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">4</span> <span class="token number">3</span></code></pre>
-<p>从上面这个例子我们点击 obj4 的时候，就可以清楚地看出区别，obj1，obj2 在捕获阶段就触发了事件，因此是先 1 后 2，后面的 obj3，obj4 是默认的冒泡阶段触发，因此是先 4 然后冒泡到 3~</p>
-<h3 id="6-gt-passive"><a href="#6-gt-passive" class="headerlink" title="6&gt;.passive"></a>6&gt;.passive</h3><p>当我们在监听元素滚动事件的时候，会一直触发 onscroll 事件，在 pc 端是没啥问题的，但是在移动端，会让我们的网页变卡，因此我们使用这个修饰符的时候，相当于给 onscroll 事件整了一个.lazy 修饰符</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 滚动事件的默认行为 <span class="token punctuation">(</span>即滚动行为<span class="token punctuation">)</span> 将会立即触发 <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 而不会等待 `onScroll` 完成  <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 这其中包含 `event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>` 的情况 <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>div v<span class="token operator">-</span>on<span class="token symbol">:scroll</span><span class="token punctuation">.</span>passive<span class="token operator">=</span><span class="token string">"onScroll"</span><span class="token operator">></span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
-<h3 id="7-gt-native"><a href="#7-gt-native" class="headerlink" title="7&gt;.native"></a>7&gt;.native</h3><p>我们经常会写很多的小组件，有些小组件可能会绑定一些事件，但是，像下面这样绑定事件是不会触发的</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span><span class="token constant">My</span><span class="token operator">-</span>component <span class="token variable">@click</span><span class="token punctuation">.</span>native<span class="token operator">=</span><span class="token string">"shout(3)"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token constant">My</span><span class="token operator">-</span>component<span class="token operator">></span></code></pre>
-<p>必须使用.native 来修饰这个 click 事件（即&lt;My-component @click.native=”shout(3)”&gt;</My-component>），可以理解为该修饰符的作用就是把一个 vue 组件转化为一个普通的 HTML 标签，<br>注意：<strong>使用.native 修饰符来操作普通 HTML 标签是会令事件失效的</strong></p>
-<h2 id="鼠标按钮修饰符"><a href="#鼠标按钮修饰符" class="headerlink" title="鼠标按钮修饰符"></a>鼠标按钮修饰符</h2><p>刚刚我们讲到这个 click 事件，我们一般是会用左键触发，有时候我们需要更改右键菜单啥的，就需要用到右键点击或者中间键点击，这个时候就要用到鼠标按钮修饰符</p>
-<ul>
-<li>.left 左键点击</li>
-<li>.right 右键点击</li>
-<li>.middle 中键点击</li>
-</ul>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>right<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
-<h2 id="键值修饰符"><a href="#键值修饰符" class="headerlink" title="键值修饰符"></a>键值修饰符</h2><p>其实这个也算是事件修饰符的一种，因为它都是用来修饰键盘事件的。<br>比如 onkeyup，onkeydown 啊</p>
-<h3 id="1-gt-keyCode"><a href="#1-gt-keyCode" class="headerlink" title="1&gt;.keyCode"></a>1&gt;.keyCode</h3><p>如果不用 keyCode 修饰符，那我们每次按下键盘都会触发 shout，当我们想指定按下某一个键才触发这个 shout 的时候，这个修饰符就有用了，具体键码查看<a href="https://zhidao.baidu.com/question/266291349.html" target="_blank" rel="noopener">键码对应表</a></p>
-<pre><code>&lt;input type=&quot;text&quot; @keyup.keyCode=&quot;shout(4)&quot;&gt;</code></pre><p>为了方便我们使用，vue 给一些常用的键提供了别名</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>普通键
-<span class="token punctuation">.</span>enter
-<span class="token punctuation">.</span>tab
-<span class="token punctuation">.</span>delete <span class="token operator">/</span><span class="token operator">/</span><span class="token punctuation">(</span>捕获“删除”和“退格”键<span class="token punctuation">)</span>
-<span class="token punctuation">.</span>space
-<span class="token punctuation">.</span>esc
-<span class="token punctuation">.</span>up
-<span class="token punctuation">.</span>down
-<span class="token punctuation">.</span>left
-<span class="token punctuation">.</span>right</code></pre>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>系统修饰键
-<span class="token punctuation">.</span>ctrl
-<span class="token punctuation">.</span>alt
-<span class="token punctuation">.</span>meta
-<span class="token punctuation">.</span>shift</code></pre>
-<p>可以通过全局 config.keyCodes 对象自定义按键修饰符别名：</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span> 可以使用 `v<span class="token operator">-</span>on<span class="token symbol">:keyup</span><span class="token punctuation">.</span>f1`
-<span class="token constant">Vue</span><span class="token punctuation">.</span>config<span class="token punctuation">.</span>keyCodes<span class="token punctuation">.</span>f1 <span class="token operator">=</span> <span class="token number">112</span></code></pre>
-<p>我们从上面看到，键分成了普通常用的键和系统修饰键，区别是什么呢？<br>当我们写如下代码的时候,我们会发现如果<strong>仅仅</strong>使用系统修饰键是无法触发 keyup 事件的。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token variable">@keyup</span><span class="token punctuation">.</span>ctrl<span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span></code></pre>
-<p>那该如何呢？我们需要将系统修饰键和其他键码链接起来使用，比如</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token variable">@keyup</span><span class="token punctuation">.</span>ctrl<span class="token number">.67</span><span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span></code></pre>
-<p>这样当我们同时按下 ctrl+c 时，就会触发 keyup 事件。</p>
-<p>另，如果是鼠标事件，那就可以单独使用系统修饰符。</p>
-<pre class=" language-ruby"><code class="language-ruby">            <span class="token operator">&lt;</span>button <span class="token variable">@mouseover</span><span class="token punctuation">.</span>ctrl<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
-      <span class="token operator">&lt;</span>button <span class="token variable">@mousedown</span><span class="token punctuation">.</span>ctrl<span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
-      <span class="token operator">&lt;</span>button <span class="token variable">@click</span><span class="token punctuation">.</span>ctrl<span class="token number">.67</span><span class="token operator">=</span><span class="token string">"shout(1)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
-<p>大概是什么意思呢，就是你不能<strong>单手指使用系统修饰键的修饰符</strong>（最少两个手指，可以多个）。你可以一个手指按住系统修饰键一个手指按住另外一个键来实现键盘事件。也可以用一个手指按住系统修饰键，另一只手按住鼠标来实现鼠标事件。</p>
-<h3 id="2-gt-exact-2-5-新增"><a href="#2-gt-exact-2-5-新增" class="headerlink" title="2&gt;.exact (2.5 新增)"></a>2&gt;.exact (2.5 新增)</h3><p>我们上面说了这个系统修饰键，当我们像这样&lt;button type=”text” @click.ctrl=”shout(4)”&gt;</button>绑定了 click 键按下的事件，惊奇的是，我们同时按下几个系统修饰键，比如 ctrl shift 点击，也能触发，可能有些场景我们<strong>只需要或者只能</strong>按一个系统修饰键来触发（像制作一些快捷键的时候），而当我们按下 ctrl 和其他键的时候则无法触发。那就这样写。<br>注意：这个<strong>只是限制系统修饰键</strong>的，像下面这样书写以后你还是可以按下 ctrl + c，ctrl+v 或者 ctrl+普通键 来触发，但是不能按下 ctrl + shift +普通键来触发。</p>
-<pre class=" language-ruby"><code class="language-ruby"><span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token variable">@click</span><span class="token punctuation">.</span>ctrl<span class="token punctuation">.</span>exact<span class="token operator">=</span><span class="token string">"shout(4)"</span><span class="token operator">></span>ok<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
-<p>然后下面这个你可以同时按下 enter+普通键来触发，但是不能按下系统修饰键+enter 来触发。相信你已经能听懂了 8~</p>
-<pre><code>&lt;input type=&quot;text&quot; @keydown.enter.exact=&quot;shout(&#39;我被触发了&#39;)&quot;&gt;</code></pre><h2 id="v-bind-修饰符"><a href="#v-bind-修饰符" class="headerlink" title="v-bind 修饰符"></a>v-bind 修饰符</h2><h3 id="1-gt-sync-2-3-0-新增"><a href="#1-gt-sync-2-3-0-新增" class="headerlink" title="1&gt;.sync(2.3.0+ 新增)"></a>1&gt;.sync(2.3.0+ 新增)</h3><p>在有些情况下，我们可能需要对一个 prop 进行“双向绑定”。不幸的是，真正的双向绑定会带来维护上的问题，因为子组件可以修改父组件，且在父组件和子组件都没有明显的改动来源。我们通常的做法是</p>
-<pre><code>//父亲组件
-&lt;comp :myMessage=&quot;bar&quot; @update:myMessage=&quot;func&quot;&gt;&lt;/comp&gt;
-//js
-func(e){
- this.bar = e;
-}</code></pre><pre><code>//子组件js
-func2(){
-  this.$emit(&#39;update:myMessage&#39;,params);
-}</code></pre><p>现在这个.sync 修饰符就是简化了上面的步骤</p>
-<pre><code>//父组件
-&lt;comp :myMessage.sync=&quot;bar&quot;&gt;&lt;/comp&gt;
-//子组件
-this.$emit(&#39;update:myMessage&#39;,params);</code></pre><p>这样确实会方便很多，但是也有很多需要<strong>注意</strong>的点</p>
-<ol>
-<li>使用 sync 的时候，子组件传递的事件名必须为 update:value，其中 value 必须与子组件中 props 中声明的名称完全一致(如上例中的 myMessage，不能使用 my-message)</li>
-<li>注意带有 .sync 修饰符的 v-bind 不能和表达式一起使用 (例如 v-bind:title.sync=”doc.title + ‘!’” 是无效的)。取而代之的是，你只能提供你想要绑定的属性名，类似 v-model。</li>
-<li>将 v-bind.sync 用在一个字面量的对象上，例如 v-bind.sync=”{ title: doc.title }”，是无法正常工作的，因为在解析一个像这样的复杂表达式的时候，有很多边缘情况需要考虑。</li>
-</ol>
-<h3 id="2-gt-prop"><a href="#2-gt-prop" class="headerlink" title="2&gt;.prop"></a>2&gt;.prop</h3><p>要学习这个修饰符，我们首先要搞懂两个东西的区别。</p>
-<pre><code>Property：节点对象在内存中存储的属性，可以访问和设置。
-Attribute：节点对象的其中一个属性( property )，值是一个对象。
-可以通过点访问法 document.getElementById(&#39;xx&#39;).attributes 或者 document.getElementById(&#39;xx&#39;).getAttributes(&#39;xx&#39;) 读取，通过 document.getElementById(&#39;xx&#39;).setAttribute(&#39;xx&#39;,value) 新增和修改。
-在标签里定义的所有属性包括 HTML 属性和自定义属性都会在 attributes 对象里以键值对的方式存在。</code></pre><p>其实 attribute 和 property 两个单词，翻译出来都是属性，但是《javascript 高级程序设计》将它们翻译为特性和属性，以示区分</p>
-<pre><code>//这里的id,value,style都属于property
-//index属于attribute
-//id、title等既是属性，也是特性。修改属性，其对应的特性会发生改变；修改特性，属性也会改变
-&lt;input id=&quot;uid&quot; title=&quot;title1&quot; value=&quot;1&quot; :index=&quot;index&quot;&gt;
-//input.index === undefined
-//input.attributes.index === this.index</code></pre><p>从上面我们可以看到如果直接使用 v-bind 绑定，则默认会绑定到 dom 节点的 attribute。<br>为了</p>
-<ul>
-<li>通过自定义属性存储变量，避免暴露数据</li>
-<li>防止污染 HTML 结构</li>
-</ul>
-<p>我们可以使用这个修饰符，如下</p>
-<pre><code>&lt;input id=&quot;uid&quot; title=&quot;title1&quot; value=&quot;1&quot; :index.prop=&quot;index&quot;&gt;
-//input.index === this.index
-//input.attributes.index === undefined</code></pre><ul>
-<li><strong>.camel</strong></li>
-</ul>
-<p>由于 HTML 特性是不区分大小写的。</p>
-<pre><code>&lt;svg :viewBox=&quot;viewBox&quot;&gt;&lt;/svg&gt;</code></pre><p>实际上会渲染为</p>
-<pre><code>&lt;svg viewbox=&quot;viewBox&quot;&gt;&lt;/svg&gt;</code></pre><p>这将导致渲染失败，因为 SVG 标签只认 viewBox，却不知道 viewbox 是什么。<br>如果我们使用.camel 修饰符，那它就会被渲染为驼峰名。<br>另，如果你使用字符串模版，则没有这些限制。</p>
-<pre><code>new Vue({
-  template: &#39;&lt;svg :viewBox=&quot;viewBox&quot;&gt;&lt;/svg&gt;&#39;
-})</code></pre><h3 id="vue-使用-element-ui-的-el-input-监听不了键盘事件解决"><a href="#vue-使用-element-ui-的-el-input-监听不了键盘事件解决" class="headerlink" title="vue 使用 element-ui 的 el-input 监听不了键盘事件解决"></a>vue 使用 element-ui 的 el-input 监听不了键盘事件解决</h3><p>vue 使用 element-ui 的 el-input 监听不了键盘事件，原因应该是 element-ui 自身封装了一层 div 在 input 标签外面，把原来的事件隐藏了，情况如下：直接使用标签:</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>账号<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>doLogin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>input</span><span class="token punctuation">></span></span>
-element-ui:
-　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>账号<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter.native</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>doLogin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
-如果你使用了form表单 使用 @keyup.enter.native="doLogin" ,
-两个el-input 键盘事件有效, 如:
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form</span><span class="token punctuation">></span></span>
-　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">autoComplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>on<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>邮箱<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
-　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter.native</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>handleLogin<span class="token punctuation">"</span></span>  <span class="token attr-name">autoComplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>on<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>密码<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
-　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
-　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span><span class="token punctuation">></span></span>
-　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span>  <span class="token attr-name">@click.native.prevent</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>handleLogin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>登录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
-　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form</span><span class="token punctuation">></span></span>
-如果只有一个el-input , 则无效, 需加上@submit.native.prevent才有效,阻值冒泡,默认事件,  如:
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form</span>  <span class="token attr-name">@submit.native.prevent</span><span class="token punctuation">></span></span>
-　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span><span class="token punctuation">></span></span>
-　　　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span>  <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>请输入内容<span class="token punctuation">"</span></span> <span class="token attr-name">@keyup.enter.native</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submitImage<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
-　　<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form</span><span class="token punctuation">></span></span></code></pre>
-<h2 id="文章转载："><a href="#文章转载：" class="headerlink" title="文章转载："></a>文章转载：</h2><p><a href="https://segmentfault.com/a/1190000016786254" target="_blank" rel="noopener">https://segmentfault.com/a/1190000016786254</a></p>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>vue 修饰符</tag>
       </tags>
   </entry>
   <entry>
@@ -6585,7 +6585,7 @@ yum <span class="token operator">-</span>y remove jenkins
 <li><strong>修改目录权限</strong></li>
 </ul>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> chown <span class="token operator">-</span>R root<span class="token punctuation">:</span>root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins
-<span class="token number">2</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> chown <span class="token operator">-</span>R root<span class="token punctuation">:</span>root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>cache<span class="token operator">/</span>jenkins
+<span class="token number">2</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> chown <span class="token operator">-</span>R root<span class="token punctuation">:</span>root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins
 <span class="token number">3</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> chown <span class="token operator">-</span>R root<span class="token punctuation">:</span>root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>jenkins</code></pre>
 <ul>
 <li><strong>为 jenkins 添加 java 安装路径</strong></li>
@@ -6601,8 +6601,10 @@ yum <span class="token operator">-</span>y remove jenkins
     <span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>jvm<span class="token operator">/</span>java<span class="token number">-11</span><span class="token operator">-</span>openjdk<span class="token operator">-</span>amd64
     <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java
      "
+
  <span class="token number">3</span><span class="token operator">></span>在 “<span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java” 前面添加一行：
    <span class="token operator">/</span>usr<span class="token operator">/</span>java<span class="token operator">/</span>jdk1<span class="token number">.8</span><span class="token punctuation">.</span>0_102<span class="token operator">/</span>bin<span class="token operator">/</span>java  （ 就你的java安装路径  ）
+
 
  <span class="token number">4</span><span class="token operator">></span>最终如下<span class="token punctuation">:</span>
    candidates<span class="token operator">=</span>"
@@ -6626,9 +6628,7 @@ yum <span class="token operator">-</span>y remove jenkins
     sudo systemctl daemon<span class="token operator">-</span>reload
 
   #查看 jenkins 信息
-  ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep jenkins
-
-</code></pre>
+  ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep jenkins</code></pre>
 <h2 id="2-首次进入-jenkins-的基本配置"><a href="#2-首次进入-jenkins-的基本配置" class="headerlink" title="2.首次进入 jenkins 的基本配置"></a>2.首次进入 jenkins 的基本配置</h2><h3 id="1-首次进入-Jenkins-需要输入管理员密码，使用以下命令在-xshell-查看初始密码："><a href="#1-首次进入-Jenkins-需要输入管理员密码，使用以下命令在-xshell-查看初始密码：" class="headerlink" title="1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码："></a>1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码：</h3><pre class=" language-javascript"><code class="language-javascript"> cat <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins<span class="token operator">/</span>secrets<span class="token operator">/</span>initialAdminPassword</code></pre>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606044243973-bd75a837-3e16-40fd-8b1d-d87184b7a1e1.png#crop=0&crop=0&crop=1&crop=1&height=361&id=e54f1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=622&originWidth=990&originalType=binary&ratio=1&rotation=0&showTitle=false&size=87633&status=done&style=none&title=&width=574" alt="image.png"></p>
 <blockquote>

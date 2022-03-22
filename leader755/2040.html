@@ -679,7 +679,7 @@ yum <span class="token operator">-</span>y remove jenkins
 <li><strong>修改目录权限</strong></li>
 </ul>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> chown <span class="token operator">-</span>R root<span class="token punctuation">:</span>root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins
-<span class="token number">2</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> chown <span class="token operator">-</span>R root<span class="token punctuation">:</span>root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>cache<span class="token operator">/</span>jenkins
+<span class="token number">2</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> chown <span class="token operator">-</span>R root<span class="token punctuation">:</span>root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins
 <span class="token number">3</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> chown <span class="token operator">-</span>R root<span class="token punctuation">:</span>root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>jenkins</code></pre>
 <ul>
 <li><strong>为 jenkins 添加 java 安装路径</strong></li>
@@ -695,8 +695,10 @@ yum <span class="token operator">-</span>y remove jenkins
     <span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>jvm<span class="token operator">/</span>java<span class="token number">-11</span><span class="token operator">-</span>openjdk<span class="token operator">-</span>amd64
     <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java
      "
+
  <span class="token number">3</span><span class="token operator">></span>在 “<span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java” 前面添加一行：
    <span class="token operator">/</span>usr<span class="token operator">/</span>java<span class="token operator">/</span>jdk1<span class="token number">.8</span><span class="token punctuation">.</span>0_102<span class="token operator">/</span>bin<span class="token operator">/</span>java  （ 就你的java安装路径  ）
+
 
  <span class="token number">4</span><span class="token operator">></span>最终如下<span class="token punctuation">:</span>
    candidates<span class="token operator">=</span>"
@@ -720,9 +722,7 @@ yum <span class="token operator">-</span>y remove jenkins
     sudo systemctl daemon<span class="token operator">-</span>reload
 
   #查看 jenkins 信息
-  ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep jenkins
-
-</code></pre>
+  ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep jenkins</code></pre>
 <h2 id="2-首次进入-jenkins-的基本配置"><a href="#2-首次进入-jenkins-的基本配置" class="headerlink" title="2.首次进入 jenkins 的基本配置"></a>2.首次进入 jenkins 的基本配置</h2><h3 id="1-首次进入-Jenkins-需要输入管理员密码，使用以下命令在-xshell-查看初始密码："><a href="#1-首次进入-Jenkins-需要输入管理员密码，使用以下命令在-xshell-查看初始密码：" class="headerlink" title="1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码："></a>1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码：</h3><pre class=" language-javascript"><code class="language-javascript"> cat <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins<span class="token operator">/</span>secrets<span class="token operator">/</span>initialAdminPassword</code></pre>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606044243973-bd75a837-3e16-40fd-8b1d-d87184b7a1e1.png#crop=0&crop=0&crop=1&crop=1&height=361&id=e54f1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=622&originWidth=990&originalType=binary&ratio=1&rotation=0&showTitle=false&size=87633&status=done&style=none&title=&width=574" alt="image.png"></p>
 <blockquote>
