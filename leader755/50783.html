@@ -747,6 +747,10 @@ firewall<span class="token operator">-</span>cmd <span class="token operator">--
 <span class="token operator">//</span>显示为 ebabled 则为成功
 tomcat<span class="token punctuation">.</span>service            enabled</code></pre>
 <h4 id="7-gt-安全组的策略"><a href="#7-gt-安全组的策略" class="headerlink" title="7&gt;安全组的策略"></a>7&gt;安全组的策略</h4><p><a href="https://www.leader755.com/leader755/56219.html"> 关于安全组策略方面的点击这里了解</a></p>
+<h4 id="8-gt-查看服务启动情况"><a href="#8-gt-查看服务启动情况" class="headerlink" title="8&gt;查看服务启动情况"></a>8&gt;查看服务启动情况</h4><blockquote>
+<p>此条命令具体含义<br>ps:将某个进程显示出来<br>-A 　显示所有程序。<br>-e 　此参数的效果和指定”A”参数相同。<br>-f 　显示 UID,PPIP,C 与 STIME 栏位。<br>grep 命令是查找</p>
+</blockquote>
+<pre class=" language-shell"><code class="language-shell">ps -ef|grep java</code></pre>
 <h2 id="2-安装-nginx"><a href="#2-安装-nginx" class="headerlink" title="2.安装 nginx"></a>2.安装 nginx</h2><h3 id="1-gt-执行命令"><a href="#1-gt-执行命令" class="headerlink" title="1&gt;执行命令"></a>1&gt;执行命令</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token punctuation">.</span>通过yum安装nginx
     <span class="token number">1</span><span class="token operator">></span>将nginx放到yum repro库中
     <span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># rpm <span class="token operator">-</span>ivh http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>nginx<span class="token punctuation">.</span>org<span class="token operator">/</span>packages<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span>noarch<span class="token operator">/</span>RPMS<span class="token operator">/</span>nginx<span class="token operator">-</span>release<span class="token operator">-</span>centos<span class="token number">-7</span><span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">.</span>el7<span class="token punctuation">.</span>ngx<span class="token punctuation">.</span>noarch<span class="token punctuation">.</span>rpm
@@ -1672,7 +1676,7 @@ yum update</code></pre>
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">117.7k</span>&nbsp;字
+        class="white-color">117.8k</span>&nbsp;字
       
       
       
