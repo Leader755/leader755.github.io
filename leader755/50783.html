@@ -6,15 +6,10 @@
   <meta charset="utf-8">
   <meta name="keywords" content="centos7安装jdk ,maven，tomcat，nginx, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
   <meta name="description" content="1.centos7 安装 tomcat1&amp;gt;JDK 安装1、查看系统版本命令
-cat /etc/issue
+java -version
 2、查看 yum 包含的 jdk 版本
-yum search java 或者 yum list java*
-
-
-
-版本
-jre
-">
+yum search java 或者 yum -y list java*
+3、安装 jdk">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -624,7 +619,7 @@ jre
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          2.3k
+          2.4k
         </div>
         
 
@@ -645,39 +640,23 @@ jre
       <div id="articleContent">
 
         <h2 id="1-centos7-安装-tomcat"><a href="#1-centos7-安装-tomcat" class="headerlink" title="1.centos7 安装 tomcat"></a>1.centos7 安装 tomcat</h2><h3 id="1-gt-JDK-安装"><a href="#1-gt-JDK-安装" class="headerlink" title="1&gt;JDK 安装"></a>1&gt;JDK 安装</h3><p>1、查看系统版本命令</p>
-<pre class=" language-ruby"><code class="language-ruby">cat <span class="token operator">/</span>etc<span class="token operator">/</span>issue</code></pre>
+<pre class=" language-ruby"><code class="language-ruby">java <span class="token operator">-</span>version</code></pre>
 <p>2、查看 yum 包含的 jdk 版本</p>
-<pre class=" language-ruby"><code class="language-ruby">yum search java 或者 yum list java<span class="token operator">*</span></code></pre>
-<table>
-<thead>
-<tr>
-<th>版本</th>
-<th>jre</th>
-<th>jdk</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1.8</td>
-<td>java-1.8.0-openjdk.x86_64</td>
-<td>java-1.8.0-openjdk-devel.x86_64</td>
-</tr>
-<tr>
-<td>1.7</td>
-<td>java-1.7.0-openjdk.x86_64</td>
-<td>java-1.7.0-openjdk-devel.x86_64</td>
-</tr>
-<tr>
-<td>1.6</td>
-<td>java-1.6.0-openjdk.x86_64</td>
-<td>java-1.6.0-openjdk-devel.x86_64</td>
-</tr>
-</tbody></table>
+<pre class=" language-ruby"><code class="language-ruby">yum search java 或者 yum <span class="token operator">-</span>y list java<span class="token operator">*</span></code></pre>
 <p>3、安装 jdk</p>
 <blockquote>
+<ul>
+<li>选择一个 java 版本进行安装，这里我们希望安装 java1.8，因为我们的机器是 64 位的，所以选择安装<strong>java-1.8.0-openjdk-devel.x86_64</strong>。 这里有个地方要注意，上图中我用红框圈起来的两个 java 版本，要选择-devel 的安装，因为这个安装的是 jdk，而那个不带-devel 的安装完了其实是 jre。</li>
+<li>执行命令 yum install -y java-1.8.0-openjdk-devel.x86_64。执行完后会看见控制台刷出很多输出。 耐心等待至自动安装完成</li>
+</ul>
 <p>此次选择 java-1.8.0-openjdk-devel.x86_64 : OpenJDK Development Environment</p>
 </blockquote>
-<pre class=" language-ruby"><code class="language-ruby">yum install java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token operator">-</span>devel<span class="token punctuation">.</span>x86_64</code></pre>
-<p>4、配置全局变量<br>打开配置文件,按 insert 进入编辑模式</p>
+<pre class=" language-ruby"><code class="language-ruby">yum install <span class="token operator">-</span>y java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token operator">-</span>devel<span class="token punctuation">.</span>x86_64</code></pre>
+<p>4、配置全局变量</p>
+<blockquote>
+<p>yum 安装的时候，不需要手动修改。</p>
+</blockquote>
+<p>打开配置文件,按 insert 进入编辑模式</p>
 <pre class=" language-ruby"><code class="language-ruby">vi <span class="token operator">/</span>etc<span class="token operator">/</span>profile</code></pre>
 <p>复制以下三行到文件最后一行中，按 esc 退出编辑模式，输入:wq 保存退出（这里的 JAVA_HOME 以自己实际的目录为准）</p>
 <pre class=" language-ruby"><code class="language-ruby">export <span class="token constant">JAVA_HOME</span><span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>jvm<span class="token operator">/</span>java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0.171</span><span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">.</span>b10<span class="token punctuation">.</span>el6_9<span class="token punctuation">.</span>x86_64
@@ -1693,7 +1672,7 @@ yum update</code></pre>
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">117.6k</span>&nbsp;字
+        class="white-color">117.7k</span>&nbsp;字
       
       
       
