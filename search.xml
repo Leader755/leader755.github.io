@@ -4906,7 +4906,8 @@ var fs   <span class="token operator">=</span> <span class="token keyword">requi
   <entry>
     <title>centos7安装jdk ,maven，tomcat，nginx</title>
     <url>/leader755/50783.html</url>
-    <content><![CDATA[<h2 id="1-centos7-安装-tomcat"><a href="#1-centos7-安装-tomcat" class="headerlink" title="1.centos7 安装 tomcat"></a>1.centos7 安装 tomcat</h2><h3 id="1-gt-JDK-安装"><a href="#1-gt-JDK-安装" class="headerlink" title="1&gt;JDK 安装"></a>1&gt;JDK 安装</h3><p>1、查看系统版本命令</p>
+    <content><![CDATA[<p>##</p>
+<h2 id="1-centos7-安装-JDK1-8"><a href="#1-centos7-安装-JDK1-8" class="headerlink" title="1.centos7 安装 JDK1.8"></a>1.centos7 安装 JDK1.8</h2><p>1、查看系统版本命令</p>
 <pre class=" language-ruby"><code class="language-ruby">java <span class="token operator">-</span>version</code></pre>
 <p>2、查看 yum 包含的 jdk 版本</p>
 <pre class=" language-ruby"><code class="language-ruby">yum search java 或者 yum <span class="token operator">-</span>y list java<span class="token operator">*</span></code></pre>
@@ -4933,7 +4934,7 @@ export <span class="token constant">PATH</span><span class="token operator">=</s
 <pre class=" language-ruby"><code class="language-ruby">source <span class="token operator">/</span>etc<span class="token operator">/</span>profile</code></pre>
 <p>5、查看安装 jdk 是否成功</p>
 <pre class=" language-ruby"><code class="language-ruby">java <span class="token operator">-</span>version</code></pre>
-<h3 id="2-gt-maven-安装-非必须"><a href="#2-gt-maven-安装-非必须" class="headerlink" title="2&gt;maven 安装(非必须)"></a>2&gt;maven 安装(非必须)</h3><h4 id="1-gt-下载-maven-安装包资源"><a href="#1-gt-下载-maven-安装包资源" class="headerlink" title="1&gt;下载 maven 安装包资源"></a>1&gt;下载 maven 安装包资源</h4><pre class=" language-bash"><code class="language-bash">1<span class="token operator">></span> //进入指定目录
+<h2 id="2-centos7-安装-maven-安装-非必须"><a href="#2-centos7-安装-maven-安装-非必须" class="headerlink" title="2.centos7 安装 maven 安装(非必须)"></a>2.centos7 安装 maven 安装(非必须)</h2><h3 id="1-gt-下载-maven-安装包资源"><a href="#1-gt-下载-maven-安装包资源" class="headerlink" title="1&gt;下载 maven 安装包资源"></a>1&gt;下载 maven 安装包资源</h3><pre class=" language-bash"><code class="language-bash">1<span class="token operator">></span> //进入指定目录
 <span class="token function">cd</span> /usr/local/
 
 2<span class="token operator">></span>//创建目录
@@ -4944,8 +4945,8 @@ export <span class="token constant">PATH</span><span class="token operator">=</s
 
 4<span class="token operator">></span>//下载远程
 <span class="token function">wget</span> http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo</code></pre>
-<h4 id="2-gt-安装-maven"><a href="#2-gt-安装-maven" class="headerlink" title="2&gt;安装 maven"></a>2&gt;安装 maven</h4><pre class=" language-bash"><code class="language-bash">yum -y <span class="token function">install</span> apache-maven</code></pre>
-<h4 id="3-gt-配置环境变量"><a href="#3-gt-配置环境变量" class="headerlink" title="3&gt;配置环境变量"></a>3&gt;配置环境变量</h4><pre class=" language-bash"><code class="language-bash">1<span class="token operator">></span>编辑
+<h3 id="2-gt-安装-maven"><a href="#2-gt-安装-maven" class="headerlink" title="2&gt;安装 maven"></a>2&gt;安装 maven</h3><pre class=" language-bash"><code class="language-bash">yum -y <span class="token function">install</span> apache-maven</code></pre>
+<h3 id="3-gt-配置环境变量"><a href="#3-gt-配置环境变量" class="headerlink" title="3&gt;配置环境变量"></a>3&gt;配置环境变量</h3><pre class=" language-bash"><code class="language-bash">1<span class="token operator">></span>编辑
 <span class="token function">vi</span> /etc/profile
 
 2<span class="token operator">></span>末尾添加：
@@ -4955,11 +4956,11 @@ export <span class="token constant">PATH</span><span class="token operator">=</s
 3<span class="token operator">></span>使配置生效：
 <span class="token function">source</span> /etc/profile
 </code></pre>
-<h4 id="4-gt-验证是否安装成功"><a href="#4-gt-验证是否安装成功" class="headerlink" title="4&gt;验证是否安装成功"></a>4&gt;验证是否安装成功</h4><pre class=" language-bash"><code class="language-bash">mvn -v</code></pre>
-<h3 id="3-gt-Tomcat-安装"><a href="#3-gt-Tomcat-安装" class="headerlink" title="3&gt;Tomcat 安装"></a>3&gt;Tomcat 安装</h3><blockquote>
+<h3 id="4-gt-验证是否安装成功"><a href="#4-gt-验证是否安装成功" class="headerlink" title="4&gt;验证是否安装成功"></a>4&gt;验证是否安装成功</h3><pre class=" language-bash"><code class="language-bash">mvn -v</code></pre>
+<h2 id="3-centos7-安装-Tomcat"><a href="#3-centos7-安装-Tomcat" class="headerlink" title="3.centos7 安装 Tomcat"></a>3.centos7 安装 Tomcat</h2><blockquote>
 <p>注意安装 Tomcat 前必须要先安装 JDK，JDK 属于基本环境配置，Maven 选择性的装</p>
 </blockquote>
-<h4 id="1-gt-安装-tomcat"><a href="#1-gt-安装-tomcat" class="headerlink" title="1&gt;安装 tomcat"></a>1&gt;安装 tomcat</h4><p>1.yum 安装 tomcat (tomcat 的基础服务)</p>
+<h3 id="1-gt-安装-tomcat"><a href="#1-gt-安装-tomcat" class="headerlink" title="1&gt;安装 tomcat"></a>1&gt;安装 tomcat</h3><p>1.yum 安装 tomcat (tomcat 的基础服务)</p>
 <pre class=" language-ruby"><code class="language-ruby">yum <span class="token operator">-</span>y install tomcat</code></pre>
 <p>2.进入 webapps 文件夹</p>
 <pre class=" language-ruby"><code class="language-ruby">cd <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>tomcat<span class="token operator">/</span>webapps</code></pre>
@@ -4970,11 +4971,11 @@ export <span class="token constant">PATH</span><span class="token operator">=</s
 <p>####</p>
 <p>5.初始化环境的服务器上执行如下命令进行安装（可替代上面的命令）</p>
 <pre class=" language-ruby"><code class="language-ruby">yum install <span class="token operator">-</span>y java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk java<span class="token number">-1.8</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>openjdk<span class="token operator">-</span>devel tomcat tomcat<span class="token operator">-</span>admin<span class="token operator">-</span>webapps tomcat<span class="token operator">-</span>docs<span class="token operator">-</span>webapp tomcat<span class="token operator">-</span>lib tomcat<span class="token operator">-</span>webapps</code></pre>
-<h4 id="2-gt-查看服务器-tomcat-状态"><a href="#2-gt-查看服务器-tomcat-状态" class="headerlink" title="2&gt;查看服务器 tomcat 状态"></a>2&gt;查看服务器 tomcat 状态</h4><pre class=" language-ruby"><code class="language-ruby">systemctl status tomcat</code></pre>
+<h3 id="2-gt-查看服务器-tomcat-状态"><a href="#2-gt-查看服务器-tomcat-状态" class="headerlink" title="2&gt;查看服务器 tomcat 状态"></a>2&gt;查看服务器 tomcat 状态</h3><pre class=" language-ruby"><code class="language-ruby">systemctl status tomcat</code></pre>
 <blockquote>
 <p>dead 为死亡，未运行状态，running（绿色）则是运行状态<img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1604420888230-69aadcbf-166d-4692-82e8-61a42042248c.png#crop=0&crop=0&crop=1&crop=1&height=79&id=Bup67&margin=%5Bobject%20Object%5D&name=image.png&originHeight=158&originWidth=1572&originalType=binary&ratio=1&rotation=0&showTitle=false&size=35683&status=done&style=none&title=&width=786" alt="image.png"></p>
 </blockquote>
-<h4 id="3-gt-tomcat-的启动、终止"><a href="#3-gt-tomcat-的启动、终止" class="headerlink" title="3&gt;tomcat 的启动、终止"></a>3&gt;tomcat 的启动、终止</h4><pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>配置开机启动tomcat
+<h3 id="3-gt-tomcat-的启动、终止"><a href="#3-gt-tomcat-的启动、终止" class="headerlink" title="3&gt;tomcat 的启动、终止"></a>3&gt;tomcat 的启动、终止</h3><pre class=" language-ruby"><code class="language-ruby"><span class="token operator">/</span><span class="token operator">/</span>配置开机启动tomcat
 systemctl enable tomcat
 
 <span class="token operator">/</span><span class="token operator">/</span>启动tomcat
@@ -4985,9 +4986,9 @@ systemctl stop tomcat
 
 <span class="token operator">/</span><span class="token operator">/</span>重启tomcat
 systemctl restart tomcat</code></pre>
-<h4 id="4-gt-卸载-tomcat"><a href="#4-gt-卸载-tomcat" class="headerlink" title="4&gt;卸载 tomcat"></a>4&gt;卸载 tomcat</h4><pre class=" language-ruby"><code class="language-ruby">yum remove tomcat</code></pre>
-<h4 id="5-gt-浏览器访问-Tomcat"><a href="#5-gt-浏览器访问-Tomcat" class="headerlink" title="5&gt;浏览器访问 Tomcat"></a>5&gt;浏览器访问 Tomcat</h4><p>使用浏览器访问 Tomcat，地址 Linux 的： ip+8080(默认端口)。</p>
-<h4 id="6-gt-防火墙开启关闭"><a href="#6-gt-防火墙开启关闭" class="headerlink" title="6&gt;防火墙开启关闭"></a>6&gt;防火墙开启关闭</h4><p>Tomcat 正常启动，但是网页无法访问，而且不报 404 等任何异常。开放 8080 端口或者关闭防火墙，然后重启，重新访问 ： ip+8080。</p>
+<h3 id="4-gt-卸载-tomcat"><a href="#4-gt-卸载-tomcat" class="headerlink" title="4&gt;卸载 tomcat"></a>4&gt;卸载 tomcat</h3><pre class=" language-ruby"><code class="language-ruby">yum remove tomcat</code></pre>
+<h3 id="5-gt-浏览器访问-Tomcat"><a href="#5-gt-浏览器访问-Tomcat" class="headerlink" title="5&gt;浏览器访问 Tomcat"></a>5&gt;浏览器访问 Tomcat</h3><p>使用浏览器访问 Tomcat，地址 Linux 的： ip+8080(默认端口)。</p>
+<h3 id="6-gt-防火墙开启关闭"><a href="#6-gt-防火墙开启关闭" class="headerlink" title="6&gt;防火墙开启关闭"></a>6&gt;防火墙开启关闭</h3><p>Tomcat 正常启动，但是网页无法访问，而且不报 404 等任何异常。开放 8080 端口或者关闭防火墙，然后重启，重新访问 ： ip+8080。</p>
 <blockquote>
 <p>Windows：控制面板—所有控制面板项-—Windows 防火墙—自定义设置<br>     Ubuntu：查看 ufw status（active 激活、inactive 关闭）<br>                      开启关闭 ufw enable|disable<br>                      开启某个端口 ufw allow [端口号]<br>      ＜ CentOs7：防火墙机制 iptables（被淘汰的内容，请自行百度）<br>      ＞＝ CentOs7：1.CentOS7 使用 firewalld 打开关闭防火墙与端口。<br>                         2.systemctl 是 CentOS7 的服务管理工具中主要的工具，它融合之前 service 和 chkconfig 的功能于一体。<br>                        启动： systemctl start firewalld<br>                        查看状态： systemctl status firewalld ( 或者 firewall -cmd state)<br>                        停止： systemctl disable firewalld<br>                        禁用： systemctl stop firewalld<br>                        添加： firewall-cmd –zone=public –add-port=8080/tcp –permanent   （–permanent 永久生效，没有此参数重启后失效）<br>                        重新载入：firewall-cmd –reload</p>
 </blockquote>
@@ -5013,11 +5014,11 @@ firewall<span class="token operator">-</span>cmd <span class="token operator">--
 
 <span class="token operator">//</span>显示为 ebabled 则为成功
 tomcat<span class="token punctuation">.</span>service            enabled</code></pre>
-<h4 id="7-gt-安全组的策略"><a href="#7-gt-安全组的策略" class="headerlink" title="7&gt;安全组的策略"></a>7&gt;安全组的策略</h4><p><a href="https://www.leader755.com/leader755/56219.html"> 关于安全组策略方面的点击这里了解</a></p>
-<h4 id="8-gt-查看服务启动情况"><a href="#8-gt-查看服务启动情况" class="headerlink" title="8&gt;查看服务启动情况"></a>8&gt;查看服务启动情况</h4><blockquote>
+<h3 id="7-gt-安全组的策略"><a href="#7-gt-安全组的策略" class="headerlink" title="7&gt;安全组的策略"></a>7&gt;安全组的策略</h3><p><a href="https://www.leader755.com/leader755/56219.html"> 关于安全组策略方面的点击这里了解</a></p>
+<h3 id="8-gt-查看服务启动情况"><a href="#8-gt-查看服务启动情况" class="headerlink" title="8&gt;查看服务启动情况"></a>8&gt;查看服务启动情况</h3><blockquote>
 <p>此条命令具体含义<br>ps:将某个进程显示出来<br>-A 　显示所有程序。<br>-e 　此参数的效果和指定”A”参数相同。<br>-f 　显示 UID,PPIP,C 与 STIME 栏位。<br>grep 命令是查找</p>
 </blockquote>
-<pre class=" language-shell"><code class="language-shell">ps -ef|grep java</code></pre>
+<pre class=" language-shell"><code class="language-shell">ps -ef|grep tomcat</code></pre>
 <h2 id="2-安装-nginx"><a href="#2-安装-nginx" class="headerlink" title="2.安装 nginx"></a>2.安装 nginx</h2><h3 id="1-gt-执行命令"><a href="#1-gt-执行命令" class="headerlink" title="1&gt;执行命令"></a>1&gt;执行命令</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token punctuation">.</span>通过yum安装nginx
     <span class="token number">1</span><span class="token operator">></span>将nginx放到yum repro库中
     <span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># rpm <span class="token operator">-</span>ivh http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>nginx<span class="token punctuation">.</span>org<span class="token operator">/</span>packages<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span>noarch<span class="token operator">/</span>RPMS<span class="token operator">/</span>nginx<span class="token operator">-</span>release<span class="token operator">-</span>centos<span class="token number">-7</span><span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">.</span>el7<span class="token punctuation">.</span>ngx<span class="token punctuation">.</span>noarch<span class="token punctuation">.</span>rpm
