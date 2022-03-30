@@ -605,7 +605,7 @@ docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软�
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2023-10-01
+          2022-03-30
         </div>
         
 
@@ -619,7 +619,7 @@ docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软�
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          292
+          260
         </div>
         
 
@@ -647,8 +647,7 @@ docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软�
 </ul>
 <pre class=" language-shell"><code class="language-shell">docker pull jenkins/jenkins:2.83</code></pre>
 <h2 id="2-查看-jenkins-是否下载成功"><a href="#2-查看-jenkins-是否下载成功" class="headerlink" title="2.查看 jenkins 是否下载成功"></a>2.查看 jenkins 是否下载成功</h2><pre class=" language-shell"><code class="language-shell">docker images</code></pre>
-<h2 id="3-安装-jenkins"><a href="#3-安装-jenkins" class="headerlink" title="3.安装 jenkins"></a>3.安装 jenkins</h2><h3 id="1-gt-创建文件夹"><a href="#1-gt-创建文件夹" class="headerlink" title="1&gt;创建文件夹"></a>1&gt;创建文件夹</h3><pre class=" language-shell"><code class="language-shell">mkdir /home/jenkins
-</code></pre>
+<h2 id="3-安装-jenkins"><a href="#3-安装-jenkins" class="headerlink" title="3.安装 jenkins"></a>3.安装 jenkins</h2><h3 id="1-gt-创建文件夹"><a href="#1-gt-创建文件夹" class="headerlink" title="1&gt;创建文件夹"></a>1&gt;创建文件夹</h3><pre class=" language-shell"><code class="language-shell">mkdir /home/jenkins</code></pre>
 <h3 id="2-gt-给予权限"><a href="#2-gt-给予权限" class="headerlink" title="2&gt;给予权限"></a>2&gt;给予权限</h3><pre class=" language-shell"><code class="language-shell">ls -nd jenkins/   #查看文件权限
 
 chown -R 1000:1000 jenkins/    给uid为1000的权限
@@ -657,11 +656,11 @@ chown -R 1000:1000 jenkins/    给uid为1000的权限
 <h2 id="5-查看-jenkins-是否启动"><a href="#5-查看-jenkins-是否启动" class="headerlink" title="5.查看 jenkins 是否启动"></a>5.查看 jenkins 是否启动</h2><pre class=" language-shell"><code class="language-shell">ps -ef | grep jenkins   #jenkins 进程
 
 docker logs jenkins      #查看启动日志</code></pre>
-<h2 id="6-登录-jenkins"><a href="#6-登录-jenkins" class="headerlink" title="6.登录 jenkins"></a>6.登录 jenkins</h2><p>1&gt;在命令框输入命令查看登录密码</p>
-<pre class=" language-shell"><code class="language-shell">cat /home/jenkins/secrets/initialAdminPassword</code></pre>
-<p>2&gt;浏览器访问<br><a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">ip</a>+端口号</p>
-<h2 id="7-启动之后步骤"><a href="#7-启动之后步骤" class="headerlink" title="7.启动之后步骤"></a>7.启动之后步骤</h2><p>如果启动成功之后，安装插件时出现 离线状态，需要作如下处理。</p>
-<p>在浏览器中访问 <a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">http://ip</a>:端口号/pluginManager/advanced ，出现新页面找到如下页面选项，修改地址。将 https 修改为 http 即可，然后提交(submit)。最后再重启 jenkins，既可以重新安装插件了。</p>
+<h2 id="6-访问-jenkins"><a href="#6-访问-jenkins" class="headerlink" title="6.访问 jenkins"></a>6.访问 jenkins</h2><h3 id="1-gt-在-xshell-中输入命令查看登录密码"><a href="#1-gt-在-xshell-中输入命令查看登录密码" class="headerlink" title="1&gt;在 xshell 中输入命令查看登录密码"></a>1&gt;在 xshell 中输入命令查看登录密码</h3><pre class=" language-shell"><code class="language-shell">cat /home/jenkins/secrets/initialAdminPassword</code></pre>
+<h3 id="2-gt-浏览器中访问-jenkins"><a href="#2-gt-浏览器中访问-jenkins" class="headerlink" title="2&gt;浏览器中访问 jenkins"></a>2&gt;浏览器中访问 jenkins</h3><p><a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">ip</a>+端口号</p>
+<h2 id="7-jenkins-启动后的配置（必看）"><a href="#7-jenkins-启动后的配置（必看）" class="headerlink" title="7.jenkins 启动后的配置（必看）"></a>7.jenkins 启动后的配置（必看）</h2><blockquote>
+<p>jenkins 启动后，会遇到各种问题。比如下载插件慢，跨域页面 403，中文汉化等相关问题都可以在此篇文章找到解决方法，<a href="https://www.yuque.com/leader755/blog/tlpb2o" target="_blank" rel="noopener">jenkins 基本配置</a>。</p>
+</blockquote>
 
       </div>
       <hr />
@@ -1168,69 +1167,9 @@ docker logs jenkins      #查看启动日志</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/leader755/22057.html">
-                    <div class="card-image">
-                        
-                        
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/2.jpg" class="responsive-img" alt="docker安装 jenkins"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/2.jpg" class="responsive-img" alt="docker安装 jenkins">
-                        
-                        <span class="card-title">docker安装 jenkins</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            准备条件
-基于 docker 进行安装软件，首先需要有 docker 环境，centos7 搭建 docker 教程。
-
-1.下载 jenkins 镜像
-docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软件会失败。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/linux/" class="post-category">
-                                    linux
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/jenkins/">
-                        <span class="chip bg-color">jenkins</span>
-                    </a>
-                    
-                    <a href="/tags/centos7/">
-                        <span class="chip bg-color">centos7</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/leader755/21487.html">
                     <div class="card-image">
@@ -1254,9 +1193,9 @@ wget -O /etc/yum.repos.d/C
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1264,6 +1203,59 @@ wget -O /etc/yum.repos.d/C
                             
                         </span>
                     </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/leader755/13594.html">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/17.jpg" class="responsive-img" alt="jenkins配置"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/17.jpg" class="responsive-img" alt="jenkins配置">
+                        
+                        <span class="card-title">jenkins配置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1.首次进入 jenkins 的基本配置1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码： cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/jenkins/" class="post-category">
+                                    jenkins
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/jenkins-%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">jenkins 配置</span>
+                    </a>
+                    
                 </div>
                 
             </div>

@@ -912,8 +912,7 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
 </ul>
 <pre class=" language-shell"><code class="language-shell">docker pull jenkins/jenkins:2.83</code></pre>
 <h2 id="2-查看-jenkins-是否下载成功"><a href="#2-查看-jenkins-是否下载成功" class="headerlink" title="2.查看 jenkins 是否下载成功"></a>2.查看 jenkins 是否下载成功</h2><pre class=" language-shell"><code class="language-shell">docker images</code></pre>
-<h2 id="3-安装-jenkins"><a href="#3-安装-jenkins" class="headerlink" title="3.安装 jenkins"></a>3.安装 jenkins</h2><h3 id="1-gt-创建文件夹"><a href="#1-gt-创建文件夹" class="headerlink" title="1&gt;创建文件夹"></a>1&gt;创建文件夹</h3><pre class=" language-shell"><code class="language-shell">mkdir /home/jenkins
-</code></pre>
+<h2 id="3-安装-jenkins"><a href="#3-安装-jenkins" class="headerlink" title="3.安装 jenkins"></a>3.安装 jenkins</h2><h3 id="1-gt-创建文件夹"><a href="#1-gt-创建文件夹" class="headerlink" title="1&gt;创建文件夹"></a>1&gt;创建文件夹</h3><pre class=" language-shell"><code class="language-shell">mkdir /home/jenkins</code></pre>
 <h3 id="2-gt-给予权限"><a href="#2-gt-给予权限" class="headerlink" title="2&gt;给予权限"></a>2&gt;给予权限</h3><pre class=" language-shell"><code class="language-shell">ls -nd jenkins/   #查看文件权限
 
 chown -R 1000:1000 jenkins/    给uid为1000的权限
@@ -922,11 +921,11 @@ chown -R 1000:1000 jenkins/    给uid为1000的权限
 <h2 id="5-查看-jenkins-是否启动"><a href="#5-查看-jenkins-是否启动" class="headerlink" title="5.查看 jenkins 是否启动"></a>5.查看 jenkins 是否启动</h2><pre class=" language-shell"><code class="language-shell">ps -ef | grep jenkins   #jenkins 进程
 
 docker logs jenkins      #查看启动日志</code></pre>
-<h2 id="6-登录-jenkins"><a href="#6-登录-jenkins" class="headerlink" title="6.登录 jenkins"></a>6.登录 jenkins</h2><p>1&gt;在命令框输入命令查看登录密码</p>
-<pre class=" language-shell"><code class="language-shell">cat /home/jenkins/secrets/initialAdminPassword</code></pre>
-<p>2&gt;浏览器访问<br><a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">ip</a>+端口号</p>
-<h2 id="7-启动之后步骤"><a href="#7-启动之后步骤" class="headerlink" title="7.启动之后步骤"></a>7.启动之后步骤</h2><p>如果启动成功之后，安装插件时出现 离线状态，需要作如下处理。</p>
-<p>在浏览器中访问 <a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">http://ip</a>:端口号/pluginManager/advanced ，出现新页面找到如下页面选项，修改地址。将 https 修改为 http 即可，然后提交(submit)。最后再重启 jenkins，既可以重新安装插件了。</p>
+<h2 id="6-访问-jenkins"><a href="#6-访问-jenkins" class="headerlink" title="6.访问 jenkins"></a>6.访问 jenkins</h2><h3 id="1-gt-在-xshell-中输入命令查看登录密码"><a href="#1-gt-在-xshell-中输入命令查看登录密码" class="headerlink" title="1&gt;在 xshell 中输入命令查看登录密码"></a>1&gt;在 xshell 中输入命令查看登录密码</h3><pre class=" language-shell"><code class="language-shell">cat /home/jenkins/secrets/initialAdminPassword</code></pre>
+<h3 id="2-gt-浏览器中访问-jenkins"><a href="#2-gt-浏览器中访问-jenkins" class="headerlink" title="2&gt;浏览器中访问 jenkins"></a>2&gt;浏览器中访问 jenkins</h3><p><a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">ip</a>+端口号</p>
+<h2 id="7-jenkins-启动后的配置（必看）"><a href="#7-jenkins-启动后的配置（必看）" class="headerlink" title="7.jenkins 启动后的配置（必看）"></a>7.jenkins 启动后的配置（必看）</h2><blockquote>
+<p>jenkins 启动后，会遇到各种问题。比如下载插件慢，跨域页面 403，中文汉化等相关问题都可以在此篇文章找到解决方法，<a href="https://www.yuque.com/leader755/blog/tlpb2o" target="_blank" rel="noopener">jenkins 基本配置</a>。</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>linux</category>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2022-03-30T13:56:53.555Z</updated>
+  <updated>2022-03-30T14:05:03.465Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>centos7安装docker</title>
+    <link href="https://www.leader755.com/leader755/21487.html"/>
+    <id>https://www.leader755.com/leader755/21487.html</id>
+    <published>2022-03-30T14:05:03.465Z</published>
+    <updated>2022-03-30T14:05:03.465Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;修改-yum-源改成-阿里云&quot;&gt;&lt;a href=&quot;#修改-yum-源改成-阿里云&quot; class=&quot;headerlink&quot; title=&quot;修改 yum 源改成 阿里云&quot;&gt;&lt;/a&gt;修改 yum 源改成 阿里云&lt;/h4&gt;&lt;p&gt;1、下载 wget&lt;/p&gt;
+&lt;pre
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>docker安装 jenkins</title>
     <link href="https://www.leader755.com/leader755/22057.html"/>
     <id>https://www.leader755.com/leader755/22057.html</id>
-    <published>2023-10-01T13:55:23.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <published>2022-03-30T13:55:23.000Z</published>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -47,35 +71,11 @@
   </entry>
   
   <entry>
-    <title>centos7安装docker</title>
-    <link href="https://www.leader755.com/leader755/21487.html"/>
-    <id>https://www.leader755.com/leader755/21487.html</id>
-    <published>2022-03-30T13:56:53.555Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;修改-yum-源改成-阿里云&quot;&gt;&lt;a href=&quot;#修改-yum-源改成-阿里云&quot; class=&quot;headerlink&quot; title=&quot;修改 yum 源改成 阿里云&quot;&gt;&lt;/a&gt;修改 yum 源改成 阿里云&lt;/h4&gt;&lt;p&gt;1、下载 wget&lt;/p&gt;
-&lt;pre
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>jenkins配置</title>
     <link href="https://www.leader755.com/leader755/13594.html"/>
     <id>https://www.leader755.com/leader755/13594.html</id>
     <published>2022-03-30T13:55:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -102,7 +102,7 @@
     <link href="https://www.leader755.com/leader755/58434.html"/>
     <id>https://www.leader755.com/leader755/58434.html</id>
     <published>2022-03-20T12:25:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -131,7 +131,7 @@
     <link href="https://www.leader755.com/leader755/59816.html"/>
     <id>https://www.leader755.com/leader755/59816.html</id>
     <published>2022-03-14T10:48:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -161,7 +161,7 @@
     <link href="https://www.leader755.com/leader755/54576.html"/>
     <id>https://www.leader755.com/leader755/54576.html</id>
     <published>2022-03-08T11:55:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -191,7 +191,7 @@
     <link href="https://www.leader755.com/leader755/16745.html"/>
     <id>https://www.leader755.com/leader755/16745.html</id>
     <published>2022-03-02T00:07:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -220,7 +220,7 @@
     <link href="https://www.leader755.com/leader755/39615.html"/>
     <id>https://www.leader755.com/leader755/39615.html</id>
     <published>2022-02-16T11:05:41.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -247,7 +247,7 @@
     <link href="https://www.leader755.com/leader755/62737.html"/>
     <id>https://www.leader755.com/leader755/62737.html</id>
     <published>2022-02-05T17:24:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -275,7 +275,7 @@
     <link href="https://www.leader755.com/leader755/33285.html"/>
     <id>https://www.leader755.com/leader755/33285.html</id>
     <published>2022-02-04T13:38:23.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -302,7 +302,7 @@
     <link href="https://www.leader755.com/leader755/33649.html"/>
     <id>https://www.leader755.com/leader755/33649.html</id>
     <published>2021-10-19T11:05:41.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -334,7 +334,7 @@
     <link href="https://www.leader755.com/leader755/60370.html"/>
     <id>https://www.leader755.com/leader755/60370.html</id>
     <published>2021-09-22T06:55:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -363,7 +363,7 @@
     <link href="https://www.leader755.com/leader755/32104.html"/>
     <id>https://www.leader755.com/leader755/32104.html</id>
     <published>2021-07-25T17:24:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -501,7 +501,7 @@
     <link href="https://www.leader755.com/leader755/58426.html"/>
     <id>https://www.leader755.com/leader755/58426.html</id>
     <published>2021-05-16T11:55:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -531,7 +531,7 @@
     <link href="https://www.leader755.com/leader755/10309.html"/>
     <id>https://www.leader755.com/leader755/10309.html</id>
     <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
@@ -560,7 +560,7 @@
     <link href="https://www.leader755.com/leader755/1179.html"/>
     <id>https://www.leader755.com/leader755/1179.html</id>
     <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2022-03-30T13:56:53.555Z</updated>
+    <updated>2022-03-30T14:05:03.465Z</updated>
     
     <summary type="html">
     
