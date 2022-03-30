@@ -5,12 +5,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="keywords" content="centos7安装docker, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
-  <meta name="description" content="修改 yum 源改成 阿里云1、下载 wget
-yum install wget -y
-2、创建目录
-mkdir -p  /etc/yum.repos.d
-3、下载阿里云 yum 源配置
-wget -O /etc/yum.repos.d/C">
+  <meta name="description" content="1.什么是 Dcoker
+Docker 包括三个基本概念：
+
+镜像（Image）：Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -576,11 +574,24 @@ wget -O /etc/yum.repos.d/C">
         <div class="col s7">
           
           <div class="article-tag">
-            <span class="chip bg-color">无标签</span>
+            
+            <a href="/tags/centos7/">
+              <span class="chip bg-color">centos7</span>
+            </a>
+            
           </div>
           
         </div>
         <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/docker/" class="post-category">
+              docker
+            </a>
+            
+          </div>
           
         </div>
       </div>
@@ -603,14 +614,14 @@ wget -O /etc/yum.repos.d/C">
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          208
+          847
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          1 分
+          3 分
         </div>
         
 
@@ -623,7 +634,15 @@ wget -O /etc/yum.repos.d/C">
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <h4 id="修改-yum-源改成-阿里云"><a href="#修改-yum-源改成-阿里云" class="headerlink" title="修改 yum 源改成 阿里云"></a>修改 yum 源改成 阿里云</h4><p>1、下载 wget</p>
+        <h2 id="1-什么是-Dcoker"><a href="#1-什么是-Dcoker" class="headerlink" title="1.什么是 Dcoker"></a>1.什么是 Dcoker</h2><blockquote>
+<p>Docker 包括三个基本概念：</p>
+<ul>
+<li>镜像（Image）：Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。</li>
+<li>容器（Container）：镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的 类 和 实例 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。</li>
+<li>仓库（Repository）：仓库（Repository）类似 Git 的远程仓库，集中存放镜像文件。</li>
+</ul>
+</blockquote>
+<h2 id="2-修改-yum-源"><a href="#2-修改-yum-源" class="headerlink" title="2.修改 yum 源"></a>2.修改 yum 源</h2><p>1、下载 wget</p>
 <pre class=" language-shell"><code class="language-shell">yum install wget -y</code></pre>
 <p>2、创建目录</p>
 <pre class=" language-shell"><code class="language-shell">mkdir -p  /etc/yum.repos.d</code></pre>
@@ -631,27 +650,107 @@ wget -O /etc/yum.repos.d/C">
 <pre class=" language-shell"><code class="language-shell">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</code></pre>
 <p>4、更新缓存</p>
 <pre class=" language-shell"><code class="language-shell">yum clean all yum makecache</code></pre>
-<h2 id="安装-docker"><a href="#安装-docker" class="headerlink" title="安装 docker"></a>安装 docker</h2><p>1、安装前置条件</p>
-<blockquote>
-<p>docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是 2.x，需要升级 linux 内核</p>
+<h2 id="3-安装-docker"><a href="#3-安装-docker" class="headerlink" title="3.安装 docker"></a>3.安装 docker</h2><h3 id="1、安装前置条件"><a href="#1、安装前置条件" class="headerlink" title="1、安装前置条件"></a>1、安装前置条件</h3><blockquote>
+<p>docker 要求 Linux 内核要 3.1.0 以上版本，如果 centos6.x 内核是 2.x，需要升级 linux 内核</p>
 </blockquote>
-<p>2、安装步骤<br>1）升级本地 yum 包</p>
-<pre class=" language-shell"><code class="language-shell">yum update</code></pre>
-<p>2） 安装工具集</p>
+<pre class=" language-shell"><code class="language-shell">uname -r  #查看内核版本
+yum update #内核版本低于3.10,使用yum update更新到最新</code></pre>
+<h3 id="2、安装步骤"><a href="#2、安装步骤" class="headerlink" title="2、安装步骤"></a>2、安装步骤</h3><h4 id="1）升级本地-yum-包"><a href="#1）升级本地-yum-包" class="headerlink" title="1）升级本地 yum 包"></a>1）升级本地 yum 包</h4><pre class=" language-shell"><code class="language-shell">yum update</code></pre>
+<h4 id="2）-安装工具集"><a href="#2）-安装工具集" class="headerlink" title="2） 安装工具集"></a>2） 安装工具集</h4><blockquote>
+<p>安装需要的软件包， yum-util 提供 yum-config-manager 功能，另外两个是 devicemapper 驱动依赖的。</p>
+</blockquote>
 <pre class=" language-shell"><code class="language-shell">yum install -y yum-utils device-mapper-persistent-data lvm2</code></pre>
-<p>3）安装阿里云 docker 源</p>
-<pre class=" language-shell"><code class="language-shell">sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</code></pre>
-<p>4）更新 yum 缓存</p>
-<pre class=" language-shell"><code class="language-shell">yum makecache fast yum clean  all</code></pre>
-<p>5）安装 docker</p>
-<pre class=" language-shell"><code class="language-shell">yum -y install docker-ce</code></pre>
-<p>6）启动 docker 服务</p>
-<pre class=" language-shell"><code class="language-shell">service docker start</code></pre>
-<p>7）查看 docker 版本</p>
-<pre class=" language-shell"><code class="language-shell">docker -v</code></pre>
-<p>8）开机启动 docker 服务</p>
-<pre class=" language-shell"><code class="language-shell">systemctl enable docker.service</code></pre>
+<h4 id="3）设置-docker-阿里云源"><a href="#3）设置-docker-阿里云源" class="headerlink" title="3）设置 docker 阿里云源"></a>3）设置 docker 阿里云源</h4><pre class=" language-shell"><code class="language-shell">sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</code></pre>
+<h4 id="4）更新-yum-缓存"><a href="#4）更新-yum-缓存" class="headerlink" title="4）更新 yum 缓存"></a>4）更新 yum 缓存</h4><pre class=" language-shell"><code class="language-shell">yum makecache fast yum clean  all</code></pre>
+<h4 id="5）安装-docker"><a href="#5）安装-docker" class="headerlink" title="5）安装 docker"></a>5）安装 docker</h4><pre class=" language-shell"><code class="language-shell">//安装最新稳定版本
+yum -y install docker-ce
 
+//安装指定稳定版本
+yum list docker-ce --showduplicates | sort -r  #查看所有仓库中所有docker版本
+
+yum install docker-ce-version   #例如sudo yum install docker-ce-18.03.0.ce</code></pre>
+<h4 id="6）卸载-docker"><a href="#6）卸载-docker" class="headerlink" title="6）卸载 docker"></a>6）卸载 docker</h4><pre class=" language-shell"><code class="language-shell">sudo yum remove docker</code></pre>
+<h4 id="7）查看-docker-版本"><a href="#7）查看-docker-版本" class="headerlink" title="7）查看 docker 版本"></a>7）查看 docker 版本</h4><pre class=" language-shell"><code class="language-shell">docker -v</code></pre>
+<h4 id="8）启动-docker-服务并加入开机启动"><a href="#8）启动-docker-服务并加入开机启动" class="headerlink" title="8）启动 docker 服务并加入开机启动"></a>8）启动 docker 服务并加入开机启动</h4><pre class=" language-shell"><code class="language-shell">
+//设置开机自启
+systemctl enable docker.service
+
+//启动docker
+ systemctl start docker
+
+//关闭docker
+ systemctl stop docker
+
+//重启docker服务
+service docker restart
+
+//关闭docker服务
+ service docker stop</code></pre>
+<h2 id="4-docker-的基本操作"><a href="#4-docker-的基本操作" class="headerlink" title="4.docker 的基本操作"></a>4.docker 的基本操作</h2><h3 id="1-gt-常用命令"><a href="#1-gt-常用命令" class="headerlink" title="1&gt;常用命令"></a>1&gt;常用命令</h3><p>##</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1648649161250-ab6e9cef-a4b5-4385-a5ce-986111601caf.png#clientId=u2bcb8807-f8b9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=479&id=uf149ecb3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=958&originWidth=1942&originalType=binary&ratio=1&rotation=0&showTitle=false&size=458982&status=done&style=none&taskId=u50c7c2f4-4ee3-414b-a37c-9bc734f13cd&title=&width=971" alt="image.png"></p>
+<h3 id="2-gt-镜像仓库"><a href="#2-gt-镜像仓库" class="headerlink" title="2&gt;镜像仓库"></a>2&gt;镜像仓库</h3><blockquote>
+<p><a href="https://hub.docker.com/search?q=&type=image" target="_blank" rel="noopener">Docker Hub</a> 镜像仓库</p>
+</blockquote>
+<pre class=" language-shell"><code class="language-shell">//检索镜像
+docker search 关键字
+
+//拉取镜像
+docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]</code></pre>
+<h3 id="3-gt-镜像"><a href="#3-gt-镜像" class="headerlink" title="3&gt;镜像"></a>3&gt;镜像</h3><h4 id="a-gt-镜像管理"><a href="#a-gt-镜像管理" class="headerlink" title="a&gt;镜像管理"></a>a&gt;镜像管理</h4><pre class=" language-shell"><code class="language-shell">//列出镜像
+docker image ls
+docker images
+
+//删除指定镜像
+docker rmi <镜像Id>
+
+//将镜像保存为归档文件
+docker save
+
+//导入镜像
+docker load</code></pre>
+<h4 id="b-gt-镜像构建"><a href="#b-gt-镜像构建" class="headerlink" title="b&gt;镜像构建"></a>b&gt;镜像构建</h4><pre class=" language-shell"><code class="language-shell"> docker build</code></pre>
+<h4 id="c-gt-镜像运行"><a href="#c-gt-镜像运行" class="headerlink" title="c&gt;镜像运行"></a>c&gt;镜像运行</h4><blockquote>
+<p>镜像运行，就是新建并运行一个容器。</p>
+</blockquote>
+<pre class=" language-shell"><code class="language-shell"> docker run [镜像ID]</code></pre>
+<h3 id="4-gt-容器"><a href="#4-gt-容器" class="headerlink" title="4&gt;容器"></a>4&gt;容器</h3><h4 id="a-gt-容器生命周期"><a href="#a-gt-容器生命周期" class="headerlink" title="a&gt;.容器生命周期"></a>a&gt;.容器生命周期</h4><blockquote>
+<ul>
+<li>启动：启动容器有两种方式，一种是基于镜像新建一个容器并启动，另外一个是将在终止状态（stopped）的容器重新启动。</li>
+</ul>
+</blockquote>
+<ul>
+<li>启动容器</li>
+</ul>
+<pre class=" language-shell"><code class="language-shell"> #新建并启动
+ docker run [镜像名/镜像ID]
+
+#启动已终止容器
+ docker start [容器ID]</code></pre>
+<ul>
+<li>查看容器</li>
+</ul>
+<pre class=" language-shell"><code class="language-shell"> # 列出本机运行的容器
+ docker ps
+
+ # 列出本机所有的容器（包括停止和运行）
+ docker ps -a</code></pre>
+<ul>
+<li>停止容器</li>
+</ul>
+<pre class=" language-shell"><code class="language-shell"> # 停止运行的容器
+ docker stop [容器ID]
+
+ # 杀死容器进程
+ docker kill [容器ID]</code></pre>
+<ul>
+<li>重启容器</li>
+</ul>
+<pre class=" language-shell"><code class="language-shell"> docker restart [容器ID]</code></pre>
+<ul>
+<li>删除容器</li>
+</ul>
+<pre class=" language-shell"><code class="language-shell">docker rm [容器ID]</code></pre>
+<h4 id="b-gt"><a href="#b-gt" class="headerlink" title="b&gt;"></a>b&gt;</h4>
       </div>
       <hr />
 
@@ -713,7 +812,11 @@ wget -O /etc/yum.repos.d/C">
         <div class="post-meta__tag-list" style="display: inline-block;">
           
           <div class="article-tag">
-            <span class="chip bg-color">无标签</span>
+            
+            <a href="/tags/centos7/">
+              <span class="chip bg-color">centos7</span>
+            </a>
+            
           </div>
           
         </div>
@@ -1167,12 +1270,10 @@ wget -O /etc/yum.repos.d/C">
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            修改 yum 源改成 阿里云1、下载 wget
-yum install wget -y
-2、创建目录
-mkdir -p  /etc/yum.repos.d
-3、下载阿里云 yum 源配置
-wget -O /etc/yum.repos.d/C
+                            1.什么是 Dcoker
+Docker 包括三个基本概念：
+
+镜像（Image）：Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户
                         
                     </div>
                     <div class="publish-info">
@@ -1181,13 +1282,25 @@ wget -O /etc/yum.repos.d/C
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            leader755
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/docker/" class="post-category">
+                                    docker
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/centos7/">
+                        <span class="chip bg-color">centos7</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1237,12 +1350,12 @@ docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jenkins/">
-                        <span class="chip bg-color">jenkins</span>
-                    </a>
-                    
                     <a href="/tags/centos7/">
                         <span class="chip bg-color">centos7</span>
+                    </a>
+                    
+                    <a href="/tags/jenkins/">
+                        <span class="chip bg-color">jenkins</span>
                     </a>
                     
                 </div>
@@ -1397,7 +1510,7 @@ docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软�
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">118.3k</span>&nbsp;字
+        class="white-color">119k</span>&nbsp;字
       
       
       
