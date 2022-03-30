@@ -902,6 +902,36 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
 ]]></content>
   </entry>
   <entry>
+    <title>docker安装 jenkins</title>
+    <url>/leader755/22057.html</url>
+    <content><![CDATA[<p>基于 docker 进行安装 软件，首先需要有 docker 环境。<br>1.docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装 软件会失败(亲测)。</p>
+<pre class=" language-shell"><code class="language-shell">docker pull jenkins/jenkins:2.83</code></pre>
+<p>2.查看 jenkins 是否下载成功</p>
+<pre class=" language-shell"><code class="language-shell">docker images</code></pre>
+<p>3.运行 jenkins</p>
+<pre class=" language-shell"><code class="language-shell">mkdir /home/jenkins          创建文件夹
+
+ls -nd jenkins/                  查看文件权限
+
+cd /home             进入
+
+chown -R 1000:1000 jenkins/    给uid为1000的权限
+
+//启动jenkins
+docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v /home/jenkins:/var/jenkins_home jenkins/jenkins:2.83</code></pre>
+<p>4.查看 jenkins 是否启动</p>
+<pre class=" language-shell"><code class="language-shell">ps -ef | grep jenkins
+
+docker logs jenkins  查看启动日志
+
+</code></pre>
+<p>5.登录 jenkins<br>在命令框输入命令查看登录密码</p>
+<pre class=" language-shell"><code class="language-shell">cat /home/jenkins/secrets/initialAdminPassword</code></pre>
+<p>如果启动成功之后，安装插件时出现 离线状态，需要作如下处理。</p>
+<p>在浏览器中访问 <a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">http://ip</a>:端口号/pluginManager/advanced ，出现新页面找到如下页面选项，修改地址。将 https 修改为 http 即可，然后提交(submit)。最后再重启 jenkins，既可以重新安装插件了。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>halo博客配置oss 云存储</title>
     <url>/leader755/36047.html</url>
     <content><![CDATA[<p>##</p>

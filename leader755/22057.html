@@ -4,9 +4,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="4.mac 上使用 vi, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
-  <meta name="description" content="上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。
-如果是 vi，则：Esc 退出编辑模式，输入以下命令：:wq 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）:w 保存但不退">
+  <meta name="keywords" content="docker安装 jenkins, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
+  <meta name="description" content="基于 docker 进行安装 软件，首先需要有 docker 环境。1.docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装 软件会失败(亲测)。
+docker pull jenkins/jenkins:2.83
+2.">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +17,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google-site-verification" content="dUxZtBuXm550K6pq70-LL7yu7wQQHwvXpvMF8MwMQBU" />
-  <title>4.mac 上使用 vi | leader755 Blogs</title>
+  <title>docker安装 jenkins | leader755 Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
@@ -449,12 +450,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/2.jpg')">
   <div class="container" style="right: 0px;left: 0px;">
     <div class="row">
       <div class="col s12 m12 l12">
         <div class="brand">
-          <h1 class="description center-align post-title">4.mac 上使用 vi</h1>
+          <h1 class="description center-align post-title">docker安装 jenkins</h1>
         </div>
       </div>
     </div>
@@ -572,28 +573,11 @@
         <div class="col s7">
           
           <div class="article-tag">
-            
-            <a href="/tags/mac/">
-              <span class="chip bg-color">mac</span>
-            </a>
-            
-            <a href="/tags/vi/">
-              <span class="chip bg-color">vi</span>
-            </a>
-            
+            <span class="chip bg-color">无标签</span>
           </div>
           
         </div>
         <div class="col s5 right-align">
-          
-          <div class="post-cate">
-            <i class="fas fa-bookmark fa-fw icon-category"></i>
-            
-            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-              工具
-            </a>
-            
-          </div>
           
         </div>
       </div>
@@ -602,21 +586,21 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2019-11-23
+          2022-03-30
         </div>
         
 
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2019-11-23
+          2022-03-30
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          141
+          254
         </div>
         
 
@@ -636,8 +620,31 @@
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <p>上一篇博客提到 mac 进入 vi 编辑界面，复制 ssh key。这篇就是介绍如何保存退出 vi。</p>
-<p>如果是 vi，则：<br><strong>Esc</strong> 退出编辑模式，输入以下命令：<br><strong>:wq</strong> 保存后退出 vi，若为 :wq! 则为强制储存后退出（常用）<br><strong>:w</strong> 保存但不退出（常用）<br><strong>:w!</strong> 若文件属性为『只读』时，强制写入该档案<br><strong>:q</strong> 离开 vi （常用）<br><strong>:q!</strong> 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br><strong>:e!</strong> 将档案还原到最原始的状态！</p>
+        <p>基于 docker 进行安装 软件，首先需要有 docker 环境。<br>1.docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装 软件会失败(亲测)。</p>
+<pre class=" language-shell"><code class="language-shell">docker pull jenkins/jenkins:2.83</code></pre>
+<p>2.查看 jenkins 是否下载成功</p>
+<pre class=" language-shell"><code class="language-shell">docker images</code></pre>
+<p>3.运行 jenkins</p>
+<pre class=" language-shell"><code class="language-shell">mkdir /home/jenkins          创建文件夹
+
+ls -nd jenkins/                  查看文件权限
+
+cd /home             进入
+
+chown -R 1000:1000 jenkins/    给uid为1000的权限
+
+//启动jenkins
+docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v /home/jenkins:/var/jenkins_home jenkins/jenkins:2.83</code></pre>
+<p>4.查看 jenkins 是否启动</p>
+<pre class=" language-shell"><code class="language-shell">ps -ef | grep jenkins
+
+docker logs jenkins  查看启动日志
+
+</code></pre>
+<p>5.登录 jenkins<br>在命令框输入命令查看登录密码</p>
+<pre class=" language-shell"><code class="language-shell">cat /home/jenkins/secrets/initialAdminPassword</code></pre>
+<p>如果启动成功之后，安装插件时出现 离线状态，需要作如下处理。</p>
+<p>在浏览器中访问 <a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">http://ip</a>:端口号/pluginManager/advanced ，出现新页面找到如下页面选项，修改地址。将 https 修改为 http 即可，然后提交(submit)。最后再重启 jenkins，既可以重新安装插件了。</p>
 
       </div>
       <hr />
@@ -663,7 +670,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.leader755.com/leader755/38612.html">https://www.leader755.com/leader755/38612.html</a>
+                    <a href="https://www.leader755.com/leader755/22057.html">https://www.leader755.com/leader755/22057.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -700,15 +707,7 @@
         <div class="post-meta__tag-list" style="display: inline-block;">
           
           <div class="article-tag">
-            
-            <a href="/tags/mac/">
-              <span class="chip bg-color">mac</span>
-            </a>
-            
-            <a href="/tags/vi/">
-              <span class="chip bg-color">vi</span>
-            </a>
-            
+            <span class="chip bg-color">无标签</span>
           </div>
           
         </div>
@@ -1144,55 +1143,42 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/leader755/3275.html">
+                <a href="/leader755/22057.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/23.jpg" class="responsive-img" alt="解决 hexo 博客的图片链接失效问题"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/23.jpg" class="responsive-img" alt="解决 hexo 博客的图片链接失效问题">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/2.jpg" class="responsive-img" alt="docker安装 jenkins"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/2.jpg" class="responsive-img" alt="docker安装 jenkins">
                         
-                        <span class="card-title">解决 hexo 博客的图片链接失效问题</span>
+                        <span class="card-title">docker安装 jenkins</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.首先找到 hexo 博客的主题文件夹目录D:\Blog_leader755\themes\halo\layout\_partial\head.ejs
-修改上述路径的文件 head.ejs ，因为每个页面都会包含 head 这个文件，在里
+                            基于 docker 进行安装 软件，首先需要有 docker 环境。1.docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装 软件会失败(亲测)。
+docker pull jenkins/jenkins:2.83
+2.
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            leader755
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5%E5%A4%B1%E6%95%88/">
-                        <span class="chip bg-color">图片链接失效</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E9%93%BE%E6%8E%A5/">
-                        <span class="chip bg-color">第三方链接</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1203,59 +1189,38 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leader755/10760.html">
+                <a href="/leader755/21487.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/16.jpg" class="responsive-img" alt="3.mac上生成SSH key与GitHub通信"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/16.jpg" class="responsive-img" alt="3.mac上生成SSH key与GitHub通信">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/7.jpg" class="responsive-img" alt="centos7安装docker"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/7.jpg" class="responsive-img" alt="centos7安装docker">
                         
-                        <span class="card-title">3.mac上生成SSH key与GitHub通信</span>
+                        <span class="card-title">centos7安装docker</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.检查 SSH key 是否存在在终端输入：
-ls -a ~/.ssh
-如果没有，终端显示如下：
-
-No such file or directory
-
-如果已经存在，则会显示 id_rsa 和 id_rsa.pub
-
-查看 .ssh
-
-
+                            修改 yum 源改成 阿里云1、下载 wget
+yum install wget -y
+2、创建目录
+mkdir -p  /etc/yum.repos.d
+3、下载阿里云 yum 源配置
+wget -O /etc/yum.repos.d/C
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/ssh/" class="post-category">
-                                    ssh
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            leader755
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/mac/">
-                        <span class="chip bg-color">mac</span>
-                    </a>
-                    
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
-                    </a>
-                    
                 </div>
                 
             </div>
