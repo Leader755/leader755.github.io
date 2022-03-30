@@ -616,14 +616,14 @@
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          1.4k
+          718
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          6 分
+          3 分
         </div>
         
 
@@ -731,40 +731,7 @@ yum <span class="token operator">-</span>y remove jenkins
 
   #查看 jenkins 信息
   ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep jenkins</code></pre>
-<h2 id="2-首次进入-jenkins-的基本配置"><a href="#2-首次进入-jenkins-的基本配置" class="headerlink" title="2.首次进入 jenkins 的基本配置"></a>2.首次进入 jenkins 的基本配置</h2><h3 id="1-首次进入-Jenkins-需要输入管理员密码，使用以下命令在-xshell-查看初始密码："><a href="#1-首次进入-Jenkins-需要输入管理员密码，使用以下命令在-xshell-查看初始密码：" class="headerlink" title="1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码："></a>1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码：</h3><pre class=" language-javascript"><code class="language-javascript"> cat <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins<span class="token operator">/</span>secrets<span class="token operator">/</span>initialAdminPassword</code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606044243973-bd75a837-3e16-40fd-8b1d-d87184b7a1e1.png#crop=0&crop=0&crop=1&crop=1&height=361&id=e54f1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=622&originWidth=990&originalType=binary&ratio=1&rotation=0&showTitle=false&size=87633&status=done&style=none&title=&width=574" alt="image.png"></p>
-<blockquote>
-<p>注意：可能会出现权限不够的提示：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620148616485-c1b60ad9-2f91-45ba-83f1-5470d82ea3f6.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=42&id=fO6dc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=84&originWidth=1072&originalType=binary&ratio=1&rotation=0&showTitle=false&size=20175&status=done&style=none&taskId=ua8b74177-8237-4e14-b4df-c51ce1b9ea9&title=&width=536" alt="image.png"><br>解决办法：配置权限，按照上面安装 jenkins 中的 第三点** <strong>[</strong>配置 jenkins 权限（点我直达）**](<a href="https://www.yuque.com/pxs/fo1e8s/aed00c02-7c81-41d0-961b-6ea527dec51f#gFsHl)重新操作一遍或者检查下哪一步骤遗漏了。" target="_blank" rel="noopener">https://www.yuque.com/pxs/fo1e8s/aed00c02-7c81-41d0-961b-6ea527dec51f#gFsHl)重新操作一遍或者检查下哪一步骤遗漏了。</a></p>
-</blockquote>
-<h3 id="2-设置配置的访问-pluginManager-advanced（解决插件下载慢）"><a href="#2-设置配置的访问-pluginManager-advanced（解决插件下载慢）" class="headerlink" title="2.设置配置的访问/pluginManager/advanced（解决插件下载慢）"></a>2.设置配置的访问/pluginManager/advanced（解决插件下载慢）</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//先不要急着安装插件，在国内用户都能遇到下载插件慢的问题</span>
-<span class="token number">1</span><span class="token operator">></span> ip<span class="token operator">+</span> 端口<span class="token operator">/</span>pluginManager<span class="token operator">/</span>advanced，进入系统配置
-<span class="token number">2</span><span class="token operator">></span>将https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>updates<span class="token punctuation">.</span>jenkins<span class="token punctuation">.</span>io<span class="token operator">/</span>update<span class="token operator">-</span>center<span class="token punctuation">.</span>json
-  改为http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>updates<span class="token punctuation">.</span>jenkins<span class="token punctuation">.</span>io<span class="token operator">/</span>update<span class="token operator">-</span>center<span class="token punctuation">.</span>json  <span class="token comment" spellcheck="true">//改为 http</span>
-  或者http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>mirror<span class="token punctuation">.</span>xmission<span class="token punctuation">.</span>com<span class="token operator">/</span>jenkins<span class="token operator">/</span>updates<span class="token operator">/</span>update<span class="token operator">-</span>center<span class="token punctuation">.</span>json  <span class="token comment" spellcheck="true">//改为镜像</span>
-  <span class="token number">2</span> 者选择一个就可以了</code></pre>
-<h3 id="3-解决页面-403-问题"><a href="#3-解决页面-403-问题" class="headerlink" title="3.解决页面 403 问题"></a>3.解决页面 403 问题</h3><blockquote>
-<p>1&gt;ip+ 端口/configureSecurity/，进入系统配置<br>2&gt;去配置页面的允许跨域</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181612160-9800c3db-c955-49ac-80ff-f910772f9f03.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=537&id=u6f745595&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1074&originWidth=2868&originalType=binary&ratio=1&rotation=0&showTitle=false&size=153822&status=done&style=none&taskId=u0922823f-da93-4119-acc4-aae93058f42&title=&width=1434" alt="image.png"></p>
-<h3 id="4-返回到最初的页面配置插件，进行安装"><a href="#4-返回到最初的页面配置插件，进行安装" class="headerlink" title="4.返回到最初的页面配置插件，进行安装"></a>4.返回到最初的页面配置插件，进行安装</h3><p>注意最好选择默认的安装方式，如果比较熟悉了可以选择自行选择插件安装，静待安装完成。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181715510-e0253ed4-a63c-4693-b4f3-af16318e938c.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=755&id=u579be651&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1510&originWidth=2044&originalType=binary&ratio=1&rotation=0&showTitle=false&size=300206&status=done&style=none&taskId=ua49be6eb-4b8b-4d51-9e9f-908300cf032&title=&width=1022" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181801678-a50f7b51-8405-4b6e-a80d-adfc04142506.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=687&id=ufa4f4757&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1374&originWidth=1992&originalType=binary&ratio=1&rotation=0&showTitle=false&size=202292&status=done&style=none&taskId=u8f6229b3-261d-4260-8846-083f77555ef&title=&width=996" alt="image.png"></p>
-<h3 id="5-安装完插件后，设置用户登录账户和密码"><a href="#5-安装完插件后，设置用户登录账户和密码" class="headerlink" title="5.安装完插件后，设置用户登录账户和密码"></a>5.安装完插件后，设置用户登录账户和密码</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606044620530-a1bc007c-7531-4184-8eda-7297033eaab6.png#crop=0&crop=0&crop=1&crop=1&height=635&id=nf7F7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1270&originWidth=2006&originalType=binary&ratio=1&rotation=0&showTitle=false&size=105553&status=done&style=none&title=&width=1003" alt="image.png"></p>
-<h3 id="6-汉化-jenkins"><a href="#6-汉化-jenkins" class="headerlink" title="6.汉化 jenkins"></a>6.汉化 jenkins</h3><p>1&gt;在 jenkins 面板–》Manage Plugins ，搜索 local，下载如下图的 3 个插件。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606045044944-b7b0499a-a7e8-492e-a507-41fd967b2a34.png#crop=0&crop=0&crop=1&crop=1&height=682&id=aQ94W&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1364&originWidth=2558&originalType=binary&ratio=1&rotation=0&showTitle=false&size=280750&status=done&style=none&title=&width=1279" alt="image.png"></p>
-<p>2&gt;在 jenkins 面板–》 Configuration System ，找到 lcoal 项，输入 zh_CN，并勾选上。保存后即可看到汉化了（没有汉化的需要重启 jenkins）。</p>
-<pre class=" language-javascript"><code class="language-javascript">重启：ip<span class="token operator">+</span>端口号<span class="token operator">/</span>restart</code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606045466353-ae8ace11-b552-4358-b7b8-aa0e617876ac.png#crop=0&crop=0&crop=1&crop=1&height=683&id=Eypv8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1366&originWidth=2560&originalType=binary&ratio=1&rotation=0&showTitle=false&size=193821&status=done&style=none&title=&width=1280" alt="image.png"></p>
-<p>#</p>
-<h2 id="3-jenkins-配置邮箱（选配）"><a href="#3-jenkins-配置邮箱（选配）" class="headerlink" title="3.jenkins 配置邮箱（选配）"></a>3.jenkins 配置邮箱（选配）</h2><p>最好使用 163 邮箱，qq 邮箱限制比较大。</p>
-<ul>
-<li>① 配置系统设置</li>
-<li>② 邮箱 smtp 开通和密码获取</li>
-<li>③ 项目构建配置</li>
-</ul>
-<h3 id="1-配置系统设置"><a href="#1-配置系统设置" class="headerlink" title="1.配置系统设置"></a>1.配置系统设置</h3><p>1&gt;进入设置<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606049376995-4e26a3c6-623b-4de0-a92a-d4bde4e45ba2.png#crop=0&crop=0&crop=1&crop=1&height=395&id=B1mJ2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=789&originWidth=1600&originalType=binary&ratio=1&rotation=0&showTitle=false&size=135649&status=done&style=none&title=&width=800" alt="image.png"><br>2&gt;配置监控<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606049283664-fbd9c717-3dfd-4ff2-98c3-6b3b79dbda34.png#crop=0&crop=0&crop=1&crop=1&height=683&id=od1e5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1366&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=198860&status=done&style=none&title=&width=1278" alt="image.png"><br>3&gt;配置邮件通知，然后测试下邮箱可不可以收到，查看自己的邮箱。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606050027158-46c9558e-d0c8-41b0-b2f4-18c1cd24aff5.png#crop=0&crop=0&crop=1&crop=1&height=688&id=ux1BS&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1376&originWidth=2558&originalType=binary&ratio=1&rotation=0&showTitle=false&size=195435&status=done&style=none&title=&width=1279" alt="image.png"></p>
-<h3 id="2-gt-配置-Extended-E-mail-Notification"><a href="#2-gt-配置-Extended-E-mail-Notification" class="headerlink" title="2&gt;配置  Extended E-mail Notification"></a>2&gt;配置  Extended E-mail Notification</h3><blockquote>
-<p>基本配置同上面，注意 在邮件通知上面有个  <strong>Triggers</strong>  的设置，可以设置邮件发送条件。常用的三个：<br><strong>always</strong>  是只要构建完就会发送。<br><strong>success</strong>  是成功就发送。<br><strong>failed-any</strong>  是只要构建失败就发送。<br>注：这个里的  <strong>triggers</strong>  还没发现实际用处，可以不配，后面项目里的才是关键。</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606050531905-f72947a0-1bf7-46aa-adc8-2754cc299038.png#crop=0&crop=0&crop=1&crop=1&height=1899&id=MgX4V&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3798&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=521924&status=done&style=none&title=&width=1278" alt="image.png"></p>
-<h3 id="3-gt-项目中邮件配置"><a href="#3-gt-项目中邮件配置" class="headerlink" title="3&gt;项目中邮件配置"></a>3&gt;项目中邮件配置</h3><p>这里主要配置两个地方就可以了。<br>进入我们要配置邮箱的项目。<br>1&gt;增加一个构建后操作步骤。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606055280761-4bedbe67-87a4-4390-8900-565f68b69402.png#crop=0&crop=0&crop=1&crop=1&height=687&id=SVRNV&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1374&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=226392&status=done&style=none&title=&width=1278" alt="image.png"><br>2&gt;邮件接收人和邮件内容配置<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606056472299-e0ae3771-1ce2-4bff-a69b-665231a52b75.png#crop=0&crop=0&crop=1&crop=1&height=1317&id=Q1ysE&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2634&originWidth=2558&originalType=binary&ratio=1&rotation=0&showTitle=false&size=460895&status=done&style=none&title=&width=1279" alt="image.png"></p>
+<p>##</p>
 
       </div>
       <hr />
@@ -1275,24 +1242,22 @@ yum <span class="token operator">-</span>y remove jenkins
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/1179.html">
+                <a href="/leader755/10309.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/1.jpg" class="responsive-img" alt="jenkins配置 jdk，maven，git，node"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/1.jpg" class="responsive-img" alt="jenkins配置 jdk，maven，git，node">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/16.jpg" class="responsive-img" alt="linux安装 docker"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/16.jpg" class="responsive-img" alt="linux安装 docker">
                         
-                        <span class="card-title">jenkins配置 jdk，maven，git，node</span>
+                        <span class="card-title">linux安装 docker</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.centos 中安装 JDK:1>查看系统是否已安装 Java(Jenkins需要在 Java 环境下运行)
-yum list installed | grep jdk
-
-2>yun 安装 java
-yum search openjdk
+                            1、安装前置条件docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是 2.x，需要升级 linux 内核
+2、安装步骤1）升级本地 yum 包yum update
+2） 安装工具集yum install
                         
                     </div>
                     <div class="publish-info">
@@ -1303,8 +1268,8 @@ yum search openjdk
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/jenkins/" class="post-category">
-                                    jenkins
+                            <a href="/categories/docker/" class="post-category">
+                                    docker
                                 </a>
                             
                             
@@ -1314,12 +1279,12 @@ yum search openjdk
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jdk/">
-                        <span class="chip bg-color">jdk</span>
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
-                    <a href="/tags/node/">
-                        <span class="chip bg-color">node</span>
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
                     </a>
                     
                 </div>
@@ -1529,7 +1494,7 @@ yum search openjdk
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">119k</span>&nbsp;字
+        class="white-color">118.3k</span>&nbsp;字
       
       
       
