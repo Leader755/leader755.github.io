@@ -3645,33 +3645,6 @@ overflow: hidden; font-size: 50px; color: red;<span class="token comment" spellc
       </tags>
   </entry>
   <entry>
-    <title>开源的git 服务器</title>
-    <url>/leader755/61705.html</url>
-    <content><![CDATA[<h2 id="1、GitLab-开源版本"><a href="#1、GitLab-开源版本" class="headerlink" title="1、GitLab 开源版本"></a>1、GitLab 开源版本</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201546221-ba9ce11f-955a-487a-8f27-2285d44e0a12.png#clientId=u741f1d1d-08bf-4&from=paste&id=ub8a25e67&margin=%5Bobject%20Object%5D&name=image.png&originHeight=333&originWidth=800&originalType=url&ratio=2&size=77530&status=done&style=none&taskId=u660572a7-e7f0-4b81-927e-2902516765f" alt="image.png"><br><strong>简介：</strong>GitLab 是一个利用 <a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/ruby%2Bon%2Brails">Ruby on Rails</a> 开发的开源应用程序，实现一个自托管的<a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a>项目仓库，可通过 Web 界面进行访问公开的或者私人项目。<br>它拥有与<a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/github">Github</a>类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。它还提供一个代码片段收集功能可以轻松实现代码复用，便于日后有需要的时候进行查找。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/mirrors/gitlab">https://gitee.com/mirrors/gitlab</a></p>
-<h2 id="2、Gogs-开源版本"><a href="#2、Gogs-开源版本" class="headerlink" title="2、Gogs 开源版本"></a>2、Gogs 开源版本</h2><p><strong>简介：</strong>Gogs 是一款极易搭建的自助 Git 服务，其目标是打造一个最简单、最快速和最轻松的方式搭建自助 Git 服务。使用 Go 语言开发使得 Gogs 能够通过独立的二进制分发，并且支持 Go 语言支持的 <strong>所有平台</strong>，包括 Linux、Mac OS X、Windows 以及 ARM 平台。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/Unknown/gogs">https://gitee.com/Unknown/gogs</a><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547011-3ba01a6d-7798-494e-b529-9cd9784ea4f4.png#clientId=u741f1d1d-08bf-4&from=paste&id=u4af37ad6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=588&originWidth=1146&originalType=url&ratio=2&size=446184&status=done&style=none&taskId=ub6b63586-7394-486c-8459-68c655436eb" alt="image.png"><br><a href="https://link.zhihu.com/?target=https%3A//gitee.com/Unknown/gogs">
-</a></p>
-<h2 id="3、Gitea-开源版本"><a href="#3、Gitea-开源版本" class="headerlink" title="3、Gitea 开源版本"></a>3、Gitea 开源版本</h2><p><strong>简介：</strong>Gitea 的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。我们采用 Go 作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了 x86，amd64，还包括 ARM 和 PowerPC。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/gitea/gitea">https://gitee.com/gitea/gitea</a><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547571-641758ab-f020-453f-ac90-53f587872b5d.png#clientId=u741f1d1d-08bf-4&from=paste&id=u7f7306f6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2614&originWidth=1440&originalType=url&ratio=2&size=790746&status=done&style=none&taskId=uf821bce4-9144-446f-bf02-e0310a9d086" alt="image.png"></p>
-<h2 id="4、Gitosis-开源版本"><a href="#4、Gitosis-开源版本" class="headerlink" title="4、Gitosis 开源版本"></a>4、Gitosis 开源版本</h2><p><strong>简介：</strong><a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a> 是非常著名的分布式版本控制系统。Gitosis 则是方便通过 Git 与 ssh 架设中央服务器的软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitosis">https://www.oschina.net/p/gitosis</a></p>
-<h2 id="5、GitStack-开源版本"><a href="#5、GitStack-开源版本" class="headerlink" title="5、GitStack 开源版本"></a>5、GitStack 开源版本</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547611-8ef2728f-2c8b-4a26-b6f4-7c0c1edd8a24.png#clientId=u741f1d1d-08bf-4&from=paste&id=ud1a85389&margin=%5Bobject%20Object%5D&name=image.png&originHeight=912&originWidth=1440&originalType=url&ratio=2&size=798657&status=done&style=none&taskId=u8cc546fd-3391-48bc-bf2a-55dc5f6e7b5" alt="image.png"><br><strong>简介：</strong>gitstack 是 Windows 下的 <a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a> 版本控制软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitstack">https://www.oschina.net/p/gitstack</a></p>
-<h2 id="6、Gitolite-开源版本"><a href="#6、Gitolite-开源版本" class="headerlink" title="6、Gitolite 开源版本"></a>6、Gitolite 开源版本</h2><p><strong>简介：</strong>Git 是非常著名的分布式版本控制系统。gitolite 则是方便通过 Git 与 ssh 架设中央服务器的软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitolite">https://www.oschina.net/p/gitolite</a></p>
-<h2 id="7、Gidder-开源版本"><a href="#7、Gidder-开源版本" class="headerlink" title="7、Gidder 开源版本"></a>7、Gidder 开源版本</h2><p><strong>简介：</strong>Gidder 是通过 SSH 访问的 Andriod Git 服务器！</p>
-<ul>
-<li>支持 push pull fetch clone</li>
-<li>支持用户管理</li>
-<li>支持仓库管理</li>
-<li>支持动态 dns</li>
-</ul>
-<p><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gidder">https://www.oschina.net/p/gidder</a></p>
-<h2 id="文章引用："><a href="#文章引用：" class="headerlink" title="文章引用："></a>文章引用：</h2><p><a href="https://www.zhihu.com/question/283143882/answer/434872781" target="_blank" rel="noopener">https://www.zhihu.com/question/283143882/answer/434872781</a></p>
-]]></content>
-      <categories>
-        <category>git 工具</category>
-      </categories>
-      <tags>
-        <tag>git 服务器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>常见的git命令</title>
     <url>/leader755/22649.html</url>
     <content><![CDATA[<blockquote>
@@ -3908,6 +3881,33 @@ Git仓库 vs Git仓库
         <tag>git 分支</tag>
         <tag>git 远程分支</tag>
         <tag>git 命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开源的git 服务器</title>
+    <url>/leader755/61705.html</url>
+    <content><![CDATA[<h2 id="1、GitLab-开源版本"><a href="#1、GitLab-开源版本" class="headerlink" title="1、GitLab 开源版本"></a>1、GitLab 开源版本</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201546221-ba9ce11f-955a-487a-8f27-2285d44e0a12.png#clientId=u741f1d1d-08bf-4&from=paste&id=ub8a25e67&margin=%5Bobject%20Object%5D&name=image.png&originHeight=333&originWidth=800&originalType=url&ratio=2&size=77530&status=done&style=none&taskId=u660572a7-e7f0-4b81-927e-2902516765f" alt="image.png"><br><strong>简介：</strong>GitLab 是一个利用 <a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/ruby%2Bon%2Brails">Ruby on Rails</a> 开发的开源应用程序，实现一个自托管的<a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a>项目仓库，可通过 Web 界面进行访问公开的或者私人项目。<br>它拥有与<a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/github">Github</a>类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。它还提供一个代码片段收集功能可以轻松实现代码复用，便于日后有需要的时候进行查找。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/mirrors/gitlab">https://gitee.com/mirrors/gitlab</a></p>
+<h2 id="2、Gogs-开源版本"><a href="#2、Gogs-开源版本" class="headerlink" title="2、Gogs 开源版本"></a>2、Gogs 开源版本</h2><p><strong>简介：</strong>Gogs 是一款极易搭建的自助 Git 服务，其目标是打造一个最简单、最快速和最轻松的方式搭建自助 Git 服务。使用 Go 语言开发使得 Gogs 能够通过独立的二进制分发，并且支持 Go 语言支持的 <strong>所有平台</strong>，包括 Linux、Mac OS X、Windows 以及 ARM 平台。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/Unknown/gogs">https://gitee.com/Unknown/gogs</a><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547011-3ba01a6d-7798-494e-b529-9cd9784ea4f4.png#clientId=u741f1d1d-08bf-4&from=paste&id=u4af37ad6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=588&originWidth=1146&originalType=url&ratio=2&size=446184&status=done&style=none&taskId=ub6b63586-7394-486c-8459-68c655436eb" alt="image.png"><br><a href="https://link.zhihu.com/?target=https%3A//gitee.com/Unknown/gogs">
+</a></p>
+<h2 id="3、Gitea-开源版本"><a href="#3、Gitea-开源版本" class="headerlink" title="3、Gitea 开源版本"></a>3、Gitea 开源版本</h2><p><strong>简介：</strong>Gitea 的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。我们采用 Go 作为后端语言，这使我们只要生成一个可执行程序即可。并且他还支持跨平台，支持 Linux, macOS 和 Windows 以及各种架构，除了 x86，amd64，还包括 ARM 和 PowerPC。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//gitee.com/gitea/gitea">https://gitee.com/gitea/gitea</a><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547571-641758ab-f020-453f-ac90-53f587872b5d.png#clientId=u741f1d1d-08bf-4&from=paste&id=u7f7306f6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2614&originWidth=1440&originalType=url&ratio=2&size=790746&status=done&style=none&taskId=uf821bce4-9144-446f-bf02-e0310a9d086" alt="image.png"></p>
+<h2 id="4、Gitosis-开源版本"><a href="#4、Gitosis-开源版本" class="headerlink" title="4、Gitosis 开源版本"></a>4、Gitosis 开源版本</h2><p><strong>简介：</strong><a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a> 是非常著名的分布式版本控制系统。Gitosis 则是方便通过 Git 与 ssh 架设中央服务器的软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitosis">https://www.oschina.net/p/gitosis</a></p>
+<h2 id="5、GitStack-开源版本"><a href="#5、GitStack-开源版本" class="headerlink" title="5、GitStack 开源版本"></a>5、GitStack 开源版本</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1624201547611-8ef2728f-2c8b-4a26-b6f4-7c0c1edd8a24.png#clientId=u741f1d1d-08bf-4&from=paste&id=ud1a85389&margin=%5Bobject%20Object%5D&name=image.png&originHeight=912&originWidth=1440&originalType=url&ratio=2&size=798657&status=done&style=none&taskId=u8cc546fd-3391-48bc-bf2a-55dc5f6e7b5" alt="image.png"><br><strong>简介：</strong>gitstack 是 Windows 下的 <a href="https://link.zhihu.com/?target=http%3A//www.oschina.net/p/git">Git</a> 版本控制软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitstack">https://www.oschina.net/p/gitstack</a></p>
+<h2 id="6、Gitolite-开源版本"><a href="#6、Gitolite-开源版本" class="headerlink" title="6、Gitolite 开源版本"></a>6、Gitolite 开源版本</h2><p><strong>简介：</strong>Git 是非常著名的分布式版本控制系统。gitolite 则是方便通过 Git 与 ssh 架设中央服务器的软件。<br><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gitolite">https://www.oschina.net/p/gitolite</a></p>
+<h2 id="7、Gidder-开源版本"><a href="#7、Gidder-开源版本" class="headerlink" title="7、Gidder 开源版本"></a>7、Gidder 开源版本</h2><p><strong>简介：</strong>Gidder 是通过 SSH 访问的 Andriod Git 服务器！</p>
+<ul>
+<li>支持 push pull fetch clone</li>
+<li>支持用户管理</li>
+<li>支持仓库管理</li>
+<li>支持动态 dns</li>
+</ul>
+<p><strong>项目地址：</strong><a href="https://link.zhihu.com/?target=https%3A//www.oschina.net/p/gidder">https://www.oschina.net/p/gidder</a></p>
+<h2 id="文章引用："><a href="#文章引用：" class="headerlink" title="文章引用："></a>文章引用：</h2><p><a href="https://www.zhihu.com/question/283143882/answer/434872781" target="_blank" rel="noopener">https://www.zhihu.com/question/283143882/answer/434872781</a></p>
+]]></content>
+      <categories>
+        <category>git 工具</category>
+      </categories>
+      <tags>
+        <tag>git 服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -5258,6 +5258,61 @@ yum update</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>jenkins配置</title>
+    <url>/leader755/13594.html</url>
+    <content><![CDATA[<h2 id="1-首次进入-jenkins-的基本配置"><a href="#1-首次进入-jenkins-的基本配置" class="headerlink" title="1.首次进入 jenkins 的基本配置"></a>1.首次进入 jenkins 的基本配置</h2><h3 id="1-首次进入-Jenkins-需要输入管理员密码，使用以下命令在-xshell-查看初始密码："><a href="#1-首次进入-Jenkins-需要输入管理员密码，使用以下命令在-xshell-查看初始密码：" class="headerlink" title="1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码："></a>1.首次进入 Jenkins 需要输入管理员密码，使用以下命令在 xshell 查看初始密码：</h3><pre class=" language-javascript"><code class="language-javascript"> cat <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins<span class="token operator">/</span>secrets<span class="token operator">/</span>initialAdminPassword</code></pre>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606044243973-bd75a837-3e16-40fd-8b1d-d87184b7a1e1.png#crop=0&crop=0&crop=1&crop=1&height=361&id=e54f1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=622&originWidth=990&originalType=binary&ratio=1&rotation=0&showTitle=false&size=87633&status=done&style=none&title=&width=574" alt="image.png"></p>
+<blockquote>
+<p>注意：可能会出现权限不够的提示：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620148616485-c1b60ad9-2f91-45ba-83f1-5470d82ea3f6.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=42&id=fO6dc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=84&originWidth=1072&originalType=binary&ratio=1&rotation=0&showTitle=false&size=20175&status=done&style=none&taskId=ua8b74177-8237-4e14-b4df-c51ce1b9ea9&title=&width=536" alt="image.png"><br>解决办法：配置权限，按照上面安装 jenkins 中的 第三点** <strong>[</strong>配置 jenkins 权限（点我直达）**](<a href="https://www.yuque.com/pxs/fo1e8s/aed00c02-7c81-41d0-961b-6ea527dec51f#gFsHl)重新操作一遍或者检查下哪一步骤遗漏了。" target="_blank" rel="noopener">https://www.yuque.com/pxs/fo1e8s/aed00c02-7c81-41d0-961b-6ea527dec51f#gFsHl)重新操作一遍或者检查下哪一步骤遗漏了。</a></p>
+</blockquote>
+<h3 id="2-解决插件下载慢"><a href="#2-解决插件下载慢" class="headerlink" title="2.解决插件下载慢"></a>2.解决插件下载慢</h3><blockquote>
+<ul>
+<li>1&gt;先不要急着安装插件，在国内用户都能遇到下载插件慢的问题</li>
+<li>2&gt;在浏览器中访问 ：ip+端口/pluginManager/advanced 进入页面修改配置</li>
+<li>3&gt;提交(submit)，最后再重启 jenkins，既可以重新安装插件了</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1648648122925-5ccdeb48-ec9a-46e4-8353-147afc8cf17f.png#clientId=u5ff463af-069f-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=447&id=ufc8f2c40&margin=%5Bobject%20Object%5D&name=image.png&originHeight=894&originWidth=2240&originalType=binary&ratio=1&rotation=0&showTitle=false&size=103732&status=done&style=none&taskId=u0db13d59-b742-4667-bf6c-16ce34d3b77&title=&width=1120" alt="image.png"></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token operator">></span> ip<span class="token operator">+</span> 端口<span class="token operator">/</span>pluginManager<span class="token operator">/</span>advanced，进入系统配置
+<span class="token number">2</span><span class="token operator">></span> 将 https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>updates<span class="token punctuation">.</span>jenkins<span class="token punctuation">.</span>io<span class="token operator">/</span>update<span class="token operator">-</span>center<span class="token punctuation">.</span>json
+
+   改为 http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>updates<span class="token punctuation">.</span>jenkins<span class="token punctuation">.</span>io<span class="token operator">/</span>update<span class="token operator">-</span>center<span class="token punctuation">.</span>json
+   或者 http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>mirror<span class="token punctuation">.</span>xmission<span class="token punctuation">.</span>com<span class="token operator">/</span>jenkins<span class="token operator">/</span>updates<span class="token operator">/</span>update<span class="token operator">-</span>center<span class="token punctuation">.</span>json</code></pre>
+<h3 id="3-解决页面-403-问题"><a href="#3-解决页面-403-问题" class="headerlink" title="3.解决页面 403 问题"></a>3.解决页面 403 问题</h3><blockquote>
+<ul>
+<li>1&gt;ip+ 端口/configureSecurity/，进入系统配置</li>
+<li>2&gt;去配置页面的允许跨域</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181612160-9800c3db-c955-49ac-80ff-f910772f9f03.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=537&id=u6f745595&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1074&originWidth=2868&originalType=binary&ratio=1&rotation=0&showTitle=false&size=153822&status=done&style=none&taskId=u0922823f-da93-4119-acc4-aae93058f42&title=&width=1434" alt="image.png"></p>
+<h3 id="4-返回到最初的页面配置插件，进行安装"><a href="#4-返回到最初的页面配置插件，进行安装" class="headerlink" title="4.返回到最初的页面配置插件，进行安装"></a>4.返回到最初的页面配置插件，进行安装</h3><p>注意最好选择默认的安装方式，如果比较熟悉了可以选择自行选择插件安装，静待安装完成。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181715510-e0253ed4-a63c-4693-b4f3-af16318e938c.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=755&id=u579be651&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1510&originWidth=2044&originalType=binary&ratio=1&rotation=0&showTitle=false&size=300206&status=done&style=none&taskId=ua49be6eb-4b8b-4d51-9e9f-908300cf032&title=&width=1022" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620181801678-a50f7b51-8405-4b6e-a80d-adfc04142506.png#clientId=u027f9086-1089-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=687&id=ufa4f4757&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1374&originWidth=1992&originalType=binary&ratio=1&rotation=0&showTitle=false&size=202292&status=done&style=none&taskId=u8f6229b3-261d-4260-8846-083f77555ef&title=&width=996" alt="image.png"></p>
+<h3 id="5-安装完插件后，设置用户登录账户和密码"><a href="#5-安装完插件后，设置用户登录账户和密码" class="headerlink" title="5.安装完插件后，设置用户登录账户和密码"></a>5.安装完插件后，设置用户登录账户和密码</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606044620530-a1bc007c-7531-4184-8eda-7297033eaab6.png#crop=0&crop=0&crop=1&crop=1&height=635&id=nf7F7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1270&originWidth=2006&originalType=binary&ratio=1&rotation=0&showTitle=false&size=105553&status=done&style=none&title=&width=1003" alt="image.png"></p>
+<h3 id="6-汉化-jenkins"><a href="#6-汉化-jenkins" class="headerlink" title="6.汉化 jenkins"></a>6.汉化 jenkins</h3><p>1&gt;在 jenkins 面板–》Manage Plugins ，搜索 local，下载如下图的 3 个插件。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606045044944-b7b0499a-a7e8-492e-a507-41fd967b2a34.png#crop=0&crop=0&crop=1&crop=1&height=682&id=aQ94W&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1364&originWidth=2558&originalType=binary&ratio=1&rotation=0&showTitle=false&size=280750&status=done&style=none&title=&width=1279" alt="image.png"></p>
+<p>2&gt;在 jenkins 面板–》 Configuration System ，找到 lcoal 项，输入 zh_CN，并勾选上。保存后即可看到汉化了（没有汉化的需要重启 jenkins）。</p>
+<pre class=" language-javascript"><code class="language-javascript">重启：ip<span class="token operator">+</span>端口号<span class="token operator">/</span>restart</code></pre>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606045466353-ae8ace11-b552-4358-b7b8-aa0e617876ac.png#crop=0&crop=0&crop=1&crop=1&height=683&id=Eypv8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1366&originWidth=2560&originalType=binary&ratio=1&rotation=0&showTitle=false&size=193821&status=done&style=none&title=&width=1280" alt="image.png"></p>
+<p>#</p>
+<h2 id="2-jenkins-配置邮箱（选配）"><a href="#2-jenkins-配置邮箱（选配）" class="headerlink" title="2.jenkins 配置邮箱（选配）"></a>2.jenkins 配置邮箱（选配）</h2><p>最好使用 163 邮箱，qq 邮箱限制比较大。</p>
+<ul>
+<li>① 配置系统设置</li>
+<li>② 邮箱 smtp 开通和密码获取</li>
+<li>③ 项目构建配置</li>
+</ul>
+<h3 id="1-配置系统设置"><a href="#1-配置系统设置" class="headerlink" title="1.配置系统设置"></a>1.配置系统设置</h3><p>1&gt;进入设置<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606049376995-4e26a3c6-623b-4de0-a92a-d4bde4e45ba2.png#crop=0&crop=0&crop=1&crop=1&height=395&id=B1mJ2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=789&originWidth=1600&originalType=binary&ratio=1&rotation=0&showTitle=false&size=135649&status=done&style=none&title=&width=800" alt="image.png"><br>2&gt;配置监控<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606049283664-fbd9c717-3dfd-4ff2-98c3-6b3b79dbda34.png#crop=0&crop=0&crop=1&crop=1&height=683&id=od1e5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1366&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=198860&status=done&style=none&title=&width=1278" alt="image.png"><br>3&gt;配置邮件通知，然后测试下邮箱可不可以收到，查看自己的邮箱。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606050027158-46c9558e-d0c8-41b0-b2f4-18c1cd24aff5.png#crop=0&crop=0&crop=1&crop=1&height=688&id=ux1BS&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1376&originWidth=2558&originalType=binary&ratio=1&rotation=0&showTitle=false&size=195435&status=done&style=none&title=&width=1279" alt="image.png"></p>
+<h3 id="2-gt-配置-Extended-E-mail-Notification"><a href="#2-gt-配置-Extended-E-mail-Notification" class="headerlink" title="2&gt;配置  Extended E-mail Notification"></a>2&gt;配置  Extended E-mail Notification</h3><blockquote>
+<p>基本配置同上面，注意 在邮件通知上面有个  <strong>Triggers</strong>  的设置，可以设置邮件发送条件。常用的三个：<br><strong>always</strong>  是只要构建完就会发送。<br><strong>success</strong>  是成功就发送。<br><strong>failed-any</strong>  是只要构建失败就发送。<br>注：这个里的  <strong>triggers</strong>  还没发现实际用处，可以不配，后面项目里的才是关键。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606050531905-f72947a0-1bf7-46aa-adc8-2754cc299038.png#crop=0&crop=0&crop=1&crop=1&height=1899&id=MgX4V&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3798&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=521924&status=done&style=none&title=&width=1278" alt="image.png"></p>
+<h3 id="3-gt-项目中邮件配置"><a href="#3-gt-项目中邮件配置" class="headerlink" title="3&gt;项目中邮件配置"></a>3&gt;项目中邮件配置</h3><p>这里主要配置两个地方就可以了。<br>进入我们要配置邮箱的项目。<br>1&gt;增加一个构建后操作步骤。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606055280761-4bedbe67-87a4-4390-8900-565f68b69402.png#crop=0&crop=0&crop=1&crop=1&height=687&id=SVRNV&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1374&originWidth=2556&originalType=binary&ratio=1&rotation=0&showTitle=false&size=226392&status=done&style=none&title=&width=1278" alt="image.png"><br>2&gt;邮件接收人和邮件内容配置<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1606056472299-e0ae3771-1ce2-4bff-a69b-665231a52b75.png#crop=0&crop=0&crop=1&crop=1&height=1317&id=Q1ysE&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2634&originWidth=2558&originalType=binary&ratio=1&rotation=0&showTitle=false&size=460895&status=done&style=none&title=&width=1279" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>jenkins</category>
+      </categories>
+      <tags>
+        <tag>jenkins 配置</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>travis-ci + github + hexo 持续集成</title>
     <url>/leader755/34284.html</url>
     <content><![CDATA[<h2 id="Hexo-博客源代码-GitHub-托管"><a href="#Hexo-博客源代码-GitHub-托管" class="headerlink" title="Hexo 博客源代码 GitHub 托管"></a>Hexo 博客源代码 GitHub 托管</h2><h2 id="1-注册-travis-ci"><a href="#1-注册-travis-ci" class="headerlink" title="1.注册 travis-ci"></a>1.注册 travis-ci</h2><p>Travis CI 的网站有两个，<br><code>travis-ci.org</code>  专门针对开源项目，GitHub 上所有的公开仓库都能够免费使用；<br><code>travis-ci.com</code>  针对私有及商业项目，新用户前 100 次构建是免费的，后面就要收费了。</p>
@@ -5961,6 +6016,119 @@ element-ui:
       </tags>
   </entry>
   <entry>
+    <title>博客园主题美化</title>
+    <url>/leader755/33440.html</url>
+    <content><![CDATA[<h2 id="1-主题效果"><a href="#1-主题效果" class="headerlink" title="1.主题效果"></a>1.主题效果</h2><p>实际网站效果 <a href="https://www.cnblogs.com/leader755/" target="_blank" rel="noopener">https://www.cnblogs.com/leader755/</a><br><a href="https://www.cnblogs.com/leader755/" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610809961376-8a870346-44a7-44c1-becd-4170586c4b3d.png#height=787&id=e6VuF&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1574&originWidth=2874&originalType=binary&size=7262820&status=done&style=none&width=1437" alt="image.png"></a></p>
+<h2 id="2-主题介绍"><a href="#2-主题介绍" class="headerlink" title="2.主题介绍"></a>2.主题介绍</h2><blockquote>
+<p>本主题使用的 <a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/Docs/GettingStarted/install" target="_blank" rel="noopener">SimpleMemory </a> 这款主题，看完本教程后你能搭出相同美化的博客园主题博客了，也可按照<a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/Docs/GettingStarted/install" target="_blank" rel="noopener">官方教程</a>调整细节或者新增部分功能。<br>github 官网：<a href="https://github.com/BNDong/Cnblogs-Theme-SimpleMemory" target="_blank" rel="noopener">https://github.com/BNDong/Cnblogs-Theme-SimpleMemory</a><br>官方教程：<a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/" target="_blank" rel="noopener">https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/</a></p>
+</blockquote>
+<h2 id="3-设置主题并申请-js-代码权限"><a href="#3-设置主题并申请-js-代码权限" class="headerlink" title="3.设置主题并申请 js 代码权限"></a>3.设置主题并申请 js 代码权限</h2><blockquote>
+<p>1&gt;进入管理&gt;设置&gt;博客设置&gt;设置<br>2&gt;博客主题&gt;选择 SimpleMemory 主题<br>3&gt;勾选申请 js 权限，填写开通的理由等待管理员审核通过(等待 10min 左右)。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610810897799-26cad005-922c-4be1-8404-f5e505d70d4c.png#height=713&id=MP08w&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1426&originWidth=1864&originalType=binary&size=467125&status=done&style=none&width=932" alt="image.png"></p>
+<h2 id="4-覆盖默认的-css"><a href="#4-覆盖默认的-css" class="headerlink" title="4.覆盖默认的 css"></a>4.覆盖默认的 css</h2><blockquote>
+<p>1.进入 <a href="https://github.com/BNDong/Cnblogs-Theme-SimpleMemory" target="_blank" rel="noopener">SimpleMemory</a> 的 github 仓库，将 src/style/base.min.css 代码复制. 2.将复制到的 css 粘贴到 css 代码块中，并且勾选上 禁用默认 css. 3.点击保存，强制刷新局可以看到基本样式出来了</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610811524596-8f7a6a91-fb51-413f-b760-65724e0ca66b.png#height=687&id=cSdcO&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1374&originWidth=2762&originalType=binary&size=314107&status=done&style=none&width=1381" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610811287489-1d2698f8-4ae1-4f09-bf66-4be5f8d92817.png#height=637&id=h53qX&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1274&originWidth=1750&originalType=binary&size=381956&status=done&style=none&width=875" alt="image.png"></p>
+<h2 id="5-侧边栏公告的基本配置"><a href="#5-侧边栏公告的基本配置" class="headerlink" title="5.侧边栏公告的基本配置"></a>5.侧边栏公告的基本配置</h2><p>在侧边栏公告中将以下代码粘贴进去，点击保存强制刷新博客页面就基本可以看到页面效果了，是不是很简单呢。到了这里如果不追求其他，一个美化博客的操作就已经完成了，但是我还想配置个性化，那就请看下面。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
+    window<span class="token punctuation">.</span>cnblogsConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+        GhVersions    <span class="token punctuation">:</span> <span class="token string">'v1.3.3'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 版本（不需要改动）</span>
+        blogUser      <span class="token punctuation">:</span> <span class="token string">"userName"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 用户名</span>
+        blogAvatar    <span class="token punctuation">:</span> <span class="token string">"https://xxxx.png"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 用户头像</span>
+        blogStartDate <span class="token punctuation">:</span> <span class="token string">"2016-11-17"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 入园时间，年-月-日。入园时间查看方法：鼠标停留园龄时间上，会显示入园时间</span>
+    <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v1.3.3/src/script/simpleMemory.min.js"</span> defer<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+</code></pre>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610811871334-57619c2b-5ff9-4fc0-9670-76377aaf312f.png#height=649&id=LXNRd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1298&originWidth=2138&originalType=binary&size=353533&status=done&style=none&width=1069" alt="image.png"></p>
+<h2 id="6-菜单栏拓展功能（可选）"><a href="#6-菜单栏拓展功能（可选）" class="headerlink" title="6.菜单栏拓展功能（可选）"></a>6.菜单栏拓展功能（可选）</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610812078395-8923341e-d66d-433c-91a9-d8a98b8186f1.png#height=786&id=abB1Z&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1572&originWidth=2856&originalType=binary&size=5550331&status=done&style=none&width=1428" alt="image.png"></p>
+<blockquote>
+<p>我直接将我配置给出，按自己的实际替换为自己的就好。<br>新增的功能：</p>
+<ol>
+<li>菜单栏扩展</li>
+<li>打赏码配置</li>
+<li>夜间模式配置</li>
+</ol>
+</blockquote>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
+    window<span class="token punctuation">.</span>cnblogsConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+        GhVersions    <span class="token punctuation">:</span> <span class="token string">'v1.3.3'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 版本</span>
+        blogUser      <span class="token punctuation">:</span> <span class="token string">"leader755"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 用户名</span>
+        blogAvatar    <span class="token punctuation">:</span> <span class="token string">"https://gitee.com/leader755/imagehost/raw/master/blog/wx_avatar.png"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 用户头像</span>
+        blogStartDate <span class="token punctuation">:</span> <span class="token string">"2018-03-105"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 入园时间，年-月-日。入园时间查看方法：鼠标停留园龄时间上，会显示入园时间</span>
+        webpageTitleOnblur<span class="token punctuation">:</span> <span class="token string">'(oﾟvﾟ)ノ风里雨里，我再这里等你'</span><span class="token punctuation">,</span>
+        webpageIcon<span class="token punctuation">:</span> <span class="token string">"https://gitee.com/leader755/imagehost/raw/master/blog/wx_avatar.webp"</span><span class="token punctuation">,</span>
+        menuNavList<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token comment" spellcheck="true">// 列表数据 ['导航名称', '链接', 'icon']</span>
+            <span class="token punctuation">[</span><span class="token string">'Blog'</span><span class="token punctuation">,</span> <span class="token string">'https://www.leader755.com'</span><span class="token punctuation">,</span> <span class="token string">'icon-blog-solid'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'yuque'</span><span class="token punctuation">,</span> <span class="token string">'https://www.yuque.com/leader755'</span><span class="token punctuation">,</span> <span class="token string">'icon-logo'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'github'</span><span class="token punctuation">,</span> <span class="token string">'https://github.com/Leader755/'</span><span class="token punctuation">,</span> <span class="token string">'icon-github'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'gitee'</span><span class="token punctuation">,</span> <span class="token string">'https://gitee.com/leader755'</span><span class="token punctuation">,</span> <span class="token string">'icon-gitee'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'cnblogs'</span><span class="token punctuation">,</span> <span class="token string">'https://www.cnblogs.com/'</span><span class="token punctuation">,</span> <span class="token string">'icon-cnblogs'</span><span class="token punctuation">]</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        switchDayNight<span class="token punctuation">:</span><span class="token punctuation">{</span>
+            enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>       <span class="token comment" spellcheck="true">// 是否开启日/夜间模式切换按钮</span>
+            auto<span class="token punctuation">:</span> <span class="token punctuation">{</span>             <span class="token comment" spellcheck="true">// 自动切换相关配置</span>
+                 enable<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">// 开启自动切换</span>
+                 dayHour<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>     <span class="token comment" spellcheck="true">// 日间模式开始时间，整数型，24小时制</span>
+                 nightHour<span class="token punctuation">:</span> <span class="token number">19</span>   <span class="token comment" spellcheck="true">// 夜间模式开始时间，整数型，24小时制</span>
+            <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span><span class="token punctuation">,</span>
+       homeBannerTextType<span class="token punctuation">:</span> <span class="token string">"one"</span><span class="token punctuation">,</span>
+       reward<span class="token punctuation">:</span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//赞赏码功能</span>
+          enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          wechatpay<span class="token punctuation">:</span> <span class="token string">'https://gitee.com/leader755/imagehost/raw/master/blog/wxz.jpg'</span><span class="token punctuation">,</span>
+          alipay<span class="token punctuation">:</span> <span class="token string">'https://gitee.com/leader755/imagehost/raw/master/blog/zfb.jpg'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      weChatOfficialAccounts<span class="token punctuation">:</span> <span class="token string">'https://gitee.com/leader755/imagehost/raw/master/blog/wxgzh.jpg'</span><span class="token punctuation">,</span>
+      essayCodeHighlighting<span class="token punctuation">:</span> <span class="token string">"a11y-dark"</span>
+   <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v1.3.3/src/script/simpleMemory.min.js"</span> defer<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610812287601-af1c52b2-5652-4d97-8d19-97eb75bb3b16.png#height=457&id=XZjAW&margin=%5Bobject%20Object%5D&name=image.png&originHeight=914&originWidth=1732&originalType=binary&size=188458&status=done&style=none&width=866" alt="image.png"></p>
+<p>7.配置音乐播放器功能（可选）<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610812483948-d291b790-2ab1-4eab-a524-ca4d36e01269.png#height=784&id=Uo5FQ&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1568&originWidth=2880&originalType=binary&size=4464671&status=done&style=none&width=1440" alt="image.png"></p>
+<p>将以下代码直接粘贴在页脚 HTML 代码 位置</p>
+<pre class=" language-javascript"><code class="language-javascript">  <span class="token operator">&lt;</span>style<span class="token operator">></span>
+  @media only screen and <span class="token punctuation">(</span>max<span class="token operator">-</span>width<span class="token punctuation">:</span> 767px<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  #sidebar_search_box input<span class="token punctuation">[</span>type<span class="token operator">=</span>text<span class="token punctuation">]</span><span class="token punctuation">{</span>width<span class="token punctuation">:</span><span class="token function">calc</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">%</span> <span class="token operator">-</span> 24px<span class="token punctuation">)</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+
+  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>音乐<span class="token operator">--</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"https://blog-static.cnblogs.com/files/elkyo/APlayer.min.css"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"player"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"aplayer aplayer-withlist aplayer-fixed"</span> data<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"3025663508"</span> data<span class="token operator">-</span>server<span class="token operator">=</span><span class="token string">"netease"</span> data<span class="token operator">-</span>type<span class="token operator">=</span><span class="token string">"playlist"</span> data<span class="token operator">-</span>order<span class="token operator">=</span><span class="token string">"random"</span> data<span class="token operator">-</span>fixed<span class="token operator">=</span><span class="token string">"true"</span> data<span class="token operator">-</span>listfolded<span class="token operator">=</span><span class="token string">"true"</span> data<span class="token operator">-</span>theme<span class="token operator">=</span><span class="token string">"#2D8CF0"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://blog-static.cnblogs.com/files/elkyo/APlayer.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://blog-static.cnblogs.com/files/elkyo/Meting.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>点击冒点<span class="token operator">--</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>canvas width<span class="token operator">=</span><span class="token string">"1777"</span> height<span class="token operator">=</span><span class="token string">"841"</span> style<span class="token operator">=</span><span class="token string">"position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>canvas<span class="token operator">></span><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://blog-static.cnblogs.com/files/elkyo/mouse-click.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610812672610-536ef9b5-7f1e-4f85-8a32-8be26777cfbb.png#height=389&id=sDqUc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=778&originWidth=1806&originalType=binary&size=126176&status=done&style=none&width=903" alt="image.png"></p>
+<h2 id="7-增加友盟的代码统计功能（可选）"><a href="#7-增加友盟的代码统计功能（可选）" class="headerlink" title="7.增加友盟的代码统计功能（可选）"></a>7.增加友盟的代码统计功能（可选）</h2><blockquote>
+<ul>
+<li><a href="https://passport.umeng.com/" target="_blank" rel="noopener">注册友盟</a>，然后新建应用，填写网站域名，会给出以下代码，复制 id</li>
+<li>将以下代码复制到 页首 HTML 代码 ,将 id 替换为友盟给出的 id.</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610812875079-a71ab146-e177-4ef9-b2fd-77fae4825a07.png#height=765&id=RwyV1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1530&originWidth=2600&originalType=binary&size=462700&status=done&style=none&width=1300" alt="image.png"></p>
+<pre class=" language-javascript"><code class="language-javascript">  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>统计<span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"cnzzProtocol"</span>  style<span class="token operator">=</span><span class="token string">"display: none;"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"id_cnzz_stat_icon"</span> id<span class="token operator">=</span><span class="token string">'cnzz_stat_icon_1279624609'</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">'https://v1.cnzz.com/z_stat.php?id=友盟id&amp;online=1&amp;show=line'</span> type<span class="token operator">=</span><span class="token string">'text/javascript'</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<h2 id="8-更多功能扩展"><a href="#8-更多功能扩展" class="headerlink" title="8.更多功能扩展"></a>8.更多功能扩展</h2><blockquote>
+<ul>
+<li>** 官方文档：<strong>[</strong><a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/**](https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/)" target="_blank" rel="noopener">https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/**](https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/)</a></li>
+<li>** window.cnblogsConfig 有很多的配置项，配置详情见<strong>[</strong>参考文档**](<a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/Docs/Customization/config" target="_blank" rel="noopener">https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/Docs/Customization/config</a>)</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>主题美化</category>
+      </categories>
+      <tags>
+        <tag>博客园美化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端面试（8）拷贝</title>
     <url>/leader755/46928.html</url>
     <content><![CDATA[<h3 id=""><a href="#" class="headerlink" title=""></a><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1599388884598-3823412b-fbc8-42fb-8d05-192f3011b049.png#height=1320&id=bQyv2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1320&originWidth=2910&originalType=binary&size=320693&status=done&style=none&width=2910" alt="image.png"></h3><h3 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1599381658009-a92fc3b0-5400-4cff-9f05-754065529eab.png#height=241&id=xa1aD&margin=%5Bobject%20Object%5D&name=image.png&originHeight=482&originWidth=674&originalType=binary&size=26164&status=done&style=none&width=337" alt="image.png"></h3><p>js 的基本数据类型的赋值，就是值传递。引用类型对象的赋值是将对象地址的引用赋值。这时候修改对象中的属性或者值，会导致所有引用这个对象的值改变。如果想要真的复制一个新的对象，而不是复制对象的引用，就要用到对象的深拷贝。</p>
@@ -6172,119 +6340,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
       <tags>
         <tag>深拷贝</tag>
         <tag>浅拷贝</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客园主题美化</title>
-    <url>/leader755/33440.html</url>
-    <content><![CDATA[<h2 id="1-主题效果"><a href="#1-主题效果" class="headerlink" title="1.主题效果"></a>1.主题效果</h2><p>实际网站效果 <a href="https://www.cnblogs.com/leader755/" target="_blank" rel="noopener">https://www.cnblogs.com/leader755/</a><br><a href="https://www.cnblogs.com/leader755/" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610809961376-8a870346-44a7-44c1-becd-4170586c4b3d.png#height=787&id=e6VuF&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1574&originWidth=2874&originalType=binary&size=7262820&status=done&style=none&width=1437" alt="image.png"></a></p>
-<h2 id="2-主题介绍"><a href="#2-主题介绍" class="headerlink" title="2.主题介绍"></a>2.主题介绍</h2><blockquote>
-<p>本主题使用的 <a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/Docs/GettingStarted/install" target="_blank" rel="noopener">SimpleMemory </a> 这款主题，看完本教程后你能搭出相同美化的博客园主题博客了，也可按照<a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/Docs/GettingStarted/install" target="_blank" rel="noopener">官方教程</a>调整细节或者新增部分功能。<br>github 官网：<a href="https://github.com/BNDong/Cnblogs-Theme-SimpleMemory" target="_blank" rel="noopener">https://github.com/BNDong/Cnblogs-Theme-SimpleMemory</a><br>官方教程：<a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/" target="_blank" rel="noopener">https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/</a></p>
-</blockquote>
-<h2 id="3-设置主题并申请-js-代码权限"><a href="#3-设置主题并申请-js-代码权限" class="headerlink" title="3.设置主题并申请 js 代码权限"></a>3.设置主题并申请 js 代码权限</h2><blockquote>
-<p>1&gt;进入管理&gt;设置&gt;博客设置&gt;设置<br>2&gt;博客主题&gt;选择 SimpleMemory 主题<br>3&gt;勾选申请 js 权限，填写开通的理由等待管理员审核通过(等待 10min 左右)。</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610810897799-26cad005-922c-4be1-8404-f5e505d70d4c.png#height=713&id=MP08w&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1426&originWidth=1864&originalType=binary&size=467125&status=done&style=none&width=932" alt="image.png"></p>
-<h2 id="4-覆盖默认的-css"><a href="#4-覆盖默认的-css" class="headerlink" title="4.覆盖默认的 css"></a>4.覆盖默认的 css</h2><blockquote>
-<p>1.进入 <a href="https://github.com/BNDong/Cnblogs-Theme-SimpleMemory" target="_blank" rel="noopener">SimpleMemory</a> 的 github 仓库，将 src/style/base.min.css 代码复制. 2.将复制到的 css 粘贴到 css 代码块中，并且勾选上 禁用默认 css. 3.点击保存，强制刷新局可以看到基本样式出来了</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610811524596-8f7a6a91-fb51-413f-b760-65724e0ca66b.png#height=687&id=cSdcO&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1374&originWidth=2762&originalType=binary&size=314107&status=done&style=none&width=1381" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610811287489-1d2698f8-4ae1-4f09-bf66-4be5f8d92817.png#height=637&id=h53qX&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1274&originWidth=1750&originalType=binary&size=381956&status=done&style=none&width=875" alt="image.png"></p>
-<h2 id="5-侧边栏公告的基本配置"><a href="#5-侧边栏公告的基本配置" class="headerlink" title="5.侧边栏公告的基本配置"></a>5.侧边栏公告的基本配置</h2><p>在侧边栏公告中将以下代码粘贴进去，点击保存强制刷新博客页面就基本可以看到页面效果了，是不是很简单呢。到了这里如果不追求其他，一个美化博客的操作就已经完成了，但是我还想配置个性化，那就请看下面。</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
-    window<span class="token punctuation">.</span>cnblogsConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
-        GhVersions    <span class="token punctuation">:</span> <span class="token string">'v1.3.3'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 版本（不需要改动）</span>
-        blogUser      <span class="token punctuation">:</span> <span class="token string">"userName"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 用户名</span>
-        blogAvatar    <span class="token punctuation">:</span> <span class="token string">"https://xxxx.png"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 用户头像</span>
-        blogStartDate <span class="token punctuation">:</span> <span class="token string">"2016-11-17"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 入园时间，年-月-日。入园时间查看方法：鼠标停留园龄时间上，会显示入园时间</span>
-    <span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v1.3.3/src/script/simpleMemory.min.js"</span> defer<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-</code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610811871334-57619c2b-5ff9-4fc0-9670-76377aaf312f.png#height=649&id=LXNRd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1298&originWidth=2138&originalType=binary&size=353533&status=done&style=none&width=1069" alt="image.png"></p>
-<h2 id="6-菜单栏拓展功能（可选）"><a href="#6-菜单栏拓展功能（可选）" class="headerlink" title="6.菜单栏拓展功能（可选）"></a>6.菜单栏拓展功能（可选）</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610812078395-8923341e-d66d-433c-91a9-d8a98b8186f1.png#height=786&id=abB1Z&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1572&originWidth=2856&originalType=binary&size=5550331&status=done&style=none&width=1428" alt="image.png"></p>
-<blockquote>
-<p>我直接将我配置给出，按自己的实际替换为自己的就好。<br>新增的功能：</p>
-<ol>
-<li>菜单栏扩展</li>
-<li>打赏码配置</li>
-<li>夜间模式配置</li>
-</ol>
-</blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
-    window<span class="token punctuation">.</span>cnblogsConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
-        GhVersions    <span class="token punctuation">:</span> <span class="token string">'v1.3.3'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 版本</span>
-        blogUser      <span class="token punctuation">:</span> <span class="token string">"leader755"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 用户名</span>
-        blogAvatar    <span class="token punctuation">:</span> <span class="token string">"https://gitee.com/leader755/imagehost/raw/master/blog/wx_avatar.png"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 用户头像</span>
-        blogStartDate <span class="token punctuation">:</span> <span class="token string">"2018-03-105"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 入园时间，年-月-日。入园时间查看方法：鼠标停留园龄时间上，会显示入园时间</span>
-        webpageTitleOnblur<span class="token punctuation">:</span> <span class="token string">'(oﾟvﾟ)ノ风里雨里，我再这里等你'</span><span class="token punctuation">,</span>
-        webpageIcon<span class="token punctuation">:</span> <span class="token string">"https://gitee.com/leader755/imagehost/raw/master/blog/wx_avatar.webp"</span><span class="token punctuation">,</span>
-        menuNavList<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token comment" spellcheck="true">// 列表数据 ['导航名称', '链接', 'icon']</span>
-            <span class="token punctuation">[</span><span class="token string">'Blog'</span><span class="token punctuation">,</span> <span class="token string">'https://www.leader755.com'</span><span class="token punctuation">,</span> <span class="token string">'icon-blog-solid'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-            <span class="token punctuation">[</span><span class="token string">'yuque'</span><span class="token punctuation">,</span> <span class="token string">'https://www.yuque.com/leader755'</span><span class="token punctuation">,</span> <span class="token string">'icon-logo'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-            <span class="token punctuation">[</span><span class="token string">'github'</span><span class="token punctuation">,</span> <span class="token string">'https://github.com/Leader755/'</span><span class="token punctuation">,</span> <span class="token string">'icon-github'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-            <span class="token punctuation">[</span><span class="token string">'gitee'</span><span class="token punctuation">,</span> <span class="token string">'https://gitee.com/leader755'</span><span class="token punctuation">,</span> <span class="token string">'icon-gitee'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-            <span class="token punctuation">[</span><span class="token string">'cnblogs'</span><span class="token punctuation">,</span> <span class="token string">'https://www.cnblogs.com/'</span><span class="token punctuation">,</span> <span class="token string">'icon-cnblogs'</span><span class="token punctuation">]</span>
-        <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        switchDayNight<span class="token punctuation">:</span><span class="token punctuation">{</span>
-            enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>       <span class="token comment" spellcheck="true">// 是否开启日/夜间模式切换按钮</span>
-            auto<span class="token punctuation">:</span> <span class="token punctuation">{</span>             <span class="token comment" spellcheck="true">// 自动切换相关配置</span>
-                 enable<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">// 开启自动切换</span>
-                 dayHour<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>     <span class="token comment" spellcheck="true">// 日间模式开始时间，整数型，24小时制</span>
-                 nightHour<span class="token punctuation">:</span> <span class="token number">19</span>   <span class="token comment" spellcheck="true">// 夜间模式开始时间，整数型，24小时制</span>
-            <span class="token punctuation">}</span>
-       <span class="token punctuation">}</span><span class="token punctuation">,</span>
-       homeBannerTextType<span class="token punctuation">:</span> <span class="token string">"one"</span><span class="token punctuation">,</span>
-       reward<span class="token punctuation">:</span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//赞赏码功能</span>
-          enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-          wechatpay<span class="token punctuation">:</span> <span class="token string">'https://gitee.com/leader755/imagehost/raw/master/blog/wxz.jpg'</span><span class="token punctuation">,</span>
-          alipay<span class="token punctuation">:</span> <span class="token string">'https://gitee.com/leader755/imagehost/raw/master/blog/zfb.jpg'</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      weChatOfficialAccounts<span class="token punctuation">:</span> <span class="token string">'https://gitee.com/leader755/imagehost/raw/master/blog/wxgzh.jpg'</span><span class="token punctuation">,</span>
-      essayCodeHighlighting<span class="token punctuation">:</span> <span class="token string">"a11y-dark"</span>
-   <span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v1.3.3/src/script/simpleMemory.min.js"</span> defer<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610812287601-af1c52b2-5652-4d97-8d19-97eb75bb3b16.png#height=457&id=XZjAW&margin=%5Bobject%20Object%5D&name=image.png&originHeight=914&originWidth=1732&originalType=binary&size=188458&status=done&style=none&width=866" alt="image.png"></p>
-<p>7.配置音乐播放器功能（可选）<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610812483948-d291b790-2ab1-4eab-a524-ca4d36e01269.png#height=784&id=Uo5FQ&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1568&originWidth=2880&originalType=binary&size=4464671&status=done&style=none&width=1440" alt="image.png"></p>
-<p>将以下代码直接粘贴在页脚 HTML 代码 位置</p>
-<pre class=" language-javascript"><code class="language-javascript">  <span class="token operator">&lt;</span>style<span class="token operator">></span>
-  @media only screen and <span class="token punctuation">(</span>max<span class="token operator">-</span>width<span class="token punctuation">:</span> 767px<span class="token punctuation">)</span><span class="token punctuation">{</span>
-  #sidebar_search_box input<span class="token punctuation">[</span>type<span class="token operator">=</span>text<span class="token punctuation">]</span><span class="token punctuation">{</span>width<span class="token punctuation">:</span><span class="token function">calc</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">%</span> <span class="token operator">-</span> 24px<span class="token punctuation">)</span><span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
-
-  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>音乐<span class="token operator">--</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"https://blog-static.cnblogs.com/files/elkyo/APlayer.min.css"</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"player"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"aplayer aplayer-withlist aplayer-fixed"</span> data<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"3025663508"</span> data<span class="token operator">-</span>server<span class="token operator">=</span><span class="token string">"netease"</span> data<span class="token operator">-</span>type<span class="token operator">=</span><span class="token string">"playlist"</span> data<span class="token operator">-</span>order<span class="token operator">=</span><span class="token string">"random"</span> data<span class="token operator">-</span>fixed<span class="token operator">=</span><span class="token string">"true"</span> data<span class="token operator">-</span>listfolded<span class="token operator">=</span><span class="token string">"true"</span> data<span class="token operator">-</span>theme<span class="token operator">=</span><span class="token string">"#2D8CF0"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://blog-static.cnblogs.com/files/elkyo/APlayer.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://blog-static.cnblogs.com/files/elkyo/Meting.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>点击冒点<span class="token operator">--</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>canvas width<span class="token operator">=</span><span class="token string">"1777"</span> height<span class="token operator">=</span><span class="token string">"841"</span> style<span class="token operator">=</span><span class="token string">"position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>canvas<span class="token operator">></span><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://blog-static.cnblogs.com/files/elkyo/mouse-click.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610812672610-536ef9b5-7f1e-4f85-8a32-8be26777cfbb.png#height=389&id=sDqUc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=778&originWidth=1806&originalType=binary&size=126176&status=done&style=none&width=903" alt="image.png"></p>
-<h2 id="7-增加友盟的代码统计功能（可选）"><a href="#7-增加友盟的代码统计功能（可选）" class="headerlink" title="7.增加友盟的代码统计功能（可选）"></a>7.增加友盟的代码统计功能（可选）</h2><blockquote>
-<ul>
-<li><a href="https://passport.umeng.com/" target="_blank" rel="noopener">注册友盟</a>，然后新建应用，填写网站域名，会给出以下代码，复制 id</li>
-<li>将以下代码复制到 页首 HTML 代码 ,将 id 替换为友盟给出的 id.</li>
-</ul>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1610812875079-a71ab146-e177-4ef9-b2fd-77fae4825a07.png#height=765&id=RwyV1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1530&originWidth=2600&originalType=binary&size=462700&status=done&style=none&width=1300" alt="image.png"></p>
-<pre class=" language-javascript"><code class="language-javascript">  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>统计<span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"cnzzProtocol"</span>  style<span class="token operator">=</span><span class="token string">"display: none;"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"id_cnzz_stat_icon"</span> id<span class="token operator">=</span><span class="token string">'cnzz_stat_icon_1279624609'</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
-    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">'https://v1.cnzz.com/z_stat.php?id=友盟id&amp;online=1&amp;show=line'</span> type<span class="token operator">=</span><span class="token string">'text/javascript'</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
-<h2 id="8-更多功能扩展"><a href="#8-更多功能扩展" class="headerlink" title="8.更多功能扩展"></a>8.更多功能扩展</h2><blockquote>
-<ul>
-<li>** 官方文档：<strong>[</strong><a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/**](https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/)" target="_blank" rel="noopener">https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/**](https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/)</a></li>
-<li>** window.cnblogsConfig 有很多的配置项，配置详情见<strong>[</strong>参考文档**](<a href="https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/Docs/Customization/config" target="_blank" rel="noopener">https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v1.1/#/Docs/Customization/config</a>)</li>
-</ul>
-</blockquote>
-]]></content>
-      <categories>
-        <category>主题美化</category>
-      </categories>
-      <tags>
-        <tag>博客园美化</tag>
       </tags>
   </entry>
   <entry>
