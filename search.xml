@@ -1004,14 +1004,13 @@ docker load</code></pre>
 <h2 id="1-下载-jenkins-镜像"><a href="#1-下载-jenkins-镜像" class="headerlink" title="1.下载 jenkins 镜像"></a>1.下载 jenkins 镜像</h2><ul>
 <li>docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软件会失败。</li>
 </ul>
-<pre class=" language-shell"><code class="language-shell">docker pull jenkins/jenkins</code></pre>
+<pre class=" language-shell"><code class="language-shell">docker pull jenkins/jenkins:latest</code></pre>
 <h2 id="2-查看-jenkins-是否下载成功"><a href="#2-查看-jenkins-是否下载成功" class="headerlink" title="2.查看 jenkins 是否下载成功"></a>2.查看 jenkins 是否下载成功</h2><pre class=" language-shell"><code class="language-shell">docker images</code></pre>
 <h2 id="3-安装-jenkins"><a href="#3-安装-jenkins" class="headerlink" title="3.安装 jenkins"></a>3.安装 jenkins</h2><h3 id="1-gt-创建文件夹"><a href="#1-gt-创建文件夹" class="headerlink" title="1&gt;创建文件夹"></a>1&gt;创建文件夹</h3><pre class=" language-shell"><code class="language-shell">mkdir /home/jenkins</code></pre>
 <h3 id="2-gt-给予权限"><a href="#2-gt-给予权限" class="headerlink" title="2&gt;给予权限"></a>2&gt;给予权限</h3><pre class=" language-shell"><code class="language-shell">ls -nd jenkins/   #查看文件权限
 
-chown -R 1000:1000 jenkins/    给uid为1000的权限
-</code></pre>
-<h2 id="4-启动-jenkins"><a href="#4-启动-jenkins" class="headerlink" title="4.启动 jenkins"></a>4.启动 jenkins</h2><pre class=" language-shell"><code class="language-shell">docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v /home/jenkins:/var/jenkins_home jenkins/jenkins</code></pre>
+chown -R 1000:1000 jenkins/    给uid为1000的权限</code></pre>
+<h2 id="4-启动-jenkins"><a href="#4-启动-jenkins" class="headerlink" title="4.启动 jenkins"></a>4.启动 jenkins</h2><pre class=" language-shell"><code class="language-shell">docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v /home/jenkins:/var/jenkins_home jenkins/jenkins:latest</code></pre>
 <h2 id="5-查看-jenkins-是否启动"><a href="#5-查看-jenkins-是否启动" class="headerlink" title="5.查看 jenkins 是否启动"></a>5.查看 jenkins 是否启动</h2><pre class=" language-shell"><code class="language-shell">ps -ef | grep jenkins   #jenkins 进程
 
 docker logs jenkins      #查看启动日志</code></pre>
