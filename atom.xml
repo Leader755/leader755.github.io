@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2022-03-30T13:25:33.510Z</updated>
+  <updated>2022-03-30T13:42:56.035Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>docker安装 jenkins</title>
     <link href="https://www.leader755.com/leader755/22057.html"/>
     <id>https://www.leader755.com/leader755/22057.html</id>
-    <published>2022-03-30T13:25:33.510Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <published>2023-10-01T13:55:23.000Z</published>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -29,14 +29,20 @@
       
         
         
-          &lt;p&gt;基于 docker 进行安装 软件，首先需要有 docker 环境。&lt;br&gt;1.docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装 软件会失败(亲测)。&lt;/p&gt;
-&lt;pre class=&quot; language-shell&quot;&gt;&lt;code
+          &lt;h2 id=&quot;准备条件&quot;&gt;&lt;a href=&quot;#准备条件&quot; class=&quot;headerlink&quot; title=&quot;准备条件&quot;&gt;&lt;/a&gt;准备条件&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;基于 docker 进行安装软件，首先需要有 docker 环境，&lt;a
         
       
     
     </summary>
     
     
+      <category term="linux" scheme="https://www.leader755.com/categories/linux/"/>
+    
+    
+      <category term="jenkins" scheme="https://www.leader755.com/tags/jenkins/"/>
+    
+      <category term="centos7" scheme="https://www.leader755.com/tags/centos7/"/>
     
   </entry>
   
@@ -44,8 +50,8 @@
     <title>centos7安装docker</title>
     <link href="https://www.leader755.com/leader755/21487.html"/>
     <id>https://www.leader755.com/leader755/21487.html</id>
-    <published>2022-03-30T13:25:33.510Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <published>2022-03-30T13:42:56.035Z</published>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -69,7 +75,7 @@
     <link href="https://www.leader755.com/leader755/58434.html"/>
     <id>https://www.leader755.com/leader755/58434.html</id>
     <published>2022-03-20T12:25:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -98,7 +104,7 @@
     <link href="https://www.leader755.com/leader755/59816.html"/>
     <id>https://www.leader755.com/leader755/59816.html</id>
     <published>2022-03-14T10:48:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -128,7 +134,7 @@
     <link href="https://www.leader755.com/leader755/54576.html"/>
     <id>https://www.leader755.com/leader755/54576.html</id>
     <published>2022-03-08T11:55:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -158,7 +164,7 @@
     <link href="https://www.leader755.com/leader755/16745.html"/>
     <id>https://www.leader755.com/leader755/16745.html</id>
     <published>2022-03-02T00:07:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -187,7 +193,7 @@
     <link href="https://www.leader755.com/leader755/39615.html"/>
     <id>https://www.leader755.com/leader755/39615.html</id>
     <published>2022-02-16T11:05:41.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -214,7 +220,7 @@
     <link href="https://www.leader755.com/leader755/62737.html"/>
     <id>https://www.leader755.com/leader755/62737.html</id>
     <published>2022-02-05T17:24:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -242,7 +248,7 @@
     <link href="https://www.leader755.com/leader755/33285.html"/>
     <id>https://www.leader755.com/leader755/33285.html</id>
     <published>2022-02-04T13:38:23.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -269,7 +275,7 @@
     <link href="https://www.leader755.com/leader755/33649.html"/>
     <id>https://www.leader755.com/leader755/33649.html</id>
     <published>2021-10-19T11:05:41.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -301,7 +307,7 @@
     <link href="https://www.leader755.com/leader755/60370.html"/>
     <id>https://www.leader755.com/leader755/60370.html</id>
     <published>2021-09-22T06:55:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -330,7 +336,7 @@
     <link href="https://www.leader755.com/leader755/32104.html"/>
     <id>https://www.leader755.com/leader755/32104.html</id>
     <published>2021-07-25T17:24:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -468,7 +474,7 @@
     <link href="https://www.leader755.com/leader755/58426.html"/>
     <id>https://www.leader755.com/leader755/58426.html</id>
     <published>2021-05-16T11:55:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -498,7 +504,7 @@
     <link href="https://www.leader755.com/leader755/1179.html"/>
     <id>https://www.leader755.com/leader755/1179.html</id>
     <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -527,7 +533,7 @@
     <link href="https://www.leader755.com/leader755/10309.html"/>
     <id>https://www.leader755.com/leader755/10309.html</id>
     <published>2021-05-05T11:55:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -556,7 +562,7 @@
     <link href="https://www.leader755.com/leader755/2040.html"/>
     <id>https://www.leader755.com/leader755/2040.html</id>
     <published>2021-05-05T06:55:00.000Z</published>
-    <updated>2022-03-30T13:25:33.510Z</updated>
+    <updated>2022-03-30T13:42:56.035Z</updated>
     
     <summary type="html">
     
@@ -574,9 +580,9 @@
       <category term="jenkins" scheme="https://www.leader755.com/categories/jenkins/"/>
     
     
-      <category term="git" scheme="https://www.leader755.com/tags/git/"/>
-    
       <category term="centos7" scheme="https://www.leader755.com/tags/centos7/"/>
+    
+      <category term="git" scheme="https://www.leader755.com/tags/git/"/>
     
   </entry>
   
