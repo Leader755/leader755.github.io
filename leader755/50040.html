@@ -5,8 +5,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="keywords" content="centos7安装Jenkins, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
-  <meta name="description" content="1. 安装 Jenkins：安装 Jenkins 稳定版（注意不要使用最新版，不稳定）
-1&amp;gt;通过 yum 安装及其卸载//yum安装 （yum的repos中默认是没有Jenkins的，需要先将Jenkins存储库添加到yum repo">
+  <meta name="description" content="1.安装 jenkins1&amp;gt;通过 yum 安装及其卸载(推荐)//yum安装 （yum的repos中默认是没有Jenkins的，需要先将Jenkins存储库添加到yum repos)
+1&gt;cd ~ //回到主目录进行安装 jenkin">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -609,14 +609,14 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2022-03-31
+          2022-04-01
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          718
+          780
         </div>
         
 
@@ -636,8 +636,7 @@
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <h2 id="1-安装-Jenkins："><a href="#1-安装-Jenkins：" class="headerlink" title="1. 安装 Jenkins："></a>1. 安装 Jenkins：</h2><p><strong>安装 Jenkins 稳定版（注意不要使用最新版，不稳定）</strong></p>
-<h3 id="1-gt-通过-yum-安装及其卸载"><a href="#1-gt-通过-yum-安装及其卸载" class="headerlink" title="1&gt;通过 yum 安装及其卸载"></a>1&gt;通过 yum 安装及其卸载</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//yum安装 （yum的repos中默认是没有Jenkins的，需要先将Jenkins存储库添加到yum repos)</span>
+        <h2 id="1-安装-jenkins"><a href="#1-安装-jenkins" class="headerlink" title="1.安装 jenkins"></a>1.安装 jenkins</h2><h3 id="1-gt-通过-yum-安装及其卸载-推荐"><a href="#1-gt-通过-yum-安装及其卸载-推荐" class="headerlink" title="1&gt;通过 yum 安装及其卸载(推荐)"></a>1&gt;通过 yum 安装及其卸载(推荐)</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//yum安装 （yum的repos中默认是没有Jenkins的，需要先将Jenkins存储库添加到yum repos)</span>
 <span class="token number">1</span><span class="token operator">></span>cd <span class="token operator">~</span> <span class="token comment" spellcheck="true">//回到主目录进行安装 jenkins</span>
 <span class="token number">2</span><span class="token operator">></span>sudo wget <span class="token operator">-</span>O <span class="token regex">/etc/yum</span><span class="token punctuation">.</span>repos<span class="token punctuation">.</span>d<span class="token operator">/</span>jenkins<span class="token punctuation">.</span>repo http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>pkg<span class="token punctuation">.</span>jenkins<span class="token punctuation">.</span>io<span class="token operator">/</span>redhat<span class="token operator">-</span>stable<span class="token operator">/</span>jenkins<span class="token punctuation">.</span>repo <span class="token comment" spellcheck="true">//#添加Yum源</span>
 <span class="token number">3</span><span class="token operator">></span>sudo rpm <span class="token operator">--</span><span class="token keyword">import</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>pkg<span class="token punctuation">.</span>jenkins<span class="token punctuation">.</span>io<span class="token operator">/</span>redhat<span class="token operator">-</span>stable<span class="token operator">/</span>jenkins<span class="token punctuation">.</span>io<span class="token punctuation">.</span>key <span class="token comment" spellcheck="true">//#导入密钥</span>
@@ -645,20 +644,11 @@
 <span class="token number">5</span><span class="token operator">></span>yum install jenkins <span class="token operator">--</span>nogpgcheck <span class="token comment" spellcheck="true">// 跳过公钥检查安装</span>
 
 <span class="token comment" spellcheck="true">//yum卸载</span>
-<span class="token number">1</span><span class="token operator">></span>service jenkins stop
-<span class="token number">2</span><span class="token operator">></span>yum clean all
-<span class="token number">3</span><span class="token operator">></span>yum <span class="token operator">-</span>y remove jenkins
-</code></pre>
-<h3 id="2-gt-卸载-yum-方式安装的-jenkins（默认安装主目录是在-var-lib-jenkins-）"><a href="#2-gt-卸载-yum-方式安装的-jenkins（默认安装主目录是在-var-lib-jenkins-）" class="headerlink" title="2&gt;卸载 yum 方式安装的 jenkins（默认安装主目录是在/var/lib/jenkins/）"></a>2&gt;卸载 yum 方式安装的 jenkins（默认安装主目录是在/var/lib/jenkins/）</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token operator">></span>先停止运行 jenkisn
-service jenkins stop
-
-<span class="token number">2</span><span class="token operator">></span>移除文件
-yum clean all
-yum <span class="token operator">-</span>y remove jenkins
-
-<span class="token number">3</span><span class="token operator">></span>手动删除jenkins配置文件（<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins<span class="token operator">/</span>）</code></pre>
-<p>###</p>
-<h3 id="3-gt-直接下载-rpm-安装-jenkins"><a href="#3-gt-直接下载-rpm-安装-jenkins" class="headerlink" title="3&gt;直接下载 rpm 安装 jenkins"></a>3&gt;直接下载 rpm 安装 jenkins</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//rpm安装（各个版本地址 https://pkg.jenkins.io/）</span>
+<span class="token number">1</span><span class="token operator">></span>service jenkins stop  <span class="token comment" spellcheck="true">//先停止运行 jenkisn</span>
+<span class="token number">2</span><span class="token operator">></span>yum clean all         <span class="token comment" spellcheck="true">//移除文件</span>
+<span class="token number">3</span><span class="token operator">></span>yum <span class="token operator">-</span>y remove jenkins <span class="token comment" spellcheck="true">//卸载 jenkins</span>
+<span class="token number">4</span><span class="token operator">></span>手动删除jenkins配置文件（<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token regex">/jenkins/</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//卸载不干净可采用此方法</span></code></pre>
+<h3 id="2-gt-rpm-安装-jenkins"><a href="#2-gt-rpm-安装-jenkins" class="headerlink" title="2&gt;rpm 安装 jenkins"></a>2&gt;rpm 安装 jenkins</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//rpm安装（各个版本地址 https://pkg.jenkins.io/）</span>
 <span class="token number">1</span><span class="token operator">></span>wget https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>pkg<span class="token punctuation">.</span>jenkins<span class="token punctuation">.</span>io<span class="token operator">/</span>redhat<span class="token operator">/</span>jenkins<span class="token number">-2.156</span><span class="token operator">-</span><span class="token number">1.1</span><span class="token punctuation">.</span>noarch<span class="token punctuation">.</span>rpm
 <span class="token number">2</span><span class="token operator">></span>rpm <span class="token operator">-</span>ivh jenkins<span class="token number">-2.156</span><span class="token operator">-</span><span class="token number">1.1</span><span class="token punctuation">.</span>noarch<span class="token punctuation">.</span>rpm
 
@@ -667,15 +657,13 @@ yum <span class="token operator">-</span>y remove jenkins
 <span class="token number">2</span><span class="token operator">></span>rpm <span class="token operator">-</span>ql jenkins  <span class="token comment" spellcheck="true">//检查是否卸载成功：</span>
 <span class="token number">3</span><span class="token operator">></span>find <span class="token operator">/</span> <span class="token operator">-</span>iname jenkins <span class="token operator">|</span> xargs <span class="token operator">-</span>n <span class="token number">1000</span> rm <span class="token operator">-</span>rf  <span class="token comment" spellcheck="true">//彻底删除残留文件</span></code></pre>
 <p>###</p>
-<p>###</p>
-<h3 id="4-gt-配置-jenkins-权限"><a href="#4-gt-配置-jenkins-权限" class="headerlink" title="4&gt;配置 jenkins 权限"></a>4&gt;配置 jenkins 权限</h3><ul>
-<li><strong>修改用户为 root（为了不因为权限出现各种问题，这里直接使用 root）</strong></li>
+<h2 id="2-配置-jenkins-权限和修改端口"><a href="#2-配置-jenkins-权限和修改端口" class="headerlink" title="2.配置 jenkins 权限和修改端口"></a>2.配置 jenkins 权限和修改端口</h2><ul>
+<li><strong>修改用户为 root（为了不因为权限出现各种问题，这里直接使用 root，防止端口号冲突改为 8081）</strong></li>
 </ul>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> vim <span class="token operator">/</span>etc<span class="token operator">/</span>sysconfig<span class="token operator">/</span>jenkins
 <span class="token number">2</span><span class="token operator">></span>修改其中的<span class="token number">2</span>处为（防止权限问题）
    JENKINS_USER<span class="token operator">=</span><span class="token string">"root"</span>
-   JENKINS_PORT<span class="token operator">=</span><span class="token string">"8081"</span>
-<span class="token number">3</span><span class="token operator">></span>查看到 jenkins根目录是 <span class="token string">"/var/lib/jenkins"</span></code></pre>
+   JENKINS_PORT<span class="token operator">=</span><span class="token string">"8081"</span></code></pre>
 <ul>
 <li><strong>修改目录权限</strong></li>
 </ul>
@@ -683,12 +671,11 @@ yum <span class="token operator">-</span>y remove jenkins
 <span class="token number">2</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> chown <span class="token operator">-</span>R root<span class="token punctuation">:</span>root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>cache<span class="token operator">/</span>jenkins
 <span class="token number">3</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span> chown <span class="token operator">-</span>R root<span class="token punctuation">:</span>root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>jenkins
 
-
-
-（<span class="token number">1</span>）<span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>jenkins<span class="token operator">/</span>：jenkins安装目录，WAR包会放在这里。
-（<span class="token number">2</span>）<span class="token operator">/</span>etc<span class="token operator">/</span>sysconfig<span class="token operator">/</span>jenkins：jenkins配置文件，“端口”，“JENKINS_HOME”等都可以在这里配置。
-（<span class="token number">3</span>）<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins<span class="token operator">/</span>：默认的JENKINS_HOME。
-（<span class="token number">4</span>）<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>jenkins<span class="token operator">/</span>jenkins<span class="token punctuation">.</span>log：Jenkins日志文件。</code></pre>
+ <span class="token comment" spellcheck="true">//jenkins常用目录</span>
+（<span class="token number">1</span>）<span class="token operator">/</span>usr<span class="token operator">/</span>lib<span class="token operator">/</span>jenkins<span class="token operator">/</span>  #jenkins安装目录，WAR包会放在这里<span class="token punctuation">.</span>
+（<span class="token number">2</span>）<span class="token operator">/</span>etc<span class="token operator">/</span>sysconfig<span class="token operator">/</span>jenkins #jenkins配置文件，“端口”，“JENKINS_HOME”等都可以在这里配置。
+（<span class="token number">3</span>）<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>lib<span class="token operator">/</span>jenkins<span class="token operator">/</span>   #默认的JENKINS_HOME，jenkins根目录。
+（<span class="token number">4</span>）<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>jenkins<span class="token operator">/</span>jenkins<span class="token punctuation">.</span>log  #Jenkins日志文件。</code></pre>
 <ul>
 <li><strong>为 jenkins 添加 java 安装路径</strong></li>
 </ul>
@@ -705,7 +692,7 @@ yum <span class="token operator">-</span>y remove jenkins
      "
 
  <span class="token number">3</span><span class="token operator">></span>在 “<span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java” 前面添加一行：
-   <span class="token operator">/</span>usr<span class="token operator">/</span>java<span class="token operator">/</span>jdk1<span class="token number">.8</span><span class="token punctuation">.</span>0_102<span class="token operator">/</span>bin<span class="token operator">/</span>java  （ 就你的java安装路径  ）
+   <span class="token operator">/</span>usr<span class="token operator">/</span>java<span class="token operator">/</span>jdk1<span class="token number">.8</span><span class="token punctuation">.</span>0_102<span class="token operator">/</span>bin<span class="token operator">/</span>java  （java安装路径）
 
 
  <span class="token number">4</span><span class="token operator">></span>最终如下<span class="token punctuation">:</span>
@@ -719,7 +706,7 @@ yum <span class="token operator">-</span>y remove jenkins
     <span class="token operator">/</span>usr<span class="token operator">/</span>java<span class="token operator">/</span>jdk1<span class="token number">.8</span><span class="token punctuation">.</span>0_102<span class="token operator">/</span>bin<span class="token operator">/</span>java #新添加的
     <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>java
      "</code></pre>
-<h3 id="5-gt-启动-jenkins-服务（默认端口是-8080，目前已经修改为-8081）"><a href="#5-gt-启动-jenkins-服务（默认端口是-8080，目前已经修改为-8081）" class="headerlink" title="5&gt;启动 jenkins 服务（默认端口是 8080，目前已经修改为 8081）"></a>5&gt;启动 jenkins 服务（默认端口是 8080，目前已经修改为 8081）</h3><pre class=" language-javascript"><code class="language-javascript">    <span class="token number">1</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># systemctl start jenkins<span class="token punctuation">.</span>service  <span class="token comment" spellcheck="true">//启动 jenkins 服务</span>
+<h2 id="3-启动-jenkins-服务（默认端口是-8080，目前已经修改为-8081）"><a href="#3-启动-jenkins-服务（默认端口是-8080，目前已经修改为-8081）" class="headerlink" title="3.启动 jenkins 服务（默认端口是 8080，目前已经修改为 8081）"></a>3.启动 jenkins 服务（默认端口是 8080，目前已经修改为 8081）</h2><pre class=" language-javascript"><code class="language-javascript">    <span class="token number">1</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># systemctl start jenkins<span class="token punctuation">.</span>service  <span class="token comment" spellcheck="true">//启动 jenkins 服务</span>
   <span class="token number">2</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># chkconfig jenkins on  <span class="token comment" spellcheck="true">//将Jenkins服务设置为开机启动</span>
   <span class="token number">3</span><span class="token operator">></span>web访问页面<span class="token punctuation">:</span>   ip<span class="token operator">+</span>端口
 
@@ -731,6 +718,11 @@ yum <span class="token operator">-</span>y remove jenkins
 
   #查看 jenkins 信息
   ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep jenkins</code></pre>
+<h2 id="4-访问-jenkins"><a href="#4-访问-jenkins" class="headerlink" title="4.访问 jenkins"></a>4.访问 jenkins</h2><h3 id="1-gt-在-xshell-中输入命令查看登录密码"><a href="#1-gt-在-xshell-中输入命令查看登录密码" class="headerlink" title="1&gt;在 xshell 中输入命令查看登录密码"></a>1&gt;在 xshell 中输入命令查看登录密码</h3><pre class=" language-shell"><code class="language-shell">cat /var/lib/jenkins/secrets/initialAdminPassword</code></pre>
+<h3 id="2-gt-浏览器中访问-jenkins"><a href="#2-gt-浏览器中访问-jenkins" class="headerlink" title="2&gt;浏览器中访问 jenkins"></a>2&gt;浏览器中访问 jenkins</h3><p><a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">ip</a>+端口号</p>
+<h2 id="5-jenkins-启动后的配置（必看）"><a href="#5-jenkins-启动后的配置（必看）" class="headerlink" title="5.jenkins 启动后的配置（必看）"></a>5.jenkins 启动后的配置（必看）</h2><blockquote>
+<p>jenkins 启动后，会遇到各种问题。比如下载插件慢，跨域页面 403，中文汉化等相关问题都可以在此篇文章找到解决方法，<a href="https://www.yuque.com/leader755/blog/tlpb2o" target="_blank" rel="noopener">jenkins 基本配置</a>。</p>
+</blockquote>
 <p>##</p>
 
       </div>
@@ -1242,24 +1234,22 @@ yum <span class="token operator">-</span>y remove jenkins
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/leader755/1179.html">
+                <a href="/leader755/10309.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/1.jpg" class="responsive-img" alt="jenkins配置 jdk，maven，git，node"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/1.jpg" class="responsive-img" alt="jenkins配置 jdk，maven，git，node">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/16.jpg" class="responsive-img" alt="linux安装 docker"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/16.jpg" class="responsive-img" alt="linux安装 docker">
                         
-                        <span class="card-title">jenkins配置 jdk，maven，git，node</span>
+                        <span class="card-title">linux安装 docker</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.centos 中安装 JDK:1>查看系统是否已安装 Java(Jenkins需要在 Java 环境下运行)
-yum list installed | grep jdk
-
-2>yun 安装 java
-yum search openjdk
+                            1、安装前置条件docker 要求 Linux 内核要 3.0 以上版本，如果 centos6.x 内核是 2.x，需要升级 linux 内核
+2、安装步骤1）升级本地 yum 包yum update
+2） 安装工具集yum install
                         
                     </div>
                     <div class="publish-info">
@@ -1270,8 +1260,8 @@ yum search openjdk
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/jenkins/" class="post-category">
-                                    jenkins
+                            <a href="/categories/docker/" class="post-category">
+                                    docker
                                 </a>
                             
                             
@@ -1281,12 +1271,12 @@ yum search openjdk
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jdk/">
-                        <span class="chip bg-color">jdk</span>
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
-                    <a href="/tags/node/">
-                        <span class="chip bg-color">node</span>
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
                     </a>
                     
                 </div>
