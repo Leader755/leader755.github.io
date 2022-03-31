@@ -1123,7 +1123,10 @@ docker logs jenkins      #查看启动日志
  docker stop [容器ID]
 
 # 删除容器
-docker rm [容器ID]</code></pre>
+docker rm [容器ID]
+
+//删除指定镜像
+docker rmi <镜像Id></code></pre>
 <h2 id="6-访问-jenkins"><a href="#6-访问-jenkins" class="headerlink" title="6.访问 jenkins"></a>6.访问 jenkins</h2><h3 id="1-gt-在-xshell-中输入命令查看登录密码"><a href="#1-gt-在-xshell-中输入命令查看登录密码" class="headerlink" title="1&gt;在 xshell 中输入命令查看登录密码"></a>1&gt;在 xshell 中输入命令查看登录密码</h3><pre class=" language-shell"><code class="language-shell">cat /var/lib/jenkins/secrets/initialAdminPassword</code></pre>
 <h3 id="2-gt-浏览器中访问-jenkins"><a href="#2-gt-浏览器中访问-jenkins" class="headerlink" title="2&gt;浏览器中访问 jenkins"></a>2&gt;浏览器中访问 jenkins</h3><p><a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">ip</a>+端口号</p>
 <h2 id="7-jenkins-启动后的配置（必看）"><a href="#7-jenkins-启动后的配置（必看）" class="headerlink" title="7.jenkins 启动后的配置（必看）"></a>7.jenkins 启动后的配置（必看）</h2><blockquote>
