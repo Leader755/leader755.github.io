@@ -616,7 +616,7 @@
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          363
+          395
         </div>
         
 
@@ -639,10 +639,14 @@
         <blockquote>
 <p>假设 nginx 在目标服务器已经安装好了。没有安装好的，参考[《<strong>centos7 安装 jdk ,maven，tomcat，nginx</strong>》](<a href="https://www.yuque.com/docs/share/954a9630-ae57-4fb0-aff5-cf6371942352?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/954a9630-ae57-4fb0-aff5-cf6371942352?#</a> 《centons7 安装 jdk ,maven，tomcat，nginx》)。</p>
 </blockquote>
-<h3 id="1-创建-jenkins-conf-文件"><a href="#1-创建-jenkins-conf-文件" class="headerlink" title="1. 创建 jenkins.conf 文件"></a>1. 创建 jenkins.conf 文件</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token operator">></span><span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>conf<span class="token punctuation">.</span>d  <span class="token comment" spellcheck="true">//进入到nginx 配置目录下</span>
+<h3 id="1-查看-nginx-文件的位置并-cd-到-nginx-文件下"><a href="#1-查看-nginx-文件的位置并-cd-到-nginx-文件下" class="headerlink" title="1.查看 nginx 文件的位置并 cd 到 nginx 文件下"></a>1.查看 nginx 文件的位置并 cd 到 nginx 文件下</h3><pre class=" language-javascript"><code class="language-javascript"> <span class="token comment" spellcheck="true">//在/etc/nginx/)</span>
+ <span class="token punctuation">[</span>root@localhost <span class="token operator">~</span><span class="token punctuation">]</span># cd <span class="token operator">/</span>
+ <span class="token punctuation">[</span>root@localhost <span class="token operator">/</span><span class="token punctuation">]</span># ll <span class="token operator">/</span>etc<span class="token regex">/nginx/</span>
+ <span class="token punctuation">[</span>root@localhost <span class="token operator">/</span><span class="token punctuation">]</span># cd <span class="token operator">/</span>etc<span class="token regex">/nginx/</span></code></pre>
+<h3 id="2-创建-jenkins-conf-文件"><a href="#2-创建-jenkins-conf-文件" class="headerlink" title="2. 创建 jenkins.conf 文件"></a>2. 创建 jenkins.conf 文件</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token operator">></span><span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>conf<span class="token punctuation">.</span>d  <span class="token comment" spellcheck="true">//进入到nginx 配置目录下</span>
 <span class="token number">2</span><span class="token operator">></span>创建文件名为： jenkins<span class="token punctuation">.</span>conf</code></pre>
 <p>###</p>
-<h3 id="2-配置-jenkins-conf-文件-将以下文件按照自己的实际情况进行复制"><a href="#2-配置-jenkins-conf-文件-将以下文件按照自己的实际情况进行复制" class="headerlink" title="2.配置 jenkins.conf 文件(将以下文件按照自己的实际情况进行复制)"></a>2.配置 jenkins.conf 文件(将以下文件按照自己的实际情况进行复制)</h3><pre class=" language-javascript"><code class="language-javascript">#jenkins<span class="token punctuation">.</span>leader755<span class="token punctuation">.</span>com
+<h3 id="3-配置-jenkins-conf-文件-将以下文件按照自己的实际情况进行复制"><a href="#3-配置-jenkins-conf-文件-将以下文件按照自己的实际情况进行复制" class="headerlink" title="3.配置 jenkins.conf 文件(将以下文件按照自己的实际情况进行复制)"></a>3.配置 jenkins.conf 文件(将以下文件按照自己的实际情况进行复制)</h3><pre class=" language-javascript"><code class="language-javascript">#jenkins<span class="token punctuation">.</span>leader755<span class="token punctuation">.</span>com
 server <span class="token punctuation">{</span>
     listen <span class="token number">80</span><span class="token punctuation">;</span>
     server_name jenkins<span class="token punctuation">.</span>leader755<span class="token punctuation">.</span>com<span class="token punctuation">;</span>
@@ -673,7 +677,7 @@ server<span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<h3 id="3-重启-nginx"><a href="#3-重启-nginx" class="headerlink" title="3.重启 nginx"></a>3.重启 nginx</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token punctuation">.</span>保存修改并重启nginx
+<h3 id="4-重启-nginx"><a href="#4-重启-nginx" class="headerlink" title="4.重启 nginx"></a>4.重启 nginx</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token punctuation">.</span>保存修改并重启nginx
   <span class="token number">1</span><span class="token operator">></span>ESC<span class="token operator">+</span><span class="token punctuation">:</span><span class="token function">wq</span><span class="token punctuation">(</span>退出并保存<span class="token punctuation">)</span>
   <span class="token number">2</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost nginx<span class="token punctuation">]</span># sudo nginx <span class="token operator">-</span>t <span class="token comment" spellcheck="true">// 验证书写是否正确</span>
   <span class="token number">3</span><span class="token operator">></span><span class="token punctuation">[</span>root@localhost nginx<span class="token punctuation">]</span># nginx <span class="token operator">-</span>s reload <span class="token comment" spellcheck="true">//重启</span>
@@ -684,7 +688,7 @@ server<span class="token punctuation">{</span>
 <blockquote>
 <p>如果有问题的，请参考<a href="https://www.yuque.com/leader755/blog/mlnd6i#053af2445033b29c3b65eac5df49414a" target="_blank" rel="noopener">《<strong>centos7 安装 jdk ,maven，tomcat，nginx</strong>》</a></p>
 </blockquote>
-<h3 id="4-效果"><a href="#4-效果" class="headerlink" title="4.效果"></a>4.效果</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620196183660-a109c756-cdb1-4120-a911-befb34c089e5.png#clientId=u63903d62-8fc6-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=680&id=ucf64dd5b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1360&originWidth=1646&originalType=binary&ratio=1&rotation=0&showTitle=false&size=121399&status=done&style=none&taskId=uce49f3e8-31b2-4c6b-a593-3ca01369972&title=&width=823" alt="image.png"></p>
+<h3 id="5-效果"><a href="#5-效果" class="headerlink" title="5.效果"></a>5.效果</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620196183660-a109c756-cdb1-4120-a911-befb34c089e5.png#clientId=u63903d62-8fc6-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=680&id=ucf64dd5b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1360&originWidth=1646&originalType=binary&ratio=1&rotation=0&showTitle=false&size=121399&status=done&style=none&taskId=uce49f3e8-31b2-4c6b-a593-3ca01369972&title=&width=823" alt="image.png"></p>
 
       </div>
       <hr />
@@ -1449,7 +1453,7 @@ Halo 后台上传附件默认是上传到本地服务器，由于放到自己的
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">119k</span>&nbsp;字
+        class="white-color">119.1k</span>&nbsp;字
       
       
       
