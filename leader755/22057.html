@@ -619,7 +619,7 @@ docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软�
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          274
+          314
         </div>
         
 
@@ -655,7 +655,16 @@ chown -R 1000:1000 jenkins/    给uid为1000的权限</code></pre>
 <h2 id="4-启动-jenkins"><a href="#4-启动-jenkins" class="headerlink" title="4.启动 jenkins"></a>4.启动 jenkins</h2><pre class=" language-shell"><code class="language-shell">docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v /home/jenkins:/var/jenkins_home jenkins/jenkins:latest</code></pre>
 <h2 id="5-查看-jenkins-是否启动"><a href="#5-查看-jenkins-是否启动" class="headerlink" title="5.查看 jenkins 是否启动"></a>5.查看 jenkins 是否启动</h2><pre class=" language-shell"><code class="language-shell">ps -ef | grep jenkins   #jenkins 进程
 
-docker logs jenkins      #查看启动日志</code></pre>
+docker logs jenkins      #查看启动日志
+
+# 列出本机所有的容器（包括停止和运行）
+ docker ps -a
+
+# 停止运行的容器
+ docker stop [容器ID]
+
+# 删除容器
+docker rm [容器ID]</code></pre>
 <h2 id="6-访问-jenkins"><a href="#6-访问-jenkins" class="headerlink" title="6.访问 jenkins"></a>6.访问 jenkins</h2><h3 id="1-gt-在-xshell-中输入命令查看登录密码"><a href="#1-gt-在-xshell-中输入命令查看登录密码" class="headerlink" title="1&gt;在 xshell 中输入命令查看登录密码"></a>1&gt;在 xshell 中输入命令查看登录密码</h3><pre class=" language-shell"><code class="language-shell">cat /var/lib/jenkins/secrets/initialAdminPassword</code></pre>
 <h3 id="2-gt-浏览器中访问-jenkins"><a href="#2-gt-浏览器中访问-jenkins" class="headerlink" title="2&gt;浏览器中访问 jenkins"></a>2&gt;浏览器中访问 jenkins</h3><p><a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">ip</a>+端口号</p>
 <h2 id="7-jenkins-启动后的配置（必看）"><a href="#7-jenkins-启动后的配置（必看）" class="headerlink" title="7.jenkins 启动后的配置（必看）"></a>7.jenkins 启动后的配置（必看）</h2><blockquote>
@@ -1415,7 +1424,7 @@ Docker 包括三个基本概念：
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">119.1k</span>&nbsp;字
+        class="white-color">119.2k</span>&nbsp;字
       
       
       
