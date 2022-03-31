@@ -616,14 +616,14 @@
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          400
+          434
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          1 分
+          2 分
         </div>
         
 
@@ -665,9 +665,8 @@ server<span class="token punctuation">{</span>
     ssl_prefer_server_ciphers on<span class="token punctuation">;</span>
     ssl_session_cache shared<span class="token punctuation">:</span>SSL<span class="token punctuation">:</span>10m<span class="token punctuation">;</span>
     ssl_session_timeout 10m<span class="token punctuation">;</span>
-    error_page <span class="token number">497</span>  https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>$host$request_uri<span class="token punctuation">;</span>
 
-    #Location配置
+    #Location配置转发或处理
     location <span class="token operator">/</span> <span class="token punctuation">{</span>
         proxy_set_header X<span class="token operator">-</span>Rea $remote_addr<span class="token punctuation">;</span>
         proxy_set_header X<span class="token operator">-</span>Forwarded<span class="token operator">-</span>For $proxy_add_x_forwarded_for<span class="token punctuation">;</span>
@@ -676,6 +675,13 @@ server<span class="token punctuation">{</span>
         proxy_pass http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token punctuation">:</span><span class="token number">8081</span><span class="token punctuation">;</span>  # 此处改为 <span class="token number">8081</span>，取决于自己之前访问的ip地址的端口号
         proxy_set_header X<span class="token operator">-</span>Forwarded<span class="token operator">-</span>Proto $scheme<span class="token punctuation">;</span>
 
+    <span class="token punctuation">}</span>
+
+    #access_log  <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>nginx<span class="token operator">/</span>jenkins<span class="token punctuation">.</span>access<span class="token punctuation">.</span>log main<span class="token punctuation">;</span>
+    #error_log  <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>nginx<span class="token operator">/</span>jenkins<span class="token punctuation">.</span>error<span class="token punctuation">.</span>log error<span class="token punctuation">;</span>
+    error_page   <span class="token number">500</span> <span class="token number">502</span> <span class="token number">503</span> <span class="token number">504</span>  <span class="token operator">/</span>50x<span class="token punctuation">.</span>html<span class="token punctuation">;</span>#错误页
+    location <span class="token operator">=</span> <span class="token operator">/</span>50x<span class="token punctuation">.</span>html <span class="token punctuation">{</span>
+        root   <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>nginx<span class="token operator">/</span>html<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <h3 id="4-重启-nginx"><a href="#4-重启-nginx" class="headerlink" title="4.重启 nginx"></a>4.重启 nginx</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span><span class="token punctuation">.</span>保存修改并重启nginx
