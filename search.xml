@@ -1119,8 +1119,7 @@ docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v
 
 docker logs jenkins      #查看启动日志
 
-//启动容器
- docker run [镜像ID]
+
 
 //停止容器
 docker ps -a    # 列出本机所有的容器（包括停止和运行）
@@ -1129,7 +1128,10 @@ docker rm [容器ID]   # 删除容器
 
 //删除镜像
 docker image ls  #列出镜像
-docker rmi <镜像Id>  #删除指定镜像</code></pre>
+docker rmi <镜像Id>  #删除指定镜像
+
+//启动镜像
+ docker run [镜像ID]</code></pre>
 <h2 id="6-访问-jenkins"><a href="#6-访问-jenkins" class="headerlink" title="6.访问 jenkins"></a>6.访问 jenkins</h2><h3 id="1-gt-在-xshell-中输入命令查看登录密码"><a href="#1-gt-在-xshell-中输入命令查看登录密码" class="headerlink" title="1&gt;在 xshell 中输入命令查看登录密码"></a>1&gt;在 xshell 中输入命令查看登录密码</h3><pre class=" language-shell"><code class="language-shell">cat /var/lib/jenkins/secrets/initialAdminPassword</code></pre>
 <h3 id="2-gt-浏览器中访问-jenkins"><a href="#2-gt-浏览器中访问-jenkins" class="headerlink" title="2&gt;浏览器中访问 jenkins"></a>2&gt;浏览器中访问 jenkins</h3><p><a href="https://link.segmentfault.com/?enc=fbVzpI3ynmk5ZARRKNZOyw%3D%3D.FUwC%2Bd6CcfAfjHQZwlp7Ag%3D%3D" target="_blank" rel="noopener">ip</a>+端口号</p>
 <h2 id="7-jenkins-启动后的配置（必看）"><a href="#7-jenkins-启动后的配置（必看）" class="headerlink" title="7.jenkins 启动后的配置（必看）"></a>7.jenkins 启动后的配置（必看）</h2><blockquote>
@@ -6142,108 +6144,6 @@ element-ui:
       </tags>
   </entry>
   <entry>
-    <title>前端面试（6）公众号，小程序</title>
-    <url>/leader755/46994.html</url>
-    <content><![CDATA[<p>大纲：<br>微信，小程序授权（ openId，unid，用户信息，手机号）<br>微信支付（H5，公众号，小程序，app）<br>微信上传图片（H5，公众号，小程序）<br>支付宝支付（H5，app）</p>
-<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p>小程序中如何合并 seaData,减少 setData 次数：<br>**  合并<strong>`</strong>setdata<strong>`</strong>的请求，减少通讯的次数：**<br>避免过于频繁调用<code>setData</code>,应考虑将多次<code>setData</code>合并成一次<code>setData</code>调用</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 不要频繁调用setData</span>
-<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> b<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 绝大多数时候可优化为</span>
-<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p><strong>5. 列表的局部更新</strong><br>在一个列表中，有<code>n</code>条数据，采用上拉加载更多的方式，假如这个时候想对其中某一个数据进行点赞操作，还能及时看到点赞的效果。</p>
-<blockquote>
-<ul>
-<li>可以采用<code>setData</code>全局刷新，点赞完成之后，重新获取数据，再次进行全局重新渲染，这样做的有点是：方便，快捷！缺点是：用户体验极其不好，当用户刷量 100 多条数据后，重新渲染会出现空白期。</li>
-<li>也可以采用局部刷新，将点赞的<code>id</code>传过去，知道点的是哪一条数据，重新获取数据，查找相对应<code>id</code>的那条数据的下标（<code>index</code>是不会改变的），用<code>setData</code>进行局部刷新，如此，便可以显著提升渲染速度。</li>
-</ul>
-</blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token operator">=</span>newList<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-<h2 id="公众号"><a href="#公众号" class="headerlink" title="公众号"></a>公众号</h2><p>微信登录几种方式：<br><strong>微信联合登录和微信授权登录</strong><br>微信联合登录；也就是我们常用的微信移动端/PC 端之间的扫码登录，PC 端用微信扫码登录，微信移动端确认授权登录后，应用可以从微信拿到用户的 open id 或 union id，将微信获取的用户信息与自己账户体系中的用户身份进行关联；</p>
-<p>授权登录：需要用户确认登录，这样可以通过用户的个人确认，获取用户全面的信息，无论是否关注相关微信公众号等都可以获取。</p>
-<p>静默授权不需要用户确认，只需要用户访问某个网页，属于嵌套在普通网页里的授权形式，但是只能获取到用户的唯一标示 openid 和 union id，无法拿到用户的微信头像、微信名称等个人信息，对于用户的简单认证还是很有用的。</p>
-<p><strong>如何通过微信账户体系来做多应用、多平台之间的账户互通体系；如果某个服务同时分布在多个公众号中，账户体系如何建立；如何做到用户身份唯一识别；</strong><br>1）、同一用户不同公众号/应用下 open id 不同，同一用户不同公众号/应用下 unionid 相同；<br>2）、建立应用账户体系时，通过 union 来进行多应用/平台之间的用户账户体系识别与合并；<br>3）、多应用/平台建立账户体系时，需要做到唯一 user id 对应唯一 union id；<br><strong>某个服务，包括移动 app 端、PC 网页端、公众号端服务，那么用户使用微信授权登录的数据流转流程是怎么样的；</strong><br>1、用户通过微信授权移动 app 服务；该应用服务即可通过接口获取用户的 union id，这个时候，如果在数据库中没有查到该 id，则识别为新用户，直接创建一个 user id，该唯一 user id 与 union id 对应；<br>2、用户通过微信扫码 PC 端授权联合登陆获取 PC 端服务；该应用服务即可通过接口获取用户的 union id，这个时候，在数据库中查到有这个 id，就会把 pc 登录这个账户合并到之前创建的唯一 user id 账户下；<br>3、用户通过关注该服务公众号，用微信授权登录公众号服务；该应用服即可通过接口获取用户的 union id，这个时候，在数据库中查到有这个 id，就会把公众号中登录的这个账户合并到之前创建的唯一 user id 账户下；</p>
-<p><strong>网页授权的两种 scope 的区别说明：</strong><br>1、授权登录以 snsapi_base 为 scope 发起的网页授权，是用来获取进入页面的用户的 openid 的，并且是静默授权并自动跳转到回调页的。用户感知的就是直接进入了回调页（往往是业务页面）特点：用户无感知；<br>2、静默授权以 snsapi_userinfo 为 scope 发起的网页授权，是用来获取用户的基本信息的。但这种授权需要用户手动同意，并且由于用户同意过，所以无须关注，就可在授权后获取该用户的基本信息。<br><strong>特殊场景下静默授权：</strong><br>对于已关注公众号的用户，如果用户从公众号的会话或者自定义菜单进入本公众号的网页授权页，即使是 scope 为 snsapi_userinfo，也是静默授权，用户无感知。<br><strong>网页授权流程：</strong><br><strong>1、引导用户进入授权页面同意授权，获取 code **<br>确保微信公众账号拥有授权作用域（scope 参数）的权限的前提下引导用户去授权页面<br>参考链接：<br>scope 为 snsapi_base<br>注意：appid,redirect_uri,state 这些要和后台协商好<br><a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=%22+wx_appid+%22&redirect_uri=%22+api.wx_reg+%22&response_type=code&scope=snsapi_login,snsapi_userinfo&state=1,0#wechat_redirect" target="_blank" rel="noopener">https://open.weixin.qq.com/connect/oauth2/authorize?appid=”+wx_appid+”&amp;redirect_uri=”+api.wx_reg+”&amp;response_type=code&amp;scope=snsapi_login,snsapi_userinfo&amp;state=1,0#wechat_redirect</a><br>scope 为 snsapi_userinfo<br><a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=%22+wx_appid+%22&redirect_uri=%22+api.wx_reg+%22&response_type=code&scope=snsapi_base,snsapi_userinfo&state=1,0#wechat_redirect" target="_blank" rel="noopener">https://open.weixin.qq.com/connect/oauth2/authorize?appid=”+wx_appid+”&amp;redirect_uri=”+api.wx_reg+”&amp;response_type=code&amp;scope=snsapi_base,snsapi_userinfo&amp;state=1,0#wechat_redirect</a><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1598313614593-c3c04a5e-42a9-4586-ad55-fa1d21806255.png#height=532&id=qOhCE&originHeight=532&originWidth=639&originalType=binary&size=0&status=done&style=none&width=639" alt=""><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1598313614554-8e7593c1-952c-43b5-acaa-ea1014164056.png#height=527&id=gWFv6&originHeight=527&originWidth=312&originalType=binary&size=0&status=done&style=none&width=312" alt=""><br>用户同意授权后<br>如果用户同意授权，页面将跳转至 redirect_uri/?code=CODE&amp;state=STATE。<br>**2、通过 code 换取网页授权 access_token（后台操作）（之前是 php 中间做了一步中转操作通过 code 换取网页授权 access_token 这步是后台操作）</strong><br>  页面跳回跳的 url 上 redirect_uri/?code=CODE&amp;state=STATE。code<br>通过 code 换取的是网页授权 access_token，如果网页授权的作用域为 snsapi_base，则本步骤中获取到网页授权 access_token 的同时，也获取到了 openid，snsapi_base 式的网页授权流程即到此为止。<br><strong>3：需要个人信息。后台通过 code 得到值之后返回给前端去操作</strong><br><strong>2、通过 code 换取网页授权 access_token（前端操作）</strong><br><strong>window.location.href=”<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=&quot;+wx_appid+&quot;&amp;redirect_uri=&quot;+encodeURIComponent" target="_blank" rel="noopener">https://open.weixin.qq.com/connect/oauth2/authorize?appid=&quot;+wx_appid+&quot;&amp;redirect_uri=&quot;+encodeURIComponent</a>(“+中转页面的html比如 location.html+”)+”&amp;response_type=code&amp;scope=snsapi_base,snsapi_userinfo&amp;state=”+wx_rt_url_code（前端自己判断，存储，目的是确定授权页面来源。以方便授权后跳回的页面地址）+”,1(这值是和后台协商)#wechat_redirect”;</strong><br><strong>3:location.html 页面授权后会跳转到这个页面。同时在页面 url？后参数中拿到 code 和 state 的值 （state 就是上面传入的）</strong><br><strong>就可以拿着这两个参数去进行登录操作。获取相应的 token ，wxUserToken 等需要的信息  。根据 wx_rt_url_code 自己定义个规则回转到相应的页面。完成登录状态。进行下一步操作</strong><br><strong>为了确保参数的正确传入，state 可以进行 decodeURIComponent 下。（之前调接口的时候程序报错，发现 pc 端授权登录的时候微信解析是有逗号，手机端 state 是没逗号，确保程序的正常运行可以进行解码下）</strong><br>网站的微信授权登录是以二维码的形式 api 网址 api <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419316505&token=&lang=zh_CN" target="_blank" rel="noopener">https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN</a><br>手机端微信授权登录 api 网址  <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419317851&token=&lang=zh_CN" target="_blank" rel="noopener">https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419317851&amp;token=&amp;lang=zh_CN</a></p>
-<p>微信支付：</p>
-<p>H5 支付（即在网页端（非微信浏览器）页面调用支付）</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">onBridgeReady</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  WeixinJSBridge<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>
-    <span class="token string">"getBrandWCPayRequest"</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>
-      appId<span class="token punctuation">:</span> <span class="token string">"wx2421b1c4370ec43b"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//公众号名称，由商户传入</span>
-      timeStamp<span class="token punctuation">:</span> <span class="token string">"1395712654"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//时间戳，自1970年以来的秒数</span>
-      nonceStr<span class="token punctuation">:</span> <span class="token string">"e61463f8efa94090b1f366cccfbbb444"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//随机串</span>
-      <span class="token keyword">package</span><span class="token punctuation">:</span> <span class="token string">"prepay_id=u802345jgfjsdfgsdg888"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//统一下单接口返回的prepay_id,提交格式如：prepay_id=***</span>
-      signType<span class="token punctuation">:</span> <span class="token string">"MD5"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//签名类型，默认为MD5，支持HMAC-SHA256和MD5 注意此处需与统一下单的签名类型一致</span>
-      paySign<span class="token punctuation">:</span> <span class="token string">"70EA570631E4BB79628FBCA90534C63FF7FADD89"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//微信签名 (算法生成)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token keyword">function</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>err_msg <span class="token operator">==</span> <span class="token string">"get_brand_wcpay_request:ok"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 使用以上方式判断前端返回,微信团队郑重提示：</span>
-        <span class="token comment" spellcheck="true">//res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> WeixinJSBridge <span class="token operator">==</span> <span class="token string">"undefined"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>document<span class="token punctuation">.</span>addEventListener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"WeixinJSBridgeReady"</span><span class="token punctuation">,</span> onBridgeReady<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>document<span class="token punctuation">.</span>attachEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    document<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"WeixinJSBridgeReady"</span><span class="token punctuation">,</span> onBridgeReady<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    document<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"onWeixinJSBridgeReady"</span><span class="token punctuation">,</span> onBridgeReady<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-  <span class="token function">onBridgeReady</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<blockquote>
-<p>开微信开发者工具，打 log，最后发现在这一步时候 if (typeof WeixinJSBridge == “undefined”)<br>1.ios 能够调起微信浏览器的 js-sdk 2.安卓大部分都走到 undefined 里面去了<br>这里其实我也不太清楚原因。个人感觉是微信安卓的内置浏览器版本和这个 WeixinJSBridge 方法的问题。（希望有大神能够解答一下）</p>
-</blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            wx<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-                debug<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>debug<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</span>
-                appId<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>appId<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 必填，公众号的唯一标识</span>
-                timestamp<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>timestamp<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 必填，生成签名的时间戳</span>
-                nonceStr<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>nonceStr<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 必填，生成签名的随机串</span>
-                signature<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>signature<span class="token punctuation">,</span><span class="token comment" spellcheck="true">// 必填，签名</span>
-                jsApiList<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>jsApiList <span class="token comment" spellcheck="true">// 必填，需要使用的JS接口列表</span>
-            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//微信支付</span>
-            wx<span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                  <span class="token comment" spellcheck="true">// config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。</span>
-                <span class="token comment" spellcheck="true">// console.log(this.jsApiCall());</span>
-                wx<span class="token punctuation">.</span><span class="token function">chooseWXPay</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-                    timestamp<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wechat_code<span class="token punctuation">.</span>timestamp<span class="token punctuation">,</span>
-                    nonceStr<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>wechat_code<span class="token punctuation">.</span>nonceStr<span class="token punctuation">,</span>
-                    <span class="token keyword">package</span><span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wechat_code<span class="token punctuation">.</span><span class="token keyword">package</span><span class="token punctuation">,</span>
-                    signType<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wechat_code<span class="token punctuation">.</span>signType<span class="token punctuation">,</span>
-                    paySign<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wechat_code<span class="token punctuation">.</span>paySign<span class="token punctuation">,</span>
-                    success<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token comment" spellcheck="true">// 支付成功后的回调函数</span>
-                        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"支付成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                        window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"/hd/becomevip"</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-                    cancel<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"支付失败"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<p><strong>分析和总结</strong><br>** <em>*<br>扫码支付、公众号支付、H5 支付、小程序支付都有一个同步回调地址跟异步通知地址，只是设置方式有所区别 ：<br><strong>1. 扫码支付</strong><br>同步回调地址在微信商户平台中设置，异步通知地址在统一下单接口的请求参数中设置；<br><strong>2. 公众号支付</strong><br>同步回调地址在 JSAPI 发起支付的回到函数中进行回到，异步通知地址在统一下单接口的请求参数中设置；<br><strong>3. H5 支付</strong><br>同步回调地址：在统一下单接口的返回参数中有一个参数 mweb_url，在 mweb_url 中以 get 传参形式新增一个参数 redirect_url，redirect_url 即是同步回调函数；<br>异步通知地址：统一下单接口的请求参数中设置；<br>*<em>4. 小程序支付\</em>\</em><br>同步回调地址：在小程序获得支付参数，并通过 js 调起微信支付以后，js 中会有一个回调函数，同步回调地址在该回调函数中添加；<br>异步通知地址：统一下单接口的请求参数中设置。</p>
-<p>其中扫码支付主要用于电脑端；公众号支付跟 H5 支付主要用于移动端，因此商户在移动端使用微信支付的时候需要判断当前打开的浏览器是否是微信浏览器，并根据结果决定选择公众号支付或 H5 支付；小程序支付的话主要用于小程序内部，因此比如获取 openid，调用统一下单接口等操作均在给小程序提供数据接口服务的接口后台实现。</p>
-<p>同步回调地址是作为微信后台跟商户进行页面跳转的渠道，因此同步回调地址是至关重要的，如果不填写，则可能导致支付完成后无法做页面跳转。<br>异步通知地址是微信后台对商户后台在完成微信支付后进行通知的重要通道，商户后台的异步通知地址必须是可访问的，在接收到微信的通知后，要做相关业务处理，并最终返回 SUCCESS 或 FAIL 的标识给微信，以告知微信不要在发送通知。</p>
-<p>结尾<br>这里只是针对微信扫码支付、公众号支付、H5 支付、小程序支付等微信的四中支付方式做了一个大概的分析和总结，具体的每一个支付方式的接入方法还请以微信支付开发文档为重要参考；因篇幅有限，代码量大，这里就不贴具体的实现代码了。</p>
-]]></content>
-      <categories>
-        <category>面试</category>
-      </categories>
-      <tags>
-        <tag>小程序</tag>
-        <tag>公众号</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前端面试（8）拷贝</title>
     <url>/leader755/46928.html</url>
     <content><![CDATA[<h3 id=""><a href="#" class="headerlink" title=""></a><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1599388884598-3823412b-fbc8-42fb-8d05-192f3011b049.png#height=1320&id=bQyv2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1320&originWidth=2910&originalType=binary&size=320693&status=done&style=none&width=2910" alt="image.png"></h3><h3 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1599381658009-a92fc3b0-5400-4cff-9f05-754065529eab.png#height=241&id=xa1aD&margin=%5Bobject%20Object%5D&name=image.png&originHeight=482&originWidth=674&originalType=binary&size=26164&status=done&style=none&width=337" alt="image.png"></h3><p>js 的基本数据类型的赋值，就是值传递。引用类型对象的赋值是将对象地址的引用赋值。这时候修改对象中的属性或者值，会导致所有引用这个对象的值改变。如果想要真的复制一个新的对象，而不是复制对象的引用，就要用到对象的深拷贝。</p>
@@ -6455,6 +6355,108 @@ console<span class="token punctuation">.</span><span class="token function">log<
       <tags>
         <tag>深拷贝</tag>
         <tag>浅拷贝</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端面试（6）公众号，小程序</title>
+    <url>/leader755/46994.html</url>
+    <content><![CDATA[<p>大纲：<br>微信，小程序授权（ openId，unid，用户信息，手机号）<br>微信支付（H5，公众号，小程序，app）<br>微信上传图片（H5，公众号，小程序）<br>支付宝支付（H5，app）</p>
+<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p>小程序中如何合并 seaData,减少 setData 次数：<br>**  合并<strong>`</strong>setdata<strong>`</strong>的请求，减少通讯的次数：**<br>避免过于频繁调用<code>setData</code>,应考虑将多次<code>setData</code>合并成一次<code>setData</code>调用</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 不要频繁调用setData</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> b<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 绝大多数时候可优化为</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><strong>5. 列表的局部更新</strong><br>在一个列表中，有<code>n</code>条数据，采用上拉加载更多的方式，假如这个时候想对其中某一个数据进行点赞操作，还能及时看到点赞的效果。</p>
+<blockquote>
+<ul>
+<li>可以采用<code>setData</code>全局刷新，点赞完成之后，重新获取数据，再次进行全局重新渲染，这样做的有点是：方便，快捷！缺点是：用户体验极其不好，当用户刷量 100 多条数据后，重新渲染会出现空白期。</li>
+<li>也可以采用局部刷新，将点赞的<code>id</code>传过去，知道点的是哪一条数据，重新获取数据，查找相对应<code>id</code>的那条数据的下标（<code>index</code>是不会改变的），用<code>setData</code>进行局部刷新，如此，便可以显著提升渲染速度。</li>
+</ul>
+</blockquote>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    list<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token operator">=</span>newList<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<h2 id="公众号"><a href="#公众号" class="headerlink" title="公众号"></a>公众号</h2><p>微信登录几种方式：<br><strong>微信联合登录和微信授权登录</strong><br>微信联合登录；也就是我们常用的微信移动端/PC 端之间的扫码登录，PC 端用微信扫码登录，微信移动端确认授权登录后，应用可以从微信拿到用户的 open id 或 union id，将微信获取的用户信息与自己账户体系中的用户身份进行关联；</p>
+<p>授权登录：需要用户确认登录，这样可以通过用户的个人确认，获取用户全面的信息，无论是否关注相关微信公众号等都可以获取。</p>
+<p>静默授权不需要用户确认，只需要用户访问某个网页，属于嵌套在普通网页里的授权形式，但是只能获取到用户的唯一标示 openid 和 union id，无法拿到用户的微信头像、微信名称等个人信息，对于用户的简单认证还是很有用的。</p>
+<p><strong>如何通过微信账户体系来做多应用、多平台之间的账户互通体系；如果某个服务同时分布在多个公众号中，账户体系如何建立；如何做到用户身份唯一识别；</strong><br>1）、同一用户不同公众号/应用下 open id 不同，同一用户不同公众号/应用下 unionid 相同；<br>2）、建立应用账户体系时，通过 union 来进行多应用/平台之间的用户账户体系识别与合并；<br>3）、多应用/平台建立账户体系时，需要做到唯一 user id 对应唯一 union id；<br><strong>某个服务，包括移动 app 端、PC 网页端、公众号端服务，那么用户使用微信授权登录的数据流转流程是怎么样的；</strong><br>1、用户通过微信授权移动 app 服务；该应用服务即可通过接口获取用户的 union id，这个时候，如果在数据库中没有查到该 id，则识别为新用户，直接创建一个 user id，该唯一 user id 与 union id 对应；<br>2、用户通过微信扫码 PC 端授权联合登陆获取 PC 端服务；该应用服务即可通过接口获取用户的 union id，这个时候，在数据库中查到有这个 id，就会把 pc 登录这个账户合并到之前创建的唯一 user id 账户下；<br>3、用户通过关注该服务公众号，用微信授权登录公众号服务；该应用服即可通过接口获取用户的 union id，这个时候，在数据库中查到有这个 id，就会把公众号中登录的这个账户合并到之前创建的唯一 user id 账户下；</p>
+<p><strong>网页授权的两种 scope 的区别说明：</strong><br>1、授权登录以 snsapi_base 为 scope 发起的网页授权，是用来获取进入页面的用户的 openid 的，并且是静默授权并自动跳转到回调页的。用户感知的就是直接进入了回调页（往往是业务页面）特点：用户无感知；<br>2、静默授权以 snsapi_userinfo 为 scope 发起的网页授权，是用来获取用户的基本信息的。但这种授权需要用户手动同意，并且由于用户同意过，所以无须关注，就可在授权后获取该用户的基本信息。<br><strong>特殊场景下静默授权：</strong><br>对于已关注公众号的用户，如果用户从公众号的会话或者自定义菜单进入本公众号的网页授权页，即使是 scope 为 snsapi_userinfo，也是静默授权，用户无感知。<br><strong>网页授权流程：</strong><br><strong>1、引导用户进入授权页面同意授权，获取 code **<br>确保微信公众账号拥有授权作用域（scope 参数）的权限的前提下引导用户去授权页面<br>参考链接：<br>scope 为 snsapi_base<br>注意：appid,redirect_uri,state 这些要和后台协商好<br><a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=%22+wx_appid+%22&redirect_uri=%22+api.wx_reg+%22&response_type=code&scope=snsapi_login,snsapi_userinfo&state=1,0#wechat_redirect" target="_blank" rel="noopener">https://open.weixin.qq.com/connect/oauth2/authorize?appid=”+wx_appid+”&amp;redirect_uri=”+api.wx_reg+”&amp;response_type=code&amp;scope=snsapi_login,snsapi_userinfo&amp;state=1,0#wechat_redirect</a><br>scope 为 snsapi_userinfo<br><a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=%22+wx_appid+%22&redirect_uri=%22+api.wx_reg+%22&response_type=code&scope=snsapi_base,snsapi_userinfo&state=1,0#wechat_redirect" target="_blank" rel="noopener">https://open.weixin.qq.com/connect/oauth2/authorize?appid=”+wx_appid+”&amp;redirect_uri=”+api.wx_reg+”&amp;response_type=code&amp;scope=snsapi_base,snsapi_userinfo&amp;state=1,0#wechat_redirect</a><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1598313614593-c3c04a5e-42a9-4586-ad55-fa1d21806255.png#height=532&id=qOhCE&originHeight=532&originWidth=639&originalType=binary&size=0&status=done&style=none&width=639" alt=""><br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1598313614554-8e7593c1-952c-43b5-acaa-ea1014164056.png#height=527&id=gWFv6&originHeight=527&originWidth=312&originalType=binary&size=0&status=done&style=none&width=312" alt=""><br>用户同意授权后<br>如果用户同意授权，页面将跳转至 redirect_uri/?code=CODE&amp;state=STATE。<br>**2、通过 code 换取网页授权 access_token（后台操作）（之前是 php 中间做了一步中转操作通过 code 换取网页授权 access_token 这步是后台操作）</strong><br>  页面跳回跳的 url 上 redirect_uri/?code=CODE&amp;state=STATE。code<br>通过 code 换取的是网页授权 access_token，如果网页授权的作用域为 snsapi_base，则本步骤中获取到网页授权 access_token 的同时，也获取到了 openid，snsapi_base 式的网页授权流程即到此为止。<br><strong>3：需要个人信息。后台通过 code 得到值之后返回给前端去操作</strong><br><strong>2、通过 code 换取网页授权 access_token（前端操作）</strong><br><strong>window.location.href=”<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=&quot;+wx_appid+&quot;&amp;redirect_uri=&quot;+encodeURIComponent" target="_blank" rel="noopener">https://open.weixin.qq.com/connect/oauth2/authorize?appid=&quot;+wx_appid+&quot;&amp;redirect_uri=&quot;+encodeURIComponent</a>(“+中转页面的html比如 location.html+”)+”&amp;response_type=code&amp;scope=snsapi_base,snsapi_userinfo&amp;state=”+wx_rt_url_code（前端自己判断，存储，目的是确定授权页面来源。以方便授权后跳回的页面地址）+”,1(这值是和后台协商)#wechat_redirect”;</strong><br><strong>3:location.html 页面授权后会跳转到这个页面。同时在页面 url？后参数中拿到 code 和 state 的值 （state 就是上面传入的）</strong><br><strong>就可以拿着这两个参数去进行登录操作。获取相应的 token ，wxUserToken 等需要的信息  。根据 wx_rt_url_code 自己定义个规则回转到相应的页面。完成登录状态。进行下一步操作</strong><br><strong>为了确保参数的正确传入，state 可以进行 decodeURIComponent 下。（之前调接口的时候程序报错，发现 pc 端授权登录的时候微信解析是有逗号，手机端 state 是没逗号，确保程序的正常运行可以进行解码下）</strong><br>网站的微信授权登录是以二维码的形式 api 网址 api <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419316505&token=&lang=zh_CN" target="_blank" rel="noopener">https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN</a><br>手机端微信授权登录 api 网址  <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419317851&token=&lang=zh_CN" target="_blank" rel="noopener">https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419317851&amp;token=&amp;lang=zh_CN</a></p>
+<p>微信支付：</p>
+<p>H5 支付（即在网页端（非微信浏览器）页面调用支付）</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">onBridgeReady</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  WeixinJSBridge<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>
+    <span class="token string">"getBrandWCPayRequest"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      appId<span class="token punctuation">:</span> <span class="token string">"wx2421b1c4370ec43b"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//公众号名称，由商户传入</span>
+      timeStamp<span class="token punctuation">:</span> <span class="token string">"1395712654"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//时间戳，自1970年以来的秒数</span>
+      nonceStr<span class="token punctuation">:</span> <span class="token string">"e61463f8efa94090b1f366cccfbbb444"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//随机串</span>
+      <span class="token keyword">package</span><span class="token punctuation">:</span> <span class="token string">"prepay_id=u802345jgfjsdfgsdg888"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//统一下单接口返回的prepay_id,提交格式如：prepay_id=***</span>
+      signType<span class="token punctuation">:</span> <span class="token string">"MD5"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//签名类型，默认为MD5，支持HMAC-SHA256和MD5 注意此处需与统一下单的签名类型一致</span>
+      paySign<span class="token punctuation">:</span> <span class="token string">"70EA570631E4BB79628FBCA90534C63FF7FADD89"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//微信签名 (算法生成)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token keyword">function</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>err_msg <span class="token operator">==</span> <span class="token string">"get_brand_wcpay_request:ok"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 使用以上方式判断前端返回,微信团队郑重提示：</span>
+        <span class="token comment" spellcheck="true">//res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> WeixinJSBridge <span class="token operator">==</span> <span class="token string">"undefined"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>document<span class="token punctuation">.</span>addEventListener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"WeixinJSBridgeReady"</span><span class="token punctuation">,</span> onBridgeReady<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>document<span class="token punctuation">.</span>attachEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"WeixinJSBridgeReady"</span><span class="token punctuation">,</span> onBridgeReady<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"onWeixinJSBridgeReady"</span><span class="token punctuation">,</span> onBridgeReady<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token function">onBridgeReady</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<blockquote>
+<p>开微信开发者工具，打 log，最后发现在这一步时候 if (typeof WeixinJSBridge == “undefined”)<br>1.ios 能够调起微信浏览器的 js-sdk 2.安卓大部分都走到 undefined 里面去了<br>这里其实我也不太清楚原因。个人感觉是微信安卓的内置浏览器版本和这个 WeixinJSBridge 方法的问题。（希望有大神能够解答一下）</p>
+</blockquote>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            wx<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                debug<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>debug<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</span>
+                appId<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>appId<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 必填，公众号的唯一标识</span>
+                timestamp<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>timestamp<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 必填，生成签名的时间戳</span>
+                nonceStr<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>nonceStr<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 必填，生成签名的随机串</span>
+                signature<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>signature<span class="token punctuation">,</span><span class="token comment" spellcheck="true">// 必填，签名</span>
+                jsApiList<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wx_config<span class="token punctuation">.</span>jsApiList <span class="token comment" spellcheck="true">// 必填，需要使用的JS接口列表</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//微信支付</span>
+            wx<span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token comment" spellcheck="true">// config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。</span>
+                <span class="token comment" spellcheck="true">// console.log(this.jsApiCall());</span>
+                wx<span class="token punctuation">.</span><span class="token function">chooseWXPay</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                    timestamp<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wechat_code<span class="token punctuation">.</span>timestamp<span class="token punctuation">,</span>
+                    nonceStr<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>wechat_code<span class="token punctuation">.</span>nonceStr<span class="token punctuation">,</span>
+                    <span class="token keyword">package</span><span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wechat_code<span class="token punctuation">.</span><span class="token keyword">package</span><span class="token punctuation">,</span>
+                    signType<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wechat_code<span class="token punctuation">.</span>signType<span class="token punctuation">,</span>
+                    paySign<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wechat_code<span class="token punctuation">.</span>paySign<span class="token punctuation">,</span>
+                    success<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">// 支付成功后的回调函数</span>
+                        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"支付成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"/hd/becomevip"</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    cancel<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"支付失败"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<p><strong>分析和总结</strong><br>** <em>*<br>扫码支付、公众号支付、H5 支付、小程序支付都有一个同步回调地址跟异步通知地址，只是设置方式有所区别 ：<br><strong>1. 扫码支付</strong><br>同步回调地址在微信商户平台中设置，异步通知地址在统一下单接口的请求参数中设置；<br><strong>2. 公众号支付</strong><br>同步回调地址在 JSAPI 发起支付的回到函数中进行回到，异步通知地址在统一下单接口的请求参数中设置；<br><strong>3. H5 支付</strong><br>同步回调地址：在统一下单接口的返回参数中有一个参数 mweb_url，在 mweb_url 中以 get 传参形式新增一个参数 redirect_url，redirect_url 即是同步回调函数；<br>异步通知地址：统一下单接口的请求参数中设置；<br>*<em>4. 小程序支付\</em>\</em><br>同步回调地址：在小程序获得支付参数，并通过 js 调起微信支付以后，js 中会有一个回调函数，同步回调地址在该回调函数中添加；<br>异步通知地址：统一下单接口的请求参数中设置。</p>
+<p>其中扫码支付主要用于电脑端；公众号支付跟 H5 支付主要用于移动端，因此商户在移动端使用微信支付的时候需要判断当前打开的浏览器是否是微信浏览器，并根据结果决定选择公众号支付或 H5 支付；小程序支付的话主要用于小程序内部，因此比如获取 openid，调用统一下单接口等操作均在给小程序提供数据接口服务的接口后台实现。</p>
+<p>同步回调地址是作为微信后台跟商户进行页面跳转的渠道，因此同步回调地址是至关重要的，如果不填写，则可能导致支付完成后无法做页面跳转。<br>异步通知地址是微信后台对商户后台在完成微信支付后进行通知的重要通道，商户后台的异步通知地址必须是可访问的，在接收到微信的通知后，要做相关业务处理，并最终返回 SUCCESS 或 FAIL 的标识给微信，以告知微信不要在发送通知。</p>
+<p>结尾<br>这里只是针对微信扫码支付、公众号支付、H5 支付、小程序支付等微信的四中支付方式做了一个大概的分析和总结，具体的每一个支付方式的接入方法还请以微信支付开发文档为重要参考；因篇幅有限，代码量大，这里就不贴具体的实现代码了。</p>
+]]></content>
+      <categories>
+        <category>面试</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+        <tag>公众号</tag>
       </tags>
   </entry>
   <entry>
