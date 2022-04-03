@@ -619,7 +619,7 @@ docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软�
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          364
+          382
         </div>
         
 
@@ -666,6 +666,12 @@ docker logs jenkins      #查看启动日志
 docker ps -a    # 列出本机所有的容器（包括停止和运行）
 docker stop [容器ID] # 停止运行的容器
 docker rm [容器ID]   # 删除容器
+
+//启动容器
+docker start [容器ID]
+
+//重启容器
+docker restart [容器ID]
 
 //删除镜像
 docker image ls  #列出镜像
