@@ -3475,6 +3475,22 @@ npm config <span class="token function">set</span> cache <span class="token stri
       </tags>
   </entry>
   <entry>
+    <title>企业微信H5开启调试模式</title>
+    <url>/leader755/33581.html</url>
+    <content><![CDATA[<blockquote>
+<p>背景：在企业微信开发，如果不能在企业微信直接调试，那效率非常低，问题又不容易定位到，企业微信设置里又没有开发者模式开关，就在我无从下手的时候，发现一个快捷键能打开调试模式</p>
+</blockquote>
+<h2 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h2><p>ctrl + alt + shift + D，会有弹框提示已开启</p>
+<h2 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h2><p>在企业微信里打开 H5 页面，右键-检查元素，就可以调试了，简直不要太爽<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1650986311312-a88bf770-f2b7-4038-808e-80d6ba1a7477.png#clientId=u4bcac2b2-3b9e-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u6de03ff7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1190&originWidth=2050&originalType=url&ratio=1&rotation=0&showTitle=false&size=366825&status=done&style=none&taskId=u412d8252-747c-4ca5-a86f-cb2b033439e&title=" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>企业微信</category>
+      </categories>
+      <tags>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何绕开referrer防盗链</title>
     <url>/leader755/49766.html</url>
     <content><![CDATA[<h2 id="什么是-referrer"><a href="#什么是-referrer" class="headerlink" title="什么是 referrer"></a>什么是 referrer</h2><p>当一用户点击当前页面中的一个链接，然后跳转到目标页面时，目标页面会收到一个信息，即用户是从哪个源链接跳转过来的。如下图所示：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1595703140078-870fec1d-0742-4dea-828a-1f32819af187.png#align=left&display=inline&height=543&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1086&originWidth=1184&size=153142&status=done&style=none&width=592" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2020/webp/241787/1595702418075-1743cd6e-ed7c-4b5b-9f96-7f89fff17373.webp#align=left&display=inline&height=543&margin=%5Bobject%20Object%5D&originHeight=543&originWidth=896&size=0&status=done&style=none&width=896" alt=""><br>也就是说，当你发起一个 http 请求，请求头中的<code>referrer</code>字段就说明了你是从哪个页面发起该请求的。</p>
