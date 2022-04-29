@@ -3480,8 +3480,21 @@ npm config <span class="token function">set</span> cache <span class="token stri
     <content><![CDATA[<blockquote>
 <p>背景：在企业微信开发，如果不能在企业微信直接调试，那效率非常低，问题又不容易定位到，企业微信设置里又没有开发者模式开关，就在我无从下手的时候，发现一个快捷键能打开调试模式</p>
 </blockquote>
-<h2 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h2><p>ctrl + alt + shift + D，会有弹框提示已开启</p>
-<h2 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h2><p>在企业微信里打开 H5 页面，右键-检查元素，就可以调试了，简直不要太爽<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1650986311312-a88bf770-f2b7-4038-808e-80d6ba1a7477.png#clientId=u4bcac2b2-3b9e-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u6de03ff7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1190&originWidth=2050&originalType=url&ratio=1&rotation=0&showTitle=false&size=366825&status=done&style=none&taskId=u412d8252-747c-4ca5-a86f-cb2b033439e&title=" alt="image.png"></p>
+<h3 id="企业微信-Windows-版本调试"><a href="#企业微信-Windows-版本调试" class="headerlink" title="企业微信 Windows 版本调试"></a>企业微信 Windows 版本调试</h3><ol>
+<li>把 <a href="https://dldir1.qq.com/foxmail/wwopen_docFile/devtools_resources.pak" target="_blank" rel="noopener">devtools_resources.pak</a> 放到企业微信的安装目录下（复制的文件名，要保证为 devtools_resources.pak），注意安装目录带有版本号（4.0.1304.400 是浏览器内核的版本号）；</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1651208324418-05f6bf23-7c76-4dd3-9262-8887bec4a5e5.png#clientId=u64b92f9a-341a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u7dbabf79&margin=%5Bobject%20Object%5D&name=image.png&originHeight=212&originWidth=988&originalType=url&ratio=1&rotation=0&showTitle=false&size=28567&status=done&style=none&taskId=u1d5c2f7e-0a78-432c-b270-ec69973b275&title=" alt="image.png"></p>
+<ol>
+<li>关闭企业微信，重新启动；</li>
+<li>按快捷键 ctrl + alt + shift + D，进入调试模式；</li>
+<li>在需要调试的页面上点击右键，点“开发者工具”，进入调试模式。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1651208324688-3eb698cf-db76-4e04-9947-4e2ca79f5c9b.png#clientId=u64b92f9a-341a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u68b8db0f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=348&originWidth=652&originalType=url&ratio=1&rotation=0&showTitle=false&size=78616&status=done&style=none&taskId=uff09e16d-c22b-494b-bce9-9a9803b0bae&title=" alt="image.png"></li>
+</ol>
+<hr>
+<h3 id="企业微信-Mac-版本调试"><a href="#企业微信-Mac-版本调试" class="headerlink" title="企业微信 Mac 版本调试"></a>企业微信 Mac 版本调试</h3><ol>
+<li>按下 command+shift+control+D 进入调试模式<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1651208324449-6ed1c064-df3e-4cdc-9953-f5ef24131bda.png#clientId=u64b92f9a-341a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u2e768917&margin=%5Bobject%20Object%5D&name=image.png&originHeight=169&originWidth=650&originalType=url&ratio=1&rotation=0&showTitle=false&size=38739&status=done&style=none&taskId=uf621c55d-a844-4797-9038-4cb525197dd&title=" alt="image.png"></li>
+<li>帮助-&gt;开发调试选项-&gt;开启 webView 元素审查<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1651208324522-e0b9868a-9ebe-4deb-a77f-8307d6683d3c.png#clientId=u64b92f9a-341a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u23e3dccb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=164&originWidth=651&originalType=url&ratio=1&rotation=0&showTitle=false&size=111557&status=done&style=none&taskId=u14ba8edf-7a39-48e7-a28f-d893b85d6b9&title=" alt="image.png"></li>
+<li>内置浏览器右键<br><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1651208324719-19b8ec57-ab10-4084-b5ae-43218dcad61f.png#clientId=u64b92f9a-341a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u04838937&margin=%5Bobject%20Object%5D&name=image.png&originHeight=269&originWidth=651&originalType=url&ratio=1&rotation=0&showTitle=false&size=110521&status=done&style=none&taskId=u66d76753-a719-435f-a46c-124ad0dcf19&title=" alt="image.png"></li>
+</ol>
 ]]></content>
       <categories>
         <category>企业微信</category>
