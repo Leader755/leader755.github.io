@@ -4,9 +4,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="linux 的定时任务crontab, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
-  <meta name="description" content="
-背景：本人博客的评论为 valine 评论，为了及时知道评论，设置了邮件通知。奈何 leancloud 的每天活跃状态为 16 小时，且半小时内无人访问，则自动进入休眠状态。为了解决这一问题，研究了下 linux 系统自带的 cronta">
+  <meta name="keywords" content="Coding的jenkins的自动化部署, 个人博客，leader755，blogs，博客，个人网站，个人网站开发">
+  <meta name="description" content="1. 安装插件 coding
+2.
+">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +17,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google-site-verification" content="dUxZtBuXm550K6pq70-LL7yu7wQQHwvXpvMF8MwMQBU" />
-  <title>linux 的定时任务crontab | leader755 Blogs</title>
+  <title>Coding的jenkins的自动化部署 | leader755 Blogs</title>
   <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico"> -->
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
@@ -449,12 +450,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.leader755.com/leader755Blog/info/2.jpg')">
   <div class="container" style="right: 0px;left: 0px;">
     <div class="row">
       <div class="col s12 m12 l12">
         <div class="brand">
-          <h1 class="description center-align post-title">linux 的定时任务crontab</h1>
+          <h1 class="description center-align post-title">Coding的jenkins的自动化部署</h1>
         </div>
       </div>
     </div>
@@ -573,12 +574,8 @@
           
           <div class="article-tag">
             
-            <a href="/tags/crontab/">
-              <span class="chip bg-color">crontab</span>
-            </a>
-            
-            <a href="/tags/linux/">
-              <span class="chip bg-color">linux</span>
+            <a href="/tags/coding/">
+              <span class="chip bg-color">coding</span>
             </a>
             
           </div>
@@ -589,8 +586,8 @@
           <div class="post-cate">
             <i class="fas fa-bookmark fa-fw icon-category"></i>
             
-            <a href="/categories/crontab/" class="post-category">
-              crontab
+            <a href="/categories/jenkins/" class="post-category">
+              jenkins
             </a>
             
           </div>
@@ -602,7 +599,7 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-          2021-05-16
+          2022-05-04
         </div>
         
 
@@ -616,14 +613,14 @@
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          832
+          7
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          3 分
+          1 分
         </div>
         
 
@@ -636,83 +633,8 @@
       <!-- <meta name="referrer" content="never" /> -->
       <div id="articleContent">
 
-        <blockquote>
-<p>背景：<br>本人博客的评论为 valine 评论，为了及时知道评论，设置了邮件通知。奈何 leancloud 的每天活跃状态为 16 小时，且半小时内无人访问，则自动进入休眠状态。为了解决这一问题，研究了下 linux 系统自带的 crontab 定时器，通过 定时访问评论网站 去解决这一问题。</p>
-</blockquote>
-<h2 id="一、认识-crond-服务基本命令"><a href="#一、认识-crond-服务基本命令" class="headerlink" title="一、认识 crond 服务基本命令"></a>一、认识 crond 服务基本命令</h2><h3 id="1-gt-安装-crontab："><a href="#1-gt-安装-crontab：" class="headerlink" title="1&gt;安装 crontab："></a>1&gt;安装 crontab：</h3><pre class=" language-javascript"><code class="language-javascript">yum install crontabs</code></pre>
-<h3 id="2-gt-查看-crontab-服务状态："><a href="#2-gt-查看-crontab-服务状态：" class="headerlink" title="2&gt;查看 crontab 服务状态："></a>2&gt;查看 crontab 服务状态：</h3><pre class=" language-javascript"><code class="language-javascript">service crond status</code></pre>
-<h3 id="3-gt-手动启动-crontab-服务："><a href="#3-gt-手动启动-crontab-服务：" class="headerlink" title="3&gt;手动启动 crontab 服务："></a>3&gt;手动启动 crontab 服务：</h3><pre class=" language-javascript"><code class="language-javascript">service crond start</code></pre>
-<h3 id="4-gt-设置开机自动启动："><a href="#4-gt-设置开机自动启动：" class="headerlink" title="4&gt;设置开机自动启动："></a>4&gt;设置开机自动启动：</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//查看是否已经设置为开机启动</span>
-ntsysv<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">//设置为开机启动</span></code></pre>
-<h3 id="5-gt-常用的命令行"><a href="#5-gt-常用的命令行" class="headerlink" title="5&gt;常用的命令行"></a>5&gt;常用的命令行</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//启动服务</span>
-service crond start
-
-<span class="token comment" spellcheck="true">//关闭服务</span>
-service crond stop
-
-<span class="token comment" spellcheck="true">//重启服务</span>
-service crond restart
-
-<span class="token comment" spellcheck="true">//重新载入配置</span>
-service crond reload
-
-<span class="token comment" spellcheck="true">//查看crontab服务状态</span>
-service crond status
-
-<span class="token comment" spellcheck="true">//列出所有的crontab 任务</span>
-crontab <span class="token operator">-</span>l
-
-<span class="token comment" spellcheck="true">//编辑定时任务【删除-添加-修改】</span>
-crontab <span class="token operator">-</span>e
-
-<span class="token comment" spellcheck="true">//删除定时任务</span>
-crontab <span class="token operator">-</span>r</code></pre>
-<h2 id="二、创建一个定时任务"><a href="#二、创建一个定时任务" class="headerlink" title="二、创建一个定时任务"></a>二、创建一个定时任务</h2><h3 id="1-gt-列出定时任务"><a href="#1-gt-列出定时任务" class="headerlink" title="1&gt;列出定时任务"></a>1&gt;列出定时任务</h3><pre class=" language-javascript"><code class="language-javascript">crontab <span class="token operator">-</span> l<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//如果无定时任务</span></code></pre>
-<h3 id="2-gt-新建定时任务"><a href="#2-gt-新建定时任务" class="headerlink" title="2&gt;新建定时任务"></a>2&gt;新建定时任务</h3><p>执行如下命令，打开 crontab 定时任务编辑界面，按 I 键进入编辑模式。</p>
-<pre class=" language-javascript"><code class="language-javascript">crontab <span class="token operator">-</span> e<span class="token punctuation">;</span></code></pre>
-<h3 id="3-gt-添加定时任务"><a href="#3-gt-添加定时任务" class="headerlink" title="3&gt;添加定时任务"></a>3&gt;添加定时任务</h3><blockquote>
-<p>设置上午 9 点到凌晨 1 点，每 30 分钟访问一次网站。关于定时任务表达式不懂的去网上搜下。注意 linux 与 下的 crontab 是有些差异的，搜索的时候应当带上 linux。本人就入坑了。</p>
-</blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">*</span><span class="token operator">/</span><span class="token number">30</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token number">13</span><span class="token punctuation">,</span><span class="token number">14</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">17</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">,</span><span class="token number">19</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">,</span><span class="token number">23</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>curl https<span class="token punctuation">:</span>www<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com</code></pre>
-<h2 id="三、定时任务表达式"><a href="#三、定时任务表达式" class="headerlink" title="三、定时任务表达式"></a>三、定时任务表达式</h2><h3 id="1-gt-格式"><a href="#1-gt-格式" class="headerlink" title="1&gt;格式"></a>1&gt;格式</h3><pre class=" language-javascript"><code class="language-javascript">字段名                 允许的值                        允许的特殊字符
-秒                    <span class="token number">0</span><span class="token operator">-</span><span class="token number">59</span>                            <span class="token punctuation">,</span> <span class="token operator">-</span> <span class="token operator">*</span> <span class="token operator">/</span>
-分                    <span class="token number">0</span><span class="token operator">-</span><span class="token number">59</span>                            <span class="token punctuation">,</span> <span class="token operator">-</span> <span class="token operator">*</span> <span class="token operator">/</span>
-小时                  <span class="token number">0</span><span class="token operator">-</span><span class="token number">23</span>                            <span class="token punctuation">,</span> <span class="token operator">-</span> <span class="token operator">*</span> <span class="token operator">/</span>
-日                    <span class="token number">1</span><span class="token operator">-</span><span class="token number">31</span>                            <span class="token punctuation">,</span> <span class="token operator">-</span> <span class="token operator">*</span> <span class="token operator">?</span> <span class="token operator">/</span> L W C
-月                    <span class="token number">1</span><span class="token operator">-</span><span class="token number">12</span> or JAN<span class="token operator">-</span>DEC                 <span class="token punctuation">,</span> <span class="token operator">-</span> <span class="token operator">*</span> <span class="token operator">/</span>
-周几                  <span class="token number">1</span><span class="token operator">-</span><span class="token number">7</span> or SUN<span class="token operator">-</span>SAT                   <span class="token punctuation">,</span> <span class="token operator">-</span> <span class="token operator">*</span> <span class="token operator">?</span> <span class="token operator">/</span> L C #
-年 <span class="token punctuation">(</span>可选字段<span class="token punctuation">)</span>          empty<span class="token punctuation">,</span> <span class="token number">1970</span><span class="token operator">-</span><span class="token number">2099</span>                 <span class="token punctuation">,</span> <span class="token operator">-</span> <span class="token operator">*</span> <span class="token operator">/</span></code></pre>
-<h3 id="2-gt-说明"><a href="#2-gt-说明" class="headerlink" title="2&gt;说明"></a>2&gt;说明</h3><blockquote>
-<p>Month<br>一年中的几月：可以用 0-11 或用字符串 “JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV and DEC” 表示</p>
-<p>Day-of-Week<br>每周：数字 1-7（1 ＝ 星期日），或用字符口串“SUN, MON, TUE, WED, THU, FRI and SAT”</p>
-</blockquote>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">*</span> ：代表整个时间段
-<span class="token operator">?</span> ：表示不确定的值
-<span class="token punctuation">,</span> ：指定数个值
-<span class="token operator">-</span> ：指定一个值的范围
-<span class="token operator">/</span> ：指定一个值的增加幅度。n<span class="token operator">/</span>m表示从n开始，每次增加m
-L ：用在日表示一个月中的最后一天，用在周表示该月最后一个星期X
-W <span class="token function">：指定离给定日期最近的工作日</span><span class="token punctuation">(</span>周一到周五<span class="token punctuation">)</span>
-# ：表示该月第几个周X。<span class="token number">6</span>#<span class="token number">3</span>表示该月第<span class="token number">3</span>个周五</code></pre>
-<h3 id="3-gt-举例"><a href="#3-gt-举例" class="headerlink" title="3&gt;举例"></a>3&gt;举例</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">*</span><span class="token operator">/</span><span class="token number">5</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">?</span>  每隔<span class="token number">5</span>秒执行一次
-<span class="token number">0</span> <span class="token operator">*</span><span class="token operator">/</span><span class="token number">1</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">?</span>  每隔<span class="token number">1</span>分钟执行一次
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">23</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">?</span>  每天<span class="token number">23</span>点执行一次
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">?</span>  每天凌晨<span class="token number">1</span>点执行一次：
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token operator">*</span> <span class="token operator">?</span>  每月<span class="token number">1</span>号凌晨<span class="token number">1</span>点执行一次
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">23</span> L <span class="token operator">*</span> <span class="token operator">?</span>  每月最后一天<span class="token number">23</span>点执行一次
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token operator">*</span> L  每周星期天凌晨<span class="token number">1</span>点实行一次
-<span class="token number">0</span> <span class="token number">26</span><span class="token punctuation">,</span><span class="token number">29</span><span class="token punctuation">,</span><span class="token number">33</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">?</span>  在<span class="token number">26</span>分、<span class="token number">29</span>分、<span class="token number">33</span>分执行一次
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">13</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">,</span><span class="token number">21</span> <span class="token operator">*</span> <span class="token operator">*</span> <span class="token operator">?</span> 每天的<span class="token number">0</span>点、<span class="token number">13</span>点、<span class="token number">18</span>点、<span class="token number">21</span>点都执行一次</code></pre>
-<h2 id="三、定时任务相关网站推荐"><a href="#三、定时任务相关网站推荐" class="headerlink" title="三、定时任务相关网站推荐"></a>三、定时任务相关网站推荐</h2><ul>
-<li><strong>设置 cron 定时的网站：</strong><a href="https://console.cron-job.org/jobs" target="_blank" rel="noopener"><strong>https://console.cron-job.org/jobs</strong></a></li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1621173755251-72853e3d-28e8-432f-84ee-3df3b588bb78.png#clientId=uba7a3344-3d2c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=765&id=u62766af0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1530&originWidth=2880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=330274&status=done&style=none&taskId=u1e54fd58-9b6f-44e5-bea3-9f517ec5ac1&title=&width=1440" alt="image.png"></p>
-<ul>
-<li>** 效验表达式的网站：<strong>[</strong><a href="https://tool.lu/crontab**](https://tool.lu/crontab)" target="_blank" rel="noopener">https://tool.lu/crontab**](https://tool.lu/crontab)</a></li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1621172152399-18980836-1323-4a95-9c4a-1a674ded214d.png#clientId=u0bdf43c1-5e9e-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=632&id=uf28d6180&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1264&originWidth=1904&originalType=binary&ratio=1&rotation=0&showTitle=false&size=188811&status=done&style=none&taskId=u489fd11e-183e-466e-8497-5d1ec82d008&title=&width=952" alt="image.png"></p>
+        <h1 id="1-安装插件-coding"><a href="#1-安装插件-coding" class="headerlink" title="1. 安装插件 coding"></a>1. 安装插件 coding</h1><p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1651598602452-4f56a831-cff3-476b-9e0e-f150c08b8981.png#clientId=u2898c4de-562b-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=521&id=u249595eb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1042&originWidth=2228&originalType=binary&ratio=1&rotation=0&showTitle=false&size=163328&status=done&style=none&taskId=ub5c0f029-99ab-4731-8516-0afb9d85aa4&title=&width=1114" alt="image.png"></p>
+<p>2.</p>
 
       </div>
       <hr />
@@ -738,7 +660,7 @@ W <span class="token function">：指定离给定日期最近的工作日</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.leader755.com/leader755/58426.html">https://www.leader755.com/leader755/58426.html</a>
+                    <a href="https://www.leader755.com/leader755/27501.html">https://www.leader755.com/leader755/27501.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -776,12 +698,8 @@ W <span class="token function">：指定离给定日期最近的工作日</span>
           
           <div class="article-tag">
             
-            <a href="/tags/crontab/">
-              <span class="chip bg-color">crontab</span>
-            </a>
-            
-            <a href="/tags/linux/">
-              <span class="chip bg-color">linux</span>
+            <a href="/tags/coding/">
+              <span class="chip bg-color">coding</span>
             </a>
             
           </div>
@@ -1219,90 +1137,32 @@ W <span class="token function">：指定离给定日期最近的工作日</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/leader755/65405.html">
+                <a href="/leader755/27501.html">
                     <div class="card-image">
                         
                         
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/16.jpg" class="responsive-img" alt="网站一键置灰"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/16.jpg" class="responsive-img" alt="网站一键置灰">
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/2.jpg" class="responsive-img" alt="Coding的jenkins的自动化部署"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/2.jpg" class="responsive-img" alt="Coding的jenkins的自动化部署">
                         
-                        <span class="card-title">网站一键置灰</span>
+                        <span class="card-title">Coding的jenkins的自动化部署</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-背景：某些时候，需要让网站一键变灰。只需要短短几行代码就能做到。
+                            1. 安装插件 coding
+2.
 
-1.直接上代码直接在 html 上加上此样式，搞定。
-&lt;style>
-  html {
-    filter: grayscale(100%);
-    -webk
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E4%B8%80%E9%94%AE%E7%BD%AE%E7%81%B0/" class="post-category">
-                                    一键置灰
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/leader755/1179.html">
-                    <div class="card-image">
-                        
-                        
-                        <!-- <img src="https://img.leader755.com/leader755Blog/info/1.jpg" class="responsive-img" alt="jenkins配置 jdk，maven，git，node"> -->
-                        <img src="https://img.leader755.com/leader755Blog/info/1.jpg" class="responsive-img" alt="jenkins配置 jdk，maven，git，node">
-                        
-                        <span class="card-title">jenkins配置 jdk，maven，git，node</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            1.centos 中安装 JDK:1>查看系统是否已安装 Java(Jenkins需要在 Java 环境下运行)
-yum list installed | grep jdk
-
-2>yun 安装 java
-yum search openjdk
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
                             </span>
                         <span class="publish-author">
                             
@@ -1316,15 +1176,66 @@ yum search openjdk
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jdk/">
-                        <span class="chip bg-color">jdk</span>
+                    <a href="/tags/coding/">
+                        <span class="chip bg-color">coding</span>
                     </a>
                     
-                    <a href="/tags/node/">
-                        <span class="chip bg-color">node</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/leader755/33581.html">
+                    <div class="card-image">
+                        
+                        
+                        <!-- <img src="https://img.leader755.com/leader755Blog/info/16.jpg" class="responsive-img" alt="企业微信H5开启调试模式"> -->
+                        <img src="https://img.leader755.com/leader755Blog/info/16.jpg" class="responsive-img" alt="企业微信H5开启调试模式">
+                        
+                        <span class="card-title">企业微信H5开启调试模式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+背景：在企业微信开发，如果不能在企业微信直接调试，那效率非常低，问题又不容易定位到，企业微信设置里又没有开发者模式开关，就在我无从下手的时候，发现一个快捷键能打开调试模式
+
+企业微信 Windows 版本调试
+把 devtools_res
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1/" class="post-category">
+                                    企业微信
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%B0%83%E8%AF%95/">
+                        <span class="chip bg-color">调试</span>
                     </a>
                     
                 </div>

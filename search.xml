@@ -370,6 +370,19 @@ rm -fr /var/log/httpd/access_log-* /var/log/httpd/error_log-* /var/log/httpd/ssl
       </tags>
   </entry>
   <entry>
+    <title>Coding的jenkins的自动化部署</title>
+    <url>/leader755/27501.html</url>
+    <content><![CDATA[<h1 id="1-安装插件-coding"><a href="#1-安装插件-coding" class="headerlink" title="1. 安装插件 coding"></a>1. 安装插件 coding</h1><p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1651598602452-4f56a831-cff3-476b-9e0e-f150c08b8981.png#clientId=u2898c4de-562b-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=521&id=u249595eb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1042&originWidth=2228&originalType=binary&ratio=1&rotation=0&showTitle=false&size=163328&status=done&style=none&taskId=ub5c0f029-99ab-4731-8516-0afb9d85aa4&title=&width=1114" alt="image.png"></p>
+<p>2.</p>
+]]></content>
+      <categories>
+        <category>jenkins</category>
+      </categories>
+      <tags>
+        <tag>coding</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github Actions自动化部署 hexo博客</title>
     <url>/leader755/60370.html</url>
     <content><![CDATA[<h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h2><p>利用 GitHub Actions 实现博客自动发布，将静态博客页面部署到多个服务器上，比如 GitHub Pages、Gitee pages 、云服务器上。本文介绍使用 GitHub Actions 实现将 Hexo 博客自动编译并发布到 GitHub Pages 上。</p>
