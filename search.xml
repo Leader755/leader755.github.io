@@ -1087,7 +1087,7 @@ docker load</code></pre>
 <li>删除容器</li>
 </ul>
 <pre class=" language-shell"><code class="language-shell">docker rm [容器ID]</code></pre>
-<h4 id="b-gt"><a href="#b-gt" class="headerlink" title="b&gt;"></a>b&gt;</h4>]]></content>
+]]></content>
       <categories>
         <category>docker</category>
       </categories>
