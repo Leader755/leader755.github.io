@@ -1114,7 +1114,7 @@ chown -R 1000:1000 jenkins/    给uid为1000的权限</code></pre>
 <h2 id="4-启动-jenkins"><a href="#4-启动-jenkins" class="headerlink" title="4.启动 jenkins"></a>4.启动 jenkins</h2><pre class=" language-shell"><code class="language-shell">#cd 到根目录
 cd ~
 #安装并启动 jenkins 容器
-docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v /var/lib/jenkins:/var/jenkins_home jenkins/jenkins:latest</code></pre>
+docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v /var/lib/jenkins:/var/jenkins_home --restart=always jenkins/jenkins:latest</code></pre>
 <h2 id="5-查看-jenkins-是否启动"><a href="#5-查看-jenkins-是否启动" class="headerlink" title="5.查看 jenkins 是否启动"></a>5.查看 jenkins 是否启动</h2><pre class=" language-shell"><code class="language-shell">ps -ef | grep jenkins   #jenkins 进程
 
 docker logs jenkins      #查看启动日志
@@ -1416,6 +1416,25 @@ server <span class="token punctuation">{</span>
       </tags>
   </entry>
   <entry>
+    <title>hexo博客增加音乐播放器功能</title>
+    <url>/leader755/44650.html</url>
+    <content><![CDATA[<h2 id="1-在-layout-ejs-中-body-标签内粘贴入以下"><a href="#1-在-layout-ejs-中-body-标签内粘贴入以下" class="headerlink" title="1.在 layout.ejs 中 body 标签内粘贴入以下"></a>1.在 layout.ejs 中 body 标签内粘贴入以下</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1611486097780-bb96d811-8890-4e58-b7bf-bf82721b18db.png#height=203&id=R5N0A&margin=%5Bobject%20Object%5D&name=image.png&originHeight=406&originWidth=1636&originalType=binary&size=116762&status=done&style=none&width=818" alt="image.png"></p>
+<pre class=" language-javascript"><code class="language-javascript"> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>音乐<span class="token operator">--</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"player"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"aplayer aplayer-withlist aplayer-fixed"</span> data<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"3025663508"</span> data<span class="token operator">-</span>server<span class="token operator">=</span><span class="token string">"netease"</span> data<span class="token operator">-</span>type<span class="token operator">=</span><span class="token string">"playlist"</span> data<span class="token operator">-</span>order<span class="token operator">=</span><span class="token string">"random"</span> data<span class="token operator">-</span>fixed<span class="token operator">=</span><span class="token string">"true"</span> data<span class="token operator">-</span>listfolded<span class="token operator">=</span><span class="token string">"true"</span> data<span class="token operator">-</span>theme<span class="token operator">=</span><span class="token string">"#2D8CF0"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<p>页面就能正常展示了<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1611486237141-002aefbf-0f92-4d92-98bd-0c5a98f73583.png#height=786&id=aYMIn&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1572&originWidth=2878&originalType=binary&size=3107288&status=done&style=none&width=1439" alt="image.png"></p>
+<h2 id="2-跳转页面不中段播放"><a href="#2-跳转页面不中段播放" class="headerlink" title="2.跳转页面不中段播放"></a>2.跳转页面不中段播放</h2><p>这个一直都没有效果，试了很多方法，如果有知道的朋友推荐下。待续。</p>
+]]></content>
+      <categories>
+        <category>hexo 博客</category>
+      </categories>
+      <tags>
+        <tag>音乐播放器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo博客添加百度统计和Google统计</title>
     <url>/leader755/37600.html</url>
     <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
@@ -1458,22 +1477,34 @@ baiduAnalytics<span class="token punctuation">:</span>
       </tags>
   </entry>
   <entry>
-    <title>hexo博客增加音乐播放器功能</title>
-    <url>/leader755/44650.html</url>
-    <content><![CDATA[<h2 id="1-在-layout-ejs-中-body-标签内粘贴入以下"><a href="#1-在-layout-ejs-中-body-标签内粘贴入以下" class="headerlink" title="1.在 layout.ejs 中 body 标签内粘贴入以下"></a>1.在 layout.ejs 中 body 标签内粘贴入以下</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1611486097780-bb96d811-8890-4e58-b7bf-bf82721b18db.png#height=203&id=R5N0A&margin=%5Bobject%20Object%5D&name=image.png&originHeight=406&originWidth=1636&originalType=binary&size=116762&status=done&style=none&width=818" alt="image.png"></p>
-<pre class=" language-javascript"><code class="language-javascript"> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>音乐<span class="token operator">--</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-  <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"player"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"aplayer aplayer-withlist aplayer-fixed"</span> data<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"3025663508"</span> data<span class="token operator">-</span>server<span class="token operator">=</span><span class="token string">"netease"</span> data<span class="token operator">-</span>type<span class="token operator">=</span><span class="token string">"playlist"</span> data<span class="token operator">-</span>order<span class="token operator">=</span><span class="token string">"random"</span> data<span class="token operator">-</span>fixed<span class="token operator">=</span><span class="token string">"true"</span> data<span class="token operator">-</span>listfolded<span class="token operator">=</span><span class="token string">"true"</span> data<span class="token operator">-</span>theme<span class="token operator">=</span><span class="token string">"#2D8CF0"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
-<p>页面就能正常展示了<br><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1611486237141-002aefbf-0f92-4d92-98bd-0c5a98f73583.png#height=786&id=aYMIn&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1572&originWidth=2878&originalType=binary&size=3107288&status=done&style=none&width=1439" alt="image.png"></p>
-<h2 id="2-跳转页面不中段播放"><a href="#2-跳转页面不中段播放" class="headerlink" title="2.跳转页面不中段播放"></a>2.跳转页面不中段播放</h2><p>这个一直都没有效果，试了很多方法，如果有知道的朋友推荐下。待续。</p>
+    <title>hexo博客的生成永久标题链接</title>
+    <url>/leader755/9481.html</url>
+    <content><![CDATA[<h2 id="1-hexo-博客默认链接规则："><a href="#1-hexo-博客默认链接规则：" class="headerlink" title="1.hexo 博客默认链接规则："></a>1.hexo 博客默认链接规则：</h2><p><strong>hexo 生成的标题默认规则（年、月、日、标题）：:year/:month/:day/:title。复制后的链接是一长串，非常不利于阅读，也不简洁。</strong></p>
+<h2 id="2-解决方案："><a href="#2-解决方案：" class="headerlink" title="2.解决方案："></a>2.解决方案：</h2><h3 id="1-使用hexo-permalink-pinyin"><a href="#1-使用hexo-permalink-pinyin" class="headerlink" title="1.使用hexo-permalink-pinyin"></a>1.使用<a href="">hexo-permalink-pinyin</a></h3><p>将中文转英文，这样方案也存在一定的缺陷，比如修改了文章标题，重新 hexo 三连后，URL 就变了，以前的文章地址变成了 404。而且这样生成的 URL 层级也很深，不利于 SEO。</p>
+<h4 id="1-gt-安装-hexo-permalink-pinyin"><a href="#1-gt-安装-hexo-permalink-pinyin" class="headerlink" title="1&gt;安装 hexo-permalink-pinyin"></a>1&gt;安装 hexo-permalink-pinyin</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
+<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink_pinyin<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  separator<span class="token punctuation">:</span> <span class="token string">'-'</span> # <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
+permalink_pinyin<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>             # Enable <span class="token keyword">this</span> plugin
+  separator<span class="token punctuation">:</span> <span class="token string">'-'</span>           # Separator <span class="token keyword">of</span> the slug<span class="token punctuation">,</span> <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
+  exclude<span class="token punctuation">:</span> <span class="token operator">/</span>ignore_post<span class="token operator">/</span>   # Regex <span class="token keyword">for</span> which post should skip</code></pre>
+<p>###</p>
+<h3 id="2-使用hexo-abbrlink"><a href="#2-使用hexo-abbrlink" class="headerlink" title="2.使用hexo-abbrlink"></a>2.使用<a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a></h3><p>生成唯一不变的 URl 链接，链接可以调整自己想要的。弊端</p>
+<h4 id="1-gt-安装-hexo-abbrlink"><a href="#1-gt-安装-hexo-abbrlink" class="headerlink" title="1&gt;安装 hexo-abbrlink"></a>1&gt;安装 hexo-abbrlink</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
+<p>####</p>
+<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink<span class="token punctuation">:</span> post<span class="token operator">/</span><span class="token punctuation">:</span>abbrlink<span class="token punctuation">.</span>html  # 文章的永久链接格式<span class="token punctuation">,</span>post可以自定义
+abbrlink<span class="token punctuation">:</span>
+  alg<span class="token punctuation">:</span> crc32  # 算法： <span class="token function">crc16</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and crc32
+  rep<span class="token punctuation">:</span> hex    # 进制： <span class="token function">dec</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and hex</code></pre>
+<p>生成后的博客链接如下：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588694804547-5dbe637d-46af-4bfc-9b3d-4d5228b573a6.png#align=left&display=inline&height=37&margin=%5Bobject%20Object%5D&name=image.png&originHeight=74&originWidth=908&size=11417&status=done&style=none&width=454" alt="image.png"></p>
+<p>如果觉得对你有帮助，点个赞呗。</p>
 ]]></content>
       <categories>
-        <category>hexo 博客</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>音乐播放器</tag>
+        <tag>永久标签</tag>
       </tags>
   </entry>
   <entry>
@@ -1507,37 +1538,6 @@ valine<span class="token punctuation">:</span>
       <tags>
         <tag>valine</tag>
         <tag>leancloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo博客的生成永久标题链接</title>
-    <url>/leader755/9481.html</url>
-    <content><![CDATA[<h2 id="1-hexo-博客默认链接规则："><a href="#1-hexo-博客默认链接规则：" class="headerlink" title="1.hexo 博客默认链接规则："></a>1.hexo 博客默认链接规则：</h2><p><strong>hexo 生成的标题默认规则（年、月、日、标题）：:year/:month/:day/:title。复制后的链接是一长串，非常不利于阅读，也不简洁。</strong></p>
-<h2 id="2-解决方案："><a href="#2-解决方案：" class="headerlink" title="2.解决方案："></a>2.解决方案：</h2><h3 id="1-使用hexo-permalink-pinyin"><a href="#1-使用hexo-permalink-pinyin" class="headerlink" title="1.使用hexo-permalink-pinyin"></a>1.使用<a href="">hexo-permalink-pinyin</a></h3><p>将中文转英文，这样方案也存在一定的缺陷，比如修改了文章标题，重新 hexo 三连后，URL 就变了，以前的文章地址变成了 404。而且这样生成的 URL 层级也很深，不利于 SEO。</p>
-<h4 id="1-gt-安装-hexo-permalink-pinyin"><a href="#1-gt-安装-hexo-permalink-pinyin" class="headerlink" title="1&gt;安装 hexo-permalink-pinyin"></a>1&gt;安装 hexo-permalink-pinyin</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
-<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink_pinyin<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  separator<span class="token punctuation">:</span> <span class="token string">'-'</span> # <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
-permalink_pinyin<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>             # Enable <span class="token keyword">this</span> plugin
-  separator<span class="token punctuation">:</span> <span class="token string">'-'</span>           # Separator <span class="token keyword">of</span> the slug<span class="token punctuation">,</span> <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>
-  exclude<span class="token punctuation">:</span> <span class="token operator">/</span>ignore_post<span class="token operator">/</span>   # Regex <span class="token keyword">for</span> which post should skip</code></pre>
-<p>###</p>
-<h3 id="2-使用hexo-abbrlink"><a href="#2-使用hexo-abbrlink" class="headerlink" title="2.使用hexo-abbrlink"></a>2.使用<a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a></h3><p>生成唯一不变的 URl 链接，链接可以调整自己想要的。弊端</p>
-<h4 id="1-gt-安装-hexo-abbrlink"><a href="#1-gt-安装-hexo-abbrlink" class="headerlink" title="1&gt;安装 hexo-abbrlink"></a>1&gt;安装 hexo-abbrlink</h4><pre class=" language-javascript"><code class="language-javascript">npm i hexo<span class="token operator">-</span>permalink<span class="token operator">-</span>pinyin <span class="token operator">--</span>save</code></pre>
-<p>####</p>
-<h4 id="2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1"><a href="#2-gt-修改根目录下的-config-yml-文件，找到-permalink。-1" class="headerlink" title="2&gt;修改根目录下的_config.yml 文件，找到 permalink。"></a>2&gt;修改根目录下的_config.yml 文件，找到 permalink。</h4><pre class=" language-javascript"><code class="language-javascript">permalink<span class="token punctuation">:</span> post<span class="token operator">/</span><span class="token punctuation">:</span>abbrlink<span class="token punctuation">.</span>html  # 文章的永久链接格式<span class="token punctuation">,</span>post可以自定义
-abbrlink<span class="token punctuation">:</span>
-  alg<span class="token punctuation">:</span> crc32  # 算法： <span class="token function">crc16</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and crc32
-  rep<span class="token punctuation">:</span> hex    # 进制： <span class="token function">dec</span><span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> and hex</code></pre>
-<p>生成后的博客链接如下：<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1588694804547-5dbe637d-46af-4bfc-9b3d-4d5228b573a6.png#align=left&display=inline&height=37&margin=%5Bobject%20Object%5D&name=image.png&originHeight=74&originWidth=908&size=11417&status=done&style=none&width=454" alt="image.png"></p>
-<p>如果觉得对你有帮助，点个赞呗。</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>永久标签</tag>
       </tags>
   </entry>
   <entry>

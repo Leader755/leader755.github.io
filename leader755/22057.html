@@ -619,7 +619,7 @@ docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软�
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          382
+          384
         </div>
         
 
@@ -655,7 +655,7 @@ chown -R 1000:1000 jenkins/    给uid为1000的权限</code></pre>
 <h2 id="4-启动-jenkins"><a href="#4-启动-jenkins" class="headerlink" title="4.启动 jenkins"></a>4.启动 jenkins</h2><pre class=" language-shell"><code class="language-shell">#cd 到根目录
 cd ~
 #安装并启动 jenkins 容器
-docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v /var/lib/jenkins:/var/jenkins_home jenkins/jenkins:latest</code></pre>
+docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v /var/lib/jenkins:/var/jenkins_home --restart=always jenkins/jenkins:latest</code></pre>
 <h2 id="5-查看-jenkins-是否启动"><a href="#5-查看-jenkins-是否启动" class="headerlink" title="5.查看 jenkins 是否启动"></a>5.查看 jenkins 是否启动</h2><pre class=" language-shell"><code class="language-shell">ps -ef | grep jenkins   #jenkins 进程
 
 docker logs jenkins      #查看启动日志
