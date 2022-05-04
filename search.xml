@@ -1284,7 +1284,7 @@ docker run [镜像ID] #启动镜像</code></pre>
   <span class="token string">"registry-mirrors"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"http://hub-mirror.c.163.com"</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span></code></pre>
 <p>注意：修改完配置文件之后需要执行 service docker restart 才可生效。</p>
-<h3 id="5-其他方式安装-docker"><a href="#5-其他方式安装-docker" class="headerlink" title="5.其他方式安装 docker"></a>5.其他方式安装 docker</h3><p>请跳转到此篇文章查看详细内容，[<strong>《linux 安装 docker》</strong>](<a href="https://www.yuque.com/docs/share/13e5e304-b57b-41f1-9d79-4698c4933d22?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/13e5e304-b57b-41f1-9d79-4698c4933d22?#</a> 《linux 安装 docker》)</p>
+<h3 id="5-其他方式安装-docker"><a href="#5-其他方式安装-docker" class="headerlink" title="5.其他方式安装 docker"></a>5.其他方式安装 docker</h3><p>请跳转到此篇文章查看详细内容，<a href="https://www.yuque.com/leader755/blog/azuze1" target="_blank" rel="noopener"><strong>《centos 安装 docker》</strong></a></p>
 <h2 id="4-安装-Halo"><a href="#4-安装-Halo" class="headerlink" title="4.安装 Halo"></a>4.安装 Halo</h2><h3 id="1-gt-自定义配置文件"><a href="#1-gt-自定义配置文件" class="headerlink" title="1&gt;自定义配置文件"></a>1&gt;自定义配置文件</h3><p>考虑到部分用户的需要，可能需要自定义比如端口等设置项，我们提供了公共的配置文件，并且该配置文件是完全独立于安装包的。当然，你也可以使用安装包内的默认配置文件，但是安装包内的配置文件是不可修改的。请注意：配置文件的路径为~/.halo/application.yaml。</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//创建工作目录</span>
 mkdir <span class="token operator">~</span><span class="token regex">/.halo &amp;&amp; cd ~/</span><span class="token punctuation">.</span>halo
@@ -1358,7 +1358,7 @@ halo<span class="token punctuation">:</span>
 <h3 id="5-gt-效果"><a href="#5-gt-效果" class="headerlink" title="5&gt;效果"></a>5&gt;效果</h3><blockquote>
 <p>完成以上操作即可通过 ip:端口访问了。不过在此之前，最好先完成后续操作，我们还需要让域名也可以访问到 Halo，请继续看 [《配置域名访问》](<a href="https://www.yuque.com/docs/share/90f6f43b-8035-4a07-860d-2d6a65039e38?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/90f6f43b-8035-4a07-860d-2d6a65039e38?#</a> 《halo 配置 域名和 ssl》)。</p>
 </blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620214418523-9d19d9ce-b27c-4102-801d-191695cf52f7.png#height=776&id=udc058c12&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1552&originWidth=2114&originalType=binary&size=158663&status=done&style=none&width=1057" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/241787/1620214418523-9d19d9ce-b27c-4102-801d-191695cf52f7.png#crop=0&crop=0&crop=1&crop=1&height=776&id=udc058c12&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1552&originWidth=2114&originalType=binary&ratio=1&rotation=0&showTitle=false&size=158663&status=done&style=none&title=&width=1057" alt="image.png"></p>
 <p>###</p>
 <h3 id="5-更新-Halo-版本"><a href="#5-更新-Halo-版本" class="headerlink" title="5.更新 Halo 版本"></a>5.更新 Halo 版本</h3><h4 id="1-gt-停止-halo-容器"><a href="#1-gt-停止-halo-容器" class="headerlink" title="1&gt;停止 halo 容器"></a>1&gt;停止 halo 容器</h4><pre class=" language-javascript"><code class="language-javascript">sudo docker stop halo</code></pre>
 <h4 id="2-gt-拉取最新的-Halo-镜像"><a href="#2-gt-拉取最新的-Halo-镜像" class="headerlink" title="2&gt;拉取最新的 Halo 镜像"></a>2&gt;拉取最新的 Halo 镜像</h4><pre class=" language-javascript"><code class="language-javascript">sudo docker pull halohub<span class="token operator">/</span>halo</code></pre>
