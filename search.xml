@@ -1087,6 +1087,17 @@ docker load</code></pre>
 <li>删除容器</li>
 </ul>
 <pre class=" language-shell"><code class="language-shell">docker rm [容器ID]</code></pre>
+<h3 id="5-gt-创建容器并运行"><a href="#5-gt-创建容器并运行" class="headerlink" title="5&gt;创建容器并运行"></a>5&gt;创建容器并运行</h3><pre class=" language-shell"><code class="language-shell">docker run -it -d --name halo -p 8090:8090 -v ~/.halo:/root/.halo --restart=always halohub/halo</code></pre>
+<blockquote>
+<ol>
+<li><strong>-it：</strong>开启输入功能并连接伪终端</li>
+<li><strong>-d：</strong>后台运行容器</li>
+<li><strong>–name：</strong>为容器指定一个名称</li>
+<li><strong>-p：</strong>端口映射，格式为主机(宿主)端口:容器端口，可在 application.yaml 配置。</li>
+<li><strong>-v：</strong>工作目录映射。形式为：-v 宿主机路径:/root/.halo，后者不能修改。</li>
+<li><strong>–restart：</strong>建议设置为 always，在 Docker 启动的时候自动启动 Halo 容器。</li>
+</ol>
+</blockquote>
 ]]></content>
       <categories>
         <category>docker</category>
