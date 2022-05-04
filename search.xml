@@ -1376,7 +1376,7 @@ halo<span class="token punctuation">:</span>
     <title>halo配置 域名和 ssl</title>
     <url>/leader755/63549.html</url>
     <content><![CDATA[<h2 id="1-docker-环境"><a href="#1-docker-环境" class="headerlink" title="1 .docker 环境"></a>1 .docker 环境</h2><blockquote>
-<p><strong>假设 docker 的环境已经安装好了。没有安装好的，参考</strong>[<strong>《linux 安装 docker》</strong>](<a href="https://www.yuque.com/docs/share/13e5e304-b57b-41f1-9d79-4698c4933d22?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/13e5e304-b57b-41f1-9d79-4698c4933d22?#</a> 《linux 安装 docker》)<strong>。</strong></p>
+<p><strong>假设 docker 的环境已经安装好了。没有安装好的，参考</strong><a href="https://www.yuque.com/leader755/blog/azuze1" target="_blank" rel="noopener"><strong>《centos 安装 docker》</strong></a><strong>。</strong></p>
 </blockquote>
 <h2 id="2-已申请好域名"><a href="#2-已申请好域名" class="headerlink" title="2.已申请好域名"></a>2.已申请好域名</h2><h2 id="3-申请-SSL-证书"><a href="#3-申请-SSL-证书" class="headerlink" title="3.申请 SSL 证书"></a>3.申请 SSL 证书</h2><p>我使用的是腾讯云，申请免费的 TrustAsia 的 SSL 证书，阿里云等或者其他平台一般都会提供 TrustAsia 的 SSL 证书的，填好域名等相关信息，一般 10 分钟内就可以下载证书了。</p>
 <h2 id="4-配置-Nginx"><a href="#4-配置-Nginx" class="headerlink" title="4.配置 Nginx"></a>4.配置 Nginx</h2><h3 id="1-gt-下载-Halo-官方的-Nginx-配置模板"><a href="#1-gt-下载-Halo-官方的-Nginx-配置模板" class="headerlink" title="1&gt;下载 Halo 官方的 Nginx 配置模板"></a>1&gt;下载 Halo 官方的 Nginx 配置模板</h3><pre class=" language-javascript"><code class="language-javascript">
