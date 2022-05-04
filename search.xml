@@ -1009,20 +1009,38 @@ yum install docker-ce-version   #例如sudo yum install docker-ce-18.03.0.ce</co
 <h4 id="6）卸载-docker"><a href="#6）卸载-docker" class="headerlink" title="6）卸载 docker"></a>6）卸载 docker</h4><pre class=" language-shell"><code class="language-shell">sudo yum remove docker</code></pre>
 <h4 id="7）查看-docker-版本"><a href="#7）查看-docker-版本" class="headerlink" title="7）查看 docker 版本"></a>7）查看 docker 版本</h4><pre class=" language-shell"><code class="language-shell">docker -v</code></pre>
 <h4 id="8）启动-docker-服务并加入开机启动"><a href="#8）启动-docker-服务并加入开机启动" class="headerlink" title="8）启动 docker 服务并加入开机启动"></a>8）启动 docker 服务并加入开机启动</h4><pre class=" language-shell"><code class="language-shell">
-//设置开机自启
-systemctl enable docker.service
+1> systemctl start docker                   //启动docker
+2> systemctl enable docker.service //设置开机自启
+3>sudo systemctl daemon-reload //守护进程重启
+4>docker的启动停止命令
+  //启动docker
+   systemctl start docker
 
-//启动docker
- systemctl start docker
+  //关闭docker
+   systemctl stop docker
 
-//关闭docker
- systemctl stop docker
+  //启动 docker 服务
+  service docker start
 
-//重启docker服务
-service docker restart
+  //重启docker服务
+  service docker restart
 
-//关闭docker服务
- service docker stop</code></pre>
+  //关闭docker服务
+  service docker stop</code></pre>
+<h4 id="9-docker-设置镜像-未设置镜像"><a href="#9-docker-设置镜像-未设置镜像" class="headerlink" title="9)docker 设置镜像(未设置镜像)"></a>9)docker 设置镜像(未设置镜像)</h4><blockquote>
+<p>docker pull 很慢解决办法，经常拉取镜像的时候很慢或者拉不下来，这里可以使用阿里云镜像加速器，然后试试看有没有效果</p>
+</blockquote>
+<pre class=" language-shell"><code class="language-shell">##使用阿里云镜像加速器
+[root@localhost ~]# mkdir -p /etc/docker
+
+[root@localhost ~]# tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://9cpn8tt6.mirror.aliyuncs.com"]
+}
+EOF
+
+[root@localhost ~]# systemctl daemon-reload
+[root@localhost ~]# systemctl restart docker</code></pre>
 <h2 id="4-docker-的基本操作"><a href="#4-docker-的基本操作" class="headerlink" title="4.docker 的基本操作"></a>4.docker 的基本操作</h2><h3 id="1-gt-常用命令"><a href="#1-gt-常用命令" class="headerlink" title="1&gt;常用命令"></a>1&gt;常用命令</h3><p>##</p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1648649161250-ab6e9cef-a4b5-4385-a5ce-986111601caf.png#clientId=u2bcb8807-f8b9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=479&id=uf149ecb3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=958&originWidth=1942&originalType=binary&ratio=1&rotation=0&showTitle=false&size=458982&status=done&style=none&taskId=u50c7c2f4-4ee3-414b-a37c-9bc734f13cd&title=&width=971" alt="image.png"></p>
 <h3 id="2-gt-镜像仓库"><a href="#2-gt-镜像仓库" class="headerlink" title="2&gt;镜像仓库"></a>2&gt;镜像仓库</h3><blockquote>
@@ -1098,6 +1116,47 @@ docker load</code></pre>
 <li><strong>–restart：</strong>建议设置为 always，在 Docker 启动的时候自动启动 Halo 容器。</li>
 </ol>
 </blockquote>
+<p>###</p>
+<h3 id="6-gt-docker-内部容器自动重启配置"><a href="#6-gt-docker-内部容器自动重启配置" class="headerlink" title="6&gt;docker 内部容器自动重启配置"></a>6&gt;docker 内部容器自动重启配置</h3><p>1.创建<a href="https://cloud.tencent.com/product/tke?from=10680" target="_blank" rel="noopener">容器</a>时没有添加参数 –restart=always ，导致的后果是：当 <a href="https://cloud.tencent.com/product/tke?from=10680" target="_blank" rel="noopener">Docker</a> 重启时，容器未能自动启动。</p>
+<pre class=" language-shell"><code class="language-shell">docker ps -a
+
+docker container update --restart=always [容器名字]</code></pre>
+<pre class=" language-shell"><code class="language-shell">操作实例如下：
+[root@localhost mnt]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS               NAMES
+46cdfc60b7a6        nginx               "nginx -g 'daemon ..."   About a minute ago   Up 42 seconds       80/tcp              n3
+79d55a734c26        nginx               "nginx -g 'daemon ..."   About a minute ago   Up 42 seconds       80/tcp              n2
+f7b2206c019d        nginx               "nginx -g 'daemon ..."   About a minute ago   Up 46 seconds       80/tcp              n1
+[root@localhost mnt]# docker container update --restart=always n1
+n1
+[root@localhost mnt]# systemctl restart docker
+[root@localhost mnt]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+46cdfc60b7a6        nginx               "nginx -g 'daemon ..."   2 minutes ago       Exited (0) 5 seconds ago                       n3
+79d55a734c26        nginx               "nginx -g 'daemon ..."   2 minutes ago       Exited (0) 5 seconds ago                       n2
+f7b2206c019d        nginx               "nginx -g 'daemon ..."   2 minutes ago       Up 2 seconds               80/tcp              n1</code></pre>
+<p>2.docker-compose 关机或者重启 docker 同时重启容器 restart always 的配置<br>存粹使用 docker 启动的话需要加–restart=always 即可实现这个功能，而使用 docker-compose 的话在相关服务配置下加 restart: always 就行。</p>
+<pre class=" language-shell"><code class="language-shell">version: '2'
+services:
+  database:
+    build: ./mysql/
+    command: mysqld --user=root --verbose
+    restart: always
+    environment:
+      MYSQL_DATABASE: "web_level3_sqli"
+      MYSQL_USER: "web_level3_sqli"
+      MYSQL_PASSWORD: "thisisasecurepassword123"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  web:
+    build: ./www/
+    restart: always
+    ports:
+     - "12000:80"
+    volumes:
+      - ./www/src:/var/www/html
+    links:
+      - database</code></pre>
 ]]></content>
       <categories>
         <category>docker</category>
@@ -2052,7 +2111,7 @@ docker rmi $(docker images -q)</code></pre>
 <blockquote>
 <p>docker rm 容器 ID 或容器名</p>
 <ol>
-<li>先 docker ps -a 寻找已经停止运行的实例<br>2.docker rm 59ec 删除实例<br>3.docker ps -a 查看实例已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630199-471ec578-4dbb-4698-9bee-35e1501e9d4f.png#crop=0&crop=0&crop=1&crop=1&height=269&id=jUyrG&originHeight=269&originWidth=1307&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1307" alt=""><br>如果容器实例在运行状态下 是不能通过上面的命令删除的，会提示容器实例正在运行中。需要先停止在删除,不会停止实例的看这里<a href="https://blog.csdn.net/Michel4Liu/article/details/80889977" target="_blank" rel="noopener">https://blog.csdn.net/Michel4Liu/article/details/80889977</a>，也可以通过参数强制删除<br>参数：<br>-f : 通过 SIGKILL 信号强制删除一个运行中的容器,主要删除正在运行的容器实例<br>-l : 移除容器间的网络连接，而非容器本身<br>-v : 删除容器挂载卷</li>
+<li>先 docker ps -a 寻找已经停止运行的实例<br>2.docker rm 59ec 删除实例<br>3.docker ps -a 查看实例已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630199-471ec578-4dbb-4698-9bee-35e1501e9d4f.png#height=269&id=jUyrG&originHeight=269&originWidth=1307&originalType=binary&size=0&status=done&style=none&width=1307" alt=""><br>如果容器实例在运行状态下 是不能通过上面的命令删除的，会提示容器实例正在运行中。需要先停止在删除,不会停止实例的看这里<a href="https://blog.csdn.net/Michel4Liu/article/details/80889977" target="_blank" rel="noopener">https://blog.csdn.net/Michel4Liu/article/details/80889977</a>，也可以通过参数强制删除<br>参数：<br>-f : 通过 SIGKILL 信号强制删除一个运行中的容器,主要删除正在运行的容器实例<br>-l : 移除容器间的网络连接，而非容器本身<br>-v : 删除容器挂载卷</li>
 </ol>
 </blockquote>
 <p>2、删除镜像</p>
@@ -2060,7 +2119,7 @@ docker rmi $(docker images -q)</code></pre>
 <p>docker rmi 容器 ID 或容器名</p>
 <ol>
 <li>首先 docker images 查看所有镜像</li>
-<li>然后 docker rmi fe200 删除镜像 3.再次通过 docker images 查看镜像 发现已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630192-3c1c37e2-3250-4ea1-b537-dd41489dcb10.png#crop=0&crop=0&crop=1&crop=1&height=441&id=INqi8&originHeight=441&originWidth=1014&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1014" alt=""><br>如果删除的镜像已经产生了容器实例(run 过)不容器实例是否启动都会提示无法删除，因为被占用。这时需要先删除容器实例或添加删除参数<br>参数<br>-f :强制删除，一般用于被占用的删除<br>–no-prune :不移除该镜像的过程镜像，默认移除</li>
+<li>然后 docker rmi fe200 删除镜像 3.再次通过 docker images 查看镜像 发现已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630192-3c1c37e2-3250-4ea1-b537-dd41489dcb10.png#height=441&id=INqi8&originHeight=441&originWidth=1014&originalType=binary&size=0&status=done&style=none&width=1014" alt=""><br>如果删除的镜像已经产生了容器实例(run 过)不容器实例是否启动都会提示无法删除，因为被占用。这时需要先删除容器实例或添加删除参数<br>参数<br>-f :强制删除，一般用于被占用的删除<br>–no-prune :不移除该镜像的过程镜像，默认移除</li>
 </ol>
 </blockquote>
 ]]></content>

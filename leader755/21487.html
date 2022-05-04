@@ -614,14 +614,14 @@ Docker 包括三个基本概念：
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          970
+          665
         </div>
         
 
         
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          4 分
+          2 分
         </div>
         
 
@@ -672,20 +672,38 @@ yum install docker-ce-version   #例如sudo yum install docker-ce-18.03.0.ce</co
 <h4 id="6）卸载-docker"><a href="#6）卸载-docker" class="headerlink" title="6）卸载 docker"></a>6）卸载 docker</h4><pre class=" language-shell"><code class="language-shell">sudo yum remove docker</code></pre>
 <h4 id="7）查看-docker-版本"><a href="#7）查看-docker-版本" class="headerlink" title="7）查看 docker 版本"></a>7）查看 docker 版本</h4><pre class=" language-shell"><code class="language-shell">docker -v</code></pre>
 <h4 id="8）启动-docker-服务并加入开机启动"><a href="#8）启动-docker-服务并加入开机启动" class="headerlink" title="8）启动 docker 服务并加入开机启动"></a>8）启动 docker 服务并加入开机启动</h4><pre class=" language-shell"><code class="language-shell">
-//设置开机自启
-systemctl enable docker.service
+1> systemctl start docker                   //启动docker
+2> systemctl enable docker.service //设置开机自启
+3>sudo systemctl daemon-reload //守护进程重启
+4>docker的启动停止命令
+  //启动docker
+   systemctl start docker
 
-//启动docker
- systemctl start docker
+  //关闭docker
+   systemctl stop docker
 
-//关闭docker
- systemctl stop docker
+  //启动 docker 服务
+  service docker start
 
-//重启docker服务
-service docker restart
+  //重启docker服务
+  service docker restart
 
-//关闭docker服务
- service docker stop</code></pre>
+  //关闭docker服务
+  service docker stop</code></pre>
+<h4 id="9-docker-设置镜像-未设置镜像"><a href="#9-docker-设置镜像-未设置镜像" class="headerlink" title="9)docker 设置镜像(未设置镜像)"></a>9)docker 设置镜像(未设置镜像)</h4><blockquote>
+<p>docker pull 很慢解决办法，经常拉取镜像的时候很慢或者拉不下来，这里可以使用阿里云镜像加速器，然后试试看有没有效果</p>
+</blockquote>
+<pre class=" language-shell"><code class="language-shell">##使用阿里云镜像加速器
+[root@localhost ~]# mkdir -p /etc/docker
+
+[root@localhost ~]# tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://9cpn8tt6.mirror.aliyuncs.com"]
+}
+EOF
+
+[root@localhost ~]# systemctl daemon-reload
+[root@localhost ~]# systemctl restart docker</code></pre>
 <h2 id="4-docker-的基本操作"><a href="#4-docker-的基本操作" class="headerlink" title="4.docker 的基本操作"></a>4.docker 的基本操作</h2><h3 id="1-gt-常用命令"><a href="#1-gt-常用命令" class="headerlink" title="1&gt;常用命令"></a>1&gt;常用命令</h3><p>##</p>
 <p><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1648649161250-ab6e9cef-a4b5-4385-a5ce-986111601caf.png#clientId=u2bcb8807-f8b9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=479&id=uf149ecb3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=958&originWidth=1942&originalType=binary&ratio=1&rotation=0&showTitle=false&size=458982&status=done&style=none&taskId=u50c7c2f4-4ee3-414b-a37c-9bc734f13cd&title=&width=971" alt="image.png"></p>
 <h3 id="2-gt-镜像仓库"><a href="#2-gt-镜像仓库" class="headerlink" title="2&gt;镜像仓库"></a>2&gt;镜像仓库</h3><blockquote>
@@ -761,6 +779,47 @@ docker load</code></pre>
 <li><strong>–restart：</strong>建议设置为 always，在 Docker 启动的时候自动启动 Halo 容器。</li>
 </ol>
 </blockquote>
+<p>###</p>
+<h3 id="6-gt-docker-内部容器自动重启配置"><a href="#6-gt-docker-内部容器自动重启配置" class="headerlink" title="6&gt;docker 内部容器自动重启配置"></a>6&gt;docker 内部容器自动重启配置</h3><p>1.创建<a href="https://cloud.tencent.com/product/tke?from=10680" target="_blank" rel="noopener">容器</a>时没有添加参数 –restart=always ，导致的后果是：当 <a href="https://cloud.tencent.com/product/tke?from=10680" target="_blank" rel="noopener">Docker</a> 重启时，容器未能自动启动。</p>
+<pre class=" language-shell"><code class="language-shell">docker ps -a
+
+docker container update --restart=always [容器名字]</code></pre>
+<pre class=" language-shell"><code class="language-shell">操作实例如下：
+[root@localhost mnt]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS               NAMES
+46cdfc60b7a6        nginx               "nginx -g 'daemon ..."   About a minute ago   Up 42 seconds       80/tcp              n3
+79d55a734c26        nginx               "nginx -g 'daemon ..."   About a minute ago   Up 42 seconds       80/tcp              n2
+f7b2206c019d        nginx               "nginx -g 'daemon ..."   About a minute ago   Up 46 seconds       80/tcp              n1
+[root@localhost mnt]# docker container update --restart=always n1
+n1
+[root@localhost mnt]# systemctl restart docker
+[root@localhost mnt]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+46cdfc60b7a6        nginx               "nginx -g 'daemon ..."   2 minutes ago       Exited (0) 5 seconds ago                       n3
+79d55a734c26        nginx               "nginx -g 'daemon ..."   2 minutes ago       Exited (0) 5 seconds ago                       n2
+f7b2206c019d        nginx               "nginx -g 'daemon ..."   2 minutes ago       Up 2 seconds               80/tcp              n1</code></pre>
+<p>2.docker-compose 关机或者重启 docker 同时重启容器 restart always 的配置<br>存粹使用 docker 启动的话需要加–restart=always 即可实现这个功能，而使用 docker-compose 的话在相关服务配置下加 restart: always 就行。</p>
+<pre class=" language-shell"><code class="language-shell">version: '2'
+services:
+  database:
+    build: ./mysql/
+    command: mysqld --user=root --verbose
+    restart: always
+    environment:
+      MYSQL_DATABASE: "web_level3_sqli"
+      MYSQL_USER: "web_level3_sqli"
+      MYSQL_PASSWORD: "thisisasecurepassword123"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  web:
+    build: ./www/
+    restart: always
+    ports:
+     - "12000:80"
+    volumes:
+      - ./www/src:/var/www/html
+    links:
+      - database</code></pre>
 
       </div>
       <hr />
@@ -1520,7 +1579,7 @@ docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软�
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">119.8k</span>&nbsp;字
+        class="white-color">119.5k</span>&nbsp;字
       
       
       

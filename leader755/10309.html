@@ -610,7 +610,7 @@
         
         <div class="post-date info-break-policy">
           <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-          2022-05-04
+          2021-05-05
         </div>
         
 
@@ -704,7 +704,7 @@ docker rmi $(docker images -q)</code></pre>
 <blockquote>
 <p>docker rm 容器 ID 或容器名</p>
 <ol>
-<li>先 docker ps -a 寻找已经停止运行的实例<br>2.docker rm 59ec 删除实例<br>3.docker ps -a 查看实例已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630199-471ec578-4dbb-4698-9bee-35e1501e9d4f.png#crop=0&crop=0&crop=1&crop=1&height=269&id=jUyrG&originHeight=269&originWidth=1307&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1307" alt=""><br>如果容器实例在运行状态下 是不能通过上面的命令删除的，会提示容器实例正在运行中。需要先停止在删除,不会停止实例的看这里<a href="https://blog.csdn.net/Michel4Liu/article/details/80889977" target="_blank" rel="noopener">https://blog.csdn.net/Michel4Liu/article/details/80889977</a>，也可以通过参数强制删除<br>参数：<br>-f : 通过 SIGKILL 信号强制删除一个运行中的容器,主要删除正在运行的容器实例<br>-l : 移除容器间的网络连接，而非容器本身<br>-v : 删除容器挂载卷</li>
+<li>先 docker ps -a 寻找已经停止运行的实例<br>2.docker rm 59ec 删除实例<br>3.docker ps -a 查看实例已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630199-471ec578-4dbb-4698-9bee-35e1501e9d4f.png#height=269&id=jUyrG&originHeight=269&originWidth=1307&originalType=binary&size=0&status=done&style=none&width=1307" alt=""><br>如果容器实例在运行状态下 是不能通过上面的命令删除的，会提示容器实例正在运行中。需要先停止在删除,不会停止实例的看这里<a href="https://blog.csdn.net/Michel4Liu/article/details/80889977" target="_blank" rel="noopener">https://blog.csdn.net/Michel4Liu/article/details/80889977</a>，也可以通过参数强制删除<br>参数：<br>-f : 通过 SIGKILL 信号强制删除一个运行中的容器,主要删除正在运行的容器实例<br>-l : 移除容器间的网络连接，而非容器本身<br>-v : 删除容器挂载卷</li>
 </ol>
 </blockquote>
 <p>2、删除镜像</p>
@@ -712,7 +712,7 @@ docker rmi $(docker images -q)</code></pre>
 <p>docker rmi 容器 ID 或容器名</p>
 <ol>
 <li>首先 docker images 查看所有镜像</li>
-<li>然后 docker rmi fe200 删除镜像 3.再次通过 docker images 查看镜像 发现已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630192-3c1c37e2-3250-4ea1-b537-dd41489dcb10.png#crop=0&crop=0&crop=1&crop=1&height=441&id=INqi8&originHeight=441&originWidth=1014&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1014" alt=""><br>如果删除的镜像已经产生了容器实例(run 过)不容器实例是否启动都会提示无法删除，因为被占用。这时需要先删除容器实例或添加删除参数<br>参数<br>-f :强制删除，一般用于被占用的删除<br>–no-prune :不移除该镜像的过程镜像，默认移除</li>
+<li>然后 docker rmi fe200 删除镜像 3.再次通过 docker images 查看镜像 发现已经删除<br>具体操作如下图<br><img src="https://cdn.nlark.com/yuque/0/2020/png/241787/1605628630192-3c1c37e2-3250-4ea1-b537-dd41489dcb10.png#height=441&id=INqi8&originHeight=441&originWidth=1014&originalType=binary&size=0&status=done&style=none&width=1014" alt=""><br>如果删除的镜像已经产生了容器实例(run 过)不容器实例是否启动都会提示无法删除，因为被占用。这时需要先删除容器实例或添加删除参数<br>参数<br>-f :强制删除，一般用于被占用的删除<br>–no-prune :不移除该镜像的过程镜像，默认移除</li>
 </ol>
 </blockquote>
 
@@ -1479,7 +1479,7 @@ yum search openjdk
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">119.8k</span>&nbsp;字
+        class="white-color">119.5k</span>&nbsp;字
       
       
       
