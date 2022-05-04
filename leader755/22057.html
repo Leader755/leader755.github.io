@@ -619,7 +619,7 @@ docker 下载 jenkins 镜像 指定版本 ，因为低版本的后面安装软�
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          384
+          481
         </div>
         
 
@@ -656,6 +656,16 @@ chown -R 1000:1000 jenkins/    给uid为1000的权限</code></pre>
 cd ~
 #安装并启动 jenkins 容器
 docker run -itd -p 8081:8080 -p 50000:50000 --name jenkins --privileged=true  -v /var/lib/jenkins:/var/jenkins_home --restart=always jenkins/jenkins:latest</code></pre>
+<blockquote>
+<ol>
+<li><strong>-it：</strong>开启输入功能并连接伪终端</li>
+<li><strong>-d：</strong>后台运行容器</li>
+<li><strong>–name：</strong>为容器指定一个名称</li>
+<li><strong>-p：</strong>端口映射，格式为主机(宿主)端口:容器端口，可在 application.yaml 配置。</li>
+<li><strong>-v：</strong>工作目录映射。形式为：-v 宿主机路径，后者不能修改。</li>
+<li><strong>–restart：</strong>建议设置为 always，在 Docker 启动的时候自动启动 Halo 容器。</li>
+</ol>
+</blockquote>
 <h2 id="5-查看-jenkins-是否启动"><a href="#5-查看-jenkins-是否启动" class="headerlink" title="5.查看 jenkins 是否启动"></a>5.查看 jenkins 是否启动</h2><pre class=" language-shell"><code class="language-shell">ps -ef | grep jenkins   #jenkins 进程
 
 docker logs jenkins      #查看启动日志
@@ -1432,7 +1442,7 @@ Docker 包括三个基本概念：
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">119.6k</span>&nbsp;字
+        class="white-color">119.7k</span>&nbsp;字
       
       
       
