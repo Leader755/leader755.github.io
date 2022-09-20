@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.leader755.com/"/>
-  <updated>2022-07-13T15:18:20.488Z</updated>
+  <updated>2022-09-20T04:38:45.958Z</updated>
   <id>https://www.leader755.com/</id>
   
   <author>
@@ -17,11 +17,56 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>微前端</title>
+    <link href="https://www.leader755.com/leader755/23388.html"/>
+    <id>https://www.leader755.com/leader755/23388.html</id>
+    <published>2022-09-20T04:38:45.958Z</published>
+    <updated>2022-09-20T04:38:45.958Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Git-合并两个不同的仓库</title>
+    <link href="https://www.leader755.com/leader755/13408.html"/>
+    <id>https://www.leader755.com/leader755/13408.html</id>
+    <published>2022-09-18T11:48:00.000Z</published>
+    <updated>2022-09-20T04:38:45.958Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;背景：由于拆分微前端，需要将最新代码合并到已经拆分的微前端项目，即需要将 2 个项目合并。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-git-合并两个不同的仓库必备知识&quot;&gt;&lt;a href=&quot;#1-git-合并两个不同的仓库必备知识&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://www.leader755.com/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://www.leader755.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>VConsole—Vue项目</title>
     <link href="https://www.leader755.com/leader755/8123.html"/>
     <id>https://www.leader755.com/leader755/8123.html</id>
     <published>2022-05-13T18:55:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -48,7 +93,7 @@
     <link href="https://www.leader755.com/leader755/33581.html"/>
     <id>https://www.leader755.com/leader755/33581.html</id>
     <published>2022-04-26T05:48:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -78,7 +123,7 @@
     <link href="https://www.leader755.com/leader755/21487.html"/>
     <id>https://www.leader755.com/leader755/21487.html</id>
     <published>2022-03-30T15:34:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -106,7 +151,7 @@
     <link href="https://www.leader755.com/leader755/22057.html"/>
     <id>https://www.leader755.com/leader755/22057.html</id>
     <published>2022-03-30T13:55:23.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -136,7 +181,7 @@
     <link href="https://www.leader755.com/leader755/13594.html"/>
     <id>https://www.leader755.com/leader755/13594.html</id>
     <published>2022-03-30T13:55:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -163,7 +208,7 @@
     <link href="https://www.leader755.com/leader755/58434.html"/>
     <id>https://www.leader755.com/leader755/58434.html</id>
     <published>2022-03-20T12:25:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -192,7 +237,7 @@
     <link href="https://www.leader755.com/leader755/59816.html"/>
     <id>https://www.leader755.com/leader755/59816.html</id>
     <published>2022-03-14T10:48:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -222,7 +267,7 @@
     <link href="https://www.leader755.com/leader755/54576.html"/>
     <id>https://www.leader755.com/leader755/54576.html</id>
     <published>2022-03-08T11:55:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -252,7 +297,7 @@
     <link href="https://www.leader755.com/leader755/16745.html"/>
     <id>https://www.leader755.com/leader755/16745.html</id>
     <published>2022-03-02T00:07:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -281,7 +326,7 @@
     <link href="https://www.leader755.com/leader755/39615.html"/>
     <id>https://www.leader755.com/leader755/39615.html</id>
     <published>2022-02-16T11:05:41.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -308,7 +353,7 @@
     <link href="https://www.leader755.com/leader755/62737.html"/>
     <id>https://www.leader755.com/leader755/62737.html</id>
     <published>2022-02-05T17:24:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -336,7 +381,7 @@
     <link href="https://www.leader755.com/leader755/33285.html"/>
     <id>https://www.leader755.com/leader755/33285.html</id>
     <published>2022-02-04T13:38:23.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -363,7 +408,7 @@
     <link href="https://www.leader755.com/leader755/33649.html"/>
     <id>https://www.leader755.com/leader755/33649.html</id>
     <published>2021-10-19T11:05:41.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -395,7 +440,7 @@
     <link href="https://www.leader755.com/leader755/60370.html"/>
     <id>https://www.leader755.com/leader755/60370.html</id>
     <published>2021-09-22T06:55:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -424,7 +469,7 @@
     <link href="https://www.leader755.com/leader755/32104.html"/>
     <id>https://www.leader755.com/leader755/32104.html</id>
     <published>2021-07-25T17:24:00.000Z</published>
-    <updated>2022-07-13T15:18:20.488Z</updated>
+    <updated>2022-09-20T04:38:45.958Z</updated>
     
     <summary type="html">
     
@@ -524,66 +569,6 @@
     
     
       <category term="git 服务器" scheme="https://www.leader755.com/tags/git-%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网站一键置灰</title>
-    <link href="https://www.leader755.com/leader755/65405.html"/>
-    <id>https://www.leader755.com/leader755/65405.html</id>
-    <published>2021-05-22T03:46:00.000Z</published>
-    <updated>2021-05-22T03:46:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;背景：&lt;br&gt;某些时候，需要让网站一键变灰。只需要短短几行代码就能做到。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;1-直接上代码&quot;&gt;&lt;a href=&quot;#1-直接上代码&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="一键置灰" scheme="https://www.leader755.com/categories/%E4%B8%80%E9%94%AE%E7%BD%AE%E7%81%B0/"/>
-    
-    
-      <category term="hexo" scheme="https://www.leader755.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux 的定时任务crontab</title>
-    <link href="https://www.leader755.com/leader755/58426.html"/>
-    <id>https://www.leader755.com/leader755/58426.html</id>
-    <published>2021-05-16T11:55:00.000Z</published>
-    <updated>2022-07-13T15:18:20.484Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;背景：&lt;br&gt;本人博客的评论为 valine 评论，为了及时知道评论，设置了邮件通知。奈何 leancloud 的每天活跃状态为 16 小时，且半小时内无人访问，则自动进入休眠状态。为了解决这一问题，研究了下 linux 系统自带的
-        
-      
-    
-    </summary>
-    
-    
-      <category term="crontab" scheme="https://www.leader755.com/categories/crontab/"/>
-    
-    
-      <category term="crontab" scheme="https://www.leader755.com/tags/crontab/"/>
-    
-      <category term="linux" scheme="https://www.leader755.com/tags/linux/"/>
     
   </entry>
   

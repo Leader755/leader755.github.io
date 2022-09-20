@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>微前端</title>
+    <url>/leader755/23388.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>1.搭建本地的 hexo 的博客</title>
     <url>/leader755/7894.html</url>
     <content><![CDATA[<h2 id="1-gt-官方文档-https-github-com-hexojs-hexo"><a href="#1-gt-官方文档-https-github-com-hexojs-hexo" class="headerlink" title="1&gt;官方文档   https://github.com/hexojs/hexo"></a>1&gt;官方文档   <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">https://github.com/hexojs/hexo</a></h2><h2 id="2-gt-搭建博客"><a href="#2-gt-搭建博客" class="headerlink" title="2&gt;搭建博客"></a>2&gt;搭建博客</h2><h3 id="1-全局安装-hexo，创建博客"><a href="#1-全局安装-hexo，创建博客" class="headerlink" title="1.全局安装 hexo，创建博客"></a>1.全局安装 hexo，创建博客</h3><pre class=" language-javascript"><code class="language-javascript">npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>g</code></pre>
@@ -367,6 +372,91 @@ rm -fr /var/log/httpd/access_log-* /var/log/httpd/error_log-* /var/log/httpd/ssl
       <tags>
         <tag>crontab</tag>
         <tag>清理日志</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git-合并两个不同的仓库</title>
+    <url>/leader755/13408.html</url>
+    <content><![CDATA[<blockquote>
+<p>背景：由于拆分微前端，需要将最新代码合并到已经拆分的微前端项目，即需要将 2 个项目合并。</p>
+</blockquote>
+<h2 id="1-git-合并两个不同的仓库必备知识"><a href="#1-git-合并两个不同的仓库必备知识" class="headerlink" title="1.git 合并两个不同的仓库必备知识"></a>1.git 合并两个不同的仓库必备知识</h2><h3 id="1-gt-列出本地已经存在的分支"><a href="#1-gt-列出本地已经存在的分支" class="headerlink" title="1&gt;.列出本地已经存在的分支"></a>1&gt;.列出本地已经存在的分支</h3><pre class=" language-shell"><code class="language-shell">git branch</code></pre>
+<h3 id="2-gt-查看当前-git-关联的远程仓库"><a href="#2-gt-查看当前-git-关联的远程仓库" class="headerlink" title="2&gt;.查看当前 git 关联的远程仓库"></a>2&gt;.查看当前 git 关联的远程仓库</h3><pre class=" language-powershell"><code class="language-powershell">git remote <span class="token operator">-</span>v</code></pre>
+<h3 id="3-gt-解除当前仓库关联的远程仓库"><a href="#3-gt-解除当前仓库关联的远程仓库" class="headerlink" title="3&gt;.解除当前仓库关联的远程仓库"></a>3&gt;.解除当前仓库关联的远程仓库</h3><pre class=" language-powershell"><code class="language-powershell">git remote remove origin  <span class="token operator">/</span><span class="token operator">/</span>origin 远程分支别名</code></pre>
+<h3 id="4-gt-git-同时关联多个远程仓库"><a href="#4-gt-git-同时关联多个远程仓库" class="headerlink" title="4&gt;.git 同时关联多个远程仓库"></a>4&gt;.git 同时关联多个远程仓库</h3><pre class=" language-powershell"><code class="language-powershell">/<span class="token operator">/</span>当前默认仓库别名为origin
+git remote add origin http:<span class="token operator">/</span><span class="token operator">/</span>km<span class="token operator">-</span>git1<span class="token punctuation">.</span>kemai<span class="token punctuation">.</span>cn<span class="token operator">/</span>youshu<span class="token operator">/</span>youshu<span class="token operator">-</span>smallshop<span class="token operator">-</span>frontend<span class="token punctuation">.</span>git
+
+<span class="token operator">/</span><span class="token operator">/</span>其他仓库别名为other
+git remote add other http:<span class="token operator">/</span><span class="token operator">/</span>km<span class="token operator">-</span>git1<span class="token punctuation">.</span>kemai<span class="token punctuation">.</span>cn<span class="token operator">/</span>youshu<span class="token operator">/</span>xdd<span class="token operator">-</span>front<span class="token operator">-</span><span class="token keyword">end</span><span class="token punctuation">.</span>git</code></pre>
+<h3 id="5-gt-从远程切出新分支"><a href="#5-gt-从远程切出新分支" class="headerlink" title="5&gt;.从远程切出新分支"></a>5&gt;.从远程切出新分支</h3><pre class=" language-powershell"><code class="language-powershell">/<span class="token operator">/</span>从默认的远程仓库切出一个新分支
+ git checkout <span class="token operator">-</span>b master origin<span class="token operator">/</span>master
+
+<span class="token operator">/</span><span class="token operator">/</span>从其他的远程仓库切出一个新分支<span class="token punctuation">(</span>
+<span class="token operator">/</span><span class="token operator">/</span>注意同一个仓库中不能存在2个同名分支，所以取个别名<span class="token punctuation">,</span>但是同一个仓库中不同的分支可以关联多个远程仓库。
+<span class="token operator">/</span><span class="token operator">/</span>一个本地分支只能关联一个远程仓库
+git checkout <span class="token operator">-</span>b other other<span class="token operator">/</span>master</code></pre>
+<h3 id="6-gt-切换分支"><a href="#6-gt-切换分支" class="headerlink" title="6&gt;.切换分支"></a>6&gt;.切换分支</h3><pre class=" language-powershell"><code class="language-powershell">/<span class="token operator">/</span>切换到关联默认仓库远程master分支的本地分支master
+git checkout master
+
+<span class="token operator">/</span><span class="token operator">/</span>切换到关联其他仓库远程master分支的本地分支other
+git checkout other</code></pre>
+<h3 id="7-gt-更新仓库"><a href="#7-gt-更新仓库" class="headerlink" title="7&gt;.更新仓库"></a>7&gt;.更新仓库</h3><pre class=" language-powershell"><code class="language-powershell">git fetch <span class="token operator">--</span>all <span class="token operator">/</span><span class="token operator">/</span>更新所有仓库
+
+git fetch origin <span class="token operator">/</span><span class="token operator">/</span>更新指定仓库
+git fetch other <span class="token operator">/</span><span class="token operator">/</span>更新指定仓库</code></pre>
+<h3 id="8-gt-更新本地分支"><a href="#8-gt-更新本地分支" class="headerlink" title="8&gt;.更新本地分支"></a>8&gt;.更新本地分支</h3><pre class=" language-powershell"><code class="language-powershell">/<span class="token operator">*</span><span class="token operator">*</span>更新主仓库代码<span class="token operator">*</span>*<span class="token operator">/</span>
+<span class="token operator">/</span><span class="token operator">/</span>先切换到other
+git checkout master
+<span class="token operator">/</span><span class="token operator">/</span>从默认的远程仓库更新
+git pull origin master
+
+
+<span class="token operator">/</span>*<span class="token operator">*</span>更新子仓库代码<span class="token operator">*</span>*<span class="token operator">/</span>
+<span class="token operator">/</span><span class="token operator">/</span>先切换到other
+git checkout other
+<span class="token operator">/</span><span class="token operator">/</span>从其他的远程仓库更新
+git pull other master</code></pre>
+<h3 id="9-gt-推送代码"><a href="#9-gt-推送代码" class="headerlink" title="9&gt;.推送代码"></a>9&gt;.推送代码</h3><pre class=" language-bash"><code class="language-bash">//推送到默认的远程仓库
+<span class="token function">git</span> push -u origin master
+
+//推送到其他的远程仓库
+<span class="token function">git</span> push -u other master</code></pre>
+<h3 id="10-gt-删除分支"><a href="#10-gt-删除分支" class="headerlink" title="10&gt;.删除分支"></a>10&gt;.删除分支</h3><pre class=" language-java"><code class="language-java">git branch <span class="token operator">-</span>D XXX  <span class="token comment" spellcheck="true">//强制删除</span></code></pre>
+<h3 id="11-gt-重名分支"><a href="#11-gt-重名分支" class="headerlink" title="11&gt;.重名分支"></a>11&gt;.重名分支</h3><pre class=" language-java"><code class="language-java">git branch <span class="token operator">-</span>m  <span class="token operator">&lt;</span>branch<span class="token operator">></span></code></pre>
+<h3 id="12-gt-git-基础命令大全"><a href="#12-gt-git-基础命令大全" class="headerlink" title="12&gt;.git 基础命令大全"></a>12&gt;.git 基础命令大全</h3><p>更多基础命令请查看 <a href="https://www.yuque.com/docs/share/8bd713d2-0bc8-4758-85ba-5cb6ca764b92?#" target="_blank" rel="noopener">https://www.yuque.com/docs/share/8bd713d2-0bc8-4758-85ba-5cb6ca764b92?#</a> 《常见的 git 命令》</p>
+<h2 id="2-实际操作"><a href="#2-实际操作" class="headerlink" title="2.实际操作"></a>2.实际操作</h2><h3 id="1-项目仓库"><a href="#1-项目仓库" class="headerlink" title="1.项目仓库"></a>1.项目仓库</h3><pre><code>现在有两个仓库 [leader/kkt](https://www.leader755.com) (主仓库)和 [leader/kkt-next](https://www.leader7555.com)（子仓库） 我们需要将 kkt-next 仓库合并到 kkt 并保留 kkt-next 的所有提交内容。</code></pre><h3 id="2-克隆主仓库代码"><a href="#2-克隆主仓库代码" class="headerlink" title="2. 克隆主仓库代码"></a>2. 克隆主仓库代码</h3><pre class=" language-shell"><code class="language-shell">git clone git@github.com:kktjs/kkt.git
+//git remote add origin git@github.com:kktjs/kkt.git</code></pre>
+<h3 id="3-将-kkt-next-子-作为远程仓库，添加到-kkt-中，设置别名为-other"><a href="#3-将-kkt-next-子-作为远程仓库，添加到-kkt-中，设置别名为-other" class="headerlink" title="3. 将 kkt-next(子) 作为远程仓库，添加到 kkt 中，设置别名为 other"></a>3. 将 kkt-next(子) 作为远程仓库，添加到 kkt 中，设置别名为 other</h3><pre class=" language-shell"><code class="language-shell">git remote add other git@github.com:kktjs/kkt-next.git</code></pre>
+<h3 id="4-从-kkt-next-子-仓库中拉取数据到本仓库"><a href="#4-从-kkt-next-子-仓库中拉取数据到本仓库" class="headerlink" title="4.从 kkt-next(子) 仓库中拉取数据到本仓库"></a>4.从 kkt-next(子) 仓库中拉取数据到本仓库</h3><pre class=" language-shell"><code class="language-shell">git fetch other</code></pre>
+<h3 id="5-将-kkt-next-子-仓库拉取的-master-分支作为新分支-checkout-到本地，新分支名设定为-other"><a href="#5-将-kkt-next-子-仓库拉取的-master-分支作为新分支-checkout-到本地，新分支名设定为-other" class="headerlink" title="5.将 kkt-next(子) 仓库拉取的 master 分支作为新分支 checkout 到本地，新分支名设定为 other"></a>5.将 kkt-next(子) 仓库拉取的 master 分支作为新分支 checkout 到本地，新分支名设定为 other</h3><pre class=" language-shell"><code class="language-shell">git checkout -b other other/master</code></pre>
+<h3 id="6-切换回-kkt（主）-的-master-分支"><a href="#6-切换回-kkt（主）-的-master-分支" class="headerlink" title="6.切换回 kkt（主） 的 master 分支"></a>6.切换回 kkt（主） 的 master 分支</h3><pre class=" language-shell"><code class="language-shell">git checkout master</code></pre>
+<h3 id="7-更新本地分支"><a href="#7-更新本地分支" class="headerlink" title="7.更新本地分支"></a>7.更新本地分支</h3><pre class=" language-powershell"><code class="language-powershell">/<span class="token operator">*</span><span class="token operator">*</span>更新主仓库代码<span class="token operator">*</span>*<span class="token operator">/</span>
+<span class="token operator">/</span><span class="token operator">/</span>先切换到other
+git checkout master
+<span class="token operator">/</span><span class="token operator">/</span>从默认的远程仓库更新
+git pull origin master
+
+
+<span class="token operator">/</span>*<span class="token operator">*</span>更新子仓库代码<span class="token operator">*</span>*<span class="token operator">/</span>
+<span class="token operator">/</span><span class="token operator">/</span>先切换到other
+git checkout other
+<span class="token operator">/</span><span class="token operator">/</span>从其他的远程仓库更新
+git pull other master</code></pre>
+<h3 id="8-将-kkt-next（子）-合并入-kkt-（主）的-master-分支"><a href="#8-将-kkt-next（子）-合并入-kkt-（主）的-master-分支" class="headerlink" title="8.将 kkt-next（子） 合并入 kkt （主）的 master 分支"></a>8.将 kkt-next（子） 合并入 kkt （主）的 master 分支</h3><pre class=" language-shell"><code class="language-shell">git merge other</code></pre>
+<pre class=" language-shell"><code class="language-shell"># 如果第 7 步报错 `fatal: refusing to merge unrelated histories`
+# 请执行下面命令 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+git merge other --allow-unrelated-histories</code></pre>
+<p>在合并时有可能两个分支对同一个文件都做了修改，这时需要解决冲突，对文本文件来说很简单，根据需要对冲突的位置进行处理就可以。对于二进制文件，需要用到如下命令:</p>
+<pre class=" language-shell"><code class="language-shell">git checkout --theirs YOUR_BINARY_FILES     # 保留需要合并进来的分支的修改
+git checkout --ours YOUR_BINARY_FILES       # 保留自己的修改
+git add YOUR_BINARY_FILES</code></pre>
+<h3 id="9-参考文章："><a href="#9-参考文章：" class="headerlink" title="9.参考文章："></a>9.参考文章：</h3><pre><code>[https://segmentfault.com/a/1190000021919753](https://segmentfault.com/a/1190000021919753)</code></pre><p>若有收获，就点个赞吧</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -999,8 +1089,8 @@ if (process.env.NODE_ENV === 'development') {
         <category>jenkins</category>
       </categories>
       <tags>
-        <tag>centos7</tag>
         <tag>git</tag>
+        <tag>centos7</tag>
       </tags>
   </entry>
   <entry>
@@ -4094,10 +4184,22 @@ overflow: hidden; font-size: 50px; color: red;<span class="token comment" spellc
 <li>分次提交 (添加每个变化前，都会要求确认对于同一个文件的多处变化，可以实现分次提交)</li>
 </ol>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> add -p</code></pre>
+<p>查看所有分支列表，包括本地和远程</p>
+<pre class=" language-shell"><code class="language-shell">git branch -a</code></pre>
+<p>查看远程版本库分支列表</p>
+<pre class=" language-shell"><code class="language-shell">git branch -r</code></pre>
+<p>可以查看本地分支对应的远程分支</p>
+<pre class=" language-shell"><code class="language-shell">git branch -vv</code></pre>
+<p>对当前分支重命名</p>
+<pre class=" language-shell"><code class="language-shell">git branch -m  <branch></code></pre>
 <h3 id="6-删除分支"><a href="#6-删除分支" class="headerlink" title="6.删除分支"></a>6.删除分支</h3><ol>
 <li>删除本地的分支</li>
 </ol>
-<pre class=" language-java"><code class="language-java">git branch <span class="token operator">-</span>d XXX</code></pre>
+<pre class=" language-java"><code class="language-java">git branch <span class="token operator">-</span>D XXX  <span class="token comment" spellcheck="true">//强制删除</span>
+
+
+git branch <span class="token operator">-</span>d XXX  <span class="token comment" spellcheck="true">//如果在分支中有一些未merge的提交，那么会删除分支失败</span>
+</code></pre>
 <ol start="2">
 <li>删除远程仓库的 分支.</li>
 </ol>
@@ -4189,7 +4291,7 @@ overflow: hidden; font-size: 50px; color: red;<span class="token comment" spellc
 <h3 id="8-远程分支覆盖本地分支（慎用）"><a href="#8-远程分支覆盖本地分支（慎用）" class="headerlink" title="8.远程分支覆盖本地分支（慎用）"></a>8.远程分支覆盖本地分支（慎用）</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> fetch --all  <span class="token punctuation">(</span>拉取所有分支<span class="token punctuation">)</span>
 <span class="token function">git</span> reset --hard origin/master <span class="token punctuation">(</span>master指定远程的分支<span class="token punctuation">)</span>
 <span class="token function">git</span> pull</code></pre>
-<h3 id="9-删除分支"><a href="#9-删除分支" class="headerlink" title="9.删除分支"></a>9.删除分支</h3><pre class=" language-bash"><code class="language-bash">//查看所有分支
+<h3 id="9-删除分支"><a href="#9-删除分支" class="headerlink" title="9.删除分支"></a>9.删除分支</h3><pre class=" language-bash"><code class="language-bash">//查看所有分支<span class="token punctuation">(</span>本地和远程<span class="token punctuation">)</span>
 <span class="token function">git</span> branch -a
 
 //删除本地分支

@@ -638,7 +638,7 @@ git branch -r
         
         <div class="info-break-policy">
           <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-          1.6k
+          1.7k
         </div>
         
 
@@ -740,10 +740,22 @@ git branch -r
 <li>分次提交 (添加每个变化前，都会要求确认对于同一个文件的多处变化，可以实现分次提交)</li>
 </ol>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> add -p</code></pre>
+<p>查看所有分支列表，包括本地和远程</p>
+<pre class=" language-shell"><code class="language-shell">git branch -a</code></pre>
+<p>查看远程版本库分支列表</p>
+<pre class=" language-shell"><code class="language-shell">git branch -r</code></pre>
+<p>可以查看本地分支对应的远程分支</p>
+<pre class=" language-shell"><code class="language-shell">git branch -vv</code></pre>
+<p>对当前分支重命名</p>
+<pre class=" language-shell"><code class="language-shell">git branch -m  <branch></code></pre>
 <h3 id="6-删除分支"><a href="#6-删除分支" class="headerlink" title="6.删除分支"></a>6.删除分支</h3><ol>
 <li>删除本地的分支</li>
 </ol>
-<pre class=" language-java"><code class="language-java">git branch <span class="token operator">-</span>d XXX</code></pre>
+<pre class=" language-java"><code class="language-java">git branch <span class="token operator">-</span>D XXX  <span class="token comment" spellcheck="true">//强制删除</span>
+
+
+git branch <span class="token operator">-</span>d XXX  <span class="token comment" spellcheck="true">//如果在分支中有一些未merge的提交，那么会删除分支失败</span>
+</code></pre>
 <ol start="2">
 <li>删除远程仓库的 分支.</li>
 </ol>
@@ -835,7 +847,7 @@ git branch -r
 <h3 id="8-远程分支覆盖本地分支（慎用）"><a href="#8-远程分支覆盖本地分支（慎用）" class="headerlink" title="8.远程分支覆盖本地分支（慎用）"></a>8.远程分支覆盖本地分支（慎用）</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> fetch --all  <span class="token punctuation">(</span>拉取所有分支<span class="token punctuation">)</span>
 <span class="token function">git</span> reset --hard origin/master <span class="token punctuation">(</span>master指定远程的分支<span class="token punctuation">)</span>
 <span class="token function">git</span> pull</code></pre>
-<h3 id="9-删除分支"><a href="#9-删除分支" class="headerlink" title="9.删除分支"></a>9.删除分支</h3><pre class=" language-bash"><code class="language-bash">//查看所有分支
+<h3 id="9-删除分支"><a href="#9-删除分支" class="headerlink" title="9.删除分支"></a>9.删除分支</h3><pre class=" language-bash"><code class="language-bash">//查看所有分支<span class="token punctuation">(</span>本地和远程<span class="token punctuation">)</span>
 <span class="token function">git</span> branch -a
 
 //删除本地分支
@@ -1646,7 +1658,7 @@ Git仓库 vs Git仓库
       <br> -->
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数:&nbsp;<span
-        class="white-color">119.6k</span>&nbsp;字
+        class="white-color">120.6k</span>&nbsp;字
       
       
       
