@@ -779,6 +779,8 @@ permalink: :year/:month/:day/:title.xml</code></pre><p>最后，加入新的 dep
 <li>关闭更新和发送体验报告，退出 parallels 账户</li>
 <li>打开终端 terminal，进入到 ParallelsDesktopCrack 这个文件夹（不会的可以把文件夹复制到桌面，然后在终端输入 cd 加空格，然后把文件夹拖到终端，按 enter 键）</li>
 <li>打开终端，执行以下命令：chmod +x ./install.sh &amp;&amp; sudo ./install.sh 即可破解</li>
+<li>出现以下表示破解成功</li>
+<li><img src="https://cdn.nlark.com/yuque/0/2022/png/241787/1664648763232-964e4c0c-86b5-4ada-b13b-fd2ac4f4ad25.png#clientId=ucdc6b22c-9695-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=195&id=u2be87c6f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=390&originWidth=1128&originalType=binary&ratio=1&rotation=0&showTitle=false&size=87756&status=done&style=none&taskId=uf0eaba06-38b6-426b-9687-8d804d22e90&title=&width=564" alt="image.png"></li>
 </ol>
 <p>另外建议把这些 parallels 域名加入 hosts，阻止访问这些域名：</p>
 <pre class=" language-nginx"><code class="language-nginx">download<span class="token punctuation">.</span>parallels<span class="token punctuation">.</span>com
